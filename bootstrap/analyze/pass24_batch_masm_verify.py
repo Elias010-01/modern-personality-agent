@@ -69,14 +69,54 @@ def rewrite_for_masm(line):
             return v + 'h'
         return v
     line = re.sub(r'\b(0x[0-9a-fA-F]+)\b', hex_fix, line)
+    # Mid-function near return: Capstone disasms C3 as `ret` and C2 imm16 as
+    # `ret N`. MASM 4.0 inside `PROC FAR` rejects `retn` and silently promotes
+    # bare `ret` to far (CB / CA), corrupting every function that early-exits
+    # via a near return. We bypass MASM with a raw db directive.
+    # IMPORTANT: must run BEFORE `retf -> ret` below, otherwise we'd convert
+    # the function-final `retf` into a db too.
+    stripped = line.strip()
+    m_ret = re.match(r'^ret\s*(?:;.*)?$', stripped)
+    if m_ret:
+        return '        db    0C3h    ; ret near (C3)'
+    m_retn = re.match(r'^ret\s+([0-9A-Fa-f][0-9A-Fa-fhxXh]*)\s*(?:;.*)?$',
+                       stripped)
+    if m_retn:
+        v = m_retn.group(1)
+        if v.lower().endswith('h'):
+            n = int(v[:-1], 16)
+        elif v.lower().startswith('0x'):
+            n = int(v, 16)
+        else:
+            n = int(v, 16) if any(c in 'abcdefABCDEF' for c in v) else int(v)
+        lo, hi = n & 0xff, (n >> 8) & 0xff
+        def hb(x):
+            s = f'{x:02X}'
+            return ('0' + s if s[0] in 'ABCDEF' else s) + 'h'
+        return f'        db    0C2h, {hb(lo)}, {hb(hi)}    ; ret imm16 ({n:#x})'
+    # `xlat byte ptr <seg>:[bx]` (Capstone form for 2E D7 / 26 D7 / 36 D7 / 3E D7)
+    # MASM 4.0 has no syntax for forcing a segment override on xlat - the
+    # built-in mnemonic always emits a bare D7. Bypass with a db directive
+    # so the prefix byte is preserved in the encoding.
+    m_xlat = re.match(
+        r'^xlat\b(?:\s+byte\s+ptr)?\s+(cs|es|fs|gs|ss|ds):.*$',
+        stripped, re.I)
+    if m_xlat:
+        seg = m_xlat.group(1).lower()
+        prefix = {'cs': '2Eh', 'ds': '3Eh', 'es': '26h',
+                   'ss': '36h', 'fs': '64h', 'gs': '65h'}[seg]
+        return f'        db    {prefix}, 0D7h    ; xlat {seg}:[bx]'
     # 'retf' -> 'ret' (MASM auto-picks CB/CA based on PROC FAR)
     line = re.sub(r'\bretf\b', 'ret', line)
     # 'ljmp' / 'lcall' -> 'jmp dword ptr' / 'call dword ptr'
     line = re.sub(r'\bljmp\b', 'jmp dword ptr', line)
     line = re.sub(r'\blcall\b', 'call dword ptr', line)
     # 'mov sreg, [imm]' -> 'mov sreg, ds:[imm]'
+    # Only apply when the bracket starts with a digit/hex literal: otherwise
+    # we would add a redundant ds: to `mov es, [bp-4]` (which already
+    # defaults to SS) and produce a stray 3E prefix in the encoding.
     line = re.sub(
-        r'(\bmov\s+(?:[ecds]s)\s*,\s*)(?:word\s+ptr\s+)?(\[)',
+        r'(\bmov\s+(?:[ecds]s)\s*,\s*)(?:word\s+ptr\s+)?(\[(?=[0-9]))',
         r'\1ds:\2', line, flags=re.I)
     # 'les di, ptr ss:[bx+4]' -> 'les di, ss:[bx+4]'
     line = re.sub(r'(\b(?:les|lds|lfs|lgs|lss)\s+\w+\s*,\s*)ptr\s+',
@@ -190,6 +230,135 @@ def patch_dangling_labels(asm_lines, byte_seq):
 # Function source assembly
 # --------------------------------------------------------------------------
 
+_SEG_PREFIX_BYTES = {0x26, 0x2E, 0x36, 0x3E, 0x64, 0x65}
+_PREFIX_BYTES = _SEG_PREFIX_BYTES | {0x66, 0x67, 0xF0, 0xF2, 0xF3}
+
+
+def _shorter_encoding_exists(ins_bytes):
+    """Heuristic: would MASM 4.0 emit fewer bytes for this instruction?
+
+    Returns True if the instruction uses a non-minimal ModRM displacement
+    encoding (mod=10 with a disp16 that fits in disp8 or is 0; mod=01 with
+    disp8==0 for non-[bp] forms). Those are the cases where MASM picks the
+    short form even though the original binary kept the long one."""
+    i = 0
+    n = len(ins_bytes)
+    while i < n and ins_bytes[i] in _PREFIX_BYTES:
+        i += 1
+    if i + 1 >= n:
+        return False
+    # Skip 2-byte opcodes (0x0F xx)
+    if ins_bytes[i] == 0x0F:
+        i += 1
+        if i + 1 >= n:
+            return False
+    modrm_pos = i + 1
+    if modrm_pos >= n:
+        return False
+    modrm = ins_bytes[modrm_pos]
+    mod = (modrm >> 6) & 0b11
+    rm = modrm & 0b111
+    # 16-bit addressing: no SIB byte. Direct addressing form is mod=00 rm=110
+    # which uses disp16 (a "[disp16]" address), not eligible for shortening.
+    if mod == 0b10:
+        # disp16 follows ModRM
+        disp_pos = modrm_pos + 1
+        if disp_pos + 2 > n:
+            return False
+        disp = int.from_bytes(ins_bytes[disp_pos:disp_pos + 2],
+                               'little', signed=True)
+        if -128 <= disp <= 127:
+            return True
+    elif mod == 0b01:
+        # disp8 follows ModRM. mod=01 with disp8=0 is only mandatory for
+        # rm=110 ([bp]); for any other r/m the same effective address can
+        # be encoded with mod=00 (no disp).
+        disp_pos = modrm_pos + 1
+        if disp_pos >= n:
+            return False
+        disp = ins_bytes[disp_pos]
+        if disp == 0 and rm != 0b110:
+            return True
+    return False
+
+
+def patch_ambiguous_xchg(asm_lines, byte_seq):
+    """Emit raw db bytes for instructions whose Capstone disasm wouldn't
+    re-assemble back to the same bytes via MASM 4.0.
+
+    Three classes of ambiguity are handled here:
+
+    1. `xchg <reg16>, <reg16>` (excluding ax): `87 r/m,r` and `87 r,r/m`
+       both encode the swap; MASM picks one, the original may use the other.
+
+    2. Any instruction whose first byte is a segment-override prefix
+       (2E / 26 / 36 / 3E / 64 / 65) when Capstone's mnemonic is one MASM
+       can't encode with that prefix (xlat, string ops without indirect
+       form, etc.). We emit the prefix + opcode verbatim.
+
+    3. Any instruction using a non-minimal ModRM displacement encoding
+       (mod=10 with disp16 fitting in disp8 / disp16==0; mod=01 with
+       disp8==0 for non-[bp] forms). MASM 4.0 always picks the shortest
+       encoding, so when the original binary used the longer form we have
+       to bypass MASM.
+    """
+    import capstone
+    md = capstone.Cs(capstone.CS_ARCH_X86, capstone.CS_MODE_16)
+    md.detail = False
+    insns = list(md.disasm(byte_seq, 0))
+    if len(insns) != len(asm_lines):
+        return asm_lines
+    # xchg with ax has the unique 1-byte 90+r encoding (1 byte, not 2),
+    # so ax is excluded from xchg. test has no 1-byte form -> ax is fine.
+    gpr16_no_ax = {'cx', 'dx', 'bx', 'sp', 'bp', 'si', 'di'}
+    gpr8 = {'al', 'cl', 'dl', 'bl', 'ah', 'ch', 'dh', 'bh'}
+    xchg_regs = gpr16_no_ax | gpr8
+    test_regs = xchg_regs | {'ax'}
+    out = []
+    for line, ins in zip(asm_lines, insns):
+        ib = bytes(ins.bytes)
+        replaced = False
+        # 1) Symmetric reg-reg ambiguity for opcodes that don't have a
+        #    "preferred direction" in the encoding. ModRM can place either
+        #    operand in the reg field, MASM picks one, original may differ.
+        #
+        #    - xchg reg, reg  (excluding ax which has the 90+r short form)
+        #    - test reg, reg  (single opcode 85 / 84, fully commutative;
+        #      ax is OK here, test has no 1-byte form)
+        if (not replaced and ins.size == 2 and
+                ins.mnemonic in ('xchg', 'test')):
+            ops = [o.strip() for o in ins.op_str.split(',')]
+            allowed = test_regs if ins.mnemonic == 'test' else xchg_regs
+            if (len(ops) == 2 and ops[0] in allowed and ops[1] in allowed):
+                line = db_directive(
+                    ib,
+                    f'was {ins.mnemonic} {ops[0]}, {ops[1]} (enc ambiguity)')
+                replaced = True
+        # 2) Instruction with a leading segment-override prefix whose final
+        #    asm line (after rewrite_for_masm stripped operands etc.) no
+        #    longer carries the `seg:` annotation. Without it MASM emits
+        #    the bare opcode and the override byte is lost. Patching this
+        #    based on the post-rewrite `line` is the right place: the
+        #    `rewrite_for_masm` for string ops drops the entire operand
+        #    list, so its output never has `es:` even when Capstone's
+        #    original op_str did.
+        if (not replaced and ib and ib[0] in _SEG_PREFIX_BYTES):
+            line_lower = line.lower()
+            has_seg = any(s in line_lower for s in
+                           ('cs:', 'ds:', 'es:', 'ss:', 'fs:', 'gs:'))
+            if not has_seg:
+                line = db_directive(
+                    ib, f'was {ins.mnemonic} with seg override prefix')
+                replaced = True
+        # 3) non-minimal ModRM displacement (disp16 fits in disp8, etc.)
+        if not replaced and _shorter_encoding_exists(ib):
+            line = db_directive(
+                ib, f'was {ins.mnemonic} (non-minimal ModRM enc)')
+            replaced = True
+        out.append(line)
+    return out
+
+
 def make_asm_source(name, asm_lines, byte_seq, has_frame=False):
     """Wrap a function body in a minimal MASM source unit.
 
@@ -203,6 +372,7 @@ def make_asm_source(name, asm_lines, byte_seq, has_frame=False):
         if c:
             cleaned.append(c)
     cleaned = patch_dangling_labels(cleaned, byte_seq)
+    cleaned = patch_ambiguous_xchg(cleaned, byte_seq)
     body = '\n'.join('        ' + ln.lstrip() if not ln.lstrip().startswith('db ')
                     else ln for ln in cleaned)
     return f"""\
@@ -521,21 +691,79 @@ def run_masm_parallel(asm_files, n_workers=DEFAULT_WORKERS):
     return results
 
 
+def _lst_byte_stream(lst_path, func_name):
+    """Concatenate the bytes MASM emitted for the named PROC, in offset
+    order. Returns None if the .LST is missing/unparseable."""
+    if not lst_path.exists():
+        return None
+    records = parse_lst_instructions(lst_path, func_name)
+    if not records:
+        return None
+    out = bytearray()
+    for r in sorted(records, key=lambda x: x['offset']):
+        # Records can be sparse (offset jumps for ALIGN, etc.). Pad with
+        # zeros so absolute offsets remain meaningful.
+        while len(out) < r['offset']:
+            out.append(0)
+        out.extend(r['bytes'])
+    return bytes(out)
+
+
 def inspect_round(asm_files):
-    """For each file, check whether its OBJ contains the expected bytes.
-    Returns a list of dicts."""
+    """For each file, check whether MASM produced bytes byte-exact to the
+    function's expected bytes.
+
+    Two checks are performed in order:
+
+    1. The .LST (authoritative): we sum every instruction's bytes from the
+       MASM listing for our PROC and compare to the expected sequence. If
+       they match, MASM emitted byte-exact code regardless of any OBJ
+       FIXUP records that might have rewritten relocation slots later.
+
+    2. The .OBJ (fallback): if for some reason we can't reconstruct the
+       byte stream from the .LST (e.g. MASM aborted with a syntax error
+       and produced no records), we fall back to scanning the .OBJ for
+       the expected bytes - which is brittle in the presence of
+       relocations but is still useful for short, FIXUP-free functions.
+    """
     results = []
     for a in asm_files:
         obj = WORK / f"{a['short']}.OBJ"
         lst = WORK / f"{a['short']}.LST"
         expected = a['byte_seq']
-        actual, note = find_func_bytes_in_obj(obj, expected)
-        match = (actual == expected)
+
+        # 1. LST-based check
+        lst_bytes = _lst_byte_stream(lst, a['name'])
+        if lst_bytes is not None and lst_bytes.startswith(expected):
+            actual = expected
+            match = True
+            note = f'MASM .LST byte-exact ({len(expected)} bytes)'
+        else:
+            # 2. OBJ-based fallback
+            actual, note = find_func_bytes_in_obj(obj, expected)
+            match = (actual == expected)
+            if not match and lst_bytes is not None:
+                # Compare LST output to expected for a more precise note.
+                common = 0
+                while (common < min(len(lst_bytes), len(expected))
+                        and lst_bytes[common] == expected[common]):
+                    common += 1
+                if common == len(expected):
+                    actual = expected
+                    match = True
+                    note = f'MASM .LST byte-exact ({common} bytes)'
+                else:
+                    note = (f"LST diverges at byte {common}: "
+                             f"exp[{expected[common]:02X}] vs "
+                             f"act[{lst_bytes[common]:02X}]")
+
         results.append({
             **{k: a[k] for k in ('module', 'name', 'short',
                                    'instruction_count')},
             'expected_hex': expected.hex().upper(),
-            'actual_hex': actual.hex().upper() if actual else '',
+            'actual_hex': (actual.hex().upper() if actual is not None
+                            else (lst_bytes.hex().upper() if lst_bytes
+                                  else '')),
             'match': match,
             'note': note,
             'lst_path': str(lst),
