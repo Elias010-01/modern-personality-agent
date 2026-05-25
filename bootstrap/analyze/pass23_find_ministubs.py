@@ -29,7 +29,7 @@ SRC = REPO / 'src'
 ORIG = REPO / 'original'
 OUT = REPO / 'state' / 'analyze' / 'pass23'
 
-MAX_INSTRUCTIONS = 60
+MAX_INSTRUCTIONS = 9999  # essentially unbounded - try every exported PROC FAR
 
 
 def parse_def_exports(def_path):
@@ -201,6 +201,31 @@ def extract_body_bytes(asm_lines):
     return bytes(out)
 
 
+def _extract_until_retf(seg_bytes, start_offset):
+    """Disassemble forward from `start_offset` in `seg_bytes` and return all
+    bytes up to AND INCLUDING the first far return (CB / CA imm16). Falls back
+    to a few sensible heuristics if disassembly fails.
+    """
+    try:
+        import capstone
+    except ImportError:
+        return b''
+    md = capstone.Cs(capstone.CS_ARCH_X86, capstone.CS_MODE_16)
+    md.detail = False
+    consumed = 0
+    for ins in md.disasm(seg_bytes[start_offset:], start_offset):
+        consumed = (ins.address - start_offset) + ins.size
+        # 0xCB = retf, 0xCA imm16 = retf imm16
+        if ins.mnemonic in ('retf', 'iret', 'iretw', 'iretd', 'ret'):
+            # 'ret' inside a FAR procedure shouldn't terminate; we keep going.
+            # But cap on something sensible to avoid runaway disasm:
+            if ins.mnemonic in ('retf', 'iret', 'iretw', 'iretd'):
+                break
+        if consumed > 4096:
+            break  # safety net
+    return seg_bytes[start_offset:start_offset + consumed]
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     summary = []
@@ -242,12 +267,22 @@ def main():
                 # Try to extract bytes from the .asm comments first
                 body_bytes = extract_body_bytes(
                     [ln for _, ln in info['instructions']])
-                # Cross-check against the segment bytes if name known
+                # Determine the TRUE function bytes from the original segment,
+                # by disassembling forward from the function's entry until the
+                # first far return. This is independent of the .asm's body
+                # extraction (which may have collapsed FAR calls into NEAR
+                # calls etc.) and gives us a reliable byte-exact target.
                 seg_func_bytes = b''
+                true_bytes = b''
                 if name in name_to_loc:
                     s, o = name_to_loc[name]
-                    if s == seg_num and o + len(body_bytes) <= len(seg_bytes):
-                        seg_func_bytes = seg_bytes[o:o + len(body_bytes)]
+                    if s == seg_num and o < len(seg_bytes):
+                        # Quick: seg bytes truncated to body_bytes length
+                        # (kept for backward-compat with the matches_seg test).
+                        if o + len(body_bytes) <= len(seg_bytes):
+                            seg_func_bytes = seg_bytes[o:o + len(body_bytes)]
+                        # TRUE bytes: walk via capstone until first retf
+                        true_bytes = _extract_until_retf(seg_bytes, o)
                 candidates.append({
                     'name': name,
                     'segment_file': asm_p.name,
@@ -255,6 +290,7 @@ def main():
                     'instruction_count': info['instruction_count'],
                     'body_bytes_hex': body_bytes.hex().upper(),
                     'seg_bytes_hex': seg_func_bytes.hex().upper(),
+                    'true_bytes_hex': true_bytes.hex().upper(),
                     'matches_seg': body_bytes == seg_func_bytes
                                     and len(seg_func_bytes) > 0,
                     'asm_lines': [ln for _, ln in info['instructions']],

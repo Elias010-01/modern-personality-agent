@@ -24,18 +24,26 @@ Artifacts:
   state/analyze/pass24/results.json      - per-function status, every round
   state/analyze/pass24/summary.md        - human-readable report
 """
+import hashlib
 import json
+import os
 import re
 import shutil
 import subprocess
+from concurrent.futures import ProcessPoolExecutor, as_completed
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[2]
 PASS23 = REPO / 'state' / 'analyze' / 'pass23'
 PASS24 = REPO / 'state' / 'analyze' / 'pass24'
 WORK = REPO / 'tools' / 'dos' / 'work' / 'batch'
+CACHE = REPO / 'tools' / 'dos' / 'work' / 'cache'
 
 MAX_REFINEMENT_ROUNDS = 3
+# Number of parallel DOSBox-X workers. Each one consumes ~200 MB RAM and
+# its own slice of the candidate list. Cap at 6 by default to stay well
+# under most laptops' RAM and CPU budget; tunable via PASS24_WORKERS env var.
+DEFAULT_WORKERS = int(os.environ.get('PASS24_WORKERS', '6'))
 
 
 # --------------------------------------------------------------------------
@@ -124,22 +132,47 @@ def patch_dangling_labels(asm_lines, byte_seq):
 
     branch_bytes = []
     for ins in md.disasm(byte_seq, 0):
-        if ins.mnemonic.startswith('j') or ins.mnemonic in (
-                'call', 'loop', 'loope', 'loopne', 'loopz', 'loopnz'):
-            op_str = ins.op_str.strip()
-            if op_str.startswith('0x') or op_str.startswith('-'):
-                branch_bytes.append(bytes(ins.bytes))
+        is_branch = (
+            ins.mnemonic.startswith('j') or
+            ins.mnemonic in ('call', 'lcall', 'ljmp',
+                              'loop', 'loope', 'loopne',
+                              'loopz', 'loopnz'))
+        if not is_branch:
+            continue
+        op_str = ins.op_str.strip()
+        # Skip indirect memory operands (`call cs:[6Ah]`, `jmp [bx]`)
+        # because those have valid MASM syntax we can keep verbatim and
+        # they would otherwise mis-align the branch_bytes list with the
+        # asm_lines branches we DO want to patch.
+        if '[' in op_str:
+            continue
+        # Patterns we DO want to patch:
+        #   'call 0x123'         - relative near branch
+        #   'lcall 0, 0x509'     - absolute FAR branch (capstone uses ',')
+        #   'lcall 0x509:0x0'    - absolute FAR branch (older capstone uses ':')
+        #   'jmp -2'             - relative near branch (negative)
+        if (op_str.startswith('0x') or op_str.startswith('-') or
+                ':' in op_str or ',' in op_str or
+                (op_str and op_str[0].isdigit())):
+            branch_bytes.append(bytes(ins.bytes))
 
     out = []
     bidx = 0
     # A "dangling branch" line is any j*/jmp/call/loop whose target is either:
-    #   - a label name (L_xxxx) we don't define, or
-    #   - a numeric literal (e.g. `call 0`, `jmp 1234h`) that points outside
-    #     our synthetic single-function segment.
+    #   - a label name (L_xxxx) we don't define
+    #   - a numeric literal (e.g. `call 0`, `jmp 1234h`)
+    #   - capstone's far-branch form (`lcall 0x509:0x0` or, after our
+    #     rewriter, `call dword ptr  0x509:0x0` / `0x509, 0x0`)
     # In all such cases we replace the source with a raw db opcode sequence.
+    HEX = r'[0-9][0-9A-Fa-fxXhH]*'
     branch_re = re.compile(
-        r'^\s*(j\w+|jmp|call|loop\w*)\s+'
-        r'(?:L_[0-9A-Fa-f]+|[-+]?[0-9][0-9A-Fa-fxXhH]*)'
+        r'^\s*(j\w+|jmp|call|loop\w*|lcall|ljmp)'
+        r'(?:\s+(?:dword|far)\s+ptr)?'                # optional 'dword ptr' / 'far ptr'
+        r'\s+'
+        r'(?:'
+        r'L_[0-9A-Fa-f]+'                               # label
+        r'|' + HEX + r'(?:[:,]\s*' + HEX + r')?'        # near or far (seg:off)
+        r')'
         r'\s*$', re.I)
     for line in asm_lines:
         m = branch_re.match(line)
@@ -365,23 +398,126 @@ def stage_asm_files(candidates):
     return out
 
 
-def write_build_bat(asm_files):
-    bat = ['echo === pass24 batch === > out.txt']
-    for a in asm_files:
-        bat.append(f"echo --- {a['short']} ({a['module']}::{a['name']}) --- >> out.txt")
-        bat.append(f"masm {a['short']},{a['short']},{a['short']},nul; > {a['short']}.LOG")
-        bat.append(f"type {a['short']}.LOG >> out.txt")
-    bat.append('echo === DONE === >> out.txt')
-    (WORK / 'build.bat').write_text('\n'.join(bat) + '\n', encoding='ascii')
+def asm_hash(asm_path):
+    """SHA256 of the .ASM source. Used as cache key for the resulting OBJ/LST."""
+    return hashlib.sha256(asm_path.read_bytes()).hexdigest()[:16]
 
 
-def run_masm_batch():
+def _worker_run_masm(worker_dir_str, shorts):
+    """Run MASM 4.0 on the given list of shortnames inside `worker_dir`.
+    Returns (worker_dir, shorts) on completion. Used as the unit of work for
+    the ProcessPoolExecutor pool.
+
+    The worker dir already contains MASM.EXE plus a build.bat that processes
+    exactly the shortnames in `shorts`. This function only invokes DOSBox-X.
+    """
+    worker_dir = Path(worker_dir_str)
     dosbuild = REPO / 'tools' / 'dos' / 'dosbuild.sh'
-    cmd = ['wsl', '--', 'bash', str(dosbuild).replace('\\', '/').replace(
-        'C:', '/mnt/c'), str(WORK).replace('\\', '/').replace('C:', '/mnt/c'),
-        'build.bat']
-    r = subprocess.run(cmd, capture_output=True, text=True, timeout=300)
-    return r
+    cmd = ['wsl', '--', 'bash',
+           str(dosbuild).replace('\\', '/').replace('C:', '/mnt/c'),
+           str(worker_dir).replace('\\', '/').replace('C:', '/mnt/c'),
+           'build.bat']
+    subprocess.run(cmd, capture_output=True, text=True, timeout=900)
+    return worker_dir_str, shorts
+
+
+def run_masm_parallel(asm_files, n_workers=DEFAULT_WORKERS):
+    """Compile every asm in `asm_files` via N parallel DOSBox-X workers,
+    using a SHA256-of-source cache to skip already-built sources.
+
+    Returns dict short -> {'obj_path', 'lst_path', 'cached': bool}.
+    """
+    CACHE.mkdir(parents=True, exist_ok=True)
+
+    # Step 1: separate cached vs needs-build
+    to_build = []           # list of asm_files entries
+    cached_results = {}     # short -> {obj_path, lst_path, cached: True}
+    for a in asm_files:
+        h = asm_hash(a['asm_path'])
+        a['hash'] = h
+        cached_obj = CACHE / f'{h}.obj'
+        cached_lst = CACHE / f'{h}.lst'
+        if cached_obj.exists() and cached_lst.exists():
+            # Copy out to worker view of WORK so refine/inspect can find them
+            target_obj = WORK / f"{a['short']}.OBJ"
+            target_lst = WORK / f"{a['short']}.LST"
+            shutil.copy2(cached_obj, target_obj)
+            shutil.copy2(cached_lst, target_lst)
+            cached_results[a['short']] = {
+                'obj_path': target_obj, 'lst_path': target_lst,
+                'cached': True}
+        else:
+            to_build.append(a)
+
+    print(f'  Cache: {len(cached_results)} hits / '
+          f'{len(to_build)} need building '
+          f'(workers={n_workers})')
+    if not to_build:
+        return cached_results
+
+    # Step 2: chunk the to_build list across N worker subdirs, each with
+    # its own MASM.EXE and its own build.bat.
+    n_workers = max(1, min(n_workers, len(to_build)))
+    chunks = [[] for _ in range(n_workers)]
+    for i, a in enumerate(to_build):
+        chunks[i % n_workers].append(a)
+
+    combined = REPO / 'tools' / 'dos' / 'combined'
+    worker_jobs = []
+    for wid, chunk in enumerate(chunks):
+        if not chunk:
+            continue
+        wdir = WORK / f'worker_{wid}'
+        wdir.mkdir(parents=True, exist_ok=True)
+        # Stage MASM.EXE (cheap copy)
+        if not (wdir / 'MASM.EXE').exists():
+            shutil.copy2(combined / 'MASM.EXE', wdir / 'MASM.EXE')
+        # Copy each .ASM into the worker dir and write its build.bat
+        bat = ['echo === worker batch === > out.txt']
+        for a in chunk:
+            tgt = wdir / f"{a['short']}.ASM"
+            shutil.copy2(a['asm_path'], tgt)
+            bat.append(f"masm {a['short']},{a['short']},{a['short']},nul; "
+                       f"> {a['short']}.LOG")
+        bat.append('echo === DONE === >> out.txt')
+        (wdir / 'build.bat').write_text('\n'.join(bat) + '\n',
+                                         encoding='ascii')
+        worker_jobs.append((str(wdir), [a['short'] for a in chunk]))
+
+    # Step 3: run all workers in parallel
+    with ProcessPoolExecutor(max_workers=n_workers) as pool:
+        futures = [pool.submit(_worker_run_masm, wd, shorts)
+                    for wd, shorts in worker_jobs]
+        for fut in as_completed(futures):
+            fut.result()  # propagate exceptions
+
+    # Step 4: collect produced OBJ/LST back to the main WORK dir AND save
+    # them to the cache for future runs.
+    results = dict(cached_results)
+    for a in to_build:
+        wdir = None
+        # Find which worker handled this one
+        for wd_str, shorts in worker_jobs:
+            if a['short'] in shorts:
+                wdir = Path(wd_str)
+                break
+        if wdir is None:
+            continue
+        src_obj = wdir / f"{a['short']}.OBJ"
+        src_lst = wdir / f"{a['short']}.LST"
+        tgt_obj = WORK / f"{a['short']}.OBJ"
+        tgt_lst = WORK / f"{a['short']}.LST"
+        # Move into WORK
+        if src_obj.exists():
+            shutil.copy2(src_obj, tgt_obj)
+            # Stash into cache
+            shutil.copy2(src_obj, CACHE / f"{a['hash']}.obj")
+        if src_lst.exists():
+            shutil.copy2(src_lst, tgt_lst)
+            shutil.copy2(src_lst, CACHE / f"{a['hash']}.lst")
+        results[a['short']] = {
+            'obj_path': tgt_obj, 'lst_path': tgt_lst, 'cached': False}
+    return results
 
 
 def inspect_round(asm_files):
@@ -451,27 +587,52 @@ def refine_candidates(asm_files, results):
 def main():
     PASS24.mkdir(parents=True, exist_ok=True)
     WORK.mkdir(parents=True, exist_ok=True)
+    CACHE.mkdir(parents=True, exist_ok=True)
 
-    # Clean previous work
-    for f in WORK.glob('*'):
+    # Clean previous work artifacts (per-function files) and any leftover
+    # worker subdirs. KEEP the cache: it's the whole point of the speedup.
+    for f in WORK.iterdir():
         if f.is_file():
             f.unlink()
+        elif f.is_dir() and f.name.startswith('worker_'):
+            shutil.rmtree(f, ignore_errors=True)
 
-    # Load all candidates - skip ones where pass23 couldn't confirm the
-    # disassembled bytes against the original segment bytes (those have
-    # disasm ambiguity and would taint our byte-exact claim).
+    # Load ALL candidates. For each one we use `true_bytes_hex` from pass23
+    # (which is capstone-disassembled forward from the function's entry in
+    # the ORIGINAL binary, up to the first retf). That gives us a
+    # length-accurate, byte-exact target. We then re-disassemble those
+    # true bytes ourselves to produce the .asm source - bypassing pass1
+    # entirely and removing any disagreement between pass1's .asm and the
+    # original binary.
+    import capstone
+    md_global = capstone.Cs(capstone.CS_ARCH_X86, capstone.CS_MODE_16)
+    md_global.detail = False
     all_candidates = []
-    dropped = 0
+    redisasm_count = 0
+    skipped = 0
     for jp in sorted(PASS23.glob('*.json')):
         d = json.loads(jp.read_text(encoding='utf-8'))
         for c in d['candidates']:
-            if not c.get('matches_seg', False):
-                dropped += 1
-                continue
             c['module'] = d['module']
+            true_hex = c.get('true_bytes_hex', '')
+            if not true_hex:
+                skipped += 1
+                continue
+            seg_bytes = bytes.fromhex(true_hex)
+            new_lines = []
+            for ins in md_global.disasm(seg_bytes, 0):
+                new_lines.append(
+                    f"        {ins.mnemonic}  {ins.op_str}".rstrip())
+            if not new_lines:
+                skipped += 1
+                continue
+            c['asm_lines'] = new_lines
+            c['body_bytes_hex'] = true_hex
+            redisasm_count += 1
             all_candidates.append(c)
     print(f'Loaded {len(all_candidates)} candidates from pass23 '
-          f'({dropped} dropped - disasm bytes did not match segment).\n')
+          f'({redisasm_count} re-disassembled from true segment bytes, '
+          f'{skipped} skipped - no usable bytes).\n')
 
     # Stage MASM toolchain
     combined = REPO / 'tools' / 'dos' / 'combined'
@@ -485,16 +646,19 @@ def main():
 
     history = []  # per-round results
 
+    import time
     for round_idx in range(MAX_REFINEMENT_ROUNDS):
         print(f'\n=== Round {round_idx + 1} ===')
-        write_build_bat(asm_files)
-        r = run_masm_batch()
-        print(f'  DOSBox-X exit code: {r.returncode}')
+        t0 = time.time()
+        run_masm_parallel(asm_files)
+        elapsed = time.time() - t0
         results = inspect_round(asm_files)
         matched = sum(1 for x in results if x['match'])
-        print(f'  {matched}/{len(results)} byte-exact matches')
+        rate = len(results) / elapsed if elapsed > 0 else 0
+        print(f'  {matched}/{len(results)} byte-exact matches '
+              f'(took {elapsed:.1f}s, {rate:.1f} func/s)')
         history.append({'round': round_idx + 1, 'matched': matched,
-                         'total': len(results)})
+                         'total': len(results), 'seconds': elapsed})
         if matched == len(results):
             print('  ALL candidates matched - stopping early.')
             break

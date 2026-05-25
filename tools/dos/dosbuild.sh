@@ -59,10 +59,12 @@ EOF
 # inside) AND an external `timeout` with --kill-after as a hard fallback.
 # DOSBox-X has been observed to ignore external SIGTERM when COMMAND.COM
 # is waiting for keyboard input, so the internal -time-limit is critical.
-SDL_VIDEODRIVER=dummy timeout --kill-after=10 45 dosbox-x \
+# Time limits sized for batch builds: the bigger byte-exact verification
+# rounds run MASM on 190+ candidates and need a few minutes inside DOS.
+SDL_VIDEODRIVER=dummy timeout --kill-after=10 600 dosbox-x \
     -conf "$CONF" \
     -silent -nopromptfolder -fastlaunch \
-    -time-limit 25 \
+    -time-limit 500 \
     >/dev/null 2>&1 || true
 
 rm -f "$CONF"
