@@ -1,0 +1,8 @@
+# Pipeline dependencies for modern-personality-agent
+# Python 3.10+
+
+# Disassembly engine (x86 16-bit)
+capstone>=5.0.0
+
+# Reassembly engine (only used when editing instructions, opt-in)
+keystone-engine>=0.9.2

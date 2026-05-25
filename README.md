@@ -12,6 +12,167 @@
 
 ---
 
+## Quick Start
+
+> This repository **does not include** the Microsoft Windows 1.03 binaries.
+> You need a legal copy of Windows 1.03 to use this pipeline.
+> See [LEGAL.md](LEGAL.md) for details.
+
+### Requirements
+
+- **OS**: Windows 10/11 with [WSL2](https://learn.microsoft.com/en-us/windows/wsl/install) (Ubuntu recommended), or any Linux distro, or macOS
+- **Python**: 3.10 or newer
+- **Tools**: `mtools` (read/write floppy images), `git`
+- **For testing the result**: [DOSBox-X](https://dosbox-x.com/)
+
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/Elias010-01/modern-personality-agent.git
+cd modern-personality-agent
+```
+
+### 2. Install Python dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+This installs `capstone` (disassembler) and `keystone-engine` (assembler, only
+needed if you edit instructions).
+
+### 3. Bring your own Windows 1.03 binaries
+
+Place the 69 original `.EXE` / `.DRV` / `.OVL` / `.COM` files into `original/`:
+
+```
+original/
+├── KERNEL.EXE
+├── GDI.EXE
+├── USER.EXE
+├── WIN.COM
+├── ...   (69 files total)
+```
+
+If you have the original 5.25" floppies, an ISO, or a `.IMG` of the install
+disks, you can extract them with `mtools`:
+
+```bash
+mcopy -i path/to/win103-disk.img ::*.EXE original/
+mcopy -i path/to/win103-disk.img ::*.DRV original/
+# repeat for .OVL, .COM, etc.
+```
+
+### 4. Regenerate human-readable assembly source
+
+```bash
+python bootstrap/extract_segments.py     # split NE binaries into segments
+python bootstrap/decompile_segment.py    # disassemble to human-readable .asm
+```
+
+You now have `src/<MODULE>/seg*.asm` — editable assembly with the original
+bytes preserved as comments.
+
+### 5. Rebuild byte-exact binaries
+
+```bash
+python bootstrap/build_from_source.py
+```
+
+This regenerates 69/69 modules **identical byte-for-byte** to the originals.
+Output goes to `built/`. The script reports an SHA-1 match for each module.
+
+### 6. (Optional) Generate semantic documentation
+
+```bash
+python bootstrap/analyze/pass1_patterns.py
+python bootstrap/analyze/pass1b_discover.py
+python bootstrap/analyze/pass2_callgraph.py
+python bootstrap/analyze/pass3_describe.py
+python bootstrap/analyze/pass4_annotate.py
+python bootstrap/analyze/pass5_index.py
+python bootstrap/analyze/pass6_visualize.py
+python bootstrap/analyze/pass7_enrich_deps.py
+```
+
+This produces `docs/analysis/` with 75+ Markdown documents (one per module
+plus indexes) and an interactive HTML call graph at
+`docs/analysis/callgraph.html`.
+
+### 7. (Optional) Apply a mod
+
+```bash
+python bootstrap/mod_system.py list                  # list available mods
+python bootstrap/mod_system.py apply elias-windows   # apply a mod
+python bootstrap/mod_system.py revert                # undo
+```
+
+The example `elias-windows` mod (see screenshot above) replaces the splash
+text, version label and copyright. Modded binaries land in
+`mods/<modname>/built/`.
+
+### 8. (Optional) Boot it in DOSBox-X
+
+Copy the resulting binaries into a Windows 1.03 floppy image and run it:
+
+```bash
+bash bootstrap/deploy-to-img.sh   # copies built/ into the floppy image
+# then launch DOSBox-X with the resulting .img mounted as A:
+```
+
+---
+
+## Inicio rápido (Español)
+
+> Este repositorio **no incluye** los binarios de Microsoft Windows 1.03.
+> Necesitas una copia legal de Windows 1.03 para usar este pipeline.
+> Ver [LEGAL.md](LEGAL.md).
+
+### Requisitos
+
+- **SO**: Windows 10/11 con WSL2 (Ubuntu), Linux, o macOS
+- **Python** 3.10+
+- **Herramientas**: `mtools`, `git`
+- **Para probar el resultado**: [DOSBox-X](https://dosbox-x.com/)
+
+### Pasos
+
+```bash
+# 1. Clonar
+git clone https://github.com/Elias010-01/modern-personality-agent.git
+cd modern-personality-agent
+
+# 2. Dependencias Python (capstone + keystone)
+pip install -r requirements.txt
+
+# 3. Aporta tus binarios legales en original/
+#    (KERNEL.EXE, GDI.EXE, USER.EXE, WIN.COM, ... 69 archivos)
+
+# 4. Regenerar el código fuente assembly editable
+python bootstrap/extract_segments.py
+python bootstrap/decompile_segment.py
+
+# 5. Reconstruir binarios byte-exactos (69/69)
+python bootstrap/build_from_source.py
+
+# 6. (Opcional) Documentar semánticamente
+python bootstrap/analyze/pass1_patterns.py
+python bootstrap/analyze/pass1b_discover.py
+python bootstrap/analyze/pass2_callgraph.py
+python bootstrap/analyze/pass3_describe.py
+python bootstrap/analyze/pass4_annotate.py
+python bootstrap/analyze/pass5_index.py
+python bootstrap/analyze/pass6_visualize.py
+python bootstrap/analyze/pass7_enrich_deps.py
+
+# 7. (Opcional) Aplicar mod de ejemplo
+python bootstrap/mod_system.py apply elias-windows
+```
+
+Más detalles más abajo en [English](#english) / [Español](#español).
+
+---
+
 ## English
 
 ### What this is
