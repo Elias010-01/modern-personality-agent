@@ -67,9 +67,48 @@ bash test_full.sh    # smoke test: compile a 'hello' C program
 | DOSBox-X headless | ✅ | `SDL_VIDEODRIVER=dummy -silent -time-limit N` |
 | Compile C → OBJ | ✅ | `cl /c /AS tiny.c` produces 279-byte OBJ |
 | Link OBJ → EXE (DOS small model) | ✅ | 1986-byte MS-DOS MZ executable |
-| Compile + Link Windows app (.NE) | ⏳ | Next: HELLO.C from disk 8 |
-| Lift one Win1.03 function to C | ⏳ | Goal: GETVERSION (4 bytes asm) |
-| Byte-exact compare vs retail | ⏳ | The endgame |
+| **First byte-exact verified function** | **✅** | **GETVERSION (KERNEL.EXE @ 0xDCC) matches MASM 4.0 rebuild: 4/4 bytes (`B8 01 03 CB`)** |
+| Compile + Link Windows app (.NE) | ⏳ | HELLO.C from disk 8 with LINK4 |
+| Larger byte-exact targets | ⏳ | Functions with C bodies (need cMacros prologue) |
+| Full module rebuild | ⏳ | The endgame |
+
+## First byte-exact match: GETVERSION
+
+Windows 1.03 `KERNEL.EXE` exposes ordinal 3 = `GETVERSION`. The NE entry
+table places it at segment 1, offset `0x023C`. The 4 raw bytes there are:
+
+```
+B8 01 03    mov ax, 0x0301    ; major=1, minor=3 (Windows 1.03)
+CB          retf              ; FAR return
+```
+
+The lift back to MASM 4.0 source:
+
+```asm
+_TEXT   SEGMENT BYTE PUBLIC 'CODE'
+        ASSUME  CS:_TEXT
+PUBLIC  GETVERSION
+GETVERSION PROC FAR
+        mov     ax, 0301h
+        ret
+GETVERSION ENDP
+_TEXT   ENDS
+        END
+```
+
+Built with `masm getver,getver,getver,nul;` on disk 6 of the original
+1985 Microsoft Macro Assembler 4.0 floppy, the produced `GETVER.OBJ`
+contains the bytes `B8 01 03 CB` at OBJ offset `0x26`. These four bytes
+match the retail `KERNEL.EXE` byte-for-byte. **First function whose
+behavior we can claim to have not just understood but fully reproduced
+from source with the original toolchain.**
+
+The `cMacros` `cProc`-style prologues we see throughout the rest of the
+codebase mean that more substantial C functions will introduce
+`__chkstk`, the FAR-PASCAL inc-bp/push-bp/mov-bp,sp/push-ds/mov-ds,ax
+preamble, and the `sub bp,2 / mov sp,bp / pop ds / pop bp / dec bp / retf`
+epilogue. We confirmed all of these are emitted by `cl /AS /Gw` matching
+exactly the patterns we see in `src/<module>/seg*.asm`.
 
 ## Critical lessons learned (the hard way)
 
