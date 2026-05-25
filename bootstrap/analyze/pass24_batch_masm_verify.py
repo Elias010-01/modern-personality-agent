@@ -343,17 +343,15 @@ def patch_ambiguous_xchg(asm_lines, byte_seq):
         #    list, so its output never has `es:` even when Capstone's
         #    original op_str did.
         if (not replaced and ib and ib[0] in _SEG_PREFIX_BYTES):
-            line_lower = line.lower()
-            has_seg = any(s in line_lower for s in
-                           ('cs:', 'ds:', 'es:', 'ss:', 'fs:', 'gs:'))
-            # FS (64h) and GS (65h) are 386+ segment registers. MASM 4.0
-            # doesn't know them, so even if the line has `fs:`/`gs:` we
-            # must db the raw bytes.
-            is_fs_gs = ib[0] in (0x64, 0x65)
-            if not has_seg or is_fs_gs:
-                line = db_directive(
-                    ib, f'was {ins.mnemonic} with seg override prefix')
-                replaced = True
+            # MASM 4.0 silently strips REDUNDANT segment overrides. A
+            # CS:/SS:/ES:/DS: prefix that doesn't change the effective
+            # segment (e.g. `ds:` on `[bx+si]`, which is already DS) is
+            # dropped. FS:/GS: aren't understood at all. The safest
+            # behaviour is to db on ANY seg-override prefix, regardless
+            # of whether the source line still carries the `seg:` text.
+            line = db_directive(
+                ib, f'was {ins.mnemonic} with seg override prefix')
+            replaced = True
         # 2b) F2/F3 prefix (REP/REPNE/LOCK-like) on an instruction that
         #     ISN'T a string op. Capstone emits the bare mnemonic without
         #     a `rep`/`repne`/`repe` keyword in the source line, and MASM
@@ -431,6 +429,14 @@ def patch_ambiguous_xchg(asm_lines, byte_seq):
             'int3', 'ud0', 'ud1', 'ud2',
             'pushaw', 'popaw', 'pusha', 'popa',
             'arpl', 'bound',
+            # cmov* are P6+ (Pentium Pro 1995). Capstone happily emits
+            # them, MASM 4.0 has no idea.
+            'cmove', 'cmovne', 'cmovz', 'cmovnz',
+            'cmovs', 'cmovns', 'cmovo', 'cmovno',
+            'cmovp', 'cmovnp', 'cmovpe', 'cmovpo',
+            'cmova', 'cmovae', 'cmovb', 'cmovbe',
+            'cmovg', 'cmovge', 'cmovl', 'cmovle',
+            'cmovc', 'cmovnc',
         }
         if not replaced and ins.mnemonic in unknown_mnemonics:
             line = db_directive(
