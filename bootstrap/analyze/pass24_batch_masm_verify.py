@@ -442,6 +442,30 @@ def patch_ambiguous_xchg(asm_lines, byte_seq):
             line = db_directive(
                 ib, f'was {ins.mnemonic} {ins.op_str} (286+/unknown to MASM 4.0)')
             replaced = True
+        # 6b-2) Any instruction whose first byte is 0x0F (the two-byte
+        #     opcode escape). 0F-prefix instructions are 286+ at minimum
+        #     (LSL, LAR, SLDT, etc.) and MMX/SSE at the higher end
+        #     (PACKSSWB, MOVD, etc.). MASM 4.0's coverage is patchy and
+        #     in any case the operand syntax for these often doesn't
+        #     round-trip. The original bytes are unambiguous, so emit
+        #     them verbatim.
+        if not replaced and ib and ib[0] == 0x0F:
+            line = db_directive(
+                ib, f'was {ins.mnemonic} {ins.op_str} (0F-escape opcode)')
+            replaced = True
+        # 6b-3) `imul reg, r/m, imm` with a 16-bit immediate that fits
+        #     in a signed 8-bit value. The 0x69 opcode takes a 16-bit
+        #     immediate; the 0x6B opcode takes a sign-extended 8-bit
+        #     immediate. MASM 4.0 always picks the shorter 0x6B form
+        #     when the imm fits, but the original binary may use the
+        #     longer 0x69 form for fixed instruction-size reasons.
+        if (not replaced and ib and ib[0] == 0x69 and len(ib) >= 4):
+            # ib = 69 modrm [disp16?] imm16 - imm is the last 2 bytes.
+            imm = int.from_bytes(ib[-2:], 'little', signed=True)
+            if -128 <= imm <= 127:
+                line = db_directive(
+                    ib, f'was {ins.mnemonic} {ins.op_str} (imul imm fits in 8-bit)')
+                replaced = True
         # 6c) `ptr [...]` standalone (no size keyword) in Capstone's output.
         #     This happens for `les`/`lds` instructions and similar, where
         #     Capstone prints `les bx, ptr [bp + 0x10]`. MASM parses
