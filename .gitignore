@@ -48,15 +48,21 @@ workspaces/
 *.rep/
 
 # ---- Estado interno (DB, JSONs intermedios) ----
+# La SQLite DB no se sube (se reconstruye con bootstrap/ingest_*.py).
 state/*.db
 state/*.db-journal
 state/*.db-wal
 state/*.db-shm
-state/analyze/pass1/
-state/analyze/pass1b/
-state/analyze/pass2/
-state/analyze/pass4/
-# state/analyze/pass3 SI subimos (es la metadata semantica clave)
+
+# state/analyze/pass*/ JSONs SI se suben:
+#   - Son texto plano (compresibles)
+#   - Permiten que clonadores ejecuten passes posteriores SIN tener
+#     que regenerar pass1/1b/2/4 (que requieren tener los .EXE
+#     originales y ~minutos de CPU)
+#   - Bug detectado por @starfrost013 (2026-05-25): ignorar estos
+#     directorios hacia que pasos posteriores (pass5+, pass8+, etc.)
+#     se saltaran silenciosamente al clonar el repo.
+# state/analyze/  -> NO se ignora (ver comentario arriba)
 
 # ---- Backups y snapshots historicos (pesados) ----
 backups/

@@ -83,14 +83,14 @@
       ],
       "fanout": 3,
       "fanin": 1,
-      "description": "Funcion mediana (38 instr, 3 calls).",
+      "description": "Mid-size function (38 instr, 3 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_kernel",
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0081 -- offset 0x0081 -- 38 instr\n; Funcion mediana (38 instr, 3 calls).\n; tags: calls_kernel, far, medium\n; callers: sub_095F\n; calls (intra): sub_02A8\n; calls (inter): KERNEL.LOCALALLOC, KERNEL.LSTRCPY\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0081 -- offset 0x0081 -- 38 instr\n; Mid-size function (38 instr, 3 calls).\n; tags: calls_kernel, far, medium\n; callers: sub_095F\n; calls (intra): sub_02A8\n; calls (inter): KERNEL.LOCALALLOC, KERNEL.LSTRCPY\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -161,13 +161,13 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (163 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (163 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_00DC -- offset 0x00DC -- 163 instr\n; Dispatcher: tabla de decisiones cmp+jcc (163 instr).\n; tags: calls_kernel, dispatcher\n; callers: sub_095F\n; calls (inter): KERNEL.GETPROFILESTRING\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_00DC -- offset 0x00DC -- 163 instr\n; Dispatcher: cmp+jcc decision table (163 instr).\n; tags: calls_kernel, dispatcher\n; callers: sub_095F\n; calls (inter): KERNEL.GETPROFILESTRING\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -306,14 +306,14 @@
       ],
       "fanout": 15,
       "fanin": 1,
-      "description": "Funcion compleja: 260 instrucciones, 15 llamadas, 4 branches.",
+      "description": "Complex function: 260 instructions, 15 calls, 4 branches.",
       "confidence": "low",
       "semantic_tags": [
         "calls_gdi",
         "calls_user",
         "complex"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_02A8 -- offset 0x02A8 -- 260 instr\n; Funcion compleja: 260 instrucciones, 15 llamadas, 4 branches.\n; tags: calls_gdi, calls_user, complex\n; callers: sub_0081\n; calls (intra): sub_0519\n; calls (inter): GDI.CREATECOMPATIBLEBITMAP, GDI.CREATECOMPATIBLEDC, GDI.DELETEDC, GDI.GETDEVICECAPS, GDI.GETSTOCKOBJECT, GDI.GETTEXTMETRICS (+8 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_02A8 -- offset 0x02A8 -- 260 instr\n; Complex function: 260 instructions, 15 calls, 4 branches.\n; tags: calls_gdi, calls_user, complex\n; callers: sub_0081\n; calls (intra): sub_0519\n; calls (inter): GDI.CREATECOMPATIBLEBITMAP, GDI.CREATECOMPATIBLEDC, GDI.DELETEDC, GDI.GETDEVICECAPS, GDI.GETSTOCKOBJECT, GDI.GETTEXTMETRICS (+8 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -430,7 +430,7 @@
       ],
       "fanout": 10,
       "fanin": 1,
-      "description": "Funcion compleja: 353 instrucciones, 10 llamadas, 20 branches.",
+      "description": "Complex function: 353 instructions, 10 calls, 20 branches.",
       "confidence": "low",
       "semantic_tags": [
         "calls_kernel",
@@ -438,7 +438,7 @@
         "complex",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0519 -- offset 0x0519 -- 353 instr\n; Funcion compleja: 353 instrucciones, 10 llamadas, 20 branches.\n; tags: calls_kernel, calls_user, complex, far\n; callers: sub_02A8\n; calls (intra): sub_0AD3\n; calls (inter): KERNEL.LOCALALLOC, KERNEL.LOCALFREE, USER.CHANGEMENU, USER.CREATEWINDOW, USER.GETSYSTEMMENU, USER.GETSYSTEMMETRICS (+3 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0519 -- offset 0x0519 -- 353 instr\n; Complex function: 353 instructions, 10 calls, 20 branches.\n; tags: calls_kernel, calls_user, complex, far\n; callers: sub_02A8\n; calls (intra): sub_0AD3\n; calls (inter): KERNEL.LOCALALLOC, KERNEL.LOCALFREE, USER.CHANGEMENU, USER.CREATEWINDOW, USER.GETSYSTEMMENU, USER.GETSYSTEMMETRICS (+3 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -498,13 +498,13 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Funcion compleja: 83 instrucciones, 1 llamadas, 0 branches.",
+      "description": "Complex function: 83 instructions, 1 calls, 0 branches.",
       "confidence": "low",
       "semantic_tags": [
         "calls_kernel",
         "complex"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0886 -- offset 0x0886 -- 83 instr\n; Funcion compleja: 83 instrucciones, 1 llamadas, 0 branches.\n; tags: calls_kernel, complex\n; callers: sub_095F\n; calls (inter): KERNEL.GETINSTANCEDATA\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0886 -- offset 0x0886 -- 83 instr\n; Complex function: 83 instructions, 1 calls, 0 branches.\n; tags: calls_kernel, complex\n; callers: sub_095F\n; calls (inter): KERNEL.GETINSTANCEDATA\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -606,7 +606,7 @@
       "callers": [],
       "fanout": 9,
       "fanin": 0,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (146 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (146 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
@@ -614,7 +614,7 @@
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_095F -- offset 0x095F -- 146 instr\n; Dispatcher: tabla de decisiones cmp+jcc (146 instr).\n; tags: calls_kernel, calls_user, dispatcher, far\n; calls (intra): sub_0081, sub_00DC, sub_0886\n; calls (inter): KERNEL.LOCALFREE, KERNEL.MAKEPROCINSTANCE, USER.CREATEWINDOW, USER.DESTROYWINDOW, USER.LOADSTRING, USER.SHOWWINDOW\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_095F -- offset 0x095F -- 146 instr\n; Dispatcher: cmp+jcc decision table (146 instr).\n; tags: calls_kernel, calls_user, dispatcher, far\n; calls (intra): sub_0081, sub_00DC, sub_0886\n; calls (inter): KERNEL.LOCALFREE, KERNEL.MAKEPROCINSTANCE, USER.CREATEWINDOW, USER.DESTROYWINDOW, USER.LOADSTRING, USER.SHOWWINDOW\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -685,14 +685,14 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Funcion mediana (34 instr, 2 calls).",
+      "description": "Mid-size function (34 instr, 2 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_kernel",
         "calls_user",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0AD3 -- offset 0x0AD3 -- 34 instr\n; Funcion mediana (34 instr, 2 calls).\n; tags: calls_kernel, calls_user, medium\n; callers: sub_0519\n; calls (inter): KERNEL.GETPROFILESTRING, USER.GETMENU\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0AD3 -- offset 0x0AD3 -- 34 instr\n; Mid-size function (34 instr, 2 calls).\n; tags: calls_kernel, calls_user, medium\n; callers: sub_0519\n; calls (inter): KERNEL.GETPROFILESTRING, USER.GETMENU\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -763,7 +763,7 @@
       "callers": [],
       "fanout": 3,
       "fanin": 0,
-      "description": "Funcion compleja: 94 instrucciones, 3 llamadas, 0 branches.",
+      "description": "Complex function: 94 instructions, 3 calls, 0 branches.",
       "confidence": "low",
       "semantic_tags": [
         "calls_kernel",
@@ -771,7 +771,7 @@
         "complex",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0B19 -- offset 0x0B19 -- 94 instr\n; Funcion compleja: 94 instrucciones, 3 llamadas, 0 branches.\n; tags: calls_kernel, calls_user, complex, far\n; calls (inter): KERNEL.GETPROFILEINT, KERNEL.GETPROFILESTRING, USER.ENABLEMENUITEM\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0B19 -- offset 0x0B19 -- 94 instr\n; Complex function: 94 instructions, 3 calls, 0 branches.\n; tags: calls_kernel, calls_user, complex, far\n; calls (inter): KERNEL.GETPROFILEINT, KERNEL.GETPROFILESTRING, USER.ENABLEMENUITEM\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -839,13 +839,13 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (21 instr).",
+      "description": "Unclassified function (21 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "calls_user",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_00CB -- offset 0x00CB -- 21 instr\n; Funcion sin clasificar definitiva (21 instr).\n; tags: calls_user, small\n; callers: sub_0222\n; calls (inter): USER.EXITWINDOWS, USER.MESSAGEBOX\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_00CB -- offset 0x00CB -- 21 instr\n; Unclassified function (21 instr).\n; tags: calls_user, small\n; callers: sub_0222\n; calls (inter): USER.EXITWINDOWS, USER.MESSAGEBOX\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -935,7 +935,7 @@
       ],
       "fanout": 4,
       "fanin": 5,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (101 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (101 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
@@ -943,7 +943,7 @@
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_00F7 -- offset 0x00F7 -- 101 instr\n; Dispatcher: tabla de decisiones cmp+jcc (101 instr).\n; tags: calls_kernel, calls_user, dispatcher, far\n; callers: sub_0222, sub_271D, sub_2E2A, sub_3157, sub_36AE\n; calls (inter): KERNEL.ANSIUPPER, KERNEL.LSTRCPY, USER.LOADSTRING, USER.MESSAGEBOX\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_00F7 -- offset 0x00F7 -- 101 instr\n; Dispatcher: cmp+jcc decision table (101 instr).\n; tags: calls_kernel, calls_user, dispatcher, far\n; callers: sub_0222, sub_271D, sub_2E2A, sub_3157, sub_36AE\n; calls (inter): KERNEL.ANSIUPPER, KERNEL.LSTRCPY, USER.LOADSTRING, USER.MESSAGEBOX\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -1009,13 +1009,13 @@
       ],
       "fanout": 3,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (25 instr).",
+      "description": "Unclassified function (25 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "far",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_01F1 -- offset 0x01F1 -- 25 instr\n; Funcion sin clasificar definitiva (25 instr).\n; tags: far, small\n; callers: sub_0222\n; calls (intra): sub_087F, sub_26AE, sub_2700\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_01F1 -- offset 0x01F1 -- 25 instr\n; Unclassified function (25 instr).\n; tags: far, small\n; callers: sub_0222\n; calls (intra): sub_087F, sub_26AE, sub_2700\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -1187,7 +1187,7 @@
       ],
       "fanout": 31,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (504 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (504 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
@@ -1195,7 +1195,7 @@
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0222 -- offset 0x0222 -- 504 instr\n; Dispatcher: tabla de decisiones cmp+jcc (504 instr).\n; tags: calls_kernel, calls_user, dispatcher, far\n; callers: sub_271D\n; calls (intra): sub_00CB, sub_00F7, sub_01F1, sub_06F4, sub_0752, sub_0BC0 (+12 mas)\n; calls (inter): KERNEL.ANSIPREV, KERNEL.LOCALFREE, KERNEL.LSTRCMP, KERNEL.LSTRCPY, USER.CHECKMENUITEM, USER.GETCLIENTRECT (+7 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0222 -- offset 0x0222 -- 504 instr\n; Dispatcher: cmp+jcc decision table (504 instr).\n; tags: calls_kernel, calls_user, dispatcher, far\n; callers: sub_271D\n; calls (intra): sub_00CB, sub_00F7, sub_01F1, sub_06F4, sub_0752, sub_0BC0 (+12 more)\n; calls (inter): KERNEL.ANSIPREV, KERNEL.LOCALFREE, KERNEL.LSTRCMP, KERNEL.LSTRCPY, USER.CHECKMENUITEM, USER.GETCLIENTRECT (+7 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -1285,14 +1285,14 @@
       ],
       "fanout": 4,
       "fanin": 7,
-      "description": "Funcion mediana (40 instr, 4 calls).",
+      "description": "Mid-size function (40 instr, 4 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_user",
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_06F4 -- offset 0x06F4 -- 40 instr\n; Funcion mediana (40 instr, 4 calls).\n; tags: calls_user, far, medium\n; callers: sub_0222, sub_156B, sub_1DF0, sub_1ED3, sub_271D, sub_2E2A (+1 mas)\n; calls (inter): USER.CLIENTTOSCREEN, USER.SETCURSOR, USER.SETCURSORPOS, USER.SHOWCURSOR\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_06F4 -- offset 0x06F4 -- 40 instr\n; Mid-size function (40 instr, 4 calls).\n; tags: calls_user, far, medium\n; callers: sub_0222, sub_156B, sub_1DF0, sub_1ED3, sub_271D, sub_2E2A (+1 more)\n; calls (inter): USER.CLIENTTOSCREEN, USER.SETCURSOR, USER.SETCURSORPOS, USER.SHOWCURSOR\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -1390,7 +1390,7 @@
       ],
       "fanout": 8,
       "fanin": 7,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (113 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (113 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
@@ -1400,7 +1400,7 @@
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0752 -- offset 0x0752 -- 113 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (113 instr).\n; tags: calls_kernel, calls_user, complex_iterator, far, loop, string_op\n; callers: sub_0222, sub_156B, sub_1DF0, sub_1ED3, sub_271D, sub_2E2A (+1 mas)\n; calls (intra): sub_0845, sub_085B, sub_0874, sub_0BC0, sub_1AC8\n; calls (inter): KERNEL.GLOBALFREE, USER.SETCURSOR, USER.SHOWCURSOR\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0752 -- offset 0x0752 -- 113 instr\n; Iterator with string ops (movsb/scasb/...) (113 instr).\n; tags: calls_kernel, calls_user, complex_iterator, far, loop, string_op\n; callers: sub_0222, sub_156B, sub_1DF0, sub_1ED3, sub_271D, sub_2E2A (+1 more)\n; calls (intra): sub_0845, sub_085B, sub_0874, sub_0BC0, sub_1AC8\n; calls (inter): KERNEL.GLOBALFREE, USER.SETCURSOR, USER.SHOWCURSOR\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -1454,12 +1454,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Wrapper que delega en sub_084C.",
+      "description": "Wrapper delegating to sub_084C.",
       "confidence": "medium",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0845 -- offset 0x0845 -- 4 instr\n; Wrapper que delega en sub_084C.\n; tags: wrapper\n; callers: sub_0752\n; calls (intra): sub_084C\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0845 -- offset 0x0845 -- 4 instr\n; Wrapper delegating to sub_084C.\n; tags: wrapper\n; callers: sub_0752\n; calls (intra): sub_084C\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -1514,12 +1514,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Wrapper que delega en sub_085B.",
+      "description": "Wrapper delegating to sub_085B.",
       "confidence": "medium",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_084C -- offset 0x084C -- 7 instr\n; Wrapper que delega en sub_085B.\n; tags: wrapper\n; callers: sub_0845\n; calls (intra): sub_085B\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_084C -- offset 0x084C -- 7 instr\n; Wrapper delegating to sub_085B.\n; tags: wrapper\n; callers: sub_0845\n; calls (intra): sub_085B\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -1577,13 +1577,13 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (12 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (12 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_085B -- offset 0x085B -- 12 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (12 instr).\n; tags: iterator, string_op\n; callers: sub_0752, sub_084C\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_085B -- offset 0x085B -- 12 instr\n; Iterator with string ops (movsb/scasb/...) (12 instr).\n; tags: iterator, string_op\n; callers: sub_0752, sub_084C\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -1635,12 +1635,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion hoja (no llama a otras, 7 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 7 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0874 -- offset 0x0874 -- 7 instr\n; Funcion hoja (no llama a otras, 7 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_0752\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0874 -- offset 0x0874 -- 7 instr\n; Leaf function (no callees, 7 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_0752\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -1698,13 +1698,13 @@
       ],
       "fanout": 0,
       "fanin": 3,
-      "description": "Llama a servicios DOS via INT 21h (9 instr).",
+      "description": "Calls DOS services via INT 21h (9 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_087F -- offset 0x087F -- 9 instr\n; Llama a servicios DOS via INT 21h (9 instr).\n; tags: dos_caller, int_21\n; callers: sub_01F1, sub_13E0, sub_26AE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_087F -- offset 0x087F -- 9 instr\n; Calls DOS services via INT 21h (9 instr).\n; tags: dos_caller, int_21\n; callers: sub_01F1, sub_13E0, sub_26AE\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -1771,14 +1771,14 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (36 instr).",
+      "description": "Calls DOS services via INT 21h (36 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "far",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0891 -- offset 0x0891 -- 36 instr\n; Llama a servicios DOS via INT 21h (36 instr).\n; tags: dos_caller, far, int_21\n; callers: sub_271D\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0891 -- offset 0x0891 -- 36 instr\n; Calls DOS services via INT 21h (36 instr).\n; tags: dos_caller, far, int_21\n; callers: sub_271D\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -1841,14 +1841,14 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (22 instr).",
+      "description": "Calls DOS services via INT 21h (22 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "far",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_08E1 -- offset 0x08E1 -- 22 instr\n; Llama a servicios DOS via INT 21h (22 instr).\n; tags: dos_caller, far, int_21\n; callers: sub_271D\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_08E1 -- offset 0x08E1 -- 22 instr\n; Calls DOS services via INT 21h (22 instr).\n; tags: dos_caller, far, int_21\n; callers: sub_271D\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -1906,13 +1906,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (18 instr).",
+      "description": "Calls DOS services via INT 21h (18 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0907 -- offset 0x0907 -- 18 instr\n; Llama a servicios DOS via INT 21h (18 instr).\n; tags: dos_caller, int_21\n; callers: sub_143E\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0907 -- offset 0x0907 -- 18 instr\n; Calls DOS services via INT 21h (18 instr).\n; tags: dos_caller, int_21\n; callers: sub_143E\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -1982,7 +1982,7 @@
       ],
       "fanout": 0,
       "fanin": 3,
-      "description": "Llama a servicios DOS via INT 21h (42 instr).",
+      "description": "Calls DOS services via INT 21h (42 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "far",
@@ -1990,7 +1990,7 @@
         "iterator",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0925 -- offset 0x0925 -- 42 instr\n; Llama a servicios DOS via INT 21h (42 instr).\n; tags: far, int_21, iterator, string_op\n; callers: sub_13E0, sub_14F2, sub_3157\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0925 -- offset 0x0925 -- 42 instr\n; Calls DOS services via INT 21h (42 instr).\n; tags: far, int_21, iterator, string_op\n; callers: sub_13E0, sub_14F2, sub_3157\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -2047,13 +2047,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (11 instr).",
+      "description": "Calls DOS services via INT 21h (11 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0973 -- offset 0x0973 -- 11 instr\n; Llama a servicios DOS via INT 21h (11 instr).\n; tags: dos_caller, int_21\n; callers: sub_3157\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0973 -- offset 0x0973 -- 11 instr\n; Calls DOS services via INT 21h (11 instr).\n; tags: dos_caller, int_21\n; callers: sub_3157\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -2128,14 +2128,14 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Funcion mediana (77 instr, 2 calls).",
+      "description": "Mid-size function (77 instr, 2 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_gdi",
         "calls_kernel",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0989 -- offset 0x0989 -- 77 instr\n; Funcion mediana (77 instr, 2 calls).\n; tags: calls_gdi, calls_kernel, medium\n; callers: sub_0A52\n; calls (inter): GDI.TEXTOUT, KERNEL.LSTRLEN\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0989 -- offset 0x0989 -- 77 instr\n; Mid-size function (77 instr, 2 calls).\n; tags: calls_gdi, calls_kernel, medium\n; callers: sub_0A52\n; calls (inter): GDI.TEXTOUT, KERNEL.LSTRLEN\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -2212,13 +2212,13 @@
       ],
       "fanout": 3,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (86 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (86 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_gdi",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0A52 -- offset 0x0A52 -- 86 instr\n; Dispatcher: tabla de decisiones cmp+jcc (86 instr).\n; tags: calls_gdi, dispatcher\n; callers: sub_234F\n; calls (intra): sub_0989, sub_2707\n; calls (inter): GDI.SETBKMODE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0A52 -- offset 0x0A52 -- 86 instr\n; Dispatcher: cmp+jcc decision table (86 instr).\n; tags: calls_gdi, dispatcher\n; callers: sub_234F\n; calls (intra): sub_0989, sub_2707\n; calls (inter): GDI.SETBKMODE\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -2325,7 +2325,7 @@
       ],
       "fanout": 9,
       "fanin": 3,
-      "description": "Funcion mediana (55 instr, 9 calls).",
+      "description": "Mid-size function (55 instr, 9 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_gdi",
@@ -2333,7 +2333,7 @@
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0B2C -- offset 0x0B2C -- 55 instr\n; Funcion mediana (55 instr, 9 calls).\n; tags: calls_gdi, calls_user, far, medium\n; callers: sub_18F7, sub_1F1E, sub_2420\n; calls (inter): GDI.CREATESOLIDBRUSH, GDI.DELETEOBJECT, GDI.SELECTOBJECT, GDI.SETBRUSHORG, GDI.UNREALIZEOBJECT, USER.CLIENTTOSCREEN (+3 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0B2C -- offset 0x0B2C -- 55 instr\n; Mid-size function (55 instr, 9 calls).\n; tags: calls_gdi, calls_user, far, medium\n; callers: sub_18F7, sub_1F1E, sub_2420\n; calls (inter): GDI.CREATESOLIDBRUSH, GDI.DELETEOBJECT, GDI.SELECTOBJECT, GDI.SETBRUSHORG, GDI.UNREALIZEOBJECT, USER.CLIENTTOSCREEN (+3 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -2428,7 +2428,7 @@
       ],
       "fanout": 6,
       "fanin": 2,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (283 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (283 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
@@ -2437,7 +2437,7 @@
         "far",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0BC0 -- offset 0x0BC0 -- 283 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (283 instr).\n; tags: calls_kernel, calls_user, complex_iterator, far, string_op\n; callers: sub_0222, sub_0752\n; calls (intra): sub_2DB6\n; calls (inter): KERNEL.LSTRCAT, KERNEL.LSTRCPY, KERNEL.LSTRLEN, USER.INVALIDATERECT, USER.MOVEWINDOW\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0BC0 -- offset 0x0BC0 -- 283 instr\n; Iterator with string ops (movsb/scasb/...) (283 instr).\n; tags: calls_kernel, calls_user, complex_iterator, far, string_op\n; callers: sub_0222, sub_0752\n; calls (intra): sub_2DB6\n; calls (inter): KERNEL.LSTRCAT, KERNEL.LSTRCPY, KERNEL.LSTRLEN, USER.INVALIDATERECT, USER.MOVEWINDOW\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -2505,13 +2505,13 @@
       ],
       "fanout": 2,
       "fanin": 4,
-      "description": "Funcion sin clasificar definitiva (9 instr).",
+      "description": "Unclassified function (9 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "calls_user",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0E80 -- offset 0x0E80 -- 9 instr\n; Funcion sin clasificar definitiva (9 instr).\n; tags: calls_user, small\n; callers: sub_18F7, sub_1AA5, sub_1AC8, sub_1E9E\n; calls (inter): USER.GETDC, USER.HIDECARET\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0E80 -- offset 0x0E80 -- 9 instr\n; Unclassified function (9 instr).\n; tags: calls_user, small\n; callers: sub_18F7, sub_1AA5, sub_1AC8, sub_1E9E\n; calls (inter): USER.GETDC, USER.HIDECARET\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -2579,13 +2579,13 @@
       ],
       "fanout": 2,
       "fanin": 4,
-      "description": "Funcion sin clasificar definitiva (10 instr).",
+      "description": "Unclassified function (10 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "calls_user",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0E9A -- offset 0x0E9A -- 10 instr\n; Funcion sin clasificar definitiva (10 instr).\n; tags: calls_user, small\n; callers: sub_18F7, sub_1AA5, sub_1AC8, sub_1E9E\n; calls (inter): USER.RELEASEDC, USER.SHOWCARET\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0E9A -- offset 0x0E9A -- 10 instr\n; Unclassified function (10 instr).\n; tags: calls_user, small\n; callers: sub_18F7, sub_1AA5, sub_1AC8, sub_1E9E\n; calls (inter): USER.RELEASEDC, USER.SHOWCARET\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -2652,13 +2652,13 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Funcion mediana (78 instr, 1 calls).",
+      "description": "Mid-size function (78 instr, 1 calls).",
       "confidence": "low",
       "semantic_tags": [
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0EB7 -- offset 0x0EB7 -- 78 instr\n; Funcion mediana (78 instr, 1 calls).\n; tags: far, medium\n; callers: sub_0222\n; calls (intra): sub_0F4B\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0EB7 -- offset 0x0EB7 -- 78 instr\n; Mid-size function (78 instr, 1 calls).\n; tags: far, medium\n; callers: sub_0222\n; calls (intra): sub_0F4B\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -2725,12 +2725,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (84 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (84 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0F4B -- offset 0x0F4B -- 84 instr\n; Dispatcher: tabla de decisiones cmp+jcc (84 instr).\n; tags: dispatcher\n; callers: sub_0EB7\n; calls (intra): sub_0FF1\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0F4B -- offset 0x0F4B -- 84 instr\n; Dispatcher: cmp+jcc decision table (84 instr).\n; tags: dispatcher\n; callers: sub_0EB7\n; calls (intra): sub_0FF1\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -2793,13 +2793,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (99 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (99 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0FF1 -- offset 0x0FF1 -- 99 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (99 instr).\n; tags: complex_iterator, string_op\n; callers: sub_0F4B\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0FF1 -- offset 0x0FF1 -- 99 instr\n; Iterator with string ops (movsb/scasb/...) (99 instr).\n; tags: complex_iterator, string_op\n; callers: sub_0F4B\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -2870,13 +2870,13 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Funcion mediana (70 instr, 1 calls).",
+      "description": "Mid-size function (70 instr, 1 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_kernel",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_10CA -- offset 0x10CA -- 70 instr\n; Funcion mediana (70 instr, 1 calls).\n; tags: calls_kernel, medium\n; callers: sub_0222\n; calls (inter): KERNEL.LSTRLEN\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_10CA -- offset 0x10CA -- 70 instr\n; Mid-size function (70 instr, 1 calls).\n; tags: calls_kernel, medium\n; callers: sub_0222\n; calls (inter): KERNEL.LSTRLEN\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -2964,14 +2964,14 @@
       ],
       "fanout": 6,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (98 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (98 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1184 -- offset 0x1184 -- 98 instr\n; Dispatcher: tabla de decisiones cmp+jcc (98 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_0222\n; calls (intra): sub_126A, sub_1A42, sub_212A\n; calls (inter): KERNEL.GETPROFILESTRING, KERNEL.LOCALALLOC, KERNEL.LOCALFREE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1184 -- offset 0x1184 -- 98 instr\n; Dispatcher: cmp+jcc decision table (98 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_0222\n; calls (intra): sub_126A, sub_1A42, sub_212A\n; calls (inter): KERNEL.GETPROFILESTRING, KERNEL.LOCALALLOC, KERNEL.LOCALFREE\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -3041,14 +3041,14 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (147 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (147 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_126A -- offset 0x126A -- 147 instr\n; Dispatcher: tabla de decisiones cmp+jcc (147 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_1184\n; calls (inter): KERNEL.ANSIUPPER\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_126A -- offset 0x126A -- 147 instr\n; Dispatcher: cmp+jcc decision table (147 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_1184\n; calls (inter): KERNEL.ANSIUPPER\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -3122,13 +3122,13 @@
       ],
       "fanout": 3,
       "fanin": 2,
-      "description": "Funcion mediana (41 instr, 3 calls).",
+      "description": "Mid-size function (41 instr, 3 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_user",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_13E0 -- offset 0x13E0 -- 41 instr\n; Funcion mediana (41 instr, 3 calls).\n; tags: calls_user, medium\n; callers: sub_1DF0, sub_1ED3\n; calls (intra): sub_087F, sub_0925\n; calls (inter): USER.POSTMESSAGE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_13E0 -- offset 0x13E0 -- 41 instr\n; Mid-size function (41 instr, 3 calls).\n; tags: calls_user, medium\n; callers: sub_1DF0, sub_1ED3\n; calls (intra): sub_087F, sub_0925\n; calls (inter): USER.POSTMESSAGE\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -3202,14 +3202,14 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (76 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (76 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_143E -- offset 0x143E -- 76 instr\n; Dispatcher: tabla de decisiones cmp+jcc (76 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_0222\n; calls (intra): sub_0907\n; calls (inter): KERNEL.LSTRCPY\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_143E -- offset 0x143E -- 76 instr\n; Dispatcher: cmp+jcc decision table (76 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_0222\n; calls (intra): sub_0907\n; calls (inter): KERNEL.LSTRCPY\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -3281,14 +3281,14 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Funcion mediana (35 instr, 2 calls).",
+      "description": "Mid-size function (35 instr, 2 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_kernel",
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_14F2 -- offset 0x14F2 -- 35 instr\n; Funcion mediana (35 instr, 2 calls).\n; tags: calls_kernel, far, medium\n; callers: sub_0222\n; calls (intra): sub_0925\n; calls (inter): KERNEL.LSTRCPY\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_14F2 -- offset 0x14F2 -- 35 instr\n; Mid-size function (35 instr, 2 calls).\n; tags: calls_kernel, far, medium\n; callers: sub_0222\n; calls (intra): sub_0925\n; calls (inter): KERNEL.LSTRCPY\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -3352,13 +3352,13 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (21 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (21 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_user",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_152F -- offset 0x152F -- 21 instr\n; Dispatcher: tabla de decisiones cmp+jcc (21 instr).\n; tags: calls_user, dispatcher\n; callers: sub_18F7\n; calls (inter): USER.SETFOCUS\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_152F -- offset 0x152F -- 21 instr\n; Dispatcher: cmp+jcc decision table (21 instr).\n; tags: calls_user, dispatcher\n; callers: sub_18F7\n; calls (inter): USER.SETFOCUS\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -3478,14 +3478,14 @@
       "callers": [],
       "fanout": 13,
       "fanin": 0,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (197 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (197 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "calls_user",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_156B -- offset 0x156B -- 197 instr\n; Dispatcher: tabla de decisiones cmp+jcc (197 instr).\n; tags: calls_kernel, calls_user, dispatcher\n; calls (intra): sub_06F4, sub_0752, sub_1891, sub_18F7\n; calls (inter): KERNEL.LSTRCPY, USER.DISPATCHMESSAGE, USER.GETCURRENTTIME, USER.GETDOUBLECLICKTIME, USER.PEEKMESSAGE, USER.POSTMESSAGE (+3 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_156B -- offset 0x156B -- 197 instr\n; Dispatcher: cmp+jcc decision table (197 instr).\n; tags: calls_kernel, calls_user, dispatcher\n; calls (intra): sub_06F4, sub_0752, sub_1891, sub_18F7\n; calls (inter): KERNEL.LSTRCPY, USER.DISPATCHMESSAGE, USER.GETCURRENTTIME, USER.GETDOUBLECLICKTIME, USER.PEEKMESSAGE, USER.POSTMESSAGE (+3 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -3549,13 +3549,13 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Wrapper que delega en USER.ISRECTEMPTY.",
+      "description": "Wrapper delegating to USER.ISRECTEMPTY.",
       "confidence": "medium",
       "semantic_tags": [
         "calls_user",
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1782 -- offset 0x1782 -- 15 instr\n; Wrapper que delega en USER.ISRECTEMPTY.\n; tags: calls_user, wrapper\n; callers: sub_18F7\n; calls (inter): USER.ISRECTEMPTY\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1782 -- offset 0x1782 -- 15 instr\n; Wrapper delegating to USER.ISRECTEMPTY.\n; tags: calls_user, wrapper\n; callers: sub_18F7\n; calls (inter): USER.ISRECTEMPTY\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -3638,14 +3638,14 @@
       "callers": [],
       "fanout": 4,
       "fanin": 0,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (84 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (84 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_gdi",
         "calls_user",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_17AC -- offset 0x17AC -- 84 instr\n; Dispatcher: tabla de decisiones cmp+jcc (84 instr).\n; tags: calls_gdi, calls_user, dispatcher\n; calls (inter): GDI.SETBKMODE, GDI.SETTEXTCOLOR, GDI.TEXTOUT, USER.GETSYSCOLOR\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_17AC -- offset 0x17AC -- 84 instr\n; Dispatcher: cmp+jcc decision table (84 instr).\n; tags: calls_gdi, calls_user, dispatcher\n; calls (inter): GDI.SETBKMODE, GDI.SETTEXTCOLOR, GDI.TEXTOUT, USER.GETSYSCOLOR\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -3707,12 +3707,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (40 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (40 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1891 -- offset 0x1891 -- 40 instr\n; Dispatcher: tabla de decisiones cmp+jcc (40 instr).\n; tags: dispatcher\n; callers: sub_156B\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1891 -- offset 0x1891 -- 40 instr\n; Dispatcher: cmp+jcc decision table (40 instr).\n; tags: dispatcher\n; callers: sub_156B\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -3819,7 +3819,7 @@
       ],
       "fanout": 11,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (132 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (132 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
@@ -3827,7 +3827,7 @@
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_18F7 -- offset 0x18F7 -- 132 instr\n; Dispatcher: tabla de decisiones cmp+jcc (132 instr).\n; tags: calls_kernel, calls_user, dispatcher, far\n; callers: sub_156B\n; calls (intra): sub_0B2C, sub_0E80, sub_0E9A, sub_152F, sub_1782\n; calls (inter): KERNEL.LSTRLEN, USER.BEGINPAINT, USER.DEFWINDOWPROC, USER.ENDPAINT, USER.INVERTRECT, USER.SETRECT\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_18F7 -- offset 0x18F7 -- 132 instr\n; Dispatcher: cmp+jcc decision table (132 instr).\n; tags: calls_kernel, calls_user, dispatcher, far\n; callers: sub_156B\n; calls (intra): sub_0B2C, sub_0E80, sub_0E9A, sub_152F, sub_1782\n; calls (inter): KERNEL.LSTRLEN, USER.BEGINPAINT, USER.DEFWINDOWPROC, USER.ENDPAINT, USER.INVERTRECT, USER.SETRECT\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -3891,12 +3891,12 @@
       ],
       "fanout": 2,
       "fanin": 4,
-      "description": "Funcion sin clasificar definitiva (12 instr).",
+      "description": "Unclassified function (12 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1A42 -- offset 0x1A42 -- 12 instr\n; Funcion sin clasificar definitiva (12 instr).\n; tags: small\n; callers: sub_0222, sub_1184, sub_2018, sub_271D\n; calls (intra): sub_1AA5, sub_1BBA\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1A42 -- offset 0x1A42 -- 12 instr\n; Unclassified function (12 instr).\n; tags: small\n; callers: sub_0222, sub_1184, sub_2018, sub_271D\n; calls (intra): sub_1AA5, sub_1BBA\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -3966,14 +3966,14 @@
       ],
       "fanout": 2,
       "fanin": 2,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (35 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (35 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "iterator",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1A5E -- offset 0x1A5E -- 35 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (35 instr).\n; tags: calls_kernel, iterator, string_op\n; callers: sub_2018, sub_271D\n; calls (intra): sub_1AA5\n; calls (inter): KERNEL.LOCALREALLOC\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1A5E -- offset 0x1A5E -- 35 instr\n; Iterator with string ops (movsb/scasb/...) (35 instr).\n; tags: calls_kernel, iterator, string_op\n; callers: sub_2018, sub_271D\n; calls (intra): sub_1AA5\n; calls (inter): KERNEL.LOCALREALLOC\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -4035,12 +4035,12 @@
       ],
       "fanout": 3,
       "fanin": 2,
-      "description": "Funcion sin clasificar definitiva (16 instr).",
+      "description": "Unclassified function (16 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1AA5 -- offset 0x1AA5 -- 16 instr\n; Funcion sin clasificar definitiva (16 instr).\n; tags: small\n; callers: sub_1A42, sub_1A5E\n; calls (intra): sub_0E80, sub_0E9A, sub_1B1C\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1AA5 -- offset 0x1AA5 -- 16 instr\n; Unclassified function (16 instr).\n; tags: small\n; callers: sub_1A42, sub_1A5E\n; calls (intra): sub_0E80, sub_0E9A, sub_1B1C\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -4117,14 +4117,14 @@
       ],
       "fanout": 4,
       "fanin": 4,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (34 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (34 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "iterator",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1AC8 -- offset 0x1AC8 -- 34 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (34 instr).\n; tags: calls_kernel, iterator, string_op\n; callers: sub_0222, sub_0752, sub_2018, sub_271D\n; calls (intra): sub_0E80, sub_0E9A, sub_1B1C\n; calls (inter): KERNEL.LOCALFREE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1AC8 -- offset 0x1AC8 -- 34 instr\n; Iterator with string ops (movsb/scasb/...) (34 instr).\n; tags: calls_kernel, iterator, string_op\n; callers: sub_0222, sub_0752, sub_2018, sub_271D\n; calls (intra): sub_0E80, sub_0E9A, sub_1B1C\n; calls (inter): KERNEL.LOCALFREE\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -4196,14 +4196,14 @@
       ],
       "fanout": 1,
       "fanin": 3,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (64 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (64 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_user",
         "complex_iterator",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1B1C -- offset 0x1B1C -- 64 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (64 instr).\n; tags: calls_user, complex_iterator, string_op\n; callers: sub_1AA5, sub_1AC8, sub_2400\n; calls (inter): USER.INVERTRECT\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1B1C -- offset 0x1B1C -- 64 instr\n; Iterator with string ops (movsb/scasb/...) (64 instr).\n; tags: calls_user, complex_iterator, string_op\n; callers: sub_1AA5, sub_1AC8, sub_2400\n; calls (inter): USER.INVERTRECT\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -4275,13 +4275,13 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Funcion mediana (31 instr, 2 calls).",
+      "description": "Mid-size function (31 instr, 2 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_kernel",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1BBA -- offset 0x1BBA -- 31 instr\n; Funcion mediana (31 instr, 2 calls).\n; tags: calls_kernel, medium\n; callers: sub_1A42\n; calls (inter): KERNEL.LOCALALLOC, KERNEL.LOCALREALLOC\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1BBA -- offset 0x1BBA -- 31 instr\n; Mid-size function (31 instr, 2 calls).\n; tags: calls_kernel, medium\n; callers: sub_1A42\n; calls (inter): KERNEL.LOCALALLOC, KERNEL.LOCALREALLOC\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -4339,13 +4339,13 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Funcion sin clasificar definitiva (25 instr).",
+      "description": "Unclassified function (25 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "far",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1C05 -- offset 0x1C05 -- 25 instr\n; Funcion sin clasificar definitiva (25 instr).\n; tags: far, small\n; callers: sub_2018, sub_271D\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1C05 -- offset 0x1C05 -- 25 instr\n; Unclassified function (25 instr).\n; tags: far, small\n; callers: sub_2018, sub_271D\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -4407,13 +4407,13 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Wrapper que delega en USER.ISRECTEMPTY.",
+      "description": "Wrapper delegating to USER.ISRECTEMPTY.",
       "confidence": "medium",
       "semantic_tags": [
         "calls_user",
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1C30 -- offset 0x1C30 -- 12 instr\n; Wrapper que delega en USER.ISRECTEMPTY.\n; tags: calls_user, wrapper\n; callers: sub_1F1E\n; calls (inter): USER.ISRECTEMPTY\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1C30 -- offset 0x1C30 -- 12 instr\n; Wrapper delegating to USER.ISRECTEMPTY.\n; tags: calls_user, wrapper\n; callers: sub_1F1E\n; calls (inter): USER.ISRECTEMPTY\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -4525,14 +4525,14 @@
       "callers": [],
       "fanout": 10,
       "fanin": 0,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (121 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (121 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_gdi",
         "calls_user",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1C4C -- offset 0x1C4C -- 121 instr\n; Dispatcher: tabla de decisiones cmp+jcc (121 instr).\n; tags: calls_gdi, calls_user, dispatcher\n; calls (intra): sub_1D7A\n; calls (inter): GDI.BITBLT, GDI.CREATECOMPATIBLEDC, GDI.DELETEDC, GDI.SELECTOBJECT, GDI.SETBKCOLOR, GDI.SETBKMODE (+3 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1C4C -- offset 0x1C4C -- 121 instr\n; Dispatcher: cmp+jcc decision table (121 instr).\n; tags: calls_gdi, calls_user, dispatcher\n; calls (intra): sub_1D7A\n; calls (inter): GDI.BITBLT, GDI.CREATECOMPATIBLEDC, GDI.DELETEDC, GDI.SELECTOBJECT, GDI.SETBKCOLOR, GDI.SETBKMODE (+3 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -4608,13 +4608,13 @@
       ],
       "fanout": 2,
       "fanin": 2,
-      "description": "Funcion mediana (52 instr, 2 calls).",
+      "description": "Mid-size function (52 instr, 2 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_user",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1D7A -- offset 0x1D7A -- 52 instr\n; Funcion mediana (52 instr, 2 calls).\n; tags: calls_user, medium\n; callers: sub_1C4C, sub_1E9E\n; calls (inter): USER.INVERTRECT, USER.SETRECT\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1D7A -- offset 0x1D7A -- 52 instr\n; Mid-size function (52 instr, 2 calls).\n; tags: calls_user, medium\n; callers: sub_1C4C, sub_1E9E\n; calls (inter): USER.INVERTRECT, USER.SETRECT\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -4705,13 +4705,13 @@
       ],
       "fanout": 8,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (60 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (60 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_user",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1DF0 -- offset 0x1DF0 -- 60 instr\n; Dispatcher: tabla de decisiones cmp+jcc (60 instr).\n; tags: calls_user, dispatcher\n; callers: sub_1F1E\n; calls (intra): sub_06F4, sub_0752, sub_13E0, sub_1E9E, sub_1F1E\n; calls (inter): USER.RELEASECAPTURE, USER.SETCAPTURE, USER.SETFOCUS\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1DF0 -- offset 0x1DF0 -- 60 instr\n; Dispatcher: cmp+jcc decision table (60 instr).\n; tags: calls_user, dispatcher\n; callers: sub_1F1E\n; calls (intra): sub_06F4, sub_0752, sub_13E0, sub_1E9E, sub_1F1E\n; calls (inter): USER.RELEASECAPTURE, USER.SETCAPTURE, USER.SETFOCUS\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -4774,12 +4774,12 @@
       ],
       "fanout": 3,
       "fanin": 2,
-      "description": "Funcion sin clasificar definitiva (20 instr).",
+      "description": "Unclassified function (20 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1E9E -- offset 0x1E9E -- 20 instr\n; Funcion sin clasificar definitiva (20 instr).\n; tags: small\n; callers: sub_1DF0, sub_1ED3\n; calls (intra): sub_0E80, sub_0E9A, sub_1D7A\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1E9E -- offset 0x1E9E -- 20 instr\n; Unclassified function (20 instr).\n; tags: small\n; callers: sub_1DF0, sub_1ED3\n; calls (intra): sub_0E80, sub_0E9A, sub_1D7A\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -4848,13 +4848,13 @@
       ],
       "fanout": 4,
       "fanin": 1,
-      "description": "Funcion mediana (33 instr, 4 calls).",
+      "description": "Mid-size function (33 instr, 4 calls).",
       "confidence": "low",
       "semantic_tags": [
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1ED3 -- offset 0x1ED3 -- 33 instr\n; Funcion mediana (33 instr, 4 calls).\n; tags: far, medium\n; callers: sub_271D\n; calls (intra): sub_06F4, sub_0752, sub_13E0, sub_1E9E\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1ED3 -- offset 0x1ED3 -- 33 instr\n; Mid-size function (33 instr, 4 calls).\n; tags: far, medium\n; callers: sub_271D\n; calls (intra): sub_06F4, sub_0752, sub_13E0, sub_1E9E\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -4942,14 +4942,14 @@
       ],
       "fanout": 6,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (106 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (106 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_user",
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1F1E -- offset 0x1F1E -- 106 instr\n; Dispatcher: tabla de decisiones cmp+jcc (106 instr).\n; tags: calls_user, dispatcher, far\n; callers: sub_1DF0\n; calls (intra): sub_0B2C, sub_1C30, sub_1DF0\n; calls (inter): USER.BEGINPAINT, USER.DEFWINDOWPROC, USER.ENDPAINT\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1F1E -- offset 0x1F1E -- 106 instr\n; Dispatcher: cmp+jcc decision table (106 instr).\n; tags: calls_user, dispatcher, far\n; callers: sub_1DF0\n; calls (intra): sub_0B2C, sub_1C30, sub_1DF0\n; calls (inter): USER.BEGINPAINT, USER.DEFWINDOWPROC, USER.ENDPAINT\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -5045,13 +5045,13 @@
       ],
       "fanout": 10,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (113 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (113 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_user",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2018 -- offset 0x2018 -- 113 instr\n; Dispatcher: tabla de decisiones cmp+jcc (113 instr).\n; tags: calls_user, dispatcher\n; callers: sub_2420\n; calls (intra): sub_1A42, sub_1A5E, sub_1AC8, sub_1C05, sub_22EA, sub_2DB6 (+1 mas)\n; calls (inter): USER.GETKEYSTATE, USER.PEEKMESSAGE, USER.SETFOCUS\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2018 -- offset 0x2018 -- 113 instr\n; Dispatcher: cmp+jcc decision table (113 instr).\n; tags: calls_user, dispatcher\n; callers: sub_2420\n; calls (intra): sub_1A42, sub_1A5E, sub_1AC8, sub_1C05, sub_22EA, sub_2DB6 (+1 more)\n; calls (inter): USER.GETKEYSTATE, USER.PEEKMESSAGE, USER.SETFOCUS\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -5143,13 +5143,13 @@
       ],
       "fanout": 5,
       "fanin": 3,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (160 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (160 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_user",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_212A -- offset 0x212A -- 160 instr\n; Dispatcher: tabla de decisiones cmp+jcc (160 instr).\n; tags: calls_user, dispatcher\n; callers: sub_0222, sub_1184, sub_2420\n; calls (inter): USER.GETCLIENTRECT, USER.INVALIDATERECT, USER.ISRECTEMPTY, USER.SETSCROLLPOS, USER.SETSCROLLRANGE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_212A -- offset 0x212A -- 160 instr\n; Dispatcher: cmp+jcc decision table (160 instr).\n; tags: calls_user, dispatcher\n; callers: sub_0222, sub_1184, sub_2420\n; calls (inter): USER.GETCLIENTRECT, USER.INVALIDATERECT, USER.ISRECTEMPTY, USER.SETSCROLLPOS, USER.SETSCROLLRANGE\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -5211,12 +5211,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion mediana (38 instr, 0 calls).",
+      "description": "Mid-size function (38 instr, 0 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_22EA -- offset 0x22EA -- 38 instr\n; Funcion mediana (38 instr, 0 calls).\n; tags: medium\n; callers: sub_2018\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_22EA -- offset 0x22EA -- 38 instr\n; Mid-size function (38 instr, 0 calls).\n; tags: medium\n; callers: sub_2018\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -5319,14 +5319,14 @@
       ],
       "fanout": 9,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (56 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (56 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_gdi",
         "calls_user",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_234F -- offset 0x234F -- 56 instr\n; Dispatcher: tabla de decisiones cmp+jcc (56 instr).\n; tags: calls_gdi, calls_user, dispatcher\n; callers: sub_2420\n; calls (intra): sub_0A52, sub_23ED\n; calls (inter): GDI.SETTEXTCOLOR, USER.GETCLIENTRECT, USER.GETFOCUS, USER.GETSYSCOLOR, USER.ISRECTEMPTY, USER.POSTMESSAGE (+1 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_234F -- offset 0x234F -- 56 instr\n; Dispatcher: cmp+jcc decision table (56 instr).\n; tags: calls_gdi, calls_user, dispatcher\n; callers: sub_2420\n; calls (intra): sub_0A52, sub_23ED\n; calls (inter): GDI.SETTEXTCOLOR, USER.GETCLIENTRECT, USER.GETFOCUS, USER.GETSYSCOLOR, USER.ISRECTEMPTY, USER.POSTMESSAGE (+1 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -5379,12 +5379,12 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Funcion hoja (no llama a otras, 7 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 7 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_23ED -- offset 0x23ED -- 7 instr\n; Funcion hoja (no llama a otras, 7 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_0222, sub_234F\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_23ED -- offset 0x23ED -- 7 instr\n; Leaf function (no callees, 7 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_0222, sub_234F\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -5443,12 +5443,12 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Wrapper que delega en sub_1B1C.",
+      "description": "Wrapper delegating to sub_1B1C.",
       "confidence": "medium",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2400 -- offset 0x2400 -- 12 instr\n; Wrapper que delega en sub_1B1C.\n; tags: wrapper\n; calls (intra): sub_1B1C\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2400 -- offset 0x2400 -- 12 instr\n; Wrapper delegating to sub_1B1C.\n; tags: wrapper\n; calls (intra): sub_1B1C\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -5569,14 +5569,14 @@
       ],
       "fanout": 13,
       "fanin": 2,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (265 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (265 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_user",
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2420 -- offset 0x2420 -- 265 instr\n; Dispatcher: tabla de decisiones cmp+jcc (265 instr).\n; tags: calls_user, dispatcher, far\n; callers: sub_271D, sub_2CAC\n; calls (intra): sub_0B2C, sub_2018, sub_212A, sub_234F, sub_2DB6\n; calls (inter): USER.BEGINPAINT, USER.DEFWINDOWPROC, USER.ENDPAINT, USER.GETCLIENTRECT, USER.SCROLLWINDOW, USER.SETSCROLLPOS (+2 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2420 -- offset 0x2420 -- 265 instr\n; Dispatcher: cmp+jcc decision table (265 instr).\n; tags: calls_user, dispatcher, far\n; callers: sub_271D, sub_2CAC\n; calls (intra): sub_0B2C, sub_2018, sub_212A, sub_234F, sub_2DB6\n; calls (inter): USER.BEGINPAINT, USER.DEFWINDOWPROC, USER.ENDPAINT, USER.GETCLIENTRECT, USER.SCROLLWINDOW, USER.SETSCROLLPOS (+2 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -5651,13 +5651,13 @@
       ],
       "fanout": 3,
       "fanin": 1,
-      "description": "Funcion mediana (35 instr, 3 calls).",
+      "description": "Mid-size function (35 instr, 3 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_system",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_26AE -- offset 0x26AE -- 35 instr\n; Funcion mediana (35 instr, 3 calls).\n; tags: calls_system, medium\n; callers: sub_01F1\n; calls (intra): sub_087F, sub_2700\n; calls (inter): SYSTEM.INQUIRESYSTEM\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_26AE -- offset 0x26AE -- 35 instr\n; Mid-size function (35 instr, 3 calls).\n; tags: calls_system, medium\n; callers: sub_01F1\n; calls (intra): sub_087F, sub_2700\n; calls (inter): SYSTEM.INQUIRESYSTEM\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -5710,13 +5710,13 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Llama a servicios DOS via INT 21h (4 instr).",
+      "description": "Calls DOS services via INT 21h (4 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2700 -- offset 0x2700 -- 4 instr\n; Llama a servicios DOS via INT 21h (4 instr).\n; tags: dos_caller, int_21\n; callers: sub_01F1, sub_26AE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2700 -- offset 0x2700 -- 4 instr\n; Calls DOS services via INT 21h (4 instr).\n; tags: dos_caller, int_21\n; callers: sub_01F1, sub_26AE\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -5772,12 +5772,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion hoja (no llama a otras, 11 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 11 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2707 -- offset 0x2707 -- 11 instr\n; Funcion hoja (no llama a otras, 11 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_0A52\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2707 -- offset 0x2707 -- 11 instr\n; Leaf function (no callees, 11 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_0A52\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -5910,7 +5910,7 @@
       ],
       "fanout": 22,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (571 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (571 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
@@ -5918,7 +5918,7 @@
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_271D -- offset 0x271D -- 571 instr\n; Dispatcher: tabla de decisiones cmp+jcc (571 instr).\n; tags: calls_kernel, calls_user, dispatcher, far\n; callers: sub_0222\n; calls (intra): sub_00F7, sub_0222, sub_06F4, sub_0752, sub_0891, sub_08E1 (+9 mas)\n; calls (inter): KERNEL.ANSIUPPER, KERNEL.GLOBALALLOC, KERNEL.GLOBALFREE, KERNEL.GLOBALREALLOC, KERNEL.LOCALREALLOC, USER.GETKEYSTATE (+1 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_271D -- offset 0x271D -- 571 instr\n; Dispatcher: cmp+jcc decision table (571 instr).\n; tags: calls_kernel, calls_user, dispatcher, far\n; callers: sub_0222\n; calls (intra): sub_00F7, sub_0222, sub_06F4, sub_0752, sub_0891, sub_08E1 (+9 more)\n; calls (inter): KERNEL.ANSIUPPER, KERNEL.GLOBALALLOC, KERNEL.GLOBALFREE, KERNEL.GLOBALREALLOC, KERNEL.LOCALREALLOC, USER.GETKEYSTATE (+1 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -5985,12 +5985,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (44 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (44 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2CAC -- offset 0x2CAC -- 44 instr\n; Dispatcher: tabla de decisiones cmp+jcc (44 instr).\n; tags: dispatcher\n; callers: sub_271D\n; calls (intra): sub_2420\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2CAC -- offset 0x2CAC -- 44 instr\n; Dispatcher: cmp+jcc decision table (44 instr).\n; tags: dispatcher\n; callers: sub_271D\n; calls (intra): sub_2420\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -6069,14 +6069,14 @@
       ],
       "fanout": 3,
       "fanin": 1,
-      "description": "Funcion mediana (42 instr, 3 calls).",
+      "description": "Mid-size function (42 instr, 3 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_user",
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2D21 -- offset 0x2D21 -- 42 instr\n; Funcion mediana (42 instr, 3 calls).\n; tags: calls_user, far, medium\n; callers: sub_0222\n; calls (intra): sub_2DB6\n; calls (inter): USER.CREATECARET, USER.SHOWCARET\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2D21 -- offset 0x2D21 -- 42 instr\n; Mid-size function (42 instr, 3 calls).\n; tags: calls_user, far, medium\n; callers: sub_0222\n; calls (intra): sub_2DB6\n; calls (inter): USER.CREATECARET, USER.SHOWCARET\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -6142,14 +6142,14 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (18 instr).",
+      "description": "Unclassified function (18 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "calls_user",
         "far",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2D91 -- offset 0x2D91 -- 18 instr\n; Funcion sin clasificar definitiva (18 instr).\n; tags: calls_user, far, small\n; callers: sub_0222\n; calls (inter): USER.DESTROYCARET\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2D91 -- offset 0x2D91 -- 18 instr\n; Unclassified function (18 instr).\n; tags: calls_user, far, small\n; callers: sub_0222\n; calls (inter): USER.DESTROYCARET\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -6223,13 +6223,13 @@
       ],
       "fanout": 1,
       "fanin": 5,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (42 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (42 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_user",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2DB6 -- offset 0x2DB6 -- 42 instr\n; Dispatcher: tabla de decisiones cmp+jcc (42 instr).\n; tags: calls_user, dispatcher\n; callers: sub_0BC0, sub_2018, sub_2420, sub_271D, sub_2D21\n; calls (inter): USER.SETCARETPOS\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2DB6 -- offset 0x2DB6 -- 42 instr\n; Dispatcher: cmp+jcc decision table (42 instr).\n; tags: calls_user, dispatcher\n; callers: sub_0BC0, sub_2018, sub_2420, sub_271D, sub_2D21\n; calls (inter): USER.SETCARETPOS\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -6311,13 +6311,13 @@
       ],
       "fanout": 5,
       "fanin": 2,
-      "description": "Funcion compleja: 81 instrucciones, 5 llamadas, 6 branches.",
+      "description": "Complex function: 81 instructions, 5 calls, 6 branches.",
       "confidence": "low",
       "semantic_tags": [
         "calls_user",
         "complex"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2E2A -- offset 0x2E2A -- 81 instr\n; Funcion compleja: 81 instrucciones, 5 llamadas, 6 branches.\n; tags: calls_user, complex\n; callers: sub_2018, sub_271D\n; calls (intra): sub_00F7, sub_06F4, sub_0752, sub_3157\n; calls (inter): USER.POSTMESSAGE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2E2A -- offset 0x2E2A -- 81 instr\n; Complex function: 81 instructions, 5 calls, 6 branches.\n; tags: calls_user, complex\n; callers: sub_2018, sub_271D\n; calls (intra): sub_00F7, sub_06F4, sub_0752, sub_3157\n; calls (inter): USER.POSTMESSAGE\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -6392,14 +6392,14 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (79 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (79 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2EE1 -- offset 0x2EE1 -- 79 instr\n; Dispatcher: tabla de decisiones cmp+jcc (79 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_3157\n; calls (inter): KERNEL.ANSIUPPER, KERNEL.LSTRCMP\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2EE1 -- offset 0x2EE1 -- 79 instr\n; Dispatcher: cmp+jcc decision table (79 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_3157\n; calls (inter): KERNEL.ANSIUPPER, KERNEL.LSTRCMP\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -6474,7 +6474,7 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (176 instr).",
+      "description": "Calls DOS services via INT 21h (176 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
@@ -6482,7 +6482,7 @@
         "int_21",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2F9E -- offset 0x2F9E -- 176 instr\n; Llama a servicios DOS via INT 21h (176 instr).\n; tags: calls_kernel, complex_iterator, int_21, string_op\n; callers: sub_3157\n; calls (inter): KERNEL.GETCURRENTPDB\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2F9E -- offset 0x2F9E -- 176 instr\n; Calls DOS services via INT 21h (176 instr).\n; tags: calls_kernel, complex_iterator, int_21, string_op\n; callers: sub_3157\n; calls (inter): KERNEL.GETCURRENTPDB\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -6617,14 +6617,14 @@
       ],
       "fanout": 19,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (520 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (520 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_3157 -- offset 0x3157 -- 520 instr\n; Dispatcher: tabla de decisiones cmp+jcc (520 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_2E2A\n; calls (intra): sub_00F7, sub_06F4, sub_0752, sub_0925, sub_0973, sub_2EE1 (+3 mas)\n; calls (inter): KERNEL.ANSIUPPER, KERNEL.GETPROFILESTRING, KERNEL.GLOBALHANDLE, KERNEL.LOADMODULE, KERNEL.LOCALALLOC, KERNEL.LOCALFREE (+4 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_3157 -- offset 0x3157 -- 520 instr\n; Dispatcher: cmp+jcc decision table (520 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_2E2A\n; calls (intra): sub_00F7, sub_06F4, sub_0752, sub_0925, sub_0973, sub_2EE1 (+3 more)\n; calls (inter): KERNEL.ANSIUPPER, KERNEL.GETPROFILESTRING, KERNEL.GLOBALHANDLE, KERNEL.LOADMODULE, KERNEL.LOCALALLOC, KERNEL.LOCALFREE (+4 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -6690,13 +6690,13 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Funcion mediana (34 instr, 1 calls).",
+      "description": "Mid-size function (34 instr, 1 calls).",
       "confidence": "low",
       "semantic_tags": [
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_36AE -- offset 0x36AE -- 34 instr\n; Funcion mediana (34 instr, 1 calls).\n; tags: far, medium\n; callers: sub_3157\n; calls (intra): sub_00F7\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_36AE -- offset 0x36AE -- 34 instr\n; Mid-size function (34 instr, 1 calls).\n; tags: far, medium\n; callers: sub_3157\n; calls (intra): sub_00F7\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -6776,14 +6776,14 @@
       ],
       "fanout": 3,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (153 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (153 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_36EE -- offset 0x36EE -- 153 instr\n; Dispatcher: tabla de decisiones cmp+jcc (153 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_3157\n; calls (inter): KERNEL.FREEPROCINSTANCE, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_36EE -- offset 0x36EE -- 153 instr\n; Dispatcher: cmp+jcc decision table (153 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_3157\n; calls (inter): KERNEL.FREEPROCINSTANCE, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -6838,13 +6838,13 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Llama a servicios DOS via INT 21h (10 instr).",
+      "description": "Calls DOS services via INT 21h (10 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0000 -- offset 0x0000 -- 10 instr\n; Llama a servicios DOS via INT 21h (10 instr).\n; tags: dos_caller, int_21\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0000 -- offset 0x0000 -- 10 instr\n; Calls DOS services via INT 21h (10 instr).\n; tags: dos_caller, int_21\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -6912,13 +6912,13 @@
       ],
       "fanout": 0,
       "fanin": 6,
-      "description": "Llama a servicios DOS via INT 21h (28 instr).",
+      "description": "Calls DOS services via INT 21h (28 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0016 -- offset 0x0016 -- 28 instr\n; Llama a servicios DOS via INT 21h (28 instr).\n; tags: dos_caller, int_21\n; callers: sub_10B0, sub_1A07, sub_1CAF, sub_2019, sub_3327, sub_33B6\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0016 -- offset 0x0016 -- 28 instr\n; Calls DOS services via INT 21h (28 instr).\n; tags: dos_caller, int_21\n; callers: sub_10B0, sub_1A07, sub_1CAF, sub_2019, sub_3327, sub_33B6\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -6980,13 +6980,13 @@
       ],
       "fanout": 0,
       "fanin": 4,
-      "description": "Llama a servicios DOS via INT 21h (14 instr).",
+      "description": "Calls DOS services via INT 21h (14 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_005A -- offset 0x005A -- 14 instr\n; Llama a servicios DOS via INT 21h (14 instr).\n; tags: dos_caller, int_21\n; callers: sub_13AD, sub_1B72, sub_2204, sub_3659\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_005A -- offset 0x005A -- 14 instr\n; Calls DOS services via INT 21h (14 instr).\n; tags: dos_caller, int_21\n; callers: sub_13AD, sub_1B72, sub_2204, sub_3659\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -7042,13 +7042,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (11 instr).",
+      "description": "Calls DOS services via INT 21h (11 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0074 -- offset 0x0074 -- 11 instr\n; Llama a servicios DOS via INT 21h (11 instr).\n; tags: dos_caller, int_21\n; callers: sub_13AD\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0074 -- offset 0x0074 -- 11 instr\n; Calls DOS services via INT 21h (11 instr).\n; tags: dos_caller, int_21\n; callers: sub_13AD\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -7124,13 +7124,13 @@
       ],
       "fanout": 4,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (19 instr).",
+      "description": "Unclassified function (19 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "calls_kernel",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_008D -- offset 0x008D -- 19 instr\n; Funcion sin clasificar definitiva (19 instr).\n; tags: calls_kernel, small\n; callers: sub_0603\n; calls (intra): sub_00D9\n; calls (inter): KERNEL.GLOBALCOMPACT, KERNEL.LOCKSEGMENT, KERNEL.UNLOCKSEGMENT\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_008D -- offset 0x008D -- 19 instr\n; Unclassified function (19 instr).\n; tags: calls_kernel, small\n; callers: sub_0603\n; calls (intra): sub_00D9\n; calls (inter): KERNEL.GLOBALCOMPACT, KERNEL.LOCKSEGMENT, KERNEL.UNLOCKSEGMENT\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -7194,13 +7194,13 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (16 instr).",
+      "description": "Calls DOS services via INT 21h (16 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_00B9 -- offset 0x00B9 -- 16 instr\n; Llama a servicios DOS via INT 21h (16 instr).\n; tags: dos_caller, int_21\n; callers: sub_0603\n; calls (intra): sub_00D9\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_00B9 -- offset 0x00B9 -- 16 instr\n; Calls DOS services via INT 21h (16 instr).\n; tags: dos_caller, int_21\n; callers: sub_0603\n; calls (intra): sub_00D9\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -7261,14 +7261,14 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (15 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (15 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_00D9 -- offset 0x00D9 -- 15 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (15 instr).\n; tags: iterator, loop, string_op\n; callers: sub_008D, sub_00B9\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_00D9 -- offset 0x00D9 -- 15 instr\n; Iterator with string ops (movsb/scasb/...) (15 instr).\n; tags: iterator, loop, string_op\n; callers: sub_008D, sub_00B9\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -7324,12 +7324,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion hoja (no llama a otras, 11 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 11 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_00F4 -- offset 0x00F4 -- 11 instr\n; Funcion hoja (no llama a otras, 11 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_1841\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_00F4 -- offset 0x00F4 -- 11 instr\n; Leaf function (no callees, 11 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_1841\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -7391,13 +7391,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (24 instr).",
+      "description": "Calls DOS services via INT 21h (24 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_010A -- offset 0x010A -- 24 instr\n; Llama a servicios DOS via INT 21h (24 instr).\n; tags: dos_caller, int_21\n; callers: sub_23F7\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_010A -- offset 0x010A -- 24 instr\n; Calls DOS services via INT 21h (24 instr).\n; tags: dos_caller, int_21\n; callers: sub_23F7\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -7458,13 +7458,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (16 instr).",
+      "description": "Calls DOS services via INT 21h (16 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0144 -- offset 0x0144 -- 16 instr\n; Llama a servicios DOS via INT 21h (16 instr).\n; tags: dos_caller, int_21\n; callers: sub_2893\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0144 -- offset 0x0144 -- 16 instr\n; Calls DOS services via INT 21h (16 instr).\n; tags: dos_caller, int_21\n; callers: sub_2893\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -7521,13 +7521,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (11 instr).",
+      "description": "Calls DOS services via INT 21h (11 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0162 -- offset 0x0162 -- 11 instr\n; Llama a servicios DOS via INT 21h (11 instr).\n; tags: dos_caller, int_21\n; callers: sub_279F\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0162 -- offset 0x0162 -- 11 instr\n; Calls DOS services via INT 21h (11 instr).\n; tags: dos_caller, int_21\n; callers: sub_279F\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -7589,13 +7589,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (24 instr).",
+      "description": "Calls DOS services via INT 21h (24 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0176 -- offset 0x0176 -- 24 instr\n; Llama a servicios DOS via INT 21h (24 instr).\n; tags: dos_caller, int_21\n; callers: sub_2927\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0176 -- offset 0x0176 -- 24 instr\n; Calls DOS services via INT 21h (24 instr).\n; tags: dos_caller, int_21\n; callers: sub_2927\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -7658,13 +7658,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (39 instr).",
+      "description": "Calls DOS services via INT 21h (39 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_01B0 -- offset 0x01B0 -- 39 instr\n; Llama a servicios DOS via INT 21h (39 instr).\n; tags: dos_caller, int_21\n; callers: sub_1B72\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_01B0 -- offset 0x01B0 -- 39 instr\n; Calls DOS services via INT 21h (39 instr).\n; tags: dos_caller, int_21\n; callers: sub_1B72\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -7727,13 +7727,13 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Llama a servicios DOS via INT 21h (24 instr).",
+      "description": "Calls DOS services via INT 21h (24 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0213 -- offset 0x0213 -- 24 instr\n; Llama a servicios DOS via INT 21h (24 instr).\n; tags: dos_caller, int_21\n; callers: sub_13AD, sub_2204\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0213 -- offset 0x0213 -- 24 instr\n; Calls DOS services via INT 21h (24 instr).\n; tags: dos_caller, int_21\n; callers: sub_13AD, sub_2204\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -7819,7 +7819,7 @@
       ],
       "fanout": 4,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (272 instr).",
+      "description": "Calls DOS services via INT 21h (272 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_gdi",
@@ -7828,7 +7828,7 @@
         "far",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_024D -- offset 0x024D -- 272 instr\n; Llama a servicios DOS via INT 21h (272 instr).\n; tags: calls_gdi, calls_kernel, dos_caller, far, int_21\n; callers: sub_2019\n; calls (intra): sub_0504, sub_0603\n; calls (inter): GDI.TEXTOUT, KERNEL.LSTRLEN\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_024D -- offset 0x024D -- 272 instr\n; Calls DOS services via INT 21h (272 instr).\n; tags: calls_gdi, calls_kernel, dos_caller, far, int_21\n; callers: sub_2019\n; calls (intra): sub_0504, sub_0603\n; calls (inter): GDI.TEXTOUT, KERNEL.LSTRLEN\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -7895,12 +7895,12 @@
       ],
       "fanout": 0,
       "fanin": 3,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (94 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (94 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0504 -- offset 0x0504 -- 94 instr\n; Dispatcher: tabla de decisiones cmp+jcc (94 instr).\n; tags: dispatcher\n; callers: sub_024D, sub_2B35, sub_3863\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0504 -- offset 0x0504 -- 94 instr\n; Dispatcher: cmp+jcc decision table (94 instr).\n; tags: dispatcher\n; callers: sub_024D, sub_2B35, sub_3863\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -8004,14 +8004,14 @@
       ],
       "fanout": 8,
       "fanin": 3,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (194 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (194 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "calls_user",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0603 -- offset 0x0603 -- 194 instr\n; Dispatcher: tabla de decisiones cmp+jcc (194 instr).\n; tags: calls_kernel, calls_user, dispatcher\n; callers: sub_024D, sub_2B35, sub_3863\n; calls (intra): sub_008D, sub_00B9\n; calls (inter): KERNEL.LOCALALLOC, KERNEL.LOCALFREE, KERNEL.LSTRCPY, USER.CHECKDLGBUTTON, USER.SETDLGITEMTEXT, USER.SETSYSMODALWINDOW\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0603 -- offset 0x0603 -- 194 instr\n; Dispatcher: cmp+jcc decision table (194 instr).\n; tags: calls_kernel, calls_user, dispatcher\n; callers: sub_024D, sub_2B35, sub_3863\n; calls (intra): sub_008D, sub_00B9\n; calls (inter): KERNEL.LOCALALLOC, KERNEL.LOCALFREE, KERNEL.LSTRCPY, USER.CHECKDLGBUTTON, USER.SETDLGITEMTEXT, USER.SETSYSMODALWINDOW\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -8084,13 +8084,13 @@
       "callers": [],
       "fanout": 2,
       "fanin": 0,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (73 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (73 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_081B -- offset 0x081B -- 73 instr\n; Dispatcher: tabla de decisiones cmp+jcc (73 instr).\n; tags: calls_kernel, dispatcher\n; calls (inter): KERNEL.LSTRCAT, KERNEL.LSTRLEN\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_081B -- offset 0x081B -- 73 instr\n; Dispatcher: cmp+jcc decision table (73 instr).\n; tags: calls_kernel, dispatcher\n; calls (inter): KERNEL.LSTRCAT, KERNEL.LSTRLEN\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -8168,14 +8168,14 @@
       "callers": [],
       "fanout": 4,
       "fanin": 0,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (31 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (31 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "calls_user",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_08EF -- offset 0x08EF -- 31 instr\n; Dispatcher: tabla de decisiones cmp+jcc (31 instr).\n; tags: calls_kernel, calls_user, dispatcher\n; calls (inter): KERNEL.GETLASTDISKCHANGE, USER.GETDLGITEM, USER.SENDMESSAGE, USER.SETFOCUS\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_08EF -- offset 0x08EF -- 31 instr\n; Dispatcher: cmp+jcc decision table (31 instr).\n; tags: calls_kernel, calls_user, dispatcher\n; calls (inter): KERNEL.GETLASTDISKCHANGE, USER.GETDLGITEM, USER.SENDMESSAGE, USER.SETFOCUS\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -8328,7 +8328,7 @@
       "callers": [],
       "fanout": 18,
       "fanin": 0,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (238 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (238 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
@@ -8337,7 +8337,7 @@
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0943 -- offset 0x0943 -- 238 instr\n; Dispatcher: tabla de decisiones cmp+jcc (238 instr).\n; tags: calls_kernel, calls_system, calls_user, dispatcher, far\n; calls (intra): sub_0C67\n; calls (inter): KERNEL.ANSIUPPER, KERNEL.FINDRESOURCE, KERNEL.GETCODEHANDLE, KERNEL.GLOBALUNLOCK, KERNEL.LOADRESOURCE, KERNEL.LOCALALLOC (+11 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0943 -- offset 0x0943 -- 238 instr\n; Dispatcher: cmp+jcc decision table (238 instr).\n; tags: calls_kernel, calls_system, calls_user, dispatcher, far\n; calls (intra): sub_0C67\n; calls (inter): KERNEL.ANSIUPPER, KERNEL.FINDRESOURCE, KERNEL.GETCODEHANDLE, KERNEL.GLOBALUNLOCK, KERNEL.LOADRESOURCE, KERNEL.LOCALALLOC (+11 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -8401,12 +8401,12 @@
       ],
       "fanout": 0,
       "fanin": 4,
-      "description": "Funcion mediana (46 instr, 0 calls).",
+      "description": "Mid-size function (46 instr, 0 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0BE8 -- offset 0x0BE8 -- 46 instr\n; Funcion mediana (46 instr, 0 calls).\n; tags: medium\n; callers: sub_13AD, sub_1B72, sub_2019, sub_23F7\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0BE8 -- offset 0x0BE8 -- 46 instr\n; Mid-size function (46 instr, 0 calls).\n; tags: medium\n; callers: sub_13AD, sub_1B72, sub_2019, sub_23F7\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -8460,12 +8460,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion hoja (no llama a otras, 13 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 13 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0C67 -- offset 0x0C67 -- 13 instr\n; Funcion hoja (no llama a otras, 13 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_0943\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0C67 -- offset 0x0C67 -- 13 instr\n; Leaf function (no callees, 13 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_0943\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -8551,14 +8551,14 @@
       "callers": [],
       "fanout": 5,
       "fanin": 0,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (73 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (73 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "calls_user",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0C91 -- offset 0x0C91 -- 73 instr\n; Dispatcher: tabla de decisiones cmp+jcc (73 instr).\n; tags: calls_kernel, calls_user, dispatcher\n; calls (inter): KERNEL.ANSIUPPER, KERNEL.LOCALALLOC, USER.GETDLGITEM, USER.GETDLGITEMTEXT, USER.GETWINDOWTEXTLENGTH\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0C91 -- offset 0x0C91 -- 73 instr\n; Dispatcher: cmp+jcc decision table (73 instr).\n; tags: calls_kernel, calls_user, dispatcher\n; calls (inter): KERNEL.ANSIUPPER, KERNEL.LOCALALLOC, USER.GETDLGITEM, USER.GETDLGITEMTEXT, USER.GETWINDOWTEXTLENGTH\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -8683,7 +8683,7 @@
       "callers": [],
       "fanout": 16,
       "fanin": 0,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (225 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (225 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
@@ -8692,7 +8692,7 @@
         "calls_user",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0D58 -- offset 0x0D58 -- 225 instr\n; Dispatcher: tabla de decisiones cmp+jcc (225 instr).\n; tags: calls_kernel, calls_msdosd, calls_system, calls_user, dispatcher\n; calls (intra): sub_1048, sub_10B0, sub_1A07, sub_2019, sub_228B, sub_23F7 (+2 mas)\n; calls (inter): KERNEL.GETLASTDISKCHANGE, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK, MSDOSD.FORMAT, MSDOSD.SYS, SYSTEM.INQUIRESYSTEM (+2 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0D58 -- offset 0x0D58 -- 225 instr\n; Dispatcher: cmp+jcc decision table (225 instr).\n; tags: calls_kernel, calls_msdosd, calls_system, calls_user, dispatcher\n; calls (intra): sub_1048, sub_10B0, sub_1A07, sub_2019, sub_228B, sub_23F7 (+2 more)\n; calls (inter): KERNEL.GETLASTDISKCHANGE, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK, MSDOSD.FORMAT, MSDOSD.SYS, SYSTEM.INQUIRESYSTEM (+2 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -8761,13 +8761,13 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Funcion mediana (56 instr, 1 calls).",
+      "description": "Mid-size function (56 instr, 1 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_kernel",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0FC2 -- offset 0x0FC2 -- 56 instr\n; Funcion mediana (56 instr, 1 calls).\n; tags: calls_kernel, medium\n; calls (inter): KERNEL.LOCALFREE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0FC2 -- offset 0x0FC2 -- 56 instr\n; Mid-size function (56 instr, 1 calls).\n; tags: calls_kernel, medium\n; calls (inter): KERNEL.LOCALFREE\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -8835,13 +8835,13 @@
       ],
       "fanout": 1,
       "fanin": 9,
-      "description": "Wrapper que delega en USER.MESSAGEBOX.",
+      "description": "Wrapper delegating to USER.MESSAGEBOX.",
       "confidence": "medium",
       "semantic_tags": [
         "calls_user",
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1048 -- offset 0x1048 -- 15 instr\n; Wrapper que delega en USER.MESSAGEBOX.\n; tags: calls_user, wrapper\n; callers: sub_0D58, sub_10B0, sub_13AD, sub_1A07, sub_1B72, sub_2019 (+3 mas)\n; calls (inter): USER.MESSAGEBOX\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1048 -- offset 0x1048 -- 15 instr\n; Wrapper delegating to USER.MESSAGEBOX.\n; tags: calls_user, wrapper\n; callers: sub_0D58, sub_10B0, sub_13AD, sub_1A07, sub_1B72, sub_2019 (+3 more)\n; calls (inter): USER.MESSAGEBOX\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -8904,12 +8904,12 @@
       ],
       "fanout": 0,
       "fanin": 6,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (32 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (32 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1067 -- offset 0x1067 -- 32 instr\n; Dispatcher: tabla de decisiones cmp+jcc (32 instr).\n; tags: dispatcher\n; callers: sub_10B0, sub_1A07, sub_2019, sub_2204, sub_23F7, sub_2E8F\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1067 -- offset 0x1067 -- 32 instr\n; Dispatcher: cmp+jcc decision table (32 instr).\n; tags: dispatcher\n; callers: sub_10B0, sub_1A07, sub_2019, sub_2204, sub_23F7, sub_2E8F\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -9039,13 +9039,13 @@
       ],
       "fanout": 16,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (281 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (281 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_10B0 -- offset 0x10B0 -- 281 instr\n; Dispatcher: tabla de decisiones cmp+jcc (281 instr).\n; tags: calls_kernel, dispatcher\n; callers: sub_0D58\n; calls (intra): sub_0016, sub_1048, sub_1067, sub_16A7, sub_1841, sub_1CAF\n; calls (inter): KERNEL.GETLASTDISKCHANGE, KERNEL.GLOBALALLOC, KERNEL.GLOBALFREE, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK, KERNEL.LOCALALLOC (+4 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_10B0 -- offset 0x10B0 -- 281 instr\n; Dispatcher: cmp+jcc decision table (281 instr).\n; tags: calls_kernel, dispatcher\n; callers: sub_0D58\n; calls (intra): sub_0016, sub_1048, sub_1067, sub_16A7, sub_1841, sub_1CAF\n; calls (inter): KERNEL.GETLASTDISKCHANGE, KERNEL.GLOBALALLOC, KERNEL.GLOBALFREE, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK, KERNEL.LOCALALLOC (+4 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -9166,7 +9166,7 @@
       "callers": [],
       "fanout": 15,
       "fanin": 0,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (300 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (300 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
@@ -9174,7 +9174,7 @@
         "calls_user",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_13AD -- offset 0x13AD -- 300 instr\n; Dispatcher: tabla de decisiones cmp+jcc (300 instr).\n; tags: calls_kernel, calls_system, calls_user, dispatcher\n; calls (intra): sub_005A, sub_0074, sub_0213, sub_0BE8, sub_1048, sub_16F6 (+3 mas)\n; calls (inter): KERNEL.GETLASTDISKCHANGE, KERNEL.LSTRCMP, KERNEL.LSTRCPY, KERNEL.LSTRLEN, SYSTEM.INQUIRESYSTEM, USER.SETDLGITEMTEXT\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_13AD -- offset 0x13AD -- 300 instr\n; Dispatcher: cmp+jcc decision table (300 instr).\n; tags: calls_kernel, calls_system, calls_user, dispatcher\n; calls (intra): sub_005A, sub_0074, sub_0213, sub_0BE8, sub_1048, sub_16F6 (+3 more)\n; calls (inter): KERNEL.GETLASTDISKCHANGE, KERNEL.LSTRCMP, KERNEL.LSTRCPY, KERNEL.LSTRLEN, SYSTEM.INQUIRESYSTEM, USER.SETDLGITEMTEXT\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -9242,13 +9242,13 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Funcion mediana (32 instr, 1 calls).",
+      "description": "Mid-size function (32 instr, 1 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_kernel",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_16A7 -- offset 0x16A7 -- 32 instr\n; Funcion mediana (32 instr, 1 calls).\n; tags: calls_kernel, medium\n; callers: sub_10B0\n; calls (inter): KERNEL.ANSIUPPER\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_16A7 -- offset 0x16A7 -- 32 instr\n; Mid-size function (32 instr, 1 calls).\n; tags: calls_kernel, medium\n; callers: sub_10B0\n; calls (inter): KERNEL.ANSIUPPER\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -9313,13 +9313,13 @@
       ],
       "fanout": 0,
       "fanin": 4,
-      "description": "Funcion mediana (62 instr, 0 calls).",
+      "description": "Mid-size function (62 instr, 0 calls).",
       "confidence": "low",
       "semantic_tags": [
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_16F6 -- offset 0x16F6 -- 62 instr\n; Funcion mediana (62 instr, 0 calls).\n; tags: far, medium\n; callers: sub_13AD, sub_1B72, sub_2019, sub_23F7\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_16F6 -- offset 0x16F6 -- 62 instr\n; Mid-size function (62 instr, 0 calls).\n; tags: far, medium\n; callers: sub_13AD, sub_1B72, sub_2019, sub_23F7\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -9408,13 +9408,13 @@
       ],
       "fanout": 5,
       "fanin": 3,
-      "description": "Funcion mediana (41 instr, 5 calls).",
+      "description": "Mid-size function (41 instr, 5 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_user",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1794 -- offset 0x1794 -- 41 instr\n; Funcion mediana (41 instr, 5 calls).\n; tags: calls_user, medium\n; callers: sub_13AD, sub_1B72, sub_2019\n; calls (inter): USER.DISPATCHMESSAGE, USER.GETPARENT, USER.ISDIALOGMESSAGE, USER.PEEKMESSAGE, USER.TRANSLATEMESSAGE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1794 -- offset 0x1794 -- 41 instr\n; Mid-size function (41 instr, 5 calls).\n; tags: calls_user, medium\n; callers: sub_13AD, sub_1B72, sub_2019\n; calls (inter): USER.DISPATCHMESSAGE, USER.GETPARENT, USER.ISDIALOGMESSAGE, USER.PEEKMESSAGE, USER.TRANSLATEMESSAGE\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -9487,13 +9487,13 @@
       ],
       "fanout": 2,
       "fanin": 3,
-      "description": "Funcion sin clasificar definitiva (30 instr).",
+      "description": "Unclassified function (30 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "calls_kernel",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_17F4 -- offset 0x17F4 -- 30 instr\n; Funcion sin clasificar definitiva (30 instr).\n; tags: calls_kernel, small\n; callers: sub_13AD, sub_23F7, sub_369E\n; calls (inter): KERNEL.LSTRCPY, KERNEL.OPENFILE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_17F4 -- offset 0x17F4 -- 30 instr\n; Unclassified function (30 instr).\n; tags: calls_kernel, small\n; callers: sub_13AD, sub_23F7, sub_369E\n; calls (inter): KERNEL.LSTRCPY, KERNEL.OPENFILE\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -9564,12 +9564,12 @@
       ],
       "fanout": 1,
       "fanin": 5,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (78 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (78 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1841 -- offset 0x1841 -- 78 instr\n; Dispatcher: tabla de decisiones cmp+jcc (78 instr).\n; tags: dispatcher\n; callers: sub_10B0, sub_1A07, sub_2204, sub_23F7, sub_369E\n; calls (intra): sub_00F4\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1841 -- offset 0x1841 -- 78 instr\n; Dispatcher: cmp+jcc decision table (78 instr).\n; tags: dispatcher\n; callers: sub_10B0, sub_1A07, sub_2204, sub_23F7, sub_369E\n; calls (intra): sub_00F4\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -9631,12 +9631,12 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (94 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (94 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1909 -- offset 0x1909 -- 94 instr\n; Dispatcher: tabla de decisiones cmp+jcc (94 instr).\n; tags: dispatcher\n; callers: sub_13AD, sub_1B72\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1909 -- offset 0x1909 -- 94 instr\n; Dispatcher: cmp+jcc decision table (94 instr).\n; tags: dispatcher\n; callers: sub_13AD, sub_1B72\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -9729,13 +9729,13 @@
       ],
       "fanout": 9,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (145 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (145 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1A07 -- offset 0x1A07 -- 145 instr\n; Dispatcher: tabla de decisiones cmp+jcc (145 instr).\n; tags: calls_kernel, dispatcher\n; callers: sub_0D58\n; calls (intra): sub_0016, sub_1048, sub_1067, sub_1841, sub_1CAF\n; calls (inter): KERNEL.GETLASTDISKCHANGE, KERNEL.LOCALALLOC, KERNEL.LOCALFREE, KERNEL.LSTRLEN\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1A07 -- offset 0x1A07 -- 145 instr\n; Dispatcher: cmp+jcc decision table (145 instr).\n; tags: calls_kernel, dispatcher\n; callers: sub_0D58\n; calls (intra): sub_0016, sub_1048, sub_1067, sub_1841, sub_1CAF\n; calls (inter): KERNEL.GETLASTDISKCHANGE, KERNEL.LOCALALLOC, KERNEL.LOCALFREE, KERNEL.LSTRLEN\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -9836,14 +9836,14 @@
       "callers": [],
       "fanout": 11,
       "fanin": 0,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (126 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (126 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "calls_user",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1B72 -- offset 0x1B72 -- 126 instr\n; Dispatcher: tabla de decisiones cmp+jcc (126 instr).\n; tags: calls_kernel, calls_user, dispatcher\n; calls (intra): sub_005A, sub_01B0, sub_0BE8, sub_1048, sub_16F6, sub_1794 (+1 mas)\n; calls (inter): KERNEL.GETLASTDISKCHANGE, KERNEL.LSTRCPY, KERNEL.LSTRLEN, USER.SETDLGITEMTEXT\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1B72 -- offset 0x1B72 -- 126 instr\n; Dispatcher: cmp+jcc decision table (126 instr).\n; tags: calls_kernel, calls_user, dispatcher\n; calls (intra): sub_005A, sub_01B0, sub_0BE8, sub_1048, sub_16F6, sub_1794 (+1 more)\n; calls (inter): KERNEL.GETLASTDISKCHANGE, KERNEL.LSTRCPY, KERNEL.LSTRLEN, USER.SETDLGITEMTEXT\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -9937,13 +9937,13 @@
       ],
       "fanout": 6,
       "fanin": 4,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (271 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (271 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1CAF -- offset 0x1CAF -- 271 instr\n; Dispatcher: tabla de decisiones cmp+jcc (271 instr).\n; tags: calls_kernel, dispatcher\n; callers: sub_10B0, sub_1A07, sub_2019, sub_33B6\n; calls (intra): sub_0016, sub_1F9F\n; calls (inter): KERNEL.LSTRCAT, KERNEL.LSTRCMP, KERNEL.LSTRCPY, KERNEL.LSTRLEN\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1CAF -- offset 0x1CAF -- 271 instr\n; Dispatcher: cmp+jcc decision table (271 instr).\n; tags: calls_kernel, dispatcher\n; callers: sub_10B0, sub_1A07, sub_2019, sub_33B6\n; calls (intra): sub_0016, sub_1F9F\n; calls (inter): KERNEL.LSTRCAT, KERNEL.LSTRCMP, KERNEL.LSTRCPY, KERNEL.LSTRLEN\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -10004,12 +10004,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (49 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (49 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1F9F -- offset 0x1F9F -- 49 instr\n; Dispatcher: tabla de decisiones cmp+jcc (49 instr).\n; tags: dispatcher\n; callers: sub_1CAF\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1F9F -- offset 0x1F9F -- 49 instr\n; Dispatcher: cmp+jcc decision table (49 instr).\n; tags: dispatcher\n; callers: sub_1CAF\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -10118,14 +10118,14 @@
       ],
       "fanout": 13,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (177 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (177 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "calls_user",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2019 -- offset 0x2019 -- 177 instr\n; Dispatcher: tabla de decisiones cmp+jcc (177 instr).\n; tags: calls_kernel, calls_user, dispatcher\n; callers: sub_0D58\n; calls (intra): sub_0016, sub_024D, sub_0BE8, sub_1048, sub_1067, sub_16F6 (+2 mas)\n; calls (inter): KERNEL.GETLASTDISKCHANGE, KERNEL.LOCALALLOC, KERNEL.LSTRCPY, KERNEL.LSTRLEN, USER.SETDLGITEMTEXT\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2019 -- offset 0x2019 -- 177 instr\n; Dispatcher: cmp+jcc decision table (177 instr).\n; tags: calls_kernel, calls_user, dispatcher\n; callers: sub_0D58\n; calls (intra): sub_0016, sub_024D, sub_0BE8, sub_1048, sub_1067, sub_16F6 (+2 more)\n; calls (inter): KERNEL.GETLASTDISKCHANGE, KERNEL.LOCALALLOC, KERNEL.LSTRCPY, KERNEL.LSTRLEN, USER.SETDLGITEMTEXT\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -10189,13 +10189,13 @@
       "callers": [],
       "fanout": 2,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (13 instr).",
+      "description": "Unclassified function (13 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "calls_kernel",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_21E2 -- offset 0x21E2 -- 13 instr\n; Funcion sin clasificar definitiva (13 instr).\n; tags: calls_kernel, small\n; calls (intra): sub_1048\n; calls (inter): KERNEL.GETLASTDISKCHANGE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_21E2 -- offset 0x21E2 -- 13 instr\n; Unclassified function (13 instr).\n; tags: calls_kernel, small\n; calls (intra): sub_1048\n; calls (inter): KERNEL.GETLASTDISKCHANGE\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -10275,13 +10275,13 @@
       "callers": [],
       "fanout": 6,
       "fanin": 0,
-      "description": "Funcion mediana (52 instr, 6 calls).",
+      "description": "Mid-size function (52 instr, 6 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_kernel",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2204 -- offset 0x2204 -- 52 instr\n; Funcion mediana (52 instr, 6 calls).\n; tags: calls_kernel, medium\n; calls (intra): sub_005A, sub_0213, sub_1067, sub_1841\n; calls (inter): KERNEL.GETLASTDISKCHANGE, KERNEL.LOCALFREE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2204 -- offset 0x2204 -- 52 instr\n; Mid-size function (52 instr, 6 calls).\n; tags: calls_kernel, medium\n; calls (intra): sub_005A, sub_0213, sub_1067, sub_1841\n; calls (inter): KERNEL.GETLASTDISKCHANGE, KERNEL.LOCALFREE\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -10367,7 +10367,7 @@
       ],
       "fanout": 4,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (149 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (149 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
@@ -10375,7 +10375,7 @@
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_228B -- offset 0x228B -- 149 instr\n; Dispatcher: tabla de decisiones cmp+jcc (149 instr).\n; tags: calls_kernel, calls_user, dispatcher, far\n; callers: sub_0D58\n; calls (inter): KERNEL.ANSIUPPER, KERNEL.LSTRCMP, USER.CHECKMENUITEM, USER.GETMENU\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_228B -- offset 0x228B -- 149 instr\n; Dispatcher: cmp+jcc decision table (149 instr).\n; tags: calls_kernel, calls_user, dispatcher, far\n; callers: sub_0D58\n; calls (inter): KERNEL.ANSIUPPER, KERNEL.LSTRCMP, USER.CHECKMENUITEM, USER.GETMENU\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -10502,7 +10502,7 @@
       ],
       "fanout": 16,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (318 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (318 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
@@ -10510,7 +10510,7 @@
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_23F7 -- offset 0x23F7 -- 318 instr\n; Dispatcher: tabla de decisiones cmp+jcc (318 instr).\n; tags: calls_kernel, calls_user, dispatcher, far\n; callers: sub_0D58\n; calls (intra): sub_010A, sub_0BE8, sub_1048, sub_1067, sub_16F6, sub_17F4 (+1 mas)\n; calls (inter): KERNEL.GETLASTDISKCHANGE, KERNEL.GLOBALALLOC, KERNEL.LSTRCPY, KERNEL.LSTRLEN, USER.CLIENTTOSCREEN, USER.CREATEWINDOW (+3 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_23F7 -- offset 0x23F7 -- 318 instr\n; Dispatcher: cmp+jcc decision table (318 instr).\n; tags: calls_kernel, calls_user, dispatcher, far\n; callers: sub_0D58\n; calls (intra): sub_010A, sub_0BE8, sub_1048, sub_1067, sub_16F6, sub_17F4 (+1 more)\n; calls (inter): KERNEL.GETLASTDISKCHANGE, KERNEL.GLOBALALLOC, KERNEL.LSTRCPY, KERNEL.LSTRLEN, USER.CLIENTTOSCREEN, USER.CREATEWINDOW (+3 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -10584,13 +10584,13 @@
       ],
       "fanout": 3,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (47 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (47 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_272A -- offset 0x272A -- 47 instr\n; Dispatcher: tabla de decisiones cmp+jcc (47 instr).\n; tags: calls_kernel, dispatcher\n; callers: sub_0D58\n; calls (intra): sub_279F, sub_2893\n; calls (inter): KERNEL.LSTRLEN\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_272A -- offset 0x272A -- 47 instr\n; Dispatcher: cmp+jcc decision table (47 instr).\n; tags: calls_kernel, dispatcher\n; callers: sub_0D58\n; calls (intra): sub_279F, sub_2893\n; calls (inter): KERNEL.LSTRLEN\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -10659,12 +10659,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (89 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (89 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_279F -- offset 0x279F -- 89 instr\n; Dispatcher: tabla de decisiones cmp+jcc (89 instr).\n; tags: dispatcher\n; callers: sub_272A\n; calls (intra): sub_0162\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_279F -- offset 0x279F -- 89 instr\n; Dispatcher: cmp+jcc decision table (89 instr).\n; tags: dispatcher\n; callers: sub_272A\n; calls (intra): sub_0162\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -10733,12 +10733,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Funcion mediana (56 instr, 1 calls).",
+      "description": "Mid-size function (56 instr, 1 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2893 -- offset 0x2893 -- 56 instr\n; Funcion mediana (56 instr, 1 calls).\n; tags: medium\n; callers: sub_272A\n; calls (intra): sub_0144\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2893 -- offset 0x2893 -- 56 instr\n; Mid-size function (56 instr, 1 calls).\n; tags: medium\n; callers: sub_272A\n; calls (intra): sub_0144\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -10819,14 +10819,14 @@
       ],
       "fanout": 3,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (131 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (131 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2927 -- offset 0x2927 -- 131 instr\n; Dispatcher: tabla de decisiones cmp+jcc (131 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_0D58\n; calls (intra): sub_0176\n; calls (inter): KERNEL.ANSIUPPER, KERNEL.LSTRCMP\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2927 -- offset 0x2927 -- 131 instr\n; Dispatcher: cmp+jcc decision table (131 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_0D58\n; calls (intra): sub_0176\n; calls (inter): KERNEL.ANSIUPPER, KERNEL.LSTRCMP\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -10907,14 +10907,14 @@
       ],
       "fanout": 3,
       "fanin": 1,
-      "description": "Funcion mediana (69 instr, 3 calls).",
+      "description": "Mid-size function (69 instr, 3 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_kernel",
         "calls_user",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2A7D -- offset 0x2A7D -- 69 instr\n; Funcion mediana (69 instr, 3 calls).\n; tags: calls_kernel, calls_user, medium\n; callers: sub_2E8F\n; calls (inter): KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK, USER.SETSCROLLRANGE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2A7D -- offset 0x2A7D -- 69 instr\n; Mid-size function (69 instr, 3 calls).\n; tags: calls_kernel, calls_user, medium\n; callers: sub_2E8F\n; calls (inter): KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK, USER.SETSCROLLRANGE\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -11021,7 +11021,7 @@
       ],
       "fanout": 9,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (202 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (202 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_gdi",
@@ -11029,7 +11029,7 @@
         "calls_user",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2B35 -- offset 0x2B35 -- 202 instr\n; Dispatcher: tabla de decisiones cmp+jcc (202 instr).\n; tags: calls_gdi, calls_kernel, calls_user, dispatcher\n; callers: sub_2E8F\n; calls (intra): sub_0504, sub_0603\n; calls (inter): GDI.SETBKMODE, GDI.SETTEXTCOLOR, GDI.TEXTOUT, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK, KERNEL.LSTRLEN (+1 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2B35 -- offset 0x2B35 -- 202 instr\n; Dispatcher: cmp+jcc decision table (202 instr).\n; tags: calls_gdi, calls_kernel, calls_user, dispatcher\n; callers: sub_2E8F\n; calls (intra): sub_0504, sub_0603\n; calls (inter): GDI.SETBKMODE, GDI.SETTEXTCOLOR, GDI.TEXTOUT, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK, KERNEL.LSTRLEN (+1 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -11115,13 +11115,13 @@
       ],
       "fanout": 4,
       "fanin": 2,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (88 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (88 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_user",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2D58 -- offset 0x2D58 -- 88 instr\n; Dispatcher: tabla de decisiones cmp+jcc (88 instr).\n; tags: calls_user, dispatcher\n; callers: sub_2E70, sub_2E8F\n; calls (inter): USER.GETCLIENTRECT, USER.SCROLLWINDOW, USER.SETSCROLLPOS, USER.UPDATEWINDOW\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2D58 -- offset 0x2D58 -- 88 instr\n; Dispatcher: cmp+jcc decision table (88 instr).\n; tags: calls_user, dispatcher\n; callers: sub_2E70, sub_2E8F\n; calls (inter): USER.GETCLIENTRECT, USER.SCROLLWINDOW, USER.SETSCROLLPOS, USER.UPDATEWINDOW\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -11174,12 +11174,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion hoja (no llama a otras, 16 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 16 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2E4A -- offset 0x2E4A -- 16 instr\n; Funcion hoja (no llama a otras, 16 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_2E8F\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2E4A -- offset 0x2E4A -- 16 instr\n; Leaf function (no callees, 16 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_2E8F\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -11234,12 +11234,12 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Wrapper que delega en sub_2D58.",
+      "description": "Wrapper delegating to sub_2D58.",
       "confidence": "medium",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2E70 -- offset 0x2E70 -- 8 instr\n; Wrapper que delega en sub_2D58.\n; tags: wrapper\n; calls (intra): sub_2D58\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2E70 -- offset 0x2E70 -- 8 instr\n; Wrapper delegating to sub_2D58.\n; tags: wrapper\n; calls (intra): sub_2D58\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -11289,12 +11289,12 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion hoja (no llama a otras, 6 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 6 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2E80 -- offset 0x2E80 -- 6 instr\n; Funcion hoja (no llama a otras, 6 instr): probable helper aritmetico/conversion.\n; tags: leaf\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2E80 -- offset 0x2E80 -- 6 instr\n; Leaf function (no callees, 6 instr): likely arithmetic/conversion helper.\n; tags: leaf\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -11448,7 +11448,7 @@
       "callers": [],
       "fanout": 21,
       "fanin": 0,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (319 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (319 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_gdi",
@@ -11457,7 +11457,7 @@
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2E8F -- offset 0x2E8F -- 319 instr\n; Dispatcher: tabla de decisiones cmp+jcc (319 instr).\n; tags: calls_gdi, calls_kernel, calls_user, dispatcher, far\n; calls (intra): sub_1067, sub_2A7D, sub_2B35, sub_2D58, sub_2E4A, sub_3A4F\n; calls (inter): GDI.CREATEDC, GDI.DELETEDC, GDI.GETDEVICECAPS, GDI.GETTEXTMETRICS, KERNEL.GETPROFILESTRING, KERNEL.GLOBALFREE (+9 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2E8F -- offset 0x2E8F -- 319 instr\n; Dispatcher: cmp+jcc decision table (319 instr).\n; tags: calls_gdi, calls_kernel, calls_user, dispatcher, far\n; calls (intra): sub_1067, sub_2A7D, sub_2B35, sub_2D58, sub_2E4A, sub_3A4F\n; calls (inter): GDI.CREATEDC, GDI.DELETEDC, GDI.GETDEVICECAPS, GDI.GETTEXTMETRICS, KERNEL.GETPROFILESTRING, KERNEL.GLOBALFREE (+9 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -11554,7 +11554,7 @@
       "callers": [],
       "fanout": 7,
       "fanin": 0,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (124 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (124 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_gdi",
@@ -11562,7 +11562,7 @@
         "calls_user",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_31F6 -- offset 0x31F6 -- 124 instr\n; Dispatcher: tabla de decisiones cmp+jcc (124 instr).\n; tags: calls_gdi, calls_kernel, calls_user, dispatcher\n; calls (intra): sub_33B6\n; calls (inter): GDI.ESCAPE, KERNEL.ANSIPREV, KERNEL.LSTRCAT, KERNEL.LSTRCPY, KERNEL.LSTRLEN, USER.SETDLGITEMTEXT\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_31F6 -- offset 0x31F6 -- 124 instr\n; Dispatcher: cmp+jcc decision table (124 instr).\n; tags: calls_gdi, calls_kernel, calls_user, dispatcher\n; calls (intra): sub_33B6\n; calls (inter): GDI.ESCAPE, KERNEL.ANSIPREV, KERNEL.LSTRCAT, KERNEL.LSTRCPY, KERNEL.LSTRLEN, USER.SETDLGITEMTEXT\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -11637,14 +11637,14 @@
       "callers": [],
       "fanout": 3,
       "fanin": 0,
-      "description": "Funcion mediana (63 instr, 3 calls).",
+      "description": "Mid-size function (63 instr, 3 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_gdi",
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_3327 -- offset 0x3327 -- 63 instr\n; Funcion mediana (63 instr, 3 calls).\n; tags: calls_gdi, far, medium\n; calls (intra): sub_0016, sub_369E\n; calls (inter): GDI.ESCAPE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_3327 -- offset 0x3327 -- 63 instr\n; Mid-size function (63 instr, 3 calls).\n; tags: calls_gdi, far, medium\n; calls (intra): sub_0016, sub_369E\n; calls (inter): GDI.ESCAPE\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -11747,14 +11747,14 @@
       ],
       "fanout": 8,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (234 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (234 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_gdi",
         "calls_kernel",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_33B6 -- offset 0x33B6 -- 234 instr\n; Dispatcher: tabla de decisiones cmp+jcc (234 instr).\n; tags: calls_gdi, calls_kernel, dispatcher\n; callers: sub_31F6\n; calls (intra): sub_0016, sub_1048, sub_1CAF\n; calls (inter): GDI.ESCAPE, GDI.TEXTOUT, KERNEL.GETLASTDISKCHANGE, KERNEL.LSTRCPY, KERNEL.LSTRLEN\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_33B6 -- offset 0x33B6 -- 234 instr\n; Dispatcher: cmp+jcc decision table (234 instr).\n; tags: calls_gdi, calls_kernel, dispatcher\n; callers: sub_31F6\n; calls (intra): sub_0016, sub_1048, sub_1CAF\n; calls (inter): GDI.ESCAPE, GDI.TEXTOUT, KERNEL.GETLASTDISKCHANGE, KERNEL.LSTRCPY, KERNEL.LSTRLEN\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -11826,13 +11826,13 @@
       "callers": [],
       "fanout": 3,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (29 instr).",
+      "description": "Unclassified function (29 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "calls_gdi",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_3659 -- offset 0x3659 -- 29 instr\n; Funcion sin clasificar definitiva (29 instr).\n; tags: calls_gdi, small\n; calls (intra): sub_005A, sub_3A4F\n; calls (inter): GDI.ESCAPE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_3659 -- offset 0x3659 -- 29 instr\n; Unclassified function (29 instr).\n; tags: calls_gdi, small\n; calls (intra): sub_005A, sub_3A4F\n; calls (inter): GDI.ESCAPE\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -11928,13 +11928,13 @@
       ],
       "fanout": 7,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (156 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (156 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_369E -- offset 0x369E -- 156 instr\n; Dispatcher: tabla de decisiones cmp+jcc (156 instr).\n; tags: calls_kernel, dispatcher\n; callers: sub_3327\n; calls (intra): sub_17F4, sub_1841, sub_3863\n; calls (inter): KERNEL.GETPROFILESTRING, KERNEL.LOCALALLOC, KERNEL.LOCALFREE, KERNEL.LSTRLEN\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_369E -- offset 0x369E -- 156 instr\n; Dispatcher: cmp+jcc decision table (156 instr).\n; tags: calls_kernel, dispatcher\n; callers: sub_3327\n; calls (intra): sub_17F4, sub_1841, sub_3863\n; calls (inter): KERNEL.GETPROFILESTRING, KERNEL.LOCALALLOC, KERNEL.LOCALFREE, KERNEL.LSTRLEN\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -12031,14 +12031,14 @@
       ],
       "fanout": 7,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (172 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (172 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_gdi",
         "calls_kernel",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_3863 -- offset 0x3863 -- 172 instr\n; Dispatcher: tabla de decisiones cmp+jcc (172 instr).\n; tags: calls_gdi, calls_kernel, dispatcher\n; callers: sub_369E\n; calls (intra): sub_0504, sub_0603\n; calls (inter): GDI.ESCAPE, GDI.TEXTOUT, KERNEL.LSTRCAT, KERNEL.LSTRCPY, KERNEL.LSTRLEN\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_3863 -- offset 0x3863 -- 172 instr\n; Dispatcher: cmp+jcc decision table (172 instr).\n; tags: calls_gdi, calls_kernel, dispatcher\n; callers: sub_369E\n; calls (intra): sub_0504, sub_0603\n; calls (inter): GDI.ESCAPE, GDI.TEXTOUT, KERNEL.LSTRCAT, KERNEL.LSTRCPY, KERNEL.LSTRLEN\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -12103,13 +12103,13 @@
       "callers": [],
       "fanout": 2,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (19 instr).",
+      "description": "Unclassified function (19 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "calls_gdi",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_3A29 -- offset 0x3A29 -- 19 instr\n; Funcion sin clasificar definitiva (19 instr).\n; tags: calls_gdi, small\n; calls (intra): sub_3A4F\n; calls (inter): GDI.ESCAPE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_3A29 -- offset 0x3A29 -- 19 instr\n; Unclassified function (19 instr).\n; tags: calls_gdi, small\n; calls (intra): sub_3A4F\n; calls (inter): GDI.ESCAPE\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOS",
@@ -12222,14 +12222,14 @@
       ],
       "fanout": 9,
       "fanin": 3,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (131 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (131 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_user",
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_3A4F -- offset 0x3A4F -- 131 instr\n; Dispatcher: tabla de decisiones cmp+jcc (131 instr).\n; tags: calls_user, dispatcher, far\n; callers: sub_2E8F, sub_3659, sub_3A29\n; calls (inter): USER.DESTROYWINDOW, USER.DISPATCHMESSAGE, USER.ENABLEMENUITEM, USER.ENABLEWINDOW, USER.GETSYSTEMMENU, USER.ISDIALOGMESSAGE (+3 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_3A4F -- offset 0x3A4F -- 131 instr\n; Dispatcher: cmp+jcc decision table (131 instr).\n; tags: calls_user, dispatcher, far\n; callers: sub_2E8F, sub_3659, sub_3A29\n; calls (inter): USER.DESTROYWINDOW, USER.DISPATCHMESSAGE, USER.ENABLEMENUITEM, USER.ENABLEWINDOW, USER.GETSYSTEMMENU, USER.ISDIALOGMESSAGE (+3 more)\n;----------------------------------------------------------------------"
     }
   ]
 }

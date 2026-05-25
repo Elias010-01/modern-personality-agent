@@ -76,13 +76,13 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (255 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (255 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0000 -- offset 0x0000 -- 255 instr\n; Dispatcher: tabla de decisiones cmp+jcc (255 instr).\n; tags: dispatcher, far\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0000 -- offset 0x0000 -- 255 instr\n; Dispatcher: cmp+jcc decision table (255 instr).\n; tags: dispatcher, far\n;----------------------------------------------------------------------"
     },
     {
       "module": "EPSONMX",
@@ -141,13 +141,13 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (29 instr).",
+      "description": "Unclassified function (29 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "far",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0000 -- offset 0x0000 -- 29 instr\n; Funcion sin clasificar definitiva (29 instr).\n; tags: far, small\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0000 -- offset 0x0000 -- 29 instr\n; Unclassified function (29 instr).\n; tags: far, small\n;----------------------------------------------------------------------"
     },
     {
       "module": "EPSONMX",
@@ -209,12 +209,12 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Funcion mediana (44 instr, 0 calls).",
+      "description": "Mid-size function (44 instr, 0 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_003B -- offset 0x003B -- 44 instr\n; Funcion mediana (44 instr, 0 calls).\n; tags: medium\n; callers: sub_0B3D, sub_0D4A\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_003B -- offset 0x003B -- 44 instr\n; Mid-size function (44 instr, 0 calls).\n; tags: medium\n; callers: sub_0B3D, sub_0D4A\n;----------------------------------------------------------------------"
     },
     {
       "module": "EPSONMX",
@@ -325,14 +325,14 @@
       ],
       "fanout": 10,
       "fanin": 2,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (308 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (308 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_00AF -- offset 0x00AF -- 308 instr\n; Dispatcher: tabla de decisiones cmp+jcc (308 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_0B3D, sub_0D4A\n; calls (intra): sub_03C3, sub_056B, sub_0627\n; calls (inter): KERNEL.FINDRESOURCE, KERNEL.FREERESOURCE, KERNEL.GETMODULEHANDLE, KERNEL.GLOBALUNLOCK, KERNEL.LOADRESOURCE, KERNEL.LOCKRESOURCE (+1 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_00AF -- offset 0x00AF -- 308 instr\n; Dispatcher: cmp+jcc decision table (308 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_0B3D, sub_0D4A\n; calls (intra): sub_03C3, sub_056B, sub_0627\n; calls (inter): KERNEL.FINDRESOURCE, KERNEL.FREERESOURCE, KERNEL.GETMODULEHANDLE, KERNEL.GLOBALUNLOCK, KERNEL.LOADRESOURCE, KERNEL.LOCKRESOURCE (+1 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "EPSONMX",
@@ -402,13 +402,13 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Funcion compleja: 132 instrucciones, 1 llamadas, 3 branches.",
+      "description": "Complex function: 132 instructions, 1 calls, 3 branches.",
       "confidence": "low",
       "semantic_tags": [
         "calls_kernel",
         "complex"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_03C3 -- offset 0x03C3 -- 132 instr\n; Funcion compleja: 132 instrucciones, 1 llamadas, 3 branches.\n; tags: calls_kernel, complex\n; callers: sub_00AF\n; calls (inter): KERNEL.LSTRCPY\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_03C3 -- offset 0x03C3 -- 132 instr\n; Complex function: 132 instructions, 1 calls, 3 branches.\n; tags: calls_kernel, complex\n; callers: sub_00AF\n; calls (inter): KERNEL.LSTRCPY\n;----------------------------------------------------------------------"
     },
     {
       "module": "EPSONMX",
@@ -475,12 +475,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Funcion mediana (69 instr, 1 calls).",
+      "description": "Mid-size function (69 instr, 1 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_056B -- offset 0x056B -- 69 instr\n; Funcion mediana (69 instr, 1 calls).\n; tags: medium\n; callers: sub_00AF\n; calls (intra): sub_0627\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_056B -- offset 0x056B -- 69 instr\n; Mid-size function (69 instr, 1 calls).\n; tags: medium\n; callers: sub_00AF\n; calls (intra): sub_0627\n;----------------------------------------------------------------------"
     },
     {
       "module": "EPSONMX",
@@ -564,14 +564,14 @@
       ],
       "fanout": 5,
       "fanin": 2,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (237 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (237 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0627 -- offset 0x0627 -- 237 instr\n; Dispatcher: tabla de decisiones cmp+jcc (237 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_00AF, sub_056B\n; calls (intra): sub_089A, sub_0970, sub_0B3D\n; calls (inter): KERNEL.GLOBALFREE, KERNEL.LSTRCMP\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0627 -- offset 0x0627 -- 237 instr\n; Dispatcher: cmp+jcc decision table (237 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_00AF, sub_056B\n; calls (intra): sub_089A, sub_0970, sub_0B3D\n; calls (inter): KERNEL.GLOBALFREE, KERNEL.LSTRCMP\n;----------------------------------------------------------------------"
     },
     {
       "module": "EPSONMX",
@@ -657,14 +657,14 @@
       ],
       "fanout": 5,
       "fanin": 1,
-      "description": "Funcion mediana (74 instr, 5 calls).",
+      "description": "Mid-size function (74 instr, 5 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_gdi",
         "calls_kernel",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_089A -- offset 0x089A -- 74 instr\n; Funcion mediana (74 instr, 5 calls).\n; tags: calls_gdi, calls_kernel, medium\n; callers: sub_0627\n; calls (intra): sub_0A9C\n; calls (inter): GDI.INSERTPQ, GDI.SIZEPQ, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_089A -- offset 0x089A -- 74 instr\n; Mid-size function (74 instr, 5 calls).\n; tags: calls_gdi, calls_kernel, medium\n; callers: sub_0627\n; calls (intra): sub_0A9C\n; calls (inter): GDI.INSERTPQ, GDI.SIZEPQ, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK\n;----------------------------------------------------------------------"
     },
     {
       "module": "EPSONMX",
@@ -745,13 +745,13 @@
       ],
       "fanout": 3,
       "fanin": 2,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (110 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (110 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0970 -- offset 0x0970 -- 110 instr\n; Dispatcher: tabla de decisiones cmp+jcc (110 instr).\n; tags: calls_kernel, dispatcher\n; callers: sub_0627, sub_0D4A\n; calls (inter): KERNEL.GLOBALALLOC, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0970 -- offset 0x0970 -- 110 instr\n; Dispatcher: cmp+jcc decision table (110 instr).\n; tags: calls_kernel, dispatcher\n; callers: sub_0627, sub_0D4A\n; calls (inter): KERNEL.GLOBALALLOC, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK\n;----------------------------------------------------------------------"
     },
     {
       "module": "EPSONMX",
@@ -826,14 +826,14 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Funcion mediana (66 instr, 2 calls).",
+      "description": "Mid-size function (66 instr, 2 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_kernel",
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0A9C -- offset 0x0A9C -- 66 instr\n; Funcion mediana (66 instr, 2 calls).\n; tags: calls_kernel, far, medium\n; callers: sub_089A\n; calls (inter): KERNEL.GLOBALALLOC, KERNEL.GLOBALREALLOC\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0A9C -- offset 0x0A9C -- 66 instr\n; Mid-size function (66 instr, 2 calls).\n; tags: calls_kernel, far, medium\n; callers: sub_089A\n; calls (inter): KERNEL.GLOBALALLOC, KERNEL.GLOBALREALLOC\n;----------------------------------------------------------------------"
     },
     {
       "module": "EPSONMX",
@@ -906,12 +906,12 @@
       ],
       "fanout": 3,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (183 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (183 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0B3D -- offset 0x0B3D -- 183 instr\n; Dispatcher: tabla de decisiones cmp+jcc (183 instr).\n; tags: dispatcher\n; callers: sub_0627\n; calls (intra): sub_003B, sub_00AF, sub_0D4A\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0B3D -- offset 0x0B3D -- 183 instr\n; Dispatcher: cmp+jcc decision table (183 instr).\n; tags: dispatcher\n; callers: sub_0627\n; calls (intra): sub_003B, sub_00AF, sub_0D4A\n;----------------------------------------------------------------------"
     },
     {
       "module": "EPSONMX",
@@ -997,14 +997,14 @@
       ],
       "fanout": 6,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (227 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (227 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0D4A -- offset 0x0D4A -- 227 instr\n; Dispatcher: tabla de decisiones cmp+jcc (227 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_0B3D\n; calls (intra): sub_003B, sub_00AF, sub_0970, sub_0FBA, sub_0FF4\n; calls (inter): KERNEL.GLOBALFREE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0D4A -- offset 0x0D4A -- 227 instr\n; Dispatcher: cmp+jcc decision table (227 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_0B3D\n; calls (intra): sub_003B, sub_00AF, sub_0970, sub_0FBA, sub_0FF4\n; calls (inter): KERNEL.GLOBALFREE\n;----------------------------------------------------------------------"
     },
     {
       "module": "EPSONMX",
@@ -1064,12 +1064,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (26 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (26 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0FBA -- offset 0x0FBA -- 26 instr\n; Dispatcher: tabla de decisiones cmp+jcc (26 instr).\n; tags: dispatcher\n; callers: sub_0D4A\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0FBA -- offset 0x0FBA -- 26 instr\n; Dispatcher: cmp+jcc decision table (26 instr).\n; tags: dispatcher\n; callers: sub_0D4A\n;----------------------------------------------------------------------"
     },
     {
       "module": "EPSONMX",
@@ -1132,12 +1132,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion mediana (46 instr, 0 calls).",
+      "description": "Mid-size function (46 instr, 0 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0FF4 -- offset 0x0FF4 -- 46 instr\n; Funcion mediana (46 instr, 0 calls).\n; tags: medium\n; callers: sub_0D4A\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0FF4 -- offset 0x0FF4 -- 46 instr\n; Mid-size function (46 instr, 0 calls).\n; tags: medium\n; callers: sub_0D4A\n;----------------------------------------------------------------------"
     }
   ]
 }

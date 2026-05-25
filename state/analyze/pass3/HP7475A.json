@@ -94,14 +94,14 @@
       "callers": [],
       "fanout": 4,
       "fanin": 0,
-      "description": "Funcion compleja: 185 instrucciones, 4 llamadas, 8 branches.",
+      "description": "Complex function: 185 instructions, 4 calls, 8 branches.",
       "confidence": "low",
       "semantic_tags": [
         "calls_kernel",
         "complex",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0052 -- offset 0x0052 -- 185 instr\n; Funcion compleja: 185 instrucciones, 4 llamadas, 8 branches.\n; tags: calls_kernel, complex, far\n; calls (intra): sub_0253, sub_04B8\n; calls (inter): KERNEL.LOCKSEGMENT, KERNEL.UNLOCKSEGMENT\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0052 -- offset 0x0052 -- 185 instr\n; Complex function: 185 instructions, 4 calls, 8 branches.\n; tags: calls_kernel, complex, far\n; calls (intra): sub_0253, sub_04B8\n; calls (inter): KERNEL.LOCKSEGMENT, KERNEL.UNLOCKSEGMENT\n;----------------------------------------------------------------------"
     },
     {
       "module": "HP7475A",
@@ -164,13 +164,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (157 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (157 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0253 -- offset 0x0253 -- 157 instr\n; Dispatcher: tabla de decisiones cmp+jcc (157 instr).\n; tags: dispatcher, far\n; callers: sub_0052\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0253 -- offset 0x0253 -- 157 instr\n; Dispatcher: cmp+jcc decision table (157 instr).\n; tags: dispatcher, far\n; callers: sub_0052\n;----------------------------------------------------------------------"
     },
     {
       "module": "HP7475A",
@@ -241,13 +241,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (137 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (137 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_04B8 -- offset 0x04B8 -- 137 instr\n; Dispatcher: tabla de decisiones cmp+jcc (137 instr).\n; tags: dispatcher, far\n; callers: sub_0052\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_04B8 -- offset 0x04B8 -- 137 instr\n; Dispatcher: cmp+jcc decision table (137 instr).\n; tags: dispatcher, far\n; callers: sub_0052\n;----------------------------------------------------------------------"
     },
     {
       "module": "HP7475A",
@@ -316,12 +316,12 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (121 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (121 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_05F0 -- offset 0x05F0 -- 121 instr\n; Dispatcher: tabla de decisiones cmp+jcc (121 instr).\n; tags: dispatcher\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_05F0 -- offset 0x05F0 -- 121 instr\n; Dispatcher: cmp+jcc decision table (121 instr).\n; tags: dispatcher\n;----------------------------------------------------------------------"
     }
   ]
 }

@@ -62,12 +62,12 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion hoja (no llama a otras, 17 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 17 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0183 -- offset 0x0183 -- 17 instr\n; Funcion hoja (no llama a otras, 17 instr): probable helper aritmetico/conversion.\n; tags: leaf\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0183 -- offset 0x0183 -- 17 instr\n; Leaf function (no callees, 17 instr): likely arithmetic/conversion helper.\n; tags: leaf\n;----------------------------------------------------------------------"
     },
     {
       "module": "NEC3550",
@@ -198,7 +198,7 @@
       "callers": [],
       "fanout": 12,
       "fanin": 0,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (208 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (208 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_gdi",
@@ -206,7 +206,7 @@
         "calls_user",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_01AA -- offset 0x01AA -- 208 instr\n; Dispatcher: tabla de decisiones cmp+jcc (208 instr).\n; tags: calls_gdi, calls_kernel, calls_user, dispatcher\n; calls (inter): GDI.DELETEJOB, GDI.EXTRACTPQ, GDI.INSERTPQ, GDI.STARTSPOOLPAGE, GDI.WRITEDIALOG, GDI.WRITESPOOL (+6 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_01AA -- offset 0x01AA -- 208 instr\n; Dispatcher: cmp+jcc decision table (208 instr).\n; tags: calls_gdi, calls_kernel, calls_user, dispatcher\n; calls (inter): GDI.DELETEJOB, GDI.EXTRACTPQ, GDI.INSERTPQ, GDI.STARTSPOOLPAGE, GDI.WRITEDIALOG, GDI.WRITESPOOL (+6 more)\n;----------------------------------------------------------------------"
     }
   ]
 }

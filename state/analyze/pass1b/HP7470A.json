@@ -1,0 +1,124 @@
+{
+  "module": "HP7470A",
+  "num_functions": 2,
+  "num_instructions": 353,
+  "num_lines": 5629,
+  "functions": [
+    {
+      "module": "HP7470A",
+      "segment_file": "seg1.asm",
+      "name": "sub_0200",
+      "kind": "FAR",
+      "offset": 512,
+      "size_bytes": null,
+      "start_line": 205,
+      "end_line": 457,
+      "num_instructions": 232,
+      "prologue": "saves_regs",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_11DD",
+        "L_151F",
+        "L_198D"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 14,
+      "num_jumps_uncond": 10,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 95,
+      "mnemonic_histogram": {
+        "mov": 82,
+        "push": 51,
+        "les": 14,
+        "jmp": 10,
+        "nop": 8,
+        "cmp": 8,
+        "shl": 8,
+        "pop": 7,
+        "or": 6,
+        "je": 6,
+        "call": 6,
+        "sub": 5,
+        "jne": 5,
+        "inc": 4,
+        "jl": 2
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push ds",
+        "pop ax",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 6"
+      ],
+      "discovered": true
+    },
+    {
+      "module": "HP7470A",
+      "segment_file": "seg1.asm",
+      "name": "sub_04B4",
+      "kind": "NEAR",
+      "offset": 1204,
+      "size_bytes": null,
+      "start_line": 458,
+      "end_line": 588,
+      "num_instructions": 121,
+      "prologue": "saves_regs",
+      "epilogue": "jmp_tail",
+      "calls_near": [
+        "L_11DD",
+        "L_198D",
+        "L_1A20"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 7,
+      "num_jumps_uncond": 7,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 49,
+      "mnemonic_histogram": {
+        "mov": 33,
+        "push": 30,
+        "les": 17,
+        "jmp": 7,
+        "cmp": 6,
+        "nop": 5,
+        "jne": 4,
+        "call": 4,
+        "inc": 2,
+        "sub": 2,
+        "xor": 2,
+        "je": 2,
+        "pop": 1,
+        "jbe": 1,
+        "add": 1
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push ds",
+        "pop ax",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp"
+      ],
+      "last_instructions": [
+        "push cs",
+        "call L_1A20",
+        "les bx, ptr [bp + 0x10]",
+        "push word ptr es:[bx + 7]"
+      ],
+      "discovered": true
+    }
+  ]
+}

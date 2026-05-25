@@ -1,0 +1,318 @@
+{
+  "module": "HP7475A",
+  "num_functions": 4,
+  "intra_edges": [
+    [
+      "sub_0052",
+      "sub_0253"
+    ],
+    [
+      "sub_0052",
+      "sub_04B8"
+    ]
+  ],
+  "inter_edges": [
+    [
+      "sub_0052",
+      "KERNEL",
+      "LOCKSEGMENT"
+    ],
+    [
+      "sub_0052",
+      "KERNEL",
+      "UNLOCKSEGMENT"
+    ]
+  ],
+  "external_modules": [
+    "KERNEL"
+  ],
+  "functions": [
+    {
+      "module": "HP7475A",
+      "segment_file": "seg1.asm",
+      "name": "sub_0052",
+      "kind": "FAR",
+      "offset": 82,
+      "size_bytes": null,
+      "start_line": 56,
+      "end_line": 253,
+      "num_instructions": 185,
+      "prologue": "saves_regs",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_0052",
+        "L_0253",
+        "L_04B8",
+        "L_191C",
+        "L_1EE0",
+        "L_1F19"
+      ],
+      "calls_far": [
+        "far KERNEL.LOCKSEGMENT",
+        "far KERNEL.UNLOCKSEGMENT"
+      ],
+      "num_jumps_cond": 8,
+      "num_jumps_uncond": 5,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 87,
+      "mnemonic_histogram": {
+        "mov": 60,
+        "push": 43,
+        "les": 11,
+        "nop": 9,
+        "inc": 9,
+        "call": 9,
+        "pop": 8,
+        "sub": 5,
+        "jmp": 5,
+        "jne": 4,
+        "or": 4,
+        "lea": 3,
+        "cmp": 3,
+        "je": 3,
+        "add": 2
+      },
+      "classification": "complex",
+      "first_instructions": [
+        "push ds",
+        "pop ax",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 0x12"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0253",
+        "sub_04B8"
+      ],
+      "callees_inter": [
+        {
+          "module": "KERNEL",
+          "func": "LOCKSEGMENT"
+        },
+        {
+          "module": "KERNEL",
+          "func": "UNLOCKSEGMENT"
+        }
+      ],
+      "callees_unresolved": [
+        "L_0052",
+        "L_191C",
+        "L_1EE0",
+        "L_1F19"
+      ],
+      "callers": [],
+      "fanout": 4,
+      "fanin": 0
+    },
+    {
+      "module": "HP7475A",
+      "segment_file": "seg1.asm",
+      "name": "sub_0253",
+      "kind": "FAR",
+      "offset": 595,
+      "size_bytes": null,
+      "start_line": 254,
+      "end_line": 431,
+      "num_instructions": 157,
+      "prologue": "saves_regs",
+      "epilogue": "retf_n",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 14,
+      "num_jumps_uncond": 13,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 96,
+      "mnemonic_histogram": {
+        "mov": 79,
+        "jmp": 13,
+        "les": 11,
+        "or": 8,
+        "shl": 8,
+        "jne": 7,
+        "cmp": 6,
+        "je": 5,
+        "push": 4,
+        "pop": 4,
+        "inc": 3,
+        "sub": 3,
+        "jl": 2,
+        "nop": 1,
+        "add": 1
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push ds",
+        "pop ax",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 8"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0052"
+      ],
+      "fanout": 0,
+      "fanin": 1
+    },
+    {
+      "module": "HP7475A",
+      "segment_file": "seg1.asm",
+      "name": "sub_04B8",
+      "kind": "FAR",
+      "offset": 1208,
+      "size_bytes": null,
+      "start_line": 432,
+      "end_line": 579,
+      "num_instructions": 137,
+      "prologue": "saves_regs",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_1350",
+        "L_1692",
+        "L_1B00"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 8,
+      "num_jumps_uncond": 5,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 30,
+      "mnemonic_histogram": {
+        "push": 55,
+        "mov": 28,
+        "nop": 8,
+        "cmp": 8,
+        "call": 7,
+        "les": 6,
+        "jmp": 5,
+        "je": 5,
+        "pop": 3,
+        "sub": 2,
+        "jne": 2,
+        "xor": 2,
+        "inc": 1,
+        "jge": 1,
+        "add": 1
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push ds",
+        "pop ax",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 6"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_1350",
+        "L_1692",
+        "L_1B00"
+      ],
+      "callers": [
+        "sub_0052"
+      ],
+      "fanout": 0,
+      "fanin": 1
+    },
+    {
+      "module": "HP7475A",
+      "segment_file": "seg1.asm",
+      "name": "sub_05F0",
+      "kind": "NEAR",
+      "offset": 1520,
+      "size_bytes": null,
+      "start_line": 580,
+      "end_line": 710,
+      "num_instructions": 121,
+      "prologue": "saves_regs",
+      "epilogue": "jmp_tail",
+      "calls_near": [
+        "L_1350",
+        "L_1B00",
+        "L_1B93"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 7,
+      "num_jumps_uncond": 7,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 49,
+      "mnemonic_histogram": {
+        "mov": 33,
+        "push": 30,
+        "les": 17,
+        "jmp": 7,
+        "cmp": 6,
+        "nop": 5,
+        "jne": 4,
+        "call": 4,
+        "inc": 2,
+        "sub": 2,
+        "xor": 2,
+        "je": 2,
+        "pop": 1,
+        "jbe": 1,
+        "add": 1
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push ds",
+        "pop ax",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp"
+      ],
+      "last_instructions": [
+        "push cs",
+        "call L_1B93",
+        "les bx, ptr [bp + 0x10]",
+        "push word ptr es:[bx + 7]"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_1350",
+        "L_1B00",
+        "L_1B93"
+      ],
+      "callers": [],
+      "fanout": 0,
+      "fanin": 0
+    }
+  ]
+}

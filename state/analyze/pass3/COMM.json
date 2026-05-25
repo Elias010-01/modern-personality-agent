@@ -66,13 +66,13 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Wrapper que delega en sub_01D1.",
+      "description": "Wrapper delegating to sub_01D1.",
       "confidence": "medium",
       "semantic_tags": [
         "far",
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; INICOM -- 15 instr\n; Wrapper que delega en sub_01D1.\n; tags: far, wrapper\n; calls (intra): sub_01D1\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; INICOM -- 15 instr\n; Wrapper delegating to sub_01D1.\n; tags: far, wrapper\n; calls (intra): sub_01D1\n;----------------------------------------------------------------------"
     },
     {
       "module": "COMM",
@@ -132,13 +132,13 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Setter: cambia com.",
+      "description": "Setter: changes com.",
       "confidence": "medium",
       "semantic_tags": [
         "far",
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; SETCOM -- 15 instr\n; Setter: cambia com.\n; tags: far, wrapper\n; calls (intra): sub_044D\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; SETCOM -- 15 instr\n; Setter: changes com.\n; tags: far, wrapper\n; calls (intra): sub_044D\n;----------------------------------------------------------------------"
     },
     {
       "module": "COMM",
@@ -198,13 +198,13 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Setter: cambia que.",
+      "description": "Setter: changes que.",
       "confidence": "medium",
       "semantic_tags": [
         "far",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; SETQUE -- 16 instr\n; Setter: cambia que.\n; tags: far, small\n; calls (intra): sub_06A3\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; SETQUE -- 16 instr\n; Setter: changes que.\n; tags: far, small\n; calls (intra): sub_06A3\n;----------------------------------------------------------------------"
     },
     {
       "module": "COMM",
@@ -265,13 +265,13 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (21 instr).",
+      "description": "Unclassified function (21 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "far",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; RECCOM -- 21 instr\n; Funcion sin clasificar definitiva (21 instr).\n; tags: far, small\n; calls (intra): sub_07EE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; RECCOM -- 21 instr\n; Unclassified function (21 instr).\n; tags: far, small\n; calls (intra): sub_07EE\n;----------------------------------------------------------------------"
     },
     {
       "module": "COMM",
@@ -330,13 +330,13 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (16 instr).",
+      "description": "Unclassified function (16 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "far",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; SNDCOM -- 16 instr\n; Funcion sin clasificar definitiva (16 instr).\n; tags: far, small\n; calls (intra): sub_02E7\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; SNDCOM -- 16 instr\n; Unclassified function (16 instr).\n; tags: far, small\n; calls (intra): sub_02E7\n;----------------------------------------------------------------------"
     },
     {
       "module": "COMM",
@@ -395,13 +395,13 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (16 instr).",
+      "description": "Unclassified function (16 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "far",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; CTX -- 16 instr\n; Funcion sin clasificar definitiva (16 instr).\n; tags: far, small\n; calls (intra): sub_02C0\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; CTX -- 16 instr\n; Unclassified function (16 instr).\n; tags: far, small\n; calls (intra): sub_02C0\n;----------------------------------------------------------------------"
     },
     {
       "module": "COMM",
@@ -460,13 +460,13 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Wrapper que delega en sub_032D.",
+      "description": "Wrapper delegating to sub_032D.",
       "confidence": "medium",
       "semantic_tags": [
         "far",
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; TRMCOM -- 15 instr\n; Wrapper que delega en sub_032D.\n; tags: far, wrapper\n; calls (intra): sub_032D\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; TRMCOM -- 15 instr\n; Wrapper delegating to sub_032D.\n; tags: far, wrapper\n; calls (intra): sub_032D\n;----------------------------------------------------------------------"
     },
     {
       "module": "COMM",
@@ -526,13 +526,13 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (20 instr).",
+      "description": "Unclassified function (20 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "far",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; STACOM -- 20 instr\n; Funcion sin clasificar definitiva (20 instr).\n; tags: far, small\n; calls (intra): sub_06F6\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; STACOM -- 20 instr\n; Unclassified function (20 instr).\n; tags: far, small\n; calls (intra): sub_06F6\n;----------------------------------------------------------------------"
     },
     {
       "module": "COMM",
@@ -591,13 +591,13 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (16 instr).",
+      "description": "Unclassified function (16 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "far",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; CEXTFCN -- 16 instr\n; Funcion sin clasificar definitiva (16 instr).\n; tags: far, small\n; calls (intra): sub_076C\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; CEXTFCN -- 16 instr\n; Unclassified function (16 instr).\n; tags: far, small\n; calls (intra): sub_076C\n;----------------------------------------------------------------------"
     },
     {
       "module": "COMM",
@@ -656,13 +656,13 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (20 instr).",
+      "description": "Unclassified function (20 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "far",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; CFLUSH -- 20 instr\n; Funcion sin clasificar definitiva (20 instr).\n; tags: far, small\n; calls (intra): sub_086F\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; CFLUSH -- 20 instr\n; Unclassified function (20 instr).\n; tags: far, small\n; calls (intra): sub_086F\n;----------------------------------------------------------------------"
     },
     {
       "module": "COMM",
@@ -721,13 +721,13 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (16 instr).",
+      "description": "Unclassified function (16 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "far",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; CEVT -- 16 instr\n; Funcion sin clasificar definitiva (16 instr).\n; tags: far, small\n; calls (intra): sub_06C8\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; CEVT -- 16 instr\n; Unclassified function (16 instr).\n; tags: far, small\n; calls (intra): sub_06C8\n;----------------------------------------------------------------------"
     },
     {
       "module": "COMM",
@@ -786,13 +786,13 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (16 instr).",
+      "description": "Unclassified function (16 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "far",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; CEVTGET -- 16 instr\n; Funcion sin clasificar definitiva (16 instr).\n; tags: far, small\n; calls (intra): sub_06DE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; CEVTGET -- 16 instr\n; Unclassified function (16 instr).\n; tags: far, small\n; calls (intra): sub_06DE\n;----------------------------------------------------------------------"
     },
     {
       "module": "COMM",
@@ -851,13 +851,13 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (19 instr).",
+      "description": "Unclassified function (19 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "far",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; CSETBRK -- 19 instr\n; Funcion sin clasificar definitiva (19 instr).\n; tags: far, small\n; calls (intra): sub_0741\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; CSETBRK -- 19 instr\n; Unclassified function (19 instr).\n; tags: far, small\n; calls (intra): sub_0741\n;----------------------------------------------------------------------"
     },
     {
       "module": "COMM",
@@ -916,13 +916,13 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (19 instr).",
+      "description": "Unclassified function (19 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "far",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; CCLRBRK -- 19 instr\n; Funcion sin clasificar definitiva (19 instr).\n; tags: far, small\n; calls (intra): sub_0746\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; CCLRBRK -- 19 instr\n; Unclassified function (19 instr).\n; tags: far, small\n; calls (intra): sub_0746\n;----------------------------------------------------------------------"
     },
     {
       "module": "COMM",
@@ -981,13 +981,13 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Getter: devuelve dcb.",
+      "description": "Getter: returns dcb.",
       "confidence": "medium",
       "semantic_tags": [
         "far",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; GETDCB -- 19 instr\n; Getter: devuelve dcb.\n; tags: far, small\n; calls (intra): sub_07DE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; GETDCB -- 19 instr\n; Getter: returns dcb.\n; tags: far, small\n; calls (intra): sub_07DE\n;----------------------------------------------------------------------"
     },
     {
       "module": "COMM",
@@ -1064,14 +1064,14 @@
       ],
       "fanout": 4,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (108 instr).",
+      "description": "Calls DOS services via INT 21h (108 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21",
         "int_2f"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_01D1 -- offset 0x01D1 -- 108 instr\n; Llama a servicios DOS via INT 21h (108 instr).\n; tags: dos_caller, int_21, int_2f\n; callers: INICOM\n; calls (intra): sub_03CD, sub_044D, sub_05C6, sub_0677\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_01D1 -- offset 0x01D1 -- 108 instr\n; Calls DOS services via INT 21h (108 instr).\n; tags: dos_caller, int_21, int_2f\n; callers: INICOM\n; calls (intra): sub_03CD, sub_044D, sub_05C6, sub_0677\n;----------------------------------------------------------------------"
     },
     {
       "module": "COMM",
@@ -1141,12 +1141,12 @@
       ],
       "fanout": 3,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (20 instr).",
+      "description": "Unclassified function (20 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_02C0 -- offset 0x02C0 -- 20 instr\n; Funcion sin clasificar definitiva (20 instr).\n; tags: small\n; callers: CTX\n; calls (intra): sub_02E7, sub_0656, sub_0677\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_02C0 -- offset 0x02C0 -- 20 instr\n; Unclassified function (20 instr).\n; tags: small\n; callers: CTX\n; calls (intra): sub_02E7, sub_0656, sub_0677\n;----------------------------------------------------------------------"
     },
     {
       "module": "COMM",
@@ -1220,12 +1220,12 @@
       ],
       "fanout": 4,
       "fanin": 2,
-      "description": "Funcion mediana (32 instr, 4 calls).",
+      "description": "Mid-size function (32 instr, 4 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_02E7 -- offset 0x02E7 -- 32 instr\n; Funcion mediana (32 instr, 4 calls).\n; tags: medium\n; callers: SNDCOM, sub_02C0\n; calls (intra): sub_03E8, sub_05E6, sub_065D, sub_0677\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_02E7 -- offset 0x02E7 -- 32 instr\n; Mid-size function (32 instr, 4 calls).\n; tags: medium\n; callers: SNDCOM, sub_02C0\n; calls (intra): sub_03E8, sub_05E6, sub_065D, sub_0677\n;----------------------------------------------------------------------"
     },
     {
       "module": "COMM",
@@ -1307,13 +1307,13 @@
       ],
       "fanout": 5,
       "fanin": 1,
-      "description": "Funcion mediana (40 instr, 5 calls).",
+      "description": "Mid-size function (40 instr, 5 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_system",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_032D -- offset 0x032D -- 40 instr\n; Funcion mediana (40 instr, 5 calls).\n; tags: calls_system, medium\n; callers: TRMCOM\n; calls (intra): sub_038D, sub_0677, sub_07EE\n; calls (inter): SYSTEM.CREATESYSTEMTIMER, SYSTEM.KILLSYSTEMTIMER\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_032D -- offset 0x032D -- 40 instr\n; Mid-size function (40 instr, 5 calls).\n; tags: calls_system, medium\n; callers: TRMCOM\n; calls (intra): sub_038D, sub_0677, sub_07EE\n; calls (inter): SYSTEM.CREATESYSTEMTIMER, SYSTEM.KILLSYSTEMTIMER\n;----------------------------------------------------------------------"
     },
     {
       "module": "COMM",
@@ -1383,13 +1383,13 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Funcion mediana (31 instr, 1 calls).",
+      "description": "Mid-size function (31 instr, 1 calls).",
       "confidence": "low",
       "semantic_tags": [
         "int_2f",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_038D -- offset 0x038D -- 31 instr\n; Funcion mediana (31 instr, 1 calls).\n; tags: int_2f, medium\n; callers: sub_032D\n; calls (intra): sub_05C6\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_038D -- offset 0x038D -- 31 instr\n; Mid-size function (31 instr, 1 calls).\n; tags: int_2f, medium\n; callers: sub_032D\n; calls (intra): sub_05C6\n;----------------------------------------------------------------------"
     },
     {
       "module": "COMM",
@@ -1446,13 +1446,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (14 instr).",
+      "description": "Calls DOS services via INT 21h (14 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_03CD -- offset 0x03CD -- 14 instr\n; Llama a servicios DOS via INT 21h (14 instr).\n; tags: dos_caller, int_21\n; callers: sub_01D1\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_03CD -- offset 0x03CD -- 14 instr\n; Calls DOS services via INT 21h (14 instr).\n; tags: dos_caller, int_21\n; callers: sub_01D1\n;----------------------------------------------------------------------"
     },
     {
       "module": "COMM",
@@ -1517,14 +1517,14 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Iterador con bucle (47 instr).",
+      "description": "Iterator with loop (47 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "int_15",
         "iterator",
         "loop"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_03E8 -- offset 0x03E8 -- 47 instr\n; Iterador con bucle (47 instr).\n; tags: int_15, iterator, loop\n; callers: sub_02E7\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_03E8 -- offset 0x03E8 -- 47 instr\n; Iterator with loop (47 instr).\n; tags: int_15, iterator, loop\n; callers: sub_02E7\n;----------------------------------------------------------------------"
     },
     {
       "module": "COMM",
@@ -1600,13 +1600,13 @@
       ],
       "fanout": 5,
       "fanin": 2,
-      "description": "Iterador con bucle (95 instr).",
+      "description": "Iterator with loop (95 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
         "loop"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_044D -- offset 0x044D -- 95 instr\n; Iterador con bucle (95 instr).\n; tags: complex_iterator, loop\n; callers: SETCOM, sub_01D1\n; calls (intra): sub_050E, sub_0522, sub_0549, sub_056A, sub_0677\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_044D -- offset 0x044D -- 95 instr\n; Iterator with loop (95 instr).\n; tags: complex_iterator, loop\n; callers: SETCOM, sub_01D1\n; calls (intra): sub_050E, sub_0522, sub_0549, sub_056A, sub_0677\n;----------------------------------------------------------------------"
     },
     {
       "module": "COMM",
@@ -1659,12 +1659,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion hoja (no llama a otras, 12 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 12 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_050E -- offset 0x050E -- 12 instr\n; Funcion hoja (no llama a otras, 12 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_044D\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_050E -- offset 0x050E -- 12 instr\n; Leaf function (no callees, 12 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_044D\n;----------------------------------------------------------------------"
     },
     {
       "module": "COMM",
@@ -1722,12 +1722,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Wrapper que delega en sub_0530.",
+      "description": "Wrapper delegating to sub_0530.",
       "confidence": "medium",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0522 -- offset 0x0522 -- 7 instr\n; Wrapper que delega en sub_0530.\n; tags: wrapper\n; callers: sub_044D\n; calls (intra): sub_0530\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0522 -- offset 0x0522 -- 7 instr\n; Wrapper delegating to sub_0530.\n; tags: wrapper\n; callers: sub_044D\n; calls (intra): sub_0530\n;----------------------------------------------------------------------"
     },
     {
       "module": "COMM",
@@ -1779,12 +1779,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion hoja (no llama a otras, 10 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 10 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0530 -- offset 0x0530 -- 10 instr\n; Funcion hoja (no llama a otras, 10 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_0522\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0530 -- offset 0x0530 -- 10 instr\n; Leaf function (no callees, 10 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_0522\n;----------------------------------------------------------------------"
     },
     {
       "module": "COMM",
@@ -1841,12 +1841,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion hoja (no llama a otras, 14 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 14 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0549 -- offset 0x0549 -- 14 instr\n; Funcion hoja (no llama a otras, 14 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_044D\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0549 -- offset 0x0549 -- 14 instr\n; Leaf function (no callees, 14 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_044D\n;----------------------------------------------------------------------"
     },
     {
       "module": "COMM",
@@ -1909,12 +1909,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion mediana (43 instr, 0 calls).",
+      "description": "Mid-size function (43 instr, 0 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_056A -- offset 0x056A -- 43 instr\n; Funcion mediana (43 instr, 0 calls).\n; tags: medium\n; callers: sub_044D\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_056A -- offset 0x056A -- 43 instr\n; Mid-size function (43 instr, 0 calls).\n; tags: medium\n; callers: sub_044D\n;----------------------------------------------------------------------"
     },
     {
       "module": "COMM",
@@ -1977,7 +1977,7 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Llama a servicios DOS via INT 21h (14 instr).",
+      "description": "Calls DOS services via INT 21h (14 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
@@ -1985,7 +1985,7 @@
         "int_21",
         "int_2f"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_05C6 -- offset 0x05C6 -- 14 instr\n; Llama a servicios DOS via INT 21h (14 instr).\n; tags: dos_caller, far, int_21, int_2f\n; callers: sub_01D1, sub_038D\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_05C6 -- offset 0x05C6 -- 14 instr\n; Calls DOS services via INT 21h (14 instr).\n; tags: dos_caller, far, int_21, int_2f\n; callers: sub_01D1, sub_038D\n;----------------------------------------------------------------------"
     },
     {
       "module": "COMM",
@@ -2052,13 +2052,13 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Funcion mediana (47 instr, 0 calls).",
+      "description": "Mid-size function (47 instr, 0 calls).",
       "confidence": "low",
       "semantic_tags": [
         "int_17",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_05E6 -- offset 0x05E6 -- 47 instr\n; Funcion mediana (47 instr, 0 calls).\n; tags: int_17, medium\n; callers: sub_02E7, sub_076C\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_05E6 -- offset 0x05E6 -- 47 instr\n; Mid-size function (47 instr, 0 calls).\n; tags: int_17, medium\n; callers: sub_02E7, sub_076C\n;----------------------------------------------------------------------"
     },
     {
       "module": "COMM",
@@ -2102,12 +2102,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Stub trivial (2 instrucciones, sin logica significativa).",
+      "description": "Trivial stub (2 instructions, no significant logic).",
       "confidence": "low",
       "semantic_tags": [
         "trivial_stub"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0656 -- offset 0x0656 -- 2 instr\n; Stub trivial (2 instrucciones, sin logica significativa).\n; tags: trivial_stub\n; callers: sub_02C0\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0656 -- offset 0x0656 -- 2 instr\n; Trivial stub (2 instructions, no significant logic).\n; tags: trivial_stub\n; callers: sub_02C0\n;----------------------------------------------------------------------"
     },
     {
       "module": "COMM",
@@ -2169,12 +2169,12 @@
       ],
       "fanout": 0,
       "fanin": 3,
-      "description": "Funcion hoja (no llama a otras, 14 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 14 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_065D -- offset 0x065D -- 14 instr\n; Funcion hoja (no llama a otras, 14 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_02E7, sub_07EE, sub_086F\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_065D -- offset 0x065D -- 14 instr\n; Leaf function (no callees, 14 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_02E7, sub_07EE, sub_086F\n;----------------------------------------------------------------------"
     },
     {
       "module": "COMM",
@@ -2242,12 +2242,12 @@
       ],
       "fanout": 0,
       "fanin": 14,
-      "description": "Funcion hoja (no llama a otras, 19 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 19 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0677 -- offset 0x0677 -- 19 instr\n; Funcion hoja (no llama a otras, 19 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_01D1, sub_02C0, sub_02E7, sub_032D, sub_044D, sub_06A3 (+8 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0677 -- offset 0x0677 -- 19 instr\n; Leaf function (no callees, 19 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_01D1, sub_02C0, sub_02E7, sub_032D, sub_044D, sub_06A3 (+8 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "COMM",
@@ -2312,12 +2312,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (24 instr).",
+      "description": "Unclassified function (24 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_06A3 -- offset 0x06A3 -- 24 instr\n; Funcion sin clasificar definitiva (24 instr).\n; tags: small\n; callers: SETQUE\n; calls (intra): sub_0677\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_06A3 -- offset 0x06A3 -- 24 instr\n; Unclassified function (24 instr).\n; tags: small\n; callers: SETQUE\n; calls (intra): sub_0677\n;----------------------------------------------------------------------"
     },
     {
       "module": "COMM",
@@ -2378,12 +2378,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Wrapper que delega en sub_0677.",
+      "description": "Wrapper delegating to sub_0677.",
       "confidence": "medium",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_06C8 -- offset 0x06C8 -- 11 instr\n; Wrapper que delega en sub_0677.\n; tags: wrapper\n; callers: CEVT\n; calls (intra): sub_0677\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_06C8 -- offset 0x06C8 -- 11 instr\n; Wrapper delegating to sub_0677.\n; tags: wrapper\n; callers: CEVT\n; calls (intra): sub_0677\n;----------------------------------------------------------------------"
     },
     {
       "module": "COMM",
@@ -2446,12 +2446,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Wrapper que delega en sub_0677.",
+      "description": "Wrapper delegating to sub_0677.",
       "confidence": "medium",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_06DE -- offset 0x06DE -- 13 instr\n; Wrapper que delega en sub_0677.\n; tags: wrapper\n; callers: CEVTGET\n; calls (intra): sub_0677\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_06DE -- offset 0x06DE -- 13 instr\n; Wrapper delegating to sub_0677.\n; tags: wrapper\n; callers: CEVTGET\n; calls (intra): sub_0677\n;----------------------------------------------------------------------"
     },
     {
       "module": "COMM",
@@ -2516,12 +2516,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Funcion mediana (31 instr, 1 calls).",
+      "description": "Mid-size function (31 instr, 1 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_06F6 -- offset 0x06F6 -- 31 instr\n; Funcion mediana (31 instr, 1 calls).\n; tags: medium\n; callers: STACOM\n; calls (intra): sub_0677\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_06F6 -- offset 0x06F6 -- 31 instr\n; Mid-size function (31 instr, 1 calls).\n; tags: medium\n; callers: STACOM\n; calls (intra): sub_0677\n;----------------------------------------------------------------------"
     },
     {
       "module": "COMM",
@@ -2565,12 +2565,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Stub trivial (2 instrucciones, sin logica significativa).",
+      "description": "Trivial stub (2 instructions, no significant logic).",
       "confidence": "low",
       "semantic_tags": [
         "trivial_stub"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0741 -- offset 0x0741 -- 2 instr\n; Stub trivial (2 instrucciones, sin logica significativa).\n; tags: trivial_stub\n; callers: CSETBRK\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0741 -- offset 0x0741 -- 2 instr\n; Trivial stub (2 instructions, no significant logic).\n; tags: trivial_stub\n; callers: CSETBRK\n;----------------------------------------------------------------------"
     },
     {
       "module": "COMM",
@@ -2637,12 +2637,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (19 instr).",
+      "description": "Unclassified function (19 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0746 -- offset 0x0746 -- 19 instr\n; Funcion sin clasificar definitiva (19 instr).\n; tags: small\n; callers: CCLRBRK\n; calls (intra): sub_0677\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0746 -- offset 0x0746 -- 19 instr\n; Unclassified function (19 instr).\n; tags: small\n; callers: CCLRBRK\n; calls (intra): sub_0677\n;----------------------------------------------------------------------"
     },
     {
       "module": "COMM",
@@ -2715,14 +2715,14 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (61 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (61 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
         "int_7",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_076C -- offset 0x076C -- 61 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (61 instr).\n; tags: complex_iterator, int_7, string_op\n; callers: CEXTFCN\n; calls (intra): sub_05E6, sub_0677\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_076C -- offset 0x076C -- 61 instr\n; Iterator with string ops (movsb/scasb/...) (61 instr).\n; tags: complex_iterator, int_7, string_op\n; callers: CEXTFCN\n; calls (intra): sub_05E6, sub_0677\n;----------------------------------------------------------------------"
     },
     {
       "module": "COMM",
@@ -2781,12 +2781,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Wrapper que delega en sub_0677.",
+      "description": "Wrapper delegating to sub_0677.",
       "confidence": "medium",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_07DE -- offset 0x07DE -- 9 instr\n; Wrapper que delega en sub_0677.\n; tags: wrapper\n; callers: GETDCB\n; calls (intra): sub_0677\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_07DE -- offset 0x07DE -- 9 instr\n; Wrapper delegating to sub_0677.\n; tags: wrapper\n; callers: GETDCB\n; calls (intra): sub_0677\n;----------------------------------------------------------------------"
     },
     {
       "module": "COMM",
@@ -2857,12 +2857,12 @@
       ],
       "fanout": 2,
       "fanin": 3,
-      "description": "Funcion mediana (57 instr, 2 calls).",
+      "description": "Mid-size function (57 instr, 2 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_07EE -- offset 0x07EE -- 57 instr\n; Funcion mediana (57 instr, 2 calls).\n; tags: medium\n; callers: RECCOM, sub_032D, sub_086F\n; calls (intra): sub_065D, sub_0677\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_07EE -- offset 0x07EE -- 57 instr\n; Mid-size function (57 instr, 2 calls).\n; tags: medium\n; callers: RECCOM, sub_032D, sub_086F\n; calls (intra): sub_065D, sub_0677\n;----------------------------------------------------------------------"
     },
     {
       "module": "COMM",
@@ -2933,12 +2933,12 @@
       ],
       "fanout": 3,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (217 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (217 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_086F -- offset 0x086F -- 217 instr\n; Dispatcher: tabla de decisiones cmp+jcc (217 instr).\n; tags: dispatcher\n; callers: CFLUSH\n; calls (intra): sub_065D, sub_0677, sub_07EE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_086F -- offset 0x086F -- 217 instr\n; Dispatcher: cmp+jcc decision table (217 instr).\n; tags: dispatcher\n; callers: CFLUSH\n; calls (intra): sub_065D, sub_0677, sub_07EE\n;----------------------------------------------------------------------"
     }
   ]
 }

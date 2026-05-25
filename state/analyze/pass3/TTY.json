@@ -87,13 +87,13 @@
       "callers": [],
       "fanout": 2,
       "fanin": 0,
-      "description": "Funcion compleja: 82 instrucciones, 2 llamadas, 4 branches.",
+      "description": "Complex function: 82 instructions, 2 calls, 4 branches.",
       "confidence": "low",
       "semantic_tags": [
         "calls_user",
         "complex"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0000 -- offset 0x0000 -- 82 instr\n; Funcion compleja: 82 instrucciones, 2 llamadas, 4 branches.\n; tags: calls_user, complex\n; calls (inter): USER.SETRECT, USER.SETRECTEMPTY\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0000 -- offset 0x0000 -- 82 instr\n; Complex function: 82 instructions, 2 calls, 4 branches.\n; tags: calls_user, complex\n; calls (inter): USER.SETRECT, USER.SETRECTEMPTY\n;----------------------------------------------------------------------"
     }
   ]
 }

@@ -75,13 +75,13 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (295 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (295 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0234 -- offset 0x0234 -- 295 instr\n; Dispatcher: tabla de decisiones cmp+jcc (295 instr).\n; tags: dispatcher, far\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0234 -- offset 0x0234 -- 295 instr\n; Dispatcher: cmp+jcc decision table (295 instr).\n; tags: dispatcher, far\n;----------------------------------------------------------------------"
     },
     {
       "module": "HP7550A",
@@ -150,12 +150,12 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (135 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (135 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_05B0 -- offset 0x05B0 -- 135 instr\n; Dispatcher: tabla de decisiones cmp+jcc (135 instr).\n; tags: dispatcher\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_05B0 -- offset 0x05B0 -- 135 instr\n; Dispatcher: cmp+jcc decision table (135 instr).\n; tags: dispatcher\n;----------------------------------------------------------------------"
     }
   ]
 }

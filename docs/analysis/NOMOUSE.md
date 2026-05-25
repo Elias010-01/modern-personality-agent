@@ -1,9 +1,9 @@
-# Modulo `NOMOUSE`
+# Module `NOMOUSE`
 
-- Funciones: **0**
+- Functions: **0**
 - Confidence: high=0, medium=0, low=0, unknown=0
 
-## Funciones
+## Functions
 
-| Offset | Nombre | Tipo | Instr | Descripcion | Conf |
-|--------|--------|------|-------|-------------|------|
+| Offset | Name | Kind | Instr | Description | Conf |
+|--------|------|------|-------|-------------|------|

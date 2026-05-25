@@ -76,13 +76,13 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (253 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (253 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0000 -- offset 0x0000 -- 253 instr\n; Dispatcher: tabla de decisiones cmp+jcc (253 instr).\n; tags: dispatcher, far\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0000 -- offset 0x0000 -- 253 instr\n; Dispatcher: cmp+jcc decision table (253 instr).\n; tags: dispatcher, far\n;----------------------------------------------------------------------"
     },
     {
       "module": "TI850",
@@ -141,13 +141,13 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (29 instr).",
+      "description": "Unclassified function (29 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "far",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0000 -- offset 0x0000 -- 29 instr\n; Funcion sin clasificar definitiva (29 instr).\n; tags: far, small\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0000 -- offset 0x0000 -- 29 instr\n; Unclassified function (29 instr).\n; tags: far, small\n;----------------------------------------------------------------------"
     },
     {
       "module": "TI850",
@@ -209,12 +209,12 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Funcion mediana (44 instr, 0 calls).",
+      "description": "Mid-size function (44 instr, 0 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_003B -- offset 0x003B -- 44 instr\n; Funcion mediana (44 instr, 0 calls).\n; tags: medium\n; callers: sub_0B1B, sub_0D10\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_003B -- offset 0x003B -- 44 instr\n; Mid-size function (44 instr, 0 calls).\n; tags: medium\n; callers: sub_0B1B, sub_0D10\n;----------------------------------------------------------------------"
     },
     {
       "module": "TI850",
@@ -325,14 +325,14 @@
       ],
       "fanout": 10,
       "fanin": 2,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (308 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (308 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_00AF -- offset 0x00AF -- 308 instr\n; Dispatcher: tabla de decisiones cmp+jcc (308 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_0B1B, sub_0D10\n; calls (intra): sub_03C3, sub_056B, sub_0627\n; calls (inter): KERNEL.FINDRESOURCE, KERNEL.FREERESOURCE, KERNEL.GETMODULEHANDLE, KERNEL.GLOBALUNLOCK, KERNEL.LOADRESOURCE, KERNEL.LOCKRESOURCE (+1 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_00AF -- offset 0x00AF -- 308 instr\n; Dispatcher: cmp+jcc decision table (308 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_0B1B, sub_0D10\n; calls (intra): sub_03C3, sub_056B, sub_0627\n; calls (inter): KERNEL.FINDRESOURCE, KERNEL.FREERESOURCE, KERNEL.GETMODULEHANDLE, KERNEL.GLOBALUNLOCK, KERNEL.LOADRESOURCE, KERNEL.LOCKRESOURCE (+1 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "TI850",
@@ -402,13 +402,13 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Funcion compleja: 132 instrucciones, 1 llamadas, 3 branches.",
+      "description": "Complex function: 132 instructions, 1 calls, 3 branches.",
       "confidence": "low",
       "semantic_tags": [
         "calls_kernel",
         "complex"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_03C3 -- offset 0x03C3 -- 132 instr\n; Funcion compleja: 132 instrucciones, 1 llamadas, 3 branches.\n; tags: calls_kernel, complex\n; callers: sub_00AF\n; calls (inter): KERNEL.LSTRCPY\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_03C3 -- offset 0x03C3 -- 132 instr\n; Complex function: 132 instructions, 1 calls, 3 branches.\n; tags: calls_kernel, complex\n; callers: sub_00AF\n; calls (inter): KERNEL.LSTRCPY\n;----------------------------------------------------------------------"
     },
     {
       "module": "TI850",
@@ -475,12 +475,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Funcion mediana (69 instr, 1 calls).",
+      "description": "Mid-size function (69 instr, 1 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_056B -- offset 0x056B -- 69 instr\n; Funcion mediana (69 instr, 1 calls).\n; tags: medium\n; callers: sub_00AF\n; calls (intra): sub_0627\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_056B -- offset 0x056B -- 69 instr\n; Mid-size function (69 instr, 1 calls).\n; tags: medium\n; callers: sub_00AF\n; calls (intra): sub_0627\n;----------------------------------------------------------------------"
     },
     {
       "module": "TI850",
@@ -564,14 +564,14 @@
       ],
       "fanout": 5,
       "fanin": 2,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (225 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (225 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0627 -- offset 0x0627 -- 225 instr\n; Dispatcher: tabla de decisiones cmp+jcc (225 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_00AF, sub_056B\n; calls (intra): sub_0878, sub_094E, sub_0B1B\n; calls (inter): KERNEL.GLOBALFREE, KERNEL.LSTRCMP\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0627 -- offset 0x0627 -- 225 instr\n; Dispatcher: cmp+jcc decision table (225 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_00AF, sub_056B\n; calls (intra): sub_0878, sub_094E, sub_0B1B\n; calls (inter): KERNEL.GLOBALFREE, KERNEL.LSTRCMP\n;----------------------------------------------------------------------"
     },
     {
       "module": "TI850",
@@ -657,14 +657,14 @@
       ],
       "fanout": 5,
       "fanin": 1,
-      "description": "Funcion mediana (74 instr, 5 calls).",
+      "description": "Mid-size function (74 instr, 5 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_gdi",
         "calls_kernel",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0878 -- offset 0x0878 -- 74 instr\n; Funcion mediana (74 instr, 5 calls).\n; tags: calls_gdi, calls_kernel, medium\n; callers: sub_0627\n; calls (intra): sub_0A7A\n; calls (inter): GDI.INSERTPQ, GDI.SIZEPQ, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0878 -- offset 0x0878 -- 74 instr\n; Mid-size function (74 instr, 5 calls).\n; tags: calls_gdi, calls_kernel, medium\n; callers: sub_0627\n; calls (intra): sub_0A7A\n; calls (inter): GDI.INSERTPQ, GDI.SIZEPQ, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK\n;----------------------------------------------------------------------"
     },
     {
       "module": "TI850",
@@ -745,13 +745,13 @@
       ],
       "fanout": 3,
       "fanin": 2,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (110 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (110 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_094E -- offset 0x094E -- 110 instr\n; Dispatcher: tabla de decisiones cmp+jcc (110 instr).\n; tags: calls_kernel, dispatcher\n; callers: sub_0627, sub_0D10\n; calls (inter): KERNEL.GLOBALALLOC, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_094E -- offset 0x094E -- 110 instr\n; Dispatcher: cmp+jcc decision table (110 instr).\n; tags: calls_kernel, dispatcher\n; callers: sub_0627, sub_0D10\n; calls (inter): KERNEL.GLOBALALLOC, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK\n;----------------------------------------------------------------------"
     },
     {
       "module": "TI850",
@@ -826,14 +826,14 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Funcion mediana (66 instr, 2 calls).",
+      "description": "Mid-size function (66 instr, 2 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_kernel",
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0A7A -- offset 0x0A7A -- 66 instr\n; Funcion mediana (66 instr, 2 calls).\n; tags: calls_kernel, far, medium\n; callers: sub_0878\n; calls (inter): KERNEL.GLOBALALLOC, KERNEL.GLOBALREALLOC\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0A7A -- offset 0x0A7A -- 66 instr\n; Mid-size function (66 instr, 2 calls).\n; tags: calls_kernel, far, medium\n; callers: sub_0878\n; calls (inter): KERNEL.GLOBALALLOC, KERNEL.GLOBALREALLOC\n;----------------------------------------------------------------------"
     },
     {
       "module": "TI850",
@@ -906,12 +906,12 @@
       ],
       "fanout": 3,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (177 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (177 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0B1B -- offset 0x0B1B -- 177 instr\n; Dispatcher: tabla de decisiones cmp+jcc (177 instr).\n; tags: dispatcher\n; callers: sub_0627\n; calls (intra): sub_003B, sub_00AF, sub_0D10\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0B1B -- offset 0x0B1B -- 177 instr\n; Dispatcher: cmp+jcc decision table (177 instr).\n; tags: dispatcher\n; callers: sub_0627\n; calls (intra): sub_003B, sub_00AF, sub_0D10\n;----------------------------------------------------------------------"
     },
     {
       "module": "TI850",
@@ -997,14 +997,14 @@
       ],
       "fanout": 6,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (209 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (209 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0D10 -- offset 0x0D10 -- 209 instr\n; Dispatcher: tabla de decisiones cmp+jcc (209 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_0B1B\n; calls (intra): sub_003B, sub_00AF, sub_094E, sub_0F4F, sub_0F89\n; calls (inter): KERNEL.GLOBALFREE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0D10 -- offset 0x0D10 -- 209 instr\n; Dispatcher: cmp+jcc decision table (209 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_0B1B\n; calls (intra): sub_003B, sub_00AF, sub_094E, sub_0F4F, sub_0F89\n; calls (inter): KERNEL.GLOBALFREE\n;----------------------------------------------------------------------"
     },
     {
       "module": "TI850",
@@ -1064,12 +1064,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (26 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (26 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0F4F -- offset 0x0F4F -- 26 instr\n; Dispatcher: tabla de decisiones cmp+jcc (26 instr).\n; tags: dispatcher\n; callers: sub_0D10\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0F4F -- offset 0x0F4F -- 26 instr\n; Dispatcher: cmp+jcc decision table (26 instr).\n; tags: dispatcher\n; callers: sub_0D10\n;----------------------------------------------------------------------"
     },
     {
       "module": "TI850",
@@ -1132,12 +1132,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion mediana (46 instr, 0 calls).",
+      "description": "Mid-size function (46 instr, 0 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0F89 -- offset 0x0F89 -- 46 instr\n; Funcion mediana (46 instr, 0 calls).\n; tags: medium\n; callers: sub_0D10\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0F89 -- offset 0x0F89 -- 46 instr\n; Mid-size function (46 instr, 0 calls).\n; tags: medium\n; callers: sub_0D10\n;----------------------------------------------------------------------"
     }
   ]
 }

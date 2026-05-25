@@ -1,10 +1,10 @@
-# Modulo `TTY`
+# Module `TTY`
 
-- Funciones: **1**
+- Functions: **1**
 - Confidence: high=0, medium=0, low=1, unknown=0
 
-## Funciones
+## Functions
 
-| Offset | Nombre | Tipo | Instr | Descripcion | Conf |
-|--------|--------|------|-------|-------------|------|
-| `0x0000` | `sub_0000` | NEAR | 82 | Funcion compleja: 82 instrucciones, 2 llamadas, 4 branches. | low |
+| Offset | Name | Kind | Instr | Description | Conf |
+|--------|------|------|-------|-------------|------|
+| `0x0000` | `sub_0000` | NEAR | 82 | Complex function: 82 instructions, 2 calls, 4 branches. | low |

@@ -1,0 +1,157 @@
+{
+  "module": "HPLASERP",
+  "num_functions": 2,
+  "intra_edges": [],
+  "inter_edges": [
+    [
+      "sub_0039",
+      "GDI",
+      "STARTSPOOLPAGE"
+    ],
+    [
+      "sub_0039",
+      "USER",
+      "SETRECT"
+    ]
+  ],
+  "external_modules": [
+    "GDI",
+    "USER"
+  ],
+  "functions": [
+    {
+      "module": "HPLASERP",
+      "segment_file": "seg1.asm",
+      "name": "sub_0000",
+      "kind": "NEAR",
+      "offset": 0,
+      "size_bytes": null,
+      "start_line": 14,
+      "end_line": 42,
+      "num_instructions": 25,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 3,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 13,
+      "mnemonic_histogram": {
+        "mov": 9,
+        "sub": 6,
+        "push": 2,
+        "jns": 2,
+        "pop": 2,
+        "lds": 1,
+        "xor": 1,
+        "jle": 1,
+        "ret": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "push ds",
+        "lds bx, ptr [bp + 8]",
+        "mov cx, word ptr [bp + 6]",
+        "mov dx, word ptr [bp + 4]"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "mov sp, bp",
+        "pop bp",
+        "ret 8"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 0,
+      "fanin": 0
+    },
+    {
+      "module": "HPLASERP",
+      "segment_file": "seg1.asm",
+      "name": "sub_0039",
+      "kind": "NEAR",
+      "offset": 57,
+      "size_bytes": null,
+      "start_line": 43,
+      "end_line": 267,
+      "num_instructions": 215,
+      "prologue": "standard_bp",
+      "epilogue": "jmp_tail",
+      "calls_near": [
+        "L_05F6",
+        "L_0EE0",
+        "L_0FCA"
+      ],
+      "calls_far": [
+        "far GDI.STARTSPOOLPAGE",
+        "far USER.SETRECT"
+      ],
+      "num_jumps_cond": 8,
+      "num_jumps_uncond": 7,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 89,
+      "mnemonic_histogram": {
+        "push": 73,
+        "mov": 67,
+        "call": 14,
+        "les": 12,
+        "sub": 7,
+        "cmp": 7,
+        "jmp": 7,
+        "pop": 5,
+        "jne": 4,
+        "inc": 3,
+        "je": 3,
+        "or": 2,
+        "lds": 1,
+        "cld": 1,
+        "rep": 1
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "push si",
+        "push di",
+        "push ds",
+        "mov cx, word ptr [bp + 4]"
+      ],
+      "last_instructions": [
+        "les bx, ptr [bp + 0x10]",
+        "cmp word ptr es:[bx + 0x30], 1",
+        "jne L_0268",
+        "push word ptr es:[bx + 0x2e]"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [
+        {
+          "module": "GDI",
+          "func": "STARTSPOOLPAGE"
+        },
+        {
+          "module": "USER",
+          "func": "SETRECT"
+        }
+      ],
+      "callees_unresolved": [
+        "L_05F6",
+        "L_0EE0",
+        "L_0FCA"
+      ],
+      "callers": [],
+      "fanout": 2,
+      "fanin": 0
+    }
+  ]
+}

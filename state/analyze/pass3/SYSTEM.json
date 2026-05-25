@@ -70,14 +70,14 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Interrupt Service Routine (262 instrucciones, posible manejador de INT).",
+      "description": "Interrupt service routine (262 instructions, likely INT handler).",
       "confidence": "medium",
       "semantic_tags": [
         "int_21",
         "isr",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_018D -- offset 0x018D -- 262 instr\n; Interrupt Service Routine (262 instrucciones, posible manejador de INT).\n; tags: int_21, isr, string_op\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_018D -- offset 0x018D -- 262 instr\n; Interrupt service routine (262 instructions, likely INT handler).\n; tags: int_21, isr, string_op\n;----------------------------------------------------------------------"
     },
     {
       "module": "SYSTEM",
@@ -133,14 +133,14 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Llama a servicios DOS via INT 21h (17 instr).",
+      "description": "Calls DOS services via INT 21h (17 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "far",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; ENABLESYSTEMTIMERS -- 17 instr\n; Llama a servicios DOS via INT 21h (17 instr).\n; tags: dos_caller, far, int_21\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; ENABLESYSTEMTIMERS -- 17 instr\n; Calls DOS services via INT 21h (17 instr).\n; tags: dos_caller, far, int_21\n;----------------------------------------------------------------------"
     },
     {
       "module": "SYSTEM",
@@ -196,14 +196,14 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Llama a servicios DOS via INT 21h (10 instr).",
+      "description": "Calls DOS services via INT 21h (10 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "far",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; DISABLESYSTEMTIMERS -- 10 instr\n; Llama a servicios DOS via INT 21h (10 instr).\n; tags: dos_caller, far, int_21\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; DISABLESYSTEMTIMERS -- 10 instr\n; Calls DOS services via INT 21h (10 instr).\n; tags: dos_caller, far, int_21\n;----------------------------------------------------------------------"
     },
     {
       "module": "SYSTEM",
@@ -264,13 +264,13 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Constructor: crea systemtimer.",
+      "description": "Constructor: creates systemtimer.",
       "confidence": "medium",
       "semantic_tags": [
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; CREATESYSTEMTIMER -- 35 instr\n; Constructor: crea systemtimer.\n; tags: far, medium\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; CREATESYSTEMTIMER -- 35 instr\n; Constructor: creates systemtimer.\n; tags: far, medium\n;----------------------------------------------------------------------"
     },
     {
       "module": "SYSTEM",
@@ -331,14 +331,14 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (34 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (34 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "far",
         "iterator",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; KILLSYSTEMTIMER -- 34 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (34 instr).\n; tags: far, iterator, string_op\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; KILLSYSTEMTIMER -- 34 instr\n; Iterator with string ops (movsb/scasb/...) (34 instr).\n; tags: far, iterator, string_op\n;----------------------------------------------------------------------"
     },
     {
       "module": "SYSTEM",
@@ -382,13 +382,13 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Stub trivial (3 instrucciones, sin logica significativa).",
+      "description": "Trivial stub (3 instructions, no significant logic).",
       "confidence": "low",
       "semantic_tags": [
         "far",
         "trivial_stub"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; INQUIRELONGINTS -- 3 instr\n; Stub trivial (3 instrucciones, sin logica significativa).\n; tags: far, trivial_stub\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; INQUIRELONGINTS -- 3 instr\n; Trivial stub (3 instructions, no significant logic).\n; tags: far, trivial_stub\n;----------------------------------------------------------------------"
     }
   ]
 }

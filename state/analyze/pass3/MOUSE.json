@@ -75,13 +75,13 @@
       "callers": [],
       "fanout": 2,
       "fanin": 0,
-      "description": "Funcion mediana (34 instr, 2 calls).",
+      "description": "Mid-size function (34 instr, 2 calls).",
       "confidence": "low",
       "semantic_tags": [
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; entry -- 34 instr\n; Funcion mediana (34 instr, 2 calls).\n; tags: far, medium\n; calls (intra): sub_010B, sub_024D\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; entry -- 34 instr\n; Mid-size function (34 instr, 2 calls).\n; tags: far, medium\n; calls (intra): sub_010B, sub_024D\n;----------------------------------------------------------------------"
     },
     {
       "module": "MOUSE",
@@ -144,13 +144,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Iterador con bucle (127 instr).",
+      "description": "Iterator with loop (127 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
         "loop"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_010B -- offset 0x010B -- 127 instr\n; Iterador con bucle (127 instr).\n; tags: complex_iterator, loop\n; callers: entry\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_010B -- offset 0x010B -- 127 instr\n; Iterator with loop (127 instr).\n; tags: complex_iterator, loop\n; callers: entry\n;----------------------------------------------------------------------"
     },
     {
       "module": "MOUSE",
@@ -220,12 +220,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Interrupt Service Routine (118 instrucciones, posible manejador de INT).",
+      "description": "Interrupt service routine (118 instructions, likely INT handler).",
       "confidence": "medium",
       "semantic_tags": [
         "isr"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_024D -- offset 0x024D -- 118 instr\n; Interrupt Service Routine (118 instrucciones, posible manejador de INT).\n; tags: isr\n; callers: entry\n; calls (intra): sub_034C\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_024D -- offset 0x024D -- 118 instr\n; Interrupt service routine (118 instructions, likely INT handler).\n; tags: isr\n; callers: entry\n; calls (intra): sub_034C\n;----------------------------------------------------------------------"
     },
     {
       "module": "MOUSE",
@@ -288,13 +288,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Iterador con bucle (61 instr).",
+      "description": "Iterator with loop (61 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
         "loop"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_034C -- offset 0x034C -- 61 instr\n; Iterador con bucle (61 instr).\n; tags: complex_iterator, loop\n; callers: sub_024D\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_034C -- offset 0x034C -- 61 instr\n; Iterator with loop (61 instr).\n; tags: complex_iterator, loop\n; callers: sub_024D\n;----------------------------------------------------------------------"
     },
     {
       "module": "MOUSE",
@@ -350,13 +350,13 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (23 instr).",
+      "description": "Unclassified function (23 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "far",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; INQUIRE -- 23 instr\n; Funcion sin clasificar definitiva (23 instr).\n; tags: far, small\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; INQUIRE -- 23 instr\n; Unclassified function (23 instr).\n; tags: far, small\n;----------------------------------------------------------------------"
     },
     {
       "module": "MOUSE",
@@ -416,13 +416,13 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (22 instr).",
+      "description": "Unclassified function (22 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "far",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; ENABLE -- 22 instr\n; Funcion sin clasificar definitiva (22 instr).\n; tags: far, small\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; ENABLE -- 22 instr\n; Unclassified function (22 instr).\n; tags: far, small\n;----------------------------------------------------------------------"
     },
     {
       "module": "MOUSE",
@@ -493,13 +493,13 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Llama a servicios DOS via INT 21h (29 instr).",
+      "description": "Calls DOS services via INT 21h (29 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0056 -- offset 0x0056 -- 29 instr\n; Llama a servicios DOS via INT 21h (29 instr).\n; tags: dos_caller, int_21\n; calls (intra): sub_010C\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0056 -- offset 0x0056 -- 29 instr\n; Calls DOS services via INT 21h (29 instr).\n; tags: dos_caller, int_21\n; calls (intra): sub_010C\n;----------------------------------------------------------------------"
     },
     {
       "module": "MOUSE",
@@ -557,13 +557,13 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (11 instr).",
+      "description": "Unclassified function (11 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "far",
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_00A0 -- offset 0x00A0 -- 11 instr\n; Funcion sin clasificar definitiva (11 instr).\n; tags: far, wrapper\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_00A0 -- offset 0x00A0 -- 11 instr\n; Unclassified function (11 instr).\n; tags: far, wrapper\n;----------------------------------------------------------------------"
     },
     {
       "module": "MOUSE",
@@ -626,14 +626,14 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Llama a servicios DOS via INT 21h (34 instr).",
+      "description": "Calls DOS services via INT 21h (34 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "far",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; DISABLE -- 34 instr\n; Llama a servicios DOS via INT 21h (34 instr).\n; tags: dos_caller, far, int_21\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; DISABLE -- 34 instr\n; Calls DOS services via INT 21h (34 instr).\n; tags: dos_caller, far, int_21\n;----------------------------------------------------------------------"
     },
     {
       "module": "MOUSE",
@@ -691,13 +691,13 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (11 instr).",
+      "description": "Unclassified function (11 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "far",
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_00FC -- offset 0x00FC -- 11 instr\n; Funcion sin clasificar definitiva (11 instr).\n; tags: far, wrapper\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_00FC -- offset 0x00FC -- 11 instr\n; Unclassified function (11 instr).\n; tags: far, wrapper\n;----------------------------------------------------------------------"
     },
     {
       "module": "MOUSE",
@@ -760,7 +760,7 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (94 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (94 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
@@ -768,7 +768,7 @@
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_010C -- offset 0x010C -- 94 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (94 instr).\n; tags: complex_iterator, far, loop, string_op\n; callers: sub_0056\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_010C -- offset 0x010C -- 94 instr\n; Iterator with string ops (movsb/scasb/...) (94 instr).\n; tags: complex_iterator, far, loop, string_op\n; callers: sub_0056\n;----------------------------------------------------------------------"
     }
   ]
 }

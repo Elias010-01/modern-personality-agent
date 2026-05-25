@@ -1,0 +1,1227 @@
+{
+  "module": "EPSONMX",
+  "num_functions": 14,
+  "intra_edges": [
+    [
+      "sub_00AF",
+      "sub_03C3"
+    ],
+    [
+      "sub_00AF",
+      "sub_056B"
+    ],
+    [
+      "sub_00AF",
+      "sub_0627"
+    ],
+    [
+      "sub_056B",
+      "sub_0627"
+    ],
+    [
+      "sub_0627",
+      "sub_089A"
+    ],
+    [
+      "sub_0627",
+      "sub_0970"
+    ],
+    [
+      "sub_0627",
+      "sub_0B3D"
+    ],
+    [
+      "sub_089A",
+      "sub_0A9C"
+    ],
+    [
+      "sub_0B3D",
+      "sub_003B"
+    ],
+    [
+      "sub_0B3D",
+      "sub_00AF"
+    ],
+    [
+      "sub_0B3D",
+      "sub_0D4A"
+    ],
+    [
+      "sub_0D4A",
+      "sub_003B"
+    ],
+    [
+      "sub_0D4A",
+      "sub_00AF"
+    ],
+    [
+      "sub_0D4A",
+      "sub_0970"
+    ],
+    [
+      "sub_0D4A",
+      "sub_0FBA"
+    ],
+    [
+      "sub_0D4A",
+      "sub_0FF4"
+    ]
+  ],
+  "inter_edges": [
+    [
+      "sub_0000",
+      "GDI",
+      "STARTSPOOLPAGE"
+    ],
+    [
+      "sub_0000",
+      "USER",
+      "SETRECT"
+    ],
+    [
+      "sub_0000",
+      "USER",
+      "SETRECTEMPTY"
+    ],
+    [
+      "sub_00AF",
+      "KERNEL",
+      "FINDRESOURCE"
+    ],
+    [
+      "sub_00AF",
+      "KERNEL",
+      "FREERESOURCE"
+    ],
+    [
+      "sub_00AF",
+      "KERNEL",
+      "GETMODULEHANDLE"
+    ],
+    [
+      "sub_00AF",
+      "KERNEL",
+      "GLOBALUNLOCK"
+    ],
+    [
+      "sub_00AF",
+      "KERNEL",
+      "LOADRESOURCE"
+    ],
+    [
+      "sub_00AF",
+      "KERNEL",
+      "LOCKRESOURCE"
+    ],
+    [
+      "sub_00AF",
+      "KERNEL",
+      "SIZEOFRESOURCE"
+    ],
+    [
+      "sub_03C3",
+      "KERNEL",
+      "LSTRCPY"
+    ],
+    [
+      "sub_0627",
+      "KERNEL",
+      "GLOBALFREE"
+    ],
+    [
+      "sub_0627",
+      "KERNEL",
+      "LSTRCMP"
+    ],
+    [
+      "sub_089A",
+      "GDI",
+      "INSERTPQ"
+    ],
+    [
+      "sub_089A",
+      "GDI",
+      "SIZEPQ"
+    ],
+    [
+      "sub_089A",
+      "KERNEL",
+      "GLOBALLOCK"
+    ],
+    [
+      "sub_089A",
+      "KERNEL",
+      "GLOBALUNLOCK"
+    ],
+    [
+      "sub_0970",
+      "KERNEL",
+      "GLOBALALLOC"
+    ],
+    [
+      "sub_0970",
+      "KERNEL",
+      "GLOBALLOCK"
+    ],
+    [
+      "sub_0970",
+      "KERNEL",
+      "GLOBALUNLOCK"
+    ],
+    [
+      "sub_0A9C",
+      "KERNEL",
+      "GLOBALALLOC"
+    ],
+    [
+      "sub_0A9C",
+      "KERNEL",
+      "GLOBALREALLOC"
+    ],
+    [
+      "sub_0D4A",
+      "KERNEL",
+      "GLOBALFREE"
+    ]
+  ],
+  "external_modules": [
+    "GDI",
+    "KERNEL",
+    "USER"
+  ],
+  "functions": [
+    {
+      "module": "EPSONMX",
+      "segment_file": "seg1.asm",
+      "name": "sub_0000",
+      "kind": "FAR",
+      "offset": 0,
+      "size_bytes": null,
+      "start_line": 14,
+      "end_line": 292,
+      "num_instructions": 255,
+      "prologue": "standard_bp",
+      "epilogue": "jmp_tail",
+      "calls_near": [
+        "L_044D",
+        "L_0840",
+        "L_098F",
+        "L_0AD7"
+      ],
+      "calls_far": [
+        "far GDI.STARTSPOOLPAGE",
+        "far USER.SETRECT",
+        "far USER.SETRECTEMPTY"
+      ],
+      "num_jumps_cond": 19,
+      "num_jumps_uncond": 11,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 101,
+      "mnemonic_histogram": {
+        "push": 66,
+        "mov": 60,
+        "les": 18,
+        "sub": 16,
+        "call": 13,
+        "jmp": 11,
+        "cmp": 9,
+        "pop": 8,
+        "nop": 7,
+        "je": 7,
+        "jne": 7,
+        "inc": 5,
+        "add": 4,
+        "test": 4,
+        "or": 3
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "push ds",
+        "lds bx, ptr [bp + 8]",
+        "mov cx, word ptr [bp + 6]",
+        "mov dx, word ptr [bp + 4]"
+      ],
+      "last_instructions": [
+        "les bx, ptr [bp + 0x10]",
+        "cmp word ptr es:[bx + 0x32], 1",
+        "jne L_028C",
+        "push word ptr es:[bx + 0x2e]"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 0,
+      "fanin": 0
+    },
+    {
+      "module": "EPSONMX",
+      "segment_file": "seg2.asm",
+      "name": "sub_0000",
+      "kind": "FAR",
+      "offset": 0,
+      "size_bytes": null,
+      "start_line": 14,
+      "end_line": 45,
+      "num_instructions": 29,
+      "prologue": "saves_regs",
+      "epilogue": "retf_n",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 1,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 6,
+      "mnemonic_histogram": {
+        "mov": 8,
+        "push": 4,
+        "pop": 4,
+        "sub": 4,
+        "nop": 1,
+        "inc": 1,
+        "cmp": 1,
+        "jb": 1,
+        "shl": 1,
+        "and": 1,
+        "jmp": 1,
+        "dec": 1,
+        "retf": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "push ds",
+        "pop ax",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 4"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 0,
+      "fanin": 0
+    },
+    {
+      "module": "EPSONMX",
+      "segment_file": "seg2.asm",
+      "name": "sub_003B",
+      "kind": "NEAR",
+      "offset": 59,
+      "size_bytes": null,
+      "start_line": 46,
+      "end_line": 93,
+      "num_instructions": 44,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [],
+      "calls_far": [
+        "far _entry_106"
+      ],
+      "num_jumps_cond": 4,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 20,
+      "mnemonic_histogram": {
+        "push": 16,
+        "mov": 8,
+        "les": 4,
+        "cmp": 3,
+        "sub": 3,
+        "call": 3,
+        "je": 3,
+        "jl": 1,
+        "test": 1,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "les bx, ptr [bp + 4]",
+        "cmp word ptr es:[bx + 8], 0x258",
+        "jl L_005F",
+        "push word ptr [bp + 0xa]"
+      ],
+      "last_instructions": [
+        "call far _entry_106",
+        "mov sp, bp",
+        "pop bp",
+        "ret 8"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0B3D",
+        "sub_0D4A"
+      ],
+      "fanout": 0,
+      "fanin": 2
+    },
+    {
+      "module": "EPSONMX",
+      "segment_file": "seg2.asm",
+      "name": "sub_00AF",
+      "kind": "FAR",
+      "offset": 175,
+      "size_bytes": null,
+      "start_line": 94,
+      "end_line": 431,
+      "num_instructions": 308,
+      "prologue": "standard_bp",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_03C3",
+        "L_056B",
+        "L_0627"
+      ],
+      "calls_far": [
+        "far KERNEL.FINDRESOURCE",
+        "far KERNEL.FREERESOURCE",
+        "far KERNEL.GETMODULEHANDLE",
+        "far KERNEL.GLOBALUNLOCK",
+        "far KERNEL.LOADRESOURCE",
+        "far KERNEL.LOCKRESOURCE",
+        "far KERNEL.SIZEOFRESOURCE",
+        "far _entry_105",
+        "far _entry_106"
+      ],
+      "num_jumps_cond": 27,
+      "num_jumps_uncond": 8,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 129,
+      "mnemonic_histogram": {
+        "mov": 82,
+        "push": 68,
+        "je": 17,
+        "call": 16,
+        "les": 14,
+        "cmp": 14,
+        "or": 13,
+        "sub": 11,
+        "add": 10,
+        "pop": 8,
+        "jmp": 8,
+        "inc": 6,
+        "cwde": 6,
+        "shl": 6,
+        "lea": 5
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "les bx, ptr [bp + 4]",
+        "cmp word ptr es:[bx + 8], 0x258",
+        "jle L_00D3",
+        "push word ptr [bp + 0xa]"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 0x10"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_03C3",
+        "sub_056B",
+        "sub_0627"
+      ],
+      "callees_inter": [
+        {
+          "module": "KERNEL",
+          "func": "FINDRESOURCE"
+        },
+        {
+          "module": "KERNEL",
+          "func": "FREERESOURCE"
+        },
+        {
+          "module": "KERNEL",
+          "func": "GETMODULEHANDLE"
+        },
+        {
+          "module": "KERNEL",
+          "func": "GLOBALUNLOCK"
+        },
+        {
+          "module": "KERNEL",
+          "func": "LOADRESOURCE"
+        },
+        {
+          "module": "KERNEL",
+          "func": "LOCKRESOURCE"
+        },
+        {
+          "module": "KERNEL",
+          "func": "SIZEOFRESOURCE"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0B3D",
+        "sub_0D4A"
+      ],
+      "fanout": 10,
+      "fanin": 2
+    },
+    {
+      "module": "EPSONMX",
+      "segment_file": "seg2.asm",
+      "name": "sub_03C3",
+      "kind": "NEAR",
+      "offset": 963,
+      "size_bytes": null,
+      "start_line": 432,
+      "end_line": 570,
+      "num_instructions": 132,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [],
+      "calls_far": [
+        "far KERNEL.LSTRCPY"
+      ],
+      "num_jumps_cond": 3,
+      "num_jumps_uncond": 5,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 83,
+      "mnemonic_histogram": {
+        "mov": 89,
+        "cwde": 9,
+        "push": 7,
+        "jmp": 5,
+        "cmp": 3,
+        "les": 3,
+        "pop": 3,
+        "shl": 2,
+        "or": 2,
+        "jne": 2,
+        "sub": 1,
+        "lea": 1,
+        "imul": 1,
+        "je": 1,
+        "add": 1
+      },
+      "classification": "complex",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 6",
+        "push di",
+        "push si",
+        "mov bx, word ptr [bp + 0xa]"
+      ],
+      "last_instructions": [
+        "pop di",
+        "mov sp, bp",
+        "pop bp",
+        "ret 8"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [
+        {
+          "module": "KERNEL",
+          "func": "LSTRCPY"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_00AF"
+      ],
+      "fanout": 1,
+      "fanin": 1
+    },
+    {
+      "module": "EPSONMX",
+      "segment_file": "seg2.asm",
+      "name": "sub_056B",
+      "kind": "NEAR",
+      "offset": 1387,
+      "size_bytes": null,
+      "start_line": 571,
+      "end_line": 647,
+      "num_instructions": 69,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [
+        "L_0627"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 5,
+      "num_jumps_uncond": 2,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 34,
+      "mnemonic_histogram": {
+        "mov": 25,
+        "les": 15,
+        "push": 4,
+        "jne": 4,
+        "or": 3,
+        "and": 2,
+        "jmp": 2,
+        "sub": 2,
+        "pop": 2,
+        "cmp": 1,
+        "shr": 1,
+        "jle": 1,
+        "neg": 1,
+        "cdq": 1,
+        "idiv": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "push si",
+        "les bx, ptr [bp + 8]",
+        "mov al, byte ptr es:[bx + 0x11]",
+        "and al, 0xf"
+      ],
+      "last_instructions": [
+        "pop si",
+        "mov sp, bp",
+        "pop bp",
+        "ret 0xa"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0627"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_00AF"
+      ],
+      "fanout": 1,
+      "fanin": 1
+    },
+    {
+      "module": "EPSONMX",
+      "segment_file": "seg2.asm",
+      "name": "sub_0627",
+      "kind": "FAR",
+      "offset": 1575,
+      "size_bytes": null,
+      "start_line": 648,
+      "end_line": 909,
+      "num_instructions": 237,
+      "prologue": "standard_bp",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_089A",
+        "L_0970",
+        "L_0B3D"
+      ],
+      "calls_far": [
+        "far KERNEL.GLOBALFREE",
+        "far KERNEL.LSTRCMP"
+      ],
+      "num_jumps_cond": 19,
+      "num_jumps_uncond": 10,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 128,
+      "mnemonic_histogram": {
+        "push": 78,
+        "mov": 52,
+        "cmp": 16,
+        "les": 13,
+        "call": 11,
+        "jmp": 10,
+        "sub": 7,
+        "jne": 7,
+        "pop": 6,
+        "inc": 5,
+        "or": 3,
+        "jl": 3,
+        "jle": 3,
+        "je": 3,
+        "add": 3
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 2",
+        "mov word ptr [bp - 2], 0",
+        "push word ptr [bp + 6]",
+        "push word ptr [bp + 4]"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 0x1e"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_089A",
+        "sub_0970",
+        "sub_0B3D"
+      ],
+      "callees_inter": [
+        {
+          "module": "KERNEL",
+          "func": "GLOBALFREE"
+        },
+        {
+          "module": "KERNEL",
+          "func": "LSTRCMP"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_00AF",
+        "sub_056B"
+      ],
+      "fanout": 5,
+      "fanin": 2
+    },
+    {
+      "module": "EPSONMX",
+      "segment_file": "seg2.asm",
+      "name": "sub_089A",
+      "kind": "NEAR",
+      "offset": 2202,
+      "size_bytes": null,
+      "start_line": 910,
+      "end_line": 989,
+      "num_instructions": 74,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [
+        "L_0A9C"
+      ],
+      "calls_far": [
+        "far GDI.INSERTPQ",
+        "far GDI.SIZEPQ",
+        "far KERNEL.GLOBALLOCK",
+        "far KERNEL.GLOBALUNLOCK",
+        "far _entry_105"
+      ],
+      "num_jumps_cond": 3,
+      "num_jumps_uncond": 2,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 39,
+      "mnemonic_histogram": {
+        "mov": 22,
+        "push": 20,
+        "les": 9,
+        "call": 8,
+        "inc": 3,
+        "jne": 3,
+        "add": 3,
+        "sub": 2,
+        "jmp": 2,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 8",
+        "les bx, ptr [bp + 0xa]",
+        "mov ax, word ptr es:[bx + 0x30]",
+        "mov word ptr [bp - 6], ax"
+      ],
+      "last_instructions": [
+        "mov ax, word ptr [bp + 4]",
+        "mov sp, bp",
+        "pop bp",
+        "ret 0xa"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0A9C"
+      ],
+      "callees_inter": [
+        {
+          "module": "GDI",
+          "func": "INSERTPQ"
+        },
+        {
+          "module": "GDI",
+          "func": "SIZEPQ"
+        },
+        {
+          "module": "KERNEL",
+          "func": "GLOBALLOCK"
+        },
+        {
+          "module": "KERNEL",
+          "func": "GLOBALUNLOCK"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0627"
+      ],
+      "fanout": 5,
+      "fanin": 1
+    },
+    {
+      "module": "EPSONMX",
+      "segment_file": "seg2.asm",
+      "name": "sub_0970",
+      "kind": "NEAR",
+      "offset": 2416,
+      "size_bytes": null,
+      "start_line": 990,
+      "end_line": 1113,
+      "num_instructions": 110,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [],
+      "calls_far": [
+        "far KERNEL.GLOBALALLOC",
+        "far KERNEL.GLOBALLOCK",
+        "far KERNEL.GLOBALUNLOCK"
+      ],
+      "num_jumps_cond": 11,
+      "num_jumps_uncond": 5,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 64,
+      "mnemonic_histogram": {
+        "mov": 44,
+        "push": 10,
+        "les": 10,
+        "cmp": 9,
+        "sub": 5,
+        "jmp": 5,
+        "jb": 4,
+        "inc": 4,
+        "call": 4,
+        "jne": 3,
+        "or": 2,
+        "pop": 2,
+        "add": 1,
+        "jge": 1,
+        "ja": 1
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 0x12",
+        "push si",
+        "les bx, ptr [bp + 4]",
+        "mov ax, word ptr es:[bx + 0x23]"
+      ],
+      "last_instructions": [
+        "pop si",
+        "mov sp, bp",
+        "pop bp",
+        "ret 0xa"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [
+        {
+          "module": "KERNEL",
+          "func": "GLOBALALLOC"
+        },
+        {
+          "module": "KERNEL",
+          "func": "GLOBALLOCK"
+        },
+        {
+          "module": "KERNEL",
+          "func": "GLOBALUNLOCK"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0627",
+        "sub_0D4A"
+      ],
+      "fanout": 3,
+      "fanin": 2
+    },
+    {
+      "module": "EPSONMX",
+      "segment_file": "seg2.asm",
+      "name": "sub_0A9C",
+      "kind": "FAR",
+      "offset": 2716,
+      "size_bytes": null,
+      "start_line": 1114,
+      "end_line": 1184,
+      "num_instructions": 66,
+      "prologue": "standard_bp",
+      "epilogue": "retf_n",
+      "calls_near": [],
+      "calls_far": [
+        "far KERNEL.GLOBALALLOC",
+        "far KERNEL.GLOBALREALLOC"
+      ],
+      "num_jumps_cond": 3,
+      "num_jumps_uncond": 2,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 17,
+      "mnemonic_histogram": {
+        "mov": 19,
+        "push": 13,
+        "pop": 6,
+        "sub": 4,
+        "les": 4,
+        "add": 3,
+        "cdq": 2,
+        "call": 2,
+        "or": 2,
+        "jne": 2,
+        "jmp": 2,
+        "cmp": 1,
+        "jl": 1,
+        "ret": 1,
+        "nop": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 2",
+        "push di",
+        "push si",
+        "les bx, ptr [bp + 6]"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 4"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [
+        {
+          "module": "KERNEL",
+          "func": "GLOBALALLOC"
+        },
+        {
+          "module": "KERNEL",
+          "func": "GLOBALREALLOC"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_089A"
+      ],
+      "fanout": 2,
+      "fanin": 1
+    },
+    {
+      "module": "EPSONMX",
+      "segment_file": "seg2.asm",
+      "name": "sub_0B3D",
+      "kind": "NEAR",
+      "offset": 2877,
+      "size_bytes": null,
+      "start_line": 1185,
+      "end_line": 1386,
+      "num_instructions": 183,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [
+        "L_003B",
+        "L_00AF",
+        "L_0D4A"
+      ],
+      "calls_far": [
+        "far _entry_106"
+      ],
+      "num_jumps_cond": 16,
+      "num_jumps_uncond": 7,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 115,
+      "mnemonic_histogram": {
+        "mov": 59,
+        "push": 30,
+        "les": 16,
+        "cmp": 12,
+        "sub": 9,
+        "je": 8,
+        "add": 8,
+        "jmp": 7,
+        "call": 6,
+        "jne": 5,
+        "cwde": 3,
+        "shl": 3,
+        "inc": 3,
+        "or": 2,
+        "test": 2
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 0x1a",
+        "push si",
+        "cmp word ptr [bp + 0x10], 0",
+        "jle L_0B4F"
+      ],
+      "last_instructions": [
+        "pop si",
+        "mov sp, bp",
+        "pop bp",
+        "ret 0x16"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_003B",
+        "sub_00AF",
+        "sub_0D4A"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0627"
+      ],
+      "fanout": 3,
+      "fanin": 1
+    },
+    {
+      "module": "EPSONMX",
+      "segment_file": "seg2.asm",
+      "name": "sub_0D4A",
+      "kind": "FAR",
+      "offset": 3402,
+      "size_bytes": null,
+      "start_line": 1387,
+      "end_line": 1636,
+      "num_instructions": 227,
+      "prologue": "standard_bp",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_003B",
+        "L_00AF",
+        "L_0970",
+        "L_0FBA",
+        "L_0FF4"
+      ],
+      "calls_far": [
+        "far KERNEL.GLOBALFREE",
+        "far _entry_106",
+        "far _entry_107",
+        "far _entry_108",
+        "far _entry_11"
+      ],
+      "num_jumps_cond": 19,
+      "num_jumps_uncond": 9,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 117,
+      "mnemonic_histogram": {
+        "push": 76,
+        "mov": 47,
+        "call": 15,
+        "cmp": 13,
+        "sub": 9,
+        "jmp": 9,
+        "les": 9,
+        "je": 8,
+        "jne": 6,
+        "or": 4,
+        "add": 4,
+        "pop": 4,
+        "dec": 3,
+        "jge": 2,
+        "test": 2
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 2",
+        "push word ptr [bp + 0xc]",
+        "push word ptr [bp + 0xa]",
+        "lea ax, [bp + 8]"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 0x1e"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_003B",
+        "sub_00AF",
+        "sub_0970",
+        "sub_0FBA",
+        "sub_0FF4"
+      ],
+      "callees_inter": [
+        {
+          "module": "KERNEL",
+          "func": "GLOBALFREE"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0B3D"
+      ],
+      "fanout": 6,
+      "fanin": 1
+    },
+    {
+      "module": "EPSONMX",
+      "segment_file": "seg2.asm",
+      "name": "sub_0FBA",
+      "kind": "NEAR",
+      "offset": 4026,
+      "size_bytes": null,
+      "start_line": 1637,
+      "end_line": 1668,
+      "num_instructions": 26,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 4,
+      "num_jumps_uncond": 2,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 8,
+      "mnemonic_histogram": {
+        "cmp": 4,
+        "inc": 4,
+        "mov": 3,
+        "push": 2,
+        "sub": 2,
+        "jmp": 2,
+        "les": 2,
+        "jg": 2,
+        "pop": 2,
+        "je": 1,
+        "jne": 1,
+        "ret": 1
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 2",
+        "push si",
+        "sub si, si",
+        "jmp L_0FD2"
+      ],
+      "last_instructions": [
+        "pop si",
+        "mov sp, bp",
+        "pop bp",
+        "ret 6"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0D4A"
+      ],
+      "fanout": 0,
+      "fanin": 1
+    },
+    {
+      "module": "EPSONMX",
+      "segment_file": "seg2.asm",
+      "name": "sub_0FF4",
+      "kind": "NEAR",
+      "offset": 4084,
+      "size_bytes": null,
+      "start_line": 1669,
+      "end_line": 1718,
+      "num_instructions": 46,
+      "prologue": "standard_bp",
+      "epilogue": "jmp_tail",
+      "calls_near": [],
+      "calls_far": [
+        "far _entry_106"
+      ],
+      "num_jumps_cond": 4,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 18,
+      "mnemonic_histogram": {
+        "mov": 12,
+        "push": 11,
+        "les": 5,
+        "sub": 4,
+        "cmp": 3,
+        "je": 2,
+        "call": 2,
+        "db": 2,
+        "or": 1,
+        "jne": 1,
+        "jge": 1,
+        "jmp": 1,
+        "pop": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 2",
+        "les bx, ptr [bp + 4]",
+        "mov ax, word ptr es:[bx + 0x14]",
+        "mov word ptr [bp - 2], ax"
+      ],
+      "last_instructions": [
+        "mov sp, bp",
+        "pop bp",
+        "db 0c2h",
+        "db 008h"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0D4A"
+      ],
+      "fanout": 0,
+      "fanin": 1
+    }
+  ]
+}

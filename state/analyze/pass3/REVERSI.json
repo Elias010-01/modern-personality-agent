@@ -99,14 +99,14 @@
       ],
       "fanout": 7,
       "fanin": 1,
-      "description": "Funcion mediana (55 instr, 7 calls).",
+      "description": "Mid-size function (55 instr, 7 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_gdi",
         "calls_user",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_006C -- offset 0x006C -- 55 instr\n; Funcion mediana (55 instr, 7 calls).\n; tags: calls_gdi, calls_user, medium\n; callers: sub_1B6E\n; calls (intra): sub_03F2, sub_0B27\n; calls (inter): GDI.GETSTOCKOBJECT, GDI.GETTEXTMETRICS, GDI.SELECTOBJECT, USER.GETDC, USER.RELEASEDC\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_006C -- offset 0x006C -- 55 instr\n; Mid-size function (55 instr, 7 calls).\n; tags: calls_gdi, calls_user, medium\n; callers: sub_1B6E\n; calls (intra): sub_03F2, sub_0B27\n; calls (inter): GDI.GETSTOCKOBJECT, GDI.GETTEXTMETRICS, GDI.SELECTOBJECT, USER.GETDC, USER.RELEASEDC\n;----------------------------------------------------------------------"
     },
     {
       "module": "REVERSI",
@@ -192,14 +192,14 @@
       ],
       "fanout": 5,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (109 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (109 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_gdi",
         "calls_user",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0115 -- offset 0x0115 -- 109 instr\n; Dispatcher: tabla de decisiones cmp+jcc (109 instr).\n; tags: calls_gdi, calls_user, dispatcher\n; callers: sub_1B6E\n; calls (intra): sub_08DD, sub_120D\n; calls (inter): GDI.PATBLT, GDI.SETBKMODE, USER.GETCLIENTRECT\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0115 -- offset 0x0115 -- 109 instr\n; Dispatcher: cmp+jcc decision table (109 instr).\n; tags: calls_gdi, calls_user, dispatcher\n; callers: sub_1B6E\n; calls (intra): sub_08DD, sub_120D\n; calls (inter): GDI.PATBLT, GDI.SETBKMODE, USER.GETCLIENTRECT\n;----------------------------------------------------------------------"
     },
     {
       "module": "REVERSI",
@@ -261,12 +261,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (23 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (23 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0231 -- offset 0x0231 -- 23 instr\n; Dispatcher: tabla de decisiones cmp+jcc (23 instr).\n; tags: dispatcher\n; callers: sub_1B6E\n; calls (intra): sub_160A\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0231 -- offset 0x0231 -- 23 instr\n; Dispatcher: cmp+jcc decision table (23 instr).\n; tags: dispatcher\n; callers: sub_1B6E\n; calls (intra): sub_160A\n;----------------------------------------------------------------------"
     },
     {
       "module": "REVERSI",
@@ -372,14 +372,14 @@
       "callers": [],
       "fanout": 13,
       "fanin": 0,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (130 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (130 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_gdi",
         "calls_user",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0270 -- offset 0x0270 -- 130 instr\n; Dispatcher: tabla de decisiones cmp+jcc (130 instr).\n; tags: calls_gdi, calls_user, dispatcher\n; calls (intra): sub_03F2, sub_0429, sub_064B, sub_08DD, sub_0B27, sub_1349 (+1 mas)\n; calls (inter): GDI.SETBKMODE, USER.DIALOGBOX, USER.GETDC, USER.RELEASEDC, USER.SETCURSOR, USER.SETWINDOWTEXT\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0270 -- offset 0x0270 -- 130 instr\n; Dispatcher: cmp+jcc decision table (130 instr).\n; tags: calls_gdi, calls_user, dispatcher\n; calls (intra): sub_03F2, sub_0429, sub_064B, sub_08DD, sub_0B27, sub_1349 (+1 more)\n; calls (inter): GDI.SETBKMODE, USER.DIALOGBOX, USER.GETDC, USER.RELEASEDC, USER.SETCURSOR, USER.SETWINDOWTEXT\n;----------------------------------------------------------------------"
     },
     {
       "module": "REVERSI",
@@ -446,13 +446,13 @@
       ],
       "fanout": 2,
       "fanin": 2,
-      "description": "Funcion sin clasificar definitiva (21 instr).",
+      "description": "Unclassified function (21 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "calls_user",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_03F2 -- offset 0x03F2 -- 21 instr\n; Funcion sin clasificar definitiva (21 instr).\n; tags: calls_user, small\n; callers: sub_006C, sub_0270\n; calls (inter): USER.CHECKMENUITEM, USER.GETMENU\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_03F2 -- offset 0x03F2 -- 21 instr\n; Unclassified function (21 instr).\n; tags: calls_user, small\n; callers: sub_006C, sub_0270\n; calls (inter): USER.CHECKMENUITEM, USER.GETMENU\n;----------------------------------------------------------------------"
     },
     {
       "module": "REVERSI",
@@ -522,12 +522,12 @@
       ],
       "fanout": 2,
       "fanin": 2,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (106 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (106 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0429 -- offset 0x0429 -- 106 instr\n; Dispatcher: tabla de decisiones cmp+jcc (106 instr).\n; tags: dispatcher\n; callers: sub_0270, sub_1479\n; calls (intra): sub_0BE0, sub_2082\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0429 -- offset 0x0429 -- 106 instr\n; Dispatcher: cmp+jcc decision table (106 instr).\n; tags: dispatcher\n; callers: sub_0270, sub_1479\n; calls (intra): sub_0BE0, sub_2082\n;----------------------------------------------------------------------"
     },
     {
       "module": "REVERSI",
@@ -615,13 +615,13 @@
       ],
       "fanout": 5,
       "fanin": 2,
-      "description": "Funcion mediana (43 instr, 5 calls).",
+      "description": "Mid-size function (43 instr, 5 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_user",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0537 -- offset 0x0537 -- 43 instr\n; Funcion mediana (43 instr, 5 calls).\n; tags: calls_user, medium\n; callers: sub_0F70, sub_1E2A\n; calls (intra): sub_223E\n; calls (inter): USER.DISPATCHMESSAGE, USER.PEEKMESSAGE, USER.TRANSLATEACCELERATOR, USER.TRANSLATEMESSAGE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0537 -- offset 0x0537 -- 43 instr\n; Mid-size function (43 instr, 5 calls).\n; tags: calls_user, medium\n; callers: sub_0F70, sub_1E2A\n; calls (intra): sub_223E\n; calls (inter): USER.DISPATCHMESSAGE, USER.PEEKMESSAGE, USER.TRANSLATEACCELERATOR, USER.TRANSLATEMESSAGE\n;----------------------------------------------------------------------"
     },
     {
       "module": "REVERSI",
@@ -696,13 +696,13 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (68 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (68 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_gdi",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0598 -- offset 0x0598 -- 68 instr\n; Dispatcher: tabla de decisiones cmp+jcc (68 instr).\n; tags: calls_gdi, dispatcher\n; callers: sub_08DD\n; calls (inter): GDI.ELLIPSE, GDI.SELECTOBJECT\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0598 -- offset 0x0598 -- 68 instr\n; Dispatcher: cmp+jcc decision table (68 instr).\n; tags: calls_gdi, dispatcher\n; callers: sub_08DD\n; calls (inter): GDI.ELLIPSE, GDI.SELECTOBJECT\n;----------------------------------------------------------------------"
     },
     {
       "module": "REVERSI",
@@ -783,13 +783,13 @@
       ],
       "fanout": 3,
       "fanin": 3,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (166 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (166 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_gdi",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_064B -- offset 0x064B -- 166 instr\n; Dispatcher: tabla de decisiones cmp+jcc (166 instr).\n; tags: calls_gdi, dispatcher\n; callers: sub_0270, sub_1479, sub_1E2A\n; calls (intra): sub_0812\n; calls (inter): GDI.ELLIPSE, GDI.SELECTOBJECT\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_064B -- offset 0x064B -- 166 instr\n; Dispatcher: cmp+jcc decision table (166 instr).\n; tags: calls_gdi, dispatcher\n; callers: sub_0270, sub_1479, sub_1E2A\n; calls (intra): sub_0812\n; calls (inter): GDI.ELLIPSE, GDI.SELECTOBJECT\n;----------------------------------------------------------------------"
     },
     {
       "module": "REVERSI",
@@ -878,14 +878,14 @@
       ],
       "fanout": 5,
       "fanin": 2,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (67 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (67 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_gdi",
         "calls_user",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0812 -- offset 0x0812 -- 67 instr\n; Dispatcher: tabla de decisiones cmp+jcc (67 instr).\n; tags: calls_gdi, calls_user, dispatcher\n; callers: sub_064B, sub_160A\n; calls (inter): GDI.ELLIPSE, GDI.GETSTOCKOBJECT, GDI.SELECTOBJECT, GDI.SETBKMODE, USER.SETCURSOR\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0812 -- offset 0x0812 -- 67 instr\n; Dispatcher: cmp+jcc decision table (67 instr).\n; tags: calls_gdi, calls_user, dispatcher\n; callers: sub_064B, sub_160A\n; calls (inter): GDI.ELLIPSE, GDI.GETSTOCKOBJECT, GDI.SELECTOBJECT, GDI.SETBKMODE, USER.SETCURSOR\n;----------------------------------------------------------------------"
     },
     {
       "module": "REVERSI",
@@ -975,13 +975,13 @@
       ],
       "fanout": 5,
       "fanin": 2,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (194 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (194 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_gdi",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_08DD -- offset 0x08DD -- 194 instr\n; Dispatcher: tabla de decisiones cmp+jcc (194 instr).\n; tags: calls_gdi, dispatcher\n; callers: sub_0115, sub_0270\n; calls (intra): sub_0598\n; calls (inter): GDI.LINETO, GDI.MOVETO, GDI.PATBLT, GDI.SELECTOBJECT\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_08DD -- offset 0x08DD -- 194 instr\n; Dispatcher: cmp+jcc decision table (194 instr).\n; tags: calls_gdi, dispatcher\n; callers: sub_0115, sub_0270\n; calls (intra): sub_0598\n; calls (inter): GDI.LINETO, GDI.MOVETO, GDI.PATBLT, GDI.SELECTOBJECT\n;----------------------------------------------------------------------"
     },
     {
       "module": "REVERSI",
@@ -1042,12 +1042,12 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (64 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (64 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0B27 -- offset 0x0B27 -- 64 instr\n; Dispatcher: tabla de decisiones cmp+jcc (64 instr).\n; tags: dispatcher\n; callers: sub_006C, sub_0270\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0B27 -- offset 0x0B27 -- 64 instr\n; Dispatcher: cmp+jcc decision table (64 instr).\n; tags: dispatcher\n; callers: sub_006C, sub_0270\n;----------------------------------------------------------------------"
     },
     {
       "module": "REVERSI",
@@ -1116,12 +1116,12 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (62 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (62 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0BE0 -- offset 0x0BE0 -- 62 instr\n; Dispatcher: tabla de decisiones cmp+jcc (62 instr).\n; tags: dispatcher\n; callers: sub_0429\n; calls (intra): sub_120D, sub_12B8\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0BE0 -- offset 0x0BE0 -- 62 instr\n; Dispatcher: cmp+jcc decision table (62 instr).\n; tags: dispatcher\n; callers: sub_0429\n; calls (intra): sub_120D, sub_12B8\n;----------------------------------------------------------------------"
     },
     {
       "module": "REVERSI",
@@ -1241,7 +1241,7 @@
       ],
       "fanout": 12,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (228 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (228 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_gdi",
@@ -1249,7 +1249,7 @@
         "calls_user",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0C7A -- offset 0x0C7A -- 228 instr\n; Dispatcher: tabla de decisiones cmp+jcc (228 instr).\n; tags: calls_gdi, calls_kernel, calls_user, dispatcher\n; callers: sub_0F41\n; calls (inter): GDI.CREATEBITMAP, GDI.CREATEPATTERNBRUSH, GDI.CREATESOLIDBRUSH, GDI.DELETEOBJECT, GDI.GETDEVICECAPS, GDI.GETSTOCKOBJECT (+6 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0C7A -- offset 0x0C7A -- 228 instr\n; Dispatcher: cmp+jcc decision table (228 instr).\n; tags: calls_gdi, calls_kernel, calls_user, dispatcher\n; callers: sub_0F41\n; calls (inter): GDI.CREATEBITMAP, GDI.CREATEPATTERNBRUSH, GDI.CREATESOLIDBRUSH, GDI.DELETEOBJECT, GDI.GETDEVICECAPS, GDI.GETSTOCKOBJECT (+6 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "REVERSI",
@@ -1323,14 +1323,14 @@
       "callers": [],
       "fanout": 3,
       "fanin": 0,
-      "description": "Funcion mediana (45 instr, 3 calls).",
+      "description": "Mid-size function (45 instr, 3 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_kernel",
         "calls_user",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0EBA -- offset 0x0EBA -- 45 instr\n; Funcion mediana (45 instr, 3 calls).\n; tags: calls_kernel, calls_user, medium\n; calls (inter): KERNEL.LOCALFREE, USER.LOADICON, USER.REGISTERCLASS\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0EBA -- offset 0x0EBA -- 45 instr\n; Mid-size function (45 instr, 3 calls).\n; tags: calls_kernel, calls_user, medium\n; calls (inter): KERNEL.LOCALFREE, USER.LOADICON, USER.REGISTERCLASS\n;----------------------------------------------------------------------"
     },
     {
       "module": "REVERSI",
@@ -1392,12 +1392,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (18 instr).",
+      "description": "Unclassified function (18 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0F41 -- offset 0x0F41 -- 18 instr\n; Funcion sin clasificar definitiva (18 instr).\n; tags: small\n; callers: sub_20A6\n; calls (intra): sub_0C7A\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0F41 -- offset 0x0F41 -- 18 instr\n; Unclassified function (18 instr).\n; tags: small\n; callers: sub_20A6\n; calls (intra): sub_0C7A\n;----------------------------------------------------------------------"
     },
     {
       "module": "REVERSI",
@@ -1493,14 +1493,14 @@
       "callers": [],
       "fanout": 8,
       "fanin": 0,
-      "description": "Funcion compleja: 258 instrucciones, 8 llamadas, 1 branches.",
+      "description": "Complex function: 258 instructions, 8 calls, 1 branches.",
       "confidence": "low",
       "semantic_tags": [
         "calls_kernel",
         "calls_user",
         "complex"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0F70 -- offset 0x0F70 -- 258 instr\n; Funcion compleja: 258 instrucciones, 8 llamadas, 1 branches.\n; tags: calls_kernel, calls_user, complex\n; calls (intra): sub_0537\n; calls (inter): KERNEL.GETINSTANCEDATA, KERNEL.MAKEPROCINSTANCE, USER.CHANGEMENU, USER.CREATEWINDOW, USER.GETSYSTEMMENU, USER.SHOWWINDOW (+1 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0F70 -- offset 0x0F70 -- 258 instr\n; Complex function: 258 instructions, 8 calls, 1 branches.\n; tags: calls_kernel, calls_user, complex\n; calls (intra): sub_0537\n; calls (inter): KERNEL.GETINSTANCEDATA, KERNEL.MAKEPROCINSTANCE, USER.CHANGEMENU, USER.CREATEWINDOW, USER.GETSYSTEMMENU, USER.SHOWWINDOW (+1 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "REVERSI",
@@ -1596,13 +1596,13 @@
       ],
       "fanout": 8,
       "fanin": 2,
-      "description": "Funcion mediana (67 instr, 8 calls).",
+      "description": "Mid-size function (67 instr, 8 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_gdi",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_120D -- offset 0x120D -- 67 instr\n; Funcion mediana (67 instr, 8 calls).\n; tags: calls_gdi, medium\n; callers: sub_0115, sub_0BE0\n; calls (intra): sub_1349, sub_1398\n; calls (inter): GDI.GETSTOCKOBJECT, GDI.GETTEXTEXTENT, GDI.PATBLT, GDI.SELECTOBJECT, GDI.SETBKMODE, GDI.TEXTOUT\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_120D -- offset 0x120D -- 67 instr\n; Mid-size function (67 instr, 8 calls).\n; tags: calls_gdi, medium\n; callers: sub_0115, sub_0BE0\n; calls (intra): sub_1349, sub_1398\n; calls (inter): GDI.GETSTOCKOBJECT, GDI.GETTEXTEXTENT, GDI.PATBLT, GDI.SELECTOBJECT, GDI.SETBKMODE, GDI.TEXTOUT\n;----------------------------------------------------------------------"
     },
     {
       "module": "REVERSI",
@@ -1683,14 +1683,14 @@
       ],
       "fanout": 4,
       "fanin": 1,
-      "description": "Funcion mediana (47 instr, 4 calls).",
+      "description": "Mid-size function (47 instr, 4 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_gdi",
         "calls_user",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_12B8 -- offset 0x12B8 -- 47 instr\n; Funcion mediana (47 instr, 4 calls).\n; tags: calls_gdi, calls_user, medium\n; callers: sub_0BE0\n; calls (inter): GDI.PATBLT, USER.GETDC, USER.RELEASEDC, USER.SETTIMER\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_12B8 -- offset 0x12B8 -- 47 instr\n; Mid-size function (47 instr, 4 calls).\n; tags: calls_gdi, calls_user, medium\n; callers: sub_0BE0\n; calls (inter): GDI.PATBLT, USER.GETDC, USER.RELEASEDC, USER.SETTIMER\n;----------------------------------------------------------------------"
     },
     {
       "module": "REVERSI",
@@ -1750,14 +1750,14 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Wrapper que delega en USER.KILLTIMER.",
+      "description": "Wrapper delegating to USER.KILLTIMER.",
       "confidence": "medium",
       "semantic_tags": [
         "calls_user",
         "far",
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1332 -- offset 0x1332 -- 10 instr\n; Wrapper que delega en USER.KILLTIMER.\n; tags: calls_user, far, wrapper\n; calls (inter): USER.KILLTIMER\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1332 -- offset 0x1332 -- 10 instr\n; Wrapper delegating to USER.KILLTIMER.\n; tags: calls_user, far, wrapper\n; calls (inter): USER.KILLTIMER\n;----------------------------------------------------------------------"
     },
     {
       "module": "REVERSI",
@@ -1830,13 +1830,13 @@
       ],
       "fanout": 2,
       "fanin": 3,
-      "description": "Funcion sin clasificar definitiva (30 instr).",
+      "description": "Unclassified function (30 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "calls_gdi",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1349 -- offset 0x1349 -- 30 instr\n; Funcion sin clasificar definitiva (30 instr).\n; tags: calls_gdi, small\n; callers: sub_0270, sub_120D, sub_1479\n; calls (inter): GDI.PATBLT, GDI.SELECTOBJECT\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1349 -- offset 0x1349 -- 30 instr\n; Unclassified function (30 instr).\n; tags: calls_gdi, small\n; callers: sub_0270, sub_120D, sub_1479\n; calls (inter): GDI.PATBLT, GDI.SELECTOBJECT\n;----------------------------------------------------------------------"
     },
     {
       "module": "REVERSI",
@@ -1893,12 +1893,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion hoja (no llama a otras, 14 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 14 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1398 -- offset 0x1398 -- 14 instr\n; Funcion hoja (no llama a otras, 14 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_120D\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1398 -- offset 0x1398 -- 14 instr\n; Leaf function (no callees, 14 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_120D\n;----------------------------------------------------------------------"
     },
     {
       "module": "REVERSI",
@@ -1975,13 +1975,13 @@
       ],
       "fanout": 2,
       "fanin": 4,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (70 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (70 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_user",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_13BA -- offset 0x13BA -- 70 instr\n; Dispatcher: tabla de decisiones cmp+jcc (70 instr).\n; tags: calls_user, dispatcher\n; callers: sub_160A, sub_17BD, sub_1905, sub_1B6E\n; calls (intra): sub_2082\n; calls (inter): USER.SETCURSOR\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_13BA -- offset 0x13BA -- 70 instr\n; Dispatcher: cmp+jcc decision table (70 instr).\n; tags: calls_user, dispatcher\n; callers: sub_160A, sub_17BD, sub_1905, sub_1B6E\n; calls (intra): sub_2082\n; calls (inter): USER.SETCURSOR\n;----------------------------------------------------------------------"
     },
     {
       "module": "REVERSI",
@@ -2081,13 +2081,13 @@
       ],
       "fanout": 10,
       "fanin": 2,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (142 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (142 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_user",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1479 -- offset 0x1479 -- 142 instr\n; Dispatcher: tabla de decisiones cmp+jcc (142 instr).\n; tags: calls_user, dispatcher\n; callers: sub_1905, sub_1B6E\n; calls (intra): sub_0429, sub_064B, sub_1349, sub_1E2A, sub_2082, sub_20A6\n; calls (inter): USER.DIALOGBOX, USER.GETDC, USER.RELEASEDC, USER.SETCURSOR\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1479 -- offset 0x1479 -- 142 instr\n; Dispatcher: cmp+jcc decision table (142 instr).\n; tags: calls_user, dispatcher\n; callers: sub_1905, sub_1B6E\n; calls (intra): sub_0429, sub_064B, sub_1349, sub_1E2A, sub_2082, sub_20A6\n; calls (inter): USER.DIALOGBOX, USER.GETDC, USER.RELEASEDC, USER.SETCURSOR\n;----------------------------------------------------------------------"
     },
     {
       "module": "REVERSI",
@@ -2184,13 +2184,13 @@
       ],
       "fanout": 9,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (154 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (154 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_user",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_160A -- offset 0x160A -- 154 instr\n; Dispatcher: tabla de decisiones cmp+jcc (154 instr).\n; tags: calls_user, dispatcher\n; callers: sub_0231\n; calls (intra): sub_0812, sub_13BA, sub_1B6E, sub_1E2A, sub_2082\n; calls (inter): USER.GETDC, USER.RELEASEDC, USER.SETCURSOR, USER.SETWINDOWTEXT\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_160A -- offset 0x160A -- 154 instr\n; Dispatcher: cmp+jcc decision table (154 instr).\n; tags: calls_user, dispatcher\n; callers: sub_0231\n; calls (intra): sub_0812, sub_13BA, sub_1B6E, sub_1E2A, sub_2082\n; calls (inter): USER.GETDC, USER.RELEASEDC, USER.SETCURSOR, USER.SETWINDOWTEXT\n;----------------------------------------------------------------------"
     },
     {
       "module": "REVERSI",
@@ -2265,12 +2265,12 @@
       ],
       "fanout": 5,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (89 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (89 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_17BD -- offset 0x17BD -- 89 instr\n; Dispatcher: tabla de decisiones cmp+jcc (89 instr).\n; tags: dispatcher\n; callers: sub_1905\n; calls (intra): sub_13BA, sub_18B3, sub_18DC, sub_1B6E, sub_2082\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_17BD -- offset 0x17BD -- 89 instr\n; Dispatcher: cmp+jcc decision table (89 instr).\n; tags: dispatcher\n; callers: sub_1905\n; calls (intra): sub_13BA, sub_18B3, sub_18DC, sub_1B6E, sub_2082\n;----------------------------------------------------------------------"
     },
     {
       "module": "REVERSI",
@@ -2325,12 +2325,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion hoja (no llama a otras, 17 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 17 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_18B3 -- offset 0x18B3 -- 17 instr\n; Funcion hoja (no llama a otras, 17 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_17BD\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_18B3 -- offset 0x18B3 -- 17 instr\n; Leaf function (no callees, 17 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_17BD\n;----------------------------------------------------------------------"
     },
     {
       "module": "REVERSI",
@@ -2385,12 +2385,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion hoja (no llama a otras, 17 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 17 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_18DC -- offset 0x18DC -- 17 instr\n; Funcion hoja (no llama a otras, 17 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_17BD\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_18DC -- offset 0x18DC -- 17 instr\n; Leaf function (no callees, 17 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_17BD\n;----------------------------------------------------------------------"
     },
     {
       "module": "REVERSI",
@@ -2470,14 +2470,14 @@
       ],
       "fanout": 5,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (230 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (230 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_user",
         "complex_iterator",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1905 -- offset 0x1905 -- 230 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (230 instr).\n; tags: calls_user, complex_iterator, string_op\n; callers: sub_1B6E\n; calls (intra): sub_13BA, sub_1479, sub_17BD, sub_1B6E\n; calls (inter): USER.GETKEYSTATE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1905 -- offset 0x1905 -- 230 instr\n; Iterator with string ops (movsb/scasb/...) (230 instr).\n; tags: calls_user, complex_iterator, string_op\n; callers: sub_1B6E\n; calls (intra): sub_13BA, sub_1479, sub_17BD, sub_1B6E\n; calls (inter): USER.GETKEYSTATE\n;----------------------------------------------------------------------"
     },
     {
       "module": "REVERSI",
@@ -2648,7 +2648,7 @@
       ],
       "fanout": 24,
       "fanin": 3,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (244 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (244 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_gdi",
@@ -2657,7 +2657,7 @@
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1B6E -- offset 0x1B6E -- 244 instr\n; Dispatcher: tabla de decisiones cmp+jcc (244 instr).\n; tags: calls_gdi, calls_kernel, calls_user, dispatcher, far\n; callers: sub_160A, sub_17BD, sub_1905\n; calls (intra): sub_006C, sub_0115, sub_0231, sub_13BA, sub_1479, sub_1905\n; calls (inter): GDI.DELETEOBJECT, KERNEL.GETMODULEUSAGE, USER.BEGINPAINT, USER.CLIENTTOSCREEN, USER.DEFWINDOWPROC, USER.DIALOGBOX (+12 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1B6E -- offset 0x1B6E -- 244 instr\n; Dispatcher: cmp+jcc decision table (244 instr).\n; tags: calls_gdi, calls_kernel, calls_user, dispatcher, far\n; callers: sub_160A, sub_17BD, sub_1905\n; calls (intra): sub_006C, sub_0115, sub_0231, sub_13BA, sub_1479, sub_1905\n; calls (inter): GDI.DELETEOBJECT, KERNEL.GETMODULEUSAGE, USER.BEGINPAINT, USER.CLIENTTOSCREEN, USER.DEFWINDOWPROC, USER.DIALOGBOX (+12 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "REVERSI",
@@ -2751,14 +2751,14 @@
       ],
       "fanout": 8,
       "fanin": 3,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (136 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (136 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_user",
         "complex_iterator",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1E2A -- offset 0x1E2A -- 136 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (136 instr).\n; tags: calls_user, complex_iterator, string_op\n; callers: sub_0270, sub_1479, sub_160A\n; calls (intra): sub_0537, sub_064B, sub_1F72, sub_1F9B, sub_1FDA, sub_2046\n; calls (inter): USER.GETDC, USER.RELEASEDC\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1E2A -- offset 0x1E2A -- 136 instr\n; Iterator with string ops (movsb/scasb/...) (136 instr).\n; tags: calls_user, complex_iterator, string_op\n; callers: sub_0270, sub_1479, sub_160A\n; calls (intra): sub_0537, sub_064B, sub_1F72, sub_1F9B, sub_1FDA, sub_2046\n; calls (inter): USER.GETDC, USER.RELEASEDC\n;----------------------------------------------------------------------"
     },
     {
       "module": "REVERSI",
@@ -2801,12 +2801,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Stub trivial (2 instrucciones, sin logica significativa).",
+      "description": "Trivial stub (2 instructions, no significant logic).",
       "confidence": "low",
       "semantic_tags": [
         "trivial_stub"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1F72 -- offset 0x1F72 -- 2 instr\n; Stub trivial (2 instrucciones, sin logica significativa).\n; tags: trivial_stub\n; callers: sub_1E2A\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1F72 -- offset 0x1F72 -- 2 instr\n; Trivial stub (2 instructions, no significant logic).\n; tags: trivial_stub\n; callers: sub_1E2A\n;----------------------------------------------------------------------"
     },
     {
       "module": "REVERSI",
@@ -2863,12 +2863,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion hoja (no llama a otras, 19 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 19 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1F78 -- offset 0x1F78 -- 19 instr\n; Funcion hoja (no llama a otras, 19 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_2082\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1F78 -- offset 0x1F78 -- 19 instr\n; Leaf function (no callees, 19 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_2082\n;----------------------------------------------------------------------"
     },
     {
       "module": "REVERSI",
@@ -2919,12 +2919,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion hoja (no llama a otras, 6 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 6 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1F9B -- offset 0x1F9B -- 6 instr\n; Funcion hoja (no llama a otras, 6 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_1E2A\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1F9B -- offset 0x1F9B -- 6 instr\n; Leaf function (no callees, 6 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_1E2A\n;----------------------------------------------------------------------"
     },
     {
       "module": "REVERSI",
@@ -2986,13 +2986,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Iterador con bucle (24 instr).",
+      "description": "Iterator with loop (24 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "loop"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1FAC -- offset 0x1FAC -- 24 instr\n; Iterador con bucle (24 instr).\n; tags: iterator, loop\n; callers: sub_20A6\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1FAC -- offset 0x1FAC -- 24 instr\n; Iterator with loop (24 instr).\n; tags: iterator, loop\n; callers: sub_20A6\n;----------------------------------------------------------------------"
     },
     {
       "module": "REVERSI",
@@ -3055,14 +3055,14 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (45 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (45 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1FDA -- offset 0x1FDA -- 45 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (45 instr).\n; tags: iterator, loop, string_op\n; callers: sub_1E2A\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1FDA -- offset 0x1FDA -- 45 instr\n; Iterator with string ops (movsb/scasb/...) (45 instr).\n; tags: iterator, loop, string_op\n; callers: sub_1E2A\n;----------------------------------------------------------------------"
     },
     {
       "module": "REVERSI",
@@ -3123,13 +3123,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Iterador con bucle (29 instr).",
+      "description": "Iterator with loop (29 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "loop"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2046 -- offset 0x2046 -- 29 instr\n; Iterador con bucle (29 instr).\n; tags: iterator, loop\n; callers: sub_1E2A\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2046 -- offset 0x2046 -- 29 instr\n; Iterator with loop (29 instr).\n; tags: iterator, loop\n; callers: sub_1E2A\n;----------------------------------------------------------------------"
     },
     {
       "module": "REVERSI",
@@ -3194,12 +3194,12 @@
       ],
       "fanout": 1,
       "fanin": 5,
-      "description": "Wrapper que delega en sub_1F78.",
+      "description": "Wrapper delegating to sub_1F78.",
       "confidence": "medium",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2082 -- offset 0x2082 -- 15 instr\n; Wrapper que delega en sub_1F78.\n; tags: wrapper\n; callers: sub_0429, sub_13BA, sub_1479, sub_160A, sub_17BD\n; calls (intra): sub_1F78\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2082 -- offset 0x2082 -- 15 instr\n; Wrapper delegating to sub_1F78.\n; tags: wrapper\n; callers: sub_0429, sub_13BA, sub_1479, sub_160A, sub_17BD\n; calls (intra): sub_1F78\n;----------------------------------------------------------------------"
     },
     {
       "module": "REVERSI",
@@ -3296,7 +3296,7 @@
       ],
       "fanout": 8,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (58 instr).",
+      "description": "Calls DOS services via INT 21h (58 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
@@ -3304,7 +3304,7 @@
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_20A6 -- offset 0x20A6 -- 58 instr\n; Llama a servicios DOS via INT 21h (58 instr).\n; tags: calls_kernel, calls_user, dos_caller, int_21\n; callers: sub_1479\n; calls (intra): sub_0F41, sub_1FAC, sub_2274, sub_2306\n; calls (inter): KERNEL.FATALEXIT, KERNEL.INITTASK, KERNEL.WAITEVENT, USER.INITAPP\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_20A6 -- offset 0x20A6 -- 58 instr\n; Calls DOS services via INT 21h (58 instr).\n; tags: calls_kernel, calls_user, dos_caller, int_21\n; callers: sub_1479\n; calls (intra): sub_0F41, sub_1FAC, sub_2274, sub_2306\n; calls (inter): KERNEL.FATALEXIT, KERNEL.INITTASK, KERNEL.WAITEVENT, USER.INITAPP\n;----------------------------------------------------------------------"
     },
     {
       "module": "REVERSI",
@@ -3409,13 +3409,13 @@
       ],
       "fanout": 9,
       "fanin": 1,
-      "description": "Funcion compleja: 130 instrucciones, 9 llamadas, 1 branches.",
+      "description": "Complex function: 130 instructions, 9 calls, 1 branches.",
       "confidence": "low",
       "semantic_tags": [
         "calls_kernel",
         "complex"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2135 -- offset 0x2135 -- 130 instr\n; Funcion compleja: 130 instrucciones, 9 llamadas, 1 branches.\n; tags: calls_kernel, complex\n; callers: sub_223E\n; calls (intra): sub_2316\n; calls (inter): KERNEL.GLOBALALLOC, KERNEL.GLOBALCOMPACT, KERNEL.GLOBALFREE, KERNEL.GLOBALSIZE, KERNEL.LOCALALLOC, KERNEL.LOCALFREE (+2 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2135 -- offset 0x2135 -- 130 instr\n; Complex function: 130 instructions, 9 calls, 1 branches.\n; tags: calls_kernel, complex\n; callers: sub_223E\n; calls (intra): sub_2316\n; calls (inter): KERNEL.GLOBALALLOC, KERNEL.GLOBALCOMPACT, KERNEL.GLOBALFREE, KERNEL.GLOBALSIZE, KERNEL.LOCALALLOC, KERNEL.LOCALFREE (+2 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "REVERSI",
@@ -3485,13 +3485,13 @@
       ],
       "fanout": 2,
       "fanin": 2,
-      "description": "Llama a servicios DOS via INT 21h (21 instr).",
+      "description": "Calls DOS services via INT 21h (21 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_223E -- offset 0x223E -- 21 instr\n; Llama a servicios DOS via INT 21h (21 instr).\n; tags: dos_caller, int_21\n; callers: sub_0537, sub_2306\n; calls (intra): sub_2135, sub_2333\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_223E -- offset 0x223E -- 21 instr\n; Calls DOS services via INT 21h (21 instr).\n; tags: dos_caller, int_21\n; callers: sub_0537, sub_2306\n; calls (intra): sub_2135, sub_2333\n;----------------------------------------------------------------------"
     },
     {
       "module": "REVERSI",
@@ -3562,14 +3562,14 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (59 instr).",
+      "description": "Calls DOS services via INT 21h (59 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
         "int_21",
         "loop"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2274 -- offset 0x2274 -- 59 instr\n; Llama a servicios DOS via INT 21h (59 instr).\n; tags: complex_iterator, int_21, loop\n; callers: sub_20A6\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2274 -- offset 0x2274 -- 59 instr\n; Calls DOS services via INT 21h (59 instr).\n; tags: complex_iterator, int_21, loop\n; callers: sub_20A6\n;----------------------------------------------------------------------"
     },
     {
       "module": "REVERSI",
@@ -3628,12 +3628,12 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (8 instr).",
+      "description": "Unclassified function (8 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2306 -- offset 0x2306 -- 8 instr\n; Funcion sin clasificar definitiva (8 instr).\n; tags: small\n; callers: sub_20A6\n; calls (intra): sub_223E, sub_2321\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2306 -- offset 0x2306 -- 8 instr\n; Unclassified function (8 instr).\n; tags: small\n; callers: sub_20A6\n; calls (intra): sub_223E, sub_2321\n;----------------------------------------------------------------------"
     },
     {
       "module": "REVERSI",
@@ -3687,13 +3687,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Iterador con bucle (6 instr).",
+      "description": "Iterator with loop (6 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "loop"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2316 -- offset 0x2316 -- 6 instr\n; Iterador con bucle (6 instr).\n; tags: iterator, loop\n; callers: sub_2135\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2316 -- offset 0x2316 -- 6 instr\n; Iterator with loop (6 instr).\n; tags: iterator, loop\n; callers: sub_2135\n;----------------------------------------------------------------------"
     },
     {
       "module": "REVERSI",
@@ -3752,12 +3752,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (10 instr).",
+      "description": "Unclassified function (10 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2321 -- offset 0x2321 -- 10 instr\n; Funcion sin clasificar definitiva (10 instr).\n; tags: wrapper\n; callers: sub_2306\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2321 -- offset 0x2321 -- 10 instr\n; Unclassified function (10 instr).\n; tags: wrapper\n; callers: sub_2306\n;----------------------------------------------------------------------"
     },
     {
       "module": "REVERSI",
@@ -3816,12 +3816,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (10 instr).",
+      "description": "Unclassified function (10 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2333 -- offset 0x2333 -- 10 instr\n; Funcion sin clasificar definitiva (10 instr).\n; tags: wrapper\n; callers: sub_223E\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2333 -- offset 0x2333 -- 10 instr\n; Unclassified function (10 instr).\n; tags: wrapper\n; callers: sub_223E\n;----------------------------------------------------------------------"
     }
   ]
 }

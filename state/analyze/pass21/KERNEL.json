@@ -1,0 +1,1699 @@
+{
+  "module": "KERNEL",
+  "binary_name": "KERNEL",
+  "num_functions": 368,
+  "num_constants": 6,
+  "num_segments": 1,
+  "constants": [
+    {
+      "offset": 1,
+      "name": "__ACRTUSED"
+    },
+    {
+      "offset": 6,
+      "name": "PLOCALHEAP"
+    },
+    {
+      "offset": 8,
+      "name": "PATOMTABLE"
+    },
+    {
+      "offset": 10,
+      "name": "PSTACKTOP"
+    },
+    {
+      "offset": 12,
+      "name": "PSTACKMIN"
+    },
+    {
+      "offset": 14,
+      "name": "PSTACKBOT"
+    }
+  ],
+  "segments": [
+    {
+      "name": "IGROUP",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "HGLOBALHEAP"
+        },
+        {
+          "offset": 2,
+          "name": "PGLOBALHEAP"
+        },
+        {
+          "offset": 4,
+          "name": "PSWAPHOOK"
+        },
+        {
+          "offset": 8,
+          "name": "HEXEHEAD"
+        },
+        {
+          "offset": 10,
+          "name": "HEXESWEEP"
+        },
+        {
+          "offset": 12,
+          "name": "HTHUNKS"
+        },
+        {
+          "offset": 14,
+          "name": "HHANDLE"
+        },
+        {
+          "offset": 16,
+          "name": "TOPPDB"
+        },
+        {
+          "offset": 18,
+          "name": "HEADPDB"
+        },
+        {
+          "offset": 20,
+          "name": "TOPSIZEPDB"
+        },
+        {
+          "offset": 22,
+          "name": "HEADTDB"
+        },
+        {
+          "offset": 24,
+          "name": "CURTDB"
+        },
+        {
+          "offset": 26,
+          "name": "LOCKTDB"
+        },
+        {
+          "offset": 28,
+          "name": "FWINX"
+        },
+        {
+          "offset": 30,
+          "name": "F8087"
+        },
+        {
+          "offset": 32,
+          "name": "INSCHEDULER"
+        },
+        {
+          "offset": 33,
+          "name": "FEMM"
+        },
+        {
+          "offset": 34,
+          "name": "HBUFFER"
+        },
+        {
+          "offset": 36,
+          "name": "BUFADDR"
+        },
+        {
+          "offset": 40,
+          "name": "HFILE"
+        },
+        {
+          "offset": 42,
+          "name": "INT22BASE"
+        },
+        {
+          "offset": 44,
+          "name": "PDMAADD"
+        },
+        {
+          "offset": 48,
+          "name": "PINDOS"
+        },
+        {
+          "offset": 52,
+          "name": "PCNTCFLAG"
+        },
+        {
+          "offset": 56,
+          "name": "PCURRENTPDB"
+        },
+        {
+          "offset": 60,
+          "name": "PCURRENTDRIVE"
+        },
+        {
+          "offset": 64,
+          "name": "PERRMODE"
+        },
+        {
+          "offset": 68,
+          "name": "PSFTLINK"
+        },
+        {
+          "offset": 72,
+          "name": "PFILETABLE"
+        },
+        {
+          "offset": 76,
+          "name": "FILEENTRYSIZE"
+        },
+        {
+          "offset": 78,
+          "name": "LASTDRIVESWAPPED"
+        },
+        {
+          "offset": 79,
+          "name": "FBREAK"
+        },
+        {
+          "offset": 80,
+          "name": "DOS_VERSION"
+        },
+        {
+          "offset": 81,
+          "name": "DOS_REVISION"
+        },
+        {
+          "offset": 82,
+          "name": "DOS_OEM"
+        },
+        {
+          "offset": 83,
+          "name": "FINT21"
+        },
+        {
+          "offset": 84,
+          "name": "FEVENT"
+        },
+        {
+          "offset": 85,
+          "name": "KEYINFO"
+        },
+        {
+          "offset": 97,
+          "name": "FFAREAST"
+        },
+        {
+          "offset": 98,
+          "name": "PMBOXPROC"
+        },
+        {
+          "offset": 102,
+          "name": "PEXITPROC"
+        },
+        {
+          "offset": 106,
+          "name": "PSYSPROC"
+        },
+        {
+          "offset": 110,
+          "name": "PTIMERPROC"
+        },
+        {
+          "offset": 114,
+          "name": "PKEYPROC"
+        },
+        {
+          "offset": 118,
+          "name": "PREVINT20PROC"
+        },
+        {
+          "offset": 122,
+          "name": "PREVINT21PROC"
+        },
+        {
+          "offset": 126,
+          "name": "PREVINT24PROC"
+        },
+        {
+          "offset": 130,
+          "name": "PREVINT27PROC"
+        },
+        {
+          "offset": 134,
+          "name": "PREVINT3FPROC"
+        },
+        {
+          "offset": 138,
+          "name": "PREVBCON"
+        },
+        {
+          "offset": 142,
+          "name": "FBOOTING"
+        },
+        {
+          "offset": 143,
+          "name": "CDEVAT"
+        },
+        {
+          "offset": 144,
+          "name": "OLDERRNO"
+        },
+        {
+          "offset": 146,
+          "name": "OUTBUF"
+        },
+        {
+          "offset": 196,
+          "name": "BUFPOS"
+        },
+        {
+          "offset": 198,
+          "name": "USERPROBUF"
+        },
+        {
+          "offset": 278,
+          "name": "SZUSERPRO"
+        },
+        {
+          "offset": 286,
+          "name": "SZDISKMSG1"
+        },
+        {
+          "offset": 294,
+          "name": "SZDISKMSG2"
+        },
+        {
+          "offset": 309,
+          "name": "DRVLET"
+        },
+        {
+          "offset": 312,
+          "name": "SZWINDISK"
+        },
+        {
+          "offset": 327,
+          "name": "SZDISKCAP"
+        },
+        {
+          "offset": 339,
+          "name": "SYSERR"
+        },
+        {
+          "offset": 352,
+          "name": "SZCANNOTFIND1"
+        },
+        {
+          "offset": 365,
+          "name": "SZCANNOTFIND2"
+        },
+        {
+          "offset": 366,
+          "name": "MSGWRITEPROTECT"
+        },
+        {
+          "offset": 396,
+          "name": "DRVLET1"
+        },
+        {
+          "offset": 399,
+          "name": "MSGCANNOTREADDRV"
+        },
+        {
+          "offset": 422,
+          "name": "DRVLET2"
+        },
+        {
+          "offset": 425,
+          "name": "MSGCANNOTWRITEDRV"
+        },
+        {
+          "offset": 447,
+          "name": "DRVLET3"
+        },
+        {
+          "offset": 450,
+          "name": "MSGCANNOTREADDEV"
+        },
+        {
+          "offset": 474,
+          "name": "DEVENAM1"
+        },
+        {
+          "offset": 483,
+          "name": "MSGCANNOTWRITEDEV"
+        },
+        {
+          "offset": 506,
+          "name": "DEVENAM2"
+        },
+        {
+          "offset": 515,
+          "name": "MSGNOPRINTER"
+        },
+        {
+          "offset": 533,
+          "name": "SZDEBUGSTR"
+        },
+        {
+          "offset": 746,
+          "name": "GETVERSION"
+        },
+        {
+          "offset": 750,
+          "name": "STARTMODULE"
+        },
+        {
+          "offset": 948,
+          "name": "LOADMODULE"
+        },
+        {
+          "offset": 2018,
+          "name": "FINDEXEINFO"
+        },
+        {
+          "offset": 2072,
+          "name": "ENTPROCADDRESS"
+        },
+        {
+          "offset": 2264,
+          "name": "FINDORDINAL"
+        },
+        {
+          "offset": 2476,
+          "name": "INCEXEUSAGE"
+        },
+        {
+          "offset": 2559,
+          "name": "DECEXEUSAGE"
+        },
+        {
+          "offset": 2656,
+          "name": "STARTPROCADDRESS"
+        },
+        {
+          "offset": 2701,
+          "name": "GETINSTANCE"
+        },
+        {
+          "offset": 2739,
+          "name": "GETEXEPTR"
+        },
+        {
+          "offset": 2844,
+          "name": "GETSTACKPTR"
+        },
+        {
+          "offset": 2942,
+          "name": "MYALLOC"
+        },
+        {
+          "offset": 3029,
+          "name": "MYLOCK"
+        },
+        {
+          "offset": 3047,
+          "name": "MYFREE"
+        },
+        {
+          "offset": 3118,
+          "name": "LOADNRTABLE"
+        },
+        {
+          "offset": 3363,
+          "name": "FREENRTABLE"
+        },
+        {
+          "offset": 3419,
+          "name": "GETSTRINGPTR"
+        },
+        {
+          "offset": 3444,
+          "name": "GETCHKSUMADDR"
+        },
+        {
+          "offset": 3528,
+          "name": "CHECKSEGCHKSUM"
+        },
+        {
+          "offset": 3570,
+          "name": "BADSEGCONT"
+        },
+        {
+          "offset": 3616,
+          "name": "ALLOCSEG"
+        },
+        {
+          "offset": 3755,
+          "name": "ALLOCALLSEGS"
+        },
+        {
+          "offset": 3952,
+          "name": "SEGLOAD"
+        },
+        {
+          "offset": 4299,
+          "name": "BADSEGREAD"
+        },
+        {
+          "offset": 4633,
+          "name": "LOADSEGMENT"
+        },
+        {
+          "offset": 5084,
+          "name": "ADDMODULE"
+        },
+        {
+          "offset": 5167,
+          "name": "DELMODULE"
+        },
+        {
+          "offset": 5239,
+          "name": "FREEMODULE"
+        },
+        {
+          "offset": 5239,
+          "name": "FREELIBRARY"
+        },
+        {
+          "offset": 5423,
+          "name": "SEGRELOC"
+        },
+        {
+          "offset": 6020,
+          "name": "INT3FBP"
+        },
+        {
+          "offset": 6022,
+          "name": "INT3FSAVEDBP"
+        },
+        {
+          "offset": 6024,
+          "name": "INT3FSAVEDSS"
+        },
+        {
+          "offset": 6026,
+          "name": "INT3FSAVEDDS"
+        },
+        {
+          "offset": 6028,
+          "name": "INT3FSAVEDFRAME"
+        },
+        {
+          "offset": 6030,
+          "name": "INT3FSAVEDIP"
+        },
+        {
+          "offset": 6032,
+          "name": "INT3FSAVEDCS"
+        },
+        {
+          "offset": 6040,
+          "name": "INT3FTHUNK"
+        },
+        {
+          "offset": 6082,
+          "name": "INT3FFAIL"
+        },
+        {
+          "offset": 6154,
+          "name": "INT3FHANDLER"
+        },
+        {
+          "offset": 6261,
+          "name": "RETTHUNK"
+        },
+        {
+          "offset": 6399,
+          "name": "TESTDSAX"
+        },
+        {
+          "offset": 6479,
+          "name": "LOADLIBRARY"
+        },
+        {
+          "offset": 6500,
+          "name": "GETCODEHANDLE"
+        },
+        {
+          "offset": 6604,
+          "name": "COPYNAME"
+        },
+        {
+          "offset": 6657,
+          "name": "GETPROCADDRESS"
+        },
+        {
+          "offset": 6739,
+          "name": "GETMODULEFILENAME"
+        },
+        {
+          "offset": 6806,
+          "name": "GETMODULEUSAGE"
+        },
+        {
+          "offset": 6838,
+          "name": "GETINSTANCEDATA"
+        },
+        {
+          "offset": 6891,
+          "name": "MAKEPROCINSTANCE"
+        },
+        {
+          "offset": 7044,
+          "name": "FREEPROCINSTANCE"
+        },
+        {
+          "offset": 7105,
+          "name": "PATCHPROLOG"
+        },
+        {
+          "offset": 7167,
+          "name": "PATCHTHUNKS"
+        },
+        {
+          "offset": 7691,
+          "name": "GETMODULEHANDLE"
+        },
+        {
+          "offset": 7752,
+          "name": "CALLPROCINSTANCE"
+        },
+        {
+          "offset": 7765,
+          "name": "CALLMOVEABLEINSTANCEPROC"
+        },
+        {
+          "offset": 7779,
+          "name": "DEFINEHANDLETABLE"
+        },
+        {
+          "offset": 7852,
+          "name": "DELETEPATHNAME"
+        },
+        {
+          "offset": 7860,
+          "name": "OPENPATHNAME"
+        },
+        {
+          "offset": 7923,
+          "name": "OPENFILE"
+        },
+        {
+          "offset": 8503,
+          "name": "ISFLOPPY"
+        },
+        {
+          "offset": 8538,
+          "name": "PROMPT"
+        },
+        {
+          "offset": 8628,
+          "name": "GETPURENAME"
+        },
+        {
+          "offset": 8666,
+          "name": "PARSEFILE"
+        },
+        {
+          "offset": 8991,
+          "name": "SEARCHPATH"
+        },
+        {
+          "offset": 9122,
+          "name": "GETLASTDISKCHANGE"
+        },
+        {
+          "offset": 9130,
+          "name": "GETTEMPDRIVE"
+        },
+        {
+          "offset": 9195,
+          "name": "HEXTOA"
+        },
+        {
+          "offset": 9222,
+          "name": "GETTEMPFILENAME"
+        },
+        {
+          "offset": 9476,
+          "name": "CALCMAXNRSEG"
+        },
+        {
+          "offset": 9561,
+          "name": "LOADEXEHEADER"
+        },
+        {
+          "offset": 10434,
+          "name": "TRIMEXEHEADER"
+        },
+        {
+          "offset": 10470,
+          "name": "STARTLIBRARY"
+        },
+        {
+          "offset": 10529,
+          "name": "STARTTASK"
+        },
+        {
+          "offset": 10663,
+          "name": "INITTASK"
+        },
+        {
+          "offset": 10832,
+          "name": "VALIDATECODESEGMENTS"
+        },
+        {
+          "offset": 10913,
+          "name": "FINDRESOURCE"
+        },
+        {
+          "offset": 11206,
+          "name": "LOADRESOURCE"
+        },
+        {
+          "offset": 11600,
+          "name": "SETRESOURCEHANDLER"
+        },
+        {
+          "offset": 11828,
+          "name": "MYRESALLOC"
+        },
+        {
+          "offset": 11880,
+          "name": "ALLOCRESOURCE"
+        },
+        {
+          "offset": 12030,
+          "name": "RESALLOC"
+        },
+        {
+          "offset": 12207,
+          "name": "ACCESSRESOURCE"
+        },
+        {
+          "offset": 12318,
+          "name": "LOCKRESOURCE"
+        },
+        {
+          "offset": 12462,
+          "name": "FREERESOURCE"
+        },
+        {
+          "offset": 12612,
+          "name": "SIZEOFRESOURCE"
+        },
+        {
+          "offset": 12659,
+          "name": "DEFAULTRESOURCEHANDLER"
+        },
+        {
+          "offset": 12731,
+          "name": "PRELOADRESOURCES"
+        },
+        {
+          "offset": 12842,
+          "name": "GETRESORD"
+        },
+        {
+          "offset": 12906,
+          "name": "CMPRESSTR"
+        },
+        {
+          "offset": 12967,
+          "name": "FUSEDBP"
+        },
+        {
+          "offset": 12972,
+          "name": "PATCHSTACK"
+        },
+        {
+          "offset": 13313,
+          "name": "SEARCHSTACK"
+        },
+        {
+          "offset": 13731,
+          "name": "CATCH"
+        },
+        {
+          "offset": 13816,
+          "name": "THROW"
+        },
+        {
+          "offset": 13915,
+          "name": "GETCURRENTTASK"
+        },
+        {
+          "offset": 13925,
+          "name": "CREATETASK"
+        },
+        {
+          "offset": 14236,
+          "name": "INSERTTASK"
+        },
+        {
+          "offset": 14318,
+          "name": "DELETETASK"
+        },
+        {
+          "offset": 14375,
+          "name": "GROWSFT"
+        },
+        {
+          "offset": 14552,
+          "name": "CLOSEOPENFILES"
+        },
+        {
+          "offset": 14725,
+          "name": "LOCKCURRENTTASK"
+        },
+        {
+          "offset": 14746,
+          "name": "SAVESTATE"
+        },
+        {
+          "offset": 14909,
+          "name": "RESTORESTATE"
+        },
+        {
+          "offset": 15108,
+          "name": "RESCHEDULE"
+        },
+        {
+          "offset": 15116,
+          "name": "BOOTSCHEDULE"
+        },
+        {
+          "offset": 15346,
+          "name": "WAITEVENT"
+        },
+        {
+          "offset": 15408,
+          "name": "YIELD"
+        },
+        {
+          "offset": 15602,
+          "name": "POSTEVENT"
+        },
+        {
+          "offset": 15613,
+          "name": "GETTASKQUEUE"
+        },
+        {
+          "offset": 15623,
+          "name": "SETTASKSIGNALPROC"
+        },
+        {
+          "offset": 15626,
+          "name": "SETTASKINTERCHANGE"
+        },
+        {
+          "offset": 15629,
+          "name": "SETTASKSWITCHPROC"
+        },
+        {
+          "offset": 15662,
+          "name": "SETTASKQUEUE"
+        },
+        {
+          "offset": 15675,
+          "name": "SETPRIORITY"
+        },
+        {
+          "offset": 15724,
+          "name": "DOS3CALL"
+        },
+        {
+          "offset": 15727,
+          "name": "NETBIOSCALL"
+        },
+        {
+          "offset": 15916,
+          "name": "NOHOOKDOSCALL"
+        },
+        {
+          "offset": 15924,
+          "name": "ENABLEDOS"
+        },
+        {
+          "offset": 16105,
+          "name": "DISABLEDOS"
+        },
+        {
+          "offset": 16191,
+          "name": "ENABLEINT21"
+        },
+        {
+          "offset": 16246,
+          "name": "DISABLEINT21"
+        },
+        {
+          "offset": 16325,
+          "name": "EXITKERNEL"
+        },
+        {
+          "offset": 16444,
+          "name": "GETLPERRMODE"
+        },
+        {
+          "offset": 16454,
+          "name": "PDB_CALL_SYSTEM_ENTRY"
+        },
+        {
+          "offset": 16519,
+          "name": "INT27HANDLER"
+        },
+        {
+          "offset": 16524,
+          "name": "INT20HANDLER"
+        },
+        {
+          "offset": 16526,
+          "name": "INT21HANDLER"
+        },
+        {
+          "offset": 16922,
+          "name": "PATHDRVDSDX"
+        },
+        {
+          "offset": 17389,
+          "name": "DODISK"
+        },
+        {
+          "offset": 18129,
+          "name": "ABORTCALL"
+        },
+        {
+          "offset": 18146,
+          "name": "EXITCALL"
+        },
+        {
+          "offset": 18351,
+          "name": "BUILDPDB"
+        },
+        {
+          "offset": 18601,
+          "name": "GETCURRENTPDB"
+        },
+        {
+          "offset": 18617,
+          "name": "ISSCREENGRAB"
+        },
+        {
+          "offset": 18658,
+          "name": "INT24HANDLER"
+        },
+        {
+          "offset": 18955,
+          "name": "SHOWDIALOGBOX2"
+        },
+        {
+          "offset": 18982,
+          "name": "APPENDFIRST"
+        },
+        {
+          "offset": 18989,
+          "name": "APPEND"
+        },
+        {
+          "offset": 19017,
+          "name": "INITATOMTABLE"
+        },
+        {
+          "offset": 19075,
+          "name": "DELATOM"
+        },
+        {
+          "offset": 19078,
+          "name": "ADDATOM"
+        },
+        {
+          "offset": 19081,
+          "name": "FINDATOM"
+        },
+        {
+          "offset": 19083,
+          "name": "LOOKUPATOM"
+        },
+        {
+          "offset": 19439,
+          "name": "DELETEATOM"
+        },
+        {
+          "offset": 19482,
+          "name": "GETATOMHANDLE"
+        },
+        {
+          "offset": 19514,
+          "name": "GETATOMNAME"
+        },
+        {
+          "offset": 19644,
+          "name": "GETPROFILEINT"
+        },
+        {
+          "offset": 19726,
+          "name": "GETPROFILESTRING"
+        },
+        {
+          "offset": 19877,
+          "name": "GETKEYS"
+        },
+        {
+          "offset": 20030,
+          "name": "GETSTRING"
+        },
+        {
+          "offset": 20179,
+          "name": "BUFFERINIT"
+        },
+        {
+          "offset": 20506,
+          "name": "WRITEPROFILESTRING"
+        },
+        {
+          "offset": 20960,
+          "name": "_LOPEN"
+        },
+        {
+          "offset": 20963,
+          "name": "_LCREAT"
+        },
+        {
+          "offset": 20995,
+          "name": "_LCLOSE"
+        },
+        {
+          "offset": 21014,
+          "name": "_LLSEEK"
+        },
+        {
+          "offset": 21045,
+          "name": "_LREAD"
+        },
+        {
+          "offset": 21048,
+          "name": "_LWRITE"
+        },
+        {
+          "offset": 21082,
+          "name": "LSTRLEN"
+        },
+        {
+          "offset": 21130,
+          "name": "LSTRCPY"
+        },
+        {
+          "offset": 21146,
+          "name": "LSTRCAT"
+        },
+        {
+          "offset": 21159,
+          "name": "LSTRCMP"
+        },
+        {
+          "offset": 21232,
+          "name": "ANSIUPPER"
+        },
+        {
+          "offset": 21263,
+          "name": "ANSILOWER"
+        },
+        {
+          "offset": 21294,
+          "name": "ANSIPREV"
+        },
+        {
+          "offset": 21337,
+          "name": "ANSINEXT"
+        },
+        {
+          "offset": 21366,
+          "name": "MYANSIUPPER"
+        },
+        {
+          "offset": 21390,
+          "name": "MYANSILOWER"
+        },
+        {
+          "offset": 21414,
+          "name": "MYUPPER"
+        },
+        {
+          "offset": 21433,
+          "name": "MYLOWER"
+        },
+        {
+          "offset": 21452,
+          "name": "ISKANJI"
+        },
+        {
+          "offset": 21498,
+          "name": "LJOIN"
+        },
+        {
+          "offset": 21514,
+          "name": "LREPSETUP"
+        },
+        {
+          "offset": 21520,
+          "name": "LZERO"
+        },
+        {
+          "offset": 21540,
+          "name": "LALLOC"
+        },
+        {
+          "offset": 21725,
+          "name": "LFREE"
+        },
+        {
+          "offset": 21780,
+          "name": "LMOVE"
+        },
+        {
+          "offset": 21832,
+          "name": "LBESTFIT"
+        },
+        {
+          "offset": 21899,
+          "name": "LCOMPACT"
+        },
+        {
+          "offset": 22277,
+          "name": "LENTER"
+        },
+        {
+          "offset": 22339,
+          "name": "LLEAVE"
+        },
+        {
+          "offset": 22404,
+          "name": "LALIGN"
+        },
+        {
+          "offset": 22423,
+          "name": "LDREF"
+        },
+        {
+          "offset": 22520,
+          "name": "LNOTIFY"
+        },
+        {
+          "offset": 22537,
+          "name": "LOCALALLOC"
+        },
+        {
+          "offset": 22696,
+          "name": "LOCALREALLOC"
+        },
+        {
+          "offset": 23098,
+          "name": "LOCALFREE"
+        },
+        {
+          "offset": 23258,
+          "name": "LOCALSIZE"
+        },
+        {
+          "offset": 23281,
+          "name": "LOCALFLAGS"
+        },
+        {
+          "offset": 23306,
+          "name": "LOCALLOCK"
+        },
+        {
+          "offset": 23408,
+          "name": "LOCALUNLOCK"
+        },
+        {
+          "offset": 23523,
+          "name": "LOCALHANDLE"
+        },
+        {
+          "offset": 23550,
+          "name": "LOCALCOMPACT"
+        },
+        {
+          "offset": 23652,
+          "name": "LOCALNOTIFY"
+        },
+        {
+          "offset": 23675,
+          "name": "LOCALNOTIFYDEFAULT"
+        },
+        {
+          "offset": 23848,
+          "name": "LOCALINIT"
+        },
+        {
+          "offset": 24020,
+          "name": "HALLOC"
+        },
+        {
+          "offset": 24065,
+          "name": "HTHREAD"
+        },
+        {
+          "offset": 24084,
+          "name": "HFREE"
+        },
+        {
+          "offset": 24109,
+          "name": "HDREF"
+        },
+        {
+          "offset": 24128,
+          "name": "HENUM"
+        },
+        {
+          "offset": 24183,
+          "name": "HEND"
+        },
+        {
+          "offset": 24183,
+          "name": "GALIGN"
+        },
+        {
+          "offset": 24200,
+          "name": "GDREF"
+        },
+        {
+          "offset": 24250,
+          "name": "GHANDLE"
+        },
+        {
+          "offset": 24389,
+          "name": "GALLOC"
+        },
+        {
+          "offset": 24459,
+          "name": "GREALLOC"
+        },
+        {
+          "offset": 24966,
+          "name": "GFREE"
+        },
+        {
+          "offset": 25000,
+          "name": "GFREEALL"
+        },
+        {
+          "offset": 25053,
+          "name": "GLOCK"
+        },
+        {
+          "offset": 25061,
+          "name": "GUNLOCK"
+        },
+        {
+          "offset": 25084,
+          "name": "GLRUTOP"
+        },
+        {
+          "offset": 25180,
+          "name": "GLRUADD"
+        },
+        {
+          "offset": 25242,
+          "name": "GLRUDEL"
+        },
+        {
+          "offset": 25317,
+          "name": "GLRUPREV"
+        },
+        {
+          "offset": 25351,
+          "name": "GSPLICE"
+        },
+        {
+          "offset": 25415,
+          "name": "GJOIN"
+        },
+        {
+          "offset": 25449,
+          "name": "GZERO"
+        },
+        {
+          "offset": 25498,
+          "name": "GSEARCH"
+        },
+        {
+          "offset": 25741,
+          "name": "GMARKFREE"
+        },
+        {
+          "offset": 25805,
+          "name": "GFINDFREE"
+        },
+        {
+          "offset": 25835,
+          "name": "GCHECKFREE"
+        },
+        {
+          "offset": 25869,
+          "name": "GCFRSRV"
+        },
+        {
+          "offset": 26036,
+          "name": "GMOVE"
+        },
+        {
+          "offset": 26226,
+          "name": "GCOMPACT"
+        },
+        {
+          "offset": 26281,
+          "name": "GCMPHEAP"
+        },
+        {
+          "offset": 26373,
+          "name": "GMOVEABLE"
+        },
+        {
+          "offset": 26411,
+          "name": "GSLIDE"
+        },
+        {
+          "offset": 26428,
+          "name": "GSLIDECOMMON"
+        },
+        {
+          "offset": 26581,
+          "name": "GBESTFIT"
+        },
+        {
+          "offset": 26647,
+          "name": "GMOVEBUSY"
+        },
+        {
+          "offset": 26761,
+          "name": "GDISCARD"
+        },
+        {
+          "offset": 26906,
+          "name": "GLRUSWEEP"
+        },
+        {
+          "offset": 26914,
+          "name": "LRUSWEEP"
+        },
+        {
+          "offset": 27046,
+          "name": "INT21ALLOC"
+        },
+        {
+          "offset": 27055,
+          "name": "INT21REALLOC"
+        },
+        {
+          "offset": 27064,
+          "name": "INT21FREE"
+        },
+        {
+          "offset": 27075,
+          "name": "GENTER"
+        },
+        {
+          "offset": 27086,
+          "name": "GLEAVE"
+        },
+        {
+          "offset": 27090,
+          "name": "GBTOP"
+        },
+        {
+          "offset": 27205,
+          "name": "GRESERVE"
+        },
+        {
+          "offset": 27264,
+          "name": "GRTEST"
+        },
+        {
+          "offset": 27281,
+          "name": "GAVAIL"
+        },
+        {
+          "offset": 27446,
+          "name": "GNOTIFY"
+        },
+        {
+          "offset": 27566,
+          "name": "GHEXPAND"
+        },
+        {
+          "offset": 27676,
+          "name": "GMEMCHECK"
+        },
+        {
+          "offset": 27681,
+          "name": "GMEMFAIL"
+        },
+        {
+          "offset": 27682,
+          "name": "SETSWAPHOOK"
+        },
+        {
+          "offset": 27705,
+          "name": "GLOBALALLOC"
+        },
+        {
+          "offset": 27807,
+          "name": "GLOBALREALLOC"
+        },
+        {
+          "offset": 27912,
+          "name": "GLOBALFREE"
+        },
+        {
+          "offset": 28074,
+          "name": "GLOBALFREEALL"
+        },
+        {
+          "offset": 28208,
+          "name": "XHANDLE"
+        },
+        {
+          "offset": 28239,
+          "name": "GLOBALHANDLE"
+        },
+        {
+          "offset": 28244,
+          "name": "LOCKSEGMENT"
+        },
+        {
+          "offset": 28254,
+          "name": "UNLOCKSEGMENT"
+        },
+        {
+          "offset": 28264,
+          "name": "GLOBALSIZE"
+        },
+        {
+          "offset": 28290,
+          "name": "GLOBALFLAGS"
+        },
+        {
+          "offset": 28305,
+          "name": "GLOBALLOCK"
+        },
+        {
+          "offset": 28389,
+          "name": "GLOBALUNLOCK"
+        },
+        {
+          "offset": 28475,
+          "name": "GLOBALCOMPACT"
+        },
+        {
+          "offset": 28589,
+          "name": "GLOBALINFOPTR"
+        },
+        {
+          "offset": 28597,
+          "name": "GLOBALMASTERHANDLE"
+        },
+        {
+          "offset": 28620,
+          "name": "DEBUGINIT"
+        },
+        {
+          "offset": 28675,
+          "name": "DEBUGDEFINESEGMENT"
+        },
+        {
+          "offset": 28729,
+          "name": "DEBUGMOVEDSEGMENT"
+        },
+        {
+          "offset": 28764,
+          "name": "DEBUGFREESEGMENT"
+        },
+        {
+          "offset": 28800,
+          "name": "KERNELDBGMSG"
+        },
+        {
+          "offset": 28864,
+          "name": "CHECKLOCALHEAP"
+        },
+        {
+          "offset": 29357,
+          "name": "CHECKGLOBALHEAP"
+        },
+        {
+          "offset": 30194,
+          "name": "KERNELERROR"
+        },
+        {
+          "offset": 30619,
+          "name": "FINDSEGSYMS"
+        },
+        {
+          "offset": 31445,
+          "name": "FINDSYMBOL"
+        },
+        {
+          "offset": 31785,
+          "name": "NEXTFRAME"
+        },
+        {
+          "offset": 31902,
+          "name": "STACKWALK"
+        },
+        {
+          "offset": 32117,
+          "name": "FATALEXIT"
+        },
+        {
+          "offset": 32398,
+          "name": "HTOA"
+        },
+        {
+          "offset": 32477,
+          "name": "GETDEBUGSTRING"
+        },
+        {
+          "offset": 32519,
+          "name": "GETEXEHEAD"
+        },
+        {
+          "offset": 32524,
+          "name": "ENTERBREAK"
+        },
+        {
+          "offset": 32550,
+          "name": "__lshl"
+        },
+        {
+          "offset": 32561,
+          "name": "HINITMEM"
+        },
+        {
+          "offset": 32561,
+          "name": "ENDCODE"
+        },
+        {
+          "offset": 32563,
+          "name": "SEGINITMEM"
+        },
+        {
+          "offset": 32565,
+          "name": "CPSHRUNK"
+        },
+        {
+          "offset": 32567,
+          "name": "LPBOOTAPP"
+        },
+        {
+          "offset": 32571,
+          "name": "BOOTEXECBLOCK"
+        },
+        {
+          "offset": 32585,
+          "name": "WIN_SHOW"
+        },
+        {
+          "offset": 32654,
+          "name": "BOOTDONE"
+        },
+        {
+          "offset": 32778,
+          "name": "BOOTSTRAP"
+        },
+        {
+          "offset": 33551,
+          "name": "LOADNEWEXE"
+        },
+        {
+          "offset": 33757,
+          "name": "SLOWBOOT"
+        },
+        {
+          "offset": 33992,
+          "name": "FINDFREESEG"
+        },
+        {
+          "offset": 34110,
+          "name": "FNOMEM"
+        },
+        {
+          "offset": 34243,
+          "name": "LOADFIXEDSEG"
+        },
+        {
+          "offset": 34532,
+          "name": "SHRINK"
+        },
+        {
+          "offset": 34627,
+          "name": "FASTBOOT"
+        },
+        {
+          "offset": 35039,
+          "name": "DD1"
+        },
+        {
+          "offset": 35133,
+          "name": "FB1X"
+        },
+        {
+          "offset": 35284,
+          "name": "DD2"
+        },
+        {
+          "offset": 35610,
+          "name": "FB6"
+        },
+        {
+          "offset": 35819,
+          "name": "INITPROFILE"
+        },
+        {
+          "offset": 35835,
+          "name": "INITLOADER"
+        },
+        {
+          "offset": 35835,
+          "name": "ENDINIT"
+        },
+        {
+          "offset": 36359,
+          "name": "INITFWDREF"
+        },
+        {
+          "offset": 36604,
+          "name": "TESTEMM"
+        },
+        {
+          "offset": 36658,
+          "name": "INITDOSVARP"
+        },
+        {
+          "offset": 37435,
+          "name": "GINIT"
+        },
+        {
+          "offset": 37653,
+          "name": "GLOBALINIT"
+        }
+      ]
+    }
+  ],
+  "retail_exports_count": 103,
+  "confirmed_count": 103,
+  "confirmed_names": [
+    "ACCESSRESOURCE",
+    "ADDATOM",
+    "ALLOCRESOURCE",
+    "ANSILOWER",
+    "ANSINEXT",
+    "ANSIPREV",
+    "ANSIUPPER",
+    "BUILDPDB",
+    "CALLPROCINSTANCE",
+    "CATCH",
+    "DEFINEHANDLETABLE",
+    "DELETEATOM",
+    "DELETEPATHNAME",
+    "DISABLEDOS",
+    "DOS3CALL",
+    "ENABLEDOS",
+    "EXITKERNEL",
+    "FATALEXIT",
+    "FINDATOM",
+    "FINDRESOURCE",
+    "FREELIBRARY",
+    "FREEMODULE",
+    "FREEPROCINSTANCE",
+    "FREERESOURCE",
+    "GETATOMHANDLE",
+    "GETATOMNAME",
+    "GETCODEHANDLE",
+    "GETCURRENTPDB",
+    "GETCURRENTTASK",
+    "GETINSTANCEDATA",
+    "GETLASTDISKCHANGE",
+    "GETLPERRMODE",
+    "GETMODULEFILENAME",
+    "GETMODULEHANDLE",
+    "GETMODULEUSAGE",
+    "GETPROCADDRESS",
+    "GETPROFILEINT",
+    "GETPROFILESTRING",
+    "GETTASKQUEUE",
+    "GETTEMPDRIVE",
+    "GETTEMPFILENAME",
+    "GETVERSION",
+    "GLOBALALLOC",
+    "GLOBALCOMPACT",
+    "GLOBALFLAGS",
+    "GLOBALFREE",
+    "GLOBALFREEALL",
+    "GLOBALHANDLE",
+    "GLOBALLOCK",
+    "GLOBALMASTERHANDLE",
+    "GLOBALREALLOC",
+    "GLOBALSIZE",
+    "GLOBALUNLOCK",
+    "INITATOMTABLE",
+    "INITTASK",
+    "ISSCREENGRAB",
+    "LOADLIBRARY",
+    "LOADMODULE",
+    "LOADRESOURCE",
+    "LOCALALLOC",
+    "LOCALCOMPACT",
+    "LOCALFLAGS",
+    "LOCALFREE",
+    "LOCALHANDLE",
+    "LOCALINIT",
+    "LOCALLOCK",
+    "LOCALNOTIFY",
+    "LOCALREALLOC",
+    "LOCALSIZE",
+    "LOCALUNLOCK",
+    "LOCKCURRENTTASK",
+    "LOCKRESOURCE",
+    "LOCKSEGMENT",
+    "LSTRCAT",
+    "LSTRCMP",
+    "LSTRCPY",
+    "LSTRLEN",
+    "MAKEPROCINSTANCE",
+    "NETBIOSCALL",
+    "NOHOOKDOSCALL",
+    "OPENFILE",
+    "OPENPATHNAME",
+    "POSTEVENT",
+    "SETPRIORITY",
+    "SETRESOURCEHANDLER",
+    "SETSWAPHOOK",
+    "SETTASKINTERCHANGE",
+    "SETTASKQUEUE",
+    "SETTASKSIGNALPROC",
+    "SETTASKSWITCHPROC",
+    "SIZEOFRESOURCE",
+    "THROW",
+    "UNLOCKSEGMENT",
+    "VALIDATECODESEGMENTS",
+    "WAITEVENT",
+    "WRITEPROFILESTRING",
+    "YIELD",
+    "_LCLOSE",
+    "_LCREAT",
+    "_LLSEEK",
+    "_LOPEN",
+    "_LREAD",
+    "_LWRITE"
+  ]
+}

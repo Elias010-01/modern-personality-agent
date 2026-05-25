@@ -71,13 +71,13 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion mediana (52 instr, 0 calls).",
+      "description": "Mid-size function (52 instr, 0 calls).",
       "confidence": "low",
       "semantic_tags": [
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0067 -- offset 0x0067 -- 52 instr\n; Funcion mediana (52 instr, 0 calls).\n; tags: far, medium\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0067 -- offset 0x0067 -- 52 instr\n; Mid-size function (52 instr, 0 calls).\n; tags: far, medium\n;----------------------------------------------------------------------"
     },
     {
       "module": "FTG",
@@ -141,13 +141,13 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Llama a servicios DOS via INT 21h (20 instr).",
+      "description": "Calls DOS services via INT 21h (20 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_00DB -- offset 0x00DB -- 20 instr\n; Llama a servicios DOS via INT 21h (20 instr).\n; tags: dos_caller, int_21\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_00DB -- offset 0x00DB -- 20 instr\n; Calls DOS services via INT 21h (20 instr).\n; tags: dos_caller, int_21\n;----------------------------------------------------------------------"
     },
     {
       "module": "FTG",
@@ -214,14 +214,14 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Llama a servicios DOS via INT 21h (47 instr).",
+      "description": "Calls DOS services via INT 21h (47 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "far",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_010D -- offset 0x010D -- 47 instr\n; Llama a servicios DOS via INT 21h (47 instr).\n; tags: dos_caller, far, int_21\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_010D -- offset 0x010D -- 47 instr\n; Calls DOS services via INT 21h (47 instr).\n; tags: dos_caller, far, int_21\n;----------------------------------------------------------------------"
     },
     {
       "module": "FTG",
@@ -279,13 +279,13 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (11 instr).",
+      "description": "Unclassified function (11 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "far",
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0171 -- offset 0x0171 -- 11 instr\n; Funcion sin clasificar definitiva (11 instr).\n; tags: far, wrapper\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0171 -- offset 0x0171 -- 11 instr\n; Unclassified function (11 instr).\n; tags: far, wrapper\n;----------------------------------------------------------------------"
     }
   ]
 }

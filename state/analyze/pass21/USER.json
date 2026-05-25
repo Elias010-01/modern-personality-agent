@@ -1,0 +1,4862 @@
+{
+  "module": "USER",
+  "binary_name": "USER",
+  "num_functions": 1191,
+  "num_constants": 6,
+  "num_segments": 28,
+  "constants": [
+    {
+      "offset": 1,
+      "name": "__acrtused"
+    },
+    {
+      "offset": 6,
+      "name": "PLOCALHEAP"
+    },
+    {
+      "offset": 8,
+      "name": "PATOMTABLE"
+    },
+    {
+      "offset": 10,
+      "name": "pStackTop"
+    },
+    {
+      "offset": 12,
+      "name": "pStackMin"
+    },
+    {
+      "offset": 14,
+      "name": "pStackBot"
+    }
+  ],
+  "segments": [
+    {
+      "name": "_TEXT",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "PAINTBITS"
+        },
+        {
+          "offset": 173,
+          "name": "FORCEREPAINT"
+        },
+        {
+          "offset": 282,
+          "name": "MOVEPOPUP"
+        },
+        {
+          "offset": 452,
+          "name": "BRINGPOPUPTOTOP"
+        },
+        {
+          "offset": 562,
+          "name": "CREATEWINDOW"
+        },
+        {
+          "offset": 1380,
+          "name": "SHOWTILEDWINDOW"
+        },
+        {
+          "offset": 1674,
+          "name": "SHOWWINDOWWITHSWAP"
+        },
+        {
+          "offset": 1734,
+          "name": "FARSWAPWINDOWS"
+        },
+        {
+          "offset": 2008,
+          "name": "ANYPOPUP"
+        },
+        {
+          "offset": 2021,
+          "name": "DESTROYWINDOW"
+        },
+        {
+          "offset": 2193,
+          "name": "DESTROYLINKEDPOPUPS"
+        },
+        {
+          "offset": 2242,
+          "name": "FARFREEWINDOW"
+        },
+        {
+          "offset": 2494,
+          "name": "INITPWSB"
+        },
+        {
+          "offset": 2530,
+          "name": "GETCLASS"
+        },
+        {
+          "offset": 2576,
+          "name": "SETPROP"
+        },
+        {
+          "offset": 2711,
+          "name": "GETPROP"
+        },
+        {
+          "offset": 2776,
+          "name": "REMOVEPROP"
+        },
+        {
+          "offset": 2879,
+          "name": "ENUMPROPS"
+        },
+        {
+          "offset": 2952,
+          "name": "DELETEPROPERTIES"
+        },
+        {
+          "offset": 3039,
+          "name": "RGICHCTLCLASS"
+        },
+        {
+          "offset": 3044,
+          "name": "RGICHCLRNAMES"
+        },
+        {
+          "offset": 3054,
+          "name": "SZBUTTON"
+        },
+        {
+          "offset": 3054,
+          "name": "RGCHCTLCLASS"
+        },
+        {
+          "offset": 3061,
+          "name": "SZEDIT"
+        },
+        {
+          "offset": 3066,
+          "name": "SZSTATIC"
+        },
+        {
+          "offset": 3073,
+          "name": "SZLISTBOX"
+        },
+        {
+          "offset": 3081,
+          "name": "SZSCROLLBAR"
+        },
+        {
+          "offset": 3091,
+          "name": "SZONECHAR"
+        },
+        {
+          "offset": 3093,
+          "name": "SZDISPLAY"
+        },
+        {
+          "offset": 3101,
+          "name": "SZOEMBIN"
+        },
+        {
+          "offset": 3108,
+          "name": "SZSLASHSTARDOTSTAR"
+        },
+        {
+          "offset": 3113,
+          "name": "SZXCHG"
+        },
+        {
+          "offset": 3123,
+          "name": "SZSYSTEM"
+        },
+        {
+          "offset": 3130,
+          "name": "SZWINDOWS"
+        },
+        {
+          "offset": 3138,
+          "name": "SZCOLORS"
+        },
+        {
+          "offset": 3145,
+          "name": "SZFONTS"
+        },
+        {
+          "offset": 3151,
+          "name": "SZYES"
+        },
+        {
+          "offset": 3153,
+          "name": "SZCURSORBLINKRATE"
+        },
+        {
+          "offset": 3169,
+          "name": "SZSWAPMOUSEBUTTON"
+        },
+        {
+          "offset": 3186,
+          "name": "SZDOUBLECLICKSPEED"
+        },
+        {
+          "offset": 3203,
+          "name": "SZCLRSCROLLBAR"
+        },
+        {
+          "offset": 3203,
+          "name": "RGCHCLRNAMES"
+        },
+        {
+          "offset": 3213,
+          "name": "SZCLRBACKGROUND"
+        },
+        {
+          "offset": 3224,
+          "name": "SZCLRACTIVETITLE"
+        },
+        {
+          "offset": 3236,
+          "name": "SZCLRINACTIVETITLE"
+        },
+        {
+          "offset": 3250,
+          "name": "SZCLRMENU"
+        },
+        {
+          "offset": 3255,
+          "name": "SZCLRWINDOW"
+        },
+        {
+          "offset": 3262,
+          "name": "SZCLRWINDOWFRAME"
+        },
+        {
+          "offset": 3274,
+          "name": "SZCLRMENUTEXT"
+        },
+        {
+          "offset": 3283,
+          "name": "SZCLRWINDOWTEXT"
+        },
+        {
+          "offset": 3294,
+          "name": "SZCLRTITLETEXT"
+        },
+        {
+          "offset": 3304,
+          "name": "OPENICON"
+        },
+        {
+          "offset": 3335,
+          "name": "CLOSEWINDOW"
+        },
+        {
+          "offset": 3378,
+          "name": "OPENWND"
+        },
+        {
+          "offset": 3419,
+          "name": "FAROPENWNDPROLOG"
+        },
+        {
+          "offset": 3480,
+          "name": "FARCLOSEWND"
+        },
+        {
+          "offset": 3511,
+          "name": "CLOSEWNDPROLOG"
+        },
+        {
+          "offset": 3603,
+          "name": "ISWINDOWVISIBLE"
+        },
+        {
+          "offset": 3651,
+          "name": "SHOWWINDOW"
+        },
+        {
+          "offset": 3864,
+          "name": "PUTPOPUPWND"
+        },
+        {
+          "offset": 3954,
+          "name": "SHUTPOPUPWND"
+        },
+        {
+          "offset": 4073,
+          "name": "STRIPBITMAPS"
+        },
+        {
+          "offset": 4120,
+          "name": "CLOSEPOPUPWND"
+        },
+        {
+          "offset": 4149,
+          "name": "SAVEPOPUPBITS"
+        },
+        {
+          "offset": 4291,
+          "name": "RESTOREPOPUPBITS"
+        },
+        {
+          "offset": 4418,
+          "name": "CHECKFOCUS"
+        },
+        {
+          "offset": 4452,
+          "name": "FARLINKWND"
+        },
+        {
+          "offset": 4525,
+          "name": "FARUNLINKWND"
+        },
+        {
+          "offset": 4566,
+          "name": "SENDSIZE"
+        },
+        {
+          "offset": 4610,
+          "name": "SENDZOOM"
+        },
+        {
+          "offset": 4634,
+          "name": "FARSHOWOWNEDWINDOWS"
+        },
+        {
+          "offset": 4932,
+          "name": "FARSETNEWRECT"
+        },
+        {
+          "offset": 4983,
+          "name": "FARGETPREVWND"
+        },
+        {
+          "offset": 5014,
+          "name": "FARSTARTRETILE"
+        },
+        {
+          "offset": 5032,
+          "name": "CHECKDESKEMPTY"
+        },
+        {
+          "offset": 5120,
+          "name": "OPENALLCHILDREN"
+        },
+        {
+          "offset": 5148,
+          "name": "CLOSEALLCHILDREN"
+        },
+        {
+          "offset": 5180,
+          "name": "SCREENUPDATERECT"
+        },
+        {
+          "offset": 5304,
+          "name": "FARSCREENUPDATERGN"
+        },
+        {
+          "offset": 5609,
+          "name": "FCONTENTVISIBLE"
+        },
+        {
+          "offset": 5646,
+          "name": "FARONEWNDREPAINT"
+        },
+        {
+          "offset": 6160,
+          "name": "FARONEWNDPAINT"
+        },
+        {
+          "offset": 6176,
+          "name": "ONEWNDPAINT2"
+        },
+        {
+          "offset": 6289,
+          "name": "SENDSIZEMESSAGE"
+        },
+        {
+          "offset": 6337,
+          "name": "ONECLMPNT"
+        },
+        {
+          "offset": 6371,
+          "name": "FARALLCLMSPNT"
+        },
+        {
+          "offset": 6451,
+          "name": "SETREDRAW"
+        },
+        {
+          "offset": 6487,
+          "name": "INITVISIBLERGN"
+        },
+        {
+          "offset": 6554,
+          "name": "BEGINPAINT"
+        },
+        {
+          "offset": 6803,
+          "name": "ENDPAINT"
+        },
+        {
+          "offset": 6879,
+          "name": "PSCREATERECTRGNINDIRECT"
+        },
+        {
+          "offset": 6911,
+          "name": "FILLWINDOW"
+        },
+        {
+          "offset": 6964,
+          "name": "PAINTRECT"
+        },
+        {
+          "offset": 7021,
+          "name": "FERASEBACKGROUND"
+        },
+        {
+          "offset": 7084,
+          "name": "GETCONTROLBRUSH"
+        },
+        {
+          "offset": 7139,
+          "name": "GETUPDATERECT"
+        },
+        {
+          "offset": 7365,
+          "name": "GETPARENT"
+        },
+        {
+          "offset": 7387,
+          "name": "GETCHILDPARENT"
+        },
+        {
+          "offset": 7412,
+          "name": "GETTOPWINDOW"
+        },
+        {
+          "offset": 7437,
+          "name": "OPENCHILDWINDOW"
+        },
+        {
+          "offset": 7470,
+          "name": "DESTROYCHILDWINDOW"
+        },
+        {
+          "offset": 7564,
+          "name": "FAROFFSETCHILDREN"
+        },
+        {
+          "offset": 7691,
+          "name": "FINDPREVIOUSCHILD"
+        },
+        {
+          "offset": 7729,
+          "name": "MOVECHILD"
+        },
+        {
+          "offset": 7960,
+          "name": "BRINGCHILDTOTOP"
+        },
+        {
+          "offset": 8093,
+          "name": "SHOWCHILD"
+        },
+        {
+          "offset": 8217,
+          "name": "BRINGWINDOWTOTOP"
+        },
+        {
+          "offset": 8266,
+          "name": "MOVEWINDOW"
+        },
+        {
+          "offset": 8340,
+          "name": "FCHILDVISIBLE"
+        },
+        {
+          "offset": 8386,
+          "name": "SIGNALPROC"
+        },
+        {
+          "offset": 8630,
+          "name": "POSTAPPMESSAGE"
+        },
+        {
+          "offset": 8634,
+          "name": "POSTMESSAGE"
+        },
+        {
+          "offset": 8648,
+          "name": "POSTMESSAGE2"
+        },
+        {
+          "offset": 8746,
+          "name": "REPLYMESSAGE"
+        },
+        {
+          "offset": 8832,
+          "name": "WAITMESSAGE"
+        },
+        {
+          "offset": 8888,
+          "name": "PEEKMESSAGE"
+        },
+        {
+          "offset": 8892,
+          "name": "GETMESSAGE"
+        },
+        {
+          "offset": 8899,
+          "name": "GETMESSAGE2"
+        },
+        {
+          "offset": 9185,
+          "name": "TRANSLATEMESSAGE"
+        },
+        {
+          "offset": 9371,
+          "name": "DISPATCHMESSAGE"
+        },
+        {
+          "offset": 9460,
+          "name": "CALLWINDOWPROC"
+        },
+        {
+          "offset": 9521,
+          "name": "XCALLWINDOWPROC"
+        },
+        {
+          "offset": 9532,
+          "name": "CALLWINDOWPROC2"
+        },
+        {
+          "offset": 9566,
+          "name": "SENDMESSAGE"
+        },
+        {
+          "offset": 9661,
+          "name": "SENDMESSAGE2"
+        },
+        {
+          "offset": 9928,
+          "name": "RGLPFNHOOK"
+        },
+        {
+          "offset": 9948,
+          "name": "SETWINDOWSHOOK"
+        },
+        {
+          "offset": 10015,
+          "name": "GETWNDHQ"
+        },
+        {
+          "offset": 10028,
+          "name": "GETCLASSSTYLE"
+        },
+        {
+          "offset": 10036,
+          "name": "CHECKMSGFILTER"
+        },
+        {
+          "offset": 10041,
+          "name": "CHECKMSGFILTER2"
+        },
+        {
+          "offset": 10067,
+          "name": "CHECKHWNDFILTER"
+        },
+        {
+          "offset": 10071,
+          "name": "CHECKHWNDFILTER2"
+        },
+        {
+          "offset": 10100,
+          "name": "INSENDMESSAGE"
+        },
+        {
+          "offset": 10118,
+          "name": "HITTEST"
+        },
+        {
+          "offset": 10251,
+          "name": "CHECKCURSOR"
+        },
+        {
+          "offset": 10274,
+          "name": "FARCAPTURE"
+        },
+        {
+          "offset": 10350,
+          "name": "FARMODELOOP"
+        },
+        {
+          "offset": 10684,
+          "name": "CHECKSYSQUEUE"
+        },
+        {
+          "offset": 11791,
+          "name": "SYSPOST"
+        },
+        {
+          "offset": 11840,
+          "name": "SYSTOCHAR"
+        },
+        {
+          "offset": 11882,
+          "name": "GETSYSCOLOR"
+        },
+        {
+          "offset": 11903,
+          "name": "SETDOUBLECLICKTIME"
+        },
+        {
+          "offset": 11933,
+          "name": "GETDOUBLECLICKTIME"
+        },
+        {
+          "offset": 11942,
+          "name": "GETKEYSTATE"
+        },
+        {
+          "offset": 11958,
+          "name": "GETFOCUS"
+        },
+        {
+          "offset": 11967,
+          "name": "SETFOCUS"
+        },
+        {
+          "offset": 12116,
+          "name": "ACTIVATEAPP"
+        },
+        {
+          "offset": 12199,
+          "name": "FARACTIVATEWINDOW"
+        },
+        {
+          "offset": 12860,
+          "name": "FBADWINDOW"
+        },
+        {
+          "offset": 12906,
+          "name": "SETACTIVEWINDOW"
+        },
+        {
+          "offset": 12936,
+          "name": "SETCAPTURE"
+        },
+        {
+          "offset": 12961,
+          "name": "RELEASECAPTURE"
+        },
+        {
+          "offset": 12974,
+          "name": "GETMESSAGETIME"
+        },
+        {
+          "offset": 13003,
+          "name": "GETMESSAGEPOS"
+        },
+        {
+          "offset": 13033,
+          "name": "POSTQUITMESSAGE"
+        },
+        {
+          "offset": 13075,
+          "name": "POSTSYSERROR"
+        },
+        {
+          "offset": 13103,
+          "name": "INITAPP"
+        },
+        {
+          "offset": 13337,
+          "name": "REGISTERWINDOWMESSAGE"
+        },
+        {
+          "offset": 13354,
+          "name": "ENABLEWINDOW"
+        },
+        {
+          "offset": 13470,
+          "name": "SETCURSORPOS"
+        },
+        {
+          "offset": 13520,
+          "name": "GETCURSORPOS"
+        },
+        {
+          "offset": 13549,
+          "name": "UPDATEWINDOW"
+        },
+        {
+          "offset": 13627,
+          "name": "UPDATEWINDOW2"
+        },
+        {
+          "offset": 13672,
+          "name": "CHECKPAINTS"
+        },
+        {
+          "offset": 13733,
+          "name": "CHECKPAINT"
+        },
+        {
+          "offset": 13815,
+          "name": "DRAWICON"
+        },
+        {
+          "offset": 13874,
+          "name": "BLTICON"
+        },
+        {
+          "offset": 14154,
+          "name": "ICONSIZE"
+        },
+        {
+          "offset": 14169,
+          "name": "ICONFREE"
+        },
+        {
+          "offset": 14181,
+          "name": "FARCISETCURS"
+        },
+        {
+          "offset": 14216,
+          "name": "SETCURSOR"
+        },
+        {
+          "offset": 14232,
+          "name": "FARCISHOW"
+        },
+        {
+          "offset": 14255,
+          "name": "FARCIHIDE"
+        },
+        {
+          "offset": 14284,
+          "name": "SHOWCURSOR"
+        },
+        {
+          "offset": 14304,
+          "name": "CALLOEMCURSOR"
+        },
+        {
+          "offset": 14375,
+          "name": "GETDC"
+        },
+        {
+          "offset": 14392,
+          "name": "GETWINDOWDC"
+        },
+        {
+          "offset": 14408,
+          "name": "RELEASEDC"
+        },
+        {
+          "offset": 14473,
+          "name": "FARINVALIDATEDC"
+        },
+        {
+          "offset": 14492,
+          "name": "INVALIDATEALLCHILDRENDCS"
+        },
+        {
+          "offset": 14519,
+          "name": "FARINVALIDATEALLDCS"
+        },
+        {
+          "offset": 14537,
+          "name": "INVALIDATEONEDC"
+        },
+        {
+          "offset": 14591,
+          "name": "FARGETSCREENDC"
+        },
+        {
+          "offset": 14607,
+          "name": "FARRELEASEADC"
+        },
+        {
+          "offset": 14659,
+          "name": "GETDC2"
+        },
+        {
+          "offset": 14822,
+          "name": "DCSEARCH"
+        },
+        {
+          "offset": 14985,
+          "name": "GETCLSDC"
+        },
+        {
+          "offset": 15019,
+          "name": "FARCALCALLVISRGNS"
+        },
+        {
+          "offset": 15105,
+          "name": "SETBUSYDCSWNDRGN"
+        },
+        {
+          "offset": 15264,
+          "name": "FARCALCWNDVISRGN"
+        },
+        {
+          "offset": 15283,
+          "name": "CALCALLWNDVISRGNS"
+        },
+        {
+          "offset": 15307,
+          "name": "CALCOWNDCWNDVISRGN"
+        },
+        {
+          "offset": 15400,
+          "name": "GETUPDATEDC"
+        },
+        {
+          "offset": 15528,
+          "name": "RELEASEUPDATEDC"
+        },
+        {
+          "offset": 15557,
+          "name": "ATTACHDC"
+        },
+        {
+          "offset": 15624,
+          "name": "CREATEDISPLAYDC"
+        },
+        {
+          "offset": 15651,
+          "name": "FAREXCLUDEPOPUPS"
+        },
+        {
+          "offset": 15732,
+          "name": "SETVISRGN"
+        },
+        {
+          "offset": 15814,
+          "name": "CALCVISRGN"
+        },
+        {
+          "offset": 16192,
+          "name": "EXCLUDEWINDOWLIST"
+        },
+        {
+          "offset": 16322,
+          "name": "WININPUT"
+        },
+        {
+          "offset": 16615,
+          "name": "SYSCOMMAND"
+        },
+        {
+          "offset": 17219,
+          "name": "FOPENICON"
+        },
+        {
+          "offset": 17243,
+          "name": "FARCOMPCLIENT"
+        },
+        {
+          "offset": 17260,
+          "name": "COMPCLIENTRECT"
+        },
+        {
+          "offset": 17405,
+          "name": "COMPCLIENT2"
+        },
+        {
+          "offset": 17678,
+          "name": "DRAWWINDOWFRAME"
+        },
+        {
+          "offset": 17826,
+          "name": "ERASEBACKGROUND"
+        },
+        {
+          "offset": 17875,
+          "name": "FARFRAMEWINDOW"
+        },
+        {
+          "offset": 17948,
+          "name": "DRAWFRAME"
+        },
+        {
+          "offset": 18240,
+          "name": "SCROLLWINDOW"
+        },
+        {
+          "offset": 18843,
+          "name": "DRAWCAPTION"
+        },
+        {
+          "offset": 19512,
+          "name": "DRAWSIZE"
+        },
+        {
+          "offset": 19715,
+          "name": "REDRAWSCRLBAR"
+        },
+        {
+          "offset": 19770,
+          "name": "FLASHWINDOW"
+        },
+        {
+          "offset": 19865,
+          "name": "GRAYSTRING"
+        },
+        {
+          "offset": 20229,
+          "name": "BLTCOLOR"
+        },
+        {
+          "offset": 20379,
+          "name": "CHILDWINDOWFROMPOINT"
+        },
+        {
+          "offset": 20451,
+          "name": "FARINTILED_ICONICWINDOWS"
+        },
+        {
+          "offset": 20529,
+          "name": "WINWHERE"
+        },
+        {
+          "offset": 20620,
+          "name": "WINDOWHITTEST"
+        },
+        {
+          "offset": 20661,
+          "name": "WINDOWHITTEST2"
+        },
+        {
+          "offset": 20829,
+          "name": "INWND"
+        },
+        {
+          "offset": 21055,
+          "name": "MULTDIV"
+        },
+        {
+          "offset": 21058,
+          "name": "FARMULTDIV"
+        },
+        {
+          "offset": 21104,
+          "name": "MIN"
+        },
+        {
+          "offset": 21107,
+          "name": "FARMIN"
+        },
+        {
+          "offset": 21120,
+          "name": "MAX"
+        },
+        {
+          "offset": 21123,
+          "name": "FARMAX"
+        },
+        {
+          "offset": 21136,
+          "name": "LFILLSTRUCT"
+        },
+        {
+          "offset": 21139,
+          "name": "FARLFILLSTRUCT"
+        },
+        {
+          "offset": 21176,
+          "name": "LCOPYSTRUCT"
+        },
+        {
+          "offset": 21179,
+          "name": "FARLCOPYSTRUCT"
+        },
+        {
+          "offset": 21237,
+          "name": "PSGETTEXTEXTENT"
+        },
+        {
+          "offset": 21276,
+          "name": "PSTEXTOUT"
+        },
+        {
+          "offset": 21321,
+          "name": "XALLOCH"
+        },
+        {
+          "offset": 21326,
+          "name": "XALLOCP"
+        },
+        {
+          "offset": 21340,
+          "name": "XREALLOCH"
+        },
+        {
+          "offset": 21356,
+          "name": "XFREEH"
+        },
+        {
+          "offset": 21381,
+          "name": "XLOCKH"
+        },
+        {
+          "offset": 21405,
+          "name": "XUNLOCKH"
+        },
+        {
+          "offset": 21427,
+          "name": "TITIME"
+        },
+        {
+          "offset": 21431,
+          "name": "TIMERTABLE"
+        },
+        {
+          "offset": 21719,
+          "name": "TIMERTABLEMAX"
+        },
+        {
+          "offset": 21721,
+          "name": "CTIMERSREADY"
+        },
+        {
+          "offset": 21723,
+          "name": "DTJOURNAL"
+        },
+        {
+          "offset": 21727,
+          "name": "TIMERINTERRUPT"
+        },
+        {
+          "offset": 21825,
+          "name": "GETTICKCOUNT"
+        },
+        {
+          "offset": 21835,
+          "name": "GETTIMERRESOLUTION"
+        },
+        {
+          "offset": 21850,
+          "name": "SETTIMER"
+        },
+        {
+          "offset": 21854,
+          "name": "SETSYSTEMTIMER"
+        },
+        {
+          "offset": 21857,
+          "name": "SETTIMER2"
+        },
+        {
+          "offset": 21993,
+          "name": "KILLTIMER"
+        },
+        {
+          "offset": 21997,
+          "name": "KILLSYSTEMTIMER"
+        },
+        {
+          "offset": 22000,
+          "name": "KILLTIMER2"
+        },
+        {
+          "offset": 22080,
+          "name": "DESTROYTIMERS"
+        },
+        {
+          "offset": 22125,
+          "name": "FINDTIMER"
+        },
+        {
+          "offset": 22169,
+          "name": "CHECKTIMERS"
+        },
+        {
+          "offset": 22285,
+          "name": "GETCURRENTTIME"
+        },
+        {
+          "offset": 22301,
+          "name": "MSTOTICS"
+        },
+        {
+          "offset": 22346,
+          "name": "TICKSTOMSECS"
+        },
+        {
+          "offset": 22374,
+          "name": "VALIDATERGN"
+        },
+        {
+          "offset": 22378,
+          "name": "VALIDATERECT"
+        },
+        {
+          "offset": 22390,
+          "name": "INVALIDATERGN"
+        },
+        {
+          "offset": 22394,
+          "name": "INVALIDATERECT"
+        },
+        {
+          "offset": 22406,
+          "name": "COMPUPDATERECT"
+        },
+        {
+          "offset": 22475,
+          "name": "COMPUPDATERGN"
+        },
+        {
+          "offset": 22536,
+          "name": "FMOUSEMOVED"
+        },
+        {
+          "offset": 22538,
+          "name": "FALTKEYUP"
+        },
+        {
+          "offset": 22539,
+          "name": "FCTRLKEYUP"
+        },
+        {
+          "offset": 22540,
+          "name": "HQSYSQUEUE"
+        },
+        {
+          "offset": 22542,
+          "name": "XCSTODS"
+        },
+        {
+          "offset": 22543,
+          "name": "_CSTODS"
+        },
+        {
+          "offset": 22545,
+          "name": "KEYBD_EVENT"
+        },
+        {
+          "offset": 22571,
+          "name": "SAVEEVENT"
+        },
+        {
+          "offset": 22818,
+          "name": "GETSYSMSG"
+        },
+        {
+          "offset": 22979,
+          "name": "SKIPSYSMSG"
+        },
+        {
+          "offset": 23246,
+          "name": "LPSYSPROC"
+        },
+        {
+          "offset": 23250,
+          "name": "X_MICKEY_RATE"
+        },
+        {
+          "offset": 23252,
+          "name": "Y_MICKEY_RATE"
+        },
+        {
+          "offset": 23254,
+          "name": "CUR_X_MICKEY"
+        },
+        {
+          "offset": 23256,
+          "name": "CUR_Y_MICKEY"
+        },
+        {
+          "offset": 23258,
+          "name": "FSWAPBUTTONS"
+        },
+        {
+          "offset": 23260,
+          "name": "PTTRUECURSOR"
+        },
+        {
+          "offset": 23264,
+          "name": "PTCURSOR"
+        },
+        {
+          "offset": 23268,
+          "name": "RCCURSORCLIP"
+        },
+        {
+          "offset": 23276,
+          "name": "CXSCREENCS"
+        },
+        {
+          "offset": 23278,
+          "name": "CYSCREENCS"
+        },
+        {
+          "offset": 23280,
+          "name": "XMOUSETHRESHOLD"
+        },
+        {
+          "offset": 23282,
+          "name": "YMOUSETHRESHOLD"
+        },
+        {
+          "offset": 23545,
+          "name": "MOUSE_EVENT"
+        },
+        {
+          "offset": 23897,
+          "name": "CLIPCURSOR"
+        },
+        {
+          "offset": 23933,
+          "name": "MIPOSITION"
+        },
+        {
+          "offset": 23936,
+          "name": "FARMIPOSITION"
+        },
+        {
+          "offset": 24026,
+          "name": "SETFMOUSEMOVED"
+        },
+        {
+          "offset": 24033,
+          "name": "FQUEUEDIRTY"
+        },
+        {
+          "offset": 24034,
+          "name": "HQCURRENTSHADOW"
+        },
+        {
+          "offset": 24036,
+          "name": "HQLIST"
+        },
+        {
+          "offset": 24038,
+          "name": "HQLASTASLEEP"
+        },
+        {
+          "offset": 24040,
+          "name": "INITSYSQUEUE"
+        },
+        {
+          "offset": 24074,
+          "name": "CREATEQUEUE"
+        },
+        {
+          "offset": 24121,
+          "name": "CREATEQUEUE2"
+        },
+        {
+          "offset": 24193,
+          "name": "DELETEQUEUE"
+        },
+        {
+          "offset": 24272,
+          "name": "WRITEMESSAGE"
+        },
+        {
+          "offset": 24357,
+          "name": "READMESSAGE"
+        },
+        {
+          "offset": 24518,
+          "name": "DELQENTRY"
+        },
+        {
+          "offset": 24610,
+          "name": "FSAMEHQ"
+        },
+        {
+          "offset": 24627,
+          "name": "FHQSENDING"
+        },
+        {
+          "offset": 24652,
+          "name": "WAKEHQ"
+        },
+        {
+          "offset": 24668,
+          "name": "WAKEHQ1"
+        },
+        {
+          "offset": 24705,
+          "name": "WAKESOMEONE"
+        },
+        {
+          "offset": 24746,
+          "name": "LPQFROMHQ"
+        },
+        {
+          "offset": 24752,
+          "name": "CALLMSGFILTER"
+        },
+        {
+          "offset": 24772,
+          "name": "VALIDATEWINDOWNULL"
+        },
+        {
+          "offset": 24777,
+          "name": "VALIDATEWINDOW"
+        },
+        {
+          "offset": 24838,
+          "name": "WINDOWFROMPOINT"
+        },
+        {
+          "offset": 24856,
+          "name": "SCREENTOWINDOW"
+        },
+        {
+          "offset": 24879,
+          "name": "CLIENTTOSCREEN"
+        },
+        {
+          "offset": 24885,
+          "name": "SCREENTOCLIENT"
+        },
+        {
+          "offset": 24913,
+          "name": "GETWNDRECT"
+        },
+        {
+          "offset": 24934,
+          "name": "GETCLIENTRECT"
+        },
+        {
+          "offset": 25016,
+          "name": "GETWINDOWRECT"
+        },
+        {
+          "offset": 25049,
+          "name": "ISICONIC"
+        },
+        {
+          "offset": 25053,
+          "name": "ISWINDOWENABLED"
+        },
+        {
+          "offset": 25092,
+          "name": "GETWINDOWTEXTLENGTH"
+        },
+        {
+          "offset": 25121,
+          "name": "GETWINDOWTEXT"
+        },
+        {
+          "offset": 25154,
+          "name": "SETWINDOWTEXT"
+        },
+        {
+          "offset": 25190,
+          "name": "GETWINDOWWORD"
+        },
+        {
+          "offset": 25190,
+          "name": "GETWINDOWLONG"
+        },
+        {
+          "offset": 25193,
+          "name": "GETCLASSLONG"
+        },
+        {
+          "offset": 25193,
+          "name": "GETCLASSWORD"
+        },
+        {
+          "offset": 25195,
+          "name": "GETWC2"
+        },
+        {
+          "offset": 25244,
+          "name": "SETWINDOWWORD"
+        },
+        {
+          "offset": 25247,
+          "name": "SETCLASSWORD"
+        },
+        {
+          "offset": 25257,
+          "name": "SETWINDOWLONG"
+        },
+        {
+          "offset": 25260,
+          "name": "SETCLASSLONG"
+        },
+        {
+          "offset": 25262,
+          "name": "SETWC2"
+        },
+        {
+          "offset": 25323,
+          "name": "SETSYSMODALWINDOW"
+        },
+        {
+          "offset": 25344,
+          "name": "GETSYSMODALWINDOW"
+        },
+        {
+          "offset": 25354,
+          "name": "ISWINDOW"
+        },
+        {
+          "offset": 25385,
+          "name": "SZNULL"
+        },
+        {
+          "offset": 25415,
+          "name": "DLGWNDPROC2"
+        },
+        {
+          "offset": 25418,
+          "name": "STATICWNDPROC2"
+        },
+        {
+          "offset": 25421,
+          "name": "ICONWNDPROC2"
+        },
+        {
+          "offset": 25424,
+          "name": "SBWNDPROC2"
+        },
+        {
+          "offset": 25427,
+          "name": "EDITWNDPROC2"
+        },
+        {
+          "offset": 25430,
+          "name": "BUTTONWNDPROC2"
+        },
+        {
+          "offset": 25433,
+          "name": "LBOXCTLWNDPROC2"
+        },
+        {
+          "offset": 25435,
+          "name": "COMMONWNDPROC"
+        },
+        {
+          "offset": 25518,
+          "name": "GETSYSTEMMETRICS"
+        },
+        {
+          "offset": 25540,
+          "name": "MESSAGEBEEP"
+        },
+        {
+          "offset": 25545,
+          "name": "FARLOCKTASK"
+        },
+        {
+          "offset": 25593,
+          "name": "ISCHILD"
+        },
+        {
+          "offset": 25649,
+          "name": "HIDEICONNAME"
+        },
+        {
+          "offset": 25676,
+          "name": "GETMENU"
+        },
+        {
+          "offset": 25696,
+          "name": "SWAPMOUSEBUTTON"
+        },
+        {
+          "offset": 25710,
+          "name": "SETDIVZERO"
+        },
+        {
+          "offset": 25724,
+          "name": "DIVIDEBYZERO"
+        },
+        {
+          "offset": 25741,
+          "name": "SETRECT"
+        },
+        {
+          "offset": 25784,
+          "name": "SETRECTEMPTY"
+        },
+        {
+          "offset": 25818,
+          "name": "COPYRECT"
+        },
+        {
+          "offset": 25857,
+          "name": "ISRECTEMPTY"
+        },
+        {
+          "offset": 25902,
+          "name": "PTINRECT"
+        },
+        {
+          "offset": 25957,
+          "name": "OFFSETRECT"
+        },
+        {
+          "offset": 26000,
+          "name": "INFLATERECT"
+        },
+        {
+          "offset": 26043,
+          "name": "INTERSECTRECT"
+        },
+        {
+          "offset": 26140,
+          "name": "UNIONRECT"
+        },
+        {
+          "offset": 26282,
+          "name": "FILLRECT"
+        },
+        {
+          "offset": 26355,
+          "name": "INVERTRECT"
+        },
+        {
+          "offset": 26387,
+          "name": "LRCCFRAME"
+        },
+        {
+          "offset": 26538,
+          "name": "FRAMERECT"
+        },
+        {
+          "offset": 26565,
+          "name": "LRCIFRAME"
+        },
+        {
+          "offset": 26603,
+          "name": "DEFWINDOWPROC"
+        },
+        {
+          "offset": 27737,
+          "name": "DEFSETTEXT"
+        },
+        {
+          "offset": 27844,
+          "name": "NEXTTOPWINDOW"
+        },
+        {
+          "offset": 27946,
+          "name": "NEXTTOPWINDOW1"
+        },
+        {
+          "offset": 28056,
+          "name": "NEXTTOPWINDOW2"
+        },
+        {
+          "offset": 28176,
+          "name": "NEXTTOPWINDOW3"
+        },
+        {
+          "offset": 28281,
+          "name": "ENUMICONWNDS"
+        },
+        {
+          "offset": 28331,
+          "name": "GETACTIVEWINDOW"
+        },
+        {
+          "offset": 28349,
+          "name": "NEXTPOPUPWND"
+        },
+        {
+          "offset": 28453,
+          "name": "NEXTPOPUPWND1"
+        },
+        {
+          "offset": 28510,
+          "name": "NEXTPOPUPWND2"
+        },
+        {
+          "offset": 28754,
+          "name": "NEXTWINDOW"
+        },
+        {
+          "offset": 29270,
+          "name": "MESSAGEBOXWNDPROC"
+        },
+        {
+          "offset": 29715,
+          "name": "UPDATEBUTTON"
+        },
+        {
+          "offset": 30046,
+          "name": "MBFILL"
+        },
+        {
+          "offset": 30138,
+          "name": "DRAWMESSAGEBOX"
+        },
+        {
+          "offset": 30706,
+          "name": "MSGBOXKEYS"
+        },
+        {
+          "offset": 30998,
+          "name": "MESSAGEBOX"
+        },
+        {
+          "offset": 32542,
+          "name": "GETICON"
+        },
+        {
+          "offset": 32598,
+          "name": "DRAWPUSHBUTTON"
+        },
+        {
+          "offset": 33168,
+          "name": "DRAWCORNER"
+        },
+        {
+          "offset": 33372,
+          "name": "ENUMWINDOWS"
+        },
+        {
+          "offset": 33396,
+          "name": "ENUMCHILDWINDOWS"
+        },
+        {
+          "offset": 33441,
+          "name": "ENUMTILEDWINDOWS"
+        },
+        {
+          "offset": 33511,
+          "name": "ENUMWINDOWLIST"
+        },
+        {
+          "offset": 33589,
+          "name": "ENUMALLWINDOWS"
+        },
+        {
+          "offset": 33706,
+          "name": "CANCELMODE"
+        },
+        {
+          "offset": 33765,
+          "name": "CREATECARET"
+        },
+        {
+          "offset": 33929,
+          "name": "CARETSET"
+        },
+        {
+          "offset": 33986,
+          "name": "DESTROYCARET"
+        },
+        {
+          "offset": 34005,
+          "name": "DESTROYCARET2"
+        },
+        {
+          "offset": 34056,
+          "name": "SETCARETPOS"
+        },
+        {
+          "offset": 34187,
+          "name": "GETCARETPOS"
+        },
+        {
+          "offset": 34209,
+          "name": "HIDECARET"
+        },
+        {
+          "offset": 34233,
+          "name": "HIDECARET2"
+        },
+        {
+          "offset": 34262,
+          "name": "SHOWCARET"
+        },
+        {
+          "offset": 34286,
+          "name": "SHOWCARET2"
+        },
+        {
+          "offset": 34339,
+          "name": "CARETBLINKPROC"
+        },
+        {
+          "offset": 34376,
+          "name": "INVERTCARET"
+        },
+        {
+          "offset": 34440,
+          "name": "DRAWCARET"
+        },
+        {
+          "offset": 34592,
+          "name": "SETCARETBLINKTIME"
+        },
+        {
+          "offset": 34652,
+          "name": "GETCARETBLINKTIME"
+        },
+        {
+          "offset": 34661,
+          "name": "INTILED_ICONICWINDOWS"
+        },
+        {
+          "offset": 34668,
+          "name": "INVALIDATEALLDCS"
+        },
+        {
+          "offset": 34675,
+          "name": "SHOWOWNEDWINDOWS"
+        },
+        {
+          "offset": 34682,
+          "name": "SCREENUPDATERGN"
+        },
+        {
+          "offset": 34689,
+          "name": "ACTIVATEWINDOW"
+        },
+        {
+          "offset": 34696,
+          "name": "CALCALLVISRGNS"
+        },
+        {
+          "offset": 34703,
+          "name": "OFFSETCHILDREN"
+        },
+        {
+          "offset": 34710,
+          "name": "CALCWNDVISRGN"
+        },
+        {
+          "offset": 34717,
+          "name": "ONEWNDREPAINT"
+        },
+        {
+          "offset": 34724,
+          "name": "EXCLUDEPOPUPS"
+        },
+        {
+          "offset": 34731,
+          "name": "OPENWNDPROLOG"
+        },
+        {
+          "offset": 34738,
+          "name": "INVALIDATEDC"
+        },
+        {
+          "offset": 34745,
+          "name": "GETSCREENDC"
+        },
+        {
+          "offset": 34752,
+          "name": "SWAPWINDOWS"
+        },
+        {
+          "offset": 34759,
+          "name": "ONEWNDPAINT"
+        },
+        {
+          "offset": 34766,
+          "name": "STARTRETILE"
+        },
+        {
+          "offset": 34773,
+          "name": "FRAMEWINDOW"
+        },
+        {
+          "offset": 34780,
+          "name": "GETPREVWND"
+        },
+        {
+          "offset": 34787,
+          "name": "COMPCLIENT"
+        },
+        {
+          "offset": 34794,
+          "name": "RELEASEADC"
+        },
+        {
+          "offset": 34801,
+          "name": "SETNEWRECT"
+        },
+        {
+          "offset": 34808,
+          "name": "CISETCURS"
+        },
+        {
+          "offset": 34815,
+          "name": "UNLINKWND"
+        },
+        {
+          "offset": 34822,
+          "name": "MODELOOP"
+        },
+        {
+          "offset": 34829,
+          "name": "CLOSEWND"
+        },
+        {
+          "offset": 34836,
+          "name": "LOCKTASK"
+        },
+        {
+          "offset": 34843,
+          "name": "CAPTURE"
+        },
+        {
+          "offset": 34850,
+          "name": "LINKWND"
+        },
+        {
+          "offset": 34857,
+          "name": "CIHIDE"
+        },
+        {
+          "offset": 34864,
+          "name": "CISHOW"
+        },
+        {
+          "offset": 34881,
+          "name": "OPENCOMM"
+        },
+        {
+          "offset": 34944,
+          "name": "__chkstk"
+        },
+        {
+          "offset": 34944,
+          "name": "_chkstk"
+        },
+        {
+          "offset": 34944,
+          "name": "chkstk"
+        },
+        {
+          "offset": 34973,
+          "name": "__astkovr"
+        },
+        {
+          "offset": 34976,
+          "name": "__cintDIV"
+        },
+        {
+          "offset": 34979,
+          "name": "__fptrap"
+        },
+        {
+          "offset": 34988,
+          "name": "_TEXT_NEARFRAME"
+        },
+        {
+          "offset": 35054,
+          "name": "_TEXT_FARFRAMEX"
+        },
+        {
+          "offset": 35055,
+          "name": "_TEXT_FARFRAME"
+        }
+      ]
+    },
+    {
+      "name": "_MENU1",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "MENUDRAW"
+        },
+        {
+          "offset": 501,
+          "name": "MENUPRINT"
+        },
+        {
+          "offset": 538,
+          "name": "DRAWITEM"
+        },
+        {
+          "offset": 732,
+          "name": "MENUPTINCMD"
+        },
+        {
+          "offset": 1003,
+          "name": "MENUPPOST"
+        },
+        {
+          "offset": 1271,
+          "name": "PRINTMENUSTRING"
+        },
+        {
+          "offset": 1575,
+          "name": "MOUSECATCH"
+        },
+        {
+          "offset": 1739,
+          "name": "MOUSETRACK"
+        },
+        {
+          "offset": 2087,
+          "name": "NEXTITEM"
+        },
+        {
+          "offset": 2369,
+          "name": "FINDITEMINCOLUMN"
+        },
+        {
+          "offset": 2555,
+          "name": "KILLSTATE"
+        },
+        {
+          "offset": 2770,
+          "name": "DESTROYMENUPOPUP"
+        },
+        {
+          "offset": 2883,
+          "name": "LOOSESTATE"
+        },
+        {
+          "offset": 2970,
+          "name": "KEYCATCH"
+        },
+        {
+          "offset": 3085,
+          "name": "MENUKEYFILTER"
+        },
+        {
+          "offset": 3860,
+          "name": "MENULOOP"
+        },
+        {
+          "offset": 4116,
+          "name": "MENUSWITCH"
+        },
+        {
+          "offset": 4246,
+          "name": "UNLOCKPOPUP"
+        },
+        {
+          "offset": 4275,
+          "name": "LOCKPOPUP"
+        },
+        {
+          "offset": 4311,
+          "name": "VKCONVERT"
+        },
+        {
+          "offset": 4415,
+          "name": "FINDMENUCHAR"
+        },
+        {
+          "offset": 4571,
+          "name": "ENUMITEMS"
+        },
+        {
+          "offset": 4685,
+          "name": "TRUEMENU"
+        },
+        {
+          "offset": 4743,
+          "name": "SYSMENU"
+        },
+        {
+          "offset": 4805,
+          "name": "LOCKSYSTEM"
+        },
+        {
+          "offset": 4891,
+          "name": "SETSIZESYSMENU"
+        },
+        {
+          "offset": 4979,
+          "name": "ENDMENU"
+        },
+        {
+          "offset": 5032,
+          "name": "FARINITSYSMENU"
+        },
+        {
+          "offset": 5285,
+          "name": "FINDCHARPOSITION"
+        },
+        {
+          "offset": 5345,
+          "name": "MENUINVERT"
+        },
+        {
+          "offset": 5587,
+          "name": "ITEMSIZE"
+        },
+        {
+          "offset": 5754,
+          "name": "MENUSDRAW"
+        },
+        {
+          "offset": 5930,
+          "name": "MENUWNDPROC"
+        },
+        {
+          "offset": 6063,
+          "name": "INDEX1"
+        }
+      ]
+    },
+    {
+      "name": "_MENU2",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "MENUCOMPUTE"
+        },
+        {
+          "offset": 487,
+          "name": "DRAWMENUBAR1"
+        },
+        {
+          "offset": 535,
+          "name": "SETMENU"
+        },
+        {
+          "offset": 594,
+          "name": "DRAWMENUBAR"
+        },
+        {
+          "offset": 634,
+          "name": "LOADACCELERATORS"
+        },
+        {
+          "offset": 693,
+          "name": "TRANSLATEACCELERATOR"
+        },
+        {
+          "offset": 1196,
+          "name": "ACCELERATEMENU"
+        },
+        {
+          "offset": 1393,
+          "name": "GETMENUSTRING"
+        },
+        {
+          "offset": 1512,
+          "name": "HILITEMENUITEM"
+        },
+        {
+          "offset": 1594,
+          "name": "FINDMENUBARINDEX"
+        },
+        {
+          "offset": 1731,
+          "name": "CHANGEMENU"
+        },
+        {
+          "offset": 2290,
+          "name": "GETSYSTEMMENU"
+        },
+        {
+          "offset": 2415,
+          "name": "INDEX2"
+        },
+        {
+          "offset": 2425,
+          "name": "LOOKUPMENUITEM"
+        },
+        {
+          "offset": 2601,
+          "name": "SAVESTRING"
+        },
+        {
+          "offset": 2671,
+          "name": "CREATEMENU"
+        },
+        {
+          "offset": 2733,
+          "name": "DESTROYMENU"
+        },
+        {
+          "offset": 2809,
+          "name": "ENABLEMENUITEM"
+        },
+        {
+          "offset": 2814,
+          "name": "CHECKMENUITEM"
+        },
+        {
+          "offset": 2817,
+          "name": "MENUITEMSTATE"
+        },
+        {
+          "offset": 2891,
+          "name": "FREEITEM"
+        },
+        {
+          "offset": 2938,
+          "name": "GETSUBMENU"
+        },
+        {
+          "offset": 3028,
+          "name": "RECALCTABSTRINGS"
+        }
+      ]
+    },
+    {
+      "name": "_INIT",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "LOADPROC"
+        },
+        {
+          "offset": 47,
+          "name": "LOADWINDOWS"
+        },
+        {
+          "offset": 217,
+          "name": "TILEINIT"
+        },
+        {
+          "offset": 381,
+          "name": "BRUSHINIT"
+        },
+        {
+          "offset": 501,
+          "name": "CREATEBITS"
+        },
+        {
+          "offset": 563,
+          "name": "OEMDEPENDENTINIT"
+        },
+        {
+          "offset": 1238,
+          "name": "MOUSEINIT"
+        },
+        {
+          "offset": 1279,
+          "name": "EVENTINIT"
+        },
+        {
+          "offset": 1337,
+          "name": "DRIVERSINIT"
+        },
+        {
+          "offset": 1518,
+          "name": "INITFOCUS"
+        },
+        {
+          "offset": 1529,
+          "name": "DCINIT"
+        },
+        {
+          "offset": 1757,
+          "name": "LOADRESOURCES"
+        },
+        {
+          "offset": 2120,
+          "name": "GETCLRVAL"
+        },
+        {
+          "offset": 2232,
+          "name": "COLORINIT"
+        },
+        {
+          "offset": 2382,
+          "name": "INITSYSMETRICS"
+        },
+        {
+          "offset": 2581,
+          "name": "FARTILEFIRSTWND"
+        },
+        {
+          "offset": 2709,
+          "name": "LOADWINSTRINGS"
+        },
+        {
+          "offset": 2845,
+          "name": "LOADFONTS"
+        },
+        {
+          "offset": 3157,
+          "name": "REGISTERWINDOWS"
+        },
+        {
+          "offset": 3194,
+          "name": "REGISTERICON"
+        },
+        {
+          "offset": 3305,
+          "name": "REGISTERMENUS"
+        },
+        {
+          "offset": 3380,
+          "name": "REGISTERBUTTON"
+        },
+        {
+          "offset": 3462,
+          "name": "REGISTERDLG"
+        },
+        {
+          "offset": 3548,
+          "name": "REGISTERSTATIC"
+        },
+        {
+          "offset": 3630,
+          "name": "REGISTERMB"
+        },
+        {
+          "offset": 3712,
+          "name": "REGISTEREDIT"
+        },
+        {
+          "offset": 3794,
+          "name": "LOADCLIPBOARD"
+        },
+        {
+          "offset": 4191,
+          "name": "REGISTERLBOXCTL"
+        },
+        {
+          "offset": 4277,
+          "name": "REGISTERINW"
+        },
+        {
+          "offset": 4370,
+          "name": "REGISTERSB"
+        }
+      ]
+    },
+    {
+      "name": "_RES",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "LOADMENU"
+        },
+        {
+          "offset": 116,
+          "name": "MENULOAD2"
+        },
+        {
+          "offset": 275,
+          "name": "CRUNCHX2"
+        },
+        {
+          "offset": 374,
+          "name": "CRUNCHY"
+        },
+        {
+          "offset": 490,
+          "name": "LOADCURSORICONBITMAP"
+        },
+        {
+          "offset": 579,
+          "name": "LOADCURSOR"
+        },
+        {
+          "offset": 616,
+          "name": "LOADICON"
+        },
+        {
+          "offset": 653,
+          "name": "LOADSTRING"
+        },
+        {
+          "offset": 835,
+          "name": "LOADCURSORICONHANDLER"
+        },
+        {
+          "offset": 1410,
+          "name": "LOADBITMAP"
+        }
+      ]
+    },
+    {
+      "name": "_KEYCONV",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "CREATECONVERTWINDOW"
+        },
+        {
+          "offset": 87,
+          "name": "SHOWCONVERTWINDOW"
+        },
+        {
+          "offset": 137,
+          "name": "SETCONVERTWINDOWHEIGHT"
+        },
+        {
+          "offset": 205,
+          "name": "ISTWOBYTECHARPREFIX"
+        },
+        {
+          "offset": 265,
+          "name": "SYSHASKANJI"
+        }
+      ]
+    },
+    {
+      "name": "_CREAT",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "REGISTERCLASS"
+        },
+        {
+          "offset": 217,
+          "name": "GETCLASSNAME"
+        },
+        {
+          "offset": 277,
+          "name": "FINDNAMEINCLM"
+        },
+        {
+          "offset": 396,
+          "name": "FINDWINDOW"
+        },
+        {
+          "offset": 499,
+          "name": "PURGECLASS"
+        },
+        {
+          "offset": 623,
+          "name": "DESTROYTASKWINDOWS2"
+        },
+        {
+          "offset": 702,
+          "name": "DESTROYTASKWINDOWS"
+        },
+        {
+          "offset": 765,
+          "name": "DESTROYALLCHILDREN"
+        }
+      ]
+    },
+    {
+      "name": "_SCRLBAR",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "SBPOSFROMPX"
+        },
+        {
+          "offset": 72,
+          "name": "CALCSBSTUFF"
+        },
+        {
+          "offset": 249,
+          "name": "CALCSBSTUFF2"
+        },
+        {
+          "offset": 497,
+          "name": "TRACKTHUMB"
+        },
+        {
+          "offset": 645,
+          "name": "MOVETHUMB"
+        },
+        {
+          "offset": 771,
+          "name": "INVERTTHUMB"
+        },
+        {
+          "offset": 817,
+          "name": "SBTRACKINIT"
+        },
+        {
+          "offset": 1369,
+          "name": "CONTSCROLL"
+        },
+        {
+          "offset": 1485,
+          "name": "TRACKBOX"
+        },
+        {
+          "offset": 1662,
+          "name": "DOSCROLL"
+        },
+        {
+          "offset": 1734,
+          "name": "DRAWSCROLLBAR"
+        },
+        {
+          "offset": 1773,
+          "name": "DRAWSB2"
+        },
+        {
+          "offset": 2443,
+          "name": "HIDESHOWTHUMB"
+        },
+        {
+          "offset": 2476,
+          "name": "DRAWTHUMB"
+        },
+        {
+          "offset": 2557,
+          "name": "DRAWTHUMB2"
+        },
+        {
+          "offset": 2795,
+          "name": "INVERTSCROLLHILITE"
+        },
+        {
+          "offset": 2837,
+          "name": "PSINVERTRECT"
+        },
+        {
+          "offset": 2890,
+          "name": "PSFILLRECT"
+        },
+        {
+          "offset": 2946,
+          "name": "SELECTCOLOROBJECTS"
+        },
+        {
+          "offset": 3052,
+          "name": "MINSB"
+        },
+        {
+          "offset": 3077,
+          "name": "MAXSB"
+        },
+        {
+          "offset": 3102,
+          "name": "SBWNDPROC"
+        },
+        {
+          "offset": 4119,
+          "name": "SBCTLSETUP"
+        },
+        {
+          "offset": 4176,
+          "name": "GETSCROLLPOS"
+        },
+        {
+          "offset": 4267,
+          "name": "SETSCROLLPOS"
+        },
+        {
+          "offset": 4353,
+          "name": "GETSCROLLRANGE"
+        },
+        {
+          "offset": 4488,
+          "name": "SETSCROLLRANGE"
+        },
+        {
+          "offset": 4576,
+          "name": "SETSCROLLBAR"
+        },
+        {
+          "offset": 4920,
+          "name": "SETSBCARETPOS"
+        },
+        {
+          "offset": 4994,
+          "name": "ENDSCROLL"
+        }
+      ]
+    },
+    {
+      "name": "_ICON",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "ICONDRAG"
+        },
+        {
+          "offset": 158,
+          "name": "FARFOPENICON"
+        },
+        {
+          "offset": 215,
+          "name": "MOVEICON"
+        },
+        {
+          "offset": 249,
+          "name": "MOVEICON1"
+        },
+        {
+          "offset": 435,
+          "name": "SETICONNULLVISRGN"
+        },
+        {
+          "offset": 476,
+          "name": "ICONWNDPROC"
+        },
+        {
+          "offset": 1091,
+          "name": "MAPINDEXTOWINDOWRECT"
+        },
+        {
+          "offset": 1178,
+          "name": "GETICONSLOTRECT"
+        },
+        {
+          "offset": 1259,
+          "name": "MAPICONPOINTTOINDEX"
+        },
+        {
+          "offset": 1350,
+          "name": "OPENICONSLOT"
+        },
+        {
+          "offset": 1400,
+          "name": "CHANGEICONWINDOWHEIGHT"
+        },
+        {
+          "offset": 1445,
+          "name": "CLOSEICONSLOT"
+        },
+        {
+          "offset": 1575,
+          "name": "PNTICONNEWAREA"
+        },
+        {
+          "offset": 1655,
+          "name": "CHANGEINHEIGHT"
+        },
+        {
+          "offset": 1691,
+          "name": "ICONWNDHEIGHT"
+        },
+        {
+          "offset": 1717,
+          "name": "PAINTICON"
+        },
+        {
+          "offset": 1944,
+          "name": "PAINTICONICWINDOW"
+        },
+        {
+          "offset": 2033,
+          "name": "ICONWNDPNT"
+        },
+        {
+          "offset": 2083,
+          "name": "MAKEICONIC1"
+        },
+        {
+          "offset": 2271,
+          "name": "MAKEICONIC"
+        },
+        {
+          "offset": 2307,
+          "name": "DELICON"
+        },
+        {
+          "offset": 2399,
+          "name": "ISICONSLOTUSED"
+        },
+        {
+          "offset": 2433,
+          "name": "ICONWNDOPEN"
+        },
+        {
+          "offset": 2522,
+          "name": "FARDELIBERATEICONNAME"
+        },
+        {
+          "offset": 2680,
+          "name": "SHOWICONNAME"
+        },
+        {
+          "offset": 2908,
+          "name": "ICONNAMEWNDPROC"
+        },
+        {
+          "offset": 3031,
+          "name": "GETICONTEXT"
+        }
+      ]
+    },
+    {
+      "name": "_EXIT",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "EXITWINDOWS"
+        },
+        {
+          "offset": 124,
+          "name": "FQUERYQUIT"
+        },
+        {
+          "offset": 152,
+          "name": "FQUERYQUIT2"
+        },
+        {
+          "offset": 232,
+          "name": "INPENABLE"
+        },
+        {
+          "offset": 347,
+          "name": "INPDISABLE"
+        },
+        {
+          "offset": 414,
+          "name": "DISABLEOEMLAYER"
+        },
+        {
+          "offset": 453,
+          "name": "ENABLEOEMLAYER"
+        }
+      ]
+    },
+    {
+      "name": "_CLR",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "SETSYSCOLORS"
+        }
+      ]
+    },
+    {
+      "name": "_TILE",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "REDRAWDESK"
+        },
+        {
+          "offset": 93,
+          "name": "RECALCALLCLMSWNDSHEIGHTS"
+        },
+        {
+          "offset": 129,
+          "name": "CALCALLWNDSHEIGHTS"
+        },
+        {
+          "offset": 165,
+          "name": "CALCHEIGHTS"
+        },
+        {
+          "offset": 497,
+          "name": "CALCALLCLMSWIDTHS"
+        },
+        {
+          "offset": 526,
+          "name": "CALCWIDTHS"
+        },
+        {
+          "offset": 668,
+          "name": "SETLRFROMPCLM"
+        },
+        {
+          "offset": 739,
+          "name": "RECALCPNTWITHDELETECLM"
+        },
+        {
+          "offset": 790,
+          "name": "RECALCPNTWITHINSERTCLM"
+        },
+        {
+          "offset": 838,
+          "name": "PAINTNEARCLMS"
+        },
+        {
+          "offset": 963,
+          "name": "RECALCPNTWITHINSERTWND"
+        },
+        {
+          "offset": 1023,
+          "name": "RECALCPNTWITHDELETEWND"
+        },
+        {
+          "offset": 1073,
+          "name": "PAINTNEARWNDS"
+        },
+        {
+          "offset": 1243,
+          "name": "OPENINCLM"
+        },
+        {
+          "offset": 1523,
+          "name": "CLOSEINCLM"
+        },
+        {
+          "offset": 1822,
+          "name": "CHGDESKHEIGHT"
+        },
+        {
+          "offset": 1894,
+          "name": "FARPAINTDESK"
+        },
+        {
+          "offset": 2023,
+          "name": "SCRNTOGGLE"
+        },
+        {
+          "offset": 2128,
+          "name": "SCRNFULL"
+        },
+        {
+          "offset": 2271,
+          "name": "NEGSCRNFULL"
+        },
+        {
+          "offset": 2390,
+          "name": "CALCSIZEHEIGHTS"
+        },
+        {
+          "offset": 2677,
+          "name": "WINSIZE"
+        },
+        {
+          "offset": 2894,
+          "name": "SIZECLMPNT"
+        },
+        {
+          "offset": 2985,
+          "name": "MOVETONEWPOS"
+        },
+        {
+          "offset": 3200,
+          "name": "MOVETOCLM"
+        },
+        {
+          "offset": 3759,
+          "name": "OFFSETWNDPOS"
+        },
+        {
+          "offset": 3860,
+          "name": "ADJUSTHEIGHTS"
+        },
+        {
+          "offset": 3913,
+          "name": "ADJUSTWIDTHS"
+        },
+        {
+          "offset": 3999,
+          "name": "OFFSETCLMXPOS"
+        },
+        {
+          "offset": 4072,
+          "name": "SOPENICON"
+        },
+        {
+          "offset": 4101,
+          "name": "FINDMOUSEPOS"
+        },
+        {
+          "offset": 4558,
+          "name": "CALCSIZEWIDTHS"
+        },
+        {
+          "offset": 4730,
+          "name": "GETNEXTCLMLEFT"
+        },
+        {
+          "offset": 4734,
+          "name": "GETPREVCLMRIGHT"
+        },
+        {
+          "offset": 4785,
+          "name": "ANYSCRNFULL"
+        },
+        {
+          "offset": 4789,
+          "name": "GETPREVWNDBOTTOM"
+        },
+        {
+          "offset": 4792,
+          "name": "GETNEXTWNDTOP"
+        },
+        {
+          "offset": 4847,
+          "name": "INITMOVESIZETILEDWND"
+        },
+        {
+          "offset": 4997,
+          "name": "INITTRACKTILEDSIZE"
+        },
+        {
+          "offset": 5150,
+          "name": "TRACKTILEDSIZE"
+        },
+        {
+          "offset": 6130,
+          "name": "HILITEBOUNDS"
+        },
+        {
+          "offset": 6368,
+          "name": "GETMAX"
+        },
+        {
+          "offset": 6557,
+          "name": "TRACKTILEDMOVE"
+        },
+        {
+          "offset": 6759,
+          "name": "NEXTHOTSPOT"
+        },
+        {
+          "offset": 7349,
+          "name": "INITCURPOS"
+        },
+        {
+          "offset": 7484,
+          "name": "CONTTRACK"
+        },
+        {
+          "offset": 7593,
+          "name": "TRACKPOPUP"
+        },
+        {
+          "offset": 7842,
+          "name": "MOVETOTRUEPOS"
+        },
+        {
+          "offset": 7892,
+          "name": "INVERTFRAME"
+        },
+        {
+          "offset": 8000,
+          "name": "INITTRACKPOPUP"
+        },
+        {
+          "offset": 8152,
+          "name": "TOPBOTPAINT"
+        },
+        {
+          "offset": 8185,
+          "name": "BOTTOPPAINT"
+        },
+        {
+          "offset": 8220,
+          "name": "SPLITPAINT"
+        },
+        {
+          "offset": 8255,
+          "name": "SPLITCLMSPAINT"
+        },
+        {
+          "offset": 8283,
+          "name": "LEFTRIGHTCLMPAINT"
+        },
+        {
+          "offset": 8329,
+          "name": "RIGHTLEFTCLMPAINT"
+        },
+        {
+          "offset": 8377,
+          "name": "DELCLM"
+        },
+        {
+          "offset": 8465,
+          "name": "INCCLMNO"
+        },
+        {
+          "offset": 8499,
+          "name": "INSERTCLM"
+        }
+      ]
+    },
+    {
+      "name": "_DLGMGR",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "CREATEDIALOG"
+        },
+        {
+          "offset": 1098,
+          "name": "DLGSETFOCUS"
+        },
+        {
+          "offset": 1155,
+          "name": "GETFIRSTTAB"
+        },
+        {
+          "offset": 1213,
+          "name": "GETDLGITEM"
+        },
+        {
+          "offset": 1274,
+          "name": "SETDLGITEMTEXT"
+        },
+        {
+          "offset": 1327,
+          "name": "GETDLGITEMTEXT"
+        },
+        {
+          "offset": 1387,
+          "name": "SENDDLGITEMMESSAGE"
+        },
+        {
+          "offset": 1451,
+          "name": "CHECKDLGBUTTON"
+        },
+        {
+          "offset": 1509,
+          "name": "ISDLGBUTTONCHECKED"
+        },
+        {
+          "offset": 1569,
+          "name": "SETDLGITEMINT"
+        },
+        {
+          "offset": 1665,
+          "name": "CVTDEC"
+        },
+        {
+          "offset": 1736,
+          "name": "GETDLGITEMINT"
+        },
+        {
+          "offset": 1960,
+          "name": "DLGWNDPROC"
+        },
+        {
+          "offset": 2194,
+          "name": "SKIPSZ"
+        },
+        {
+          "offset": 2238,
+          "name": "MAPDIALOGRECT"
+        },
+        {
+          "offset": 2367,
+          "name": "CHECKRADIOBUTTON"
+        },
+        {
+          "offset": 2427,
+          "name": "ADJUSTWINDOWRECT"
+        },
+        {
+          "offset": 2545,
+          "name": "ISDIALOGMESSAGE"
+        },
+        {
+          "offset": 2820,
+          "name": "NEXTENABLEDGROUPITEM"
+        },
+        {
+          "offset": 2893,
+          "name": "NEXTGROUPITEM"
+        },
+        {
+          "offset": 2947,
+          "name": "PREVGROUPITEM"
+        },
+        {
+          "offset": 3007,
+          "name": "NEXTCHILD"
+        },
+        {
+          "offset": 3037,
+          "name": "PREVCHILD"
+        },
+        {
+          "offset": 3084,
+          "name": "DIALOGTAB"
+        },
+        {
+          "offset": 3187,
+          "name": "GETFIRSTLEVELCHILD"
+        },
+        {
+          "offset": 3238,
+          "name": "FGROUPHWND"
+        }
+      ]
+    },
+    {
+      "name": "_CTLMGR",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "DRAWTEXT"
+        },
+        {
+          "offset": 761,
+          "name": "TABTEXT"
+        },
+        {
+          "offset": 1031,
+          "name": "TABSKIP"
+        },
+        {
+          "offset": 1091,
+          "name": "DIALOGBOX"
+        },
+        {
+          "offset": 1391,
+          "name": "ENDDIALOG"
+        },
+        {
+          "offset": 1503,
+          "name": "SKIPWORD"
+        }
+      ]
+    },
+    {
+      "name": "_EC1",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "EDDRAWCARET"
+        },
+        {
+          "offset": 78,
+          "name": "EDINSERT"
+        },
+        {
+          "offset": 265,
+          "name": "EDCLIP"
+        },
+        {
+          "offset": 367,
+          "name": "SETUPEDDC"
+        },
+        {
+          "offset": 417,
+          "name": "RELEASEEDDC"
+        },
+        {
+          "offset": 457,
+          "name": "FMTRESET"
+        },
+        {
+          "offset": 707,
+          "name": "EDITWNDPROC"
+        },
+        {
+          "offset": 1310,
+          "name": "EDCREATE"
+        },
+        {
+          "offset": 1462,
+          "name": "CHANGEEDSEL"
+        },
+        {
+          "offset": 1652,
+          "name": "EDREPAINT"
+        },
+        {
+          "offset": 1701,
+          "name": "SETEDTEXT"
+        },
+        {
+          "offset": 1701,
+          "name": "LSETEDTEXT"
+        },
+        {
+          "offset": 1795,
+          "name": "ICHFROMPT"
+        },
+        {
+          "offset": 1912,
+          "name": "EDTRACKMOUSE"
+        },
+        {
+          "offset": 2163,
+          "name": "MINA"
+        },
+        {
+          "offset": 2172,
+          "name": "MAXA"
+        },
+        {
+          "offset": 2233,
+          "name": "DOKEY"
+        },
+        {
+          "offset": 2233,
+          "name": "XDOKEY"
+        },
+        {
+          "offset": 2663,
+          "name": "XPTFROMSEL2"
+        },
+        {
+          "offset": 2663,
+          "name": "PTFROMSEL2"
+        },
+        {
+          "offset": 2712,
+          "name": "HIDESEL"
+        },
+        {
+          "offset": 2765,
+          "name": "EDNOTIFYPARENT"
+        },
+        {
+          "offset": 2795,
+          "name": "EA1MARK"
+        }
+      ]
+    },
+    {
+      "name": "_EC2",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "SEDWNDPROC"
+        },
+        {
+          "offset": 526,
+          "name": "SEDCHARINPUT"
+        },
+        {
+          "offset": 890,
+          "name": "SEDPTFROMICH"
+        },
+        {
+          "offset": 953,
+          "name": "SEDCHECKHSCROLL"
+        },
+        {
+          "offset": 1076,
+          "name": "SEDDRAWLINE"
+        },
+        {
+          "offset": 1294,
+          "name": "SEDDELETE"
+        },
+        {
+          "offset": 1401,
+          "name": "SEDINVERTSEL"
+        }
+      ]
+    },
+    {
+      "name": "_EC3",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "MEDWNDPROC"
+        },
+        {
+          "offset": 937,
+          "name": "MEDPAINT"
+        },
+        {
+          "offset": 1150,
+          "name": "FMTINIT"
+        },
+        {
+          "offset": 1313,
+          "name": "MEDCHARINPUT"
+        },
+        {
+          "offset": 1803,
+          "name": "MEDPTFROMICH"
+        },
+        {
+          "offset": 1918,
+          "name": "ILFROMICH"
+        },
+        {
+          "offset": 2046,
+          "name": "MEDCALCRECT"
+        },
+        {
+          "offset": 2183,
+          "name": "ENSURESELECTIONVISIBLE"
+        },
+        {
+          "offset": 2439,
+          "name": "MEDLINELENGTH"
+        },
+        {
+          "offset": 2548,
+          "name": "MEDSIZE"
+        },
+        {
+          "offset": 2825,
+          "name": "MEDSELLINELENGTH"
+        },
+        {
+          "offset": 2963,
+          "name": "MEDDRAWLINES"
+        },
+        {
+          "offset": 3194,
+          "name": "TEXTDRAW"
+        },
+        {
+          "offset": 3269,
+          "name": "MEDINSERT"
+        },
+        {
+          "offset": 3364,
+          "name": "REFORMATALL"
+        },
+        {
+          "offset": 3796,
+          "name": "MEDINVERTSELRECT"
+        },
+        {
+          "offset": 4022,
+          "name": "FSCANCRLF"
+        },
+        {
+          "offset": 4073,
+          "name": "MEDICHFROMPT"
+        },
+        {
+          "offset": 4333,
+          "name": "GETPOSDELTA"
+        },
+        {
+          "offset": 4417,
+          "name": "MEDPAGEUPORDOWN"
+        },
+        {
+          "offset": 4561,
+          "name": "NEXTWORD"
+        },
+        {
+          "offset": 4842,
+          "name": "MEDUPDATE"
+        },
+        {
+          "offset": 5064,
+          "name": "MEDDELETE"
+        },
+        {
+          "offset": 5223,
+          "name": "ISCRLF"
+        },
+        {
+          "offset": 5247,
+          "name": "MEDCHANGECARET"
+        },
+        {
+          "offset": 5462,
+          "name": "MEDEXPANDTABS"
+        },
+        {
+          "offset": 5746,
+          "name": "GROWMPILICH"
+        },
+        {
+          "offset": 5796,
+          "name": "MEDDRAWTEXT"
+        },
+        {
+          "offset": 6060,
+          "name": "MEDREPLACE"
+        },
+        {
+          "offset": 6411,
+          "name": "MAKEUNDO"
+        },
+        {
+          "offset": 6603,
+          "name": "UNDO"
+        },
+        {
+          "offset": 6739,
+          "name": "MEDCHECKCURSORWRAP"
+        },
+        {
+          "offset": 6878,
+          "name": "MEDGETLINE"
+        },
+        {
+          "offset": 6985,
+          "name": "ILBACKCHECK"
+        },
+        {
+          "offset": 7038,
+          "name": "MEDUNDOEDIT"
+        },
+        {
+          "offset": 7336,
+          "name": "RESETUNDO"
+        },
+        {
+          "offset": 7432,
+          "name": "MEDSTRIPCRCRLF"
+        },
+        {
+          "offset": 7516,
+          "name": "MEDFORMATLINES"
+        },
+        {
+          "offset": 7878,
+          "name": "MEDCANUNDO"
+        },
+        {
+          "offset": 7936,
+          "name": "MEDSHIFTLINES"
+        }
+      ]
+    },
+    {
+      "name": "_EC4",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "EDCCP"
+        },
+        {
+          "offset": 90,
+          "name": "EDITCOPY"
+        },
+        {
+          "offset": 257,
+          "name": "EDITCUT"
+        },
+        {
+          "offset": 300,
+          "name": "EDITCLEAR"
+        },
+        {
+          "offset": 383,
+          "name": "EDITPASTE"
+        },
+        {
+          "offset": 534,
+          "name": "EDREPLACE"
+        },
+        {
+          "offset": 722,
+          "name": "SEDUPDATE"
+        }
+      ]
+    },
+    {
+      "name": "_EC5",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "EDSCROLL"
+        },
+        {
+          "offset": 1055,
+          "name": "DXYFROMTHUMBPOS"
+        },
+        {
+          "offset": 1153,
+          "name": "POSFROMPED"
+        },
+        {
+          "offset": 1232,
+          "name": "DXYFROMDCHIL"
+        },
+        {
+          "offset": 1317,
+          "name": "FKEYSTILLDOWN"
+        }
+      ]
+    },
+    {
+      "name": "_BUTTON",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "BTNGETDC"
+        },
+        {
+          "offset": 54,
+          "name": "BTNINITDC"
+        },
+        {
+          "offset": 97,
+          "name": "BTNRELEASEDC"
+        },
+        {
+          "offset": 126,
+          "name": "BUTTONWNDPROC"
+        },
+        {
+          "offset": 808,
+          "name": "HILITEBTN"
+        },
+        {
+          "offset": 854,
+          "name": "BUTTONPAINT"
+        },
+        {
+          "offset": 1133,
+          "name": "BUTTONINPUT"
+        },
+        {
+          "offset": 1274,
+          "name": "PUSHBTN"
+        },
+        {
+          "offset": 1340,
+          "name": "UNHILITEBTN"
+        },
+        {
+          "offset": 1390,
+          "name": "CHECKBTN"
+        },
+        {
+          "offset": 1498,
+          "name": "DRAWNEWSTATE"
+        },
+        {
+          "offset": 1604,
+          "name": "DRAWCHECK"
+        },
+        {
+          "offset": 1828,
+          "name": "DRAWBTNTEXT"
+        },
+        {
+          "offset": 2052,
+          "name": "NOTIFYPARENT"
+        },
+        {
+          "offset": 2090,
+          "name": "CALCBTNRECT"
+        }
+      ]
+    },
+    {
+      "name": "_STAT",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "STATICWNDPROC"
+        },
+        {
+          "offset": 409,
+          "name": "STATICPAINT"
+        },
+        {
+          "offset": 815,
+          "name": "STATICPRINT"
+        }
+      ]
+    },
+    {
+      "name": "_LBOX",
+      "symbols": [
+        {
+          "offset": 132,
+          "name": "LBOXCTLWNDPROC"
+        },
+        {
+          "offset": 798,
+          "name": "GETLPSZITEM"
+        },
+        {
+          "offset": 860,
+          "name": "UNLOCKHSTRINGS"
+        },
+        {
+          "offset": 872,
+          "name": "LBOXCTLSCROLL"
+        },
+        {
+          "offset": 1039,
+          "name": "LBOXCTLENABLE"
+        },
+        {
+          "offset": 1072,
+          "name": "LBOXCTLDELETE"
+        },
+        {
+          "offset": 1246,
+          "name": "LBSETSEL"
+        },
+        {
+          "offset": 1336,
+          "name": "CREATELBOX"
+        },
+        {
+          "offset": 1577,
+          "name": "INITHSTRINGS"
+        },
+        {
+          "offset": 1618,
+          "name": "GROWMEM"
+        },
+        {
+          "offset": 1693,
+          "name": "INSERTSTRING"
+        },
+        {
+          "offset": 2072,
+          "name": "ADDSTRING"
+        },
+        {
+          "offset": 2149,
+          "name": "LBSIZE"
+        },
+        {
+          "offset": 2396,
+          "name": "SIGN"
+        },
+        {
+          "offset": 2422,
+          "name": "ABS"
+        },
+        {
+          "offset": 2448,
+          "name": "UPPER"
+        },
+        {
+          "offset": 2510,
+          "name": "LBOXCTLPAINT"
+        },
+        {
+          "offset": 2936,
+          "name": "LBOXCTLKEYINPUT"
+        },
+        {
+          "offset": 3088,
+          "name": "LBOXCTLCHARINPUT"
+        },
+        {
+          "offset": 3280,
+          "name": "FAKEMOUSE"
+        },
+        {
+          "offset": 3511,
+          "name": "TRACKMOUSE"
+        },
+        {
+          "offset": 4335,
+          "name": "ISELFROMPT2"
+        },
+        {
+          "offset": 4402,
+          "name": "NOTIFYOWNER"
+        },
+        {
+          "offset": 4452,
+          "name": "FLIPISEL"
+        },
+        {
+          "offset": 4514,
+          "name": "INSUREVISIBLE"
+        },
+        {
+          "offset": 4570,
+          "name": "NEWITOP"
+        },
+        {
+          "offset": 4713,
+          "name": "SETISELBASE"
+        },
+        {
+          "offset": 4741,
+          "name": "RESETWORLD"
+        },
+        {
+          "offset": 4817,
+          "name": "ALTERHILITE"
+        },
+        {
+          "offset": 4916,
+          "name": "INVERTLBITEM"
+        },
+        {
+          "offset": 5028,
+          "name": "CHECKREDRAW"
+        },
+        {
+          "offset": 5186,
+          "name": "CITEMINWINDOW"
+        },
+        {
+          "offset": 5242,
+          "name": "COMPARE"
+        },
+        {
+          "offset": 5354,
+          "name": "FINDSTRING"
+        },
+        {
+          "offset": 5506,
+          "name": "SETCURSEL"
+        },
+        {
+          "offset": 5619,
+          "name": "SETSELECTED"
+        },
+        {
+          "offset": 5708,
+          "name": "ISSELECTED"
+        },
+        {
+          "offset": 5794,
+          "name": "INCISEL"
+        },
+        {
+          "offset": 5842,
+          "name": "LASTFULLVISIBLE"
+        },
+        {
+          "offset": 5874,
+          "name": "PTFROMISEL"
+        },
+        {
+          "offset": 5922,
+          "name": "ISELFROMPT"
+        },
+        {
+          "offset": 6009,
+          "name": "CARETON"
+        },
+        {
+          "offset": 6057,
+          "name": "CARETOFF"
+        },
+        {
+          "offset": 6085,
+          "name": "CARETCREATE"
+        },
+        {
+          "offset": 6137,
+          "name": "CARETDESTROY"
+        }
+      ]
+    },
+    {
+      "name": "_CLPBRD",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "OPENCLIPBOARD"
+        },
+        {
+          "offset": 100,
+          "name": "CLOSECLIPBOARD"
+        },
+        {
+          "offset": 155,
+          "name": "EMPTYCLIPBOARD"
+        },
+        {
+          "offset": 304,
+          "name": "DISOWNCLIPBOARD"
+        },
+        {
+          "offset": 454,
+          "name": "GETCLIPBOARDOWNER"
+        },
+        {
+          "offset": 476,
+          "name": "SETCLIPBOARDDATA"
+        },
+        {
+          "offset": 701,
+          "name": "GETCLIPBOARDDATA"
+        },
+        {
+          "offset": 796,
+          "name": "COUNTCLIPBOARDFORMATS"
+        },
+        {
+          "offset": 818,
+          "name": "ISCLIPBOARDFORMATAVAILABLE"
+        },
+        {
+          "offset": 865,
+          "name": "ENUMCLIPBOARDFORMATS"
+        },
+        {
+          "offset": 972,
+          "name": "REGISTERCLIPBOARDFORMAT"
+        },
+        {
+          "offset": 1004,
+          "name": "GETCLIPBOARDFORMATNAME"
+        },
+        {
+          "offset": 1053,
+          "name": "SETCLIPBOARDVIEWER"
+        },
+        {
+          "offset": 1110,
+          "name": "CHANGECLIPBOARDCHAIN"
+        },
+        {
+          "offset": 1214,
+          "name": "DRAWCLIPBOARD"
+        },
+        {
+          "offset": 1255,
+          "name": "GETCLIPBOARDVIEWER"
+        },
+        {
+          "offset": 1277,
+          "name": "FREEFMT"
+        },
+        {
+          "offset": 1375,
+          "name": "FINDCLIPFORMAT"
+        },
+        {
+          "offset": 1466,
+          "name": "GETFORMATTYPE"
+        }
+      ]
+    },
+    {
+      "name": "_COMDEV",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "MYOPENCOMM"
+        },
+        {
+          "offset": 248,
+          "name": "SETCOMMSTATE"
+        },
+        {
+          "offset": 303,
+          "name": "GETCOMMSTATE"
+        },
+        {
+          "offset": 405,
+          "name": "READCOMM"
+        },
+        {
+          "offset": 568,
+          "name": "UNGETCOMMCHAR"
+        },
+        {
+          "offset": 658,
+          "name": "WRITECOMM"
+        },
+        {
+          "offset": 786,
+          "name": "CLOSECOMM"
+        },
+        {
+          "offset": 905,
+          "name": "GETCOMMERROR"
+        },
+        {
+          "offset": 978,
+          "name": "CKILL"
+        },
+        {
+          "offset": 1030,
+          "name": "BUILDCOMMDCB"
+        },
+        {
+          "offset": 1630,
+          "name": "FIELD"
+        },
+        {
+          "offset": 1755,
+          "name": "GETID"
+        },
+        {
+          "offset": 1954,
+          "name": "CINFOPTR"
+        },
+        {
+          "offset": 1998,
+          "name": "GETMEM"
+        },
+        {
+          "offset": 2028,
+          "name": "FREEMEM"
+        },
+        {
+          "offset": 2045,
+          "name": "TRANSMITCOMMCHAR"
+        },
+        {
+          "offset": 2083,
+          "name": "SETCOMMEVENTMASK"
+        },
+        {
+          "offset": 2119,
+          "name": "GETCOMMEVENTMASK"
+        },
+        {
+          "offset": 2155,
+          "name": "SETCOMMBREAK"
+        },
+        {
+          "offset": 2188,
+          "name": "CLEARCOMMBREAK"
+        },
+        {
+          "offset": 2221,
+          "name": "FLUSHCOMM"
+        },
+        {
+          "offset": 2257,
+          "name": "ESCAPECOMMFUNCTION"
+        },
+        {
+          "offset": 2293,
+          "name": "MYTOUPPER"
+        }
+      ]
+    },
+    {
+      "name": "_CTLMGR3",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "FNSKIPDLG"
+        },
+        {
+          "offset": 529,
+          "name": "SKIPSM2"
+        }
+      ]
+    },
+    {
+      "name": "_LBOXDIR",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "DLGDIRLIST"
+        },
+        {
+          "offset": 612,
+          "name": "CHOPTEXT"
+        },
+        {
+          "offset": 871,
+          "name": "DLGDIRSELECT"
+        },
+        {
+          "offset": 1127,
+          "name": "LBDIR"
+        },
+        {
+          "offset": 1445,
+          "name": "CHECKATTR"
+        },
+        {
+          "offset": 1488,
+          "name": "LBDRIVE"
+        },
+        {
+          "offset": 1634,
+          "name": "FFIRST"
+        },
+        {
+          "offset": 1688,
+          "name": "FNEXT"
+        },
+        {
+          "offset": 1733,
+          "name": "SETCURRENTDRIVE"
+        },
+        {
+          "offset": 1763,
+          "name": "SETCURRENTDIRECTORY"
+        },
+        {
+          "offset": 1797,
+          "name": "GETCURRENTDIRECTORY"
+        },
+        {
+          "offset": 1858,
+          "name": "GETCURRENTDRIVE"
+        },
+        {
+          "offset": 1883,
+          "name": "SETDISK"
+        },
+        {
+          "offset": 1913,
+          "name": "GETDISK"
+        }
+      ]
+    },
+    {
+      "name": "_ECKANJI",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "KALIGN"
+        },
+        {
+          "offset": 122,
+          "name": "KBUMP"
+        },
+        {
+          "offset": 196,
+          "name": "KCOMBINE"
+        }
+      ]
+    },
+    {
+      "name": "DGROUP",
+      "symbols": [
+        {
+          "offset": 4,
+          "name": "rsrvptrs"
+        },
+        {
+          "offset": 16,
+          "name": "SCRNDIRTY"
+        },
+        {
+          "offset": 18,
+          "name": "FFULLSCREENSWAP"
+        },
+        {
+          "offset": 20,
+          "name": "PCLASSLIST"
+        },
+        {
+          "offset": 22,
+          "name": "CTILEDWINDOWS"
+        },
+        {
+          "offset": 24,
+          "name": "FFIRSTTILEDWND"
+        },
+        {
+          "offset": 26,
+          "name": "TIFREQ"
+        },
+        {
+          "offset": 28,
+          "name": "TICOUNT"
+        },
+        {
+          "offset": 30,
+          "name": "FENDSESSION"
+        },
+        {
+          "offset": 32,
+          "name": "HOPENWND"
+        },
+        {
+          "offset": 34,
+          "name": "HCLIPBOARD"
+        },
+        {
+          "offset": 36,
+          "name": "HQCLIPLOCK"
+        },
+        {
+          "offset": 38,
+          "name": "HWNDCLIPOWNER"
+        },
+        {
+          "offset": 40,
+          "name": "HWNDCLIPVIEWER"
+        },
+        {
+          "offset": 42,
+          "name": "PCLIPBASE"
+        },
+        {
+          "offset": 44,
+          "name": "CNUMCLIPFORMATS"
+        },
+        {
+          "offset": 46,
+          "name": "FCLIPBOARDCHANGED"
+        },
+        {
+          "offset": 48,
+          "name": "HPMENU"
+        },
+        {
+          "offset": 50,
+          "name": "FMENU"
+        },
+        {
+          "offset": 82,
+          "name": "HQTILELOCK"
+        },
+        {
+          "offset": 84,
+          "name": "HQCURRENT"
+        },
+        {
+          "offset": 86,
+          "name": "RGBFDOMOUSEUP"
+        },
+        {
+          "offset": 90,
+          "name": "HWNDSYSMODAL"
+        },
+        {
+          "offset": 92,
+          "name": "HWNDCURSOR"
+        },
+        {
+          "offset": 94,
+          "name": "DTDBLCLK"
+        },
+        {
+          "offset": 96,
+          "name": "MSECSDBLCLK"
+        },
+        {
+          "offset": 98,
+          "name": "HWNDFOCUS"
+        },
+        {
+          "offset": 100,
+          "name": "HWNDACTIVE"
+        },
+        {
+          "offset": 102,
+          "name": "CODECAPTURE"
+        },
+        {
+          "offset": 104,
+          "name": "HQCAPTURE"
+        },
+        {
+          "offset": 106,
+          "name": "HWNDCAPTURE"
+        },
+        {
+          "offset": 108,
+          "name": "HQACTIVE"
+        },
+        {
+          "offset": 112,
+          "name": "HCURCURSOR"
+        },
+        {
+          "offset": 114,
+          "name": "HCURDEFCURSOR"
+        },
+        {
+          "offset": 124,
+          "name": "HQSYSLOCK"
+        },
+        {
+          "offset": 126,
+          "name": "IDSYSLOCK"
+        },
+        {
+          "offset": 128,
+          "name": "IDSYSPEEK"
+        },
+        {
+          "offset": 130,
+          "name": "RGBKEYSTATE"
+        },
+        {
+          "offset": 396,
+          "name": "FTASKLOCK"
+        },
+        {
+          "offset": 398,
+          "name": "RGWSYSMET"
+        },
+        {
+          "offset": 446,
+          "name": "SPWNDFULLSCRN"
+        },
+        {
+          "offset": 448,
+          "name": "CURSLEVEL"
+        },
+        {
+          "offset": 462,
+          "name": "RGWBUTTONS"
+        },
+        {
+          "offset": 508,
+          "name": "FMESSAGEBOX"
+        },
+        {
+          "offset": 510,
+          "name": "CXCORNER"
+        },
+        {
+          "offset": 512,
+          "name": "CYCORNER"
+        },
+        {
+          "offset": 514,
+          "name": "MPSTYLECBR"
+        },
+        {
+          "offset": 526,
+          "name": "RGCINFO"
+        },
+        {
+          "offset": 766,
+          "name": "CINC"
+        },
+        {
+          "offset": 848,
+          "name": "_edata"
+        },
+        {
+          "offset": 912,
+          "name": "FOO"
+        },
+        {
+          "offset": 920,
+          "name": "RCSYSMENUHIT"
+        },
+        {
+          "offset": 928,
+          "name": "HWINMODULE"
+        },
+        {
+          "offset": 930,
+          "name": "PODDCLM"
+        },
+        {
+          "offset": 932,
+          "name": "FVERTSB"
+        },
+        {
+          "offset": 934,
+          "name": "HWNDSBNOTIFY"
+        },
+        {
+          "offset": 936,
+          "name": "POSOLD"
+        },
+        {
+          "offset": 938,
+          "name": "HICONWARN"
+        },
+        {
+          "offset": 940,
+          "name": "HBRDRAWFRAME"
+        },
+        {
+          "offset": 942,
+          "name": "MSGDBLCLK"
+        },
+        {
+          "offset": 944,
+          "name": "XLEFT"
+        },
+        {
+          "offset": 946,
+          "name": "HDCBITS"
+        },
+        {
+          "offset": 948,
+          "name": "POSSTART"
+        },
+        {
+          "offset": 950,
+          "name": "HICNBANG"
+        },
+        {
+          "offset": 952,
+          "name": "HWNDDBLCLK"
+        },
+        {
+          "offset": 954,
+          "name": "FACTCHANGE"
+        },
+        {
+          "offset": 956,
+          "name": "SYSCLROBJECTS"
+        },
+        {
+          "offset": 976,
+          "name": "PXLEFT"
+        },
+        {
+          "offset": 978,
+          "name": "RCDBLCLK"
+        },
+        {
+          "offset": 986,
+          "name": "HICNHAND"
+        },
+        {
+          "offset": 988,
+          "name": "HCLOSEMENU"
+        },
+        {
+          "offset": 990,
+          "name": "SYSCOLORS"
+        },
+        {
+          "offset": 1030,
+          "name": "RCTHUMB"
+        },
+        {
+          "offset": 1038,
+          "name": "RCTRACK"
+        },
+        {
+          "offset": 1046,
+          "name": "PSTATE"
+        },
+        {
+          "offset": 1048,
+          "name": "FPROGNTW"
+        },
+        {
+          "offset": 1050,
+          "name": "HRGNSCREEN"
+        },
+        {
+          "offset": 1052,
+          "name": "HBRBLACK"
+        },
+        {
+          "offset": 1054,
+          "name": "DPXTHUMB"
+        },
+        {
+          "offset": 1056,
+          "name": "HSYSMENU"
+        },
+        {
+          "offset": 1058,
+          "name": "SYSFONTCHARWIDTH"
+        },
+        {
+          "offset": 1060,
+          "name": "OEMINFO"
+        },
+        {
+          "offset": 1150,
+          "name": "CXBORDER"
+        },
+        {
+          "offset": 1152,
+          "name": "CYBORDER"
+        },
+        {
+          "offset": 1154,
+          "name": "FPREVNTW"
+        },
+        {
+          "offset": 1156,
+          "name": "HSYSFONT"
+        },
+        {
+          "offset": 1158,
+          "name": "XSIGN"
+        },
+        {
+          "offset": 1160,
+          "name": "TIMERINTERVAL"
+        },
+        {
+          "offset": 1162,
+          "name": "YSIGN"
+        },
+        {
+          "offset": 1164,
+          "name": "HICNQUES"
+        },
+        {
+          "offset": 1166,
+          "name": "CURRENTCARET"
+        },
+        {
+          "offset": 1188,
+          "name": "HPEMENU"
+        },
+        {
+          "offset": 1190,
+          "name": "PXUPARROW"
+        },
+        {
+          "offset": 1192,
+          "name": "HWNDALTTAB"
+        },
+        {
+          "offset": 1194,
+          "name": "LPSTRS"
+        },
+        {
+          "offset": 1198,
+          "name": "DCCACHE"
+        },
+        {
+          "offset": 1238,
+          "name": "TIMEMESSAGE"
+        },
+        {
+          "offset": 1242,
+          "name": "CXMAX"
+        },
+        {
+          "offset": 1244,
+          "name": "PREGFCLM"
+        },
+        {
+          "offset": 1246,
+          "name": "SBIVERT"
+        },
+        {
+          "offset": 1264,
+          "name": "RCSYSMENUINVERT"
+        },
+        {
+          "offset": 1272,
+          "name": "HCURSICON"
+        },
+        {
+          "offset": 1274,
+          "name": "RCSB"
+        },
+        {
+          "offset": 1282,
+          "name": "PTTRACK"
+        },
+        {
+          "offset": 1286,
+          "name": "CYCAPTION"
+        },
+        {
+          "offset": 1288,
+          "name": "CXTAB"
+        },
+        {
+          "offset": 1290,
+          "name": "PXOLD"
+        },
+        {
+          "offset": 1292,
+          "name": "HPOSTICON"
+        },
+        {
+          "offset": 1294,
+          "name": "SCRN"
+        },
+        {
+          "offset": 1314,
+          "name": "HICONERR"
+        },
+        {
+          "offset": 1316,
+          "name": "ICONINFO"
+        },
+        {
+          "offset": 1328,
+          "name": "HRGNVISIBLE"
+        },
+        {
+          "offset": 1330,
+          "name": "HWNDTESTNTW"
+        },
+        {
+          "offset": 1332,
+          "name": "PTMUS"
+        },
+        {
+          "offset": 1336,
+          "name": "OBICORNER"
+        },
+        {
+          "offset": 1342,
+          "name": "STARTCLM"
+        },
+        {
+          "offset": 1344,
+          "name": "HWNDTRACK"
+        },
+        {
+          "offset": 1346,
+          "name": "DXSPC"
+        },
+        {
+          "offset": 1348,
+          "name": "PXTHUMBBOTTOM"
+        },
+        {
+          "offset": 1350,
+          "name": "RCSCREEN"
+        },
+        {
+          "offset": 1358,
+          "name": "FCHECKPAINT"
+        },
+        {
+          "offset": 1360,
+          "name": "HBRGRAY"
+        },
+        {
+          "offset": 1362,
+          "name": "RGHWNDICONS"
+        },
+        {
+          "offset": 1458,
+          "name": "HWNDNAMEDICON"
+        },
+        {
+          "offset": 1460,
+          "name": "PXTHUMBTOP"
+        },
+        {
+          "offset": 1462,
+          "name": "ENDCLM"
+        },
+        {
+          "offset": 1464,
+          "name": "PSBISB"
+        },
+        {
+          "offset": 1466,
+          "name": "PPOPUPCLM"
+        },
+        {
+          "offset": 1468,
+          "name": "HRGNTEMP"
+        },
+        {
+          "offset": 1470,
+          "name": "HTASKCARET"
+        },
+        {
+          "offset": 1472,
+          "name": "SBIHORZ"
+        },
+        {
+          "offset": 1490,
+          "name": "PICONICCLM"
+        },
+        {
+          "offset": 1492,
+          "name": "TIMERINFO"
+        },
+        {
+          "offset": 1496,
+          "name": "HICNNOTE"
+        },
+        {
+          "offset": 1498,
+          "name": "PPOPUPHIDECLM"
+        },
+        {
+          "offset": 1500,
+          "name": "HRGNDESK"
+        },
+        {
+          "offset": 1502,
+          "name": "LPFNSB"
+        },
+        {
+          "offset": 1506,
+          "name": "MAXCLMS"
+        },
+        {
+          "offset": 1508,
+          "name": "SPDWND"
+        },
+        {
+          "offset": 1510,
+          "name": "PT"
+        },
+        {
+          "offset": 1514,
+          "name": "PXTOP"
+        },
+        {
+          "offset": 1516,
+          "name": "SYSFONTCHARHEIGHT"
+        },
+        {
+          "offset": 1518,
+          "name": "HCURSUPARROW"
+        },
+        {
+          "offset": 1520,
+          "name": "HCURSSIZE"
+        },
+        {
+          "offset": 1522,
+          "name": "KEYBDINFO"
+        },
+        {
+          "offset": 1534,
+          "name": "HWNDEXEC"
+        },
+        {
+          "offset": 1536,
+          "name": "DCLMNO"
+        },
+        {
+          "offset": 1538,
+          "name": "HRGNNULL"
+        },
+        {
+          "offset": 1540,
+          "name": "HBRLTGRAY"
+        },
+        {
+          "offset": 1542,
+          "name": "HDCDRAWTEXT"
+        },
+        {
+          "offset": 1544,
+          "name": "HCURSNORMAL"
+        },
+        {
+          "offset": 1546,
+          "name": "RGICHSTRS"
+        },
+        {
+          "offset": 1556,
+          "name": "HDISPLAYINSTANCE"
+        },
+        {
+          "offset": 1558,
+          "name": "PXRIGHT"
+        },
+        {
+          "offset": 1560,
+          "name": "ICONSLOT"
+        },
+        {
+          "offset": 1562,
+          "name": "CURSINFO"
+        },
+        {
+          "offset": 1566,
+          "name": "FNOSTOPNTW"
+        },
+        {
+          "offset": 1568,
+          "name": "FTRACKVERT"
+        },
+        {
+          "offset": 1570,
+          "name": "PXDOWNARROW"
+        },
+        {
+          "offset": 1572,
+          "name": "ATOMSCROLLBAR"
+        },
+        {
+          "offset": 1574,
+          "name": "HWNDDRAGGING"
+        },
+        {
+          "offset": 1576,
+          "name": "CMDSB"
+        },
+        {
+          "offset": 1578,
+          "name": "HWNDKEYCVT"
+        },
+        {
+          "offset": 1580,
+          "name": "HICONSAMPLE"
+        },
+        {
+          "offset": 1582,
+          "name": "HMENUCHANGE"
+        },
+        {
+          "offset": 1584,
+          "name": "FSBLOCK"
+        },
+        {
+          "offset": 1586,
+          "name": "FHITOLD"
+        },
+        {
+          "offset": 1588,
+          "name": "SPICONWND"
+        },
+        {
+          "offset": 1590,
+          "name": "HBRWHITE"
+        },
+        {
+          "offset": 1592,
+          "name": "PXBOTTOM"
+        },
+        {
+          "offset": 1594,
+          "name": "WNDPOS"
+        },
+        {
+          "offset": 1598,
+          "name": "MSINFO"
+        },
+        {
+          "offset": 1612,
+          "name": "HWNDNTW"
+        },
+        {
+          "offset": 1614,
+          "name": "PMENUCHANGE"
+        },
+        {
+          "offset": 1616,
+          "name": "PFIRST"
+        },
+        {
+          "offset": 1618,
+          "name": "HBRBTN"
+        },
+        {
+          "offset": 1620,
+          "name": "HWNDSB"
+        },
+        {
+          "offset": 1622,
+          "name": "HCURSIBEAM"
+        },
+        {
+          "offset": 1624,
+          "name": "HWNDPOPUPNAME"
+        },
+        {
+          "offset": 1626,
+          "name": "MSGBOXWND"
+        },
+        {
+          "offset": 1862,
+          "name": "HWNDACTIVEPREV"
+        },
+        {
+          "offset": 1864,
+          "name": "TIMEDBLCLK"
+        },
+        {
+          "offset": 1868,
+          "name": "HQKEYCVT"
+        },
+        {
+          "offset": 1870,
+          "name": "PXSTART"
+        },
+        {
+          "offset": 1872,
+          "name": "TIMERHANDLE"
+        }
+      ]
+    }
+  ],
+  "retail_exports_count": 236,
+  "confirmed_count": 235,
+  "confirmed_names": [
+    "ADJUSTWINDOWRECT",
+    "ANYPOPUP",
+    "BEGINPAINT",
+    "BRINGWINDOWTOTOP",
+    "BUILDCOMMDCB",
+    "BUTTONWNDPROC",
+    "CALLMSGFILTER",
+    "CALLWINDOWPROC",
+    "CARETBLINKPROC",
+    "CHANGECLIPBOARDCHAIN",
+    "CHANGEMENU",
+    "CHECKDLGBUTTON",
+    "CHECKMENUITEM",
+    "CHECKRADIOBUTTON",
+    "CHILDWINDOWFROMPOINT",
+    "CLEARCOMMBREAK",
+    "CLIENTTOSCREEN",
+    "CLIPCURSOR",
+    "CLOSECLIPBOARD",
+    "CLOSECOMM",
+    "CLOSEWINDOW",
+    "COMPUPDATERECT",
+    "COMPUPDATERGN",
+    "CONTSCROLL",
+    "COPYRECT",
+    "COUNTCLIPBOARDFORMATS",
+    "CREATECARET",
+    "CREATECONVERTWINDOW",
+    "CREATEDIALOG",
+    "CREATEMENU",
+    "CREATEWINDOW",
+    "DEFWINDOWPROC",
+    "DESTROYCARET",
+    "DESTROYMENU",
+    "DESTROYTASKWINDOWS2",
+    "DESTROYWINDOW",
+    "DIALOGBOX",
+    "DISABLEOEMLAYER",
+    "DISPATCHMESSAGE",
+    "DLGDIRLIST",
+    "DLGDIRSELECT",
+    "DLGWNDPROC",
+    "DRAWICON",
+    "DRAWMENUBAR",
+    "DRAWTEXT",
+    "EDITWNDPROC",
+    "EMPTYCLIPBOARD",
+    "ENABLEMENUITEM",
+    "ENABLEOEMLAYER",
+    "ENABLEWINDOW",
+    "ENDDIALOG",
+    "ENDMENU",
+    "ENDPAINT",
+    "ENUMCHILDWINDOWS",
+    "ENUMCLIPBOARDFORMATS",
+    "ENUMPROPS",
+    "ENUMWINDOWS",
+    "ESCAPECOMMFUNCTION",
+    "EXITWINDOWS",
+    "FILLRECT",
+    "FILLWINDOW",
+    "FINDWINDOW",
+    "FLASHWINDOW",
+    "FLUSHCOMM",
+    "FRAMERECT",
+    "GETACTIVEWINDOW",
+    "GETCARETBLINKTIME",
+    "GETCARETPOS",
+    "GETCLASSLONG",
+    "GETCLASSNAME",
+    "GETCLASSWORD",
+    "GETCLIENTRECT",
+    "GETCLIPBOARDDATA",
+    "GETCLIPBOARDFORMATNAME",
+    "GETCLIPBOARDOWNER",
+    "GETCLIPBOARDVIEWER",
+    "GETCOMMERROR",
+    "GETCOMMEVENTMASK",
+    "GETCOMMSTATE",
+    "GETCONTROLBRUSH",
+    "GETCURRENTTIME",
+    "GETCURSORPOS",
+    "GETDC",
+    "GETDLGITEM",
+    "GETDLGITEMINT",
+    "GETDLGITEMTEXT",
+    "GETDOUBLECLICKTIME",
+    "GETFOCUS",
+    "GETKEYSTATE",
+    "GETMENU",
+    "GETMENUSTRING",
+    "GETMESSAGE",
+    "GETMESSAGE2",
+    "GETMESSAGEPOS",
+    "GETMESSAGETIME",
+    "GETPARENT",
+    "GETPROP",
+    "GETSCROLLPOS",
+    "GETSCROLLRANGE",
+    "GETSUBMENU",
+    "GETSYSCOLOR",
+    "GETSYSMODALWINDOW",
+    "GETSYSTEMMENU",
+    "GETSYSTEMMETRICS",
+    "GETTICKCOUNT",
+    "GETTIMERRESOLUTION",
+    "GETUPDATERECT",
+    "GETWC2",
+    "GETWINDOWDC",
+    "GETWINDOWLONG",
+    "GETWINDOWRECT",
+    "GETWINDOWTEXT",
+    "GETWINDOWTEXTLENGTH",
+    "GETWINDOWWORD",
+    "GRAYSTRING",
+    "HIDECARET",
+    "HILITEMENUITEM",
+    "ICONNAMEWNDPROC",
+    "ICONSIZE",
+    "ICONWNDPROC",
+    "INFLATERECT",
+    "INITAPP",
+    "INSENDMESSAGE",
+    "INTERSECTRECT",
+    "INVALIDATERECT",
+    "INVALIDATERGN",
+    "INVERTRECT",
+    "ISCHILD",
+    "ISCLIPBOARDFORMATAVAILABLE",
+    "ISDIALOGMESSAGE",
+    "ISDLGBUTTONCHECKED",
+    "ISICONIC",
+    "ISRECTEMPTY",
+    "ISTWOBYTECHARPREFIX",
+    "ISWINDOW",
+    "ISWINDOWENABLED",
+    "ISWINDOWVISIBLE",
+    "KILLSYSTEMTIMER",
+    "KILLTIMER",
+    "KILLTIMER2",
+    "LBOXCTLWNDPROC",
+    "LOADACCELERATORS",
+    "LOADBITMAP",
+    "LOADCURSOR",
+    "LOADICON",
+    "LOADMENU",
+    "LOADSTRING",
+    "MAPDIALOGRECT",
+    "MENUITEMSTATE",
+    "MENUWNDPROC",
+    "MESSAGEBEEP",
+    "MESSAGEBOX",
+    "MESSAGEBOXWNDPROC",
+    "MOVEWINDOW",
+    "MYOPENCOMM",
+    "OFFSETRECT",
+    "OPENCLIPBOARD",
+    "OPENCOMM",
+    "OPENICON",
+    "PAINTRECT",
+    "PEEKMESSAGE",
+    "POSTAPPMESSAGE",
+    "POSTMESSAGE",
+    "POSTMESSAGE2",
+    "POSTQUITMESSAGE",
+    "POSTSYSERROR",
+    "PTINRECT",
+    "READCOMM",
+    "REGISTERCLASS",
+    "REGISTERCLIPBOARDFORMAT",
+    "REGISTERWINDOWMESSAGE",
+    "RELEASECAPTURE",
+    "RELEASEDC",
+    "REMOVEPROP",
+    "REPLYMESSAGE",
+    "SBWNDPROC",
+    "SCREENTOCLIENT",
+    "SCROLLWINDOW",
+    "SENDDLGITEMMESSAGE",
+    "SENDMESSAGE",
+    "SENDMESSAGE2",
+    "SETACTIVEWINDOW",
+    "SETCAPTURE",
+    "SETCARETBLINKTIME",
+    "SETCARETPOS",
+    "SETCLASSLONG",
+    "SETCLASSWORD",
+    "SETCLIPBOARDDATA",
+    "SETCLIPBOARDVIEWER",
+    "SETCOMMBREAK",
+    "SETCOMMEVENTMASK",
+    "SETCOMMSTATE",
+    "SETCONVERTWINDOWHEIGHT",
+    "SETCURSOR",
+    "SETCURSORPOS",
+    "SETDLGITEMINT",
+    "SETDLGITEMTEXT",
+    "SETDOUBLECLICKTIME",
+    "SETFOCUS",
+    "SETMENU",
+    "SETPROP",
+    "SETRECT",
+    "SETRECTEMPTY",
+    "SETSCROLLPOS",
+    "SETSCROLLRANGE",
+    "SETSYSCOLORS",
+    "SETSYSMODALWINDOW",
+    "SETSYSTEMTIMER",
+    "SETTIMER",
+    "SETTIMER2",
+    "SETWC2",
+    "SETWINDOWLONG",
+    "SETWINDOWSHOOK",
+    "SETWINDOWTEXT",
+    "SETWINDOWWORD",
+    "SHOWCARET",
+    "SHOWCONVERTWINDOW",
+    "SHOWCURSOR",
+    "SHOWWINDOW",
+    "SIGNALPROC",
+    "STATICWNDPROC",
+    "SWAPMOUSEBUTTON",
+    "SYSHASKANJI",
+    "TRANSLATEACCELERATOR",
+    "TRANSLATEMESSAGE",
+    "TRANSMITCOMMCHAR",
+    "UNGETCOMMCHAR",
+    "UNIONRECT",
+    "UPDATEWINDOW",
+    "VALIDATERECT",
+    "VALIDATERGN",
+    "WAITMESSAGE",
+    "WINDOWFROMPOINT",
+    "WRITECOMM",
+    "XCSTODS"
+  ]
+}

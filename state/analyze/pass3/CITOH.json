@@ -94,7 +94,7 @@
       "callers": [],
       "fanout": 3,
       "fanin": 0,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (291 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (291 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_gdi",
@@ -102,7 +102,7 @@
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0000 -- offset 0x0000 -- 291 instr\n; Dispatcher: tabla de decisiones cmp+jcc (291 instr).\n; tags: calls_gdi, calls_user, dispatcher, far\n; calls (inter): GDI.STARTSPOOLPAGE, USER.SETRECT, USER.SETRECTEMPTY\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0000 -- offset 0x0000 -- 291 instr\n; Dispatcher: cmp+jcc decision table (291 instr).\n; tags: calls_gdi, calls_user, dispatcher, far\n; calls (inter): GDI.STARTSPOOLPAGE, USER.SETRECT, USER.SETRECTEMPTY\n;----------------------------------------------------------------------"
     },
     {
       "module": "CITOH",
@@ -164,13 +164,13 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Funcion sin clasificar definitiva (29 instr).",
+      "description": "Unclassified function (29 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "far",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0238 -- offset 0x0238 -- 29 instr\n; Funcion sin clasificar definitiva (29 instr).\n; tags: far, small\n; callers: sub_0826, sub_0B55\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0238 -- offset 0x0238 -- 29 instr\n; Unclassified function (29 instr).\n; tags: far, small\n; callers: sub_0826, sub_0B55\n;----------------------------------------------------------------------"
     },
     {
       "module": "CITOH",
@@ -231,12 +231,12 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Funcion sin clasificar definitiva (30 instr).",
+      "description": "Unclassified function (30 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0273 -- offset 0x0273 -- 30 instr\n; Funcion sin clasificar definitiva (30 instr).\n; tags: small\n; callers: sub_0D25, sub_0ED8\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0273 -- offset 0x0273 -- 30 instr\n; Unclassified function (30 instr).\n; tags: small\n; callers: sub_0D25, sub_0ED8\n;----------------------------------------------------------------------"
     },
     {
       "module": "CITOH",
@@ -347,14 +347,14 @@
       ],
       "fanout": 10,
       "fanin": 2,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (302 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (302 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_02C3 -- offset 0x02C3 -- 302 instr\n; Dispatcher: tabla de decisiones cmp+jcc (302 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_0D25, sub_0ED8\n; calls (intra): sub_05C2, sub_076A, sub_0826\n; calls (inter): KERNEL.FINDRESOURCE, KERNEL.FREERESOURCE, KERNEL.GETMODULEHANDLE, KERNEL.GLOBALUNLOCK, KERNEL.LOADRESOURCE, KERNEL.LOCKRESOURCE (+1 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_02C3 -- offset 0x02C3 -- 302 instr\n; Dispatcher: cmp+jcc decision table (302 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_0D25, sub_0ED8\n; calls (intra): sub_05C2, sub_076A, sub_0826\n; calls (inter): KERNEL.FINDRESOURCE, KERNEL.FREERESOURCE, KERNEL.GETMODULEHANDLE, KERNEL.GLOBALUNLOCK, KERNEL.LOADRESOURCE, KERNEL.LOCKRESOURCE (+1 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "CITOH",
@@ -424,13 +424,13 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Funcion compleja: 132 instrucciones, 1 llamadas, 3 branches.",
+      "description": "Complex function: 132 instructions, 1 calls, 3 branches.",
       "confidence": "low",
       "semantic_tags": [
         "calls_kernel",
         "complex"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_05C2 -- offset 0x05C2 -- 132 instr\n; Funcion compleja: 132 instrucciones, 1 llamadas, 3 branches.\n; tags: calls_kernel, complex\n; callers: sub_02C3\n; calls (inter): KERNEL.LSTRCPY\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_05C2 -- offset 0x05C2 -- 132 instr\n; Complex function: 132 instructions, 1 calls, 3 branches.\n; tags: calls_kernel, complex\n; callers: sub_02C3\n; calls (inter): KERNEL.LSTRCPY\n;----------------------------------------------------------------------"
     },
     {
       "module": "CITOH",
@@ -497,12 +497,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Funcion mediana (69 instr, 1 calls).",
+      "description": "Mid-size function (69 instr, 1 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_076A -- offset 0x076A -- 69 instr\n; Funcion mediana (69 instr, 1 calls).\n; tags: medium\n; callers: sub_02C3\n; calls (intra): sub_0826\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_076A -- offset 0x076A -- 69 instr\n; Mid-size function (69 instr, 1 calls).\n; tags: medium\n; callers: sub_02C3\n; calls (intra): sub_0826\n;----------------------------------------------------------------------"
     },
     {
       "module": "CITOH",
@@ -588,14 +588,14 @@
       ],
       "fanout": 6,
       "fanin": 2,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (227 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (227 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0826 -- offset 0x0826 -- 227 instr\n; Dispatcher: tabla de decisiones cmp+jcc (227 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_02C3, sub_076A\n; calls (intra): sub_0238, sub_0A7F, sub_0B55, sub_0D25\n; calls (inter): KERNEL.GLOBALFREE, KERNEL.LSTRCMP\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0826 -- offset 0x0826 -- 227 instr\n; Dispatcher: cmp+jcc decision table (227 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_02C3, sub_076A\n; calls (intra): sub_0238, sub_0A7F, sub_0B55, sub_0D25\n; calls (inter): KERNEL.GLOBALFREE, KERNEL.LSTRCMP\n;----------------------------------------------------------------------"
     },
     {
       "module": "CITOH",
@@ -681,14 +681,14 @@
       ],
       "fanout": 5,
       "fanin": 1,
-      "description": "Funcion mediana (74 instr, 5 calls).",
+      "description": "Mid-size function (74 instr, 5 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_gdi",
         "calls_kernel",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0A7F -- offset 0x0A7F -- 74 instr\n; Funcion mediana (74 instr, 5 calls).\n; tags: calls_gdi, calls_kernel, medium\n; callers: sub_0826\n; calls (intra): sub_0C84\n; calls (inter): GDI.INSERTPQ, GDI.SIZEPQ, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0A7F -- offset 0x0A7F -- 74 instr\n; Mid-size function (74 instr, 5 calls).\n; tags: calls_gdi, calls_kernel, medium\n; callers: sub_0826\n; calls (intra): sub_0C84\n; calls (inter): GDI.INSERTPQ, GDI.SIZEPQ, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK\n;----------------------------------------------------------------------"
     },
     {
       "module": "CITOH",
@@ -773,13 +773,13 @@
       ],
       "fanout": 4,
       "fanin": 2,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (111 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (111 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0B55 -- offset 0x0B55 -- 111 instr\n; Dispatcher: tabla de decisiones cmp+jcc (111 instr).\n; tags: calls_kernel, dispatcher\n; callers: sub_0826, sub_0ED8\n; calls (intra): sub_0238\n; calls (inter): KERNEL.GLOBALALLOC, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0B55 -- offset 0x0B55 -- 111 instr\n; Dispatcher: cmp+jcc decision table (111 instr).\n; tags: calls_kernel, dispatcher\n; callers: sub_0826, sub_0ED8\n; calls (intra): sub_0238\n; calls (inter): KERNEL.GLOBALALLOC, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK\n;----------------------------------------------------------------------"
     },
     {
       "module": "CITOH",
@@ -854,14 +854,14 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Funcion mediana (66 instr, 2 calls).",
+      "description": "Mid-size function (66 instr, 2 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_kernel",
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0C84 -- offset 0x0C84 -- 66 instr\n; Funcion mediana (66 instr, 2 calls).\n; tags: calls_kernel, far, medium\n; callers: sub_0A7F\n; calls (inter): KERNEL.GLOBALALLOC, KERNEL.GLOBALREALLOC\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0C84 -- offset 0x0C84 -- 66 instr\n; Mid-size function (66 instr, 2 calls).\n; tags: calls_kernel, far, medium\n; callers: sub_0A7F\n; calls (inter): KERNEL.GLOBALALLOC, KERNEL.GLOBALREALLOC\n;----------------------------------------------------------------------"
     },
     {
       "module": "CITOH",
@@ -934,12 +934,12 @@
       ],
       "fanout": 3,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (152 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (152 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0D25 -- offset 0x0D25 -- 152 instr\n; Dispatcher: tabla de decisiones cmp+jcc (152 instr).\n; tags: dispatcher\n; callers: sub_0826\n; calls (intra): sub_0273, sub_02C3, sub_0ED8\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0D25 -- offset 0x0D25 -- 152 instr\n; Dispatcher: cmp+jcc decision table (152 instr).\n; tags: dispatcher\n; callers: sub_0826\n; calls (intra): sub_0273, sub_02C3, sub_0ED8\n;----------------------------------------------------------------------"
     },
     {
       "module": "CITOH",
@@ -1025,14 +1025,14 @@
       ],
       "fanout": 6,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (242 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (242 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0ED8 -- offset 0x0ED8 -- 242 instr\n; Dispatcher: tabla de decisiones cmp+jcc (242 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_0D25\n; calls (intra): sub_0273, sub_02C3, sub_0B55, sub_115E, sub_1198\n; calls (inter): KERNEL.GLOBALFREE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0ED8 -- offset 0x0ED8 -- 242 instr\n; Dispatcher: cmp+jcc decision table (242 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_0D25\n; calls (intra): sub_0273, sub_02C3, sub_0B55, sub_115E, sub_1198\n; calls (inter): KERNEL.GLOBALFREE\n;----------------------------------------------------------------------"
     },
     {
       "module": "CITOH",
@@ -1092,12 +1092,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (26 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (26 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_115E -- offset 0x115E -- 26 instr\n; Dispatcher: tabla de decisiones cmp+jcc (26 instr).\n; tags: dispatcher\n; callers: sub_0ED8\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_115E -- offset 0x115E -- 26 instr\n; Dispatcher: cmp+jcc decision table (26 instr).\n; tags: dispatcher\n; callers: sub_0ED8\n;----------------------------------------------------------------------"
     },
     {
       "module": "CITOH",
@@ -1161,12 +1161,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion mediana (38 instr, 0 calls).",
+      "description": "Mid-size function (38 instr, 0 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1198 -- offset 0x1198 -- 38 instr\n; Funcion mediana (38 instr, 0 calls).\n; tags: medium\n; callers: sub_0ED8\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1198 -- offset 0x1198 -- 38 instr\n; Mid-size function (38 instr, 0 calls).\n; tags: medium\n; callers: sub_0ED8\n;----------------------------------------------------------------------"
     }
   ]
 }

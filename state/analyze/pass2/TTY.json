@@ -1,0 +1,102 @@
+{
+  "module": "TTY",
+  "num_functions": 1,
+  "intra_edges": [],
+  "inter_edges": [
+    [
+      "sub_0000",
+      "USER",
+      "SETRECT"
+    ],
+    [
+      "sub_0000",
+      "USER",
+      "SETRECTEMPTY"
+    ]
+  ],
+  "external_modules": [
+    "USER"
+  ],
+  "functions": [
+    {
+      "module": "TTY",
+      "segment_file": "seg1.asm",
+      "name": "sub_0000",
+      "kind": "NEAR",
+      "offset": 0,
+      "size_bytes": null,
+      "start_line": 14,
+      "end_line": 100,
+      "num_instructions": 82,
+      "prologue": "standard_bp",
+      "epilogue": "jmp_tail",
+      "calls_near": [
+        "L_022A",
+        "L_0483",
+        "L_054E"
+      ],
+      "calls_far": [
+        "far USER.SETRECT",
+        "far USER.SETRECTEMPTY"
+      ],
+      "num_jumps_cond": 4,
+      "num_jumps_uncond": 4,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 27,
+      "mnemonic_histogram": {
+        "push": 27,
+        "mov": 14,
+        "les": 5,
+        "pop": 5,
+        "sub": 5,
+        "call": 5,
+        "jmp": 4,
+        "cmp": 3,
+        "inc": 2,
+        "jne": 2,
+        "lds": 1,
+        "cld": 1,
+        "rep": 1,
+        "ret": 1,
+        "nop": 1
+      },
+      "classification": "complex",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "push si",
+        "push di",
+        "push ds",
+        "mov cx, word ptr [bp + 4]"
+      ],
+      "last_instructions": [
+        "les bx, ptr [bp + 0x10]",
+        "cmp word ptr es:[bx + 0xe], 1",
+        "jne L_00D7",
+        "push word ptr es:[bx + 0xc]"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [
+        {
+          "module": "USER",
+          "func": "SETRECT"
+        },
+        {
+          "module": "USER",
+          "func": "SETRECTEMPTY"
+        }
+      ],
+      "callees_unresolved": [
+        "L_022A",
+        "L_0483",
+        "L_054E"
+      ],
+      "callers": [],
+      "fanout": 2,
+      "fanin": 0
+    }
+  ]
+}

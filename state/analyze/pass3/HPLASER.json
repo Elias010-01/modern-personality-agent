@@ -61,12 +61,12 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (25 instr).",
+      "description": "Unclassified function (25 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0000 -- offset 0x0000 -- 25 instr\n; Funcion sin clasificar definitiva (25 instr).\n; tags: small\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0000 -- offset 0x0000 -- 25 instr\n; Unclassified function (25 instr).\n; tags: small\n;----------------------------------------------------------------------"
     },
     {
       "module": "HPLASER",
@@ -147,14 +147,14 @@
       "callers": [],
       "fanout": 2,
       "fanin": 0,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (215 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (215 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_gdi",
         "calls_user",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0039 -- offset 0x0039 -- 215 instr\n; Dispatcher: tabla de decisiones cmp+jcc (215 instr).\n; tags: calls_gdi, calls_user, dispatcher\n; calls (inter): GDI.STARTSPOOLPAGE, USER.SETRECT\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0039 -- offset 0x0039 -- 215 instr\n; Dispatcher: cmp+jcc decision table (215 instr).\n; tags: calls_gdi, calls_user, dispatcher\n; calls (inter): GDI.STARTSPOOLPAGE, USER.SETRECT\n;----------------------------------------------------------------------"
     }
   ]
 }

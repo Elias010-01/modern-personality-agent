@@ -1,0 +1,2987 @@
+{
+  "module": "PSCRIPT",
+  "num_functions": 41,
+  "intra_edges": [
+    [
+      "sub_0473",
+      "sub_1986"
+    ],
+    [
+      "sub_0473",
+      "sub_1AE0"
+    ],
+    [
+      "sub_0473",
+      "sub_1B81"
+    ],
+    [
+      "sub_0473",
+      "sub_2448"
+    ],
+    [
+      "sub_0473",
+      "sub_2512"
+    ],
+    [
+      "sub_0655",
+      "sub_1816"
+    ],
+    [
+      "sub_0703",
+      "sub_0CA8"
+    ],
+    [
+      "sub_0703",
+      "sub_1364"
+    ],
+    [
+      "sub_0703",
+      "sub_18AC"
+    ],
+    [
+      "sub_0703",
+      "sub_1913"
+    ],
+    [
+      "sub_0A2D",
+      "sub_0703"
+    ],
+    [
+      "sub_0A2D",
+      "sub_0CA8"
+    ],
+    [
+      "sub_0A2D",
+      "sub_1364"
+    ],
+    [
+      "sub_0A2D",
+      "sub_1816"
+    ],
+    [
+      "sub_0A2D",
+      "sub_1913"
+    ],
+    [
+      "sub_100B",
+      "sub_0655"
+    ],
+    [
+      "sub_100B",
+      "sub_0ED0"
+    ],
+    [
+      "sub_100B",
+      "sub_0F67"
+    ],
+    [
+      "sub_100B",
+      "sub_1816"
+    ],
+    [
+      "sub_100B",
+      "sub_1BB6"
+    ],
+    [
+      "sub_1364",
+      "sub_1816"
+    ],
+    [
+      "sub_13C7",
+      "sub_1816"
+    ],
+    [
+      "sub_13F7",
+      "sub_1631"
+    ],
+    [
+      "sub_13F7",
+      "sub_1816"
+    ],
+    [
+      "sub_14F7",
+      "sub_1913"
+    ],
+    [
+      "sub_153E",
+      "sub_1913"
+    ],
+    [
+      "sub_1631",
+      "sub_1816"
+    ],
+    [
+      "sub_168E",
+      "sub_1816"
+    ],
+    [
+      "sub_1986",
+      "sub_24BE"
+    ],
+    [
+      "sub_1B81",
+      "sub_2133"
+    ],
+    [
+      "sub_1BB6",
+      "sub_20B0"
+    ],
+    [
+      "sub_1CA5",
+      "sub_1B10"
+    ],
+    [
+      "sub_1F84",
+      "sub_1B10"
+    ],
+    [
+      "sub_216D",
+      "sub_2133"
+    ],
+    [
+      "sub_2252",
+      "sub_20B0"
+    ],
+    [
+      "sub_2252",
+      "sub_2133"
+    ],
+    [
+      "sub_2252",
+      "sub_216D"
+    ],
+    [
+      "sub_237B",
+      "sub_20B0"
+    ]
+  ],
+  "inter_edges": [
+    [
+      "sub_0473",
+      "USER",
+      "SETRECTEMPTY"
+    ],
+    [
+      "sub_0703",
+      "KERNEL",
+      "FINDRESOURCE"
+    ],
+    [
+      "sub_0703",
+      "KERNEL",
+      "FREERESOURCE"
+    ],
+    [
+      "sub_0703",
+      "KERNEL",
+      "GLOBALUNLOCK"
+    ],
+    [
+      "sub_0703",
+      "KERNEL",
+      "LOADRESOURCE"
+    ],
+    [
+      "sub_0703",
+      "KERNEL",
+      "LOCKRESOURCE"
+    ],
+    [
+      "sub_0A2D",
+      "KERNEL",
+      "FINDRESOURCE"
+    ],
+    [
+      "sub_0A2D",
+      "KERNEL",
+      "FREERESOURCE"
+    ],
+    [
+      "sub_0A2D",
+      "KERNEL",
+      "GLOBALUNLOCK"
+    ],
+    [
+      "sub_0A2D",
+      "KERNEL",
+      "LOADRESOURCE"
+    ],
+    [
+      "sub_0A2D",
+      "KERNEL",
+      "LOCKRESOURCE"
+    ],
+    [
+      "sub_0A2D",
+      "KERNEL",
+      "SIZEOFRESOURCE"
+    ],
+    [
+      "sub_172F",
+      "KERNEL",
+      "GETPROFILESTRING"
+    ],
+    [
+      "sub_1986",
+      "KERNEL",
+      "ACCESSRESOURCE"
+    ],
+    [
+      "sub_1986",
+      "KERNEL",
+      "FINDRESOURCE"
+    ],
+    [
+      "sub_2448",
+      "GDI",
+      "OPENJOB"
+    ],
+    [
+      "sub_2448",
+      "GDI",
+      "STARTSPOOLPAGE"
+    ]
+  ],
+  "external_modules": [
+    "GDI",
+    "KERNEL",
+    "USER"
+  ],
+  "functions": [
+    {
+      "module": "PSCRIPT",
+      "segment_file": "seg1.asm",
+      "name": "sub_0473",
+      "kind": "NEAR",
+      "offset": 1139,
+      "size_bytes": null,
+      "start_line": 513,
+      "end_line": 719,
+      "num_instructions": 192,
+      "prologue": "saves_regs",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_0473",
+        "L_1986",
+        "L_1AE0",
+        "L_1B81",
+        "L_2448",
+        "L_2512",
+        "L_2551"
+      ],
+      "calls_far": [
+        "far USER.SETRECTEMPTY"
+      ],
+      "num_jumps_cond": 8,
+      "num_jumps_uncond": 19,
+      "ints": [
+        "5"
+      ],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 68,
+      "mnemonic_histogram": {
+        "push": 46,
+        "mov": 34,
+        "les": 20,
+        "jmp": 19,
+        "add": 11,
+        "call": 10,
+        "sub": 8,
+        "cmp": 7,
+        "pop": 5,
+        "dec": 5,
+        "nop": 4,
+        "and": 4,
+        "jbe": 2,
+        "xchg": 2,
+        "jl": 2
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push ds",
+        "pop ax",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp"
+      ],
+      "last_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "pop bp",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_1986",
+        "sub_1AE0",
+        "sub_1B81",
+        "sub_2448",
+        "sub_2512"
+      ],
+      "callees_inter": [
+        {
+          "module": "USER",
+          "func": "SETRECTEMPTY"
+        }
+      ],
+      "callees_unresolved": [
+        "L_0473",
+        "L_2551"
+      ],
+      "callers": [],
+      "fanout": 6,
+      "fanin": 0
+    },
+    {
+      "module": "PSCRIPT",
+      "segment_file": "seg1.asm",
+      "name": "sub_0655",
+      "kind": "NEAR",
+      "offset": 1621,
+      "size_bytes": null,
+      "start_line": 720,
+      "end_line": 798,
+      "num_instructions": 74,
+      "prologue": "standard_bp",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_1816"
+      ],
+      "calls_far": [
+        "far _entry_101",
+        "far _entry_102"
+      ],
+      "num_jumps_cond": 3,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 26,
+      "mnemonic_histogram": {
+        "mov": 26,
+        "push": 22,
+        "call": 6,
+        "nop": 4,
+        "sub": 2,
+        "or": 2,
+        "jge": 2,
+        "neg": 2,
+        "add": 2,
+        "pop": 2,
+        "cmp": 1,
+        "jne": 1,
+        "jmp": 1,
+        "ret": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 0xc",
+        "push si",
+        "cmp word ptr [bp + 8], 0",
+        "jne L_0665"
+      ],
+      "last_instructions": [
+        "pop si",
+        "mov sp, bp",
+        "pop bp",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_1816"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_100B"
+      ],
+      "fanout": 1,
+      "fanin": 1
+    },
+    {
+      "module": "PSCRIPT",
+      "segment_file": "seg1.asm",
+      "name": "sub_0703",
+      "kind": "FAR",
+      "offset": 1795,
+      "size_bytes": null,
+      "start_line": 799,
+      "end_line": 1121,
+      "num_instructions": 298,
+      "prologue": "standard_bp",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_0CA8",
+        "L_1364",
+        "L_18AC",
+        "L_1913"
+      ],
+      "calls_far": [
+        "far KERNEL.FINDRESOURCE",
+        "far KERNEL.FREERESOURCE",
+        "far KERNEL.GLOBALUNLOCK",
+        "far KERNEL.LOADRESOURCE",
+        "far KERNEL.LOCKRESOURCE"
+      ],
+      "num_jumps_cond": 22,
+      "num_jumps_uncond": 9,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 148,
+      "mnemonic_histogram": {
+        "mov": 83,
+        "push": 64,
+        "les": 23,
+        "add": 17,
+        "call": 16,
+        "cmp": 11,
+        "jmp": 9,
+        "lea": 9,
+        "inc": 8,
+        "or": 8,
+        "jne": 8,
+        "je": 8,
+        "sub": 4,
+        "cdq": 4,
+        "nop": 4
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 0x1a",
+        "les bx, ptr [bp + 8]",
+        "push word ptr es:[bx + 0x2a]",
+        "mov ax, word ptr es:[bx + 0x34]"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 0x10"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0CA8",
+        "sub_1364",
+        "sub_18AC",
+        "sub_1913"
+      ],
+      "callees_inter": [
+        {
+          "module": "KERNEL",
+          "func": "FINDRESOURCE"
+        },
+        {
+          "module": "KERNEL",
+          "func": "FREERESOURCE"
+        },
+        {
+          "module": "KERNEL",
+          "func": "GLOBALUNLOCK"
+        },
+        {
+          "module": "KERNEL",
+          "func": "LOADRESOURCE"
+        },
+        {
+          "module": "KERNEL",
+          "func": "LOCKRESOURCE"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0A2D"
+      ],
+      "fanout": 9,
+      "fanin": 1
+    },
+    {
+      "module": "PSCRIPT",
+      "segment_file": "seg1.asm",
+      "name": "sub_0A2D",
+      "kind": "FAR",
+      "offset": 2605,
+      "size_bytes": null,
+      "start_line": 1122,
+      "end_line": 1365,
+      "num_instructions": 229,
+      "prologue": "saves_regs",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_0703",
+        "L_0CA8",
+        "L_1364",
+        "L_1816",
+        "L_1913"
+      ],
+      "calls_far": [
+        "far KERNEL.FINDRESOURCE",
+        "far KERNEL.FREERESOURCE",
+        "far KERNEL.GLOBALUNLOCK",
+        "far KERNEL.LOADRESOURCE",
+        "far KERNEL.LOCKRESOURCE",
+        "far KERNEL.SIZEOFRESOURCE"
+      ],
+      "num_jumps_cond": 10,
+      "num_jumps_uncond": 5,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 125,
+      "mnemonic_histogram": {
+        "mov": 74,
+        "push": 47,
+        "les": 24,
+        "add": 13,
+        "call": 12,
+        "sub": 11,
+        "inc": 9,
+        "or": 5,
+        "jne": 5,
+        "jmp": 5,
+        "nop": 4,
+        "cdq": 4,
+        "pop": 3,
+        "cmp": 2,
+        "test": 2
+      },
+      "classification": "complex",
+      "first_instructions": [
+        "push ds",
+        "pop ax",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 0x10"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0703",
+        "sub_0CA8",
+        "sub_1364",
+        "sub_1816",
+        "sub_1913"
+      ],
+      "callees_inter": [
+        {
+          "module": "KERNEL",
+          "func": "FINDRESOURCE"
+        },
+        {
+          "module": "KERNEL",
+          "func": "FREERESOURCE"
+        },
+        {
+          "module": "KERNEL",
+          "func": "GLOBALUNLOCK"
+        },
+        {
+          "module": "KERNEL",
+          "func": "LOADRESOURCE"
+        },
+        {
+          "module": "KERNEL",
+          "func": "LOCKRESOURCE"
+        },
+        {
+          "module": "KERNEL",
+          "func": "SIZEOFRESOURCE"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 11,
+      "fanin": 0
+    },
+    {
+      "module": "PSCRIPT",
+      "segment_file": "seg1.asm",
+      "name": "sub_0CA8",
+      "kind": "NEAR",
+      "offset": 3240,
+      "size_bytes": null,
+      "start_line": 1366,
+      "end_line": 1526,
+      "num_instructions": 154,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 3,
+      "num_jumps_uncond": 5,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 137,
+      "mnemonic_histogram": {
+        "mov": 78,
+        "les": 58,
+        "jmp": 5,
+        "jne": 2,
+        "cmp": 2,
+        "add": 2,
+        "push": 1,
+        "or": 1,
+        "je": 1,
+        "inc": 1,
+        "sub": 1,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "complex",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "mov ax, word ptr [bp + 8]",
+        "or ax, ax",
+        "jne L_0CB5",
+        "jmp L_0D59"
+      ],
+      "last_instructions": [
+        "mov word ptr es:[bx + 0x1d], 0x5a0",
+        "mov sp, bp",
+        "pop bp",
+        "ret 0xa"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0703",
+        "sub_0A2D"
+      ],
+      "fanout": 0,
+      "fanin": 2
+    },
+    {
+      "module": "PSCRIPT",
+      "segment_file": "seg1.asm",
+      "name": "sub_0ED0",
+      "kind": "FAR",
+      "offset": 3792,
+      "size_bytes": null,
+      "start_line": 1527,
+      "end_line": 1589,
+      "num_instructions": 59,
+      "prologue": "saves_regs",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_259C"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 6,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 24,
+      "mnemonic_histogram": {
+        "push": 17,
+        "mov": 10,
+        "les": 5,
+        "cmp": 5,
+        "pop": 3,
+        "nop": 3,
+        "jg": 3,
+        "je": 2,
+        "call": 2,
+        "add": 2,
+        "inc": 1,
+        "or": 1,
+        "jle": 1,
+        "jmp": 1,
+        "sub": 1
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push ds",
+        "pop ax",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 8"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_259C"
+      ],
+      "callers": [
+        "sub_100B"
+      ],
+      "fanout": 0,
+      "fanin": 1
+    },
+    {
+      "module": "PSCRIPT",
+      "segment_file": "seg1.asm",
+      "name": "sub_0F67",
+      "kind": "NEAR",
+      "offset": 3943,
+      "size_bytes": null,
+      "start_line": 1590,
+      "end_line": 1655,
+      "num_instructions": 58,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 6,
+      "num_jumps_uncond": 2,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 35,
+      "mnemonic_histogram": {
+        "mov": 23,
+        "les": 6,
+        "cmp": 4,
+        "sub": 3,
+        "push": 2,
+        "test": 2,
+        "je": 2,
+        "add": 2,
+        "jmp": 2,
+        "inc": 2,
+        "pop": 2,
+        "jge": 1,
+        "neg": 1,
+        "imul": 1,
+        "ja": 1
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 0xa",
+        "push si",
+        "cmp word ptr [bp + 0xc], 0",
+        "jge L_0F7C"
+      ],
+      "last_instructions": [
+        "pop si",
+        "mov sp, bp",
+        "pop bp",
+        "ret 0xe"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_100B"
+      ],
+      "fanout": 0,
+      "fanin": 1
+    },
+    {
+      "module": "PSCRIPT",
+      "segment_file": "seg1.asm",
+      "name": "sub_100B",
+      "kind": "FAR",
+      "offset": 4107,
+      "size_bytes": null,
+      "start_line": 1656,
+      "end_line": 2005,
+      "num_instructions": 325,
+      "prologue": "saves_regs",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_0655",
+        "L_0ED0",
+        "L_0F67",
+        "L_100B",
+        "L_1816",
+        "L_1BB6",
+        "L_259C",
+        "L_40B5"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 19,
+      "num_jumps_uncond": 10,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 190,
+      "mnemonic_histogram": {
+        "push": 114,
+        "mov": 69,
+        "sub": 15,
+        "les": 15,
+        "add": 14,
+        "call": 13,
+        "nop": 10,
+        "cmp": 10,
+        "jmp": 10,
+        "je": 9,
+        "pop": 7,
+        "inc": 7,
+        "jne": 5,
+        "or": 5,
+        "dec": 4
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push ds",
+        "pop ax",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 0x1e"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0655",
+        "sub_0ED0",
+        "sub_0F67",
+        "sub_1816",
+        "sub_1BB6"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_100B",
+        "L_259C",
+        "L_40B5"
+      ],
+      "callers": [],
+      "fanout": 5,
+      "fanin": 0
+    },
+    {
+      "module": "PSCRIPT",
+      "segment_file": "seg1.asm",
+      "name": "sub_1364",
+      "kind": "NEAR",
+      "offset": 4964,
+      "size_bytes": null,
+      "start_line": 2006,
+      "end_line": 2049,
+      "num_instructions": 38,
+      "prologue": "standard_bp",
+      "epilogue": "jmp_tail",
+      "calls_near": [
+        "L_1816"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 5,
+      "num_jumps_uncond": 3,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 17,
+      "mnemonic_histogram": {
+        "mov": 12,
+        "push": 6,
+        "cmp": 4,
+        "jmp": 3,
+        "jl": 2,
+        "neg": 2,
+        "jne": 2,
+        "les": 2,
+        "sub": 1,
+        "nop": 1,
+        "call": 1,
+        "test": 1,
+        "je": 1
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 4",
+        "cmp word ptr [bp + 6], 0",
+        "jl L_1375",
+        "mov ax, word ptr [bp + 6]"
+      ],
+      "last_instructions": [
+        "cmp word ptr [bp + 8], 0",
+        "jne L_1424",
+        "push ax",
+        "jmp L_1414"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_1816"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0703",
+        "sub_0A2D"
+      ],
+      "fanout": 1,
+      "fanin": 2
+    },
+    {
+      "module": "PSCRIPT",
+      "segment_file": "seg1.asm",
+      "name": "sub_13C7",
+      "kind": "NEAR",
+      "offset": 5063,
+      "size_bytes": null,
+      "start_line": 2050,
+      "end_line": 2069,
+      "num_instructions": 19,
+      "prologue": "standard_bp",
+      "epilogue": "jmp_tail",
+      "calls_near": [
+        "L_1816"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 2,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 6,
+      "mnemonic_histogram": {
+        "push": 6,
+        "mov": 4,
+        "les": 2,
+        "cmp": 2,
+        "nop": 1,
+        "call": 1,
+        "jl": 1,
+        "jg": 1,
+        "jmp": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "push word ptr [bp + 6]",
+        "mov ax, 0x2d0",
+        "push ax",
+        "les bx, ptr [bp + 0xe]",
+        "push word ptr es:[bx + 0x36]",
+        "nop"
+      ],
+      "last_instructions": [
+        "les bx, ptr [bp + 0xe]",
+        "push word ptr es:[bx + 0x36]",
+        "mov ax, 0x48",
+        "jmp L_1401"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_1816"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 1,
+      "fanin": 0
+    },
+    {
+      "module": "PSCRIPT",
+      "segment_file": "seg1.asm",
+      "name": "sub_13F7",
+      "kind": "NEAR",
+      "offset": 5111,
+      "size_bytes": null,
+      "start_line": 2070,
+      "end_line": 2173,
+      "num_instructions": 99,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [
+        "L_1631",
+        "L_1816"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 2,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 49,
+      "mnemonic_histogram": {
+        "push": 36,
+        "mov": 27,
+        "les": 13,
+        "call": 9,
+        "nop": 8,
+        "cmp": 2,
+        "jne": 1,
+        "je": 1,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "complex",
+      "first_instructions": [
+        "push word ptr [bp + 6]",
+        "mov ax, 0x7d",
+        "push ax",
+        "mov ax, 0x64",
+        "push ax",
+        "nop"
+      ],
+      "last_instructions": [
+        "mov word ptr es:[bx + 0x38], ax",
+        "mov sp, bp",
+        "pop bp",
+        "ret 0xe"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_1631",
+        "sub_1816"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 2,
+      "fanin": 0
+    },
+    {
+      "module": "PSCRIPT",
+      "segment_file": "seg1.asm",
+      "name": "sub_14F7",
+      "kind": "NEAR",
+      "offset": 5367,
+      "size_bytes": null,
+      "start_line": 2174,
+      "end_line": 2203,
+      "num_instructions": 28,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [
+        "L_1913"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 1,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 11,
+      "mnemonic_histogram": {
+        "mov": 11,
+        "push": 7,
+        "add": 2,
+        "or": 1,
+        "je": 1,
+        "les": 1,
+        "adc": 1,
+        "nop": 1,
+        "call": 1,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "mov ax, word ptr [bp + 4]",
+        "or ax, word ptr [bp + 6]",
+        "je L_1535",
+        "les bx, ptr [bp + 4]"
+      ],
+      "last_instructions": [
+        "mov ax, 0xe",
+        "mov sp, bp",
+        "pop bp",
+        "ret 0xc"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_1913"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 1,
+      "fanin": 0
+    },
+    {
+      "module": "PSCRIPT",
+      "segment_file": "seg1.asm",
+      "name": "sub_153E",
+      "kind": "NEAR",
+      "offset": 5438,
+      "size_bytes": null,
+      "start_line": 2204,
+      "end_line": 2296,
+      "num_instructions": 86,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [
+        "L_1913"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 5,
+      "num_jumps_uncond": 3,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 50,
+      "mnemonic_histogram": {
+        "mov": 37,
+        "push": 8,
+        "les": 7,
+        "jmp": 3,
+        "add": 3,
+        "cmp": 3,
+        "cwde": 3,
+        "sub": 2,
+        "or": 2,
+        "je": 2,
+        "shl": 2,
+        "inc": 2,
+        "pop": 2,
+        "jne": 1,
+        "adc": 1
+      },
+      "classification": "complex",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 0x10",
+        "push si",
+        "mov ax, word ptr [bp + 4]",
+        "or ax, word ptr [bp + 6]"
+      ],
+      "last_instructions": [
+        "pop si",
+        "mov sp, bp",
+        "pop bp",
+        "ret 0xc"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_1913"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 1,
+      "fanin": 0
+    },
+    {
+      "module": "PSCRIPT",
+      "segment_file": "seg1.asm",
+      "name": "sub_1631",
+      "kind": "NEAR",
+      "offset": 5681,
+      "size_bytes": null,
+      "start_line": 2297,
+      "end_line": 2336,
+      "num_instructions": 34,
+      "prologue": "standard_bp",
+      "epilogue": "jmp_tail",
+      "calls_near": [
+        "L_1816"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 5,
+      "num_jumps_uncond": 5,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 11,
+      "mnemonic_histogram": {
+        "mov": 8,
+        "push": 5,
+        "cmp": 5,
+        "jmp": 5,
+        "je": 3,
+        "sub": 2,
+        "nop": 1,
+        "call": 1,
+        "les": 1,
+        "and": 1,
+        "jg": 1,
+        "jge": 1
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 4",
+        "push word ptr [bp + 6]",
+        "mov ax, 0x48",
+        "push ax"
+      ],
+      "last_instructions": [
+        "mov word ptr [bp - 2], 4",
+        "jmp L_16A1",
+        "mov word ptr [bp - 2], 0",
+        "jmp L_16A1"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_1816"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_13F7"
+      ],
+      "fanout": 1,
+      "fanin": 1
+    },
+    {
+      "module": "PSCRIPT",
+      "segment_file": "seg1.asm",
+      "name": "sub_168E",
+      "kind": "FAR",
+      "offset": 5774,
+      "size_bytes": null,
+      "start_line": 2337,
+      "end_line": 2417,
+      "num_instructions": 79,
+      "prologue": "standard_bp",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_1816",
+        "L_4247",
+        "L_42EA",
+        "L_4316"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 19,
+      "mnemonic_histogram": {
+        "push": 29,
+        "mov": 16,
+        "pop": 10,
+        "nop": 5,
+        "call": 5,
+        "inc": 3,
+        "sub": 3,
+        "dec": 3,
+        "retf": 3,
+        "les": 1,
+        "ret": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "push word ptr [bp - 4]",
+        "mov ax, 0xc4",
+        "push ax",
+        "mov ax, 0x3e8",
+        "push ax",
+        "nop"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 8"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_1816"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_4247",
+        "L_42EA",
+        "L_4316"
+      ],
+      "callers": [],
+      "fanout": 1,
+      "fanin": 0
+    },
+    {
+      "module": "PSCRIPT",
+      "segment_file": "seg1.asm",
+      "name": "sub_172F",
+      "kind": "FAR",
+      "offset": 5935,
+      "size_bytes": null,
+      "start_line": 2418,
+      "end_line": 2523,
+      "num_instructions": 95,
+      "prologue": "standard_bp",
+      "epilogue": "retf",
+      "calls_near": [],
+      "calls_far": [
+        "far KERNEL.GETPROFILESTRING"
+      ],
+      "num_jumps_cond": 9,
+      "num_jumps_uncond": 3,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 38,
+      "mnemonic_histogram": {
+        "mov": 31,
+        "push": 13,
+        "inc": 6,
+        "sub": 5,
+        "or": 5,
+        "je": 5,
+        "les": 5,
+        "cmp": 4,
+        "pop": 4,
+        "jmp": 3,
+        "jne": 2,
+        "lea": 2,
+        "ret": 1,
+        "nop": 1,
+        "call": 1
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 4",
+        "mov word ptr [bp - 4], 0",
+        "mov ax, word ptr [bp + 4]",
+        "or ax, word ptr [bp + 6]"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [
+        {
+          "module": "KERNEL",
+          "func": "GETPROFILESTRING"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 1,
+      "fanin": 0
+    },
+    {
+      "module": "PSCRIPT",
+      "segment_file": "seg1.asm",
+      "name": "sub_1816",
+      "kind": "FAR",
+      "offset": 6166,
+      "size_bytes": null,
+      "start_line": 2524,
+      "end_line": 2596,
+      "num_instructions": 70,
+      "prologue": "saves_regs",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_42EA",
+        "L_43C7"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 1,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 23,
+      "mnemonic_histogram": {
+        "mov": 21,
+        "push": 14,
+        "pop": 6,
+        "sub": 5,
+        "inc": 4,
+        "cdq": 3,
+        "nop": 2,
+        "call": 2,
+        "dec": 2,
+        "retf": 2,
+        "shr": 1,
+        "rcr": 1,
+        "and": 1,
+        "add": 1,
+        "adc": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "push ds",
+        "pop ax",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 4"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_42EA",
+        "L_43C7"
+      ],
+      "callers": [
+        "sub_0655",
+        "sub_0A2D",
+        "sub_100B",
+        "sub_1364",
+        "sub_13C7",
+        "sub_13F7",
+        "sub_1631",
+        "sub_168E"
+      ],
+      "fanout": 0,
+      "fanin": 8
+    },
+    {
+      "module": "PSCRIPT",
+      "segment_file": "seg1.asm",
+      "name": "sub_18AC",
+      "kind": "FAR",
+      "offset": 6316,
+      "size_bytes": null,
+      "start_line": 2597,
+      "end_line": 2652,
+      "num_instructions": 50,
+      "prologue": "saves_regs",
+      "epilogue": "retf_n",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 3,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 14,
+      "mnemonic_histogram": {
+        "mov": 11,
+        "push": 6,
+        "pop": 6,
+        "inc": 6,
+        "sub": 4,
+        "les": 4,
+        "nop": 2,
+        "cmp": 2,
+        "jne": 2,
+        "dec": 2,
+        "retf": 2,
+        "je": 1,
+        "jmp": 1,
+        "or": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "push ds",
+        "pop ax",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 8"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0703"
+      ],
+      "fanout": 0,
+      "fanin": 1
+    },
+    {
+      "module": "PSCRIPT",
+      "segment_file": "seg1.asm",
+      "name": "sub_1913",
+      "kind": "FAR",
+      "offset": 6419,
+      "size_bytes": null,
+      "start_line": 2653,
+      "end_line": 2709,
+      "num_instructions": 50,
+      "prologue": "saves_regs",
+      "epilogue": "retf_n",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 3,
+      "num_jumps_uncond": 3,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 14,
+      "mnemonic_histogram": {
+        "mov": 10,
+        "push": 6,
+        "pop": 6,
+        "inc": 6,
+        "les": 4,
+        "dec": 4,
+        "jmp": 3,
+        "sub": 3,
+        "nop": 2,
+        "jns": 2,
+        "retf": 2,
+        "cmp": 1,
+        "je": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "push ds",
+        "pop ax",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 0xa"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0703",
+        "sub_0A2D",
+        "sub_14F7",
+        "sub_153E"
+      ],
+      "fanout": 0,
+      "fanin": 4
+    },
+    {
+      "module": "PSCRIPT",
+      "segment_file": "seg1.asm",
+      "name": "sub_1978",
+      "kind": "NEAR",
+      "offset": 6520,
+      "size_bytes": null,
+      "start_line": 2710,
+      "end_line": 2714,
+      "num_instructions": 4,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 0,
+      "mnemonic_histogram": {
+        "push": 1,
+        "mov": 1,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "leaf",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "pop bp",
+        "ret 8"
+      ],
+      "last_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "pop bp",
+        "ret 8"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 0,
+      "fanin": 0
+    },
+    {
+      "module": "PSCRIPT",
+      "segment_file": "seg1.asm",
+      "name": "sub_197F",
+      "kind": "NEAR",
+      "offset": 6527,
+      "size_bytes": null,
+      "start_line": 2715,
+      "end_line": 2719,
+      "num_instructions": 4,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 0,
+      "mnemonic_histogram": {
+        "push": 1,
+        "mov": 1,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "leaf",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "pop bp",
+        "ret 6"
+      ],
+      "last_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "pop bp",
+        "ret 6"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 0,
+      "fanin": 0
+    },
+    {
+      "module": "PSCRIPT",
+      "segment_file": "seg1.asm",
+      "name": "sub_1986",
+      "kind": "NEAR",
+      "offset": 6534,
+      "size_bytes": null,
+      "start_line": 2720,
+      "end_line": 2864,
+      "num_instructions": 130,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [
+        "L_24BE",
+        "L_259C"
+      ],
+      "calls_far": [
+        "far KERNEL.ACCESSRESOURCE",
+        "far KERNEL.FINDRESOURCE",
+        "far KERNEL._LCLOSE",
+        "far KERNEL._LREAD"
+      ],
+      "num_jumps_cond": 8,
+      "num_jumps_uncond": 8,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 40,
+      "mnemonic_histogram": {
+        "push": 47,
+        "mov": 26,
+        "call": 10,
+        "jmp": 8,
+        "cmp": 6,
+        "les": 5,
+        "nop": 4,
+        "add": 4,
+        "sub": 3,
+        "lea": 3,
+        "je": 3,
+        "cdq": 2,
+        "or": 2,
+        "jne": 2,
+        "jge": 1
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 0x8a",
+        "mov word ptr [0xe2], 0xffff",
+        "mov word ptr [0xe4], 0xffff",
+        "mov word ptr [0xe8], 0xffff"
+      ],
+      "last_instructions": [
+        "add sp, 0xa",
+        "mov sp, bp",
+        "pop bp",
+        "ret 4"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_24BE"
+      ],
+      "callees_inter": [
+        {
+          "module": "KERNEL",
+          "func": "ACCESSRESOURCE"
+        },
+        {
+          "module": "KERNEL",
+          "func": "FINDRESOURCE"
+        }
+      ],
+      "callees_unresolved": [
+        "L_259C"
+      ],
+      "callers": [
+        "sub_0473"
+      ],
+      "fanout": 3,
+      "fanin": 1
+    },
+    {
+      "module": "PSCRIPT",
+      "segment_file": "seg1.asm",
+      "name": "sub_1AE0",
+      "kind": "NEAR",
+      "offset": 6880,
+      "size_bytes": null,
+      "start_line": 2865,
+      "end_line": 2889,
+      "num_instructions": 24,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [
+        "L_259C"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 4,
+      "mnemonic_histogram": {
+        "push": 12,
+        "mov": 5,
+        "nop": 2,
+        "call": 2,
+        "add": 1,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "mov ax, 0xf6",
+        "push ds",
+        "push ax",
+        "push word ptr [bp + 6]"
+      ],
+      "last_instructions": [
+        "call L_259C",
+        "mov sp, bp",
+        "pop bp",
+        "ret 4"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_259C"
+      ],
+      "callers": [
+        "sub_0473"
+      ],
+      "fanout": 0,
+      "fanin": 1
+    },
+    {
+      "module": "PSCRIPT",
+      "segment_file": "seg1.asm",
+      "name": "sub_1B10",
+      "kind": "NEAR",
+      "offset": 6928,
+      "size_bytes": null,
+      "start_line": 2890,
+      "end_line": 2943,
+      "num_instructions": 46,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [
+        "L_259C"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 5,
+      "num_jumps_uncond": 3,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 17,
+      "mnemonic_histogram": {
+        "push": 13,
+        "mov": 8,
+        "jmp": 3,
+        "cmp": 3,
+        "add": 3,
+        "sub": 2,
+        "nop": 2,
+        "call": 2,
+        "or": 1,
+        "je": 1,
+        "jge": 1,
+        "les": 1,
+        "dec": 1,
+        "jns": 1,
+        "jle": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 2",
+        "mov ax, word ptr [bp + 6]",
+        "or ax, word ptr [bp + 8]",
+        "je L_1B7B"
+      ],
+      "last_instructions": [
+        "jg L_1B20",
+        "mov sp, bp",
+        "pop bp",
+        "ret 0xa"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_259C"
+      ],
+      "callers": [
+        "sub_1CA5",
+        "sub_1F84"
+      ],
+      "fanout": 0,
+      "fanin": 2
+    },
+    {
+      "module": "PSCRIPT",
+      "segment_file": "seg1.asm",
+      "name": "sub_1B81",
+      "kind": "NEAR",
+      "offset": 7041,
+      "size_bytes": null,
+      "start_line": 2944,
+      "end_line": 2966,
+      "num_instructions": 21,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [
+        "L_2133",
+        "L_259C"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 1,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 7,
+      "mnemonic_histogram": {
+        "push": 8,
+        "mov": 4,
+        "call": 2,
+        "cmp": 1,
+        "je": 1,
+        "nop": 1,
+        "add": 1,
+        "les": 1,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "cmp word ptr [0xf4], 0",
+        "je L_1B94",
+        "push word ptr [bp + 6]",
+        "push word ptr [bp + 4]"
+      ],
+      "last_instructions": [
+        "mov word ptr es:[bx + 0x26], 0",
+        "mov sp, bp",
+        "pop bp",
+        "ret 4"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_2133"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_259C"
+      ],
+      "callers": [
+        "sub_0473"
+      ],
+      "fanout": 1,
+      "fanin": 1
+    },
+    {
+      "module": "PSCRIPT",
+      "segment_file": "seg1.asm",
+      "name": "sub_1BB6",
+      "kind": "NEAR",
+      "offset": 7094,
+      "size_bytes": null,
+      "start_line": 2967,
+      "end_line": 3065,
+      "num_instructions": 92,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [
+        "L_20B0",
+        "L_259C"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 6,
+      "num_jumps_uncond": 3,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 37,
+      "mnemonic_histogram": {
+        "push": 34,
+        "mov": 19,
+        "cmp": 6,
+        "les": 5,
+        "call": 5,
+        "add": 5,
+        "nop": 4,
+        "sub": 3,
+        "je": 3,
+        "jmp": 3,
+        "jne": 2,
+        "jge": 1,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 2",
+        "les bx, ptr [bp + 4]",
+        "mov ax, word ptr [0xec]",
+        "mov dx, word ptr [0xee]"
+      ],
+      "last_instructions": [
+        "add sp, 8",
+        "mov sp, bp",
+        "pop bp",
+        "ret 8"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_20B0"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_259C"
+      ],
+      "callers": [
+        "sub_100B"
+      ],
+      "fanout": 1,
+      "fanin": 1
+    },
+    {
+      "module": "PSCRIPT",
+      "segment_file": "seg1.asm",
+      "name": "sub_1CA5",
+      "kind": "FAR",
+      "offset": 7333,
+      "size_bytes": null,
+      "start_line": 3066,
+      "end_line": 3126,
+      "num_instructions": 54,
+      "prologue": "saves_regs",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_1B10",
+        "L_259C"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 5,
+      "num_jumps_uncond": 2,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 20,
+      "mnemonic_histogram": {
+        "push": 14,
+        "mov": 10,
+        "cmp": 4,
+        "pop": 3,
+        "sub": 3,
+        "jle": 3,
+        "nop": 2,
+        "jmp": 2,
+        "call": 2,
+        "add": 2,
+        "dec": 2,
+        "shl": 2,
+        "inc": 1,
+        "or": 1,
+        "je": 1
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push ds",
+        "pop ax",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 0xa"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_1B10"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_259C"
+      ],
+      "callers": [],
+      "fanout": 1,
+      "fanin": 0
+    },
+    {
+      "module": "PSCRIPT",
+      "segment_file": "seg1.asm",
+      "name": "sub_1D22",
+      "kind": "FAR",
+      "offset": 7458,
+      "size_bytes": null,
+      "start_line": 3127,
+      "end_line": 3238,
+      "num_instructions": 100,
+      "prologue": "saves_regs",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_259C"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 6,
+      "num_jumps_uncond": 6,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 36,
+      "mnemonic_histogram": {
+        "push": 29,
+        "mov": 18,
+        "add": 7,
+        "jmp": 6,
+        "nop": 5,
+        "sub": 5,
+        "cmp": 5,
+        "call": 4,
+        "shl": 4,
+        "pop": 3,
+        "inc": 2,
+        "jne": 2,
+        "jg": 2,
+        "les": 2,
+        "dec": 2
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push ds",
+        "pop ax",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 0xc"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_259C"
+      ],
+      "callers": [],
+      "fanout": 0,
+      "fanin": 0
+    },
+    {
+      "module": "PSCRIPT",
+      "segment_file": "seg1.asm",
+      "name": "sub_1E10",
+      "kind": "FAR",
+      "offset": 7696,
+      "size_bytes": null,
+      "start_line": 3239,
+      "end_line": 3353,
+      "num_instructions": 108,
+      "prologue": "saves_regs",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_259C"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 4,
+      "num_jumps_uncond": 2,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 44,
+      "mnemonic_histogram": {
+        "push": 36,
+        "mov": 21,
+        "add": 10,
+        "nop": 6,
+        "sub": 6,
+        "les": 6,
+        "call": 5,
+        "pop": 3,
+        "or": 3,
+        "jmp": 2,
+        "inc": 1,
+        "jne": 1,
+        "je": 1,
+        "cmp": 1,
+        "jl": 1
+      },
+      "classification": "complex",
+      "first_instructions": [
+        "push ds",
+        "pop ax",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 0xc"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_259C"
+      ],
+      "callers": [],
+      "fanout": 0,
+      "fanin": 0
+    },
+    {
+      "module": "PSCRIPT",
+      "segment_file": "seg1.asm",
+      "name": "sub_1F12",
+      "kind": "FAR",
+      "offset": 7954,
+      "size_bytes": null,
+      "start_line": 3354,
+      "end_line": 3410,
+      "num_instructions": 55,
+      "prologue": "saves_regs",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_259C"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 1,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 15,
+      "mnemonic_histogram": {
+        "push": 22,
+        "mov": 9,
+        "nop": 4,
+        "add": 4,
+        "pop": 3,
+        "call": 3,
+        "dec": 3,
+        "les": 2,
+        "inc": 1,
+        "or": 1,
+        "je": 1,
+        "sub": 1,
+        "retf": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "push ds",
+        "pop ax",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 0xa"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_259C"
+      ],
+      "callers": [],
+      "fanout": 0,
+      "fanin": 0
+    },
+    {
+      "module": "PSCRIPT",
+      "segment_file": "seg1.asm",
+      "name": "sub_1F84",
+      "kind": "FAR",
+      "offset": 8068,
+      "size_bytes": null,
+      "start_line": 3411,
+      "end_line": 3446,
+      "num_instructions": 34,
+      "prologue": "saves_regs",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_1B10",
+        "L_259C"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 1,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 8,
+      "mnemonic_histogram": {
+        "push": 13,
+        "mov": 6,
+        "pop": 3,
+        "nop": 2,
+        "sub": 2,
+        "call": 2,
+        "inc": 1,
+        "or": 1,
+        "je": 1,
+        "add": 1,
+        "dec": 1,
+        "retf": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "push ds",
+        "pop ax",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 0xa"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_1B10"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_259C"
+      ],
+      "callers": [],
+      "fanout": 1,
+      "fanin": 0
+    },
+    {
+      "module": "PSCRIPT",
+      "segment_file": "seg1.asm",
+      "name": "sub_1FCA",
+      "kind": "FAR",
+      "offset": 8138,
+      "size_bytes": null,
+      "start_line": 3447,
+      "end_line": 3503,
+      "num_instructions": 53,
+      "prologue": "saves_regs",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_259C"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 2,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 20,
+      "mnemonic_histogram": {
+        "push": 18,
+        "mov": 9,
+        "add": 4,
+        "pop": 3,
+        "nop": 3,
+        "inc": 2,
+        "sub": 2,
+        "dec": 2,
+        "cmp": 2,
+        "les": 2,
+        "call": 2,
+        "jle": 1,
+        "jmp": 1,
+        "jl": 1,
+        "retf": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "push ds",
+        "pop ax",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 0xc"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_259C"
+      ],
+      "callers": [],
+      "fanout": 0,
+      "fanin": 0
+    },
+    {
+      "module": "PSCRIPT",
+      "segment_file": "seg1.asm",
+      "name": "sub_2046",
+      "kind": "FAR",
+      "offset": 8262,
+      "size_bytes": null,
+      "start_line": 3504,
+      "end_line": 3556,
+      "num_instructions": 52,
+      "prologue": "saves_regs",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_259C"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 13,
+      "mnemonic_histogram": {
+        "push": 22,
+        "mov": 8,
+        "nop": 4,
+        "add": 4,
+        "pop": 3,
+        "call": 3,
+        "dec": 3,
+        "les": 2,
+        "inc": 1,
+        "sub": 1,
+        "retf": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "push ds",
+        "pop ax",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 0xa"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_259C"
+      ],
+      "callers": [],
+      "fanout": 0,
+      "fanin": 0
+    },
+    {
+      "module": "PSCRIPT",
+      "segment_file": "seg1.asm",
+      "name": "sub_20B0",
+      "kind": "NEAR",
+      "offset": 8368,
+      "size_bytes": null,
+      "start_line": 3557,
+      "end_line": 3626,
+      "num_instructions": 69,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [
+        "L_4247",
+        "L_42EA",
+        "L_43BC"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 10,
+      "mnemonic_histogram": {
+        "push": 25,
+        "mov": 18,
+        "sub": 7,
+        "cdq": 7,
+        "call": 7,
+        "add": 2,
+        "idiv": 1,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 0xa",
+        "mov ax, 0xff",
+        "cdq",
+        "push dx"
+      ],
+      "last_instructions": [
+        "idiv cx",
+        "mov sp, bp",
+        "pop bp",
+        "ret 4"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_4247",
+        "L_42EA",
+        "L_43BC"
+      ],
+      "callers": [
+        "sub_1BB6",
+        "sub_2252",
+        "sub_237B"
+      ],
+      "fanout": 0,
+      "fanin": 3
+    },
+    {
+      "module": "PSCRIPT",
+      "segment_file": "seg1.asm",
+      "name": "sub_2133",
+      "kind": "NEAR",
+      "offset": 8499,
+      "size_bytes": null,
+      "start_line": 3627,
+      "end_line": 3646,
+      "num_instructions": 19,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [
+        "L_259C"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 7,
+      "mnemonic_histogram": {
+        "mov": 8,
+        "push": 6,
+        "nop": 1,
+        "call": 1,
+        "add": 1,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "mov ax, 0x201",
+        "push ds",
+        "push ax",
+        "push word ptr [bp + 6]"
+      ],
+      "last_instructions": [
+        "mov word ptr [0xf4], 0",
+        "mov sp, bp",
+        "pop bp",
+        "ret 4"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_259C"
+      ],
+      "callers": [
+        "sub_1B81",
+        "sub_216D",
+        "sub_2252"
+      ],
+      "fanout": 0,
+      "fanin": 3
+    },
+    {
+      "module": "PSCRIPT",
+      "segment_file": "seg1.asm",
+      "name": "sub_216D",
+      "kind": "NEAR",
+      "offset": 8557,
+      "size_bytes": null,
+      "start_line": 3647,
+      "end_line": 3744,
+      "num_instructions": 89,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [
+        "L_2133",
+        "L_259C"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 7,
+      "num_jumps_uncond": 2,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 36,
+      "mnemonic_histogram": {
+        "push": 26,
+        "mov": 20,
+        "cmp": 6,
+        "call": 5,
+        "sub": 4,
+        "je": 4,
+        "inc": 4,
+        "nop": 4,
+        "add": 4,
+        "les": 3,
+        "jmp": 2,
+        "jl": 2,
+        "pop": 2,
+        "or": 1,
+        "jge": 1
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 4",
+        "push si",
+        "mov ax, word ptr [0xf4]",
+        "mov word ptr [bp - 2], ax"
+      ],
+      "last_instructions": [
+        "pop si",
+        "mov sp, bp",
+        "pop bp",
+        "ret 8"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_2133"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_259C"
+      ],
+      "callers": [
+        "sub_2252"
+      ],
+      "fanout": 1,
+      "fanin": 1
+    },
+    {
+      "module": "PSCRIPT",
+      "segment_file": "seg1.asm",
+      "name": "sub_2252",
+      "kind": "NEAR",
+      "offset": 8786,
+      "size_bytes": null,
+      "start_line": 3745,
+      "end_line": 3873,
+      "num_instructions": 115,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [
+        "L_20B0",
+        "L_2133",
+        "L_216D",
+        "L_259C"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 15,
+      "num_jumps_uncond": 7,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 43,
+      "mnemonic_histogram": {
+        "push": 28,
+        "mov": 26,
+        "cmp": 10,
+        "je": 9,
+        "jmp": 7,
+        "les": 7,
+        "jne": 6,
+        "call": 6,
+        "or": 5,
+        "add": 4,
+        "sub": 2,
+        "nop": 2,
+        "shl": 1,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 2",
+        "mov ax, word ptr [bp + 4]",
+        "or ax, word ptr [bp + 6]",
+        "jne L_2263"
+      ],
+      "last_instructions": [
+        "mov word ptr [0xe6], ax",
+        "mov sp, bp",
+        "pop bp",
+        "ret 8"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_20B0",
+        "sub_2133",
+        "sub_216D"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_259C"
+      ],
+      "callers": [],
+      "fanout": 3,
+      "fanin": 0
+    },
+    {
+      "module": "PSCRIPT",
+      "segment_file": "seg1.asm",
+      "name": "sub_237B",
+      "kind": "FAR",
+      "offset": 9083,
+      "size_bytes": null,
+      "start_line": 3874,
+      "end_line": 3958,
+      "num_instructions": 76,
+      "prologue": "saves_regs",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_20B0",
+        "L_259C"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 8,
+      "num_jumps_uncond": 3,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 40,
+      "mnemonic_histogram": {
+        "mov": 25,
+        "push": 14,
+        "cmp": 6,
+        "jne": 5,
+        "les": 5,
+        "pop": 3,
+        "jmp": 3,
+        "nop": 2,
+        "sub": 2,
+        "or": 2,
+        "call": 2,
+        "inc": 1,
+        "jle": 1,
+        "je": 1,
+        "jge": 1
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push ds",
+        "pop ax",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 0xa"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_20B0"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_259C"
+      ],
+      "callers": [],
+      "fanout": 1,
+      "fanin": 0
+    },
+    {
+      "module": "PSCRIPT",
+      "segment_file": "seg1.asm",
+      "name": "sub_2448",
+      "kind": "NEAR",
+      "offset": 9288,
+      "size_bytes": null,
+      "start_line": 3959,
+      "end_line": 3999,
+      "num_instructions": 37,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [],
+      "calls_far": [
+        "far GDI.OPENJOB",
+        "far GDI.STARTSPOOLPAGE"
+      ],
+      "num_jumps_cond": 3,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 21,
+      "mnemonic_histogram": {
+        "mov": 12,
+        "push": 7,
+        "les": 5,
+        "cmp": 2,
+        "call": 2,
+        "sub": 1,
+        "je": 1,
+        "jmp": 1,
+        "add": 1,
+        "jne": 1,
+        "or": 1,
+        "jl": 1,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 4",
+        "les bx, ptr [bp + 8]",
+        "cmp word ptr es:[bx + 0x22], 0",
+        "je L_2460"
+      ],
+      "last_instructions": [
+        "mov ax, word ptr es:[bx + 0x2c]",
+        "mov sp, bp",
+        "pop bp",
+        "ret 8"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [
+        {
+          "module": "GDI",
+          "func": "OPENJOB"
+        },
+        {
+          "module": "GDI",
+          "func": "STARTSPOOLPAGE"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0473"
+      ],
+      "fanout": 2,
+      "fanin": 1
+    },
+    {
+      "module": "PSCRIPT",
+      "segment_file": "seg1.asm",
+      "name": "sub_24BE",
+      "kind": "NEAR",
+      "offset": 9406,
+      "size_bytes": null,
+      "start_line": 4000,
+      "end_line": 4034,
+      "num_instructions": 30,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [
+        "L_2551"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 4,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 15,
+      "mnemonic_histogram": {
+        "mov": 6,
+        "les": 5,
+        "push": 4,
+        "cmp": 3,
+        "jl": 2,
+        "inc": 2,
+        "pop": 2,
+        "jmp": 1,
+        "jb": 1,
+        "call": 1,
+        "dec": 1,
+        "jns": 1,
+        "ret": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "push si",
+        "les bx, ptr [bp + 0xa]",
+        "cmp word ptr es:[bx + 0x2c], 0",
+        "jl L_250B"
+      ],
+      "last_instructions": [
+        "pop si",
+        "mov sp, bp",
+        "pop bp",
+        "ret 0xa"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_2551"
+      ],
+      "callers": [
+        "sub_1986"
+      ],
+      "fanout": 0,
+      "fanin": 1
+    },
+    {
+      "module": "PSCRIPT",
+      "segment_file": "seg1.asm",
+      "name": "sub_2512",
+      "kind": "NEAR",
+      "offset": 9490,
+      "size_bytes": null,
+      "start_line": 4035,
+      "end_line": 4045,
+      "num_instructions": 10,
+      "prologue": "standard_bp",
+      "epilogue": "unknown",
+      "calls_near": [
+        "L_2551"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 1,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 4,
+      "mnemonic_histogram": {
+        "push": 4,
+        "les": 2,
+        "mov": 1,
+        "cmp": 1,
+        "jl": 1,
+        "call": 1
+      },
+      "classification": "wrapper",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "les bx, ptr [bp + 4]",
+        "cmp word ptr es:[bx + 0x2c], 0",
+        "jl L_254B",
+        "push es"
+      ],
+      "last_instructions": [
+        "push bx",
+        "call L_2551",
+        "les bx, ptr [bp + 4]",
+        "push word ptr es:[bx + 0x2c]"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_2551"
+      ],
+      "callers": [
+        "sub_0473"
+      ],
+      "fanout": 0,
+      "fanin": 1
+    }
+  ]
+}

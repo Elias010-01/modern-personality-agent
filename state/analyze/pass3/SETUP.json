@@ -73,13 +73,13 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (23 instr).",
+      "description": "Calls DOS services via INT 21h (23 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0282 -- offset 0x0282 -- 23 instr\n; Llama a servicios DOS via INT 21h (23 instr).\n; tags: dos_caller, int_21\n; callers: sub_1037\n; calls (intra): sub_02B4\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0282 -- offset 0x0282 -- 23 instr\n; Calls DOS services via INT 21h (23 instr).\n; tags: dos_caller, int_21\n; callers: sub_1037\n; calls (intra): sub_02B4\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -134,13 +134,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (7 instr).",
+      "description": "Calls DOS services via INT 21h (7 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_02B4 -- offset 0x02B4 -- 7 instr\n; Llama a servicios DOS via INT 21h (7 instr).\n; tags: dos_caller, int_21\n; callers: sub_0282\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_02B4 -- offset 0x02B4 -- 7 instr\n; Calls DOS services via INT 21h (7 instr).\n; tags: dos_caller, int_21\n; callers: sub_0282\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -194,12 +194,12 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Funcion hoja (no llama a otras, 6 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 6 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_02BF -- offset 0x02BF -- 6 instr\n; Funcion hoja (no llama a otras, 6 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_02CA, sub_185E\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_02BF -- offset 0x02BF -- 6 instr\n; Leaf function (no callees, 6 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_02CA, sub_185E\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -266,13 +266,13 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (36 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (36 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_02CA -- offset 0x02CA -- 36 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (36 instr).\n; tags: iterator, string_op\n; callers: sub_0E44\n; calls (intra): sub_02BF\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_02CA -- offset 0x02CA -- 36 instr\n; Iterator with string ops (movsb/scasb/...) (36 instr).\n; tags: iterator, string_op\n; callers: sub_0E44\n; calls (intra): sub_02BF\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -336,13 +336,13 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (37 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (37 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_030A -- offset 0x030A -- 37 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (37 instr).\n; tags: iterator, string_op\n; callers: sub_19F0, sub_2644\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_030A -- offset 0x030A -- 37 instr\n; Iterator with string ops (movsb/scasb/...) (37 instr).\n; tags: iterator, string_op\n; callers: sub_19F0, sub_2644\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -416,12 +416,12 @@
       ],
       "fanout": 3,
       "fanin": 8,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (45 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (45 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_034C -- offset 0x034C -- 45 instr\n; Dispatcher: tabla de decisiones cmp+jcc (45 instr).\n; tags: dispatcher\n; callers: sub_043D, sub_07A9, sub_1B55, sub_2698, sub_27F0, sub_285D (+2 mas)\n; calls (intra): sub_1836, sub_185E, sub_193E\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_034C -- offset 0x034C -- 45 instr\n; Dispatcher: cmp+jcc decision table (45 instr).\n; tags: dispatcher\n; callers: sub_043D, sub_07A9, sub_1B55, sub_2698, sub_27F0, sub_285D (+2 more)\n; calls (intra): sub_1836, sub_185E, sub_193E\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -498,12 +498,12 @@
       "callers": [],
       "fanout": 8,
       "fanin": 0,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (48 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (48 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_03BC -- offset 0x03BC -- 48 instr\n; Dispatcher: tabla de decisiones cmp+jcc (48 instr).\n; tags: dispatcher\n; calls (intra): sub_04AA, sub_05E9, sub_07A9, sub_0E44, sub_1037, sub_1571 (+2 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_03BC -- offset 0x03BC -- 48 instr\n; Dispatcher: cmp+jcc decision table (48 instr).\n; tags: dispatcher\n; calls (intra): sub_04AA, sub_05E9, sub_07A9, sub_0E44, sub_1037, sub_1571 (+2 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -578,12 +578,12 @@
       ],
       "fanout": 6,
       "fanin": 2,
-      "description": "Funcion mediana (41 instr, 6 calls).",
+      "description": "Mid-size function (41 instr, 6 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_043D -- offset 0x043D -- 41 instr\n; Funcion mediana (41 instr, 6 calls).\n; tags: medium\n; callers: sub_04AA, sub_05E9\n; calls (intra): sub_034C, sub_1571, sub_38D0, sub_3921, sub_5606, sub_5629\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_043D -- offset 0x043D -- 41 instr\n; Mid-size function (41 instr, 6 calls).\n; tags: medium\n; callers: sub_04AA, sub_05E9\n; calls (intra): sub_034C, sub_1571, sub_38D0, sub_3921, sub_5606, sub_5629\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -662,12 +662,12 @@
       ],
       "fanout": 8,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (62 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (62 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_04AA -- offset 0x04AA -- 62 instr\n; Dispatcher: tabla de decisiones cmp+jcc (62 instr).\n; tags: dispatcher\n; callers: sub_03BC\n; calls (intra): sub_043D, sub_053E, sub_07A9, sub_0B1A, sub_1571, sub_3D30 (+2 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_04AA -- offset 0x04AA -- 62 instr\n; Dispatcher: cmp+jcc decision table (62 instr).\n; tags: dispatcher\n; callers: sub_03BC\n; calls (intra): sub_043D, sub_053E, sub_07A9, sub_0B1A, sub_1571, sub_3D30 (+2 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -744,12 +744,12 @@
       ],
       "fanout": 6,
       "fanin": 1,
-      "description": "Funcion mediana (60 instr, 6 calls).",
+      "description": "Mid-size function (60 instr, 6 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_053E -- offset 0x053E -- 60 instr\n; Funcion mediana (60 instr, 6 calls).\n; tags: medium\n; callers: sub_04AA\n; calls (intra): sub_1571, sub_185E, sub_193E, sub_52D2, sub_5554, sub_5606\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_053E -- offset 0x053E -- 60 instr\n; Mid-size function (60 instr, 6 calls).\n; tags: medium\n; callers: sub_04AA\n; calls (intra): sub_1571, sub_185E, sub_193E, sub_52D2, sub_5554, sub_5606\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -811,12 +811,12 @@
       ],
       "fanout": 1,
       "fanin": 3,
-      "description": "Funcion sin clasificar definitiva (16 instr).",
+      "description": "Unclassified function (16 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_05C3 -- offset 0x05C3 -- 16 instr\n; Funcion sin clasificar definitiva (16 instr).\n; tags: small\n; callers: sub_05E9, sub_07A9, sub_0B1A\n; calls (intra): sub_1571\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_05C3 -- offset 0x05C3 -- 16 instr\n; Unclassified function (16 instr).\n; tags: small\n; callers: sub_05E9, sub_07A9, sub_0B1A\n; calls (intra): sub_1571\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -915,12 +915,12 @@
       ],
       "fanout": 17,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (131 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (131 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_05E9 -- offset 0x05E9 -- 131 instr\n; Dispatcher: tabla de decisiones cmp+jcc (131 instr).\n; tags: dispatcher\n; callers: sub_03BC\n; calls (intra): sub_043D, sub_05C3, sub_07A9, sub_0B1A, sub_1571, sub_1836 (+11 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_05E9 -- offset 0x05E9 -- 131 instr\n; Dispatcher: cmp+jcc decision table (131 instr).\n; tags: dispatcher\n; callers: sub_03BC\n; calls (intra): sub_043D, sub_05C3, sub_07A9, sub_0B1A, sub_1571, sub_1836 (+11 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -976,12 +976,12 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Funcion hoja (no llama a otras, 13 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 13 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_074E -- offset 0x074E -- 13 instr\n; Funcion hoja (no llama a otras, 13 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_07A9, sub_0B1A\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_074E -- offset 0x074E -- 13 instr\n; Leaf function (no callees, 13 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_07A9, sub_0B1A\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -1043,12 +1043,12 @@
       ],
       "fanout": 1,
       "fanin": 2,
-      "description": "Funcion sin clasificar definitiva (22 instr).",
+      "description": "Unclassified function (22 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_076F -- offset 0x076F -- 22 instr\n; Funcion sin clasificar definitiva (22 instr).\n; tags: small\n; callers: sub_07A9, sub_0B1A\n; calls (intra): sub_52EE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_076F -- offset 0x076F -- 22 instr\n; Unclassified function (22 instr).\n; tags: small\n; callers: sub_07A9, sub_0B1A\n; calls (intra): sub_52EE\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -1159,12 +1159,12 @@
       ],
       "fanout": 22,
       "fanin": 3,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (335 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (335 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_07A9 -- offset 0x07A9 -- 335 instr\n; Dispatcher: tabla de decisiones cmp+jcc (335 instr).\n; tags: dispatcher\n; callers: sub_03BC, sub_04AA, sub_05E9\n; calls (intra): sub_034C, sub_05C3, sub_074E, sub_076F, sub_1571, sub_1836 (+16 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_07A9 -- offset 0x07A9 -- 335 instr\n; Dispatcher: cmp+jcc decision table (335 instr).\n; tags: dispatcher\n; callers: sub_03BC, sub_04AA, sub_05E9\n; calls (intra): sub_034C, sub_05C3, sub_074E, sub_076F, sub_1571, sub_1836 (+16 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -1267,12 +1267,12 @@
       ],
       "fanout": 19,
       "fanin": 2,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (213 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (213 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0B1A -- offset 0x0B1A -- 213 instr\n; Dispatcher: tabla de decisiones cmp+jcc (213 instr).\n; tags: dispatcher\n; callers: sub_04AA, sub_05E9\n; calls (intra): sub_05C3, sub_074E, sub_076F, sub_1571, sub_193E, sub_19AC (+13 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0B1A -- offset 0x0B1A -- 213 instr\n; Dispatcher: cmp+jcc decision table (213 instr).\n; tags: dispatcher\n; callers: sub_04AA, sub_05E9\n; calls (intra): sub_05C3, sub_074E, sub_076F, sub_1571, sub_193E, sub_19AC (+13 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -1343,12 +1343,12 @@
       ],
       "fanout": 3,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (77 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (77 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0D5D -- offset 0x0D5D -- 77 instr\n; Dispatcher: tabla de decisiones cmp+jcc (77 instr).\n; tags: dispatcher\n; callers: sub_0E44\n; calls (intra): sub_5217, sub_52B6, sub_52EE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0D5D -- offset 0x0D5D -- 77 instr\n; Dispatcher: cmp+jcc decision table (77 instr).\n; tags: dispatcher\n; callers: sub_0E44\n; calls (intra): sub_5217, sub_52B6, sub_52EE\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -1403,12 +1403,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion hoja (no llama a otras, 15 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 15 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0E26 -- offset 0x0E26 -- 15 instr\n; Funcion hoja (no llama a otras, 15 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_0E44\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0E26 -- offset 0x0E26 -- 15 instr\n; Leaf function (no callees, 15 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_0E44\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -1497,12 +1497,12 @@
       ],
       "fanout": 12,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (181 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (181 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0E44 -- offset 0x0E44 -- 181 instr\n; Dispatcher: tabla de decisiones cmp+jcc (181 instr).\n; tags: dispatcher\n; callers: sub_03BC\n; calls (intra): sub_02CA, sub_0D5D, sub_0E26, sub_3872, sub_38AF, sub_3AF9 (+6 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0E44 -- offset 0x0E44 -- 181 instr\n; Dispatcher: cmp+jcc decision table (181 instr).\n; tags: dispatcher\n; callers: sub_03BC\n; calls (intra): sub_02CA, sub_0D5D, sub_0E26, sub_3872, sub_38AF, sub_3AF9 (+6 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -1582,12 +1582,12 @@
       ],
       "fanout": 8,
       "fanin": 2,
-      "description": "Funcion mediana (44 instr, 8 calls).",
+      "description": "Mid-size function (44 instr, 8 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1037 -- offset 0x1037 -- 44 instr\n; Funcion mediana (44 instr, 8 calls).\n; tags: medium\n; callers: sub_03BC, sub_19F0\n; calls (intra): sub_0282, sub_3921, sub_3B55, sub_3CB8, sub_4B55, sub_518D (+2 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1037 -- offset 0x1037 -- 44 instr\n; Mid-size function (44 instr, 8 calls).\n; tags: medium\n; callers: sub_03BC, sub_19F0\n; calls (intra): sub_0282, sub_3921, sub_3B55, sub_3CB8, sub_4B55, sub_518D (+2 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -1649,12 +1649,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion mediana (34 instr, 0 calls).",
+      "description": "Mid-size function (34 instr, 0 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_10AD -- offset 0x10AD -- 34 instr\n; Funcion mediana (34 instr, 0 calls).\n; tags: medium\n; callers: sub_13CC\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_10AD -- offset 0x10AD -- 34 instr\n; Mid-size function (34 instr, 0 calls).\n; tags: medium\n; callers: sub_13CC\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -1710,12 +1710,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion hoja (no llama a otras, 17 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 17 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_10FF -- offset 0x10FF -- 17 instr\n; Funcion hoja (no llama a otras, 17 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_13CC\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_10FF -- offset 0x10FF -- 17 instr\n; Leaf function (no callees, 17 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_13CC\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -1779,13 +1779,13 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (65 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (65 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1122 -- offset 0x1122 -- 65 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (65 instr).\n; tags: complex_iterator, string_op\n; callers: sub_13CC, sub_1612\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1122 -- offset 0x1122 -- 65 instr\n; Iterator with string ops (movsb/scasb/...) (65 instr).\n; tags: complex_iterator, string_op\n; callers: sub_13CC, sub_1612\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -1852,12 +1852,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (86 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (86 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_11D2 -- offset 0x11D2 -- 86 instr\n; Dispatcher: tabla de decisiones cmp+jcc (86 instr).\n; tags: dispatcher\n; callers: sub_1571\n; calls (intra): sub_1836\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_11D2 -- offset 0x11D2 -- 86 instr\n; Dispatcher: cmp+jcc decision table (86 instr).\n; tags: dispatcher\n; callers: sub_1571\n; calls (intra): sub_1836\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -1924,12 +1924,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (101 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (101 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_12BD -- offset 0x12BD -- 101 instr\n; Dispatcher: tabla de decisiones cmp+jcc (101 instr).\n; tags: dispatcher\n; callers: sub_1571\n; calls (intra): sub_1836\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_12BD -- offset 0x12BD -- 101 instr\n; Dispatcher: cmp+jcc decision table (101 instr).\n; tags: dispatcher\n; callers: sub_1571\n; calls (intra): sub_1836\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -2002,12 +2002,12 @@
       ],
       "fanout": 4,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (109 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (109 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_13CC -- offset 0x13CC -- 109 instr\n; Dispatcher: tabla de decisiones cmp+jcc (109 instr).\n; tags: dispatcher\n; callers: sub_1571\n; calls (intra): sub_10AD, sub_10FF, sub_1122, sub_1836\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_13CC -- offset 0x13CC -- 109 instr\n; Dispatcher: cmp+jcc decision table (109 instr).\n; tags: dispatcher\n; callers: sub_1571\n; calls (intra): sub_10AD, sub_10FF, sub_1122, sub_1836\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -2067,12 +2067,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Funcion mediana (36 instr, 1 calls).",
+      "description": "Mid-size function (36 instr, 1 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_14E5 -- offset 0x14E5 -- 36 instr\n; Funcion mediana (36 instr, 1 calls).\n; tags: medium\n; callers: sub_1534\n; calls (intra): sub_1836\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_14E5 -- offset 0x14E5 -- 36 instr\n; Mid-size function (36 instr, 1 calls).\n; tags: medium\n; callers: sub_1534\n; calls (intra): sub_1836\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -2135,12 +2135,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (23 instr).",
+      "description": "Unclassified function (23 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1534 -- offset 0x1534 -- 23 instr\n; Funcion sin clasificar definitiva (23 instr).\n; tags: small\n; callers: sub_1571\n; calls (intra): sub_14E5\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1534 -- offset 0x1534 -- 23 instr\n; Unclassified function (23 instr).\n; tags: small\n; callers: sub_1571\n; calls (intra): sub_14E5\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -2227,12 +2227,12 @@
       ],
       "fanout": 5,
       "fanin": 12,
-      "description": "Funcion mediana (57 instr, 5 calls).",
+      "description": "Mid-size function (57 instr, 5 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1571 -- offset 0x1571 -- 57 instr\n; Funcion mediana (57 instr, 5 calls).\n; tags: medium\n; callers: sub_03BC, sub_043D, sub_04AA, sub_053E, sub_05C3, sub_05E9 (+6 mas)\n; calls (intra): sub_11D2, sub_12BD, sub_13CC, sub_1534, sub_3D30\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1571 -- offset 0x1571 -- 57 instr\n; Mid-size function (57 instr, 5 calls).\n; tags: medium\n; callers: sub_03BC, sub_043D, sub_04AA, sub_053E, sub_05C3, sub_05E9 (+6 more)\n; calls (intra): sub_11D2, sub_12BD, sub_13CC, sub_1534, sub_3D30\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -2305,12 +2305,12 @@
       "callers": [],
       "fanout": 5,
       "fanin": 0,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (185 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (185 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1612 -- offset 0x1612 -- 185 instr\n; Dispatcher: tabla de decisiones cmp+jcc (185 instr).\n; tags: dispatcher\n; calls (intra): sub_1122, sub_1836, sub_185E, sub_193E, sub_3D51\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1612 -- offset 0x1612 -- 185 instr\n; Dispatcher: cmp+jcc decision table (185 instr).\n; tags: dispatcher\n; calls (intra): sub_1122, sub_1836, sub_185E, sub_193E, sub_3D51\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -2373,12 +2373,12 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (17 instr).",
+      "description": "Unclassified function (17 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_17F1 -- offset 0x17F1 -- 17 instr\n; Funcion sin clasificar definitiva (17 instr).\n; tags: small\n; callers: sub_3D30\n; calls (intra): sub_3CC0, sub_3CF6\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_17F1 -- offset 0x17F1 -- 17 instr\n; Unclassified function (17 instr).\n; tags: small\n; callers: sub_3D30\n; calls (intra): sub_3CC0, sub_3CF6\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -2439,12 +2439,12 @@
       ],
       "fanout": 2,
       "fanin": 2,
-      "description": "Funcion sin clasificar definitiva (9 instr).",
+      "description": "Unclassified function (9 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_181F -- offset 0x181F -- 9 instr\n; Funcion sin clasificar definitiva (9 instr).\n; tags: small\n; callers: sub_2644, sub_39D8\n; calls (intra): sub_3CC0, sub_3CF6\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_181F -- offset 0x181F -- 9 instr\n; Unclassified function (9 instr).\n; tags: small\n; callers: sub_2644, sub_39D8\n; calls (intra): sub_3CC0, sub_3CF6\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -2520,14 +2520,14 @@
       ],
       "fanout": 3,
       "fanin": 12,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (22 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (22 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1836 -- offset 0x1836 -- 22 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (22 instr).\n; tags: iterator, loop, string_op\n; callers: sub_034C, sub_05E9, sub_07A9, sub_11D2, sub_12BD, sub_13CC (+6 mas)\n; calls (intra): sub_3CC0, sub_3CF6, sub_5629\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1836 -- offset 0x1836 -- 22 instr\n; Iterator with string ops (movsb/scasb/...) (22 instr).\n; tags: iterator, loop, string_op\n; callers: sub_034C, sub_05E9, sub_07A9, sub_11D2, sub_12BD, sub_13CC (+6 more)\n; calls (intra): sub_3CC0, sub_3CF6, sub_5629\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -2613,7 +2613,7 @@
       ],
       "fanout": 7,
       "fanin": 6,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (100 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (100 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
@@ -2621,7 +2621,7 @@
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_185E -- offset 0x185E -- 100 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (100 instr).\n; tags: complex_iterator, int_23, loop, string_op\n; callers: sub_034C, sub_053E, sub_05E9, sub_1612, sub_1B55, sub_39D8\n; calls (intra): sub_02BF, sub_193E, sub_3CC0, sub_3CF6, sub_3D23, sub_3D78 (+1 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_185E -- offset 0x185E -- 100 instr\n; Iterator with string ops (movsb/scasb/...) (100 instr).\n; tags: complex_iterator, int_23, loop, string_op\n; callers: sub_034C, sub_053E, sub_05E9, sub_1612, sub_1B55, sub_39D8\n; calls (intra): sub_02BF, sub_193E, sub_3CC0, sub_3CF6, sub_3D23, sub_3D78 (+1 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -2686,13 +2686,13 @@
       ],
       "fanout": 0,
       "fanin": 9,
-      "description": "Iterador con bucle (26 instr).",
+      "description": "Iterator with loop (26 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "loop"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_193E -- offset 0x193E -- 26 instr\n; Iterador con bucle (26 instr).\n; tags: iterator, loop\n; callers: sub_034C, sub_053E, sub_05E9, sub_0B1A, sub_1612, sub_185E (+3 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_193E -- offset 0x193E -- 26 instr\n; Iterator with loop (26 instr).\n; tags: iterator, loop\n; callers: sub_034C, sub_053E, sub_05E9, sub_0B1A, sub_1612, sub_185E (+3 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -2762,12 +2762,12 @@
       ],
       "fanout": 3,
       "fanin": 3,
-      "description": "Funcion sin clasificar definitiva (26 instr).",
+      "description": "Unclassified function (26 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1973 -- offset 0x1973 -- 26 instr\n; Funcion sin clasificar definitiva (26 instr).\n; tags: small\n; callers: sub_19F0, sub_1B55, sub_1D06\n; calls (intra): sub_4B7D, sub_4D20, sub_5583\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1973 -- offset 0x1973 -- 26 instr\n; Unclassified function (26 instr).\n; tags: small\n; callers: sub_19F0, sub_1B55, sub_1D06\n; calls (intra): sub_4B7D, sub_4D20, sub_5583\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -2826,12 +2826,12 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Funcion sin clasificar definitiva (25 instr).",
+      "description": "Unclassified function (25 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_19AC -- offset 0x19AC -- 25 instr\n; Funcion sin clasificar definitiva (25 instr).\n; tags: small\n; callers: sub_0B1A, sub_19F0\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_19AC -- offset 0x19AC -- 25 instr\n; Unclassified function (25 instr).\n; tags: small\n; callers: sub_0B1A, sub_19F0\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -2918,13 +2918,13 @@
       ],
       "fanout": 10,
       "fanin": 3,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (102 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (102 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_19F0 -- offset 0x19F0 -- 102 instr\n; Dispatcher: tabla de decisiones cmp+jcc (102 instr).\n; tags: dispatcher, far\n; callers: sub_05E9, sub_07A9, sub_0B1A\n; calls (intra): sub_030A, sub_1037, sub_1571, sub_1836, sub_193E, sub_1973 (+4 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_19F0 -- offset 0x19F0 -- 102 instr\n; Dispatcher: cmp+jcc decision table (102 instr).\n; tags: dispatcher, far\n; callers: sub_05E9, sub_07A9, sub_0B1A\n; calls (intra): sub_030A, sub_1037, sub_1571, sub_1836, sub_193E, sub_1973 (+4 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -2983,12 +2983,12 @@
       ],
       "fanout": 0,
       "fanin": 3,
-      "description": "Funcion sin clasificar definitiva (30 instr).",
+      "description": "Unclassified function (30 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1B07 -- offset 0x1B07 -- 30 instr\n; Funcion sin clasificar definitiva (30 instr).\n; tags: small\n; callers: sub_0B1A, sub_1B55, sub_1D06\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1B07 -- offset 0x1B07 -- 30 instr\n; Unclassified function (30 instr).\n; tags: small\n; callers: sub_0B1A, sub_1B55, sub_1D06\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -3078,12 +3078,12 @@
       ],
       "fanout": 12,
       "fanin": 2,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (180 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (180 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1B55 -- offset 0x1B55 -- 180 instr\n; Dispatcher: tabla de decisiones cmp+jcc (180 instr).\n; tags: dispatcher\n; callers: sub_07A9, sub_0B1A\n; calls (intra): sub_034C, sub_1571, sub_1836, sub_185E, sub_193E, sub_1973 (+6 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1B55 -- offset 0x1B55 -- 180 instr\n; Dispatcher: cmp+jcc decision table (180 instr).\n; tags: dispatcher\n; callers: sub_07A9, sub_0B1A\n; calls (intra): sub_034C, sub_1571, sub_1836, sub_185E, sub_193E, sub_1973 (+6 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -3150,12 +3150,12 @@
       ],
       "fanout": 3,
       "fanin": 1,
-      "description": "Funcion mediana (33 instr, 3 calls).",
+      "description": "Mid-size function (33 instr, 3 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1D06 -- offset 0x1D06 -- 33 instr\n; Funcion mediana (33 instr, 3 calls).\n; tags: medium\n; callers: sub_0B1A\n; calls (intra): sub_1571, sub_1973, sub_1B07\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1D06 -- offset 0x1D06 -- 33 instr\n; Mid-size function (33 instr, 3 calls).\n; tags: medium\n; callers: sub_0B1A\n; calls (intra): sub_1571, sub_1973, sub_1B07\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -3224,12 +3224,12 @@
       ],
       "fanout": 1,
       "fanin": 3,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (75 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (75 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1D55 -- offset 0x1D55 -- 75 instr\n; Dispatcher: tabla de decisiones cmp+jcc (75 instr).\n; tags: dispatcher\n; callers: sub_241A, sub_2B32, sub_2C44\n; calls (intra): sub_5642\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1D55 -- offset 0x1D55 -- 75 instr\n; Dispatcher: cmp+jcc decision table (75 instr).\n; tags: dispatcher\n; callers: sub_241A, sub_2B32, sub_2C44\n; calls (intra): sub_5642\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -3289,12 +3289,12 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Funcion mediana (51 instr, 0 calls).",
+      "description": "Mid-size function (51 instr, 0 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1E1A -- offset 0x1E1A -- 51 instr\n; Funcion mediana (51 instr, 0 calls).\n; tags: medium\n; callers: sub_241A, sub_2B32\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1E1A -- offset 0x1E1A -- 51 instr\n; Mid-size function (51 instr, 0 calls).\n; tags: medium\n; callers: sub_241A, sub_2B32\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -3358,12 +3358,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (80 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (80 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1E9F -- offset 0x1E9F -- 80 instr\n; Dispatcher: tabla de decisiones cmp+jcc (80 instr).\n; tags: dispatcher\n; callers: sub_1F74\n; calls (intra): sub_3872\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1E9F -- offset 0x1E9F -- 80 instr\n; Dispatcher: cmp+jcc decision table (80 instr).\n; tags: dispatcher\n; callers: sub_1F74\n; calls (intra): sub_3872\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -3448,12 +3448,12 @@
       ],
       "fanout": 10,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (306 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (306 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1F74 -- offset 0x1F74 -- 306 instr\n; Dispatcher: tabla de decisiones cmp+jcc (306 instr).\n; tags: dispatcher\n; callers: sub_2283\n; calls (intra): sub_1E9F, sub_3872, sub_389C, sub_5217, sub_5296, sub_52B6 (+4 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1F74 -- offset 0x1F74 -- 306 instr\n; Dispatcher: cmp+jcc decision table (306 instr).\n; tags: dispatcher\n; callers: sub_2283\n; calls (intra): sub_1E9F, sub_3872, sub_389C, sub_5217, sub_5296, sub_52B6 (+4 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -3531,12 +3531,12 @@
       ],
       "fanout": 7,
       "fanin": 1,
-      "description": "Funcion compleja: 102 instrucciones, 7 llamadas, 7 branches.",
+      "description": "Complex function: 102 instructions, 7 calls, 7 branches.",
       "confidence": "low",
       "semantic_tags": [
         "complex"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2283 -- offset 0x2283 -- 102 instr\n; Funcion compleja: 102 instrucciones, 7 llamadas, 7 branches.\n; tags: complex\n; callers: sub_2393\n; calls (intra): sub_1F74, sub_3872, sub_389C, sub_5549, sub_5583, sub_5606 (+1 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2283 -- offset 0x2283 -- 102 instr\n; Complex function: 102 instructions, 7 calls, 7 branches.\n; tags: complex\n; callers: sub_2393\n; calls (intra): sub_1F74, sub_3872, sub_389C, sub_5549, sub_5583, sub_5606 (+1 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -3608,12 +3608,12 @@
       ],
       "fanout": 3,
       "fanin": 3,
-      "description": "Funcion mediana (58 instr, 3 calls).",
+      "description": "Mid-size function (58 instr, 3 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2393 -- offset 0x2393 -- 58 instr\n; Funcion mediana (58 instr, 3 calls).\n; tags: medium\n; callers: sub_241A, sub_2AF6, sub_2B14\n; calls (intra): sub_2283, sub_51DB, sub_51FC\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2393 -- offset 0x2393 -- 58 instr\n; Mid-size function (58 instr, 3 calls).\n; tags: medium\n; callers: sub_241A, sub_2AF6, sub_2B14\n; calls (intra): sub_2283, sub_51DB, sub_51FC\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -3688,12 +3688,12 @@
       ],
       "fanout": 5,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (193 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (193 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_241A -- offset 0x241A -- 193 instr\n; Dispatcher: tabla de decisiones cmp+jcc (193 instr).\n; tags: dispatcher\n; callers: sub_07A9\n; calls (intra): sub_1571, sub_1D55, sub_1E1A, sub_2393, sub_5606\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_241A -- offset 0x241A -- 193 instr\n; Dispatcher: cmp+jcc decision table (193 instr).\n; tags: dispatcher\n; callers: sub_07A9\n; calls (intra): sub_1571, sub_1D55, sub_1E1A, sub_2393, sub_5606\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -3762,12 +3762,12 @@
       ],
       "fanout": 3,
       "fanin": 3,
-      "description": "Funcion mediana (35 instr, 3 calls).",
+      "description": "Mid-size function (35 instr, 3 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2644 -- offset 0x2644 -- 35 instr\n; Funcion mediana (35 instr, 3 calls).\n; tags: medium\n; callers: sub_2698, sub_285D, sub_2926\n; calls (intra): sub_030A, sub_181F, sub_1836\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2644 -- offset 0x2644 -- 35 instr\n; Mid-size function (35 instr, 3 calls).\n; tags: medium\n; callers: sub_2698, sub_285D, sub_2926\n; calls (intra): sub_030A, sub_181F, sub_1836\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -3840,12 +3840,12 @@
       ],
       "fanout": 5,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (69 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (69 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2698 -- offset 0x2698 -- 69 instr\n; Dispatcher: tabla de decisiones cmp+jcc (69 instr).\n; tags: dispatcher\n; callers: sub_07A9\n; calls (intra): sub_034C, sub_2644, sub_34FF, sub_5217, sub_52EE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2698 -- offset 0x2698 -- 69 instr\n; Dispatcher: cmp+jcc decision table (69 instr).\n; tags: dispatcher\n; callers: sub_07A9\n; calls (intra): sub_034C, sub_2644, sub_34FF, sub_5217, sub_52EE\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -3925,12 +3925,12 @@
       ],
       "fanout": 7,
       "fanin": 3,
-      "description": "Funcion mediana (64 instr, 7 calls).",
+      "description": "Mid-size function (64 instr, 7 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2751 -- offset 0x2751 -- 64 instr\n; Funcion mediana (64 instr, 7 calls).\n; tags: medium\n; callers: sub_05E9, sub_07A9, sub_0B1A\n; calls (intra): sub_285D, sub_518D, sub_51B6, sub_51DB, sub_51FC, sub_5554 (+1 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2751 -- offset 0x2751 -- 64 instr\n; Mid-size function (64 instr, 7 calls).\n; tags: medium\n; callers: sub_05E9, sub_07A9, sub_0B1A\n; calls (intra): sub_285D, sub_518D, sub_51B6, sub_51DB, sub_51FC, sub_5554 (+1 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -4005,12 +4005,12 @@
       ],
       "fanout": 5,
       "fanin": 1,
-      "description": "Funcion mediana (47 instr, 5 calls).",
+      "description": "Mid-size function (47 instr, 5 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_27F0 -- offset 0x27F0 -- 47 instr\n; Funcion mediana (47 instr, 5 calls).\n; tags: medium\n; callers: sub_297E\n; calls (intra): sub_034C, sub_51DB, sub_5217, sub_52B6, sub_52EE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_27F0 -- offset 0x27F0 -- 47 instr\n; Mid-size function (47 instr, 5 calls).\n; tags: medium\n; callers: sub_297E\n; calls (intra): sub_034C, sub_51DB, sub_5217, sub_52B6, sub_52EE\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -4092,12 +4092,12 @@
       ],
       "fanout": 6,
       "fanin": 6,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (81 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (81 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_285D -- offset 0x285D -- 81 instr\n; Dispatcher: tabla de decisiones cmp+jcc (81 instr).\n; tags: dispatcher\n; callers: sub_2751, sub_297E, sub_2AB4, sub_2C9A, sub_2FDD, sub_3057\n; calls (intra): sub_034C, sub_2644, sub_51DB, sub_530A, sub_53CC, sub_5606\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_285D -- offset 0x285D -- 81 instr\n; Dispatcher: cmp+jcc decision table (81 instr).\n; tags: dispatcher\n; callers: sub_2751, sub_297E, sub_2AB4, sub_2C9A, sub_2FDD, sub_3057\n; calls (intra): sub_034C, sub_2644, sub_51DB, sub_530A, sub_53CC, sub_5606\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -4169,12 +4169,12 @@
       ],
       "fanout": 5,
       "fanin": 1,
-      "description": "Funcion mediana (36 instr, 5 calls).",
+      "description": "Mid-size function (36 instr, 5 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2926 -- offset 0x2926 -- 36 instr\n; Funcion mediana (36 instr, 5 calls).\n; tags: medium\n; callers: sub_297E\n; calls (intra): sub_034C, sub_2644, sub_34FF, sub_5217, sub_52EE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2926 -- offset 0x2926 -- 36 instr\n; Mid-size function (36 instr, 5 calls).\n; tags: medium\n; callers: sub_297E\n; calls (intra): sub_034C, sub_2644, sub_34FF, sub_5217, sub_52EE\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -4259,12 +4259,12 @@
       ],
       "fanout": 11,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (128 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (128 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_297E -- offset 0x297E -- 128 instr\n; Dispatcher: tabla de decisiones cmp+jcc (128 instr).\n; tags: dispatcher\n; callers: sub_07A9\n; calls (intra): sub_034C, sub_27F0, sub_285D, sub_2926, sub_2DE9, sub_2E19 (+5 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_297E -- offset 0x297E -- 128 instr\n; Dispatcher: cmp+jcc decision table (128 instr).\n; tags: dispatcher\n; callers: sub_07A9\n; calls (intra): sub_034C, sub_27F0, sub_285D, sub_2926, sub_2DE9, sub_2E19 (+5 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -4333,12 +4333,12 @@
       ],
       "fanout": 3,
       "fanin": 1,
-      "description": "Funcion mediana (33 instr, 3 calls).",
+      "description": "Mid-size function (33 instr, 3 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2AB4 -- offset 0x2AB4 -- 33 instr\n; Funcion mediana (33 instr, 3 calls).\n; tags: medium\n; callers: sub_05E9\n; calls (intra): sub_285D, sub_51DB, sub_51FC\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2AB4 -- offset 0x2AB4 -- 33 instr\n; Mid-size function (33 instr, 3 calls).\n; tags: medium\n; callers: sub_05E9\n; calls (intra): sub_285D, sub_51DB, sub_51FC\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -4396,12 +4396,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Wrapper que delega en sub_2393.",
+      "description": "Wrapper delegating to sub_2393.",
       "confidence": "medium",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2AF6 -- offset 0x2AF6 -- 11 instr\n; Wrapper que delega en sub_2393.\n; tags: wrapper\n; callers: sub_0B1A\n; calls (intra): sub_2393\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2AF6 -- offset 0x2AF6 -- 11 instr\n; Wrapper delegating to sub_2393.\n; tags: wrapper\n; callers: sub_0B1A\n; calls (intra): sub_2393\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -4459,12 +4459,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Wrapper que delega en sub_2393.",
+      "description": "Wrapper delegating to sub_2393.",
       "confidence": "medium",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2B14 -- offset 0x2B14 -- 11 instr\n; Wrapper que delega en sub_2393.\n; tags: wrapper\n; callers: sub_0B1A\n; calls (intra): sub_2393\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2B14 -- offset 0x2B14 -- 11 instr\n; Wrapper delegating to sub_2393.\n; tags: wrapper\n; callers: sub_0B1A\n; calls (intra): sub_2393\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -4535,12 +4535,12 @@
       ],
       "fanout": 3,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (70 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (70 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2B32 -- offset 0x2B32 -- 70 instr\n; Dispatcher: tabla de decisiones cmp+jcc (70 instr).\n; tags: dispatcher\n; callers: sub_2BF1\n; calls (intra): sub_1D55, sub_1E1A, sub_5642\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2B32 -- offset 0x2B32 -- 70 instr\n; Dispatcher: cmp+jcc decision table (70 instr).\n; tags: dispatcher\n; callers: sub_2BF1\n; calls (intra): sub_1D55, sub_1E1A, sub_5642\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -4607,12 +4607,12 @@
       ],
       "fanout": 2,
       "fanin": 2,
-      "description": "Funcion mediana (34 instr, 2 calls).",
+      "description": "Mid-size function (34 instr, 2 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2BF1 -- offset 0x2BF1 -- 34 instr\n; Funcion mediana (34 instr, 2 calls).\n; tags: medium\n; callers: sub_0B1A, sub_2C44\n; calls (intra): sub_2B32, sub_2FDD\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2BF1 -- offset 0x2BF1 -- 34 instr\n; Mid-size function (34 instr, 2 calls).\n; tags: medium\n; callers: sub_0B1A, sub_2C44\n; calls (intra): sub_2B32, sub_2FDD\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -4679,12 +4679,12 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Funcion mediana (35 instr, 2 calls).",
+      "description": "Mid-size function (35 instr, 2 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2C44 -- offset 0x2C44 -- 35 instr\n; Funcion mediana (35 instr, 2 calls).\n; tags: medium\n; callers: sub_0B1A\n; calls (intra): sub_1D55, sub_2BF1\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2C44 -- offset 0x2C44 -- 35 instr\n; Mid-size function (35 instr, 2 calls).\n; tags: medium\n; callers: sub_0B1A\n; calls (intra): sub_1D55, sub_2BF1\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -4757,12 +4757,12 @@
       ],
       "fanout": 4,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (134 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (134 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2C9A -- offset 0x2C9A -- 134 instr\n; Dispatcher: tabla de decisiones cmp+jcc (134 instr).\n; tags: dispatcher\n; callers: sub_0B1A\n; calls (intra): sub_285D, sub_55B6, sub_5606, sub_5629\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2C9A -- offset 0x2C9A -- 134 instr\n; Dispatcher: cmp+jcc decision table (134 instr).\n; tags: dispatcher\n; callers: sub_0B1A\n; calls (intra): sub_285D, sub_55B6, sub_5606, sub_5629\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -4818,12 +4818,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (23 instr).",
+      "description": "Unclassified function (23 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2DE9 -- offset 0x2DE9 -- 23 instr\n; Funcion sin clasificar definitiva (23 instr).\n; tags: small\n; callers: sub_297E\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2DE9 -- offset 0x2DE9 -- 23 instr\n; Unclassified function (23 instr).\n; tags: small\n; callers: sub_297E\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -4884,12 +4884,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion mediana (44 instr, 0 calls).",
+      "description": "Mid-size function (44 instr, 0 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2E19 -- offset 0x2E19 -- 44 instr\n; Funcion mediana (44 instr, 0 calls).\n; tags: medium\n; callers: sub_297E\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2E19 -- offset 0x2E19 -- 44 instr\n; Mid-size function (44 instr, 0 calls).\n; tags: medium\n; callers: sub_297E\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -4954,12 +4954,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Funcion mediana (46 instr, 1 calls).",
+      "description": "Mid-size function (46 instr, 1 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2E83 -- offset 0x2E83 -- 46 instr\n; Funcion mediana (46 instr, 1 calls).\n; tags: medium\n; callers: sub_2EF8\n; calls (intra): sub_55B6\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2E83 -- offset 0x2E83 -- 46 instr\n; Mid-size function (46 instr, 1 calls).\n; tags: medium\n; callers: sub_2EF8\n; calls (intra): sub_55B6\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -5028,12 +5028,12 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Funcion compleja: 101 instrucciones, 2 llamadas, 6 branches.",
+      "description": "Complex function: 101 instructions, 2 calls, 6 branches.",
       "confidence": "low",
       "semantic_tags": [
         "complex"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2EF8 -- offset 0x2EF8 -- 101 instr\n; Funcion compleja: 101 instrucciones, 2 llamadas, 6 branches.\n; tags: complex\n; callers: sub_297E\n; calls (intra): sub_2E83, sub_5606\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2EF8 -- offset 0x2EF8 -- 101 instr\n; Complex function: 101 instructions, 2 calls, 6 branches.\n; tags: complex\n; callers: sub_297E\n; calls (intra): sub_2E83, sub_5606\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -5101,12 +5101,12 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Funcion mediana (53 instr, 2 calls).",
+      "description": "Mid-size function (53 instr, 2 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2FDD -- offset 0x2FDD -- 53 instr\n; Funcion mediana (53 instr, 2 calls).\n; tags: medium\n; callers: sub_2BF1\n; calls (intra): sub_285D, sub_5606\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2FDD -- offset 0x2FDD -- 53 instr\n; Mid-size function (53 instr, 2 calls).\n; tags: medium\n; callers: sub_2BF1\n; calls (intra): sub_285D, sub_5606\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -5184,12 +5184,12 @@
       ],
       "fanout": 7,
       "fanin": 1,
-      "description": "Funcion mediana (62 instr, 7 calls).",
+      "description": "Mid-size function (62 instr, 7 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_3057 -- offset 0x3057 -- 62 instr\n; Funcion mediana (62 instr, 7 calls).\n; tags: medium\n; callers: sub_0B1A\n; calls (intra): sub_285D, sub_51DB, sub_51FC, sub_53CC, sub_5583, sub_5606 (+1 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_3057 -- offset 0x3057 -- 62 instr\n; Mid-size function (62 instr, 7 calls).\n; tags: medium\n; callers: sub_0B1A\n; calls (intra): sub_285D, sub_51DB, sub_51FC, sub_53CC, sub_5583, sub_5606 (+1 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -5255,13 +5255,13 @@
       ],
       "fanout": 0,
       "fanin": 4,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (41 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (41 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_30E6 -- offset 0x30E6 -- 41 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (41 instr).\n; tags: iterator, string_op\n; callers: sub_3244, sub_32F3, sub_3489, sub_34FF\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_30E6 -- offset 0x30E6 -- 41 instr\n; Iterator with string ops (movsb/scasb/...) (41 instr).\n; tags: iterator, string_op\n; callers: sub_3244, sub_32F3, sub_3489, sub_34FF\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -5323,13 +5323,13 @@
       ],
       "fanout": 0,
       "fanin": 3,
-      "description": "Llama a servicios DOS via INT 21h (26 instr).",
+      "description": "Calls DOS services via INT 21h (26 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_3138 -- offset 0x3138 -- 26 instr\n; Llama a servicios DOS via INT 21h (26 instr).\n; tags: dos_caller, int_21\n; callers: sub_3166, sub_33A3, sub_3783\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_3138 -- offset 0x3138 -- 26 instr\n; Calls DOS services via INT 21h (26 instr).\n; tags: dos_caller, int_21\n; callers: sub_3166, sub_33A3, sub_3783\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -5400,13 +5400,13 @@
       ],
       "fanout": 1,
       "fanin": 3,
-      "description": "Llama a servicios DOS via INT 21h (35 instr).",
+      "description": "Calls DOS services via INT 21h (35 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_3166 -- offset 0x3166 -- 35 instr\n; Llama a servicios DOS via INT 21h (35 instr).\n; tags: dos_caller, int_21\n; callers: sub_3244, sub_32F3, sub_3489\n; calls (intra): sub_3138\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_3166 -- offset 0x3166 -- 35 instr\n; Calls DOS services via INT 21h (35 instr).\n; tags: dos_caller, int_21\n; callers: sub_3244, sub_32F3, sub_3489\n; calls (intra): sub_3138\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -5473,13 +5473,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (60 instr).",
+      "description": "Calls DOS services via INT 21h (60 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_31AE -- offset 0x31AE -- 60 instr\n; Llama a servicios DOS via INT 21h (60 instr).\n; tags: dos_caller, int_21\n; callers: sub_34FF\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_31AE -- offset 0x31AE -- 60 instr\n; Calls DOS services via INT 21h (60 instr).\n; tags: dos_caller, int_21\n; callers: sub_34FF\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -5540,12 +5540,12 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (17 instr).",
+      "description": "Unclassified function (17 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_3244 -- offset 0x3244 -- 17 instr\n; Funcion sin clasificar definitiva (17 instr).\n; tags: small\n; callers: sub_34FF\n; calls (intra): sub_30E6, sub_3166\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_3244 -- offset 0x3244 -- 17 instr\n; Unclassified function (17 instr).\n; tags: small\n; callers: sub_34FF\n; calls (intra): sub_30E6, sub_3166\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -5610,14 +5610,14 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (38 instr).",
+      "description": "Calls DOS services via INT 21h (38 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "int_21",
         "iterator",
         "loop"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_3273 -- offset 0x3273 -- 38 instr\n; Llama a servicios DOS via INT 21h (38 instr).\n; tags: int_21, iterator, loop\n; callers: sub_346A\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_3273 -- offset 0x3273 -- 38 instr\n; Calls DOS services via INT 21h (38 instr).\n; tags: int_21, iterator, loop\n; callers: sub_346A\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -5676,12 +5676,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion hoja (no llama a otras, 19 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 19 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_32C2 -- offset 0x32C2 -- 19 instr\n; Funcion hoja (no llama a otras, 19 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_34FF\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_32C2 -- offset 0x32C2 -- 19 instr\n; Leaf function (no callees, 19 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_34FF\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -5750,12 +5750,12 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Funcion mediana (64 instr, 2 calls).",
+      "description": "Mid-size function (64 instr, 2 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_32F3 -- offset 0x32F3 -- 64 instr\n; Funcion mediana (64 instr, 2 calls).\n; tags: medium\n; callers: sub_34FF\n; calls (intra): sub_30E6, sub_3166\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_32F3 -- offset 0x32F3 -- 64 instr\n; Mid-size function (64 instr, 2 calls).\n; tags: medium\n; callers: sub_34FF\n; calls (intra): sub_30E6, sub_3166\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -5827,13 +5827,13 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (86 instr).",
+      "description": "Calls DOS services via INT 21h (86 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_33A3 -- offset 0x33A3 -- 86 instr\n; Llama a servicios DOS via INT 21h (86 instr).\n; tags: dos_caller, int_21\n; callers: sub_34FF\n; calls (intra): sub_3138\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_33A3 -- offset 0x33A3 -- 86 instr\n; Calls DOS services via INT 21h (86 instr).\n; tags: dos_caller, int_21\n; callers: sub_34FF\n; calls (intra): sub_3138\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -5895,12 +5895,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Wrapper que delega en sub_3273.",
+      "description": "Wrapper delegating to sub_3273.",
       "confidence": "medium",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_346A -- offset 0x346A -- 12 instr\n; Wrapper que delega en sub_3273.\n; tags: wrapper\n; callers: sub_34FF\n; calls (intra): sub_3273\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_346A -- offset 0x346A -- 12 instr\n; Wrapper delegating to sub_3273.\n; tags: wrapper\n; callers: sub_34FF\n; calls (intra): sub_3273\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -5968,12 +5968,12 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Funcion mediana (35 instr, 2 calls).",
+      "description": "Mid-size function (35 instr, 2 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_3489 -- offset 0x3489 -- 35 instr\n; Funcion mediana (35 instr, 2 calls).\n; tags: medium\n; callers: sub_34FF\n; calls (intra): sub_30E6, sub_3166\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_3489 -- offset 0x3489 -- 35 instr\n; Mid-size function (35 instr, 2 calls).\n; tags: medium\n; callers: sub_34FF\n; calls (intra): sub_30E6, sub_3166\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -6039,13 +6039,13 @@
       ],
       "fanout": 1,
       "fanin": 3,
-      "description": "Llama a servicios DOS via INT 21h (14 instr).",
+      "description": "Calls DOS services via INT 21h (14 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_34DB -- offset 0x34DB -- 14 instr\n; Llama a servicios DOS via INT 21h (14 instr).\n; tags: dos_caller, int_21\n; callers: sub_34FF, sub_3783, sub_37B1\n; calls (intra): sub_52EE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_34DB -- offset 0x34DB -- 14 instr\n; Calls DOS services via INT 21h (14 instr).\n; tags: dos_caller, int_21\n; callers: sub_34FF, sub_3783, sub_37B1\n; calls (intra): sub_52EE\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -6137,7 +6137,7 @@
       ],
       "fanout": 10,
       "fanin": 3,
-      "description": "Llama a servicios DOS via INT 21h (209 instr).",
+      "description": "Calls DOS services via INT 21h (209 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
@@ -6145,7 +6145,7 @@
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_34FF -- offset 0x34FF -- 209 instr\n; Llama a servicios DOS via INT 21h (209 instr).\n; tags: complex_iterator, int_21, loop, string_op\n; callers: sub_2698, sub_2926, sub_297E\n; calls (intra): sub_30E6, sub_31AE, sub_3244, sub_32C2, sub_32F3, sub_33A3 (+4 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_34FF -- offset 0x34FF -- 209 instr\n; Calls DOS services via INT 21h (209 instr).\n; tags: complex_iterator, int_21, loop, string_op\n; callers: sub_2698, sub_2926, sub_297E\n; calls (intra): sub_30E6, sub_31AE, sub_3244, sub_32C2, sub_32F3, sub_33A3 (+4 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -6210,13 +6210,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (51 instr).",
+      "description": "Calls DOS services via INT 21h (51 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_3716 -- offset 0x3716 -- 51 instr\n; Llama a servicios DOS via INT 21h (51 instr).\n; tags: dos_caller, int_21\n; callers: sub_297E\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_3716 -- offset 0x3716 -- 51 instr\n; Calls DOS services via INT 21h (51 instr).\n; tags: dos_caller, int_21\n; callers: sub_297E\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -6284,12 +6284,12 @@
       ],
       "fanout": 3,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (20 instr).",
+      "description": "Unclassified function (20 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_3783 -- offset 0x3783 -- 20 instr\n; Funcion sin clasificar definitiva (20 instr).\n; tags: small\n; callers: sub_07A9\n; calls (intra): sub_3138, sub_34DB, sub_522F\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_3783 -- offset 0x3783 -- 20 instr\n; Unclassified function (20 instr).\n; tags: small\n; callers: sub_07A9\n; calls (intra): sub_3138, sub_34DB, sub_522F\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -6364,13 +6364,13 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (87 instr).",
+      "description": "Calls DOS services via INT 21h (87 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_37B1 -- offset 0x37B1 -- 87 instr\n; Llama a servicios DOS via INT 21h (87 instr).\n; tags: dos_caller, int_21\n; callers: sub_07A9\n; calls (intra): sub_34DB, sub_522F\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_37B1 -- offset 0x37B1 -- 87 instr\n; Calls DOS services via INT 21h (87 instr).\n; tags: dos_caller, int_21\n; callers: sub_07A9\n; calls (intra): sub_34DB, sub_522F\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -6434,12 +6434,12 @@
       ],
       "fanout": 0,
       "fanin": 4,
-      "description": "Funcion sin clasificar definitiva (22 instr).",
+      "description": "Unclassified function (22 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_3872 -- offset 0x3872 -- 22 instr\n; Funcion sin clasificar definitiva (22 instr).\n; tags: small\n; callers: sub_0E44, sub_1E9F, sub_1F74, sub_2283\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_3872 -- offset 0x3872 -- 22 instr\n; Unclassified function (22 instr).\n; tags: small\n; callers: sub_0E44, sub_1E9F, sub_1F74, sub_2283\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -6493,12 +6493,12 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Funcion hoja (no llama a otras, 10 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 10 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_389C -- offset 0x389C -- 10 instr\n; Funcion hoja (no llama a otras, 10 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_1F74, sub_2283\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_389C -- offset 0x389C -- 10 instr\n; Leaf function (no callees, 10 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_1F74, sub_2283\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -6552,12 +6552,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion hoja (no llama a otras, 13 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 13 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_38AF -- offset 0x38AF -- 13 instr\n; Funcion hoja (no llama a otras, 13 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_0E44\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_38AF -- offset 0x38AF -- 13 instr\n; Leaf function (no callees, 13 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_0E44\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -6621,13 +6621,13 @@
       ],
       "fanout": 0,
       "fanin": 4,
-      "description": "Llama a servicios DOS via INT 21h (32 instr).",
+      "description": "Calls DOS services via INT 21h (32 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_38D0 -- offset 0x38D0 -- 32 instr\n; Llama a servicios DOS via INT 21h (32 instr).\n; tags: dos_caller, int_21\n; callers: sub_043D, sub_05E9, sub_07A9, sub_0B1A\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_38D0 -- offset 0x38D0 -- 32 instr\n; Calls DOS services via INT 21h (32 instr).\n; tags: dos_caller, int_21\n; callers: sub_043D, sub_05E9, sub_07A9, sub_0B1A\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -6696,13 +6696,13 @@
       ],
       "fanout": 0,
       "fanin": 5,
-      "description": "Llama a servicios DOS via INT 21h (78 instr).",
+      "description": "Calls DOS services via INT 21h (78 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_3921 -- offset 0x3921 -- 78 instr\n; Llama a servicios DOS via INT 21h (78 instr).\n; tags: dos_caller, int_21\n; callers: sub_043D, sub_05E9, sub_07A9, sub_0B1A, sub_1037\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_3921 -- offset 0x3921 -- 78 instr\n; Calls DOS services via INT 21h (78 instr).\n; tags: dos_caller, int_21\n; callers: sub_043D, sub_05E9, sub_07A9, sub_0B1A, sub_1037\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -6780,13 +6780,13 @@
       "callers": [],
       "fanout": 5,
       "fanin": 0,
-      "description": "Interrupt Service Routine (147 instrucciones, posible manejador de INT).",
+      "description": "Interrupt service routine (147 instructions, likely INT handler).",
       "confidence": "medium",
       "semantic_tags": [
         "isr",
         "loop"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_39D8 -- offset 0x39D8 -- 147 instr\n; Interrupt Service Routine (147 instrucciones, posible manejador de INT).\n; tags: isr, loop\n; calls (intra): sub_181F, sub_1836, sub_185E, sub_193E, sub_3D23\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_39D8 -- offset 0x39D8 -- 147 instr\n; Interrupt service routine (147 instructions, likely INT handler).\n; tags: isr, loop\n; calls (intra): sub_181F, sub_1836, sub_185E, sub_193E, sub_3D23\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -6848,13 +6848,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (33 instr).",
+      "description": "Calls DOS services via INT 21h (33 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_3AF9 -- offset 0x3AF9 -- 33 instr\n; Llama a servicios DOS via INT 21h (33 instr).\n; tags: dos_caller, int_21\n; callers: sub_0E44\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_3AF9 -- offset 0x3AF9 -- 33 instr\n; Calls DOS services via INT 21h (33 instr).\n; tags: dos_caller, int_21\n; callers: sub_0E44\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -6924,14 +6924,14 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (79 instr).",
+      "description": "Calls DOS services via INT 21h (79 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
         "int_21",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_3B55 -- offset 0x3B55 -- 79 instr\n; Llama a servicios DOS via INT 21h (79 instr).\n; tags: complex_iterator, int_21, string_op\n; callers: sub_1037\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_3B55 -- offset 0x3B55 -- 79 instr\n; Calls DOS services via INT 21h (79 instr).\n; tags: complex_iterator, int_21, string_op\n; callers: sub_1037\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -7004,13 +7004,13 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Llama a servicios DOS via INT 21h (51 instr).",
+      "description": "Calls DOS services via INT 21h (51 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_3C16 -- offset 0x3C16 -- 51 instr\n; Llama a servicios DOS via INT 21h (51 instr).\n; tags: dos_caller, int_21\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_3C16 -- offset 0x3C16 -- 51 instr\n; Calls DOS services via INT 21h (51 instr).\n; tags: dos_caller, int_21\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -7067,13 +7067,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Llama a servicios BIOS via INT 10h (video, 20 instr).",
+      "description": "Calls BIOS services via INT 10h (video, 20 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "bios_caller",
         "int_10"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_3C80 -- offset 0x3C80 -- 20 instr\n; Llama a servicios BIOS via INT 10h (video, 20 instr).\n; tags: bios_caller, int_10\n; callers: sub_0E44\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_3C80 -- offset 0x3C80 -- 20 instr\n; Calls BIOS services via INT 10h (video, 20 instr).\n; tags: bios_caller, int_10\n; callers: sub_0E44\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -7124,13 +7124,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Llama a servicios BIOS via INT 10h (video, 4 instr).",
+      "description": "Calls BIOS services via INT 10h (video, 4 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "bios_caller",
         "int_10"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_3CB8 -- offset 0x3CB8 -- 4 instr\n; Llama a servicios BIOS via INT 10h (video, 4 instr).\n; tags: bios_caller, int_10\n; callers: sub_1037\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_3CB8 -- offset 0x3CB8 -- 4 instr\n; Calls BIOS services via INT 10h (video, 4 instr).\n; tags: bios_caller, int_10\n; callers: sub_1037\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -7194,12 +7194,12 @@
       ],
       "fanout": 0,
       "fanin": 4,
-      "description": "Funcion sin clasificar definitiva (21 instr).",
+      "description": "Unclassified function (21 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_3CC0 -- offset 0x3CC0 -- 21 instr\n; Funcion sin clasificar definitiva (21 instr).\n; tags: small\n; callers: sub_17F1, sub_181F, sub_1836, sub_185E\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_3CC0 -- offset 0x3CC0 -- 21 instr\n; Unclassified function (21 instr).\n; tags: small\n; callers: sub_17F1, sub_181F, sub_1836, sub_185E\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -7263,13 +7263,13 @@
       ],
       "fanout": 0,
       "fanin": 4,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (20 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (20 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_3CF6 -- offset 0x3CF6 -- 20 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (20 instr).\n; tags: iterator, string_op\n; callers: sub_17F1, sub_181F, sub_1836, sub_185E\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_3CF6 -- offset 0x3CF6 -- 20 instr\n; Iterator with string ops (movsb/scasb/...) (20 instr).\n; tags: iterator, string_op\n; callers: sub_17F1, sub_181F, sub_1836, sub_185E\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -7322,13 +7322,13 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Llama a servicios BIOS via INT 10h (video, 5 instr).",
+      "description": "Calls BIOS services via INT 10h (video, 5 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "bios_caller",
         "int_10"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_3D23 -- offset 0x3D23 -- 5 instr\n; Llama a servicios BIOS via INT 10h (video, 5 instr).\n; tags: bios_caller, int_10\n; callers: sub_185E, sub_39D8\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_3D23 -- offset 0x3D23 -- 5 instr\n; Calls BIOS services via INT 10h (video, 5 instr).\n; tags: bios_caller, int_10\n; callers: sub_185E, sub_39D8\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -7389,12 +7389,12 @@
       ],
       "fanout": 1,
       "fanin": 2,
-      "description": "Wrapper que delega en sub_17F1.",
+      "description": "Wrapper delegating to sub_17F1.",
       "confidence": "medium",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_3D30 -- offset 0x3D30 -- 11 instr\n; Wrapper que delega en sub_17F1.\n; tags: wrapper\n; callers: sub_04AA, sub_1571\n; calls (intra): sub_17F1\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_3D30 -- offset 0x3D30 -- 11 instr\n; Wrapper delegating to sub_17F1.\n; tags: wrapper\n; callers: sub_04AA, sub_1571\n; calls (intra): sub_17F1\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -7454,13 +7454,13 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Llama a servicios BIOS via INT 10h (video, 14 instr).",
+      "description": "Calls BIOS services via INT 10h (video, 14 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "bios_caller",
         "int_10"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_3D51 -- offset 0x3D51 -- 14 instr\n; Llama a servicios BIOS via INT 10h (video, 14 instr).\n; tags: bios_caller, int_10\n; callers: sub_04AA, sub_1612\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_3D51 -- offset 0x3D51 -- 14 instr\n; Calls BIOS services via INT 10h (video, 14 instr).\n; tags: bios_caller, int_10\n; callers: sub_04AA, sub_1612\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -7517,13 +7517,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (9 instr).",
+      "description": "Unclassified function (9 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "bios_caller",
         "int_16"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_3D78 -- offset 0x3D78 -- 9 instr\n; Funcion sin clasificar definitiva (9 instr).\n; tags: bios_caller, int_16\n; callers: sub_185E\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_3D78 -- offset 0x3D78 -- 9 instr\n; Unclassified function (9 instr).\n; tags: bios_caller, int_16\n; callers: sub_185E\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -7580,13 +7580,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (11 instr).",
+      "description": "Unclassified function (11 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "bios_caller",
         "int_16"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_3D89 -- offset 0x3D89 -- 11 instr\n; Funcion sin clasificar definitiva (11 instr).\n; tags: bios_caller, int_16\n; callers: sub_185E\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_3D89 -- offset 0x3D89 -- 11 instr\n; Unclassified function (11 instr).\n; tags: bios_caller, int_16\n; callers: sub_185E\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -7659,13 +7659,13 @@
       ],
       "fanout": 4,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (81 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (81 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_3D9E -- offset 0x3D9E -- 81 instr\n; Dispatcher: tabla de decisiones cmp+jcc (81 instr).\n; tags: dispatcher, far\n; callers: sub_3F53\n; calls (intra): sub_3E45, sub_3EDE, sub_4081, sub_4265\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_3D9E -- offset 0x3D9E -- 81 instr\n; Dispatcher: cmp+jcc decision table (81 instr).\n; tags: dispatcher, far\n; callers: sub_3F53\n; calls (intra): sub_3E45, sub_3EDE, sub_4081, sub_4265\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -7734,12 +7734,12 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (79 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (79 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_3E45 -- offset 0x3E45 -- 79 instr\n; Dispatcher: tabla de decisiones cmp+jcc (79 instr).\n; tags: dispatcher\n; callers: sub_3D9E\n; calls (intra): sub_3F53, sub_3F73\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_3E45 -- offset 0x3E45 -- 79 instr\n; Dispatcher: cmp+jcc decision table (79 instr).\n; tags: dispatcher\n; callers: sub_3D9E\n; calls (intra): sub_3F53, sub_3F73\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -7808,12 +7808,12 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Funcion mediana (58 instr, 2 calls).",
+      "description": "Mid-size function (58 instr, 2 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_3EDE -- offset 0x3EDE -- 58 instr\n; Funcion mediana (58 instr, 2 calls).\n; tags: medium\n; callers: sub_3D9E\n; calls (intra): sub_3F53, sub_3F73\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_3EDE -- offset 0x3EDE -- 58 instr\n; Mid-size function (58 instr, 2 calls).\n; tags: medium\n; callers: sub_3D9E\n; calls (intra): sub_3F53, sub_3F73\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -7877,12 +7877,12 @@
       ],
       "fanout": 1,
       "fanin": 3,
-      "description": "Funcion sin clasificar definitiva (16 instr).",
+      "description": "Unclassified function (16 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_3F53 -- offset 0x3F53 -- 16 instr\n; Funcion sin clasificar definitiva (16 instr).\n; tags: small\n; callers: sub_3E45, sub_3EDE, sub_409E\n; calls (intra): sub_3D9E\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_3F53 -- offset 0x3F53 -- 16 instr\n; Unclassified function (16 instr).\n; tags: small\n; callers: sub_3E45, sub_3EDE, sub_409E\n; calls (intra): sub_3D9E\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -7963,13 +7963,13 @@
       ],
       "fanout": 5,
       "fanin": 4,
-      "description": "Llama a servicios DOS via INT 21h (59 instr).",
+      "description": "Calls DOS services via INT 21h (59 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_3F73 -- offset 0x3F73 -- 59 instr\n; Llama a servicios DOS via INT 21h (59 instr).\n; tags: dos_caller, int_21\n; callers: sub_3E45, sub_3EDE, sub_409E, sub_5642\n; calls (intra): sub_3FF4, sub_4071, sub_4081, sub_409B, sub_409E\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_3F73 -- offset 0x3F73 -- 59 instr\n; Calls DOS services via INT 21h (59 instr).\n; tags: dos_caller, int_21\n; callers: sub_3E45, sub_3EDE, sub_409E, sub_5642\n; calls (intra): sub_3FF4, sub_4071, sub_4081, sub_409B, sub_409E\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -8033,14 +8033,14 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (64 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (64 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_3FF4 -- offset 0x3FF4 -- 64 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (64 instr).\n; tags: complex_iterator, loop, string_op\n; callers: sub_3F73, sub_409E\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_3FF4 -- offset 0x3FF4 -- 64 instr\n; Iterator with string ops (movsb/scasb/...) (64 instr).\n; tags: complex_iterator, loop, string_op\n; callers: sub_3F73, sub_409E\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -8092,12 +8092,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion hoja (no llama a otras, 6 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 6 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_4071 -- offset 0x4071 -- 6 instr\n; Funcion hoja (no llama a otras, 6 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_3F73\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_4071 -- offset 0x4071 -- 6 instr\n; Leaf function (no callees, 6 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_3F73\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -8159,13 +8159,13 @@
       ],
       "fanout": 0,
       "fanin": 4,
-      "description": "Llama a servicios DOS via INT 21h (11 instr).",
+      "description": "Calls DOS services via INT 21h (11 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_4081 -- offset 0x4081 -- 11 instr\n; Llama a servicios DOS via INT 21h (11 instr).\n; tags: dos_caller, int_21\n; callers: sub_3D9E, sub_3F73, sub_409E, sub_5642\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_4081 -- offset 0x4081 -- 11 instr\n; Calls DOS services via INT 21h (11 instr).\n; tags: dos_caller, int_21\n; callers: sub_3D9E, sub_3F73, sub_409E, sub_5642\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -8207,12 +8207,12 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Stub trivial (1 instrucciones, sin logica significativa).",
+      "description": "Trivial stub (1 instructions, no significant logic).",
       "confidence": "low",
       "semantic_tags": [
         "trivial_stub"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_409B -- offset 0x409B -- 1 instr\n; Stub trivial (1 instrucciones, sin logica significativa).\n; tags: trivial_stub\n; callers: sub_3F73, sub_409E\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_409B -- offset 0x409B -- 1 instr\n; Trivial stub (1 instructions, no significant logic).\n; tags: trivial_stub\n; callers: sub_3F73, sub_409E\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -8297,14 +8297,14 @@
       ],
       "fanout": 7,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (189 instr).",
+      "description": "Calls DOS services via INT 21h (189 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "far",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_409E -- offset 0x409E -- 189 instr\n; Llama a servicios DOS via INT 21h (189 instr).\n; tags: dos_caller, far, int_21\n; callers: sub_3F73\n; calls (intra): sub_3F53, sub_3F73, sub_3FF4, sub_4081, sub_409B, sub_4253 (+1 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_409E -- offset 0x409E -- 189 instr\n; Calls DOS services via INT 21h (189 instr).\n; tags: dos_caller, far, int_21\n; callers: sub_3F73\n; calls (intra): sub_3F53, sub_3F73, sub_3FF4, sub_4081, sub_409B, sub_4253 (+1 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -8363,13 +8363,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (9 instr).",
+      "description": "Calls DOS services via INT 21h (9 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_4253 -- offset 0x4253 -- 9 instr\n; Llama a servicios DOS via INT 21h (9 instr).\n; tags: dos_caller, int_21\n; callers: sub_409E\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_4253 -- offset 0x4253 -- 9 instr\n; Calls DOS services via INT 21h (9 instr).\n; tags: dos_caller, int_21\n; callers: sub_409E\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -8489,14 +8489,14 @@
       ],
       "fanout": 27,
       "fanin": 2,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (812 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (812 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
         "far",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_4265 -- offset 0x4265 -- 812 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (812 instr).\n; tags: complex_iterator, far, string_op\n; callers: sub_3D9E, sub_409E\n; calls (intra): sub_4A7B, sub_4AED, sub_4B00, sub_4B0E, sub_4B15, sub_4B38 (+21 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_4265 -- offset 0x4265 -- 812 instr\n; Iterator with string ops (movsb/scasb/...) (812 instr).\n; tags: complex_iterator, far, string_op\n; callers: sub_3D9E, sub_409E\n; calls (intra): sub_4A7B, sub_4AED, sub_4B00, sub_4B0E, sub_4B15, sub_4B38 (+21 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -8556,12 +8556,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (43 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (43 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_4A7B -- offset 0x4A7B -- 43 instr\n; Dispatcher: tabla de decisiones cmp+jcc (43 instr).\n; tags: dispatcher\n; callers: sub_4265\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_4A7B -- offset 0x4A7B -- 43 instr\n; Dispatcher: cmp+jcc decision table (43 instr).\n; tags: dispatcher\n; callers: sub_4265\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -8616,13 +8616,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (9 instr).",
+      "description": "Unclassified function (9 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "bios_caller",
         "int_13"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_4AED -- offset 0x4AED -- 9 instr\n; Funcion sin clasificar definitiva (9 instr).\n; tags: bios_caller, int_13\n; callers: sub_4265\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_4AED -- offset 0x4AED -- 9 instr\n; Unclassified function (9 instr).\n; tags: bios_caller, int_13\n; callers: sub_4265\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -8675,12 +8675,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion hoja (no llama a otras, 7 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 7 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_4B00 -- offset 0x4B00 -- 7 instr\n; Funcion hoja (no llama a otras, 7 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_4265\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_4B00 -- offset 0x4B00 -- 7 instr\n; Leaf function (no callees, 7 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_4265\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -8732,13 +8732,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (4 instr).",
+      "description": "Calls DOS services via INT 21h (4 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_4B0E -- offset 0x4B0E -- 4 instr\n; Llama a servicios DOS via INT 21h (4 instr).\n; tags: dos_caller, int_21\n; callers: sub_4265\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_4B0E -- offset 0x4B0E -- 4 instr\n; Calls DOS services via INT 21h (4 instr).\n; tags: dos_caller, int_21\n; callers: sub_4265\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -8794,13 +8794,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (11 instr).",
+      "description": "Calls DOS services via INT 21h (11 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_4B15 -- offset 0x4B15 -- 11 instr\n; Llama a servicios DOS via INT 21h (11 instr).\n; tags: dos_caller, int_21\n; callers: sub_4265\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_4B15 -- offset 0x4B15 -- 11 instr\n; Calls DOS services via INT 21h (11 instr).\n; tags: dos_caller, int_21\n; callers: sub_4265\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -8857,13 +8857,13 @@
       ],
       "fanout": 0,
       "fanin": 3,
-      "description": "Funcion hoja (no llama a otras, 6 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 6 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "int_11",
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_4B2D -- offset 0x4B2D -- 6 instr\n; Funcion hoja (no llama a otras, 6 instr): probable helper aritmetico/conversion.\n; tags: int_11, leaf\n; callers: sub_03BC, sub_04AA, sub_502D\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_4B2D -- offset 0x4B2D -- 6 instr\n; Leaf function (no callees, 6 instr): likely arithmetic/conversion helper.\n; tags: int_11, leaf\n; callers: sub_03BC, sub_04AA, sub_502D\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -8924,13 +8924,13 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Llama a servicios DOS via INT 21h (12 instr).",
+      "description": "Calls DOS services via INT 21h (12 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_4B38 -- offset 0x4B38 -- 12 instr\n; Llama a servicios DOS via INT 21h (12 instr).\n; tags: dos_caller, int_21\n; callers: sub_4265, sub_4D20\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_4B38 -- offset 0x4B38 -- 12 instr\n; Calls DOS services via INT 21h (12 instr).\n; tags: dos_caller, int_21\n; callers: sub_4265, sub_4D20\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -8982,13 +8982,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (4 instr).",
+      "description": "Calls DOS services via INT 21h (4 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_4B4E -- offset 0x4B4E -- 4 instr\n; Llama a servicios DOS via INT 21h (4 instr).\n; tags: dos_caller, int_21\n; callers: sub_0E44\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_4B4E -- offset 0x4B4E -- 4 instr\n; Calls DOS services via INT 21h (4 instr).\n; tags: dos_caller, int_21\n; callers: sub_0E44\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -9046,13 +9046,13 @@
       ],
       "fanout": 0,
       "fanin": 3,
-      "description": "Llama a servicios DOS via INT 21h (9 instr).",
+      "description": "Calls DOS services via INT 21h (9 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_4B55 -- offset 0x4B55 -- 9 instr\n; Llama a servicios DOS via INT 21h (9 instr).\n; tags: dos_caller, int_21\n; callers: sub_0E44, sub_1037, sub_518D\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_4B55 -- offset 0x4B55 -- 9 instr\n; Calls DOS services via INT 21h (9 instr).\n; tags: dos_caller, int_21\n; callers: sub_0E44, sub_1037, sub_518D\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -9111,13 +9111,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (12 instr).",
+      "description": "Calls DOS services via INT 21h (12 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_4B67 -- offset 0x4B67 -- 12 instr\n; Llama a servicios DOS via INT 21h (12 instr).\n; tags: dos_caller, int_21\n; callers: sub_4265\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_4B67 -- offset 0x4B67 -- 12 instr\n; Calls DOS services via INT 21h (12 instr).\n; tags: dos_caller, int_21\n; callers: sub_4265\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -9167,13 +9167,13 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Llama a servicios DOS via INT 21h (3 instr).",
+      "description": "Calls DOS services via INT 21h (3 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "int_21",
         "trivial_stub"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_4B7D -- offset 0x4B7D -- 3 instr\n; Llama a servicios DOS via INT 21h (3 instr).\n; tags: int_21, trivial_stub\n; callers: sub_1973, sub_4265\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_4B7D -- offset 0x4B7D -- 3 instr\n; Calls DOS services via INT 21h (3 instr).\n; tags: int_21, trivial_stub\n; callers: sub_1973, sub_4265\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -9228,13 +9228,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (17 instr).",
+      "description": "Calls DOS services via INT 21h (17 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_4B82 -- offset 0x4B82 -- 17 instr\n; Llama a servicios DOS via INT 21h (17 instr).\n; tags: dos_caller, int_21\n; callers: sub_4265\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_4B82 -- offset 0x4B82 -- 17 instr\n; Calls DOS services via INT 21h (17 instr).\n; tags: dos_caller, int_21\n; callers: sub_4265\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -9297,13 +9297,13 @@
       ],
       "fanout": 0,
       "fanin": 4,
-      "description": "Llama a servicios DOS via INT 21h (24 instr).",
+      "description": "Calls DOS services via INT 21h (24 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_4BA2 -- offset 0x4BA2 -- 24 instr\n; Llama a servicios DOS via INT 21h (24 instr).\n; tags: dos_caller, int_21\n; callers: sub_1B55, sub_4265, sub_504A, sub_50F5\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_4BA2 -- offset 0x4BA2 -- 24 instr\n; Calls DOS services via INT 21h (24 instr).\n; tags: dos_caller, int_21\n; callers: sub_1B55, sub_4265, sub_504A, sub_50F5\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -9365,13 +9365,13 @@
       ],
       "fanout": 0,
       "fanin": 6,
-      "description": "Funcion sin clasificar definitiva (22 instr).",
+      "description": "Unclassified function (22 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "int_25",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_4BCC -- offset 0x4BCC -- 22 instr\n; Funcion sin clasificar definitiva (22 instr).\n; tags: int_25, small\n; callers: sub_4265, sub_4D98, sub_4E26, sub_4F50, sub_4FBA, sub_504A\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_4BCC -- offset 0x4BCC -- 22 instr\n; Unclassified function (22 instr).\n; tags: int_25, small\n; callers: sub_4265, sub_4D98, sub_4E26, sub_4F50, sub_4FBA, sub_504A\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -9432,13 +9432,13 @@
       ],
       "fanout": 0,
       "fanin": 5,
-      "description": "Funcion sin clasificar definitiva (22 instr).",
+      "description": "Unclassified function (22 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "int_26",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_4BF4 -- offset 0x4BF4 -- 22 instr\n; Funcion sin clasificar definitiva (22 instr).\n; tags: int_26, small\n; callers: sub_4265, sub_4D98, sub_4E26, sub_4ED4, sub_50F5\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_4BF4 -- offset 0x4BF4 -- 22 instr\n; Unclassified function (22 instr).\n; tags: int_26, small\n; callers: sub_4265, sub_4D98, sub_4E26, sub_4ED4, sub_50F5\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -9504,7 +9504,7 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (85 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (85 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
@@ -9512,7 +9512,7 @@
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_4C1C -- offset 0x4C1C -- 85 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (85 instr).\n; tags: complex_iterator, int_13, loop, string_op\n; callers: sub_4265\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_4C1C -- offset 0x4C1C -- 85 instr\n; Iterator with string ops (movsb/scasb/...) (85 instr).\n; tags: complex_iterator, int_13, loop, string_op\n; callers: sub_4265\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -9574,13 +9574,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (28 instr).",
+      "description": "Unclassified function (28 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "bios_caller",
         "int_13"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_4CDF -- offset 0x4CDF -- 28 instr\n; Funcion sin clasificar definitiva (28 instr).\n; tags: bios_caller, int_13\n; callers: sub_4265\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_4CDF -- offset 0x4CDF -- 28 instr\n; Unclassified function (28 instr).\n; tags: bios_caller, int_13\n; callers: sub_4265\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -9650,7 +9650,7 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (63 instr).",
+      "description": "Calls DOS services via INT 21h (63 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
@@ -9658,7 +9658,7 @@
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_4D20 -- offset 0x4D20 -- 63 instr\n; Llama a servicios DOS via INT 21h (63 instr).\n; tags: complex_iterator, int_21, loop, string_op\n; callers: sub_1973\n; calls (intra): sub_4B38\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_4D20 -- offset 0x4D20 -- 63 instr\n; Calls DOS services via INT 21h (63 instr).\n; tags: complex_iterator, int_21, loop, string_op\n; callers: sub_1973\n; calls (intra): sub_4B38\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -9731,7 +9731,7 @@
       ],
       "fanout": 2,
       "fanin": 2,
-      "description": "Llama a servicios DOS via INT 21h (71 instr).",
+      "description": "Calls DOS services via INT 21h (71 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
@@ -9739,7 +9739,7 @@
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_4D98 -- offset 0x4D98 -- 71 instr\n; Llama a servicios DOS via INT 21h (71 instr).\n; tags: complex_iterator, int_21, loop, string_op\n; callers: sub_1B55, sub_4265\n; calls (intra): sub_4BCC, sub_4BF4\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_4D98 -- offset 0x4D98 -- 71 instr\n; Calls DOS services via INT 21h (71 instr).\n; tags: complex_iterator, int_21, loop, string_op\n; callers: sub_1B55, sub_4265\n; calls (intra): sub_4BCC, sub_4BF4\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -9810,13 +9810,13 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (55 instr).",
+      "description": "Calls DOS services via INT 21h (55 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_4E26 -- offset 0x4E26 -- 55 instr\n; Llama a servicios DOS via INT 21h (55 instr).\n; tags: dos_caller, int_21\n; callers: sub_4265\n; calls (intra): sub_4BCC, sub_4BF4\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_4E26 -- offset 0x4E26 -- 55 instr\n; Calls DOS services via INT 21h (55 instr).\n; tags: dos_caller, int_21\n; callers: sub_4265\n; calls (intra): sub_4BCC, sub_4BF4\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -9875,12 +9875,12 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Funcion hoja (no llama a otras, 12 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 12 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_4EA0 -- offset 0x4EA0 -- 12 instr\n; Funcion hoja (no llama a otras, 12 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_4F50, sub_4FBA\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_4EA0 -- offset 0x4EA0 -- 12 instr\n; Leaf function (no callees, 12 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_4F50, sub_4FBA\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -9935,12 +9935,12 @@
       ],
       "fanout": 0,
       "fanin": 3,
-      "description": "Funcion hoja (no llama a otras, 9 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 9 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_4EBD -- offset 0x4EBD -- 9 instr\n; Funcion hoja (no llama a otras, 9 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_4265, sub_504A, sub_50F5\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_4EBD -- offset 0x4EBD -- 9 instr\n; Leaf function (no callees, 9 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_4265, sub_504A, sub_50F5\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -10013,13 +10013,13 @@
       ],
       "fanout": 1,
       "fanin": 4,
-      "description": "Llama a servicios DOS via INT 21h (61 instr).",
+      "description": "Calls DOS services via INT 21h (61 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_4ED4 -- offset 0x4ED4 -- 61 instr\n; Llama a servicios DOS via INT 21h (61 instr).\n; tags: dos_caller, int_21\n; callers: sub_4265, sub_4F50, sub_4FBA, sub_50F5\n; calls (intra): sub_4BF4\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_4ED4 -- offset 0x4ED4 -- 61 instr\n; Calls DOS services via INT 21h (61 instr).\n; tags: dos_caller, int_21\n; callers: sub_4265, sub_4F50, sub_4FBA, sub_50F5\n; calls (intra): sub_4BF4\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -10090,12 +10090,12 @@
       ],
       "fanout": 3,
       "fanin": 3,
-      "description": "Funcion mediana (47 instr, 3 calls).",
+      "description": "Mid-size function (47 instr, 3 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_4F50 -- offset 0x4F50 -- 47 instr\n; Funcion mediana (47 instr, 3 calls).\n; tags: medium\n; callers: sub_4265, sub_504A, sub_50F5\n; calls (intra): sub_4BCC, sub_4EA0, sub_4ED4\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_4F50 -- offset 0x4F50 -- 47 instr\n; Mid-size function (47 instr, 3 calls).\n; tags: medium\n; callers: sub_4265, sub_504A, sub_50F5\n; calls (intra): sub_4BCC, sub_4EA0, sub_4ED4\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -10167,12 +10167,12 @@
       ],
       "fanout": 3,
       "fanin": 2,
-      "description": "Funcion mediana (52 instr, 3 calls).",
+      "description": "Mid-size function (52 instr, 3 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_4FBA -- offset 0x4FBA -- 52 instr\n; Funcion mediana (52 instr, 3 calls).\n; tags: medium\n; callers: sub_4265, sub_50F5\n; calls (intra): sub_4BCC, sub_4EA0, sub_4ED4\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_4FBA -- offset 0x4FBA -- 52 instr\n; Mid-size function (52 instr, 3 calls).\n; tags: medium\n; callers: sub_4265, sub_50F5\n; calls (intra): sub_4BCC, sub_4EA0, sub_4ED4\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -10238,13 +10238,13 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (17 instr).",
+      "description": "Calls DOS services via INT 21h (17 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_502D -- offset 0x502D -- 17 instr\n; Llama a servicios DOS via INT 21h (17 instr).\n; tags: dos_caller, int_21\n; callers: sub_03BC\n; calls (intra): sub_4B2D\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_502D -- offset 0x502D -- 17 instr\n; Calls DOS services via INT 21h (17 instr).\n; tags: dos_caller, int_21\n; callers: sub_03BC\n; calls (intra): sub_4B2D\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -10317,13 +10317,13 @@
       ],
       "fanout": 4,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (76 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (76 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_504A -- offset 0x504A -- 76 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (76 instr).\n; tags: complex_iterator, string_op\n; callers: sub_1B55\n; calls (intra): sub_4BA2, sub_4BCC, sub_4EBD, sub_4F50\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_504A -- offset 0x504A -- 76 instr\n; Iterator with string ops (movsb/scasb/...) (76 instr).\n; tags: complex_iterator, string_op\n; callers: sub_1B55\n; calls (intra): sub_4BA2, sub_4BCC, sub_4EBD, sub_4F50\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -10400,12 +10400,12 @@
       ],
       "fanout": 6,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (71 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (71 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_50F5 -- offset 0x50F5 -- 71 instr\n; Dispatcher: tabla de decisiones cmp+jcc (71 instr).\n; tags: dispatcher\n; callers: sub_1B55\n; calls (intra): sub_4BA2, sub_4BF4, sub_4EBD, sub_4ED4, sub_4F50, sub_4FBA\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_50F5 -- offset 0x50F5 -- 71 instr\n; Dispatcher: cmp+jcc decision table (71 instr).\n; tags: dispatcher\n; callers: sub_1B55\n; calls (intra): sub_4BA2, sub_4BF4, sub_4EBD, sub_4ED4, sub_4F50, sub_4FBA\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -10472,13 +10472,13 @@
       ],
       "fanout": 1,
       "fanin": 2,
-      "description": "Llama a servicios DOS via INT 21h (19 instr).",
+      "description": "Calls DOS services via INT 21h (19 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_518D -- offset 0x518D -- 19 instr\n; Llama a servicios DOS via INT 21h (19 instr).\n; tags: dos_caller, int_21\n; callers: sub_1037, sub_2751\n; calls (intra): sub_4B55\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_518D -- offset 0x518D -- 19 instr\n; Calls DOS services via INT 21h (19 instr).\n; tags: dos_caller, int_21\n; callers: sub_1037, sub_2751\n; calls (intra): sub_4B55\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -10542,13 +10542,13 @@
       ],
       "fanout": 0,
       "fanin": 3,
-      "description": "Llama a servicios DOS via INT 21h (17 instr).",
+      "description": "Calls DOS services via INT 21h (17 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_51B6 -- offset 0x51B6 -- 17 instr\n; Llama a servicios DOS via INT 21h (17 instr).\n; tags: dos_caller, int_21\n; callers: sub_05E9, sub_0E44, sub_2751\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_51B6 -- offset 0x51B6 -- 17 instr\n; Calls DOS services via INT 21h (17 instr).\n; tags: dos_caller, int_21\n; callers: sub_05E9, sub_0E44, sub_2751\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -10612,13 +10612,13 @@
       ],
       "fanout": 0,
       "fanin": 6,
-      "description": "Llama a servicios DOS via INT 21h (16 instr).",
+      "description": "Calls DOS services via INT 21h (16 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_51DB -- offset 0x51DB -- 16 instr\n; Llama a servicios DOS via INT 21h (16 instr).\n; tags: dos_caller, int_21\n; callers: sub_2393, sub_2751, sub_27F0, sub_285D, sub_2AB4, sub_3057\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_51DB -- offset 0x51DB -- 16 instr\n; Calls DOS services via INT 21h (16 instr).\n; tags: dos_caller, int_21\n; callers: sub_2393, sub_2751, sub_27F0, sub_285D, sub_2AB4, sub_3057\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -10680,13 +10680,13 @@
       ],
       "fanout": 0,
       "fanin": 4,
-      "description": "Llama a servicios DOS via INT 21h (14 instr).",
+      "description": "Calls DOS services via INT 21h (14 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_51FC -- offset 0x51FC -- 14 instr\n; Llama a servicios DOS via INT 21h (14 instr).\n; tags: dos_caller, int_21\n; callers: sub_2393, sub_2751, sub_2AB4, sub_3057\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_51FC -- offset 0x51FC -- 14 instr\n; Calls DOS services via INT 21h (14 instr).\n; tags: dos_caller, int_21\n; callers: sub_2393, sub_2751, sub_2AB4, sub_3057\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -10748,13 +10748,13 @@
       ],
       "fanout": 0,
       "fanin": 7,
-      "description": "Llama a servicios DOS via INT 21h (11 instr).",
+      "description": "Calls DOS services via INT 21h (11 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_5217 -- offset 0x5217 -- 11 instr\n; Llama a servicios DOS via INT 21h (11 instr).\n; tags: dos_caller, int_21\n; callers: sub_0D5D, sub_1F74, sub_2698, sub_27F0, sub_2926, sub_4265 (+1 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_5217 -- offset 0x5217 -- 11 instr\n; Calls DOS services via INT 21h (11 instr).\n; tags: dos_caller, int_21\n; callers: sub_0D5D, sub_1F74, sub_2698, sub_27F0, sub_2926, sub_4265 (+1 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -10822,13 +10822,13 @@
       ],
       "fanout": 0,
       "fanin": 4,
-      "description": "Llama a servicios DOS via INT 21h (31 instr).",
+      "description": "Calls DOS services via INT 21h (31 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_522F -- offset 0x522F -- 31 instr\n; Llama a servicios DOS via INT 21h (31 instr).\n; tags: dos_caller, int_21\n; callers: sub_07A9, sub_3783, sub_37B1, sub_530A\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_522F -- offset 0x522F -- 31 instr\n; Calls DOS services via INT 21h (31 instr).\n; tags: dos_caller, int_21\n; callers: sub_07A9, sub_3783, sub_37B1, sub_530A\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -10887,13 +10887,13 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Llama a servicios DOS via INT 21h (15 instr).",
+      "description": "Calls DOS services via INT 21h (15 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_5276 -- offset 0x5276 -- 15 instr\n; Llama a servicios DOS via INT 21h (15 instr).\n; tags: dos_caller, int_21\n; callers: sub_4265, sub_530A\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_5276 -- offset 0x5276 -- 15 instr\n; Calls DOS services via INT 21h (15 instr).\n; tags: dos_caller, int_21\n; callers: sub_4265, sub_530A\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -10949,13 +10949,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (14 instr).",
+      "description": "Calls DOS services via INT 21h (14 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_5296 -- offset 0x5296 -- 14 instr\n; Llama a servicios DOS via INT 21h (14 instr).\n; tags: dos_caller, int_21\n; callers: sub_1F74\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_5296 -- offset 0x5296 -- 14 instr\n; Calls DOS services via INT 21h (14 instr).\n; tags: dos_caller, int_21\n; callers: sub_1F74\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -11015,13 +11015,13 @@
       ],
       "fanout": 0,
       "fanin": 3,
-      "description": "Llama a servicios DOS via INT 21h (14 instr).",
+      "description": "Calls DOS services via INT 21h (14 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_52B6 -- offset 0x52B6 -- 14 instr\n; Llama a servicios DOS via INT 21h (14 instr).\n; tags: dos_caller, int_21\n; callers: sub_0D5D, sub_1F74, sub_27F0\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_52B6 -- offset 0x52B6 -- 14 instr\n; Calls DOS services via INT 21h (14 instr).\n; tags: dos_caller, int_21\n; callers: sub_0D5D, sub_1F74, sub_27F0\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -11081,13 +11081,13 @@
       ],
       "fanout": 0,
       "fanin": 3,
-      "description": "Llama a servicios DOS via INT 21h (14 instr).",
+      "description": "Calls DOS services via INT 21h (14 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_52D2 -- offset 0x52D2 -- 14 instr\n; Llama a servicios DOS via INT 21h (14 instr).\n; tags: dos_caller, int_21\n; callers: sub_053E, sub_07A9, sub_1037\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_52D2 -- offset 0x52D2 -- 14 instr\n; Calls DOS services via INT 21h (14 instr).\n; tags: dos_caller, int_21\n; callers: sub_053E, sub_07A9, sub_1037\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -11154,13 +11154,13 @@
       ],
       "fanout": 0,
       "fanin": 10,
-      "description": "Llama a servicios DOS via INT 21h (13 instr).",
+      "description": "Calls DOS services via INT 21h (13 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_52EE -- offset 0x52EE -- 13 instr\n; Llama a servicios DOS via INT 21h (13 instr).\n; tags: dos_caller, int_21\n; callers: sub_076F, sub_07A9, sub_0D5D, sub_1F74, sub_2698, sub_27F0 (+4 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_52EE -- offset 0x52EE -- 13 instr\n; Calls DOS services via INT 21h (13 instr).\n; tags: dos_caller, int_21\n; callers: sub_076F, sub_07A9, sub_0D5D, sub_1F74, sub_2698, sub_27F0 (+4 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -11237,13 +11237,13 @@
       ],
       "fanout": 4,
       "fanin": 2,
-      "description": "Llama a servicios DOS via INT 21h (62 instr).",
+      "description": "Calls DOS services via INT 21h (62 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_530A -- offset 0x530A -- 62 instr\n; Llama a servicios DOS via INT 21h (62 instr).\n; tags: dos_caller, int_21\n; callers: sub_285D, sub_4265\n; calls (intra): sub_5217, sub_522F, sub_5276, sub_52EE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_530A -- offset 0x530A -- 62 instr\n; Calls DOS services via INT 21h (62 instr).\n; tags: dos_caller, int_21\n; callers: sub_285D, sub_4265\n; calls (intra): sub_5217, sub_522F, sub_5276, sub_52EE\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -11304,13 +11304,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (34 instr).",
+      "description": "Calls DOS services via INT 21h (34 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_5388 -- offset 0x5388 -- 34 instr\n; Llama a servicios DOS via INT 21h (34 instr).\n; tags: dos_caller, int_21\n; callers: sub_4265\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_5388 -- offset 0x5388 -- 34 instr\n; Calls DOS services via INT 21h (34 instr).\n; tags: dos_caller, int_21\n; callers: sub_4265\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -11370,13 +11370,13 @@
       ],
       "fanout": 0,
       "fanin": 5,
-      "description": "Llama a servicios DOS via INT 21h (11 instr).",
+      "description": "Calls DOS services via INT 21h (11 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_53CC -- offset 0x53CC -- 11 instr\n; Llama a servicios DOS via INT 21h (11 instr).\n; tags: dos_caller, int_21\n; callers: sub_07A9, sub_19F0, sub_285D, sub_297E, sub_3057\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_53CC -- offset 0x53CC -- 11 instr\n; Calls DOS services via INT 21h (11 instr).\n; tags: dos_caller, int_21\n; callers: sub_07A9, sub_19F0, sub_285D, sub_297E, sub_3057\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -11443,14 +11443,14 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Llama a servicios DOS via INT 21h (175 instr).",
+      "description": "Calls DOS services via INT 21h (175 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
         "int_21",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_53E4 -- offset 0x53E4 -- 175 instr\n; Llama a servicios DOS via INT 21h (175 instr).\n; tags: complex_iterator, int_21, string_op\n; callers: sub_05E9, sub_0E44\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_53E4 -- offset 0x53E4 -- 175 instr\n; Calls DOS services via INT 21h (175 instr).\n; tags: complex_iterator, int_21, string_op\n; callers: sub_05E9, sub_0E44\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -11504,13 +11504,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Iterador con bucle (6 instr).",
+      "description": "Iterator with loop (6 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "loop"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_5549 -- offset 0x5549 -- 6 instr\n; Iterador con bucle (6 instr).\n; tags: iterator, loop\n; callers: sub_2283\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_5549 -- offset 0x5549 -- 6 instr\n; Iterator with loop (6 instr).\n; tags: iterator, loop\n; callers: sub_2283\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -11572,12 +11572,12 @@
       ],
       "fanout": 0,
       "fanin": 5,
-      "description": "Funcion sin clasificar definitiva (27 instr).",
+      "description": "Unclassified function (27 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_5554 -- offset 0x5554 -- 27 instr\n; Funcion sin clasificar definitiva (27 instr).\n; tags: small\n; callers: sub_053E, sub_05E9, sub_19F0, sub_2751, sub_4265\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_5554 -- offset 0x5554 -- 27 instr\n; Unclassified function (27 instr).\n; tags: small\n; callers: sub_053E, sub_05E9, sub_19F0, sub_2751, sub_4265\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -11643,12 +11643,12 @@
       ],
       "fanout": 0,
       "fanin": 5,
-      "description": "Funcion sin clasificar definitiva (29 instr).",
+      "description": "Unclassified function (29 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_5583 -- offset 0x5583 -- 29 instr\n; Funcion sin clasificar definitiva (29 instr).\n; tags: small\n; callers: sub_0E44, sub_1973, sub_1F74, sub_2283, sub_3057\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_5583 -- offset 0x5583 -- 29 instr\n; Unclassified function (29 instr).\n; tags: small\n; callers: sub_0E44, sub_1973, sub_1F74, sub_2283, sub_3057\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -11712,12 +11712,12 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (45 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (45 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_55B6 -- offset 0x55B6 -- 45 instr\n; Dispatcher: tabla de decisiones cmp+jcc (45 instr).\n; tags: dispatcher\n; callers: sub_2C9A, sub_2E83\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_55B6 -- offset 0x55B6 -- 45 instr\n; Dispatcher: cmp+jcc decision table (45 instr).\n; tags: dispatcher\n; callers: sub_2C9A, sub_2E83\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -11790,12 +11790,12 @@
       ],
       "fanout": 0,
       "fanin": 17,
-      "description": "Funcion sin clasificar definitiva (21 instr).",
+      "description": "Unclassified function (21 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_5606 -- offset 0x5606 -- 21 instr\n; Funcion sin clasificar definitiva (21 instr).\n; tags: small\n; callers: sub_043D, sub_053E, sub_05E9, sub_07A9, sub_19F0, sub_1B55 (+11 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_5606 -- offset 0x5606 -- 21 instr\n; Unclassified function (21 instr).\n; tags: small\n; callers: sub_043D, sub_053E, sub_05E9, sub_07A9, sub_19F0, sub_1B55 (+11 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -11858,12 +11858,12 @@
       ],
       "fanout": 0,
       "fanin": 8,
-      "description": "Funcion hoja (no llama a otras, 16 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 16 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_5629 -- offset 0x5629 -- 16 instr\n; Funcion hoja (no llama a otras, 16 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_043D, sub_07A9, sub_1037, sub_1836, sub_2283, sub_2C9A (+2 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_5629 -- offset 0x5629 -- 16 instr\n; Leaf function (no callees, 16 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_043D, sub_07A9, sub_1037, sub_1836, sub_2283, sub_2C9A (+2 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "SETUP",
@@ -12062,7 +12062,7 @@
       ],
       "fanout": 2,
       "fanin": 3,
-      "description": "Interrupt Service Routine (7046 instrucciones, posible manejador de INT).",
+      "description": "Interrupt service routine (7046 instructions, likely INT handler).",
       "confidence": "medium",
       "semantic_tags": [
         "int_20",
@@ -12076,7 +12076,7 @@
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_5642 -- offset 0x5642 -- 7046 instr\n; Interrupt Service Routine (7046 instrucciones, posible manejador de INT).\n; tags: int_20, int_5, int_b, int_b5, int_bb, int_bc, int_cd, isr, loop, string_op\n; callers: sub_1D55, sub_1F74, sub_2B32\n; calls (intra): sub_3F73, sub_4081\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_5642 -- offset 0x5642 -- 7046 instr\n; Interrupt service routine (7046 instructions, likely INT handler).\n; tags: int_20, int_5, int_b, int_b5, int_bb, int_bc, int_cd, isr, loop, string_op\n; callers: sub_1D55, sub_1F74, sub_2B32\n; calls (intra): sub_3F73, sub_4081\n;----------------------------------------------------------------------"
     }
   ]
 }

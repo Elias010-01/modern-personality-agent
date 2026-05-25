@@ -178,14 +178,14 @@
       ],
       "fanout": 30,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (294 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (294 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "calls_user",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0036 -- offset 0x0036 -- 294 instr\n; Dispatcher: tabla de decisiones cmp+jcc (294 instr).\n; tags: calls_kernel, calls_user, dispatcher\n; callers: sub_200A\n; calls (intra): sub_07D5, sub_0A97, sub_0B77, sub_0E43, sub_0EE1, sub_117B (+9 mas)\n; calls (inter): KERNEL.GLOBALFREE, KERNEL.GLOBALLOCK, KERNEL.GLOBALSIZE, KERNEL.GLOBALUNLOCK, KERNEL.MAKEPROCINSTANCE, USER.BEGINPAINT (+9 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0036 -- offset 0x0036 -- 294 instr\n; Dispatcher: cmp+jcc decision table (294 instr).\n; tags: calls_kernel, calls_user, dispatcher\n; callers: sub_200A\n; calls (intra): sub_07D5, sub_0A97, sub_0B77, sub_0E43, sub_0EE1, sub_117B (+9 more)\n; calls (inter): KERNEL.GLOBALFREE, KERNEL.GLOBALLOCK, KERNEL.GLOBALSIZE, KERNEL.GLOBALUNLOCK, KERNEL.MAKEPROCINSTANCE, USER.BEGINPAINT (+9 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "SPOOLER",
@@ -320,7 +320,7 @@
       "callers": [],
       "fanout": 20,
       "fanin": 0,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (214 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (214 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_gdi",
@@ -329,7 +329,7 @@
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0330 -- offset 0x0330 -- 214 instr\n; Dispatcher: tabla de decisiones cmp+jcc (214 instr).\n; tags: calls_gdi, calls_kernel, calls_user, dispatcher, far\n; calls (intra): sub_0583, sub_05B9, sub_07D5, sub_0E43, sub_1484, sub_15E9 (+4 mas)\n; calls (inter): GDI.GETSPOOLJOB, KERNEL.LSTRCMP, USER.DEFWINDOWPROC, USER.DESTROYWINDOW, USER.DIALOGBOX, USER.FLASHWINDOW (+4 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0330 -- offset 0x0330 -- 214 instr\n; Dispatcher: cmp+jcc decision table (214 instr).\n; tags: calls_gdi, calls_kernel, calls_user, dispatcher, far\n; calls (intra): sub_0583, sub_05B9, sub_07D5, sub_0E43, sub_1484, sub_15E9 (+4 more)\n; calls (inter): GDI.GETSPOOLJOB, KERNEL.LSTRCMP, USER.DEFWINDOWPROC, USER.DESTROYWINDOW, USER.DIALOGBOX, USER.FLASHWINDOW (+4 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "SPOOLER",
@@ -395,13 +395,13 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (23 instr).",
+      "description": "Unclassified function (23 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "calls_user",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0583 -- offset 0x0583 -- 23 instr\n; Funcion sin clasificar definitiva (23 instr).\n; tags: calls_user, small\n; callers: sub_0330\n; calls (inter): USER.SETSCROLLRANGE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0583 -- offset 0x0583 -- 23 instr\n; Unclassified function (23 instr).\n; tags: calls_user, small\n; callers: sub_0330\n; calls (inter): USER.SETSCROLLRANGE\n;----------------------------------------------------------------------"
     },
     {
       "module": "SPOOLER",
@@ -527,7 +527,7 @@
       ],
       "fanout": 14,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (204 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (204 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
@@ -535,7 +535,7 @@
         "dispatcher",
         "int_7"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_05B9 -- offset 0x05B9 -- 204 instr\n; Dispatcher: tabla de decisiones cmp+jcc (204 instr).\n; tags: calls_kernel, calls_user, dispatcher, int_7\n; callers: sub_0330\n; calls (intra): sub_07D5, sub_0D3C, sub_0E43, sub_117B, sub_122B, sub_1281 (+1 mas)\n; calls (inter): KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK, KERNEL.LSTRLEN, USER.CHECKMENUITEM, USER.GETMENU, USER.LOADSTRING (+1 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_05B9 -- offset 0x05B9 -- 204 instr\n; Dispatcher: cmp+jcc decision table (204 instr).\n; tags: calls_kernel, calls_user, dispatcher, int_7\n; callers: sub_0330\n; calls (intra): sub_07D5, sub_0D3C, sub_0E43, sub_117B, sub_122B, sub_1281 (+1 more)\n; calls (inter): KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK, KERNEL.LSTRLEN, USER.CHECKMENUITEM, USER.GETMENU, USER.LOADSTRING (+1 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "SPOOLER",
@@ -702,7 +702,7 @@
       ],
       "fanout": 20,
       "fanin": 4,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (271 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (271 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_gdi",
@@ -710,7 +710,7 @@
         "calls_user",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_07D5 -- offset 0x07D5 -- 271 instr\n; Dispatcher: tabla de decisiones cmp+jcc (271 instr).\n; tags: calls_gdi, calls_kernel, calls_user, dispatcher\n; callers: sub_0036, sub_0330, sub_05B9, sub_1484\n; calls (intra): sub_0B3A\n; calls (inter): GDI.CREATESOLIDBRUSH, GDI.DELETEOBJECT, GDI.PATBLT, GDI.SELECTOBJECT, GDI.SETBKMODE, GDI.SETTEXTCOLOR (+13 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_07D5 -- offset 0x07D5 -- 271 instr\n; Dispatcher: cmp+jcc decision table (271 instr).\n; tags: calls_gdi, calls_kernel, calls_user, dispatcher\n; callers: sub_0036, sub_0330, sub_05B9, sub_1484\n; calls (intra): sub_0B3A\n; calls (inter): GDI.CREATESOLIDBRUSH, GDI.DELETEOBJECT, GDI.PATBLT, GDI.SELECTOBJECT, GDI.SETBKMODE, GDI.SETTEXTCOLOR (+13 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "SPOOLER",
@@ -804,13 +804,13 @@
       ],
       "fanout": 6,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (60 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (60 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_user",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0A97 -- offset 0x0A97 -- 60 instr\n; Dispatcher: tabla de decisiones cmp+jcc (60 instr).\n; tags: calls_user, dispatcher\n; callers: sub_0036\n; calls (intra): sub_0B3A\n; calls (inter): USER.ENABLEMENUITEM, USER.GETCLIENTRECT, USER.GETDC, USER.GETMENU, USER.RELEASEDC\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0A97 -- offset 0x0A97 -- 60 instr\n; Dispatcher: cmp+jcc decision table (60 instr).\n; tags: calls_user, dispatcher\n; callers: sub_0036\n; calls (intra): sub_0B3A\n; calls (inter): USER.ENABLEMENUITEM, USER.GETCLIENTRECT, USER.GETDC, USER.GETMENU, USER.RELEASEDC\n;----------------------------------------------------------------------"
     },
     {
       "module": "SPOOLER",
@@ -877,14 +877,14 @@
       ],
       "fanout": 1,
       "fanin": 3,
-      "description": "Funcion sin clasificar definitiva (29 instr).",
+      "description": "Unclassified function (29 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "calls_gdi",
         "far",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0B3A -- offset 0x0B3A -- 29 instr\n; Funcion sin clasificar definitiva (29 instr).\n; tags: calls_gdi, far, small\n; callers: sub_07D5, sub_0A97, sub_1484\n; calls (inter): GDI.PATBLT\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0B3A -- offset 0x0B3A -- 29 instr\n; Unclassified function (29 instr).\n; tags: calls_gdi, far, small\n; callers: sub_07D5, sub_0A97, sub_1484\n; calls (inter): GDI.PATBLT\n;----------------------------------------------------------------------"
     },
     {
       "module": "SPOOLER",
@@ -981,13 +981,13 @@
       ],
       "fanout": 9,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (156 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (156 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_user",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0B77 -- offset 0x0B77 -- 156 instr\n; Dispatcher: tabla de decisiones cmp+jcc (156 instr).\n; tags: calls_user, dispatcher\n; callers: sub_0036\n; calls (intra): sub_16D3, sub_185B, sub_196D, sub_19B9, sub_1BC4\n; calls (inter): USER.GETACTIVEWINDOW, USER.MESSAGEBEEP, USER.MESSAGEBOX, USER.SETTIMER\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0B77 -- offset 0x0B77 -- 156 instr\n; Dispatcher: cmp+jcc decision table (156 instr).\n; tags: calls_user, dispatcher\n; callers: sub_0036\n; calls (intra): sub_16D3, sub_185B, sub_196D, sub_19B9, sub_1BC4\n; calls (inter): USER.GETACTIVEWINDOW, USER.MESSAGEBEEP, USER.MESSAGEBOX, USER.SETTIMER\n;----------------------------------------------------------------------"
     },
     {
       "module": "SPOOLER",
@@ -1048,13 +1048,13 @@
       ],
       "fanout": 1,
       "fanin": 2,
-      "description": "Wrapper que delega en USER.MESSAGEBOX.",
+      "description": "Wrapper delegating to USER.MESSAGEBOX.",
       "confidence": "medium",
       "semantic_tags": [
         "calls_user",
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0D1E -- offset 0x0D1E -- 15 instr\n; Wrapper que delega en USER.MESSAGEBOX.\n; tags: calls_user, wrapper\n; callers: sub_185B, sub_1EE3\n; calls (inter): USER.MESSAGEBOX\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0D1E -- offset 0x0D1E -- 15 instr\n; Wrapper delegating to USER.MESSAGEBOX.\n; tags: calls_user, wrapper\n; callers: sub_185B, sub_1EE3\n; calls (inter): USER.MESSAGEBOX\n;----------------------------------------------------------------------"
     },
     {
       "module": "SPOOLER",
@@ -1115,12 +1115,12 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Funcion mediana (53 instr, 0 calls).",
+      "description": "Mid-size function (53 instr, 0 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0D3C -- offset 0x0D3C -- 53 instr\n; Funcion mediana (53 instr, 0 calls).\n; tags: medium\n; callers: sub_05B9, sub_1BC4\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0D3C -- offset 0x0D3C -- 53 instr\n; Mid-size function (53 instr, 0 calls).\n; tags: medium\n; callers: sub_05B9, sub_1BC4\n;----------------------------------------------------------------------"
     },
     {
       "module": "SPOOLER",
@@ -1191,13 +1191,13 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Funcion mediana (51 instr, 1 calls).",
+      "description": "Mid-size function (51 instr, 1 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_kernel",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0DCE -- offset 0x0DCE -- 51 instr\n; Funcion mediana (51 instr, 1 calls).\n; tags: calls_kernel, medium\n; callers: sub_0EE1\n; calls (inter): KERNEL.OPENFILE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0DCE -- offset 0x0DCE -- 51 instr\n; Mid-size function (51 instr, 1 calls).\n; tags: calls_kernel, medium\n; callers: sub_0EE1\n; calls (inter): KERNEL.OPENFILE\n;----------------------------------------------------------------------"
     },
     {
       "module": "SPOOLER",
@@ -1270,12 +1270,12 @@
       ],
       "fanout": 2,
       "fanin": 5,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (66 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (66 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0E43 -- offset 0x0E43 -- 66 instr\n; Dispatcher: tabla de decisiones cmp+jcc (66 instr).\n; tags: dispatcher\n; callers: sub_0036, sub_0330, sub_05B9, sub_1D87, sub_200A\n; calls (intra): sub_146C, sub_1FEB\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0E43 -- offset 0x0E43 -- 66 instr\n; Dispatcher: cmp+jcc decision table (66 instr).\n; tags: dispatcher\n; callers: sub_0036, sub_0330, sub_05B9, sub_1D87, sub_200A\n; calls (intra): sub_146C, sub_1FEB\n;----------------------------------------------------------------------"
     },
     {
       "module": "SPOOLER",
@@ -1382,14 +1382,14 @@
       ],
       "fanout": 10,
       "fanin": 2,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (233 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (233 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_gdi",
         "calls_kernel",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0EE1 -- offset 0x0EE1 -- 233 instr\n; Dispatcher: tabla de decisiones cmp+jcc (233 instr).\n; tags: calls_gdi, calls_kernel, dispatcher\n; callers: sub_0036, sub_1281\n; calls (intra): sub_0DCE, sub_13C6, sub_19B9, sub_1BC4\n; calls (inter): GDI.GETSPOOLJOB, KERNEL.DELETEPATHNAME, KERNEL.GLOBALFREE, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK, KERNEL.OPENFILE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0EE1 -- offset 0x0EE1 -- 233 instr\n; Dispatcher: cmp+jcc decision table (233 instr).\n; tags: calls_gdi, calls_kernel, dispatcher\n; callers: sub_0036, sub_1281\n; calls (intra): sub_0DCE, sub_13C6, sub_19B9, sub_1BC4\n; calls (inter): GDI.GETSPOOLJOB, KERNEL.DELETEPATHNAME, KERNEL.GLOBALFREE, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK, KERNEL.OPENFILE\n;----------------------------------------------------------------------"
     },
     {
       "module": "SPOOLER",
@@ -1484,14 +1484,14 @@
       ],
       "fanout": 6,
       "fanin": 3,
-      "description": "Funcion mediana (53 instr, 6 calls).",
+      "description": "Mid-size function (53 instr, 6 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_gdi",
         "calls_kernel",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_117B -- offset 0x117B -- 53 instr\n; Funcion mediana (53 instr, 6 calls).\n; tags: calls_gdi, calls_kernel, medium\n; callers: sub_0036, sub_05B9, sub_200A\n; calls (intra): sub_13C6\n; calls (inter): GDI.GETSPOOLJOB, KERNEL.DELETEPATHNAME, KERNEL.GLOBALFREE, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_117B -- offset 0x117B -- 53 instr\n; Mid-size function (53 instr, 6 calls).\n; tags: calls_gdi, calls_kernel, medium\n; callers: sub_0036, sub_05B9, sub_200A\n; calls (intra): sub_13C6\n; calls (inter): GDI.GETSPOOLJOB, KERNEL.DELETEPATHNAME, KERNEL.GLOBALFREE, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK\n;----------------------------------------------------------------------"
     },
     {
       "module": "SPOOLER",
@@ -1550,13 +1550,13 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Wrapper que delega en KERNEL.GLOBALREALLOC.",
+      "description": "Wrapper delegating to KERNEL.GLOBALREALLOC.",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1211 -- offset 0x1211 -- 13 instr\n; Wrapper que delega en KERNEL.GLOBALREALLOC.\n; tags: calls_kernel, wrapper\n; calls (inter): KERNEL.GLOBALREALLOC\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1211 -- offset 0x1211 -- 13 instr\n; Wrapper delegating to KERNEL.GLOBALREALLOC.\n; tags: calls_kernel, wrapper\n; calls (inter): KERNEL.GLOBALREALLOC\n;----------------------------------------------------------------------"
     },
     {
       "module": "SPOOLER",
@@ -1618,12 +1618,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion mediana (33 instr, 0 calls).",
+      "description": "Mid-size function (33 instr, 0 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_122B -- offset 0x122B -- 33 instr\n; Funcion mediana (33 instr, 0 calls).\n; tags: medium\n; callers: sub_05B9\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_122B -- offset 0x122B -- 33 instr\n; Mid-size function (33 instr, 0 calls).\n; tags: medium\n; callers: sub_05B9\n;----------------------------------------------------------------------"
     },
     {
       "module": "SPOOLER",
@@ -1708,13 +1708,13 @@
       ],
       "fanout": 5,
       "fanin": 3,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (115 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (115 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1281 -- offset 0x1281 -- 115 instr\n; Dispatcher: tabla de decisiones cmp+jcc (115 instr).\n; tags: calls_kernel, dispatcher\n; callers: sub_0036, sub_05B9, sub_200A\n; calls (intra): sub_0EE1, sub_196D, sub_1BC4\n; calls (inter): KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1281 -- offset 0x1281 -- 115 instr\n; Dispatcher: cmp+jcc decision table (115 instr).\n; tags: calls_kernel, dispatcher\n; callers: sub_0036, sub_05B9, sub_200A\n; calls (intra): sub_0EE1, sub_196D, sub_1BC4\n; calls (inter): KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK\n;----------------------------------------------------------------------"
     },
     {
       "module": "SPOOLER",
@@ -1791,13 +1791,13 @@
       ],
       "fanout": 2,
       "fanin": 3,
-      "description": "Funcion mediana (54 instr, 2 calls).",
+      "description": "Mid-size function (54 instr, 2 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_kernel",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_13C6 -- offset 0x13C6 -- 54 instr\n; Funcion mediana (54 instr, 2 calls).\n; tags: calls_kernel, medium\n; callers: sub_0036, sub_0EE1, sub_117B\n; calls (inter): KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_13C6 -- offset 0x13C6 -- 54 instr\n; Mid-size function (54 instr, 2 calls).\n; tags: calls_kernel, medium\n; callers: sub_0036, sub_0EE1, sub_117B\n; calls (inter): KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK\n;----------------------------------------------------------------------"
     },
     {
       "module": "SPOOLER",
@@ -1857,13 +1857,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (14 instr).",
+      "description": "Calls DOS services via INT 21h (14 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_144B -- offset 0x144B -- 14 instr\n; Llama a servicios DOS via INT 21h (14 instr).\n; tags: dos_caller, int_21\n; callers: sub_185B\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_144B -- offset 0x144B -- 14 instr\n; Calls DOS services via INT 21h (14 instr).\n; tags: dos_caller, int_21\n; callers: sub_185B\n;----------------------------------------------------------------------"
     },
     {
       "module": "SPOOLER",
@@ -1918,12 +1918,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion hoja (no llama a otras, 13 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 13 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_146C -- offset 0x146C -- 13 instr\n; Funcion hoja (no llama a otras, 13 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_0E43\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_146C -- offset 0x146C -- 13 instr\n; Leaf function (no callees, 13 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_0E43\n;----------------------------------------------------------------------"
     },
     {
       "module": "SPOOLER",
@@ -2029,14 +2029,14 @@
       ],
       "fanout": 9,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (149 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (149 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_user",
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1484 -- offset 0x1484 -- 149 instr\n; Dispatcher: tabla de decisiones cmp+jcc (149 instr).\n; tags: calls_user, dispatcher, far\n; callers: sub_0330\n; calls (intra): sub_07D5, sub_0B3A\n; calls (inter): USER.ENABLEMENUITEM, USER.GETCLIENTRECT, USER.GETDC, USER.GETKEYSTATE, USER.GETMENU, USER.RELEASEDC (+1 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1484 -- offset 0x1484 -- 149 instr\n; Dispatcher: cmp+jcc decision table (149 instr).\n; tags: calls_user, dispatcher, far\n; callers: sub_0330\n; calls (intra): sub_07D5, sub_0B3A\n; calls (inter): USER.ENABLEMENUITEM, USER.GETCLIENTRECT, USER.GETDC, USER.GETKEYSTATE, USER.GETMENU, USER.RELEASEDC (+1 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "SPOOLER",
@@ -2111,14 +2111,14 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (95 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (95 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_user",
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_15E9 -- offset 0x15E9 -- 95 instr\n; Dispatcher: tabla de decisiones cmp+jcc (95 instr).\n; tags: calls_user, dispatcher, far\n; callers: sub_0330\n; calls (inter): USER.GETCLIENTRECT, USER.SETSCROLLPOS\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_15E9 -- offset 0x15E9 -- 95 instr\n; Dispatcher: cmp+jcc decision table (95 instr).\n; tags: calls_user, dispatcher, far\n; callers: sub_0330\n; calls (inter): USER.GETCLIENTRECT, USER.SETSCROLLPOS\n;----------------------------------------------------------------------"
     },
     {
       "module": "SPOOLER",
@@ -2204,14 +2204,14 @@
       ],
       "fanout": 4,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (142 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (142 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_user",
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_16D3 -- offset 0x16D3 -- 142 instr\n; Dispatcher: tabla de decisiones cmp+jcc (142 instr).\n; tags: calls_user, dispatcher, far\n; callers: sub_0B77\n; calls (inter): USER.FLUSHCOMM, USER.GETCOMMERROR, USER.GETCURRENTTIME, USER.WRITECOMM\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_16D3 -- offset 0x16D3 -- 142 instr\n; Dispatcher: cmp+jcc decision table (142 instr).\n; tags: calls_user, dispatcher, far\n; callers: sub_0B77\n; calls (inter): USER.FLUSHCOMM, USER.GETCOMMERROR, USER.GETCURRENTTIME, USER.WRITECOMM\n;----------------------------------------------------------------------"
     },
     {
       "module": "SPOOLER",
@@ -2307,7 +2307,7 @@
       ],
       "fanout": 8,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (120 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (120 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
@@ -2315,7 +2315,7 @@
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_185B -- offset 0x185B -- 120 instr\n; Dispatcher: tabla de decisiones cmp+jcc (120 instr).\n; tags: calls_kernel, calls_user, dispatcher, far\n; callers: sub_0B77\n; calls (intra): sub_0D1E, sub_144B, sub_19F0, sub_1BC4\n; calls (inter): KERNEL.LOCALALLOC, USER.GETCOMMSTATE, USER.OPENCOMM, USER.SETCOMMSTATE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_185B -- offset 0x185B -- 120 instr\n; Dispatcher: cmp+jcc decision table (120 instr).\n; tags: calls_kernel, calls_user, dispatcher, far\n; callers: sub_0B77\n; calls (intra): sub_0D1E, sub_144B, sub_19F0, sub_1BC4\n; calls (inter): KERNEL.LOCALALLOC, USER.GETCOMMSTATE, USER.OPENCOMM, USER.SETCOMMSTATE\n;----------------------------------------------------------------------"
     },
     {
       "module": "SPOOLER",
@@ -2392,7 +2392,7 @@
       ],
       "fanout": 2,
       "fanin": 4,
-      "description": "Funcion mediana (31 instr, 2 calls).",
+      "description": "Mid-size function (31 instr, 2 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_kernel",
@@ -2400,7 +2400,7 @@
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_196D -- offset 0x196D -- 31 instr\n; Funcion mediana (31 instr, 2 calls).\n; tags: calls_kernel, calls_user, far, medium\n; callers: sub_0330, sub_0B77, sub_1281, sub_200A\n; calls (inter): KERNEL.LOCALFREE, USER.CLOSECOMM\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_196D -- offset 0x196D -- 31 instr\n; Mid-size function (31 instr, 2 calls).\n; tags: calls_kernel, calls_user, far, medium\n; callers: sub_0330, sub_0B77, sub_1281, sub_200A\n; calls (inter): KERNEL.LOCALFREE, USER.CLOSECOMM\n;----------------------------------------------------------------------"
     },
     {
       "module": "SPOOLER",
@@ -2475,14 +2475,14 @@
       ],
       "fanout": 2,
       "fanin": 5,
-      "description": "Funcion sin clasificar definitiva (26 instr).",
+      "description": "Unclassified function (26 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "calls_user",
         "far",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_19B9 -- offset 0x19B9 -- 26 instr\n; Funcion sin clasificar definitiva (26 instr).\n; tags: calls_user, far, small\n; callers: sub_0036, sub_05B9, sub_0B77, sub_0EE1, sub_200A\n; calls (inter): USER.ESCAPECOMMFUNCTION, USER.FLUSHCOMM\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_19B9 -- offset 0x19B9 -- 26 instr\n; Unclassified function (26 instr).\n; tags: calls_user, far, small\n; callers: sub_0036, sub_05B9, sub_0B77, sub_0EE1, sub_200A\n; calls (inter): USER.ESCAPECOMMFUNCTION, USER.FLUSHCOMM\n;----------------------------------------------------------------------"
     },
     {
       "module": "SPOOLER",
@@ -2561,13 +2561,13 @@
       ],
       "fanout": 3,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (145 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (145 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_19F0 -- offset 0x19F0 -- 145 instr\n; Dispatcher: tabla de decisiones cmp+jcc (145 instr).\n; tags: calls_kernel, dispatcher\n; callers: sub_185B\n; calls (intra): sub_1B8B\n; calls (inter): KERNEL.GETPROFILESTRING, KERNEL.LSTRCPY\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_19F0 -- offset 0x19F0 -- 145 instr\n; Dispatcher: cmp+jcc decision table (145 instr).\n; tags: calls_kernel, dispatcher\n; callers: sub_185B\n; calls (intra): sub_1B8B\n; calls (inter): KERNEL.GETPROFILESTRING, KERNEL.LSTRCPY\n;----------------------------------------------------------------------"
     },
     {
       "module": "SPOOLER",
@@ -2628,12 +2628,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (22 instr).",
+      "description": "Unclassified function (22 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1B8B -- offset 0x1B8B -- 22 instr\n; Funcion sin clasificar definitiva (22 instr).\n; tags: small\n; callers: sub_19F0\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1B8B -- offset 0x1B8B -- 22 instr\n; Unclassified function (22 instr).\n; tags: small\n; callers: sub_19F0\n;----------------------------------------------------------------------"
     },
     {
       "module": "SPOOLER",
@@ -2710,13 +2710,13 @@
       ],
       "fanout": 3,
       "fanin": 7,
-      "description": "Funcion mediana (40 instr, 3 calls).",
+      "description": "Mid-size function (40 instr, 3 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_user",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1BC4 -- offset 0x1BC4 -- 40 instr\n; Funcion mediana (40 instr, 3 calls).\n; tags: calls_user, medium\n; callers: sub_0036, sub_0B77, sub_0EE1, sub_1281, sub_185B, sub_1DED (+1 mas)\n; calls (intra): sub_0D3C\n; calls (inter): USER.LOADSTRING, USER.MESSAGEBOX\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1BC4 -- offset 0x1BC4 -- 40 instr\n; Mid-size function (40 instr, 3 calls).\n; tags: calls_user, medium\n; callers: sub_0036, sub_0B77, sub_0EE1, sub_1281, sub_185B, sub_1DED (+1 more)\n; calls (intra): sub_0D3C\n; calls (inter): USER.LOADSTRING, USER.MESSAGEBOX\n;----------------------------------------------------------------------"
     },
     {
       "module": "SPOOLER",
@@ -2798,13 +2798,13 @@
       ],
       "fanout": 5,
       "fanin": 1,
-      "description": "Funcion compleja: 100 instrucciones, 5 llamadas, 0 branches.",
+      "description": "Complex function: 100 instructions, 5 calls, 0 branches.",
       "confidence": "low",
       "semantic_tags": [
         "calls_user",
         "complex"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1C26 -- offset 0x1C26 -- 100 instr\n; Funcion compleja: 100 instrucciones, 5 llamadas, 0 branches.\n; tags: calls_user, complex\n; callers: sub_0036\n; calls (intra): sub_1CF8\n; calls (inter): USER.CHANGEMENU, USER.CREATEWINDOW, USER.GETSYSTEMMENU, USER.LOADSTRING\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1C26 -- offset 0x1C26 -- 100 instr\n; Complex function: 100 instructions, 5 calls, 0 branches.\n; tags: calls_user, complex\n; callers: sub_0036\n; calls (intra): sub_1CF8\n; calls (inter): USER.CHANGEMENU, USER.CREATEWINDOW, USER.GETSYSTEMMENU, USER.LOADSTRING\n;----------------------------------------------------------------------"
     },
     {
       "module": "SPOOLER",
@@ -2892,7 +2892,7 @@
       ],
       "fanout": 5,
       "fanin": 1,
-      "description": "Funcion mediana (59 instr, 5 calls).",
+      "description": "Mid-size function (59 instr, 5 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_kernel",
@@ -2900,7 +2900,7 @@
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1CF8 -- offset 0x1CF8 -- 59 instr\n; Funcion mediana (59 instr, 5 calls).\n; tags: calls_kernel, calls_user, far, medium\n; callers: sub_1C26\n; calls (inter): KERNEL.LOCALALLOC, KERNEL.LOCALFREE, USER.LOADCURSOR, USER.LOADICON, USER.REGISTERCLASS\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1CF8 -- offset 0x1CF8 -- 59 instr\n; Mid-size function (59 instr, 5 calls).\n; tags: calls_kernel, calls_user, far, medium\n; callers: sub_1C26\n; calls (inter): KERNEL.LOCALALLOC, KERNEL.LOCALFREE, USER.LOADCURSOR, USER.LOADICON, USER.REGISTERCLASS\n;----------------------------------------------------------------------"
     },
     {
       "module": "SPOOLER",
@@ -2985,7 +2985,7 @@
       ],
       "fanout": 5,
       "fanin": 1,
-      "description": "Funcion mediana (40 instr, 5 calls).",
+      "description": "Mid-size function (40 instr, 5 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_gdi",
@@ -2993,7 +2993,7 @@
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1D87 -- offset 0x1D87 -- 40 instr\n; Funcion mediana (40 instr, 5 calls).\n; tags: calls_gdi, calls_user, far, medium\n; callers: sub_0036\n; calls (intra): sub_0E43\n; calls (inter): GDI.GETSPOOLJOB, GDI.GETTEXTMETRICS, USER.GETDC, USER.RELEASEDC\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1D87 -- offset 0x1D87 -- 40 instr\n; Mid-size function (40 instr, 5 calls).\n; tags: calls_gdi, calls_user, far, medium\n; callers: sub_0036\n; calls (intra): sub_0E43\n; calls (inter): GDI.GETSPOOLJOB, GDI.GETTEXTMETRICS, USER.GETDC, USER.RELEASEDC\n;----------------------------------------------------------------------"
     },
     {
       "module": "SPOOLER",
@@ -3068,13 +3068,13 @@
       ],
       "fanout": 3,
       "fanin": 1,
-      "description": "Funcion mediana (45 instr, 3 calls).",
+      "description": "Mid-size function (45 instr, 3 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_kernel",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1DED -- offset 0x1DED -- 45 instr\n; Funcion mediana (45 instr, 3 calls).\n; tags: calls_kernel, medium\n; callers: sub_0036\n; calls (intra): sub_1BC4\n; calls (inter): KERNEL.GETPROFILESTRING, KERNEL.LSTRCMP\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1DED -- offset 0x1DED -- 45 instr\n; Mid-size function (45 instr, 3 calls).\n; tags: calls_kernel, medium\n; callers: sub_0036\n; calls (intra): sub_1BC4\n; calls (inter): KERNEL.GETPROFILESTRING, KERNEL.LSTRCMP\n;----------------------------------------------------------------------"
     },
     {
       "module": "SPOOLER",
@@ -3151,13 +3151,13 @@
       ],
       "fanout": 3,
       "fanin": 2,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (68 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (68 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_gdi",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1E44 -- offset 0x1E44 -- 68 instr\n; Dispatcher: tabla de decisiones cmp+jcc (68 instr).\n; tags: calls_gdi, dispatcher\n; callers: sub_0036, sub_0330\n; calls (intra): sub_1BC4, sub_1EE3\n; calls (inter): GDI.GETSPOOLJOB\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1E44 -- offset 0x1E44 -- 68 instr\n; Dispatcher: cmp+jcc decision table (68 instr).\n; tags: calls_gdi, dispatcher\n; callers: sub_0036, sub_0330\n; calls (intra): sub_1BC4, sub_1EE3\n; calls (inter): GDI.GETSPOOLJOB\n;----------------------------------------------------------------------"
     },
     {
       "module": "SPOOLER",
@@ -3248,14 +3248,14 @@
       ],
       "fanout": 6,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (97 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (97 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_gdi",
         "calls_kernel",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1EE3 -- offset 0x1EE3 -- 97 instr\n; Dispatcher: tabla de decisiones cmp+jcc (97 instr).\n; tags: calls_gdi, calls_kernel, dispatcher\n; callers: sub_1E44\n; calls (intra): sub_0D1E, sub_1FEB\n; calls (inter): GDI.GETSPOOLJOB, KERNEL.LOCALALLOC, KERNEL.LSTRCPY, KERNEL.LSTRLEN\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1EE3 -- offset 0x1EE3 -- 97 instr\n; Dispatcher: cmp+jcc decision table (97 instr).\n; tags: calls_gdi, calls_kernel, dispatcher\n; callers: sub_1E44\n; calls (intra): sub_0D1E, sub_1FEB\n; calls (inter): GDI.GETSPOOLJOB, KERNEL.LOCALALLOC, KERNEL.LSTRCPY, KERNEL.LSTRLEN\n;----------------------------------------------------------------------"
     },
     {
       "module": "SPOOLER",
@@ -3317,13 +3317,13 @@
       ],
       "fanout": 1,
       "fanin": 2,
-      "description": "Wrapper que delega en KERNEL.LOCALFREE.",
+      "description": "Wrapper delegating to KERNEL.LOCALFREE.",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1FEB -- offset 0x1FEB -- 12 instr\n; Wrapper que delega en KERNEL.LOCALFREE.\n; tags: calls_kernel, wrapper\n; callers: sub_0E43, sub_1EE3\n; calls (inter): KERNEL.LOCALFREE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1FEB -- offset 0x1FEB -- 12 instr\n; Wrapper delegating to KERNEL.LOCALFREE.\n; tags: calls_kernel, wrapper\n; callers: sub_0E43, sub_1EE3\n; calls (inter): KERNEL.LOCALFREE\n;----------------------------------------------------------------------"
     },
     {
       "module": "SPOOLER",
@@ -3443,7 +3443,7 @@
       ],
       "fanout": 15,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (148 instr).",
+      "description": "Calls DOS services via INT 21h (148 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
@@ -3451,7 +3451,7 @@
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_200A -- offset 0x200A -- 148 instr\n; Llama a servicios DOS via INT 21h (148 instr).\n; tags: calls_kernel, calls_user, dos_caller, int_21\n; callers: sub_0330\n; calls (intra): sub_0036, sub_0E43, sub_117B, sub_1281, sub_196D, sub_19B9 (+2 mas)\n; calls (inter): KERNEL.FATALEXIT, KERNEL.GLOBALUNLOCK, KERNEL.INITTASK, KERNEL.WAITEVENT, USER.INITAPP, USER.LOADSTRING (+1 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_200A -- offset 0x200A -- 148 instr\n; Calls DOS services via INT 21h (148 instr).\n; tags: calls_kernel, calls_user, dos_caller, int_21\n; callers: sub_0330\n; calls (intra): sub_0036, sub_0E43, sub_117B, sub_1281, sub_196D, sub_19B9 (+2 more)\n; calls (inter): KERNEL.FATALEXIT, KERNEL.GLOBALUNLOCK, KERNEL.INITTASK, KERNEL.WAITEVENT, USER.INITAPP, USER.LOADSTRING (+1 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "SPOOLER",
@@ -3556,13 +3556,13 @@
       ],
       "fanout": 9,
       "fanin": 1,
-      "description": "Funcion compleja: 130 instrucciones, 9 llamadas, 1 branches.",
+      "description": "Complex function: 130 instructions, 9 calls, 1 branches.",
       "confidence": "low",
       "semantic_tags": [
         "calls_kernel",
         "complex"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2175 -- offset 0x2175 -- 130 instr\n; Funcion compleja: 130 instrucciones, 9 llamadas, 1 branches.\n; tags: calls_kernel, complex\n; callers: sub_232B\n; calls (intra): sub_2320\n; calls (inter): KERNEL.GLOBALALLOC, KERNEL.GLOBALCOMPACT, KERNEL.GLOBALFREE, KERNEL.GLOBALSIZE, KERNEL.LOCALALLOC, KERNEL.LOCALFREE (+2 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2175 -- offset 0x2175 -- 130 instr\n; Complex function: 130 instructions, 9 calls, 1 branches.\n; tags: calls_kernel, complex\n; callers: sub_232B\n; calls (intra): sub_2320\n; calls (inter): KERNEL.GLOBALALLOC, KERNEL.GLOBALCOMPACT, KERNEL.GLOBALFREE, KERNEL.GLOBALSIZE, KERNEL.LOCALALLOC, KERNEL.LOCALFREE (+2 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "SPOOLER",
@@ -3633,14 +3633,14 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (59 instr).",
+      "description": "Calls DOS services via INT 21h (59 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
         "int_21",
         "loop"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_227E -- offset 0x227E -- 59 instr\n; Llama a servicios DOS via INT 21h (59 instr).\n; tags: complex_iterator, int_21, loop\n; callers: sub_200A\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_227E -- offset 0x227E -- 59 instr\n; Calls DOS services via INT 21h (59 instr).\n; tags: complex_iterator, int_21, loop\n; callers: sub_200A\n;----------------------------------------------------------------------"
     },
     {
       "module": "SPOOLER",
@@ -3701,12 +3701,12 @@
       ],
       "fanout": 2,
       "fanin": 3,
-      "description": "Funcion sin clasificar definitiva (8 instr).",
+      "description": "Unclassified function (8 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2310 -- offset 0x2310 -- 8 instr\n; Funcion sin clasificar definitiva (8 instr).\n; tags: small\n; callers: sub_0036, sub_0330, sub_200A\n; calls (intra): sub_232B, sub_2361\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2310 -- offset 0x2310 -- 8 instr\n; Unclassified function (8 instr).\n; tags: small\n; callers: sub_0036, sub_0330, sub_200A\n; calls (intra): sub_232B, sub_2361\n;----------------------------------------------------------------------"
     },
     {
       "module": "SPOOLER",
@@ -3760,13 +3760,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Iterador con bucle (6 instr).",
+      "description": "Iterator with loop (6 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "loop"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2320 -- offset 0x2320 -- 6 instr\n; Iterador con bucle (6 instr).\n; tags: iterator, loop\n; callers: sub_2175\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2320 -- offset 0x2320 -- 6 instr\n; Iterator with loop (6 instr).\n; tags: iterator, loop\n; callers: sub_2175\n;----------------------------------------------------------------------"
     },
     {
       "module": "SPOOLER",
@@ -3835,13 +3835,13 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (21 instr).",
+      "description": "Calls DOS services via INT 21h (21 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_232B -- offset 0x232B -- 21 instr\n; Llama a servicios DOS via INT 21h (21 instr).\n; tags: dos_caller, int_21\n; callers: sub_2310\n; calls (intra): sub_2175, sub_2373\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_232B -- offset 0x232B -- 21 instr\n; Calls DOS services via INT 21h (21 instr).\n; tags: dos_caller, int_21\n; callers: sub_2310\n; calls (intra): sub_2175, sub_2373\n;----------------------------------------------------------------------"
     },
     {
       "module": "SPOOLER",
@@ -3900,12 +3900,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (10 instr).",
+      "description": "Unclassified function (10 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2361 -- offset 0x2361 -- 10 instr\n; Funcion sin clasificar definitiva (10 instr).\n; tags: wrapper\n; callers: sub_2310\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2361 -- offset 0x2361 -- 10 instr\n; Unclassified function (10 instr).\n; tags: wrapper\n; callers: sub_2310\n;----------------------------------------------------------------------"
     },
     {
       "module": "SPOOLER",
@@ -3964,12 +3964,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (10 instr).",
+      "description": "Unclassified function (10 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2373 -- offset 0x2373 -- 10 instr\n; Funcion sin clasificar definitiva (10 instr).\n; tags: wrapper\n; callers: sub_232B\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2373 -- offset 0x2373 -- 10 instr\n; Unclassified function (10 instr).\n; tags: wrapper\n; callers: sub_232B\n;----------------------------------------------------------------------"
     }
   ]
 }

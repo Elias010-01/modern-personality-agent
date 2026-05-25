@@ -99,43 +99,43 @@ def describe_function(fn: dict[str, Any]) -> tuple[str, str]:
     n_instr = fn.get("num_instructions", 0)
 
     if fn.get("epilogue") == "iret":
-        return f"Interrupt Service Routine ({n_instr} instrucciones, posible manejador de INT).", "medium"
+        return f"Interrupt service routine ({n_instr} instructions, likely INT handler).", "medium"
 
     if any(i in {"0x21", "21h", "33"} for i in ints):
-        return f"Llama a servicios DOS via INT 21h ({n_instr} instr).", "medium"
+        return f"Calls DOS services via INT 21h ({n_instr} instr).", "medium"
 
     if any(i in {"0x10", "10h", "16"} for i in ints):
-        return f"Llama a servicios BIOS via INT 10h (video, {n_instr} instr).", "medium"
+        return f"Calls BIOS services via INT 10h (video, {n_instr} instr).", "medium"
 
     if cls == "trivial_stub":
-        return f"Stub trivial ({n_instr} instrucciones, sin logica significativa).", "low"
+        return f"Trivial stub ({n_instr} instructions, no significant logic).", "low"
 
     if cls == "wrapper" and len(callees_intra) + len(callees_inter) == 1:
         if callees_inter:
             target = callees_inter[0]
-            return f"Wrapper que delega en {target['module']}.{target['func']}.", "medium"
+            return f"Wrapper delegating to {target['module']}.{target['func']}.", "medium"
         elif callees_intra:
-            return f"Wrapper que delega en {callees_intra[0]}.", "medium"
+            return f"Wrapper delegating to {callees_intra[0]}.", "medium"
 
     if cls == "leaf":
-        return f"Funcion hoja (no llama a otras, {n_instr} instr): probable helper aritmetico/conversion.", "low"
+        return f"Leaf function (no callees, {n_instr} instr): likely arithmetic/conversion helper.", "low"
 
     if cls == "dispatcher":
-        return f"Dispatcher: tabla de decisiones cmp+jcc ({n_instr} instr).", "medium"
+        return f"Dispatcher: cmp+jcc decision table ({n_instr} instr).", "medium"
 
     if cls in ("iterator", "complex_iterator"):
         if fn.get("has_string_op"):
-            return f"Iterador con instrucciones de string (movsb/scasb/...) ({n_instr} instr).", "medium"
-        return f"Iterador con bucle ({n_instr} instr).", "medium"
+            return f"Iterator with string ops (movsb/scasb/...) ({n_instr} instr).", "medium"
+        return f"Iterator with loop ({n_instr} instr).", "medium"
 
     if cls == "complex":
         n_calls = len(callees_intra) + len(callees_inter)
-        return f"Funcion compleja: {n_instr} instrucciones, {n_calls} llamadas, {fn.get('num_jumps_cond', 0)} branches.", "low"
+        return f"Complex function: {n_instr} instructions, {n_calls} calls, {fn.get('num_jumps_cond', 0)} branches.", "low"
 
     if cls == "medium":
-        return f"Funcion mediana ({n_instr} instr, {len(callees_intra)+len(callees_inter)} calls).", "low"
+        return f"Mid-size function ({n_instr} instr, {len(callees_intra)+len(callees_inter)} calls).", "low"
 
-    return f"Funcion sin clasificar definitiva ({n_instr} instr).", "unknown"
+    return f"Unclassified function ({n_instr} instr).", "unknown"
 
 
 def build_comment_block(fn: dict[str, Any], description: str, tags: list[str]) -> str:
@@ -160,15 +160,15 @@ def build_comment_block(fn: dict[str, Any], description: str, tags: list[str]) -
     callees_inter = fn.get("callees_inter", [])
     if callers:
         showers = callers[:6]
-        more = f" (+{len(callers)-6} mas)" if len(callers) > 6 else ""
+        more = f" (+{len(callers)-6} more)" if len(callers) > 6 else ""
         lines.append(f"; callers: {', '.join(showers)}{more}")
     if callees_intra:
         showers = callees_intra[:6]
-        more = f" (+{len(callees_intra)-6} mas)" if len(callees_intra) > 6 else ""
+        more = f" (+{len(callees_intra)-6} more)" if len(callees_intra) > 6 else ""
         lines.append(f"; calls (intra): {', '.join(showers)}{more}")
     if callees_inter:
         ext = [f"{c['module']}.{c['func']}" for c in callees_inter[:6]]
-        more = f" (+{len(callees_inter)-6} mas)" if len(callees_inter) > 6 else ""
+        more = f" (+{len(callees_inter)-6} more)" if len(callees_inter) > 6 else ""
         lines.append(f"; calls (inter): {', '.join(ext)}{more}")
     lines.append(";" + "-" * 70)
     return "\n".join(lines)
@@ -233,16 +233,16 @@ def render_module_md(module: str) -> None:
 
     DOCS_DIR.mkdir(parents=True, exist_ok=True)
     lines = []
-    lines.append(f"# Modulo `{module}`")
+    lines.append(f"# Module `{module}`")
     lines.append("")
-    lines.append(f"- Funciones: **{data.get('num_functions', 0)}**")
+    lines.append(f"- Functions: **{data.get('num_functions', 0)}**")
     conf = data.get("confidence_count", {})
     lines.append(f"- Confidence: high={conf.get('high',0)}, medium={conf.get('medium',0)}, low={conf.get('low',0)}, unknown={conf.get('unknown',0)}")
     lines.append("")
-    lines.append("## Funciones")
+    lines.append("## Functions")
     lines.append("")
-    lines.append("| Offset | Nombre | Tipo | Instr | Descripcion | Conf |")
-    lines.append("|--------|--------|------|-------|-------------|------|")
+    lines.append("| Offset | Name | Kind | Instr | Description | Conf |")
+    lines.append("|--------|------|------|-------|-------------|------|")
     for fn in funcs_sorted:
         off = fn.get("offset")
         off_s = f"0x{off:04X}" if off is not None else "-"

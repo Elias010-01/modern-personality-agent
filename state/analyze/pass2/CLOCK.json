@@ -1,0 +1,2292 @@
+{
+  "module": "CLOCK",
+  "num_functions": 24,
+  "intra_edges": [
+    [
+      "sub_0205",
+      "sub_0179"
+    ],
+    [
+      "sub_0205",
+      "sub_0DB8"
+    ],
+    [
+      "sub_0205",
+      "sub_0FF0"
+    ],
+    [
+      "sub_0205",
+      "sub_1091"
+    ],
+    [
+      "sub_0317",
+      "sub_0AE3"
+    ],
+    [
+      "sub_0390",
+      "sub_03E2"
+    ],
+    [
+      "sub_0390",
+      "sub_0DB8"
+    ],
+    [
+      "sub_03E2",
+      "sub_0615"
+    ],
+    [
+      "sub_03E2",
+      "sub_079E"
+    ],
+    [
+      "sub_03E2",
+      "sub_084D"
+    ],
+    [
+      "sub_03E2",
+      "sub_0DB8"
+    ],
+    [
+      "sub_0615",
+      "sub_0FF0"
+    ],
+    [
+      "sub_0615",
+      "sub_1091"
+    ],
+    [
+      "sub_079E",
+      "sub_0FF0"
+    ],
+    [
+      "sub_079E",
+      "sub_1091"
+    ],
+    [
+      "sub_084D",
+      "sub_0FF0"
+    ],
+    [
+      "sub_084D",
+      "sub_1091"
+    ],
+    [
+      "sub_0AE3",
+      "sub_0FF0"
+    ],
+    [
+      "sub_0AE3",
+      "sub_1091"
+    ],
+    [
+      "sub_0B87",
+      "sub_0CFB"
+    ],
+    [
+      "sub_0BBA",
+      "sub_01DA"
+    ],
+    [
+      "sub_0BBA",
+      "sub_0FE0"
+    ],
+    [
+      "sub_0DB8",
+      "sub_0B87"
+    ],
+    [
+      "sub_0DB8",
+      "sub_0F4E"
+    ],
+    [
+      "sub_0DB8",
+      "sub_0FE0"
+    ],
+    [
+      "sub_0E45",
+      "sub_10F5"
+    ],
+    [
+      "sub_0FE0",
+      "sub_1100"
+    ],
+    [
+      "sub_0FE0",
+      "sub_1136"
+    ],
+    [
+      "sub_0FF0",
+      "sub_1148"
+    ],
+    [
+      "sub_1100",
+      "sub_0E45"
+    ],
+    [
+      "sub_1100",
+      "sub_116E"
+    ]
+  ],
+  "inter_edges": [
+    [
+      "sub_0179",
+      "GDI",
+      "CREATEPEN"
+    ],
+    [
+      "sub_0179",
+      "GDI",
+      "CREATESOLIDBRUSH"
+    ],
+    [
+      "sub_0179",
+      "USER",
+      "GETSYSCOLOR"
+    ],
+    [
+      "sub_01DA",
+      "GDI",
+      "DELETEOBJECT"
+    ],
+    [
+      "sub_0205",
+      "GDI",
+      "GETDEVICECAPS"
+    ],
+    [
+      "sub_0205",
+      "KERNEL",
+      "GLOBALLOCK"
+    ],
+    [
+      "sub_0205",
+      "KERNEL",
+      "GLOBALUNLOCK"
+    ],
+    [
+      "sub_0205",
+      "USER",
+      "GETDC"
+    ],
+    [
+      "sub_0205",
+      "USER",
+      "RELEASEDC"
+    ],
+    [
+      "sub_0317",
+      "USER",
+      "KILLTIMER"
+    ],
+    [
+      "sub_0317",
+      "USER",
+      "SETRECT"
+    ],
+    [
+      "sub_0317",
+      "USER",
+      "SETTIMER"
+    ],
+    [
+      "sub_0390",
+      "USER",
+      "GETDC"
+    ],
+    [
+      "sub_0390",
+      "USER",
+      "RELEASEDC"
+    ],
+    [
+      "sub_03E2",
+      "GDI",
+      "SETBKMODE"
+    ],
+    [
+      "sub_03E2",
+      "KERNEL",
+      "GLOBALLOCK"
+    ],
+    [
+      "sub_03E2",
+      "KERNEL",
+      "GLOBALUNLOCK"
+    ],
+    [
+      "sub_03E2",
+      "USER",
+      "FILLRECT"
+    ],
+    [
+      "sub_0615",
+      "USER",
+      "FILLRECT"
+    ],
+    [
+      "sub_0615",
+      "USER",
+      "INFLATERECT"
+    ],
+    [
+      "sub_0615",
+      "USER",
+      "OFFSETRECT"
+    ],
+    [
+      "sub_079E",
+      "GDI",
+      "LINETO"
+    ],
+    [
+      "sub_079E",
+      "GDI",
+      "MOVETO"
+    ],
+    [
+      "sub_079E",
+      "GDI",
+      "SELECTOBJECT"
+    ],
+    [
+      "sub_079E",
+      "GDI",
+      "SETROP2"
+    ],
+    [
+      "sub_084D",
+      "GDI",
+      "LINETO"
+    ],
+    [
+      "sub_084D",
+      "GDI",
+      "MOVETO"
+    ],
+    [
+      "sub_084D",
+      "GDI",
+      "SELECTOBJECT"
+    ],
+    [
+      "sub_084D",
+      "GDI",
+      "SETROP2"
+    ],
+    [
+      "sub_0B87",
+      "USER",
+      "LOADSTRING"
+    ],
+    [
+      "sub_0BBA",
+      "KERNEL",
+      "GETINSTANCEDATA"
+    ],
+    [
+      "sub_0BBA",
+      "KERNEL",
+      "LOCALALLOC"
+    ],
+    [
+      "sub_0BBA",
+      "KERNEL",
+      "MAKEPROCINSTANCE"
+    ],
+    [
+      "sub_0BBA",
+      "USER",
+      "CHANGEMENU"
+    ],
+    [
+      "sub_0BBA",
+      "USER",
+      "CREATEWINDOW"
+    ],
+    [
+      "sub_0BBA",
+      "USER",
+      "DISPATCHMESSAGE"
+    ],
+    [
+      "sub_0BBA",
+      "USER",
+      "GETMESSAGE"
+    ],
+    [
+      "sub_0BBA",
+      "USER",
+      "GETSYSTEMMENU"
+    ],
+    [
+      "sub_0BBA",
+      "USER",
+      "LOADSTRING"
+    ],
+    [
+      "sub_0BBA",
+      "USER",
+      "MESSAGEBOX"
+    ],
+    [
+      "sub_0BBA",
+      "USER",
+      "SETTIMER"
+    ],
+    [
+      "sub_0BBA",
+      "USER",
+      "SHOWWINDOW"
+    ],
+    [
+      "sub_0BBA",
+      "USER",
+      "TRANSLATEMESSAGE"
+    ],
+    [
+      "sub_0CFB",
+      "KERNEL",
+      "FINDRESOURCE"
+    ],
+    [
+      "sub_0CFB",
+      "KERNEL",
+      "LOADRESOURCE"
+    ],
+    [
+      "sub_0CFB",
+      "KERNEL",
+      "LOCALALLOC"
+    ],
+    [
+      "sub_0CFB",
+      "KERNEL",
+      "LOCALFREE"
+    ],
+    [
+      "sub_0CFB",
+      "USER",
+      "LOADCURSOR"
+    ],
+    [
+      "sub_0CFB",
+      "USER",
+      "LOADSTRING"
+    ],
+    [
+      "sub_0CFB",
+      "USER",
+      "REGISTERCLASS"
+    ],
+    [
+      "sub_0DB8",
+      "KERNEL",
+      "FATALEXIT"
+    ],
+    [
+      "sub_0DB8",
+      "KERNEL",
+      "INITTASK"
+    ],
+    [
+      "sub_0DB8",
+      "KERNEL",
+      "WAITEVENT"
+    ],
+    [
+      "sub_0DB8",
+      "USER",
+      "INITAPP"
+    ],
+    [
+      "sub_0E45",
+      "KERNEL",
+      "GLOBALALLOC"
+    ],
+    [
+      "sub_0E45",
+      "KERNEL",
+      "GLOBALCOMPACT"
+    ],
+    [
+      "sub_0E45",
+      "KERNEL",
+      "GLOBALFREE"
+    ],
+    [
+      "sub_0E45",
+      "KERNEL",
+      "GLOBALSIZE"
+    ],
+    [
+      "sub_0E45",
+      "KERNEL",
+      "LOCALALLOC"
+    ],
+    [
+      "sub_0E45",
+      "KERNEL",
+      "LOCALFREE"
+    ],
+    [
+      "sub_0E45",
+      "KERNEL",
+      "LOCALREALLOC"
+    ],
+    [
+      "sub_0E45",
+      "KERNEL",
+      "LOCALSIZE"
+    ]
+  ],
+  "external_modules": [
+    "GDI",
+    "KERNEL",
+    "USER"
+  ],
+  "functions": [
+    {
+      "module": "CLOCK",
+      "segment_file": "seg1.asm",
+      "name": "sub_0179",
+      "kind": "NEAR",
+      "offset": 377,
+      "size_bytes": null,
+      "start_line": 180,
+      "end_line": 221,
+      "num_instructions": 41,
+      "prologue": "standard_bp",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [
+        "far GDI.CREATEPEN",
+        "far GDI.CREATESOLIDBRUSH",
+        "far USER.GETSYSCOLOR"
+      ],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 4,
+      "mnemonic_histogram": {
+        "push": 17,
+        "mov": 12,
+        "call": 8,
+        "sub": 2,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "mov ax, 8",
+        "push ax",
+        "call far USER.GETSYSCOLOR",
+        "push dx"
+      ],
+      "last_instructions": [
+        "mov word ptr [0xba], ax",
+        "mov sp, bp",
+        "pop bp",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [
+        {
+          "module": "GDI",
+          "func": "CREATEPEN"
+        },
+        {
+          "module": "GDI",
+          "func": "CREATESOLIDBRUSH"
+        },
+        {
+          "module": "USER",
+          "func": "GETSYSCOLOR"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0205"
+      ],
+      "fanout": 3,
+      "fanin": 1
+    },
+    {
+      "module": "CLOCK",
+      "segment_file": "seg1.asm",
+      "name": "sub_01DA",
+      "kind": "NEAR",
+      "offset": 474,
+      "size_bytes": null,
+      "start_line": 222,
+      "end_line": 235,
+      "num_instructions": 13,
+      "prologue": "standard_bp",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [
+        "far GDI.DELETEOBJECT"
+      ],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 4,
+      "mnemonic_histogram": {
+        "push": 5,
+        "call": 4,
+        "mov": 2,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "wrapper",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "push word ptr [0xc0]",
+        "call far GDI.DELETEOBJECT",
+        "push word ptr [0xc6]",
+        "call far GDI.DELETEOBJECT"
+      ],
+      "last_instructions": [
+        "call far GDI.DELETEOBJECT",
+        "mov sp, bp",
+        "pop bp",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [
+        {
+          "module": "GDI",
+          "func": "DELETEOBJECT"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0BBA"
+      ],
+      "fanout": 1,
+      "fanin": 1
+    },
+    {
+      "module": "CLOCK",
+      "segment_file": "seg1.asm",
+      "name": "sub_0205",
+      "kind": "NEAR",
+      "offset": 517,
+      "size_bytes": null,
+      "start_line": 236,
+      "end_line": 344,
+      "num_instructions": 106,
+      "prologue": "standard_bp",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_0179",
+        "L_0DB8",
+        "L_0FF0",
+        "L_1091"
+      ],
+      "calls_far": [
+        "far GDI.GETDEVICECAPS",
+        "far KERNEL.GLOBALLOCK",
+        "far KERNEL.GLOBALUNLOCK",
+        "far USER.GETDC",
+        "far USER.RELEASEDC"
+      ],
+      "num_jumps_cond": 2,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 40,
+      "mnemonic_histogram": {
+        "push": 39,
+        "mov": 31,
+        "call": 16,
+        "cdq": 7,
+        "cmp": 2,
+        "shl": 2,
+        "les": 2,
+        "sub": 1,
+        "je": 1,
+        "add": 1,
+        "inc": 1,
+        "jl": 1,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "complex",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 0xc",
+        "push word ptr [bp + 4]",
+        "call far USER.GETDC",
+        "mov word ptr [bp - 0xc], ax"
+      ],
+      "last_instructions": [
+        "call L_0DB8",
+        "mov sp, bp",
+        "pop bp",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0179",
+        "sub_0DB8",
+        "sub_0FF0",
+        "sub_1091"
+      ],
+      "callees_inter": [
+        {
+          "module": "GDI",
+          "func": "GETDEVICECAPS"
+        },
+        {
+          "module": "KERNEL",
+          "func": "GLOBALLOCK"
+        },
+        {
+          "module": "KERNEL",
+          "func": "GLOBALUNLOCK"
+        },
+        {
+          "module": "USER",
+          "func": "GETDC"
+        },
+        {
+          "module": "USER",
+          "func": "RELEASEDC"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 9,
+      "fanin": 0
+    },
+    {
+      "module": "CLOCK",
+      "segment_file": "seg1.asm",
+      "name": "sub_0317",
+      "kind": "NEAR",
+      "offset": 791,
+      "size_bytes": null,
+      "start_line": 345,
+      "end_line": 391,
+      "num_instructions": 44,
+      "prologue": "standard_bp",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_0AE3"
+      ],
+      "calls_far": [
+        "far USER.KILLTIMER",
+        "far USER.SETRECT",
+        "far USER.SETTIMER"
+      ],
+      "num_jumps_cond": 2,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 14,
+      "mnemonic_histogram": {
+        "push": 21,
+        "mov": 7,
+        "call": 6,
+        "sub": 3,
+        "cmp": 2,
+        "jne": 1,
+        "jmp": 1,
+        "je": 1,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "mov ax, 0xb2",
+        "push ds",
+        "push ax",
+        "sub ax, ax"
+      ],
+      "last_instructions": [
+        "mov word ptr [0x12], 0",
+        "mov sp, bp",
+        "pop bp",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0AE3"
+      ],
+      "callees_inter": [
+        {
+          "module": "USER",
+          "func": "KILLTIMER"
+        },
+        {
+          "module": "USER",
+          "func": "SETRECT"
+        },
+        {
+          "module": "USER",
+          "func": "SETTIMER"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 4,
+      "fanin": 0
+    },
+    {
+      "module": "CLOCK",
+      "segment_file": "seg1.asm",
+      "name": "sub_0390",
+      "kind": "NEAR",
+      "offset": 912,
+      "size_bytes": null,
+      "start_line": 392,
+      "end_line": 425,
+      "num_instructions": 31,
+      "prologue": "standard_bp",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_03E2",
+        "L_0DB8"
+      ],
+      "calls_far": [
+        "far USER.GETDC",
+        "far USER.RELEASEDC"
+      ],
+      "num_jumps_cond": 3,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 13,
+      "mnemonic_histogram": {
+        "push": 8,
+        "mov": 7,
+        "call": 4,
+        "cmp": 3,
+        "add": 2,
+        "jne": 2,
+        "sub": 1,
+        "lea": 1,
+        "je": 1,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 8",
+        "lea ax, [bp - 6]",
+        "push ax",
+        "call L_0DB8"
+      ],
+      "last_instructions": [
+        "call far USER.RELEASEDC",
+        "mov sp, bp",
+        "pop bp",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_03E2",
+        "sub_0DB8"
+      ],
+      "callees_inter": [
+        {
+          "module": "USER",
+          "func": "GETDC"
+        },
+        {
+          "module": "USER",
+          "func": "RELEASEDC"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 4,
+      "fanin": 0
+    },
+    {
+      "module": "CLOCK",
+      "segment_file": "seg1.asm",
+      "name": "sub_03E2",
+      "kind": "NEAR",
+      "offset": 994,
+      "size_bytes": null,
+      "start_line": 426,
+      "end_line": 647,
+      "num_instructions": 211,
+      "prologue": "standard_bp",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_0615",
+        "L_079E",
+        "L_084D",
+        "L_0DB8"
+      ],
+      "calls_far": [
+        "far GDI.SETBKMODE",
+        "far KERNEL.GLOBALLOCK",
+        "far KERNEL.GLOBALUNLOCK",
+        "far USER.FILLRECT"
+      ],
+      "num_jumps_cond": 10,
+      "num_jumps_uncond": 6,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 71,
+      "mnemonic_histogram": {
+        "push": 69,
+        "mov": 57,
+        "add": 19,
+        "call": 18,
+        "cmp": 10,
+        "jne": 6,
+        "jmp": 6,
+        "imul": 5,
+        "cdq": 5,
+        "idiv": 5,
+        "sub": 4,
+        "je": 4,
+        "lea": 1,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 0xe",
+        "push word ptr [0xaa]",
+        "call far KERNEL.GLOBALLOCK",
+        "mov word ptr [0xd0], ax"
+      ],
+      "last_instructions": [
+        "call far KERNEL.GLOBALUNLOCK",
+        "mov sp, bp",
+        "pop bp",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0615",
+        "sub_079E",
+        "sub_084D",
+        "sub_0DB8"
+      ],
+      "callees_inter": [
+        {
+          "module": "GDI",
+          "func": "SETBKMODE"
+        },
+        {
+          "module": "KERNEL",
+          "func": "GLOBALLOCK"
+        },
+        {
+          "module": "KERNEL",
+          "func": "GLOBALUNLOCK"
+        },
+        {
+          "module": "USER",
+          "func": "FILLRECT"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0390"
+      ],
+      "fanout": 8,
+      "fanin": 1
+    },
+    {
+      "module": "CLOCK",
+      "segment_file": "seg1.asm",
+      "name": "sub_0615",
+      "kind": "NEAR",
+      "offset": 1557,
+      "size_bytes": null,
+      "start_line": 648,
+      "end_line": 822,
+      "num_instructions": 167,
+      "prologue": "standard_bp",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_0FF0",
+        "L_1091"
+      ],
+      "calls_far": [
+        "far USER.FILLRECT",
+        "far USER.INFLATERECT",
+        "far USER.OFFSETRECT"
+      ],
+      "num_jumps_cond": 6,
+      "num_jumps_uncond": 2,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 63,
+      "mnemonic_histogram": {
+        "push": 49,
+        "mov": 46,
+        "call": 12,
+        "cdq": 11,
+        "sar": 8,
+        "add": 7,
+        "cmp": 5,
+        "sub": 4,
+        "neg": 4,
+        "jge": 3,
+        "inc": 3,
+        "shl": 2,
+        "les": 2,
+        "jmp": 2,
+        "lea": 2
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 0x16",
+        "mov ax, word ptr [0xc4]",
+        "cdq",
+        "push dx"
+      ],
+      "last_instructions": [
+        "call far USER.INFLATERECT",
+        "mov sp, bp",
+        "pop bp",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0FF0",
+        "sub_1091"
+      ],
+      "callees_inter": [
+        {
+          "module": "USER",
+          "func": "FILLRECT"
+        },
+        {
+          "module": "USER",
+          "func": "INFLATERECT"
+        },
+        {
+          "module": "USER",
+          "func": "OFFSETRECT"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_03E2"
+      ],
+      "fanout": 5,
+      "fanin": 1
+    },
+    {
+      "module": "CLOCK",
+      "segment_file": "seg1.asm",
+      "name": "sub_079E",
+      "kind": "NEAR",
+      "offset": 1950,
+      "size_bytes": null,
+      "start_line": 823,
+      "end_line": 903,
+      "num_instructions": 80,
+      "prologue": "standard_bp",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_0FF0",
+        "L_1091"
+      ],
+      "calls_far": [
+        "far GDI.LINETO",
+        "far GDI.MOVETO",
+        "far GDI.SELECTOBJECT",
+        "far GDI.SETROP2"
+      ],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 24,
+      "mnemonic_histogram": {
+        "push": 35,
+        "mov": 16,
+        "call": 10,
+        "cdq": 9,
+        "add": 3,
+        "shl": 2,
+        "les": 2,
+        "sub": 1,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 6",
+        "push word ptr [bp + 4]",
+        "push word ptr [0xbc]",
+        "push word ptr [0xbe]"
+      ],
+      "last_instructions": [
+        "call far GDI.LINETO",
+        "mov sp, bp",
+        "pop bp",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0FF0",
+        "sub_1091"
+      ],
+      "callees_inter": [
+        {
+          "module": "GDI",
+          "func": "LINETO"
+        },
+        {
+          "module": "GDI",
+          "func": "MOVETO"
+        },
+        {
+          "module": "GDI",
+          "func": "SELECTOBJECT"
+        },
+        {
+          "module": "GDI",
+          "func": "SETROP2"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_03E2"
+      ],
+      "fanout": 6,
+      "fanin": 1
+    },
+    {
+      "module": "CLOCK",
+      "segment_file": "seg1.asm",
+      "name": "sub_084D",
+      "kind": "NEAR",
+      "offset": 2125,
+      "size_bytes": null,
+      "start_line": 904,
+      "end_line": 1208,
+      "num_instructions": 298,
+      "prologue": "standard_bp",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_0FF0",
+        "L_1091"
+      ],
+      "calls_far": [
+        "far GDI.LINETO",
+        "far GDI.MOVETO",
+        "far GDI.SELECTOBJECT",
+        "far GDI.SETROP2"
+      ],
+      "num_jumps_cond": 3,
+      "num_jumps_uncond": 3,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 100,
+      "mnemonic_histogram": {
+        "push": 109,
+        "mov": 82,
+        "call": 30,
+        "cdq": 30,
+        "add": 17,
+        "shl": 6,
+        "les": 6,
+        "sub": 5,
+        "cmp": 3,
+        "je": 3,
+        "jmp": 3,
+        "idiv": 2,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "complex",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 0x1e",
+        "push word ptr [bp + 4]",
+        "mov ax, 0xd",
+        "push ax"
+      ],
+      "last_instructions": [
+        "call far GDI.LINETO",
+        "mov sp, bp",
+        "pop bp",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0FF0",
+        "sub_1091"
+      ],
+      "callees_inter": [
+        {
+          "module": "GDI",
+          "func": "LINETO"
+        },
+        {
+          "module": "GDI",
+          "func": "MOVETO"
+        },
+        {
+          "module": "GDI",
+          "func": "SELECTOBJECT"
+        },
+        {
+          "module": "GDI",
+          "func": "SETROP2"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_03E2"
+      ],
+      "fanout": 6,
+      "fanin": 1
+    },
+    {
+      "module": "CLOCK",
+      "segment_file": "seg1.asm",
+      "name": "sub_0AE3",
+      "kind": "NEAR",
+      "offset": 2787,
+      "size_bytes": null,
+      "start_line": 1209,
+      "end_line": 1274,
+      "num_instructions": 62,
+      "prologue": "standard_bp",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_0FF0",
+        "L_1091"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 3,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 35,
+      "mnemonic_histogram": {
+        "mov": 19,
+        "push": 17,
+        "sub": 5,
+        "call": 4,
+        "add": 4,
+        "cdq": 3,
+        "cmp": 2,
+        "sar": 2,
+        "jl": 1,
+        "jg": 1,
+        "jbe": 1,
+        "jmp": 1,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 0xc",
+        "mov ax, word ptr [0xb6]",
+        "sub ax, word ptr [0xb2]",
+        "mov word ptr [bp - 2], ax"
+      ],
+      "last_instructions": [
+        "mov word ptr [0xb8], ax",
+        "mov sp, bp",
+        "pop bp",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0FF0",
+        "sub_1091"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0317"
+      ],
+      "fanout": 2,
+      "fanin": 1
+    },
+    {
+      "module": "CLOCK",
+      "segment_file": "seg1.asm",
+      "name": "sub_0B87",
+      "kind": "NEAR",
+      "offset": 2951,
+      "size_bytes": null,
+      "start_line": 1275,
+      "end_line": 1297,
+      "num_instructions": 21,
+      "prologue": "standard_bp",
+      "epilogue": "jmp_tail",
+      "calls_near": [
+        "L_0CFB"
+      ],
+      "calls_far": [
+        "far USER.LOADSTRING"
+      ],
+      "num_jumps_cond": 2,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 3,
+      "mnemonic_histogram": {
+        "push": 7,
+        "mov": 4,
+        "sub": 2,
+        "call": 2,
+        "jne": 2,
+        "cmp": 1,
+        "add": 1,
+        "or": 1,
+        "jmp": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 0x18",
+        "push word ptr [bp + 0xc]",
+        "mov ax, 2",
+        "push ax"
+      ],
+      "last_instructions": [
+        "or ax, ax",
+        "jne L_0BD0",
+        "sub ax, ax",
+        "jmp L_0CF5"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0CFB"
+      ],
+      "callees_inter": [
+        {
+          "module": "USER",
+          "func": "LOADSTRING"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0DB8"
+      ],
+      "fanout": 2,
+      "fanin": 1
+    },
+    {
+      "module": "CLOCK",
+      "segment_file": "seg1.asm",
+      "name": "sub_0BBA",
+      "kind": "NEAR",
+      "offset": 3002,
+      "size_bytes": null,
+      "start_line": 1298,
+      "end_line": 1443,
+      "num_instructions": 140,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [
+        "L_01DA",
+        "L_0FE0"
+      ],
+      "calls_far": [
+        "far KERNEL.GETINSTANCEDATA",
+        "far KERNEL.LOCALALLOC",
+        "far KERNEL.MAKEPROCINSTANCE",
+        "far USER.CHANGEMENU",
+        "far USER.CREATEWINDOW",
+        "far USER.DISPATCHMESSAGE",
+        "far USER.GETMESSAGE",
+        "far USER.GETSYSTEMMENU",
+        "far USER.LOADSTRING",
+        "far USER.MESSAGEBOX",
+        "far USER.SETTIMER",
+        "far USER.SHOWWINDOW",
+        "far USER.TRANSLATEMESSAGE"
+      ],
+      "num_jumps_cond": 2,
+      "num_jumps_uncond": 2,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 24,
+      "mnemonic_histogram": {
+        "push": 70,
+        "mov": 33,
+        "call": 17,
+        "sub": 8,
+        "lea": 3,
+        "or": 2,
+        "jne": 2,
+        "jmp": 2,
+        "add": 1,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "complex",
+      "first_instructions": [
+        "push word ptr [bp + 0xa]",
+        "mov ax, 0xaa",
+        "push ax",
+        "mov ax, 2",
+        "push ax",
+        "call far KERNEL.GETINSTANCEDATA"
+      ],
+      "last_instructions": [
+        "add sp, 2",
+        "mov sp, bp",
+        "pop bp",
+        "ret 0xa"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_01DA",
+        "sub_0FE0"
+      ],
+      "callees_inter": [
+        {
+          "module": "KERNEL",
+          "func": "GETINSTANCEDATA"
+        },
+        {
+          "module": "KERNEL",
+          "func": "LOCALALLOC"
+        },
+        {
+          "module": "KERNEL",
+          "func": "MAKEPROCINSTANCE"
+        },
+        {
+          "module": "USER",
+          "func": "CHANGEMENU"
+        },
+        {
+          "module": "USER",
+          "func": "CREATEWINDOW"
+        },
+        {
+          "module": "USER",
+          "func": "DISPATCHMESSAGE"
+        },
+        {
+          "module": "USER",
+          "func": "GETMESSAGE"
+        },
+        {
+          "module": "USER",
+          "func": "GETSYSTEMMENU"
+        },
+        {
+          "module": "USER",
+          "func": "LOADSTRING"
+        },
+        {
+          "module": "USER",
+          "func": "MESSAGEBOX"
+        },
+        {
+          "module": "USER",
+          "func": "SETTIMER"
+        },
+        {
+          "module": "USER",
+          "func": "SHOWWINDOW"
+        },
+        {
+          "module": "USER",
+          "func": "TRANSLATEMESSAGE"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 15,
+      "fanin": 0
+    },
+    {
+      "module": "CLOCK",
+      "segment_file": "seg1.asm",
+      "name": "sub_0CFB",
+      "kind": "NEAR",
+      "offset": 3323,
+      "size_bytes": null,
+      "start_line": 1444,
+      "end_line": 1519,
+      "num_instructions": 72,
+      "prologue": "standard_bp",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [
+        "far KERNEL.FINDRESOURCE",
+        "far KERNEL.LOADRESOURCE",
+        "far KERNEL.LOCALALLOC",
+        "far KERNEL.LOCALFREE",
+        "far USER.LOADCURSOR",
+        "far USER.LOADSTRING",
+        "far USER.REGISTERCLASS"
+      ],
+      "num_jumps_cond": 2,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 26,
+      "mnemonic_histogram": {
+        "mov": 31,
+        "push": 21,
+        "call": 7,
+        "sub": 3,
+        "or": 2,
+        "lea": 2,
+        "cdq": 1,
+        "jne": 1,
+        "jmp": 1,
+        "je": 1,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 0xa",
+        "mov ax, 0x40",
+        "push ax",
+        "mov ax, 0x1a"
+      ],
+      "last_instructions": [
+        "mov ax, 1",
+        "mov sp, bp",
+        "pop bp",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [
+        {
+          "module": "KERNEL",
+          "func": "FINDRESOURCE"
+        },
+        {
+          "module": "KERNEL",
+          "func": "LOADRESOURCE"
+        },
+        {
+          "module": "KERNEL",
+          "func": "LOCALALLOC"
+        },
+        {
+          "module": "KERNEL",
+          "func": "LOCALFREE"
+        },
+        {
+          "module": "USER",
+          "func": "LOADCURSOR"
+        },
+        {
+          "module": "USER",
+          "func": "LOADSTRING"
+        },
+        {
+          "module": "USER",
+          "func": "REGISTERCLASS"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0B87"
+      ],
+      "fanout": 7,
+      "fanin": 1
+    },
+    {
+      "module": "CLOCK",
+      "segment_file": "seg1.asm",
+      "name": "sub_0DB8",
+      "kind": "NEAR",
+      "offset": 3512,
+      "size_bytes": null,
+      "start_line": 1520,
+      "end_line": 1581,
+      "num_instructions": 57,
+      "prologue": "standard_bp",
+      "epilogue": "jmp_tail",
+      "calls_near": [
+        "L_0B87",
+        "L_0F4E",
+        "L_0FE0"
+      ],
+      "calls_far": [
+        "far KERNEL.FATALEXIT",
+        "far KERNEL.INITTASK",
+        "far KERNEL.WAITEVENT",
+        "far USER.INITAPP"
+      ],
+      "num_jumps_cond": 5,
+      "num_jumps_uncond": 1,
+      "ints": [
+        "0x21",
+        "0x21"
+      ],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 11,
+      "mnemonic_histogram": {
+        "mov": 18,
+        "push": 10,
+        "call": 7,
+        "cmp": 3,
+        "int": 2,
+        "xor": 2,
+        "or": 2,
+        "je": 2,
+        "jl": 1,
+        "sub": 1,
+        "pop": 1,
+        "ret": 1,
+        "add": 1,
+        "les": 1,
+        "neg": 1
+      },
+      "classification": "dos_caller",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "mov ax, 0x2c00",
+        "int 0x21",
+        "mov bx, word ptr [bp + 4]",
+        "cmp ch, 0xc"
+      ],
+      "last_instructions": [
+        "push ax",
+        "call L_0FE0",
+        "mov ax, 0x4cff",
+        "int 0x21"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0B87",
+        "sub_0F4E",
+        "sub_0FE0"
+      ],
+      "callees_inter": [
+        {
+          "module": "KERNEL",
+          "func": "FATALEXIT"
+        },
+        {
+          "module": "KERNEL",
+          "func": "INITTASK"
+        },
+        {
+          "module": "KERNEL",
+          "func": "WAITEVENT"
+        },
+        {
+          "module": "USER",
+          "func": "INITAPP"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0205",
+        "sub_0390",
+        "sub_03E2"
+      ],
+      "fanout": 7,
+      "fanin": 3
+    },
+    {
+      "module": "CLOCK",
+      "segment_file": "seg1.asm",
+      "name": "sub_0E45",
+      "kind": "NEAR",
+      "offset": 3653,
+      "size_bytes": null,
+      "start_line": 1582,
+      "end_line": 1714,
+      "num_instructions": 130,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_10F5"
+      ],
+      "calls_far": [
+        "far KERNEL.GLOBALALLOC",
+        "far KERNEL.GLOBALCOMPACT",
+        "far KERNEL.GLOBALFREE",
+        "far KERNEL.GLOBALSIZE",
+        "far KERNEL.LOCALALLOC",
+        "far KERNEL.LOCALFREE",
+        "far KERNEL.LOCALREALLOC",
+        "far KERNEL.LOCALSIZE"
+      ],
+      "num_jumps_cond": 1,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 15,
+      "mnemonic_histogram": {
+        "mov": 40,
+        "push": 34,
+        "ret": 15,
+        "pop": 14,
+        "call": 13,
+        "sub": 9,
+        "imul": 1,
+        "cdq": 1,
+        "or": 1,
+        "je": 1,
+        "jmp": 1
+      },
+      "classification": "complex",
+      "first_instructions": [
+        "ret",
+        "push bp",
+        "mov bp, sp",
+        "mov ax, 0xffff",
+        "pop bp",
+        "ret"
+      ],
+      "last_instructions": [
+        "call L_10F5",
+        "mov sp, bp",
+        "pop bp",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_10F5"
+      ],
+      "callees_inter": [
+        {
+          "module": "KERNEL",
+          "func": "GLOBALALLOC"
+        },
+        {
+          "module": "KERNEL",
+          "func": "GLOBALCOMPACT"
+        },
+        {
+          "module": "KERNEL",
+          "func": "GLOBALFREE"
+        },
+        {
+          "module": "KERNEL",
+          "func": "GLOBALSIZE"
+        },
+        {
+          "module": "KERNEL",
+          "func": "LOCALALLOC"
+        },
+        {
+          "module": "KERNEL",
+          "func": "LOCALFREE"
+        },
+        {
+          "module": "KERNEL",
+          "func": "LOCALREALLOC"
+        },
+        {
+          "module": "KERNEL",
+          "func": "LOCALSIZE"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_1100"
+      ],
+      "fanout": 9,
+      "fanin": 1
+    },
+    {
+      "module": "CLOCK",
+      "segment_file": "seg1.asm",
+      "name": "sub_0F4E",
+      "kind": "NEAR",
+      "offset": 3918,
+      "size_bytes": null,
+      "start_line": 1715,
+      "end_line": 1782,
+      "num_instructions": 59,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [
+        "word ptr [bx]"
+      ],
+      "num_jumps_cond": 7,
+      "num_jumps_uncond": 2,
+      "ints": [
+        "0x21",
+        "0x21",
+        "0x21",
+        "0x21",
+        "0x21"
+      ],
+      "has_loop": true,
+      "has_string_op": false,
+      "num_mem_refs": 13,
+      "mnemonic_histogram": {
+        "mov": 18,
+        "ret": 5,
+        "int": 5,
+        "push": 3,
+        "pop": 3,
+        "inc": 3,
+        "jae": 2,
+        "jmp": 2,
+        "test": 2,
+        "je": 2,
+        "lds": 2,
+        "xor": 2,
+        "lcall": 2,
+        "cmp": 1,
+        "call": 1
+      },
+      "classification": "complex_iterator",
+      "first_instructions": [
+        "mov bx, 0x7e",
+        "cmp bx, 0x84",
+        "jae L_0F5F",
+        "push bx",
+        "call word ptr [bx]",
+        "pop bx"
+      ],
+      "last_instructions": [
+        "int 0x21",
+        "inc bx",
+        "loop L_0FD1",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0DB8"
+      ],
+      "fanout": 0,
+      "fanin": 1
+    },
+    {
+      "module": "CLOCK",
+      "segment_file": "seg1.asm",
+      "name": "sub_0FE0",
+      "kind": "NEAR",
+      "offset": 4064,
+      "size_bytes": null,
+      "start_line": 1783,
+      "end_line": 1791,
+      "num_instructions": 8,
+      "prologue": "standard_bp",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_1100",
+        "L_1136"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 1,
+      "mnemonic_histogram": {
+        "push": 2,
+        "mov": 2,
+        "call": 2,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "call L_1136",
+        "push word ptr [bp + 4]",
+        "call L_1100",
+        "mov sp, bp"
+      ],
+      "last_instructions": [
+        "call L_1100",
+        "mov sp, bp",
+        "pop bp",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_1100",
+        "sub_1136"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0BBA",
+        "sub_0DB8"
+      ],
+      "fanout": 2,
+      "fanin": 2
+    },
+    {
+      "module": "CLOCK",
+      "segment_file": "seg1.asm",
+      "name": "sub_0FF0",
+      "kind": "NEAR",
+      "offset": 4080,
+      "size_bytes": null,
+      "start_line": 1792,
+      "end_line": 1874,
+      "num_instructions": 74,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [
+        "L_1148"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 8,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 18,
+      "mnemonic_histogram": {
+        "mov": 20,
+        "push": 8,
+        "neg": 6,
+        "or": 5,
+        "xor": 4,
+        "pop": 4,
+        "sbb": 3,
+        "div": 3,
+        "jge": 2,
+        "not": 2,
+        "jne": 2,
+        "shr": 2,
+        "rcr": 2,
+        "cmp": 2,
+        "jmp": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "push di",
+        "push si",
+        "push bx",
+        "xor di, di"
+      ],
+      "last_instructions": [
+        "pop si",
+        "pop di",
+        "pop bp",
+        "ret 8"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_1148"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0205",
+        "sub_0615",
+        "sub_079E",
+        "sub_084D",
+        "sub_0AE3"
+      ],
+      "fanout": 1,
+      "fanin": 5
+    },
+    {
+      "module": "CLOCK",
+      "segment_file": "seg1.asm",
+      "name": "sub_1091",
+      "kind": "NEAR",
+      "offset": 4241,
+      "size_bytes": null,
+      "start_line": 1875,
+      "end_line": 1924,
+      "num_instructions": 46,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 3,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 11,
+      "mnemonic_histogram": {
+        "mov": 15,
+        "neg": 6,
+        "push": 3,
+        "or": 3,
+        "sbb": 3,
+        "mul": 3,
+        "pop": 3,
+        "jge": 2,
+        "not": 2,
+        "add": 2,
+        "xor": 1,
+        "xchg": 1,
+        "je": 1,
+        "ret": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "push di",
+        "push si",
+        "xor bx, bx",
+        "mov ax, word ptr [bp + 6]"
+      ],
+      "last_instructions": [
+        "pop si",
+        "pop di",
+        "pop bp",
+        "ret 8"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0205",
+        "sub_0615",
+        "sub_079E",
+        "sub_084D",
+        "sub_0AE3"
+      ],
+      "fanout": 0,
+      "fanin": 5
+    },
+    {
+      "module": "CLOCK",
+      "segment_file": "seg1.asm",
+      "name": "sub_10F5",
+      "kind": "NEAR",
+      "offset": 4341,
+      "size_bytes": null,
+      "start_line": 1925,
+      "end_line": 1933,
+      "num_instructions": 6,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 1,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": true,
+      "has_string_op": false,
+      "num_mem_refs": 0,
+      "mnemonic_histogram": {
+        "xor": 1,
+        "jcxz": 1,
+        "shr": 1,
+        "rcr": 1,
+        "loop": 1,
+        "ret": 1
+      },
+      "classification": "iterator",
+      "first_instructions": [
+        "xor ch, ch",
+        "jcxz L_10FF",
+        "shr dx, 1",
+        "rcr ax, 1",
+        "loop L_10F9",
+        "ret"
+      ],
+      "last_instructions": [
+        "shr dx, 1",
+        "rcr ax, 1",
+        "loop L_10F9",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0E45"
+      ],
+      "fanout": 0,
+      "fanin": 1
+    },
+    {
+      "module": "CLOCK",
+      "segment_file": "seg1.asm",
+      "name": "sub_1100",
+      "kind": "NEAR",
+      "offset": 4352,
+      "size_bytes": null,
+      "start_line": 1934,
+      "end_line": 1957,
+      "num_instructions": 21,
+      "prologue": "standard_bp",
+      "epilogue": "unknown",
+      "calls_near": [
+        "L_0E45",
+        "L_116E"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 3,
+      "num_jumps_uncond": 0,
+      "ints": [
+        "0x21",
+        "0x21"
+      ],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 6,
+      "mnemonic_histogram": {
+        "mov": 7,
+        "push": 2,
+        "call": 2,
+        "int": 2,
+        "or": 1,
+        "je": 1,
+        "cmp": 1,
+        "jne": 1,
+        "lds": 1,
+        "pop": 1,
+        "jcxz": 1,
+        "lcall": 1
+      },
+      "classification": "dos_caller",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "call L_116E",
+        "call L_0E45",
+        "or ah, ah",
+        "je L_1117"
+      ],
+      "last_instructions": [
+        "lcall [0x72]",
+        "mov ax, word ptr [bp + 4]",
+        "mov ah, 0x4c",
+        "int 0x21"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0E45",
+        "sub_116E"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0FE0"
+      ],
+      "fanout": 2,
+      "fanin": 1
+    },
+    {
+      "module": "CLOCK",
+      "segment_file": "seg1.asm",
+      "name": "sub_1136",
+      "kind": "NEAR",
+      "offset": 4406,
+      "size_bytes": null,
+      "start_line": 1958,
+      "end_line": 1970,
+      "num_instructions": 10,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [
+        "word ptr [bx]"
+      ],
+      "num_jumps_cond": 1,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 1,
+      "mnemonic_histogram": {
+        "inc": 2,
+        "mov": 1,
+        "cmp": 1,
+        "jae": 1,
+        "push": 1,
+        "call": 1,
+        "pop": 1,
+        "jmp": 1,
+        "ret": 1
+      },
+      "classification": "wrapper",
+      "first_instructions": [
+        "mov bx, 0x84",
+        "cmp bx, 0x84",
+        "jae L_1147",
+        "push bx",
+        "call word ptr [bx]",
+        "pop bx"
+      ],
+      "last_instructions": [
+        "inc bx",
+        "inc bx",
+        "jmp L_1139",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0FE0"
+      ],
+      "fanout": 0,
+      "fanin": 1
+    },
+    {
+      "module": "CLOCK",
+      "segment_file": "seg1.asm",
+      "name": "sub_1148",
+      "kind": "NEAR",
+      "offset": 4424,
+      "size_bytes": null,
+      "start_line": 1971,
+      "end_line": 1990,
+      "num_instructions": 19,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 4,
+      "mnemonic_histogram": {
+        "mov": 8,
+        "mul": 3,
+        "push": 2,
+        "add": 2,
+        "pop": 2,
+        "xchg": 1,
+        "ret": 1
+      },
+      "classification": "leaf",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "push si",
+        "mov ax, word ptr [bp + 0xa]",
+        "mov cx, word ptr [bp + 4]",
+        "mul cx"
+      ],
+      "last_instructions": [
+        "mov ax, si",
+        "pop si",
+        "pop bp",
+        "ret 8"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0FF0"
+      ],
+      "fanout": 0,
+      "fanin": 1
+    },
+    {
+      "module": "CLOCK",
+      "segment_file": "seg1.asm",
+      "name": "sub_116E",
+      "kind": "NEAR",
+      "offset": 4462,
+      "size_bytes": null,
+      "start_line": 1991,
+      "end_line": 2003,
+      "num_instructions": 10,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [
+        "word ptr [bx]"
+      ],
+      "num_jumps_cond": 1,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 1,
+      "mnemonic_histogram": {
+        "inc": 2,
+        "mov": 1,
+        "cmp": 1,
+        "jae": 1,
+        "push": 1,
+        "call": 1,
+        "pop": 1,
+        "jmp": 1,
+        "ret": 1
+      },
+      "classification": "wrapper",
+      "first_instructions": [
+        "mov bx, 0x84",
+        "cmp bx, 0x86",
+        "jae L_117F",
+        "push bx",
+        "call word ptr [bx]",
+        "pop bx"
+      ],
+      "last_instructions": [
+        "inc bx",
+        "inc bx",
+        "jmp L_1171",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_1100"
+      ],
+      "fanout": 0,
+      "fanin": 1
+    }
+  ]
+}

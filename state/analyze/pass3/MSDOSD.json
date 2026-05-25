@@ -121,7 +121,7 @@
       "callers": [],
       "fanout": 19,
       "fanin": 0,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (476 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (476 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
@@ -129,7 +129,7 @@
         "far",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; FORMAT -- 476 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (476 instr).\n; tags: calls_kernel, complex_iterator, far, string_op\n; calls (intra): sub_0879, sub_088C, sub_089A, sub_08A1, sub_08C4, sub_0909 (+9 mas)\n; calls (inter): KERNEL.GLOBALALLOC, KERNEL.GLOBALFREE, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; FORMAT -- 476 instr\n; Iterator with string ops (movsb/scasb/...) (476 instr).\n; tags: calls_kernel, complex_iterator, far, string_op\n; calls (intra): sub_0879, sub_088C, sub_089A, sub_08A1, sub_08C4, sub_0909 (+9 more)\n; calls (inter): KERNEL.GLOBALALLOC, KERNEL.GLOBALFREE, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOSD",
@@ -246,14 +246,14 @@
       "callers": [],
       "fanout": 20,
       "fanin": 0,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (328 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (328 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; SYS -- 328 instr\n; Dispatcher: tabla de decisiones cmp+jcc (328 instr).\n; tags: calls_kernel, dispatcher, far\n; calls (intra): sub_0807, sub_08C4, sub_08F3, sub_092E, sub_0958, sub_0A6B (+10 mas)\n; calls (inter): KERNEL.GLOBALALLOC, KERNEL.GLOBALFREE, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; SYS -- 328 instr\n; Dispatcher: cmp+jcc decision table (328 instr).\n; tags: calls_kernel, dispatcher, far\n; calls (intra): sub_0807, sub_08C4, sub_08F3, sub_092E, sub_0958, sub_0A6B (+10 more)\n; calls (inter): KERNEL.GLOBALALLOC, KERNEL.GLOBALFREE, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOSD",
@@ -313,12 +313,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (43 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (43 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0807 -- offset 0x0807 -- 43 instr\n; Dispatcher: tabla de decisiones cmp+jcc (43 instr).\n; tags: dispatcher\n; callers: SYS\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0807 -- offset 0x0807 -- 43 instr\n; Dispatcher: cmp+jcc decision table (43 instr).\n; tags: dispatcher\n; callers: SYS\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOSD",
@@ -373,13 +373,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (9 instr).",
+      "description": "Unclassified function (9 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "bios_caller",
         "int_13"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0879 -- offset 0x0879 -- 9 instr\n; Funcion sin clasificar definitiva (9 instr).\n; tags: bios_caller, int_13\n; callers: FORMAT\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0879 -- offset 0x0879 -- 9 instr\n; Unclassified function (9 instr).\n; tags: bios_caller, int_13\n; callers: FORMAT\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOSD",
@@ -432,12 +432,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion hoja (no llama a otras, 7 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 7 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_088C -- offset 0x088C -- 7 instr\n; Funcion hoja (no llama a otras, 7 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: FORMAT\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_088C -- offset 0x088C -- 7 instr\n; Leaf function (no callees, 7 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: FORMAT\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOSD",
@@ -489,13 +489,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (4 instr).",
+      "description": "Calls DOS services via INT 21h (4 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_089A -- offset 0x089A -- 4 instr\n; Llama a servicios DOS via INT 21h (4 instr).\n; tags: dos_caller, int_21\n; callers: FORMAT\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_089A -- offset 0x089A -- 4 instr\n; Calls DOS services via INT 21h (4 instr).\n; tags: dos_caller, int_21\n; callers: FORMAT\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOSD",
@@ -554,14 +554,14 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (17 instr).",
+      "description": "Calls DOS services via INT 21h (17 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_11",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_08A1 -- offset 0x08A1 -- 17 instr\n; Llama a servicios DOS via INT 21h (17 instr).\n; tags: dos_caller, int_11, int_21\n; callers: FORMAT\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_08A1 -- offset 0x08A1 -- 17 instr\n; Calls DOS services via INT 21h (17 instr).\n; tags: dos_caller, int_11, int_21\n; callers: FORMAT\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOSD",
@@ -623,13 +623,13 @@
       ],
       "fanout": 0,
       "fanin": 3,
-      "description": "Llama a servicios DOS via INT 21h (12 instr).",
+      "description": "Calls DOS services via INT 21h (12 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_08C4 -- offset 0x08C4 -- 12 instr\n; Llama a servicios DOS via INT 21h (12 instr).\n; tags: dos_caller, int_21\n; callers: FORMAT, SYS, sub_0A6B\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_08C4 -- offset 0x08C4 -- 12 instr\n; Calls DOS services via INT 21h (12 instr).\n; tags: dos_caller, int_21\n; callers: FORMAT, SYS, sub_0A6B\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOSD",
@@ -681,13 +681,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (4 instr).",
+      "description": "Calls DOS services via INT 21h (4 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_08DA -- offset 0x08DA -- 4 instr\n; Llama a servicios DOS via INT 21h (4 instr).\n; tags: dos_caller, int_21\n; callers: sub_0D46\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_08DA -- offset 0x08DA -- 4 instr\n; Calls DOS services via INT 21h (4 instr).\n; tags: dos_caller, int_21\n; callers: sub_0D46\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOSD",
@@ -743,13 +743,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (9 instr).",
+      "description": "Calls DOS services via INT 21h (9 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_08E1 -- offset 0x08E1 -- 9 instr\n; Llama a servicios DOS via INT 21h (9 instr).\n; tags: dos_caller, int_21\n; callers: sub_0D46\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_08E1 -- offset 0x08E1 -- 9 instr\n; Calls DOS services via INT 21h (9 instr).\n; tags: dos_caller, int_21\n; callers: sub_0D46\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOSD",
@@ -808,13 +808,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (12 instr).",
+      "description": "Calls DOS services via INT 21h (12 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_08F3 -- offset 0x08F3 -- 12 instr\n; Llama a servicios DOS via INT 21h (12 instr).\n; tags: dos_caller, int_21\n; callers: SYS\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_08F3 -- offset 0x08F3 -- 12 instr\n; Calls DOS services via INT 21h (12 instr).\n; tags: dos_caller, int_21\n; callers: SYS\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOSD",
@@ -863,13 +863,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (3 instr).",
+      "description": "Calls DOS services via INT 21h (3 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "int_21",
         "trivial_stub"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0909 -- offset 0x0909 -- 3 instr\n; Llama a servicios DOS via INT 21h (3 instr).\n; tags: int_21, trivial_stub\n; callers: FORMAT\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0909 -- offset 0x0909 -- 3 instr\n; Calls DOS services via INT 21h (3 instr).\n; tags: int_21, trivial_stub\n; callers: FORMAT\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOSD",
@@ -924,13 +924,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (17 instr).",
+      "description": "Calls DOS services via INT 21h (17 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_090E -- offset 0x090E -- 17 instr\n; Llama a servicios DOS via INT 21h (17 instr).\n; tags: dos_caller, int_21\n; callers: FORMAT\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_090E -- offset 0x090E -- 17 instr\n; Calls DOS services via INT 21h (17 instr).\n; tags: dos_caller, int_21\n; callers: FORMAT\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOSD",
@@ -990,13 +990,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (24 instr).",
+      "description": "Calls DOS services via INT 21h (24 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_092E -- offset 0x092E -- 24 instr\n; Llama a servicios DOS via INT 21h (24 instr).\n; tags: dos_caller, int_21\n; callers: SYS\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_092E -- offset 0x092E -- 24 instr\n; Calls DOS services via INT 21h (24 instr).\n; tags: dos_caller, int_21\n; callers: SYS\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOSD",
@@ -1057,13 +1057,13 @@
       ],
       "fanout": 0,
       "fanin": 5,
-      "description": "Funcion sin clasificar definitiva (22 instr).",
+      "description": "Unclassified function (22 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "int_25",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0958 -- offset 0x0958 -- 22 instr\n; Funcion sin clasificar definitiva (22 instr).\n; tags: int_25, small\n; callers: SYS, sub_0B24, sub_0BB2, sub_0CDC, sub_0D46\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0958 -- offset 0x0958 -- 22 instr\n; Unclassified function (22 instr).\n; tags: int_25, small\n; callers: SYS, sub_0B24, sub_0BB2, sub_0CDC, sub_0D46\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOSD",
@@ -1123,13 +1123,13 @@
       ],
       "fanout": 0,
       "fanin": 4,
-      "description": "Funcion sin clasificar definitiva (22 instr).",
+      "description": "Unclassified function (22 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "int_26",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0980 -- offset 0x0980 -- 22 instr\n; Funcion sin clasificar definitiva (22 instr).\n; tags: int_26, small\n; callers: FORMAT, sub_0B24, sub_0BB2, sub_0C60\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0980 -- offset 0x0980 -- 22 instr\n; Unclassified function (22 instr).\n; tags: int_26, small\n; callers: FORMAT, sub_0B24, sub_0BB2, sub_0C60\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOSD",
@@ -1195,7 +1195,7 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (85 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (85 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
@@ -1203,7 +1203,7 @@
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_09A8 -- offset 0x09A8 -- 85 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (85 instr).\n; tags: complex_iterator, int_13, loop, string_op\n; callers: FORMAT\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_09A8 -- offset 0x09A8 -- 85 instr\n; Iterator with string ops (movsb/scasb/...) (85 instr).\n; tags: complex_iterator, int_13, loop, string_op\n; callers: FORMAT\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOSD",
@@ -1276,7 +1276,7 @@
       ],
       "fanout": 1,
       "fanin": 2,
-      "description": "Llama a servicios DOS via INT 21h (91 instr).",
+      "description": "Calls DOS services via INT 21h (91 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
@@ -1285,7 +1285,7 @@
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0A6B -- offset 0x0A6B -- 91 instr\n; Llama a servicios DOS via INT 21h (91 instr).\n; tags: complex_iterator, int_13, int_21, loop, string_op\n; callers: FORMAT, SYS\n; calls (intra): sub_08C4\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0A6B -- offset 0x0A6B -- 91 instr\n; Calls DOS services via INT 21h (91 instr).\n; tags: complex_iterator, int_13, int_21, loop, string_op\n; callers: FORMAT, SYS\n; calls (intra): sub_08C4\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOSD",
@@ -1357,7 +1357,7 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (71 instr).",
+      "description": "Calls DOS services via INT 21h (71 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
@@ -1365,7 +1365,7 @@
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0B24 -- offset 0x0B24 -- 71 instr\n; Llama a servicios DOS via INT 21h (71 instr).\n; tags: complex_iterator, int_21, loop, string_op\n; callers: FORMAT\n; calls (intra): sub_0958, sub_0980\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0B24 -- offset 0x0B24 -- 71 instr\n; Calls DOS services via INT 21h (71 instr).\n; tags: complex_iterator, int_21, loop, string_op\n; callers: FORMAT\n; calls (intra): sub_0958, sub_0980\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOSD",
@@ -1437,13 +1437,13 @@
       ],
       "fanout": 2,
       "fanin": 2,
-      "description": "Llama a servicios DOS via INT 21h (55 instr).",
+      "description": "Calls DOS services via INT 21h (55 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0BB2 -- offset 0x0BB2 -- 55 instr\n; Llama a servicios DOS via INT 21h (55 instr).\n; tags: dos_caller, int_21\n; callers: FORMAT, SYS\n; calls (intra): sub_0958, sub_0980\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0BB2 -- offset 0x0BB2 -- 55 instr\n; Calls DOS services via INT 21h (55 instr).\n; tags: dos_caller, int_21\n; callers: FORMAT, SYS\n; calls (intra): sub_0958, sub_0980\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOSD",
@@ -1502,12 +1502,12 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Funcion hoja (no llama a otras, 12 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 12 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0C2C -- offset 0x0C2C -- 12 instr\n; Funcion hoja (no llama a otras, 12 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_0CDC, sub_0D46\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0C2C -- offset 0x0C2C -- 12 instr\n; Leaf function (no callees, 12 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_0CDC, sub_0D46\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOSD",
@@ -1561,12 +1561,12 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Funcion hoja (no llama a otras, 9 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 9 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0C49 -- offset 0x0C49 -- 9 instr\n; Funcion hoja (no llama a otras, 9 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: FORMAT, SYS\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0C49 -- offset 0x0C49 -- 9 instr\n; Leaf function (no callees, 9 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: FORMAT, SYS\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOSD",
@@ -1638,13 +1638,13 @@
       ],
       "fanout": 1,
       "fanin": 3,
-      "description": "Llama a servicios DOS via INT 21h (61 instr).",
+      "description": "Calls DOS services via INT 21h (61 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0C60 -- offset 0x0C60 -- 61 instr\n; Llama a servicios DOS via INT 21h (61 instr).\n; tags: dos_caller, int_21\n; callers: FORMAT, sub_0CDC, sub_0D46\n; calls (intra): sub_0980\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0C60 -- offset 0x0C60 -- 61 instr\n; Calls DOS services via INT 21h (61 instr).\n; tags: dos_caller, int_21\n; callers: FORMAT, sub_0CDC, sub_0D46\n; calls (intra): sub_0980\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOSD",
@@ -1713,12 +1713,12 @@
       ],
       "fanout": 3,
       "fanin": 1,
-      "description": "Funcion mediana (47 instr, 3 calls).",
+      "description": "Mid-size function (47 instr, 3 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0CDC -- offset 0x0CDC -- 47 instr\n; Funcion mediana (47 instr, 3 calls).\n; tags: medium\n; callers: SYS\n; calls (intra): sub_0958, sub_0C2C, sub_0C60\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0CDC -- offset 0x0CDC -- 47 instr\n; Mid-size function (47 instr, 3 calls).\n; tags: medium\n; callers: SYS\n; calls (intra): sub_0958, sub_0C2C, sub_0C60\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOSD",
@@ -1803,13 +1803,13 @@
       ],
       "fanout": 5,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (151 instr).",
+      "description": "Calls DOS services via INT 21h (151 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0D46 -- offset 0x0D46 -- 151 instr\n; Llama a servicios DOS via INT 21h (151 instr).\n; tags: dos_caller, int_21\n; callers: FORMAT\n; calls (intra): sub_08DA, sub_08E1, sub_0958, sub_0C2C, sub_0C60\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0D46 -- offset 0x0D46 -- 151 instr\n; Calls DOS services via INT 21h (151 instr).\n; tags: dos_caller, int_21\n; callers: FORMAT\n; calls (intra): sub_08DA, sub_08E1, sub_0958, sub_0C2C, sub_0C60\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOSD",
@@ -1866,13 +1866,13 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Llama a servicios DOS via INT 21h (11 instr).",
+      "description": "Calls DOS services via INT 21h (11 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0E84 -- offset 0x0E84 -- 11 instr\n; Llama a servicios DOS via INT 21h (11 instr).\n; tags: dos_caller, int_21\n; callers: SYS, sub_0FD0\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0E84 -- offset 0x0E84 -- 11 instr\n; Calls DOS services via INT 21h (11 instr).\n; tags: dos_caller, int_21\n; callers: SYS, sub_0FD0\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOSD",
@@ -1943,13 +1943,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (55 instr).",
+      "description": "Calls DOS services via INT 21h (55 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0E9C -- offset 0x0E9C -- 55 instr\n; Llama a servicios DOS via INT 21h (55 instr).\n; tags: dos_caller, int_21\n; callers: sub_0FD0\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0E9C -- offset 0x0E9C -- 55 instr\n; Calls DOS services via INT 21h (55 instr).\n; tags: dos_caller, int_21\n; callers: sub_0FD0\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOSD",
@@ -2015,13 +2015,13 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Llama a servicios DOS via INT 21h (74 instr).",
+      "description": "Calls DOS services via INT 21h (74 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0F16 -- offset 0x0F16 -- 74 instr\n; Llama a servicios DOS via INT 21h (74 instr).\n; tags: dos_caller, int_21\n; callers: SYS, sub_0FD0\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0F16 -- offset 0x0F16 -- 74 instr\n; Calls DOS services via INT 21h (74 instr).\n; tags: dos_caller, int_21\n; callers: SYS, sub_0FD0\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOSD",
@@ -2080,13 +2080,13 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Llama a servicios DOS via INT 21h (13 instr).",
+      "description": "Calls DOS services via INT 21h (13 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0FB4 -- offset 0x0FB4 -- 13 instr\n; Llama a servicios DOS via INT 21h (13 instr).\n; tags: dos_caller, int_21\n; callers: SYS, sub_0FD0\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0FB4 -- offset 0x0FB4 -- 13 instr\n; Calls DOS services via INT 21h (13 instr).\n; tags: dos_caller, int_21\n; callers: SYS, sub_0FD0\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOSD",
@@ -2162,13 +2162,13 @@
       ],
       "fanout": 4,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (62 instr).",
+      "description": "Calls DOS services via INT 21h (62 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0FD0 -- offset 0x0FD0 -- 62 instr\n; Llama a servicios DOS via INT 21h (62 instr).\n; tags: dos_caller, int_21\n; callers: SYS\n; calls (intra): sub_0E84, sub_0E9C, sub_0F16, sub_0FB4\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0FD0 -- offset 0x0FD0 -- 62 instr\n; Calls DOS services via INT 21h (62 instr).\n; tags: dos_caller, int_21\n; callers: SYS\n; calls (intra): sub_0E84, sub_0E9C, sub_0F16, sub_0FB4\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOSD",
@@ -2243,14 +2243,14 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (276 instr).",
+      "description": "Calls DOS services via INT 21h (276 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
         "int_21",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_104E -- offset 0x104E -- 276 instr\n; Llama a servicios DOS via INT 21h (276 instr).\n; tags: complex_iterator, int_21, string_op\n; callers: SYS\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_104E -- offset 0x104E -- 276 instr\n; Calls DOS services via INT 21h (276 instr).\n; tags: complex_iterator, int_21, string_op\n; callers: SYS\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOSD",
@@ -2308,12 +2308,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (27 instr).",
+      "description": "Unclassified function (27 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1289 -- offset 0x1289 -- 27 instr\n; Funcion sin clasificar definitiva (27 instr).\n; tags: small\n; callers: SYS\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1289 -- offset 0x1289 -- 27 instr\n; Unclassified function (27 instr).\n; tags: small\n; callers: SYS\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSDOSD",
@@ -2370,12 +2370,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (21 instr).",
+      "description": "Unclassified function (21 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_12B8 -- offset 0x12B8 -- 21 instr\n; Funcion sin clasificar definitiva (21 instr).\n; tags: small\n; callers: SYS\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_12B8 -- offset 0x12B8 -- 21 instr\n; Unclassified function (21 instr).\n; tags: small\n; callers: SYS\n;----------------------------------------------------------------------"
     }
   ]
 }

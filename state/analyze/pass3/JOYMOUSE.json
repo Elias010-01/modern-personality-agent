@@ -72,12 +72,12 @@
       "callers": [],
       "fanout": 3,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (28 instr).",
+      "description": "Unclassified function (28 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0047 -- offset 0x0047 -- 28 instr\n; Funcion sin clasificar definitiva (28 instr).\n; tags: small\n; calls (intra): sub_0085, sub_00D0, sub_011D\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0047 -- offset 0x0047 -- 28 instr\n; Unclassified function (28 instr).\n; tags: small\n; calls (intra): sub_0085, sub_00D0, sub_011D\n;----------------------------------------------------------------------"
     },
     {
       "module": "JOYMOUSE",
@@ -135,12 +135,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (25 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (25 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0085 -- offset 0x0085 -- 25 instr\n; Dispatcher: tabla de decisiones cmp+jcc (25 instr).\n; tags: dispatcher\n; callers: sub_0047\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0085 -- offset 0x0085 -- 25 instr\n; Dispatcher: cmp+jcc decision table (25 instr).\n; tags: dispatcher\n; callers: sub_0047\n;----------------------------------------------------------------------"
     },
     {
       "module": "JOYMOUSE",
@@ -200,12 +200,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (27 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (27 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_00D0 -- offset 0x00D0 -- 27 instr\n; Dispatcher: tabla de decisiones cmp+jcc (27 instr).\n; tags: dispatcher\n; callers: sub_0047\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_00D0 -- offset 0x00D0 -- 27 instr\n; Dispatcher: cmp+jcc decision table (27 instr).\n; tags: dispatcher\n; callers: sub_0047\n;----------------------------------------------------------------------"
     },
     {
       "module": "JOYMOUSE",
@@ -286,14 +286,14 @@
       ],
       "fanout": 4,
       "fanin": 1,
-      "description": "Funcion compleja: 137 instrucciones, 4 llamadas, 5 branches.",
+      "description": "Complex function: 137 instructions, 4 calls, 5 branches.",
       "confidence": "low",
       "semantic_tags": [
         "calls_system",
         "complex",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_011D -- offset 0x011D -- 137 instr\n; Funcion compleja: 137 instrucciones, 4 llamadas, 5 branches.\n; tags: calls_system, complex, far\n; callers: sub_0047\n; calls (intra): sub_0250, sub_027D\n; calls (inter): SYSTEM.CREATESYSTEMTIMER, SYSTEM.ENABLESYSTEMTIMERS\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_011D -- offset 0x011D -- 137 instr\n; Complex function: 137 instructions, 4 calls, 5 branches.\n; tags: calls_system, complex, far\n; callers: sub_0047\n; calls (intra): sub_0250, sub_027D\n; calls (inter): SYSTEM.CREATESYSTEMTIMER, SYSTEM.ENABLESYSTEMTIMERS\n;----------------------------------------------------------------------"
     },
     {
       "module": "JOYMOUSE",
@@ -356,13 +356,13 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Iterador con bucle (27 instr).",
+      "description": "Iterator with loop (27 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "loop"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0250 -- offset 0x0250 -- 27 instr\n; Iterador con bucle (27 instr).\n; tags: iterator, loop\n; callers: sub_011D, sub_02B7\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0250 -- offset 0x0250 -- 27 instr\n; Iterator with loop (27 instr).\n; tags: iterator, loop\n; callers: sub_011D, sub_02B7\n;----------------------------------------------------------------------"
     },
     {
       "module": "JOYMOUSE",
@@ -436,14 +436,14 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (28 instr).",
+      "description": "Unclassified function (28 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "calls_system",
         "far",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_027D -- offset 0x027D -- 28 instr\n; Funcion sin clasificar definitiva (28 instr).\n; tags: calls_system, far, small\n; callers: sub_011D\n; calls (inter): SYSTEM.DISABLESYSTEMTIMERS, SYSTEM.KILLSYSTEMTIMER\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_027D -- offset 0x027D -- 28 instr\n; Unclassified function (28 instr).\n; tags: calls_system, far, small\n; callers: sub_011D\n; calls (inter): SYSTEM.DISABLESYSTEMTIMERS, SYSTEM.KILLSYSTEMTIMER\n;----------------------------------------------------------------------"
     },
     {
       "module": "JOYMOUSE",
@@ -507,12 +507,12 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (46 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (46 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_02B7 -- offset 0x02B7 -- 46 instr\n; Dispatcher: tabla de decisiones cmp+jcc (46 instr).\n; tags: dispatcher\n; calls (intra): sub_0250\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_02B7 -- offset 0x02B7 -- 46 instr\n; Dispatcher: cmp+jcc decision table (46 instr).\n; tags: dispatcher\n; calls (intra): sub_0250\n;----------------------------------------------------------------------"
     }
   ]
 }

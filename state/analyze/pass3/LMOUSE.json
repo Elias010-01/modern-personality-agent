@@ -71,12 +71,12 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Funcion mediana (64 instr, 1 calls).",
+      "description": "Mid-size function (64 instr, 1 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0028 -- offset 0x0028 -- 64 instr\n; Funcion mediana (64 instr, 1 calls).\n; tags: medium\n; calls (intra): sub_00D9\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0028 -- offset 0x0028 -- 64 instr\n; Mid-size function (64 instr, 1 calls).\n; tags: medium\n; calls (intra): sub_00D9\n;----------------------------------------------------------------------"
     },
     {
       "module": "LMOUSE",
@@ -161,7 +161,7 @@
       ],
       "fanout": 9,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (143 instr).",
+      "description": "Calls DOS services via INT 21h (143 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
@@ -169,7 +169,7 @@
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_00D9 -- offset 0x00D9 -- 143 instr\n; Llama a servicios DOS via INT 21h (143 instr).\n; tags: complex_iterator, int_21, loop, string_op\n; callers: sub_0028\n; calls (intra): sub_0267, sub_0278, sub_028B, sub_02A2, sub_02C0, sub_02E4 (+3 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_00D9 -- offset 0x00D9 -- 143 instr\n; Calls DOS services via INT 21h (143 instr).\n; tags: complex_iterator, int_21, loop, string_op\n; callers: sub_0028\n; calls (intra): sub_0267, sub_0278, sub_028B, sub_02A2, sub_02C0, sub_02E4 (+3 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "LMOUSE",
@@ -222,13 +222,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Iterador con bucle (9 instr).",
+      "description": "Iterator with loop (9 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "loop"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_024C -- offset 0x024C -- 9 instr\n; Iterador con bucle (9 instr).\n; tags: iterator, loop\n; callers: sub_02E4\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_024C -- offset 0x024C -- 9 instr\n; Iterator with loop (9 instr).\n; tags: iterator, loop\n; callers: sub_02E4\n;----------------------------------------------------------------------"
     },
     {
       "module": "LMOUSE",
@@ -281,13 +281,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Iterador con bucle (6 instr).",
+      "description": "Iterator with loop (6 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "loop"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_025C -- offset 0x025C -- 6 instr\n; Iterador con bucle (6 instr).\n; tags: iterator, loop\n; callers: sub_032F\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_025C -- offset 0x025C -- 6 instr\n; Iterator with loop (6 instr).\n; tags: iterator, loop\n; callers: sub_032F\n;----------------------------------------------------------------------"
     },
     {
       "module": "LMOUSE",
@@ -347,12 +347,12 @@
       ],
       "fanout": 0,
       "fanin": 4,
-      "description": "Funcion hoja (no llama a otras, 9 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 9 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0267 -- offset 0x0267 -- 9 instr\n; Funcion hoja (no llama a otras, 9 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_00D9, sub_02A2, sub_02C0, sub_02E4\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0267 -- offset 0x0267 -- 9 instr\n; Leaf function (no callees, 9 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_00D9, sub_02A2, sub_02C0, sub_02E4\n;----------------------------------------------------------------------"
     },
     {
       "module": "LMOUSE",
@@ -406,12 +406,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion hoja (no llama a otras, 8 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 8 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0278 -- offset 0x0278 -- 8 instr\n; Funcion hoja (no llama a otras, 8 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_00D9\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0278 -- offset 0x0278 -- 8 instr\n; Leaf function (no callees, 8 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_00D9\n;----------------------------------------------------------------------"
     },
     {
       "module": "LMOUSE",
@@ -466,12 +466,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion hoja (no llama a otras, 10 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 10 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_028B -- offset 0x028B -- 10 instr\n; Funcion hoja (no llama a otras, 10 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_00D9\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_028B -- offset 0x028B -- 10 instr\n; Leaf function (no callees, 10 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_00D9\n;----------------------------------------------------------------------"
     },
     {
       "module": "LMOUSE",
@@ -530,12 +530,12 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (12 instr).",
+      "description": "Unclassified function (12 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_02A2 -- offset 0x02A2 -- 12 instr\n; Funcion sin clasificar definitiva (12 instr).\n; tags: small\n; callers: sub_00D9\n; calls (intra): sub_0267, sub_02D1\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_02A2 -- offset 0x02A2 -- 12 instr\n; Unclassified function (12 instr).\n; tags: small\n; callers: sub_00D9\n; calls (intra): sub_0267, sub_02D1\n;----------------------------------------------------------------------"
     },
     {
       "module": "LMOUSE",
@@ -594,12 +594,12 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (7 instr).",
+      "description": "Unclassified function (7 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_02C0 -- offset 0x02C0 -- 7 instr\n; Funcion sin clasificar definitiva (7 instr).\n; tags: small\n; callers: sub_00D9\n; calls (intra): sub_0267, sub_02D1\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_02C0 -- offset 0x02C0 -- 7 instr\n; Unclassified function (7 instr).\n; tags: small\n; callers: sub_00D9\n; calls (intra): sub_0267, sub_02D1\n;----------------------------------------------------------------------"
     },
     {
       "module": "LMOUSE",
@@ -653,12 +653,12 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Funcion hoja (no llama a otras, 8 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 8 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_02D1 -- offset 0x02D1 -- 8 instr\n; Funcion hoja (no llama a otras, 8 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_02A2, sub_02C0\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_02D1 -- offset 0x02D1 -- 8 instr\n; Leaf function (no callees, 8 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_02A2, sub_02C0\n;----------------------------------------------------------------------"
     },
     {
       "module": "LMOUSE",
@@ -717,12 +717,12 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (29 instr).",
+      "description": "Unclassified function (29 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_02E4 -- offset 0x02E4 -- 29 instr\n; Funcion sin clasificar definitiva (29 instr).\n; tags: small\n; callers: sub_00D9\n; calls (intra): sub_024C, sub_0267\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_02E4 -- offset 0x02E4 -- 29 instr\n; Unclassified function (29 instr).\n; tags: small\n; callers: sub_00D9\n; calls (intra): sub_024C, sub_0267\n;----------------------------------------------------------------------"
     },
     {
       "module": "LMOUSE",
@@ -780,12 +780,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Funcion mediana (34 instr, 1 calls).",
+      "description": "Mid-size function (34 instr, 1 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_032F -- offset 0x032F -- 34 instr\n; Funcion mediana (34 instr, 1 calls).\n; tags: medium\n; callers: sub_00D9\n; calls (intra): sub_025C\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_032F -- offset 0x032F -- 34 instr\n; Mid-size function (34 instr, 1 calls).\n; tags: medium\n; callers: sub_00D9\n; calls (intra): sub_025C\n;----------------------------------------------------------------------"
     },
     {
       "module": "LMOUSE",
@@ -846,13 +846,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (43 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (43 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0387 -- offset 0x0387 -- 43 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (43 instr).\n; tags: iterator, string_op\n; callers: sub_00D9\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0387 -- offset 0x0387 -- 43 instr\n; Iterator with string ops (movsb/scasb/...) (43 instr).\n; tags: iterator, string_op\n; callers: sub_00D9\n;----------------------------------------------------------------------"
     },
     {
       "module": "LMOUSE",
@@ -916,13 +916,13 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Funcion compleja: 82 instrucciones, 0 llamadas, 2 branches.",
+      "description": "Complex function: 82 instructions, 0 calls, 2 branches.",
       "confidence": "low",
       "semantic_tags": [
         "complex",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_03F3 -- offset 0x03F3 -- 82 instr\n; Funcion compleja: 82 instrucciones, 0 llamadas, 2 branches.\n; tags: complex, far\n; callers: sub_00D9, sub_0513\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_03F3 -- offset 0x03F3 -- 82 instr\n; Complex function: 82 instructions, 0 calls, 2 branches.\n; tags: complex, far\n; callers: sub_00D9, sub_0513\n;----------------------------------------------------------------------"
     },
     {
       "module": "LMOUSE",
@@ -992,13 +992,13 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Llama a servicios DOS via INT 21h (36 instr).",
+      "description": "Calls DOS services via INT 21h (36 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_04AC -- offset 0x04AC -- 36 instr\n; Llama a servicios DOS via INT 21h (36 instr).\n; tags: dos_caller, int_21\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_04AC -- offset 0x04AC -- 36 instr\n; Calls DOS services via INT 21h (36 instr).\n; tags: dos_caller, int_21\n;----------------------------------------------------------------------"
     },
     {
       "module": "LMOUSE",
@@ -1068,7 +1068,7 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Llama a servicios DOS via INT 21h (48 instr).",
+      "description": "Calls DOS services via INT 21h (48 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "far",
@@ -1076,7 +1076,7 @@
         "iterator",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0513 -- offset 0x0513 -- 48 instr\n; Llama a servicios DOS via INT 21h (48 instr).\n; tags: far, int_21, iterator, string_op\n; calls (intra): sub_03F3\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0513 -- offset 0x0513 -- 48 instr\n; Calls DOS services via INT 21h (48 instr).\n; tags: far, int_21, iterator, string_op\n; calls (intra): sub_03F3\n;----------------------------------------------------------------------"
     },
     {
       "module": "LMOUSE",
@@ -1134,13 +1134,13 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (11 instr).",
+      "description": "Unclassified function (11 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "far",
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_057D -- offset 0x057D -- 11 instr\n; Funcion sin clasificar definitiva (11 instr).\n; tags: far, wrapper\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_057D -- offset 0x057D -- 11 instr\n; Unclassified function (11 instr).\n; tags: far, wrapper\n;----------------------------------------------------------------------"
     }
   ]
 }

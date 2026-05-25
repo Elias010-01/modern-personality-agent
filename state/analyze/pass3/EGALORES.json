@@ -69,13 +69,13 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Llama a servicios BIOS via INT 10h (video, 36 instr).",
+      "description": "Calls BIOS services via INT 10h (video, 36 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "bios_caller",
         "int_10"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_015D -- offset 0x015D -- 36 instr\n; Llama a servicios BIOS via INT 10h (video, 36 instr).\n; tags: bios_caller, int_10\n; callers: sub_2552\n; calls (intra): sub_01AA\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_015D -- offset 0x015D -- 36 instr\n; Calls BIOS services via INT 10h (video, 36 instr).\n; tags: bios_caller, int_10\n; callers: sub_2552\n; calls (intra): sub_01AA\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGALORES",
@@ -128,14 +128,14 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (9 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (9 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_01AA -- offset 0x01AA -- 9 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (9 instr).\n; tags: iterator, loop, string_op\n; callers: sub_015D\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_01AA -- offset 0x01AA -- 9 instr\n; Iterator with string ops (movsb/scasb/...) (9 instr).\n; tags: iterator, loop, string_op\n; callers: sub_015D\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGALORES",
@@ -208,12 +208,12 @@
       ],
       "fanout": 8,
       "fanin": 2,
-      "description": "Funcion sin clasificar definitiva (14 instr).",
+      "description": "Unclassified function (14 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_01B6 -- offset 0x01B6 -- 14 instr\n; Funcion sin clasificar definitiva (14 instr).\n; tags: small\n; callers: sub_26A5, sub_271F\n; calls (intra): sub_0210, sub_0258, sub_031B, sub_03A7, sub_043D, sub_051C (+2 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_01B6 -- offset 0x01B6 -- 14 instr\n; Unclassified function (14 instr).\n; tags: small\n; callers: sub_26A5, sub_271F\n; calls (intra): sub_0210, sub_0258, sub_031B, sub_03A7, sub_043D, sub_051C (+2 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGALORES",
@@ -280,12 +280,12 @@
       ],
       "fanout": 3,
       "fanin": 4,
-      "description": "Funcion sin clasificar definitiva (12 instr).",
+      "description": "Unclassified function (12 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_01D6 -- offset 0x01D6 -- 12 instr\n; Funcion sin clasificar definitiva (12 instr).\n; tags: small\n; callers: sub_2426, sub_24B2, sub_2682, sub_2769\n; calls (intra): sub_01F3, sub_051C, sub_0541\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_01D6 -- offset 0x01D6 -- 12 instr\n; Unclassified function (12 instr).\n; tags: small\n; callers: sub_2426, sub_24B2, sub_2682, sub_2769\n; calls (intra): sub_01F3, sub_051C, sub_0541\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGALORES",
@@ -343,12 +343,12 @@
       ],
       "fanout": 1,
       "fanin": 2,
-      "description": "Wrapper que delega en sub_04F2.",
+      "description": "Wrapper delegating to sub_04F2.",
       "confidence": "medium",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_01F3 -- offset 0x01F3 -- 11 instr\n; Wrapper que delega en sub_04F2.\n; tags: wrapper\n; callers: sub_01D6, sub_043D\n; calls (intra): sub_04F2\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_01F3 -- offset 0x01F3 -- 11 instr\n; Wrapper delegating to sub_04F2.\n; tags: wrapper\n; callers: sub_01D6, sub_043D\n; calls (intra): sub_04F2\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGALORES",
@@ -406,12 +406,12 @@
       ],
       "fanout": 3,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (16 instr).",
+      "description": "Unclassified function (16 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0210 -- offset 0x0210 -- 16 instr\n; Funcion sin clasificar definitiva (16 instr).\n; tags: small\n; callers: sub_01B6\n; calls (intra): sub_023B, sub_0385, sub_0536\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0210 -- offset 0x0210 -- 16 instr\n; Unclassified function (16 instr).\n; tags: small\n; callers: sub_01B6\n; calls (intra): sub_023B, sub_0385, sub_0536\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGALORES",
@@ -465,14 +465,14 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (15 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (15 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_023B -- offset 0x023B -- 15 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (15 instr).\n; tags: iterator, loop, string_op\n; callers: sub_0210\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_023B -- offset 0x023B -- 15 instr\n; Iterator with string ops (movsb/scasb/...) (15 instr).\n; tags: iterator, loop, string_op\n; callers: sub_0210\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGALORES",
@@ -530,12 +530,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Wrapper que delega en sub_027D.",
+      "description": "Wrapper delegating to sub_027D.",
       "confidence": "medium",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0258 -- offset 0x0258 -- 15 instr\n; Wrapper que delega en sub_027D.\n; tags: wrapper\n; callers: sub_01B6\n; calls (intra): sub_027D\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0258 -- offset 0x0258 -- 15 instr\n; Wrapper delegating to sub_027D.\n; tags: wrapper\n; callers: sub_01B6\n; calls (intra): sub_027D\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGALORES",
@@ -602,14 +602,14 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (39 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (39 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_027D -- offset 0x027D -- 39 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (39 instr).\n; tags: iterator, loop, string_op\n; callers: sub_0258\n; calls (intra): sub_02CB\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_027D -- offset 0x027D -- 39 instr\n; Iterator with string ops (movsb/scasb/...) (39 instr).\n; tags: iterator, loop, string_op\n; callers: sub_0258\n; calls (intra): sub_02CB\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGALORES",
@@ -672,14 +672,14 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (42 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (42 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_02CB -- offset 0x02CB -- 42 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (42 instr).\n; tags: iterator, loop, string_op\n; callers: sub_027D\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_02CB -- offset 0x02CB -- 42 instr\n; Iterator with string ops (movsb/scasb/...) (42 instr).\n; tags: iterator, loop, string_op\n; callers: sub_027D\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGALORES",
@@ -738,14 +738,14 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (28 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (28 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_031B -- offset 0x031B -- 28 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (28 instr).\n; tags: iterator, loop, string_op\n; callers: sub_01B6\n; calls (intra): sub_0385\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_031B -- offset 0x031B -- 28 instr\n; Iterator with string ops (movsb/scasb/...) (28 instr).\n; tags: iterator, loop, string_op\n; callers: sub_01B6\n; calls (intra): sub_0385\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGALORES",
@@ -805,14 +805,14 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (26 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (26 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0355 -- offset 0x0355 -- 26 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (26 instr).\n; tags: iterator, loop, string_op\n; callers: sub_043D\n; calls (intra): sub_0385\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0355 -- offset 0x0355 -- 26 instr\n; Iterator with string ops (movsb/scasb/...) (26 instr).\n; tags: iterator, loop, string_op\n; callers: sub_043D\n; calls (intra): sub_0385\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGALORES",
@@ -868,12 +868,12 @@
       ],
       "fanout": 0,
       "fanin": 3,
-      "description": "Funcion hoja (no llama a otras, 14 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 14 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0385 -- offset 0x0385 -- 14 instr\n; Funcion hoja (no llama a otras, 14 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_0210, sub_031B, sub_0355\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0385 -- offset 0x0385 -- 14 instr\n; Leaf function (no callees, 14 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_0210, sub_031B, sub_0355\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGALORES",
@@ -936,13 +936,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Iterador con bucle (63 instr).",
+      "description": "Iterator with loop (63 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
         "loop"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_03A7 -- offset 0x03A7 -- 63 instr\n; Iterador con bucle (63 instr).\n; tags: complex_iterator, loop\n; callers: sub_01B6\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_03A7 -- offset 0x03A7 -- 63 instr\n; Iterator with loop (63 instr).\n; tags: complex_iterator, loop\n; callers: sub_01B6\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGALORES",
@@ -1007,12 +1007,12 @@
       ],
       "fanout": 4,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (14 instr).",
+      "description": "Unclassified function (14 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_043D -- offset 0x043D -- 14 instr\n; Funcion sin clasificar definitiva (14 instr).\n; tags: small\n; callers: sub_01B6\n; calls (intra): sub_01F3, sub_0355, sub_045D, sub_0492\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_043D -- offset 0x043D -- 14 instr\n; Unclassified function (14 instr).\n; tags: small\n; callers: sub_01B6\n; calls (intra): sub_01F3, sub_0355, sub_045D, sub_0492\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGALORES",
@@ -1067,14 +1067,14 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (33 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (33 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_045D -- offset 0x045D -- 33 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (33 instr).\n; tags: iterator, loop, string_op\n; callers: sub_043D\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_045D -- offset 0x045D -- 33 instr\n; Iterator with string ops (movsb/scasb/...) (33 instr).\n; tags: iterator, loop, string_op\n; callers: sub_043D\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGALORES",
@@ -1140,12 +1140,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (36 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (36 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0492 -- offset 0x0492 -- 36 instr\n; Dispatcher: tabla de decisiones cmp+jcc (36 instr).\n; tags: dispatcher\n; callers: sub_043D\n; calls (intra): sub_04F2\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0492 -- offset 0x0492 -- 36 instr\n; Dispatcher: cmp+jcc decision table (36 instr).\n; tags: dispatcher\n; callers: sub_043D\n; calls (intra): sub_04F2\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGALORES",
@@ -1201,12 +1201,12 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Funcion sin clasificar definitiva (23 instr).",
+      "description": "Unclassified function (23 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_04F2 -- offset 0x04F2 -- 23 instr\n; Funcion sin clasificar definitiva (23 instr).\n; tags: small\n; callers: sub_01F3, sub_0492\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_04F2 -- offset 0x04F2 -- 23 instr\n; Unclassified function (23 instr).\n; tags: small\n; callers: sub_01F3, sub_0492\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGALORES",
@@ -1257,12 +1257,12 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Funcion hoja (no llama a otras, 6 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 6 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_051C -- offset 0x051C -- 6 instr\n; Funcion hoja (no llama a otras, 6 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_01B6, sub_01D6\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_051C -- offset 0x051C -- 6 instr\n; Leaf function (no callees, 6 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_01B6, sub_01D6\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGALORES",
@@ -1313,12 +1313,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion hoja (no llama a otras, 6 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 6 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_052A -- offset 0x052A -- 6 instr\n; Funcion hoja (no llama a otras, 6 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_01B6\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_052A -- offset 0x052A -- 6 instr\n; Leaf function (no callees, 6 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_01B6\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGALORES",
@@ -1371,12 +1371,12 @@
       ],
       "fanout": 0,
       "fanin": 3,
-      "description": "Funcion hoja (no llama a otras, 6 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 6 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0536 -- offset 0x0536 -- 6 instr\n; Funcion hoja (no llama a otras, 6 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_0210, sub_0EC6, sub_1CEE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0536 -- offset 0x0536 -- 6 instr\n; Leaf function (no callees, 6 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_0210, sub_0EC6, sub_1CEE\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGALORES",
@@ -1450,7 +1450,7 @@
       ],
       "fanout": 4,
       "fanin": 2,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (1093 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (1093 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
@@ -1458,7 +1458,7 @@
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0541 -- offset 0x0541 -- 1093 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (1093 instr).\n; tags: complex_iterator, far, loop, string_op\n; callers: sub_01B6, sub_01D6\n; calls (intra): sub_0EC6, sub_2426, sub_24B2, sub_282C\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0541 -- offset 0x0541 -- 1093 instr\n; Iterator with string ops (movsb/scasb/...) (1093 instr).\n; tags: complex_iterator, far, loop, string_op\n; callers: sub_01B6, sub_01D6\n; calls (intra): sub_0EC6, sub_2426, sub_24B2, sub_282C\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGALORES",
@@ -1541,7 +1541,7 @@
       ],
       "fanout": 7,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (1459 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (1459 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
@@ -1549,7 +1549,7 @@
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0EC6 -- offset 0x0EC6 -- 1459 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (1459 instr).\n; tags: complex_iterator, far, loop, string_op\n; callers: sub_0541\n; calls (intra): sub_0536, sub_1C1F, sub_1CEE, sub_2327, sub_2426, sub_24B2 (+1 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0EC6 -- offset 0x0EC6 -- 1459 instr\n; Iterator with string ops (movsb/scasb/...) (1459 instr).\n; tags: complex_iterator, far, loop, string_op\n; callers: sub_0541\n; calls (intra): sub_0536, sub_1C1F, sub_1CEE, sub_2327, sub_2426, sub_24B2 (+1 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGALORES",
@@ -1610,12 +1610,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (71 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (71 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1C1F -- offset 0x1C1F -- 71 instr\n; Dispatcher: tabla de decisiones cmp+jcc (71 instr).\n; tags: dispatcher\n; callers: sub_0EC6\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1C1F -- offset 0x1C1F -- 71 instr\n; Dispatcher: cmp+jcc decision table (71 instr).\n; tags: dispatcher\n; callers: sub_0EC6\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGALORES",
@@ -1684,7 +1684,7 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (348 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (348 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
@@ -1692,7 +1692,7 @@
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1CEE -- offset 0x1CEE -- 348 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (348 instr).\n; tags: complex_iterator, far, loop, string_op\n; callers: sub_0EC6\n; calls (intra): sub_0536, sub_2426\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1CEE -- offset 0x1CEE -- 348 instr\n; Iterator with string ops (movsb/scasb/...) (348 instr).\n; tags: complex_iterator, far, loop, string_op\n; callers: sub_0EC6\n; calls (intra): sub_0536, sub_2426\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGALORES",
@@ -1762,12 +1762,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Funcion mediana (49 instr, 1 calls).",
+      "description": "Mid-size function (49 instr, 1 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2036 -- offset 0x2036 -- 49 instr\n; Funcion mediana (49 instr, 1 calls).\n; tags: medium\n; callers: sub_20B4\n; calls (intra): sub_20B4\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2036 -- offset 0x2036 -- 49 instr\n; Mid-size function (49 instr, 1 calls).\n; tags: medium\n; callers: sub_20B4\n; calls (intra): sub_20B4\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGALORES",
@@ -1840,14 +1840,14 @@
       ],
       "fanout": 4,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (177 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (177 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_20B4 -- offset 0x20B4 -- 177 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (177 instr).\n; tags: complex_iterator, loop, string_op\n; callers: sub_2036\n; calls (intra): sub_2036, sub_225F, sub_2322, sub_27EE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_20B4 -- offset 0x20B4 -- 177 instr\n; Iterator with string ops (movsb/scasb/...) (177 instr).\n; tags: complex_iterator, loop, string_op\n; callers: sub_2036\n; calls (intra): sub_2036, sub_225F, sub_2322, sub_27EE\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGALORES",
@@ -1910,7 +1910,7 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (90 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (90 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
@@ -1918,7 +1918,7 @@
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_225F -- offset 0x225F -- 90 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (90 instr).\n; tags: complex_iterator, far, loop, string_op\n; callers: sub_20B4\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_225F -- offset 0x225F -- 90 instr\n; Iterator with string ops (movsb/scasb/...) (90 instr).\n; tags: complex_iterator, far, loop, string_op\n; callers: sub_20B4\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGALORES",
@@ -1961,12 +1961,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Stub trivial (2 instrucciones, sin logica significativa).",
+      "description": "Trivial stub (2 instructions, no significant logic).",
       "confidence": "low",
       "semantic_tags": [
         "trivial_stub"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2322 -- offset 0x2322 -- 2 instr\n; Stub trivial (2 instrucciones, sin logica significativa).\n; tags: trivial_stub\n; callers: sub_20B4\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2322 -- offset 0x2322 -- 2 instr\n; Trivial stub (2 instructions, no significant logic).\n; tags: trivial_stub\n; callers: sub_20B4\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGALORES",
@@ -2033,14 +2033,14 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (128 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (128 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
         "far",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2327 -- offset 0x2327 -- 128 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (128 instr).\n; tags: complex_iterator, far, string_op\n; callers: sub_0EC6\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2327 -- offset 0x2327 -- 128 instr\n; Iterator with string ops (movsb/scasb/...) (128 instr).\n; tags: complex_iterator, far, string_op\n; callers: sub_0EC6\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGALORES",
@@ -2110,12 +2110,12 @@
       ],
       "fanout": 2,
       "fanin": 3,
-      "description": "Funcion sin clasificar definitiva (26 instr).",
+      "description": "Unclassified function (26 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2426 -- offset 0x2426 -- 26 instr\n; Funcion sin clasificar definitiva (26 instr).\n; tags: small\n; callers: sub_0541, sub_0EC6, sub_1CEE\n; calls (intra): sub_01D6, sub_247A\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2426 -- offset 0x2426 -- 26 instr\n; Unclassified function (26 instr).\n; tags: small\n; callers: sub_0541, sub_0EC6, sub_1CEE\n; calls (intra): sub_01D6, sub_247A\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGALORES",
@@ -2167,12 +2167,12 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (4 instr).",
+      "description": "Unclassified function (4 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2474 -- offset 0x2474 -- 4 instr\n; Funcion sin clasificar definitiva (4 instr).\n; tags: wrapper\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2474 -- offset 0x2474 -- 4 instr\n; Unclassified function (4 instr).\n; tags: wrapper\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGALORES",
@@ -2235,12 +2235,12 @@
       ],
       "fanout": 0,
       "fanin": 3,
-      "description": "Funcion hoja (no llama a otras, 20 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 20 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_247A -- offset 0x247A -- 20 instr\n; Funcion hoja (no llama a otras, 20 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_2426, sub_2682, sub_271F\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_247A -- offset 0x247A -- 20 instr\n; Leaf function (no callees, 20 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_2426, sub_2682, sub_271F\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGALORES",
@@ -2311,13 +2311,13 @@
       ],
       "fanout": 1,
       "fanin": 2,
-      "description": "Funcion mediana (69 instr, 1 calls).",
+      "description": "Mid-size function (69 instr, 1 calls).",
       "confidence": "low",
       "semantic_tags": [
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_24B2 -- offset 0x24B2 -- 69 instr\n; Funcion mediana (69 instr, 1 calls).\n; tags: far, medium\n; callers: sub_0541, sub_0EC6\n; calls (intra): sub_01D6\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_24B2 -- offset 0x24B2 -- 69 instr\n; Mid-size function (69 instr, 1 calls).\n; tags: far, medium\n; callers: sub_0541, sub_0EC6\n; calls (intra): sub_01D6\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGALORES",
@@ -2387,13 +2387,13 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Funcion compleja: 163 instrucciones, 1 llamadas, 4 branches.",
+      "description": "Complex function: 163 instructions, 1 calls, 4 branches.",
       "confidence": "low",
       "semantic_tags": [
         "complex",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2552 -- offset 0x2552 -- 163 instr\n; Funcion compleja: 163 instrucciones, 1 llamadas, 4 branches.\n; tags: complex, far\n; calls (intra): sub_015D\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2552 -- offset 0x2552 -- 163 instr\n; Complex function: 163 instructions, 1 calls, 4 branches.\n; tags: complex, far\n; calls (intra): sub_015D\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGALORES",
@@ -2459,12 +2459,12 @@
       "callers": [],
       "fanout": 2,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (15 instr).",
+      "description": "Unclassified function (15 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2682 -- offset 0x2682 -- 15 instr\n; Funcion sin clasificar definitiva (15 instr).\n; tags: small\n; calls (intra): sub_01D6, sub_247A\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2682 -- offset 0x2682 -- 15 instr\n; Unclassified function (15 instr).\n; tags: small\n; calls (intra): sub_01D6, sub_247A\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGALORES",
@@ -2524,12 +2524,12 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (10 instr).",
+      "description": "Unclassified function (10 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_26A5 -- offset 0x26A5 -- 10 instr\n; Funcion sin clasificar definitiva (10 instr).\n; tags: small\n; calls (intra): sub_01B6\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_26A5 -- offset 0x26A5 -- 10 instr\n; Unclassified function (10 instr).\n; tags: small\n; calls (intra): sub_01B6\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGALORES",
@@ -2588,12 +2588,12 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (15 instr).",
+      "description": "Unclassified function (15 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_26BD -- offset 0x26BD -- 15 instr\n; Funcion sin clasificar definitiva (15 instr).\n; tags: wrapper\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_26BD -- offset 0x26BD -- 15 instr\n; Unclassified function (15 instr).\n; tags: wrapper\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGALORES",
@@ -2658,13 +2658,13 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion mediana (33 instr, 0 calls).",
+      "description": "Mid-size function (33 instr, 0 calls).",
       "confidence": "low",
       "semantic_tags": [
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_26E4 -- offset 0x26E4 -- 33 instr\n; Funcion mediana (33 instr, 0 calls).\n; tags: far, medium\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_26E4 -- offset 0x26E4 -- 33 instr\n; Mid-size function (33 instr, 0 calls).\n; tags: far, medium\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGALORES",
@@ -2728,12 +2728,12 @@
       "callers": [],
       "fanout": 2,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (14 instr).",
+      "description": "Unclassified function (14 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_271F -- offset 0x271F -- 14 instr\n; Funcion sin clasificar definitiva (14 instr).\n; tags: small\n; calls (intra): sub_01B6, sub_247A\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_271F -- offset 0x271F -- 14 instr\n; Unclassified function (14 instr).\n; tags: small\n; calls (intra): sub_01B6, sub_247A\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGALORES",
@@ -2792,12 +2792,12 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (15 instr).",
+      "description": "Unclassified function (15 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_273E -- offset 0x273E -- 15 instr\n; Funcion sin clasificar definitiva (15 instr).\n; tags: wrapper\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_273E -- offset 0x273E -- 15 instr\n; Unclassified function (15 instr).\n; tags: wrapper\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGALORES",
@@ -2858,12 +2858,12 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (10 instr).",
+      "description": "Unclassified function (10 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2769 -- offset 0x2769 -- 10 instr\n; Funcion sin clasificar definitiva (10 instr).\n; tags: small\n; calls (intra): sub_01D6\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2769 -- offset 0x2769 -- 10 instr\n; Unclassified function (10 instr).\n; tags: small\n; calls (intra): sub_01D6\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGALORES",
@@ -2926,13 +2926,13 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion mediana (54 instr, 0 calls).",
+      "description": "Mid-size function (54 instr, 0 calls).",
       "confidence": "low",
       "semantic_tags": [
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_277E -- offset 0x277E -- 54 instr\n; Funcion mediana (54 instr, 0 calls).\n; tags: far, medium\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_277E -- offset 0x277E -- 54 instr\n; Mid-size function (54 instr, 0 calls).\n; tags: far, medium\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGALORES",
@@ -2995,13 +2995,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (28 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (28 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_27EE -- offset 0x27EE -- 28 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (28 instr).\n; tags: iterator, string_op\n; callers: sub_20B4\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_27EE -- offset 0x27EE -- 28 instr\n; Iterator with string ops (movsb/scasb/...) (28 instr).\n; tags: iterator, string_op\n; callers: sub_20B4\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGALORES",
@@ -3062,12 +3062,12 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Funcion hoja (no llama a otras, 18 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 18 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_282C -- offset 0x282C -- 18 instr\n; Funcion hoja (no llama a otras, 18 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_0541, sub_0EC6\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_282C -- offset 0x282C -- 18 instr\n; Leaf function (no callees, 18 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_0541, sub_0EC6\n;----------------------------------------------------------------------"
     }
   ]
 }

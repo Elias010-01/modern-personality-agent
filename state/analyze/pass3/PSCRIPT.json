@@ -93,14 +93,14 @@
       "callers": [],
       "fanout": 6,
       "fanin": 0,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (192 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (192 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_user",
         "dispatcher",
         "int_5"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0473 -- offset 0x0473 -- 192 instr\n; Dispatcher: tabla de decisiones cmp+jcc (192 instr).\n; tags: calls_user, dispatcher, int_5\n; calls (intra): sub_1986, sub_1AE0, sub_1B81, sub_2448, sub_2512\n; calls (inter): USER.SETRECTEMPTY\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0473 -- offset 0x0473 -- 192 instr\n; Dispatcher: cmp+jcc decision table (192 instr).\n; tags: calls_user, dispatcher, int_5\n; calls (intra): sub_1986, sub_1AE0, sub_1B81, sub_2448, sub_2512\n; calls (inter): USER.SETRECTEMPTY\n;----------------------------------------------------------------------"
     },
     {
       "module": "PSCRIPT",
@@ -169,12 +169,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Funcion mediana (74 instr, 1 calls).",
+      "description": "Mid-size function (74 instr, 1 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0655 -- offset 0x0655 -- 74 instr\n; Funcion mediana (74 instr, 1 calls).\n; tags: medium\n; callers: sub_100B\n; calls (intra): sub_1816\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0655 -- offset 0x0655 -- 74 instr\n; Mid-size function (74 instr, 1 calls).\n; tags: medium\n; callers: sub_100B\n; calls (intra): sub_1816\n;----------------------------------------------------------------------"
     },
     {
       "module": "PSCRIPT",
@@ -274,14 +274,14 @@
       ],
       "fanout": 9,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (298 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (298 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0703 -- offset 0x0703 -- 298 instr\n; Dispatcher: tabla de decisiones cmp+jcc (298 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_0A2D\n; calls (intra): sub_0CA8, sub_1364, sub_18AC, sub_1913\n; calls (inter): KERNEL.FINDRESOURCE, KERNEL.FREERESOURCE, KERNEL.GLOBALUNLOCK, KERNEL.LOADRESOURCE, KERNEL.LOCKRESOURCE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0703 -- offset 0x0703 -- 298 instr\n; Dispatcher: cmp+jcc decision table (298 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_0A2D\n; calls (intra): sub_0CA8, sub_1364, sub_18AC, sub_1913\n; calls (inter): KERNEL.FINDRESOURCE, KERNEL.FREERESOURCE, KERNEL.GLOBALUNLOCK, KERNEL.LOADRESOURCE, KERNEL.LOCKRESOURCE\n;----------------------------------------------------------------------"
     },
     {
       "module": "PSCRIPT",
@@ -386,14 +386,14 @@
       "callers": [],
       "fanout": 11,
       "fanin": 0,
-      "description": "Funcion compleja: 229 instrucciones, 11 llamadas, 10 branches.",
+      "description": "Complex function: 229 instructions, 11 calls, 10 branches.",
       "confidence": "low",
       "semantic_tags": [
         "calls_kernel",
         "complex",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0A2D -- offset 0x0A2D -- 229 instr\n; Funcion compleja: 229 instrucciones, 11 llamadas, 10 branches.\n; tags: calls_kernel, complex, far\n; calls (intra): sub_0703, sub_0CA8, sub_1364, sub_1816, sub_1913\n; calls (inter): KERNEL.FINDRESOURCE, KERNEL.FREERESOURCE, KERNEL.GLOBALUNLOCK, KERNEL.LOADRESOURCE, KERNEL.LOCKRESOURCE, KERNEL.SIZEOFRESOURCE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0A2D -- offset 0x0A2D -- 229 instr\n; Complex function: 229 instructions, 11 calls, 10 branches.\n; tags: calls_kernel, complex, far\n; calls (intra): sub_0703, sub_0CA8, sub_1364, sub_1816, sub_1913\n; calls (inter): KERNEL.FINDRESOURCE, KERNEL.FREERESOURCE, KERNEL.GLOBALUNLOCK, KERNEL.LOADRESOURCE, KERNEL.LOCKRESOURCE, KERNEL.SIZEOFRESOURCE\n;----------------------------------------------------------------------"
     },
     {
       "module": "PSCRIPT",
@@ -455,12 +455,12 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Funcion compleja: 154 instrucciones, 0 llamadas, 3 branches.",
+      "description": "Complex function: 154 instructions, 0 calls, 3 branches.",
       "confidence": "low",
       "semantic_tags": [
         "complex"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0CA8 -- offset 0x0CA8 -- 154 instr\n; Funcion compleja: 154 instrucciones, 0 llamadas, 3 branches.\n; tags: complex\n; callers: sub_0703, sub_0A2D\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0CA8 -- offset 0x0CA8 -- 154 instr\n; Complex function: 154 instructions, 0 calls, 3 branches.\n; tags: complex\n; callers: sub_0703, sub_0A2D\n;----------------------------------------------------------------------"
     },
     {
       "module": "PSCRIPT",
@@ -527,13 +527,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (59 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (59 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0ED0 -- offset 0x0ED0 -- 59 instr\n; Dispatcher: tabla de decisiones cmp+jcc (59 instr).\n; tags: dispatcher, far\n; callers: sub_100B\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0ED0 -- offset 0x0ED0 -- 59 instr\n; Dispatcher: cmp+jcc decision table (59 instr).\n; tags: dispatcher, far\n; callers: sub_100B\n;----------------------------------------------------------------------"
     },
     {
       "module": "PSCRIPT",
@@ -596,12 +596,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (58 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (58 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0F67 -- offset 0x0F67 -- 58 instr\n; Dispatcher: tabla de decisiones cmp+jcc (58 instr).\n; tags: dispatcher\n; callers: sub_100B\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0F67 -- offset 0x0F67 -- 58 instr\n; Dispatcher: cmp+jcc decision table (58 instr).\n; tags: dispatcher\n; callers: sub_100B\n;----------------------------------------------------------------------"
     },
     {
       "module": "PSCRIPT",
@@ -681,13 +681,13 @@
       "callers": [],
       "fanout": 5,
       "fanin": 0,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (325 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (325 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_100B -- offset 0x100B -- 325 instr\n; Dispatcher: tabla de decisiones cmp+jcc (325 instr).\n; tags: dispatcher, far\n; calls (intra): sub_0655, sub_0ED0, sub_0F67, sub_1816, sub_1BB6\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_100B -- offset 0x100B -- 325 instr\n; Dispatcher: cmp+jcc decision table (325 instr).\n; tags: dispatcher, far\n; calls (intra): sub_0655, sub_0ED0, sub_0F67, sub_1816, sub_1BB6\n;----------------------------------------------------------------------"
     },
     {
       "module": "PSCRIPT",
@@ -753,12 +753,12 @@
       ],
       "fanout": 1,
       "fanin": 2,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (38 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (38 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1364 -- offset 0x1364 -- 38 instr\n; Dispatcher: tabla de decisiones cmp+jcc (38 instr).\n; tags: dispatcher\n; callers: sub_0703, sub_0A2D\n; calls (intra): sub_1816\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1364 -- offset 0x1364 -- 38 instr\n; Dispatcher: cmp+jcc decision table (38 instr).\n; tags: dispatcher\n; callers: sub_0703, sub_0A2D\n; calls (intra): sub_1816\n;----------------------------------------------------------------------"
     },
     {
       "module": "PSCRIPT",
@@ -817,12 +817,12 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (19 instr).",
+      "description": "Unclassified function (19 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_13C7 -- offset 0x13C7 -- 19 instr\n; Funcion sin clasificar definitiva (19 instr).\n; tags: small\n; calls (intra): sub_1816\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_13C7 -- offset 0x13C7 -- 19 instr\n; Unclassified function (19 instr).\n; tags: small\n; calls (intra): sub_1816\n;----------------------------------------------------------------------"
     },
     {
       "module": "PSCRIPT",
@@ -884,12 +884,12 @@
       "callers": [],
       "fanout": 2,
       "fanin": 0,
-      "description": "Funcion compleja: 99 instrucciones, 2 llamadas, 2 branches.",
+      "description": "Complex function: 99 instructions, 2 calls, 2 branches.",
       "confidence": "low",
       "semantic_tags": [
         "complex"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_13F7 -- offset 0x13F7 -- 99 instr\n; Funcion compleja: 99 instrucciones, 2 llamadas, 2 branches.\n; tags: complex\n; calls (intra): sub_1631, sub_1816\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_13F7 -- offset 0x13F7 -- 99 instr\n; Complex function: 99 instructions, 2 calls, 2 branches.\n; tags: complex\n; calls (intra): sub_1631, sub_1816\n;----------------------------------------------------------------------"
     },
     {
       "module": "PSCRIPT",
@@ -950,12 +950,12 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (28 instr).",
+      "description": "Unclassified function (28 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_14F7 -- offset 0x14F7 -- 28 instr\n; Funcion sin clasificar definitiva (28 instr).\n; tags: small\n; calls (intra): sub_1913\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_14F7 -- offset 0x14F7 -- 28 instr\n; Unclassified function (28 instr).\n; tags: small\n; calls (intra): sub_1913\n;----------------------------------------------------------------------"
     },
     {
       "module": "PSCRIPT",
@@ -1020,12 +1020,12 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Funcion compleja: 86 instrucciones, 1 llamadas, 5 branches.",
+      "description": "Complex function: 86 instructions, 1 calls, 5 branches.",
       "confidence": "low",
       "semantic_tags": [
         "complex"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_153E -- offset 0x153E -- 86 instr\n; Funcion compleja: 86 instrucciones, 1 llamadas, 5 branches.\n; tags: complex\n; calls (intra): sub_1913\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_153E -- offset 0x153E -- 86 instr\n; Complex function: 86 instructions, 1 calls, 5 branches.\n; tags: complex\n; calls (intra): sub_1913\n;----------------------------------------------------------------------"
     },
     {
       "module": "PSCRIPT",
@@ -1089,12 +1089,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (34 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (34 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1631 -- offset 0x1631 -- 34 instr\n; Dispatcher: tabla de decisiones cmp+jcc (34 instr).\n; tags: dispatcher\n; callers: sub_13F7\n; calls (intra): sub_1816\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1631 -- offset 0x1631 -- 34 instr\n; Dispatcher: cmp+jcc decision table (34 instr).\n; tags: dispatcher\n; callers: sub_13F7\n; calls (intra): sub_1816\n;----------------------------------------------------------------------"
     },
     {
       "module": "PSCRIPT",
@@ -1162,13 +1162,13 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Funcion mediana (79 instr, 1 calls).",
+      "description": "Mid-size function (79 instr, 1 calls).",
       "confidence": "low",
       "semantic_tags": [
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_168E -- offset 0x168E -- 79 instr\n; Funcion mediana (79 instr, 1 calls).\n; tags: far, medium\n; calls (intra): sub_1816\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_168E -- offset 0x168E -- 79 instr\n; Mid-size function (79 instr, 1 calls).\n; tags: far, medium\n; calls (intra): sub_1816\n;----------------------------------------------------------------------"
     },
     {
       "module": "PSCRIPT",
@@ -1236,14 +1236,14 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (95 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (95 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_172F -- offset 0x172F -- 95 instr\n; Dispatcher: tabla de decisiones cmp+jcc (95 instr).\n; tags: calls_kernel, dispatcher, far\n; calls (inter): KERNEL.GETPROFILESTRING\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_172F -- offset 0x172F -- 95 instr\n; Dispatcher: cmp+jcc decision table (95 instr).\n; tags: calls_kernel, dispatcher, far\n; calls (inter): KERNEL.GETPROFILESTRING\n;----------------------------------------------------------------------"
     },
     {
       "module": "PSCRIPT",
@@ -1319,13 +1319,13 @@
       ],
       "fanout": 0,
       "fanin": 8,
-      "description": "Funcion mediana (70 instr, 0 calls).",
+      "description": "Mid-size function (70 instr, 0 calls).",
       "confidence": "low",
       "semantic_tags": [
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1816 -- offset 0x1816 -- 70 instr\n; Funcion mediana (70 instr, 0 calls).\n; tags: far, medium\n; callers: sub_0655, sub_0A2D, sub_100B, sub_1364, sub_13C7, sub_13F7 (+2 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1816 -- offset 0x1816 -- 70 instr\n; Mid-size function (70 instr, 0 calls).\n; tags: far, medium\n; callers: sub_0655, sub_0A2D, sub_100B, sub_1364, sub_13C7, sub_13F7 (+2 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "PSCRIPT",
@@ -1387,13 +1387,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion mediana (50 instr, 0 calls).",
+      "description": "Mid-size function (50 instr, 0 calls).",
       "confidence": "low",
       "semantic_tags": [
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_18AC -- offset 0x18AC -- 50 instr\n; Funcion mediana (50 instr, 0 calls).\n; tags: far, medium\n; callers: sub_0703\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_18AC -- offset 0x18AC -- 50 instr\n; Mid-size function (50 instr, 0 calls).\n; tags: far, medium\n; callers: sub_0703\n;----------------------------------------------------------------------"
     },
     {
       "module": "PSCRIPT",
@@ -1457,13 +1457,13 @@
       ],
       "fanout": 0,
       "fanin": 4,
-      "description": "Funcion mediana (50 instr, 0 calls).",
+      "description": "Mid-size function (50 instr, 0 calls).",
       "confidence": "low",
       "semantic_tags": [
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1913 -- offset 0x1913 -- 50 instr\n; Funcion mediana (50 instr, 0 calls).\n; tags: far, medium\n; callers: sub_0703, sub_0A2D, sub_14F7, sub_153E\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1913 -- offset 0x1913 -- 50 instr\n; Mid-size function (50 instr, 0 calls).\n; tags: far, medium\n; callers: sub_0703, sub_0A2D, sub_14F7, sub_153E\n;----------------------------------------------------------------------"
     },
     {
       "module": "PSCRIPT",
@@ -1511,12 +1511,12 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion hoja (no llama a otras, 4 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 4 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1978 -- offset 0x1978 -- 4 instr\n; Funcion hoja (no llama a otras, 4 instr): probable helper aritmetico/conversion.\n; tags: leaf\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1978 -- offset 0x1978 -- 4 instr\n; Leaf function (no callees, 4 instr): likely arithmetic/conversion helper.\n; tags: leaf\n;----------------------------------------------------------------------"
     },
     {
       "module": "PSCRIPT",
@@ -1564,12 +1564,12 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion hoja (no llama a otras, 4 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 4 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_197F -- offset 0x197F -- 4 instr\n; Funcion hoja (no llama a otras, 4 instr): probable helper aritmetico/conversion.\n; tags: leaf\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_197F -- offset 0x197F -- 4 instr\n; Leaf function (no callees, 4 instr): likely arithmetic/conversion helper.\n; tags: leaf\n;----------------------------------------------------------------------"
     },
     {
       "module": "PSCRIPT",
@@ -1653,13 +1653,13 @@
       ],
       "fanout": 3,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (130 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (130 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1986 -- offset 0x1986 -- 130 instr\n; Dispatcher: tabla de decisiones cmp+jcc (130 instr).\n; tags: calls_kernel, dispatcher\n; callers: sub_0473\n; calls (intra): sub_24BE\n; calls (inter): KERNEL.ACCESSRESOURCE, KERNEL.FINDRESOURCE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1986 -- offset 0x1986 -- 130 instr\n; Dispatcher: cmp+jcc decision table (130 instr).\n; tags: calls_kernel, dispatcher\n; callers: sub_0473\n; calls (intra): sub_24BE\n; calls (inter): KERNEL.ACCESSRESOURCE, KERNEL.FINDRESOURCE\n;----------------------------------------------------------------------"
     },
     {
       "module": "PSCRIPT",
@@ -1718,12 +1718,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (24 instr).",
+      "description": "Unclassified function (24 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1AE0 -- offset 0x1AE0 -- 24 instr\n; Funcion sin clasificar definitiva (24 instr).\n; tags: small\n; callers: sub_0473\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1AE0 -- offset 0x1AE0 -- 24 instr\n; Unclassified function (24 instr).\n; tags: small\n; callers: sub_0473\n;----------------------------------------------------------------------"
     },
     {
       "module": "PSCRIPT",
@@ -1791,12 +1791,12 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Funcion mediana (46 instr, 0 calls).",
+      "description": "Mid-size function (46 instr, 0 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1B10 -- offset 0x1B10 -- 46 instr\n; Funcion mediana (46 instr, 0 calls).\n; tags: medium\n; callers: sub_1CA5, sub_1F84\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1B10 -- offset 0x1B10 -- 46 instr\n; Mid-size function (46 instr, 0 calls).\n; tags: medium\n; callers: sub_1CA5, sub_1F84\n;----------------------------------------------------------------------"
     },
     {
       "module": "PSCRIPT",
@@ -1861,12 +1861,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (21 instr).",
+      "description": "Unclassified function (21 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1B81 -- offset 0x1B81 -- 21 instr\n; Funcion sin clasificar definitiva (21 instr).\n; tags: small\n; callers: sub_0473\n; calls (intra): sub_2133\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1B81 -- offset 0x1B81 -- 21 instr\n; Unclassified function (21 instr).\n; tags: small\n; callers: sub_0473\n; calls (intra): sub_2133\n;----------------------------------------------------------------------"
     },
     {
       "module": "PSCRIPT",
@@ -1935,12 +1935,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (92 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (92 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1BB6 -- offset 0x1BB6 -- 92 instr\n; Dispatcher: tabla de decisiones cmp+jcc (92 instr).\n; tags: dispatcher\n; callers: sub_100B\n; calls (intra): sub_20B0\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1BB6 -- offset 0x1BB6 -- 92 instr\n; Dispatcher: cmp+jcc decision table (92 instr).\n; tags: dispatcher\n; callers: sub_100B\n; calls (intra): sub_20B0\n;----------------------------------------------------------------------"
     },
     {
       "module": "PSCRIPT",
@@ -2008,13 +2008,13 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (54 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (54 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1CA5 -- offset 0x1CA5 -- 54 instr\n; Dispatcher: tabla de decisiones cmp+jcc (54 instr).\n; tags: dispatcher, far\n; calls (intra): sub_1B10\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1CA5 -- offset 0x1CA5 -- 54 instr\n; Dispatcher: cmp+jcc decision table (54 instr).\n; tags: dispatcher, far\n; calls (intra): sub_1B10\n;----------------------------------------------------------------------"
     },
     {
       "module": "PSCRIPT",
@@ -2079,13 +2079,13 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (100 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (100 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1D22 -- offset 0x1D22 -- 100 instr\n; Dispatcher: tabla de decisiones cmp+jcc (100 instr).\n; tags: dispatcher, far\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1D22 -- offset 0x1D22 -- 100 instr\n; Dispatcher: cmp+jcc decision table (100 instr).\n; tags: dispatcher, far\n;----------------------------------------------------------------------"
     },
     {
       "module": "PSCRIPT",
@@ -2150,13 +2150,13 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion compleja: 108 instrucciones, 0 llamadas, 4 branches.",
+      "description": "Complex function: 108 instructions, 0 calls, 4 branches.",
       "confidence": "low",
       "semantic_tags": [
         "complex",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1E10 -- offset 0x1E10 -- 108 instr\n; Funcion compleja: 108 instrucciones, 0 llamadas, 4 branches.\n; tags: complex, far\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1E10 -- offset 0x1E10 -- 108 instr\n; Complex function: 108 instructions, 0 calls, 4 branches.\n; tags: complex, far\n;----------------------------------------------------------------------"
     },
     {
       "module": "PSCRIPT",
@@ -2219,13 +2219,13 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion mediana (55 instr, 0 calls).",
+      "description": "Mid-size function (55 instr, 0 calls).",
       "confidence": "low",
       "semantic_tags": [
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1F12 -- offset 0x1F12 -- 55 instr\n; Funcion mediana (55 instr, 0 calls).\n; tags: far, medium\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1F12 -- offset 0x1F12 -- 55 instr\n; Mid-size function (55 instr, 0 calls).\n; tags: far, medium\n;----------------------------------------------------------------------"
     },
     {
       "module": "PSCRIPT",
@@ -2290,13 +2290,13 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Funcion mediana (34 instr, 1 calls).",
+      "description": "Mid-size function (34 instr, 1 calls).",
       "confidence": "low",
       "semantic_tags": [
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1F84 -- offset 0x1F84 -- 34 instr\n; Funcion mediana (34 instr, 1 calls).\n; tags: far, medium\n; calls (intra): sub_1B10\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1F84 -- offset 0x1F84 -- 34 instr\n; Mid-size function (34 instr, 1 calls).\n; tags: far, medium\n; calls (intra): sub_1B10\n;----------------------------------------------------------------------"
     },
     {
       "module": "PSCRIPT",
@@ -2361,13 +2361,13 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion mediana (53 instr, 0 calls).",
+      "description": "Mid-size function (53 instr, 0 calls).",
       "confidence": "low",
       "semantic_tags": [
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1FCA -- offset 0x1FCA -- 53 instr\n; Funcion mediana (53 instr, 0 calls).\n; tags: far, medium\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1FCA -- offset 0x1FCA -- 53 instr\n; Mid-size function (53 instr, 0 calls).\n; tags: far, medium\n;----------------------------------------------------------------------"
     },
     {
       "module": "PSCRIPT",
@@ -2428,13 +2428,13 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion mediana (52 instr, 0 calls).",
+      "description": "Mid-size function (52 instr, 0 calls).",
       "confidence": "low",
       "semantic_tags": [
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2046 -- offset 0x2046 -- 52 instr\n; Funcion mediana (52 instr, 0 calls).\n; tags: far, medium\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2046 -- offset 0x2046 -- 52 instr\n; Mid-size function (52 instr, 0 calls).\n; tags: far, medium\n;----------------------------------------------------------------------"
     },
     {
       "module": "PSCRIPT",
@@ -2501,12 +2501,12 @@
       ],
       "fanout": 0,
       "fanin": 3,
-      "description": "Funcion mediana (69 instr, 0 calls).",
+      "description": "Mid-size function (69 instr, 0 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_20B0 -- offset 0x20B0 -- 69 instr\n; Funcion mediana (69 instr, 0 calls).\n; tags: medium\n; callers: sub_1BB6, sub_2252, sub_237B\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_20B0 -- offset 0x20B0 -- 69 instr\n; Mid-size function (69 instr, 0 calls).\n; tags: medium\n; callers: sub_1BB6, sub_2252, sub_237B\n;----------------------------------------------------------------------"
     },
     {
       "module": "PSCRIPT",
@@ -2567,12 +2567,12 @@
       ],
       "fanout": 0,
       "fanin": 3,
-      "description": "Funcion sin clasificar definitiva (19 instr).",
+      "description": "Unclassified function (19 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2133 -- offset 0x2133 -- 19 instr\n; Funcion sin clasificar definitiva (19 instr).\n; tags: small\n; callers: sub_1B81, sub_216D, sub_2252\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2133 -- offset 0x2133 -- 19 instr\n; Unclassified function (19 instr).\n; tags: small\n; callers: sub_1B81, sub_216D, sub_2252\n;----------------------------------------------------------------------"
     },
     {
       "module": "PSCRIPT",
@@ -2642,12 +2642,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (89 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (89 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_216D -- offset 0x216D -- 89 instr\n; Dispatcher: tabla de decisiones cmp+jcc (89 instr).\n; tags: dispatcher\n; callers: sub_2252\n; calls (intra): sub_2133\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_216D -- offset 0x216D -- 89 instr\n; Dispatcher: cmp+jcc decision table (89 instr).\n; tags: dispatcher\n; callers: sub_2252\n; calls (intra): sub_2133\n;----------------------------------------------------------------------"
     },
     {
       "module": "PSCRIPT",
@@ -2719,12 +2719,12 @@
       "callers": [],
       "fanout": 3,
       "fanin": 0,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (115 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (115 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2252 -- offset 0x2252 -- 115 instr\n; Dispatcher: tabla de decisiones cmp+jcc (115 instr).\n; tags: dispatcher\n; calls (intra): sub_20B0, sub_2133, sub_216D\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2252 -- offset 0x2252 -- 115 instr\n; Dispatcher: cmp+jcc decision table (115 instr).\n; tags: dispatcher\n; calls (intra): sub_20B0, sub_2133, sub_216D\n;----------------------------------------------------------------------"
     },
     {
       "module": "PSCRIPT",
@@ -2792,13 +2792,13 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (76 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (76 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_237B -- offset 0x237B -- 76 instr\n; Dispatcher: tabla de decisiones cmp+jcc (76 instr).\n; tags: dispatcher, far\n; calls (intra): sub_20B0\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_237B -- offset 0x237B -- 76 instr\n; Dispatcher: cmp+jcc decision table (76 instr).\n; tags: dispatcher, far\n; calls (intra): sub_20B0\n;----------------------------------------------------------------------"
     },
     {
       "module": "PSCRIPT",
@@ -2872,13 +2872,13 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Funcion mediana (37 instr, 2 calls).",
+      "description": "Mid-size function (37 instr, 2 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_gdi",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2448 -- offset 0x2448 -- 37 instr\n; Funcion mediana (37 instr, 2 calls).\n; tags: calls_gdi, medium\n; callers: sub_0473\n; calls (inter): GDI.OPENJOB, GDI.STARTSPOOLPAGE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2448 -- offset 0x2448 -- 37 instr\n; Mid-size function (37 instr, 2 calls).\n; tags: calls_gdi, medium\n; callers: sub_0473\n; calls (inter): GDI.OPENJOB, GDI.STARTSPOOLPAGE\n;----------------------------------------------------------------------"
     },
     {
       "module": "PSCRIPT",
@@ -2943,12 +2943,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (30 instr).",
+      "description": "Unclassified function (30 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_24BE -- offset 0x24BE -- 30 instr\n; Funcion sin clasificar definitiva (30 instr).\n; tags: small\n; callers: sub_1986\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_24BE -- offset 0x24BE -- 30 instr\n; Unclassified function (30 instr).\n; tags: small\n; callers: sub_1986\n;----------------------------------------------------------------------"
     },
     {
       "module": "PSCRIPT",
@@ -3006,12 +3006,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (10 instr).",
+      "description": "Unclassified function (10 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2512 -- offset 0x2512 -- 10 instr\n; Funcion sin clasificar definitiva (10 instr).\n; tags: wrapper\n; callers: sub_0473\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2512 -- offset 0x2512 -- 10 instr\n; Unclassified function (10 instr).\n; tags: wrapper\n; callers: sub_0473\n;----------------------------------------------------------------------"
     }
   ]
 }

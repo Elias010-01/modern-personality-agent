@@ -24,6 +24,19 @@ Specifically:
   debug symbols and module names from production NE binaries and use them
   to guide reverse engineering — is theirs, not ours. We adopted it.
 
+  After this project was published (2026-05-25), Connor (starfrost) sent
+  detailed technical feedback by email and pointed us to the parsed
+  symbol dumps of the Windows 1.03 **debug** build of KERNEL/USER/GDI
+  (`win1.03/reversing/*syms.txt` in his research repo). Those text dumps
+  are produced by his [`symread`](https://github.com/starfrost013/symread)
+  tool from Microsoft’s original `.SYM` files. Pass 21 of our pipeline
+  reads them, cross-references the names against our retail `.DEF`
+  exports, and emits per-module reference tables under
+  `docs/analysis/<MODULE>_starfrost_symbols.md`. Of the 2017 debug
+  symbols, 520 are confirmed by name match against the retail exports
+  we already had. **Used with starfrost's explicit invitation** in the
+  same email.
+
 - **[starfrost013/modern-personality-runtime](https://github.com/starfrost013/modern-personality-runtime)** —
   documentation and helpers for running legacy MASM 4.0 / MSC 4.0 toolchains
   on modern operating systems. We followed similar conventions.
@@ -111,6 +124,20 @@ Específicamente:
   nombres de módulos desde los binarios NE de producción y usarlos para
   guiar la ingeniería inversa — es suya, no nuestra. Nosotros la
   adoptamos.
+
+  Tras la publicación de este proyecto (25/05/2026), Connor (starfrost)
+  nos envió feedback técnico detallado por email y nos indicó sus
+  dumps parseados de símbolos del build **debug** de Windows 1.03 de
+  KERNEL/USER/GDI (`win1.03/reversing/*syms.txt` en su repo de
+  investigación). Esos dumps los produce su herramienta
+  [`symread`](https://github.com/starfrost013/symread) a partir de los
+  ficheros `.SYM` originales de Microsoft. Nuestro Pass 21 los lee,
+  cruza los nombres con nuestros exports de retail (`.DEF`) y emite
+  tablas de referencia por módulo en
+  `docs/analysis/<MODULE>_starfrost_symbols.md`. De los 2017 símbolos
+  del debug, 520 se confirman por coincidencia de nombre con los
+  exports retail que ya teníamos. **Usado con la invitación explícita
+  de starfrost** en ese mismo email.
 
 - **[starfrost013/modern-personality-runtime](https://github.com/starfrost013/modern-personality-runtime)** —
   documentación y helpers para ejecutar toolchains legacy MASM 4.0 / MSC

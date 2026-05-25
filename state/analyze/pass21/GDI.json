@@ -1,0 +1,2444 @@
+{
+  "module": "GDI",
+  "binary_name": "GDI",
+  "num_functions": 595,
+  "num_constants": 6,
+  "num_segments": 31,
+  "constants": [
+    {
+      "offset": 1,
+      "name": "__acrtused"
+    },
+    {
+      "offset": 6,
+      "name": "PLOCALHEAP"
+    },
+    {
+      "offset": 8,
+      "name": "pAtomTable"
+    },
+    {
+      "offset": 10,
+      "name": "pStackTop"
+    },
+    {
+      "offset": 12,
+      "name": "pStackMin"
+    },
+    {
+      "offset": 14,
+      "name": "pStackBot"
+    }
+  ],
+  "segments": [
+    {
+      "name": "_TEXT",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "CREATECOMPATIBLEDC"
+        },
+        {
+          "offset": 70,
+          "name": "CREATECOMPATEXIT"
+        },
+        {
+          "offset": 82,
+          "name": "CREATEDC"
+        },
+        {
+          "offset": 86,
+          "name": "CREATEIC"
+        },
+        {
+          "offset": 88,
+          "name": "INTERNALCREATEDC"
+        },
+        {
+          "offset": 199,
+          "name": "CREATEDC10"
+        },
+        {
+          "offset": 219,
+          "name": "CREATEDC15"
+        },
+        {
+          "offset": 232,
+          "name": "CREATEDC20"
+        },
+        {
+          "offset": 235,
+          "name": "CREATEDC30"
+        },
+        {
+          "offset": 396,
+          "name": "CREATEDC40"
+        },
+        {
+          "offset": 485,
+          "name": "CREATEDC45"
+        },
+        {
+          "offset": 498,
+          "name": "CREATEDC50"
+        },
+        {
+          "offset": 511,
+          "name": "CREATEDC60"
+        },
+        {
+          "offset": 536,
+          "name": "CREATEDC70"
+        },
+        {
+          "offset": 538,
+          "name": "CREATEDCEXIT"
+        },
+        {
+          "offset": 551,
+          "name": "GETLOG"
+        },
+        {
+          "offset": 558,
+          "name": "GETLOG10"
+        },
+        {
+          "offset": 573,
+          "name": "GETLOG20"
+        },
+        {
+          "offset": 639,
+          "name": "GETLOG30"
+        },
+        {
+          "offset": 642,
+          "name": "GETLOG40"
+        },
+        {
+          "offset": 652,
+          "name": "GETLOG50"
+        },
+        {
+          "offset": 716,
+          "name": "GETPHYS"
+        },
+        {
+          "offset": 753,
+          "name": "GETPHYS10"
+        },
+        {
+          "offset": 757,
+          "name": "GETPHYS15"
+        },
+        {
+          "offset": 760,
+          "name": "GETPHYS20"
+        },
+        {
+          "offset": 780,
+          "name": "GETPHYS25"
+        },
+        {
+          "offset": 787,
+          "name": "GETPHYS30"
+        },
+        {
+          "offset": 801,
+          "name": "GETPHYS35"
+        },
+        {
+          "offset": 827,
+          "name": "GETPHYS40"
+        },
+        {
+          "offset": 842,
+          "name": "GETPHYS50"
+        },
+        {
+          "offset": 869,
+          "name": "GETPHYS60"
+        },
+        {
+          "offset": 925,
+          "name": "GETPHYS65"
+        },
+        {
+          "offset": 947,
+          "name": "GETPHYS70"
+        },
+        {
+          "offset": 970,
+          "name": "GETPHYS80"
+        },
+        {
+          "offset": 973,
+          "name": "GETPHYS100"
+        },
+        {
+          "offset": 978,
+          "name": "GETPHYS130"
+        },
+        {
+          "offset": 1037,
+          "name": "GETPHYS140"
+        },
+        {
+          "offset": 1070,
+          "name": "GETPHYS150"
+        },
+        {
+          "offset": 1075,
+          "name": "GETPHYS160"
+        },
+        {
+          "offset": 1107,
+          "name": "GETPHYS170"
+        },
+        {
+          "offset": 1110,
+          "name": "GETPHYS200"
+        },
+        {
+          "offset": 1143,
+          "name": "GETPHYS300"
+        },
+        {
+          "offset": 1173,
+          "name": "GETPHYS310"
+        },
+        {
+          "offset": 1200,
+          "name": "GETPHYS320"
+        },
+        {
+          "offset": 1201,
+          "name": "DELETEMETASTUFF"
+        },
+        {
+          "offset": 1220,
+          "name": "DELETEMETASTUFF1"
+        },
+        {
+          "offset": 1221,
+          "name": "MYADDATOM"
+        },
+        {
+          "offset": 1229,
+          "name": "MYDELETEATOM"
+        },
+        {
+          "offset": 1237,
+          "name": "RETACHAIN"
+        },
+        {
+          "offset": 1257,
+          "name": "RETACHAIN1"
+        },
+        {
+          "offset": 1257,
+          "name": "RETATOMS"
+        },
+        {
+          "offset": 1280,
+          "name": "FREEHANDLES"
+        },
+        {
+          "offset": 1281,
+          "name": "FREEHANDLES1"
+        },
+        {
+          "offset": 1293,
+          "name": "FREEHANDLES2"
+        },
+        {
+          "offset": 1297,
+          "name": "MYALLOC"
+        },
+        {
+          "offset": 1310,
+          "name": "SAVEDC"
+        },
+        {
+          "offset": 1503,
+          "name": "RESTOREDC"
+        },
+        {
+          "offset": 1680,
+          "name": "SAVEVISRGN"
+        },
+        {
+          "offset": 1763,
+          "name": "RESTOREVISRGN"
+        },
+        {
+          "offset": 1855,
+          "name": "INVALIDATECLIP"
+        },
+        {
+          "offset": 1872,
+          "name": "DELETEDC"
+        },
+        {
+          "offset": 2292,
+          "name": "CREATEPENINDIRECT"
+        },
+        {
+          "offset": 2326,
+          "name": "CREATEPEN"
+        },
+        {
+          "offset": 2371,
+          "name": "CREATEBRUSHINDIRECT"
+        },
+        {
+          "offset": 2567,
+          "name": "CREATESOLIDBRUSH"
+        },
+        {
+          "offset": 2602,
+          "name": "CREATEHATCHBRUSH"
+        },
+        {
+          "offset": 2638,
+          "name": "CREATEPATTERNBRUSH"
+        },
+        {
+          "offset": 2689,
+          "name": "CREATEFONTINDIRECT"
+        },
+        {
+          "offset": 2734,
+          "name": "CREATEFONT"
+        },
+        {
+          "offset": 2839,
+          "name": "CREATEBITMAPINDIRECT"
+        },
+        {
+          "offset": 3091,
+          "name": "CREATEBITMAP"
+        },
+        {
+          "offset": 3198,
+          "name": "CREATECOMPATIBLEBITMAP"
+        },
+        {
+          "offset": 3201,
+          "name": "CREATEDISCARDABLEBITMAP"
+        },
+        {
+          "offset": 3203,
+          "name": "COMPATIBLEBITMAP"
+        },
+        {
+          "offset": 3373,
+          "name": "SETBITMAPDIMENSION"
+        },
+        {
+          "offset": 3441,
+          "name": "GETBITMAPDIMENSION"
+        },
+        {
+          "offset": 3503,
+          "name": "SETDCORG"
+        },
+        {
+          "offset": 3672,
+          "name": "SETWINDOWEXT"
+        },
+        {
+          "offset": 3680,
+          "name": "SETVIEWPORTEXT"
+        },
+        {
+          "offset": 3686,
+          "name": "SETWINVIEWEXT"
+        },
+        {
+          "offset": 3837,
+          "name": "SCALEVIEWPORTEXT"
+        },
+        {
+          "offset": 3848,
+          "name": "SCALEWINDOWEXT"
+        },
+        {
+          "offset": 3857,
+          "name": "SCALEEXT"
+        },
+        {
+          "offset": 3987,
+          "name": "GETNEARESTCOLOR"
+        },
+        {
+          "offset": 4076,
+          "name": "SETBKCOLOR"
+        },
+        {
+          "offset": 4201,
+          "name": "SETTEXTCOLOR"
+        },
+        {
+          "offset": 4374,
+          "name": "SELECTCLIPRGN"
+        },
+        {
+          "offset": 4535,
+          "name": "SELECTVISRGN"
+        },
+        {
+          "offset": 4623,
+          "name": "INTERSECTVISRECT"
+        },
+        {
+          "offset": 4626,
+          "name": "EXCLUDEVISRECT"
+        },
+        {
+          "offset": 4632,
+          "name": "INTERSECTCLIPRECT"
+        },
+        {
+          "offset": 4639,
+          "name": "EXCLUDECLIPRECT"
+        },
+        {
+          "offset": 4646,
+          "name": "RECTSTUFF"
+        },
+        {
+          "offset": 4862,
+          "name": "COMPUTECLIPRGN"
+        },
+        {
+          "offset": 4940,
+          "name": "GETCLIPBOX"
+        },
+        {
+          "offset": 5035,
+          "name": "RGNTYPE"
+        },
+        {
+          "offset": 5062,
+          "name": "COPYRGNNEW"
+        },
+        {
+          "offset": 5086,
+          "name": "FARCOPYRGNNEW"
+        },
+        {
+          "offset": 5113,
+          "name": "CINVALIDATECLIP"
+        },
+        {
+          "offset": 5144,
+          "name": "DELETEOBJECT"
+        },
+        {
+          "offset": 5230,
+          "name": "SANCTIONBITMAP"
+        },
+        {
+          "offset": 5334,
+          "name": "SELECTOBJECT"
+        },
+        {
+          "offset": 5585,
+          "name": "SELECTBITMAP"
+        },
+        {
+          "offset": 5856,
+          "name": "UNLOCKDC"
+        },
+        {
+          "offset": 5859,
+          "name": "LOCKDC"
+        },
+        {
+          "offset": 5861,
+          "name": "LOCKUNLOCK"
+        },
+        {
+          "offset": 6177,
+          "name": "VALIDATEHANDLE"
+        },
+        {
+          "offset": 6258,
+          "name": "HOWLONGISIT"
+        },
+        {
+          "offset": 6270,
+          "name": "FARHOWLONGISIT"
+        },
+        {
+          "offset": 6292,
+          "name": "FARGDIFIXEDALLOC"
+        },
+        {
+          "offset": 6299,
+          "name": "FARGDILOCALALLOC"
+        },
+        {
+          "offset": 6307,
+          "name": "GDILOCALALLOC"
+        },
+        {
+          "offset": 6324,
+          "name": "GDIFIXEDALLOC"
+        },
+        {
+          "offset": 6330,
+          "name": "GDIGLOBALALLOC"
+        },
+        {
+          "offset": 6354,
+          "name": "FARGDIGLOBALALLOC"
+        },
+        {
+          "offset": 6390,
+          "name": "GDILOCKDATASEG"
+        },
+        {
+          "offset": 6407,
+          "name": "FARGDILOCKDATASEG"
+        },
+        {
+          "offset": 6440,
+          "name": "GDIUNLOCKDATASEG"
+        },
+        {
+          "offset": 6457,
+          "name": "FARGDIUNLOCKDATASEG"
+        },
+        {
+          "offset": 6490,
+          "name": "LOCALDISPOSE"
+        },
+        {
+          "offset": 6511,
+          "name": "GETRGNBOX"
+        },
+        {
+          "offset": 6591,
+          "name": "INQUIREVISRGN"
+        },
+        {
+          "offset": 6653,
+          "name": "GDIINITAPP"
+        },
+        {
+          "offset": 6696,
+          "name": "TRIPLEEXTEND"
+        },
+        {
+          "offset": 6729,
+          "name": "TRIPLEADD"
+        },
+        {
+          "offset": 6777,
+          "name": "TRIPLESUB"
+        },
+        {
+          "offset": 6825,
+          "name": "TRIPLELEFTSHIFT"
+        },
+        {
+          "offset": 6860,
+          "name": "TRIPLEMUL"
+        },
+        {
+          "offset": 6972,
+          "name": "GETPBRUSH"
+        },
+        {
+          "offset": 7403,
+          "name": "GETPPEN"
+        },
+        {
+          "offset": 7802,
+          "name": "SETBRUSHORG"
+        },
+        {
+          "offset": 7872,
+          "name": "UNREALIZEOBJECT"
+        },
+        {
+          "offset": 7972,
+          "name": "UNREALIZEOBJECTERROR"
+        },
+        {
+          "offset": 7976,
+          "name": "RGOFFSET"
+        },
+        {
+          "offset": 8086,
+          "name": "INREGION"
+        },
+        {
+          "offset": 8215,
+          "name": "FARINREGION"
+        },
+        {
+          "offset": 8250,
+          "name": "PTINRECT"
+        },
+        {
+          "offset": 8329,
+          "name": "INTERSECTRECT"
+        },
+        {
+          "offset": 8516,
+          "name": "RGNWALK"
+        },
+        {
+          "offset": 8795,
+          "name": "BITBLTBODY"
+        },
+        {
+          "offset": 9533,
+          "name": "BLTOUTPUT"
+        },
+        {
+          "offset": 9689,
+          "name": "PATBLT"
+        },
+        {
+          "offset": 9765,
+          "name": "BITBLT"
+        },
+        {
+          "offset": 9823,
+          "name": "STRETCHBLT"
+        },
+        {
+          "offset": 10195,
+          "name": "TEXTOUT"
+        },
+        {
+          "offset": 10622,
+          "name": "TEXTOUTPUT"
+        },
+        {
+          "offset": 10708,
+          "name": "GETTEXTEXTENT"
+        },
+        {
+          "offset": 10747,
+          "name": "GETCONTINUINGTEXTEXTENT"
+        },
+        {
+          "offset": 10787,
+          "name": "GETOVERALLTEXTEXTENT"
+        },
+        {
+          "offset": 11209,
+          "name": "GETBASICEXTENT"
+        },
+        {
+          "offset": 11374,
+          "name": "CREATERECTRGNINDIRECT"
+        },
+        {
+          "offset": 11404,
+          "name": "OFFSETRGN"
+        },
+        {
+          "offset": 11476,
+          "name": "OFFSETCLIPRGN"
+        },
+        {
+          "offset": 11611,
+          "name": "OFFSETVISRGN"
+        },
+        {
+          "offset": 11700,
+          "name": "PTVISIBLE"
+        },
+        {
+          "offset": 11802,
+          "name": "RECTVISIBLE"
+        },
+        {
+          "offset": 12037,
+          "name": "EQUALRGN"
+        },
+        {
+          "offset": 12166,
+          "name": "GETPFONT"
+        },
+        {
+          "offset": 12614,
+          "name": "MULDIV"
+        },
+        {
+          "offset": 12715,
+          "name": "MAKEISO"
+        },
+        {
+          "offset": 12857,
+          "name": "DEATH"
+        },
+        {
+          "offset": 12912,
+          "name": "RESURRECTION"
+        },
+        {
+          "offset": 12988,
+          "name": "SEARCHENV"
+        },
+        {
+          "offset": 13005,
+          "name": "SANSCOLON"
+        },
+        {
+          "offset": 13129,
+          "name": "GETSTOCKOBJECT"
+        },
+        {
+          "offset": 13151,
+          "name": "GETDEVICECAPS"
+        },
+        {
+          "offset": 13225,
+          "name": "GETBITMAPBITS"
+        },
+        {
+          "offset": 13228,
+          "name": "SETBITMAPBITS"
+        },
+        {
+          "offset": 13230,
+          "name": "BITMAPBITS"
+        },
+        {
+          "offset": 13386,
+          "name": "GETBKCOLOR"
+        },
+        {
+          "offset": 13389,
+          "name": "GETTEXTCOLOR"
+        },
+        {
+          "offset": 13392,
+          "name": "GETROP2"
+        },
+        {
+          "offset": 13395,
+          "name": "GETPOLYFILLMODE"
+        },
+        {
+          "offset": 13398,
+          "name": "GETSTRETCHBLTMODE"
+        },
+        {
+          "offset": 13401,
+          "name": "GETMAPMODE"
+        },
+        {
+          "offset": 13404,
+          "name": "GETBKMODE"
+        },
+        {
+          "offset": 13407,
+          "name": "GETRELABS"
+        },
+        {
+          "offset": 13410,
+          "name": "GETWINDOWORG"
+        },
+        {
+          "offset": 13413,
+          "name": "GETVIEWPORTORG"
+        },
+        {
+          "offset": 13416,
+          "name": "GETDCORG"
+        },
+        {
+          "offset": 13419,
+          "name": "GETBRUSHORG"
+        },
+        {
+          "offset": 13422,
+          "name": "GETWINDOWEXT"
+        },
+        {
+          "offset": 13425,
+          "name": "GETVIEWPORTEXT"
+        },
+        {
+          "offset": 13428,
+          "name": "GETCURRENTPOSITION"
+        },
+        {
+          "offset": 13430,
+          "name": "GSV"
+        },
+        {
+          "offset": 13498,
+          "name": "MOVETO"
+        },
+        {
+          "offset": 13584,
+          "name": "ALTMOVETO"
+        },
+        {
+          "offset": 13622,
+          "name": "WORDSET"
+        },
+        {
+          "offset": 13711,
+          "name": "SETROP2"
+        },
+        {
+          "offset": 13718,
+          "name": "SETPOLYFILLMODE"
+        },
+        {
+          "offset": 13725,
+          "name": "SETSTRETCHBLTMODE"
+        },
+        {
+          "offset": 13732,
+          "name": "SETBKMODE"
+        },
+        {
+          "offset": 13739,
+          "name": "SETRELABS"
+        },
+        {
+          "offset": 13746,
+          "name": "SETTRANSLATE"
+        },
+        {
+          "offset": 13765,
+          "name": "SETUNITARY"
+        },
+        {
+          "offset": 13790,
+          "name": "SETMAPMODE"
+        },
+        {
+          "offset": 13962,
+          "name": "OFFSETWINDOWORG"
+        },
+        {
+          "offset": 13970,
+          "name": "OFFSETVIEWPORTORG"
+        },
+        {
+          "offset": 13976,
+          "name": "OFFSETORG"
+        },
+        {
+          "offset": 14061,
+          "name": "SETWINDOWORG"
+        },
+        {
+          "offset": 14152,
+          "name": "SETVIEWPORTORG"
+        },
+        {
+          "offset": 14256,
+          "name": "DPTOLP"
+        },
+        {
+          "offset": 14261,
+          "name": "LPTODP"
+        },
+        {
+          "offset": 14264,
+          "name": "DPXLATE"
+        },
+        {
+          "offset": 14340,
+          "name": "FARLPTOSP"
+        },
+        {
+          "offset": 14345,
+          "name": "FARSPTOLP"
+        },
+        {
+          "offset": 14348,
+          "name": "FARSPXLATE"
+        },
+        {
+          "offset": 14388,
+          "name": "SPTOLP"
+        },
+        {
+          "offset": 14393,
+          "name": "LPTOSP"
+        },
+        {
+          "offset": 14424,
+          "name": "FARLC2DC"
+        },
+        {
+          "offset": 14446,
+          "name": "LC2DC"
+        },
+        {
+          "offset": 14692,
+          "name": "FARDC2LC"
+        },
+        {
+          "offset": 14714,
+          "name": "DC2LC"
+        },
+        {
+          "offset": 15244,
+          "name": "SLOWPROLOGUE"
+        },
+        {
+          "offset": 15250,
+          "name": "SLOWPROLOGUEALT"
+        },
+        {
+          "offset": 15284,
+          "name": "CHECKMETAFILE"
+        },
+        {
+          "offset": 15380,
+          "name": "ALTRECORDMETA"
+        },
+        {
+          "offset": 15389,
+          "name": "ALTRECORDMETAAX"
+        },
+        {
+          "offset": 15504,
+          "name": "RECORDMETA"
+        },
+        {
+          "offset": 15584,
+          "name": "MERGESCAN"
+        },
+        {
+          "offset": 15726,
+          "name": "MERGERGN"
+        },
+        {
+          "offset": 16264,
+          "name": "COMBINERGN"
+        },
+        {
+          "offset": 16615,
+          "name": "RGCOPY"
+        },
+        {
+          "offset": 16663,
+          "name": "RGRECT"
+        },
+        {
+          "offset": 16666,
+          "name": "RGRECTALT"
+        },
+        {
+          "offset": 16668,
+          "name": "RGRECTBODY"
+        },
+        {
+          "offset": 16813,
+          "name": "RGNEW"
+        },
+        {
+          "offset": 16841,
+          "name": "CREATERECTRGN"
+        },
+        {
+          "offset": 16897,
+          "name": "SETRECTRGN"
+        },
+        {
+          "offset": 16944,
+          "name": "ITOA"
+        },
+        {
+          "offset": 17001,
+          "name": "WALKSTOCK"
+        },
+        {
+          "offset": 17073,
+          "name": "__ldiv"
+        },
+        {
+          "offset": 17250,
+          "name": "__lmul"
+        },
+        {
+          "offset": 17364,
+          "name": "__lrem"
+        },
+        {
+          "offset": 17544,
+          "name": "__lshl"
+        },
+        {
+          "offset": 17568,
+          "name": "_chkstk"
+        },
+        {
+          "offset": 17568,
+          "name": "__chkstk"
+        },
+        {
+          "offset": 17568,
+          "name": "chkstk"
+        },
+        {
+          "offset": 17610,
+          "name": "__astkovr"
+        },
+        {
+          "offset": 17613,
+          "name": "__cintDIV"
+        },
+        {
+          "offset": 17616,
+          "name": "__fptrap"
+        },
+        {
+          "offset": 17625,
+          "name": "_TEXT_NEARFRAME"
+        },
+        {
+          "offset": 17691,
+          "name": "_TEXT_FARFRAMEX"
+        },
+        {
+          "offset": 17692,
+          "name": "_TEXT_FARFRAME"
+        },
+        {
+          "offset": 17769,
+          "name": "__ulmul"
+        }
+      ]
+    },
+    {
+      "name": "_INIT",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "GDIINIT"
+        },
+        {
+          "offset": 405,
+          "name": "INITFONTS"
+        }
+      ]
+    },
+    {
+      "name": "_FONTINQ",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "GETTEXTFACE"
+        },
+        {
+          "offset": 161,
+          "name": "XTRANS"
+        },
+        {
+          "offset": 234,
+          "name": "YTRANS"
+        },
+        {
+          "offset": 307,
+          "name": "ENUMFONTS"
+        },
+        {
+          "offset": 1198,
+          "name": "ENUMERATEFONT"
+        },
+        {
+          "offset": 1934,
+          "name": "ENUMCALLBACK"
+        }
+      ]
+    },
+    {
+      "name": "_FONTINQ2",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "GETTEXTMETRICS"
+        }
+      ]
+    },
+    {
+      "name": "_FONTLOAD",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "LOADPFONTHANDLER"
+        },
+        {
+          "offset": 549,
+          "name": "LOADPFONT"
+        },
+        {
+          "offset": 718,
+          "name": "MAPFONT"
+        },
+        {
+          "offset": 2328,
+          "name": "FINDPFONT"
+        },
+        {
+          "offset": 3354,
+          "name": "GETATOM"
+        },
+        {
+          "offset": 3401,
+          "name": "FONTFIT"
+        }
+      ]
+    },
+    {
+      "name": "_FONTRES",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "SCANPFI"
+        },
+        {
+          "offset": 595,
+          "name": "DELETEFONT"
+        },
+        {
+          "offset": 650,
+          "name": "DELETEFONTBYDEVICE"
+        },
+        {
+          "offset": 684,
+          "name": "ADDFONTRESOURCE"
+        },
+        {
+          "offset": 1444,
+          "name": "ADDNEXTFONT"
+        },
+        {
+          "offset": 1685,
+          "name": "REMOVEFONTRESOURCE"
+        },
+        {
+          "offset": 1955,
+          "name": "COMPACTPFT"
+        },
+        {
+          "offset": 2276,
+          "name": "DECREMENTFONTRESOURCE"
+        },
+        {
+          "offset": 2443,
+          "name": "INCREMENTFONTRESOURCE"
+        },
+        {
+          "offset": 2513,
+          "name": "FONTRESOURCEINDEX"
+        }
+      ]
+    },
+    {
+      "name": "_MISC",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "SETDCSTUFF"
+        },
+        {
+          "offset": 33,
+          "name": "ESCAPE"
+        },
+        {
+          "offset": 566,
+          "name": "NEXTBANDCODE"
+        },
+        {
+          "offset": 1061,
+          "name": "QUERYABORT"
+        },
+        {
+          "offset": 1140,
+          "name": "GETENVIRONMENT"
+        },
+        {
+          "offset": 1249,
+          "name": "SETENVIRONMENT"
+        },
+        {
+          "offset": 1476,
+          "name": "GETOBJECT"
+        },
+        {
+          "offset": 1695,
+          "name": "ENUMOBJECTS"
+        },
+        {
+          "offset": 1835,
+          "name": "ENUMOBJCALLBACK"
+        }
+      ]
+    },
+    {
+      "name": "_FONTSYNTH",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "SYNTHFONT"
+        },
+        {
+          "offset": 274,
+          "name": "LOADSYNTHFONT"
+        },
+        {
+          "offset": 1166,
+          "name": "SYNTHSCALE"
+        },
+        {
+          "offset": 1343,
+          "name": "BLOAT"
+        }
+      ]
+    },
+    {
+      "name": "_FONTSIMS",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "SETTEXTCHARACTEREXTRA"
+        },
+        {
+          "offset": 152,
+          "name": "GETTEXTCHARACTEREXTRA"
+        },
+        {
+          "offset": 227,
+          "name": "SETTEXTJUSTIFICATION"
+        },
+        {
+          "offset": 407,
+          "name": "SETMAPPERFLAGS"
+        },
+        {
+          "offset": 457,
+          "name": "TEXTSIMULATIONS"
+        }
+      ]
+    },
+    {
+      "name": "_RGCREATE",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "CREATEELLIPTICRGN"
+        },
+        {
+          "offset": 79,
+          "name": "CREATEELLIPTICRGNINDIRECT"
+        },
+        {
+          "offset": 123,
+          "name": "CREATEPOLYGONRGN"
+        }
+      ]
+    },
+    {
+      "name": "_RGOUT",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "FILLRGN"
+        },
+        {
+          "offset": 133,
+          "name": "PAINTRGN"
+        },
+        {
+          "offset": 247,
+          "name": "INVERTRGN"
+        },
+        {
+          "offset": 358,
+          "name": "FILLINVERTRGN"
+        },
+        {
+          "offset": 775,
+          "name": "FRAMERGN"
+        },
+        {
+          "offset": 2323,
+          "name": "XORLIST"
+        },
+        {
+          "offset": 2763,
+          "name": "PTINREGION"
+        }
+      ]
+    },
+    {
+      "name": "_FLOODFILL",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "MERGE"
+        },
+        {
+          "offset": 341,
+          "name": "GETDOWN"
+        },
+        {
+          "offset": 550,
+          "name": "EXTEND"
+        },
+        {
+          "offset": 1224,
+          "name": "FLOODFILL"
+        },
+        {
+          "offset": 1541,
+          "name": "COLOUROVER"
+        },
+        {
+          "offset": 1625,
+          "name": "SCAN"
+        },
+        {
+          "offset": 1971,
+          "name": "PUSHX"
+        },
+        {
+          "offset": 2105,
+          "name": "INSCAN"
+        },
+        {
+          "offset": 2184,
+          "name": "SCANLR"
+        }
+      ]
+    },
+    {
+      "name": "_METAFILE",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "GETMETAFILE"
+        },
+        {
+          "offset": 203,
+          "name": "DELETEBANDINGMETAFILE"
+        },
+        {
+          "offset": 305,
+          "name": "DELETEMETAFILE"
+        },
+        {
+          "offset": 356,
+          "name": "PLAYMETAFILE"
+        },
+        {
+          "offset": 722,
+          "name": "GETEVENT"
+        },
+        {
+          "offset": 1188,
+          "name": "PLAYEVENT"
+        },
+        {
+          "offset": 2523,
+          "name": "ADDTOHANDLETABLE"
+        },
+        {
+          "offset": 2576,
+          "name": "RECORDPARMS"
+        },
+        {
+          "offset": 2997,
+          "name": "ATTEMPTWRITE"
+        },
+        {
+          "offset": 3177,
+          "name": "MARKMETAFILE"
+        },
+        {
+          "offset": 3281,
+          "name": "RECORDOTHER"
+        },
+        {
+          "offset": 4752,
+          "name": "RECORDOBJECT"
+        },
+        {
+          "offset": 5018,
+          "name": "PROBESIZE"
+        },
+        {
+          "offset": 5237,
+          "name": "ADDTOTABLE"
+        },
+        {
+          "offset": 5474,
+          "name": "CREATEMETAFILE"
+        },
+        {
+          "offset": 5681,
+          "name": "CLOSEMETAFILE"
+        },
+        {
+          "offset": 6098,
+          "name": "COPYMETAFILE"
+        },
+        {
+          "offset": 6439,
+          "name": "GETMETAFILEBITS"
+        },
+        {
+          "offset": 6550,
+          "name": "SETMETAFILEBITS"
+        },
+        {
+          "offset": 6594,
+          "name": "CALLMETAFUNCTION"
+        },
+        {
+          "offset": 6640,
+          "name": "GETPMETAFILE"
+        }
+      ]
+    },
+    {
+      "name": "_STRETCHBLT",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "LOCKBITMAP"
+        },
+        {
+          "offset": 110,
+          "name": "UNLOCKBITMAP"
+        },
+        {
+          "offset": 140,
+          "name": "REALSTRETCHBLT"
+        },
+        {
+          "offset": 1741,
+          "name": "BLTCOLUMNS"
+        },
+        {
+          "offset": 1830,
+          "name": "BLTROWS"
+        },
+        {
+          "offset": 1913,
+          "name": "INTEGERMULTIPLE"
+        },
+        {
+          "offset": 2240,
+          "name": "BLTTHROUGHRGN"
+        },
+        {
+          "offset": 2298,
+          "name": "BLTROWS2"
+        },
+        {
+          "offset": 2461,
+          "name": "BLTOUT"
+        },
+        {
+          "offset": 2595,
+          "name": "STRETCHX"
+        },
+        {
+          "offset": 2736,
+          "name": "INITBITMAP"
+        }
+      ]
+    },
+    {
+      "name": "_GDISIM",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "POLYGON"
+        },
+        {
+          "offset": 98,
+          "name": "POLYGONGUTS"
+        },
+        {
+          "offset": 356,
+          "name": "ELLIPSE"
+        },
+        {
+          "offset": 461,
+          "name": "ROUNDRECT"
+        },
+        {
+          "offset": 558,
+          "name": "PIE"
+        },
+        {
+          "offset": 661,
+          "name": "ARC"
+        }
+      ]
+    },
+    {
+      "name": "_RECT",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "CLIPTEST"
+        },
+        {
+          "offset": 80,
+          "name": "GETVECTORPEN"
+        },
+        {
+          "offset": 197,
+          "name": "OEMOUTPUT"
+        },
+        {
+          "offset": 269,
+          "name": "RECTANGLE"
+        },
+        {
+          "offset": 1659,
+          "name": "SCANINTERSECT"
+        },
+        {
+          "offset": 2068,
+          "name": "OEMPATBLT"
+        },
+        {
+          "offset": 2156,
+          "name": "SMARTBLT"
+        },
+        {
+          "offset": 2235,
+          "name": "SCANFIX"
+        },
+        {
+          "offset": 2440,
+          "name": "SCANOUT"
+        },
+        {
+          "offset": 2819,
+          "name": "ADDSCANLIST"
+        },
+        {
+          "offset": 2960,
+          "name": "UNIONRECTRGN"
+        }
+      ]
+    },
+    {
+      "name": "_ELLIPSE",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "ELLIPSEGUTS"
+        },
+        {
+          "offset": 2935,
+          "name": "COMBINEELLIPSEBORDER"
+        }
+      ]
+    },
+    {
+      "name": "_PIEARC",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "PIETRANSFORM"
+        },
+        {
+          "offset": 114,
+          "name": "GETTOPINTERSECTION"
+        },
+        {
+          "offset": 230,
+          "name": "CALCULATEPENWIDTHS"
+        },
+        {
+          "offset": 300,
+          "name": "PIEARCISITSPECIAL"
+        },
+        {
+          "offset": 380,
+          "name": "PIEARCSPECIALCASE"
+        },
+        {
+          "offset": 728,
+          "name": "NEWWALL"
+        },
+        {
+          "offset": 921,
+          "name": "UPDATEWALL"
+        },
+        {
+          "offset": 997,
+          "name": "PIEARC"
+        },
+        {
+          "offset": 3753,
+          "name": "GETPIECASE"
+        },
+        {
+          "offset": 3859,
+          "name": "PIESWITCH1"
+        },
+        {
+          "offset": 5322,
+          "name": "PIESWITCH2"
+        }
+      ]
+    },
+    {
+      "name": "_POLYGON",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "INTSORT"
+        },
+        {
+          "offset": 179,
+          "name": "STRSORT"
+        },
+        {
+          "offset": 421,
+          "name": "COUNTWALLS"
+        },
+        {
+          "offset": 552,
+          "name": "POLYGONGUTS2"
+        },
+        {
+          "offset": 2370,
+          "name": "UNWIND"
+        }
+      ]
+    },
+    {
+      "name": "_POLYHELP",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "INITWALLS"
+        },
+        {
+          "offset": 316,
+          "name": "INITWALLPREV"
+        }
+      ]
+    },
+    {
+      "name": "_PIXDDA",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "LINEDDA"
+        },
+        {
+          "offset": 3,
+          "name": "STRETCHDDA"
+        },
+        {
+          "offset": 5,
+          "name": "INNERLINEDDA"
+        },
+        {
+          "offset": 343,
+          "name": "SETPIXEL"
+        },
+        {
+          "offset": 546,
+          "name": "GETPIXEL"
+        }
+      ]
+    },
+    {
+      "name": "_OUTMAN",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "CLIPLINE"
+        },
+        {
+          "offset": 543,
+          "name": "ROTATESTYLEMASK"
+        },
+        {
+          "offset": 1014,
+          "name": "POLYLINEGUTSALT"
+        },
+        {
+          "offset": 1017,
+          "name": "POLYLINEGUTS"
+        },
+        {
+          "offset": 1019,
+          "name": "POLYLINEGUTSBODY"
+        },
+        {
+          "offset": 1457,
+          "name": "CHEAPCLIP"
+        },
+        {
+          "offset": 1753,
+          "name": "PIXTOLINE"
+        },
+        {
+          "offset": 1955,
+          "name": "LINETO"
+        },
+        {
+          "offset": 2091,
+          "name": "POLYLINE"
+        },
+        {
+          "offset": 2272,
+          "name": "WIDELINE"
+        },
+        {
+          "offset": 2645,
+          "name": "GETCAP"
+        },
+        {
+          "offset": 2950,
+          "name": "POLYLINETOPOLYGON"
+        }
+      ]
+    },
+    {
+      "name": "_SORT",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "CREATEPQ"
+        },
+        {
+          "offset": 114,
+          "name": "MINPQ"
+        },
+        {
+          "offset": 145,
+          "name": "EXTRACTPQ"
+        },
+        {
+          "offset": 175,
+          "name": "GETMIN"
+        },
+        {
+          "offset": 497,
+          "name": "SIZEPQ"
+        },
+        {
+          "offset": 637,
+          "name": "DELETEPQ"
+        },
+        {
+          "offset": 666,
+          "name": "INSERTPQ"
+        },
+        {
+          "offset": 981,
+          "name": "SWAP"
+        }
+      ]
+    },
+    {
+      "name": "_DOTMATRIX",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "DMTRANSPOSE"
+        },
+        {
+          "offset": 162,
+          "name": "DMBITBLT"
+        },
+        {
+          "offset": 167,
+          "name": "DMSTRBLT"
+        },
+        {
+          "offset": 172,
+          "name": "DMCOLORINFO"
+        },
+        {
+          "offset": 177,
+          "name": "DMPIXEL"
+        },
+        {
+          "offset": 182,
+          "name": "DMOUTPUT"
+        },
+        {
+          "offset": 187,
+          "name": "DMREALIZEOBJECT"
+        },
+        {
+          "offset": 192,
+          "name": "DMENUMDFONTS"
+        },
+        {
+          "offset": 198,
+          "name": "DMENUMOBJ"
+        },
+        {
+          "offset": 203,
+          "name": "DMSCANLR"
+        },
+        {
+          "offset": 206,
+          "name": "BRUTE"
+        }
+      ]
+    },
+    {
+      "name": "_SPOOL",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "COPY"
+        },
+        {
+          "offset": 36,
+          "name": "OPENJOB"
+        },
+        {
+          "offset": 445,
+          "name": "STARTSPOOLPAGE"
+        },
+        {
+          "offset": 946,
+          "name": "WRITESPOOL"
+        },
+        {
+          "offset": 1268,
+          "name": "WRITEFILE"
+        },
+        {
+          "offset": 1417,
+          "name": "WRITEDIALOG"
+        },
+        {
+          "offset": 1817,
+          "name": "ENDSPOOLPAGE"
+        },
+        {
+          "offset": 2154,
+          "name": "CLOSEJOB"
+        },
+        {
+          "offset": 2355,
+          "name": "DELETEJOB"
+        },
+        {
+          "offset": 2565,
+          "name": "FREEALL"
+        },
+        {
+          "offset": 2667,
+          "name": "GETSPOOLTEMPDRIVE"
+        },
+        {
+          "offset": 2770,
+          "name": "FINDPORT"
+        },
+        {
+          "offset": 2843,
+          "name": "GETSPOOLJOB"
+        },
+        {
+          "offset": 3034,
+          "name": "QUERYJOB"
+        },
+        {
+          "offset": 3116,
+          "name": "LSTRNCPY"
+        },
+        {
+          "offset": 3173,
+          "name": "ISJOBVALID"
+        },
+        {
+          "offset": 3204,
+          "name": "LOADSPOOLER"
+        }
+      ]
+    },
+    {
+      "name": "_SPOOL2",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "SETUPPORTTABLE"
+        },
+        {
+          "offset": 742,
+          "name": "FINDPRINTERNAMES"
+        },
+        {
+          "offset": 892,
+          "name": "FINDALLPORTS"
+        },
+        {
+          "offset": 1052,
+          "name": "REMOVECOLON"
+        },
+        {
+          "offset": 1144,
+          "name": "OUTOFDISKHANDLER"
+        }
+      ]
+    },
+    {
+      "name": "_SPOOL3",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "WRITEPORT"
+        },
+        {
+          "offset": 327,
+          "name": "OPENPORT"
+        },
+        {
+          "offset": 474,
+          "name": "CLOSEPORT"
+        },
+        {
+          "offset": 533,
+          "name": "RESETPORT"
+        },
+        {
+          "offset": 584,
+          "name": "SPOOLSETDCB"
+        },
+        {
+          "offset": 993,
+          "name": "ATOI"
+        }
+      ]
+    },
+    {
+      "name": "_VECTFONT",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "VECTTEXTOUTPUT"
+        },
+        {
+          "offset": 1383,
+          "name": "VECTTEXTEXTENT"
+        },
+        {
+          "offset": 2338,
+          "name": "NEXTCHARORG"
+        },
+        {
+          "offset": 2584,
+          "name": "PLACEVECTCHAR"
+        },
+        {
+          "offset": 3993,
+          "name": "NORMALIZEANGLE"
+        },
+        {
+          "offset": 4032,
+          "name": "CALCBOUNDINGPOLY"
+        },
+        {
+          "offset": 4621,
+          "name": "ROTBOUNDINGRECT"
+        },
+        {
+          "offset": 4860,
+          "name": "CONSTRAINORIENTATION"
+        },
+        {
+          "offset": 4905,
+          "name": "LBMOVETO"
+        },
+        {
+          "offset": 5002,
+          "name": "LBLINETO"
+        }
+      ]
+    },
+    {
+      "name": "_TRIG",
+      "symbols": [
+        {
+          "offset": 182,
+          "name": "RSIN"
+        },
+        {
+          "offset": 222,
+          "name": "RCOS"
+        }
+      ]
+    },
+    {
+      "name": "_VECTSIM",
+      "symbols": [
+        {
+          "offset": 0,
+          "name": "INITVECTOR"
+        },
+        {
+          "offset": 308,
+          "name": "VECTORSCAN"
+        },
+        {
+          "offset": 698,
+          "name": "DUMPLINE"
+        },
+        {
+          "offset": 839,
+          "name": "DONEVECTOR"
+        }
+      ]
+    },
+    {
+      "name": "DGROUP",
+      "symbols": [
+        {
+          "offset": 4,
+          "name": "rsrvptrs"
+        },
+        {
+          "offset": 16,
+          "name": "DISPLAYATOM"
+        },
+        {
+          "offset": 18,
+          "name": "NULLPORTATOM"
+        },
+        {
+          "offset": 20,
+          "name": "HSTATICBITMAP"
+        },
+        {
+          "offset": 22,
+          "name": "STOCKOBJ"
+        },
+        {
+          "offset": 52,
+          "name": "HBOGUSPEN"
+        },
+        {
+          "offset": 54,
+          "name": "HBOGUSBRUSH"
+        },
+        {
+          "offset": 56,
+          "name": "OBJECTCOUNT"
+        },
+        {
+          "offset": 60,
+          "name": "METAFUNCTION"
+        },
+        {
+          "offset": 260,
+          "name": "HGDIMODULE"
+        },
+        {
+          "offset": 262,
+          "name": "TEMPDRIVE"
+        },
+        {
+          "offset": 264,
+          "name": "HSCREENDC"
+        },
+        {
+          "offset": 266,
+          "name": "HLDEVHEAD"
+        },
+        {
+          "offset": 273,
+          "name": "METAPREFIX"
+        },
+        {
+          "offset": 282,
+          "name": "HATCHDIR"
+        },
+        {
+          "offset": 300,
+          "name": "NUM_PF_INSTANCES"
+        },
+        {
+          "offset": 302,
+          "name": "NUM_PHYS_FONTS"
+        },
+        {
+          "offset": 304,
+          "name": "NUM_RESOURCES"
+        },
+        {
+          "offset": 306,
+          "name": "SIZE_PF_INST_TAB"
+        },
+        {
+          "offset": 308,
+          "name": "SIZE_PFONT_TAB"
+        },
+        {
+          "offset": 310,
+          "name": "SIZE_RES_TAB"
+        },
+        {
+          "offset": 312,
+          "name": "PFI_READ_LOCKEDOUT"
+        },
+        {
+          "offset": 314,
+          "name": "PFI_WRITE_LOCKEDOUT"
+        },
+        {
+          "offset": 316,
+          "name": "PFT_READ_LOCKEDOUT"
+        },
+        {
+          "offset": 318,
+          "name": "PFT_WRITE_LOCKEDOUT"
+        },
+        {
+          "offset": 320,
+          "name": "RT_READ_LOCKEDOUT"
+        },
+        {
+          "offset": 322,
+          "name": "RT_WRITE_LOCKEDOUT"
+        },
+        {
+          "offset": 542,
+          "name": "GLOBALMOVABLE"
+        },
+        {
+          "offset": 544,
+          "name": "GLOBALMOVABLENONSHARED"
+        },
+        {
+          "offset": 546,
+          "name": "GLOBALFIXED"
+        },
+        {
+          "offset": 548,
+          "name": "LOCALMOVABLE"
+        },
+        {
+          "offset": 550,
+          "name": "LOCALFIXEDZEROED"
+        },
+        {
+          "offset": 552,
+          "name": "LOCALMOVABLEZEROED"
+        },
+        {
+          "offset": 554,
+          "name": "GLOBALDISCARDABLEMODIFY"
+        },
+        {
+          "offset": 770,
+          "name": "SP_INIT"
+        },
+        {
+          "offset": 772,
+          "name": "SP_HWND"
+        },
+        {
+          "offset": 774,
+          "name": "SP_NOLOAD"
+        },
+        {
+          "offset": 776,
+          "name": "LISTEDPORTCNT"
+        },
+        {
+          "offset": 778,
+          "name": "DISKAVAIL"
+        },
+        {
+          "offset": 782,
+          "name": "NO_SPOOLER_SYSTEM"
+        },
+        {
+          "offset": 896,
+          "name": "__aaltstkovr"
+        },
+        {
+          "offset": 912,
+          "name": "OPENCOM"
+        },
+        {
+          "offset": 912,
+          "name": "_edata"
+        },
+        {
+          "offset": 916,
+          "name": "PF_INST_TAB"
+        },
+        {
+          "offset": 918,
+          "name": "MESSAGEBOX"
+        },
+        {
+          "offset": 922,
+          "name": "RES_TABLE"
+        },
+        {
+          "offset": 924,
+          "name": "SENDMESSAGE"
+        },
+        {
+          "offset": 928,
+          "name": "FIRSTFONTHANDLE"
+        },
+        {
+          "offset": 930,
+          "name": "PORTS"
+        },
+        {
+          "offset": 970,
+          "name": "MAXPRINTER"
+        },
+        {
+          "offset": 972,
+          "name": "GETCURTIME"
+        },
+        {
+          "offset": 976,
+          "name": "CLOSECOM"
+        },
+        {
+          "offset": 980,
+          "name": "POSTMESSAGE"
+        },
+        {
+          "offset": 984,
+          "name": "WRITECOM"
+        },
+        {
+          "offset": 988,
+          "name": "GETCOMSTATE"
+        },
+        {
+          "offset": 992,
+          "name": "GETCOMERROR"
+        },
+        {
+          "offset": 996,
+          "name": "ESCAPECOMFUNCTION"
+        },
+        {
+          "offset": 1000,
+          "name": "READCOM"
+        },
+        {
+          "offset": 1004,
+          "name": "FLUSHCOM"
+        },
+        {
+          "offset": 1008,
+          "name": "SETCOMSTATE"
+        },
+        {
+          "offset": 1012,
+          "name": "PFONT_TABLE"
+        }
+      ]
+    }
+  ],
+  "retail_exports_count": 183,
+  "confirmed_count": 182,
+  "confirmed_names": [
+    "ADDFONTRESOURCE",
+    "ARC",
+    "BITBLT",
+    "BITMAPBITS",
+    "BRUTE",
+    "CLOSEJOB",
+    "CLOSEMETAFILE",
+    "COMBINERGN",
+    "COMPATIBLEBITMAP",
+    "COPY",
+    "COPYMETAFILE",
+    "CREATEBITMAP",
+    "CREATEBITMAPINDIRECT",
+    "CREATEBRUSHINDIRECT",
+    "CREATECOMPATIBLEBITMAP",
+    "CREATECOMPATIBLEDC",
+    "CREATEDC",
+    "CREATEDISCARDABLEBITMAP",
+    "CREATEELLIPTICRGN",
+    "CREATEELLIPTICRGNINDIRECT",
+    "CREATEFONT",
+    "CREATEFONTINDIRECT",
+    "CREATEHATCHBRUSH",
+    "CREATEIC",
+    "CREATEMETAFILE",
+    "CREATEPATTERNBRUSH",
+    "CREATEPEN",
+    "CREATEPENINDIRECT",
+    "CREATEPOLYGONRGN",
+    "CREATEPQ",
+    "CREATERECTRGN",
+    "CREATERECTRGNINDIRECT",
+    "CREATESOLIDBRUSH",
+    "DEATH",
+    "DELETEDC",
+    "DELETEJOB",
+    "DELETEMETAFILE",
+    "DELETEOBJECT",
+    "DELETEPQ",
+    "DMBITBLT",
+    "DMCOLORINFO",
+    "DMENUMDFONTS",
+    "DMENUMOBJ",
+    "DMOUTPUT",
+    "DMPIXEL",
+    "DMREALIZEOBJECT",
+    "DMSCANLR",
+    "DMSTRBLT",
+    "DMTRANSPOSE",
+    "DPTOLP",
+    "DPXLATE",
+    "ELLIPSE",
+    "ENDSPOOLPAGE",
+    "ENUMCALLBACK",
+    "ENUMFONTS",
+    "ENUMOBJECTS",
+    "EQUALRGN",
+    "ESCAPE",
+    "EXCLUDECLIPRECT",
+    "EXCLUDEVISRECT",
+    "EXTRACTPQ",
+    "FILLRGN",
+    "FLOODFILL",
+    "FRAMERGN",
+    "GDIINITAPP",
+    "GETBITMAPBITS",
+    "GETBITMAPDIMENSION",
+    "GETBKCOLOR",
+    "GETBKMODE",
+    "GETBRUSHORG",
+    "GETCLIPBOX",
+    "GETCONTINUINGTEXTEXTENT",
+    "GETCURRENTPOSITION",
+    "GETDCORG",
+    "GETDEVICECAPS",
+    "GETENVIRONMENT",
+    "GETMAPMODE",
+    "GETMETAFILE",
+    "GETMETAFILEBITS",
+    "GETNEARESTCOLOR",
+    "GETOBJECT",
+    "GETPIXEL",
+    "GETPOLYFILLMODE",
+    "GETRELABS",
+    "GETRGNBOX",
+    "GETROP2",
+    "GETSPOOLJOB",
+    "GETSTOCKOBJECT",
+    "GETSTRETCHBLTMODE",
+    "GETTEXTCHARACTEREXTRA",
+    "GETTEXTCOLOR",
+    "GETTEXTEXTENT",
+    "GETTEXTFACE",
+    "GETTEXTMETRICS",
+    "GETVIEWPORTEXT",
+    "GETVIEWPORTORG",
+    "GETWINDOWEXT",
+    "GETWINDOWORG",
+    "GSV",
+    "INQUIREVISRGN",
+    "INSERTPQ",
+    "INTERNALCREATEDC",
+    "INTERSECTCLIPRECT",
+    "INTERSECTVISRECT",
+    "INVERTRGN",
+    "LINEDDA",
+    "LINETO",
+    "LOCKDC",
+    "LOCKUNLOCK",
+    "LPTODP",
+    "MINPQ",
+    "MOVETO",
+    "MULDIV",
+    "OFFSETCLIPRGN",
+    "OFFSETORG",
+    "OFFSETRGN",
+    "OFFSETVIEWPORTORG",
+    "OFFSETVISRGN",
+    "OFFSETWINDOWORG",
+    "OPENJOB",
+    "PAINTRGN",
+    "PATBLT",
+    "PIE",
+    "PIXTOLINE",
+    "PLAYMETAFILE",
+    "POLYGON",
+    "POLYLINE",
+    "PTINREGION",
+    "PTVISIBLE",
+    "QUERYABORT",
+    "QUERYJOB",
+    "RCOS",
+    "RECTANGLE",
+    "RECTSTUFF",
+    "RECTVISIBLE",
+    "REMOVEFONTRESOURCE",
+    "RESTOREDC",
+    "RESTOREVISRGN",
+    "RESURRECTION",
+    "ROUNDRECT",
+    "RSIN",
+    "SAVEDC",
+    "SAVEVISRGN",
+    "SCALEEXT",
+    "SCALEVIEWPORTEXT",
+    "SCALEWINDOWEXT",
+    "SCANLR",
+    "SELECTCLIPRGN",
+    "SELECTOBJECT",
+    "SELECTVISRGN",
+    "SETBITMAPBITS",
+    "SETBITMAPDIMENSION",
+    "SETBKCOLOR",
+    "SETBKMODE",
+    "SETBRUSHORG",
+    "SETDCORG",
+    "SETENVIRONMENT",
+    "SETMAPMODE",
+    "SETMAPPERFLAGS",
+    "SETMETAFILEBITS",
+    "SETPIXEL",
+    "SETPOLYFILLMODE",
+    "SETRELABS",
+    "SETROP2",
+    "SETSTRETCHBLTMODE",
+    "SETTEXTCHARACTEREXTRA",
+    "SETTEXTCOLOR",
+    "SETTEXTJUSTIFICATION",
+    "SETVIEWPORTEXT",
+    "SETVIEWPORTORG",
+    "SETWINDOWEXT",
+    "SETWINDOWORG",
+    "SETWINVIEWEXT",
+    "SIZEPQ",
+    "STARTSPOOLPAGE",
+    "STRETCHBLT",
+    "TEXTOUT",
+    "UNLOCKDC",
+    "UNREALIZEOBJECT",
+    "WORDSET",
+    "WRITEDIALOG",
+    "WRITESPOOL"
+  ]
+}

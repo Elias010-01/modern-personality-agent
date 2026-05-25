@@ -81,7 +81,7 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Llama a servicios BIOS via INT 10h (video, 63 instr).",
+      "description": "Calls BIOS services via INT 10h (video, 63 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
@@ -90,7 +90,7 @@
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0229 -- offset 0x0229 -- 63 instr\n; Llama a servicios BIOS via INT 10h (video, 63 instr).\n; tags: calls_kernel, complex_iterator, int_10, loop, string_op\n; callers: sub_2322\n; calls (inter): KERNEL.GETPROFILEINT\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0229 -- offset 0x0229 -- 63 instr\n; Calls BIOS services via INT 10h (video, 63 instr).\n; tags: calls_kernel, complex_iterator, int_10, loop, string_op\n; callers: sub_2322\n; calls (inter): KERNEL.GETPROFILEINT\n;----------------------------------------------------------------------"
     },
     {
       "module": "ATTDEB",
@@ -162,7 +162,7 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Llama a servicios BIOS via INT 10h (video, 1738 instr).",
+      "description": "Calls BIOS services via INT 10h (video, 1738 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
@@ -170,7 +170,7 @@
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_02A8 -- offset 0x02A8 -- 1738 instr\n; Llama a servicios BIOS via INT 10h (video, 1738 instr).\n; tags: complex_iterator, int_10, loop, string_op\n; callers: sub_2322\n; calls (intra): sub_25D2\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_02A8 -- offset 0x02A8 -- 1738 instr\n; Calls BIOS services via INT 10h (video, 1738 instr).\n; tags: complex_iterator, int_10, loop, string_op\n; callers: sub_2322\n; calls (intra): sub_25D2\n;----------------------------------------------------------------------"
     },
     {
       "module": "ATTDEB",
@@ -230,12 +230,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (22 instr).",
+      "description": "Unclassified function (22 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1215 -- offset 0x1215 -- 22 instr\n; Funcion sin clasificar definitiva (22 instr).\n; tags: small\n; callers: sub_224A\n; calls (intra): sub_1253\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1215 -- offset 0x1215 -- 22 instr\n; Unclassified function (22 instr).\n; tags: small\n; callers: sub_224A\n; calls (intra): sub_1253\n;----------------------------------------------------------------------"
     },
     {
       "module": "ATTDEB",
@@ -290,14 +290,14 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (17 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (17 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1253 -- offset 0x1253 -- 17 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (17 instr).\n; tags: iterator, loop, string_op\n; callers: sub_1215\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1253 -- offset 0x1253 -- 17 instr\n; Iterator with string ops (movsb/scasb/...) (17 instr).\n; tags: iterator, loop, string_op\n; callers: sub_1215\n;----------------------------------------------------------------------"
     },
     {
       "module": "ATTDEB",
@@ -364,12 +364,12 @@
       ],
       "fanout": 5,
       "fanin": 2,
-      "description": "Funcion sin clasificar definitiva (11 instr).",
+      "description": "Unclassified function (11 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_126B -- offset 0x126B -- 11 instr\n; Funcion sin clasificar definitiva (11 instr).\n; tags: small\n; callers: sub_2475, sub_24EF\n; calls (intra): sub_12C0, sub_12FD, sub_13B2, sub_1447, sub_14E3\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_126B -- offset 0x126B -- 11 instr\n; Unclassified function (11 instr).\n; tags: small\n; callers: sub_2475, sub_24EF\n; calls (intra): sub_12C0, sub_12FD, sub_13B2, sub_1447, sub_14E3\n;----------------------------------------------------------------------"
     },
     {
       "module": "ATTDEB",
@@ -432,12 +432,12 @@
       ],
       "fanout": 1,
       "fanin": 4,
-      "description": "Wrapper que delega en sub_1299.",
+      "description": "Wrapper delegating to sub_1299.",
       "confidence": "medium",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1282 -- offset 0x1282 -- 10 instr\n; Wrapper que delega en sub_1299.\n; tags: wrapper\n; callers: sub_20F7, sub_224A, sub_2452, sub_2539\n; calls (intra): sub_1299\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1282 -- offset 0x1282 -- 10 instr\n; Wrapper delegating to sub_1299.\n; tags: wrapper\n; callers: sub_20F7, sub_224A, sub_2452, sub_2539\n; calls (intra): sub_1299\n;----------------------------------------------------------------------"
     },
     {
       "module": "ATTDEB",
@@ -499,12 +499,12 @@
       ],
       "fanout": 2,
       "fanin": 2,
-      "description": "Funcion sin clasificar definitiva (15 instr).",
+      "description": "Unclassified function (15 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1299 -- offset 0x1299 -- 15 instr\n; Funcion sin clasificar definitiva (15 instr).\n; tags: small\n; callers: sub_1282, sub_14E3\n; calls (intra): sub_15F1, sub_1621\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1299 -- offset 0x1299 -- 15 instr\n; Unclassified function (15 instr).\n; tags: small\n; callers: sub_1282, sub_14E3\n; calls (intra): sub_15F1, sub_1621\n;----------------------------------------------------------------------"
     },
     {
       "module": "ATTDEB",
@@ -566,14 +566,14 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (31 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (31 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_12C0 -- offset 0x12C0 -- 31 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (31 instr).\n; tags: iterator, loop, string_op\n; callers: sub_126B\n; calls (intra): sub_141E\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_12C0 -- offset 0x12C0 -- 31 instr\n; Iterator with string ops (movsb/scasb/...) (31 instr).\n; tags: iterator, loop, string_op\n; callers: sub_126B\n; calls (intra): sub_141E\n;----------------------------------------------------------------------"
     },
     {
       "module": "ATTDEB",
@@ -636,14 +636,14 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (89 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (89 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_12FD -- offset 0x12FD -- 89 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (89 instr).\n; tags: complex_iterator, loop, string_op\n; callers: sub_126B\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_12FD -- offset 0x12FD -- 89 instr\n; Iterator with string ops (movsb/scasb/...) (89 instr).\n; tags: complex_iterator, loop, string_op\n; callers: sub_126B\n;----------------------------------------------------------------------"
     },
     {
       "module": "ATTDEB",
@@ -704,14 +704,14 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (28 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (28 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_13B2 -- offset 0x13B2 -- 28 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (28 instr).\n; tags: iterator, loop, string_op\n; callers: sub_126B\n; calls (intra): sub_141E\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_13B2 -- offset 0x13B2 -- 28 instr\n; Iterator with string ops (movsb/scasb/...) (28 instr).\n; tags: iterator, loop, string_op\n; callers: sub_126B\n; calls (intra): sub_141E\n;----------------------------------------------------------------------"
     },
     {
       "module": "ATTDEB",
@@ -773,14 +773,14 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (26 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (26 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_13ED -- offset 0x13ED -- 26 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (26 instr).\n; tags: iterator, loop, string_op\n; callers: sub_14E3\n; calls (intra): sub_141E\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_13ED -- offset 0x13ED -- 26 instr\n; Iterator with string ops (movsb/scasb/...) (26 instr).\n; tags: iterator, loop, string_op\n; callers: sub_14E3\n; calls (intra): sub_141E\n;----------------------------------------------------------------------"
     },
     {
       "module": "ATTDEB",
@@ -838,12 +838,12 @@
       ],
       "fanout": 0,
       "fanin": 3,
-      "description": "Funcion hoja (no llama a otras, 16 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 16 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_141E -- offset 0x141E -- 16 instr\n; Funcion hoja (no llama a otras, 16 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_12C0, sub_13B2, sub_13ED\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_141E -- offset 0x141E -- 16 instr\n; Leaf function (no callees, 16 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_12C0, sub_13B2, sub_13ED\n;----------------------------------------------------------------------"
     },
     {
       "module": "ATTDEB",
@@ -910,13 +910,13 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Iterador con bucle (65 instr).",
+      "description": "Iterator with loop (65 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
         "loop"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1447 -- offset 0x1447 -- 65 instr\n; Iterador con bucle (65 instr).\n; tags: complex_iterator, loop\n; callers: sub_126B\n; calls (intra): sub_161D\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1447 -- offset 0x1447 -- 65 instr\n; Iterator with loop (65 instr).\n; tags: complex_iterator, loop\n; callers: sub_126B\n; calls (intra): sub_161D\n;----------------------------------------------------------------------"
     },
     {
       "module": "ATTDEB",
@@ -981,12 +981,12 @@
       ],
       "fanout": 4,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (14 instr).",
+      "description": "Unclassified function (14 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_14E3 -- offset 0x14E3 -- 14 instr\n; Funcion sin clasificar definitiva (14 instr).\n; tags: small\n; callers: sub_126B\n; calls (intra): sub_1299, sub_13ED, sub_1503, sub_1590\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_14E3 -- offset 0x14E3 -- 14 instr\n; Unclassified function (14 instr).\n; tags: small\n; callers: sub_126B\n; calls (intra): sub_1299, sub_13ED, sub_1503, sub_1590\n;----------------------------------------------------------------------"
     },
     {
       "module": "ATTDEB",
@@ -1053,14 +1053,14 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (70 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (70 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1503 -- offset 0x1503 -- 70 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (70 instr).\n; tags: complex_iterator, loop, string_op\n; callers: sub_14E3\n; calls (intra): sub_161D\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1503 -- offset 0x1503 -- 70 instr\n; Iterator with string ops (movsb/scasb/...) (70 instr).\n; tags: complex_iterator, loop, string_op\n; callers: sub_14E3\n; calls (intra): sub_161D\n;----------------------------------------------------------------------"
     },
     {
       "module": "ATTDEB",
@@ -1126,12 +1126,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (36 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (36 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1590 -- offset 0x1590 -- 36 instr\n; Dispatcher: tabla de decisiones cmp+jcc (36 instr).\n; tags: dispatcher\n; callers: sub_14E3\n; calls (intra): sub_15F1\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1590 -- offset 0x1590 -- 36 instr\n; Dispatcher: cmp+jcc decision table (36 instr).\n; tags: dispatcher\n; callers: sub_14E3\n; calls (intra): sub_15F1\n;----------------------------------------------------------------------"
     },
     {
       "module": "ATTDEB",
@@ -1187,12 +1187,12 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Funcion sin clasificar definitiva (21 instr).",
+      "description": "Unclassified function (21 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_15F1 -- offset 0x15F1 -- 21 instr\n; Funcion sin clasificar definitiva (21 instr).\n; tags: small\n; callers: sub_1299, sub_1590\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_15F1 -- offset 0x15F1 -- 21 instr\n; Unclassified function (21 instr).\n; tags: small\n; callers: sub_1299, sub_1590\n;----------------------------------------------------------------------"
     },
     {
       "module": "ATTDEB",
@@ -1234,12 +1234,12 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Stub trivial (1 instrucciones, sin logica significativa).",
+      "description": "Trivial stub (1 instructions, no significant logic).",
       "confidence": "low",
       "semantic_tags": [
         "trivial_stub"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_161D -- offset 0x161D -- 1 instr\n; Stub trivial (1 instrucciones, sin logica significativa).\n; tags: trivial_stub\n; callers: sub_1447, sub_1503\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_161D -- offset 0x161D -- 1 instr\n; Trivial stub (1 instructions, no significant logic).\n; tags: trivial_stub\n; callers: sub_1447, sub_1503\n;----------------------------------------------------------------------"
     },
     {
       "module": "ATTDEB",
@@ -1314,7 +1314,7 @@
       ],
       "fanout": 4,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (579 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (579 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
@@ -1322,7 +1322,7 @@
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1621 -- offset 0x1621 -- 579 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (579 instr).\n; tags: complex_iterator, far, loop, string_op\n; callers: sub_1299\n; calls (intra): sub_1B5C, sub_1BBC, sub_20F7, sub_25D2\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1621 -- offset 0x1621 -- 579 instr\n; Iterator with string ops (movsb/scasb/...) (579 instr).\n; tags: complex_iterator, far, loop, string_op\n; callers: sub_1299\n; calls (intra): sub_1B5C, sub_1BBC, sub_20F7, sub_25D2\n;----------------------------------------------------------------------"
     },
     {
       "module": "ATTDEB",
@@ -1378,12 +1378,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (36 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (36 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1B5C -- offset 0x1B5C -- 36 instr\n; Dispatcher: tabla de decisiones cmp+jcc (36 instr).\n; tags: dispatcher\n; callers: sub_1621\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1B5C -- offset 0x1B5C -- 36 instr\n; Dispatcher: cmp+jcc decision table (36 instr).\n; tags: dispatcher\n; callers: sub_1621\n;----------------------------------------------------------------------"
     },
     {
       "module": "ATTDEB",
@@ -1446,7 +1446,7 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (251 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (251 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
@@ -1454,7 +1454,7 @@
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1BBC -- offset 0x1BBC -- 251 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (251 instr).\n; tags: complex_iterator, far, loop, string_op\n; callers: sub_1621\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1BBC -- offset 0x1BBC -- 251 instr\n; Iterator with string ops (movsb/scasb/...) (251 instr).\n; tags: complex_iterator, far, loop, string_op\n; callers: sub_1621\n;----------------------------------------------------------------------"
     },
     {
       "module": "ATTDEB",
@@ -1524,12 +1524,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Funcion mediana (49 instr, 1 calls).",
+      "description": "Mid-size function (49 instr, 1 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1E06 -- offset 0x1E06 -- 49 instr\n; Funcion mediana (49 instr, 1 calls).\n; tags: medium\n; callers: sub_1E84\n; calls (intra): sub_1E84\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1E06 -- offset 0x1E06 -- 49 instr\n; Mid-size function (49 instr, 1 calls).\n; tags: medium\n; callers: sub_1E84\n; calls (intra): sub_1E84\n;----------------------------------------------------------------------"
     },
     {
       "module": "ATTDEB",
@@ -1602,14 +1602,14 @@
       ],
       "fanout": 4,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (177 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (177 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1E84 -- offset 0x1E84 -- 177 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (177 instr).\n; tags: complex_iterator, loop, string_op\n; callers: sub_1E06\n; calls (intra): sub_1E06, sub_202F, sub_20F2, sub_2576\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1E84 -- offset 0x1E84 -- 177 instr\n; Iterator with string ops (movsb/scasb/...) (177 instr).\n; tags: complex_iterator, loop, string_op\n; callers: sub_1E06\n; calls (intra): sub_1E06, sub_202F, sub_20F2, sub_2576\n;----------------------------------------------------------------------"
     },
     {
       "module": "ATTDEB",
@@ -1672,7 +1672,7 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (90 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (90 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
@@ -1680,7 +1680,7 @@
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_202F -- offset 0x202F -- 90 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (90 instr).\n; tags: complex_iterator, far, loop, string_op\n; callers: sub_1E84\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_202F -- offset 0x202F -- 90 instr\n; Iterator with string ops (movsb/scasb/...) (90 instr).\n; tags: complex_iterator, far, loop, string_op\n; callers: sub_1E84\n;----------------------------------------------------------------------"
     },
     {
       "module": "ATTDEB",
@@ -1723,12 +1723,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Stub trivial (2 instrucciones, sin logica significativa).",
+      "description": "Trivial stub (2 instructions, no significant logic).",
       "confidence": "low",
       "semantic_tags": [
         "trivial_stub"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_20F2 -- offset 0x20F2 -- 2 instr\n; Stub trivial (2 instrucciones, sin logica significativa).\n; tags: trivial_stub\n; callers: sub_1E84\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_20F2 -- offset 0x20F2 -- 2 instr\n; Trivial stub (2 instructions, no significant logic).\n; tags: trivial_stub\n; callers: sub_1E84\n;----------------------------------------------------------------------"
     },
     {
       "module": "ATTDEB",
@@ -1800,14 +1800,14 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (156 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (156 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
         "far",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_20F7 -- offset 0x20F7 -- 156 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (156 instr).\n; tags: complex_iterator, far, string_op\n; callers: sub_1621\n; calls (intra): sub_1282, sub_224A\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_20F7 -- offset 0x20F7 -- 156 instr\n; Iterator with string ops (movsb/scasb/...) (156 instr).\n; tags: complex_iterator, far, string_op\n; callers: sub_1621\n; calls (intra): sub_1282, sub_224A\n;----------------------------------------------------------------------"
     },
     {
       "module": "ATTDEB",
@@ -1859,12 +1859,12 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (4 instr).",
+      "description": "Unclassified function (4 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2244 -- offset 0x2244 -- 4 instr\n; Funcion sin clasificar definitiva (4 instr).\n; tags: wrapper\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2244 -- offset 0x2244 -- 4 instr\n; Unclassified function (4 instr).\n; tags: wrapper\n;----------------------------------------------------------------------"
     },
     {
       "module": "ATTDEB",
@@ -1935,13 +1935,13 @@
       ],
       "fanout": 2,
       "fanin": 3,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (89 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (89 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_224A -- offset 0x224A -- 89 instr\n; Dispatcher: tabla de decisiones cmp+jcc (89 instr).\n; tags: dispatcher, far\n; callers: sub_20F7, sub_2452, sub_24EF\n; calls (intra): sub_1215, sub_1282\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_224A -- offset 0x224A -- 89 instr\n; Dispatcher: cmp+jcc decision table (89 instr).\n; tags: dispatcher, far\n; callers: sub_20F7, sub_2452, sub_24EF\n; calls (intra): sub_1215, sub_1282\n;----------------------------------------------------------------------"
     },
     {
       "module": "ATTDEB",
@@ -2011,13 +2011,13 @@
       "callers": [],
       "fanout": 2,
       "fanin": 0,
-      "description": "Funcion compleja: 161 instrucciones, 2 llamadas, 3 branches.",
+      "description": "Complex function: 161 instructions, 2 calls, 3 branches.",
       "confidence": "low",
       "semantic_tags": [
         "complex",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2322 -- offset 0x2322 -- 161 instr\n; Funcion compleja: 161 instrucciones, 2 llamadas, 3 branches.\n; tags: complex, far\n; calls (intra): sub_0229, sub_02A8\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2322 -- offset 0x2322 -- 161 instr\n; Complex function: 161 instructions, 2 calls, 3 branches.\n; tags: complex, far\n; calls (intra): sub_0229, sub_02A8\n;----------------------------------------------------------------------"
     },
     {
       "module": "ATTDEB",
@@ -2083,12 +2083,12 @@
       "callers": [],
       "fanout": 2,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (15 instr).",
+      "description": "Unclassified function (15 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2452 -- offset 0x2452 -- 15 instr\n; Funcion sin clasificar definitiva (15 instr).\n; tags: small\n; calls (intra): sub_1282, sub_224A\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2452 -- offset 0x2452 -- 15 instr\n; Unclassified function (15 instr).\n; tags: small\n; calls (intra): sub_1282, sub_224A\n;----------------------------------------------------------------------"
     },
     {
       "module": "ATTDEB",
@@ -2148,12 +2148,12 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (10 instr).",
+      "description": "Unclassified function (10 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2475 -- offset 0x2475 -- 10 instr\n; Funcion sin clasificar definitiva (10 instr).\n; tags: small\n; calls (intra): sub_126B\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2475 -- offset 0x2475 -- 10 instr\n; Unclassified function (10 instr).\n; tags: small\n; calls (intra): sub_126B\n;----------------------------------------------------------------------"
     },
     {
       "module": "ATTDEB",
@@ -2212,12 +2212,12 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (15 instr).",
+      "description": "Unclassified function (15 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_248D -- offset 0x248D -- 15 instr\n; Funcion sin clasificar definitiva (15 instr).\n; tags: wrapper\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_248D -- offset 0x248D -- 15 instr\n; Unclassified function (15 instr).\n; tags: wrapper\n;----------------------------------------------------------------------"
     },
     {
       "module": "ATTDEB",
@@ -2282,13 +2282,13 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion mediana (33 instr, 0 calls).",
+      "description": "Mid-size function (33 instr, 0 calls).",
       "confidence": "low",
       "semantic_tags": [
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_24B4 -- offset 0x24B4 -- 33 instr\n; Funcion mediana (33 instr, 0 calls).\n; tags: far, medium\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_24B4 -- offset 0x24B4 -- 33 instr\n; Mid-size function (33 instr, 0 calls).\n; tags: far, medium\n;----------------------------------------------------------------------"
     },
     {
       "module": "ATTDEB",
@@ -2352,12 +2352,12 @@
       "callers": [],
       "fanout": 2,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (14 instr).",
+      "description": "Unclassified function (14 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_24EF -- offset 0x24EF -- 14 instr\n; Funcion sin clasificar definitiva (14 instr).\n; tags: small\n; calls (intra): sub_126B, sub_224A\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_24EF -- offset 0x24EF -- 14 instr\n; Unclassified function (14 instr).\n; tags: small\n; calls (intra): sub_126B, sub_224A\n;----------------------------------------------------------------------"
     },
     {
       "module": "ATTDEB",
@@ -2416,12 +2416,12 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (15 instr).",
+      "description": "Unclassified function (15 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_250E -- offset 0x250E -- 15 instr\n; Funcion sin clasificar definitiva (15 instr).\n; tags: wrapper\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_250E -- offset 0x250E -- 15 instr\n; Unclassified function (15 instr).\n; tags: wrapper\n;----------------------------------------------------------------------"
     },
     {
       "module": "ATTDEB",
@@ -2482,12 +2482,12 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (10 instr).",
+      "description": "Unclassified function (10 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2539 -- offset 0x2539 -- 10 instr\n; Funcion sin clasificar definitiva (10 instr).\n; tags: small\n; calls (intra): sub_1282\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2539 -- offset 0x2539 -- 10 instr\n; Unclassified function (10 instr).\n; tags: small\n; calls (intra): sub_1282\n;----------------------------------------------------------------------"
     },
     {
       "module": "ATTDEB",
@@ -2546,13 +2546,13 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (19 instr).",
+      "description": "Unclassified function (19 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "far",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_254E -- offset 0x254E -- 19 instr\n; Funcion sin clasificar definitiva (19 instr).\n; tags: far, small\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_254E -- offset 0x254E -- 19 instr\n; Unclassified function (19 instr).\n; tags: far, small\n;----------------------------------------------------------------------"
     },
     {
       "module": "ATTDEB",
@@ -2615,14 +2615,14 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (44 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (44 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_2576 -- offset 0x2576 -- 44 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (44 instr).\n; tags: iterator, loop, string_op\n; callers: sub_1E84\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_2576 -- offset 0x2576 -- 44 instr\n; Iterator with string ops (movsb/scasb/...) (44 instr).\n; tags: iterator, loop, string_op\n; callers: sub_1E84\n;----------------------------------------------------------------------"
     },
     {
       "module": "ATTDEB",
@@ -2683,12 +2683,12 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Funcion hoja (no llama a otras, 18 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 18 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_25D2 -- offset 0x25D2 -- 18 instr\n; Funcion hoja (no llama a otras, 18 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_02A8, sub_1621\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_25D2 -- offset 0x25D2 -- 18 instr\n; Leaf function (no callees, 18 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_02A8, sub_1621\n;----------------------------------------------------------------------"
     }
   ]
 }

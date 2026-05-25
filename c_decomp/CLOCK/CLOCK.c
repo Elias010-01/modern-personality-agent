@@ -25,29 +25,81 @@
 #include <user.h>
 #include <gdi.h>
 
+/* ====================================================================
+ * MANUALLY LIFTED FUNCTIONS (demo)
+ *
+ * The following functions have been read from the ASM and rewritten in
+ * plausible C. They are NOT verified byte-exact yet (that would require
+ * MSC 4.0 + matching flags + much trial-and-error). They are illustrative
+ * reconstructions intended to show what the original Microsoft source
+ * code probably looked like.
+ *
+ * Each lifted function is annotated with `[LIFTED]` and includes a
+ * commented reference to its ASM source location.
+ * ==================================================================== */
+
 /*
- * sub_0179 (sub_0179)
- * segment: seg1.asm    offset: 0x0179    instructions: 41
- * classification (pass8): c_high
- * prologue: standard_bp    epilogue: ret
- *
- * API calls:
- *   CREATEPEN(INT iStyle, INT iWidth, DWORD clrPen) -> HPEN
- *   CREATESOLIDBRUSH(DWORD clr) -> HBRUSH
- *   GETSYSCOLOR(?)
- *
- * Reverse-engineering hints:
- *   See src/CLOCK/seg1.asm for the byte-exact assembly.
- *   This stub does NOT compile; it is documentation in C form.
+ * Global GDI tools for drawing the clock face.
+ * In the ASM, these are stored at fixed offsets in the data segment:
+ *   [0xC0]  hBrushWindow         - brush of system COLOR_WINDOW
+ *   [0xC6]  hBrushWindowFrame    - brush of system COLOR_WINDOWFRAME
+ *   [0xA2]  hPenWindow           - pen of width 1, system COLOR_WINDOW
+ *   [0xBA]  hPenWindowFrame      - pen of width 1, system COLOR_WINDOWFRAME
  */
-WORD FAR PASCAL sub_0179(/* TODO: infer args from [bp+N] refs in .asm */)
+HBRUSH  hBrushWindow;          /* @ DS:0x00C0 */
+HBRUSH  hBrushWindowFrame;     /* @ DS:0x00C6 */
+HPEN    hPenWindow;            /* @ DS:0x00A2 */
+HPEN    hPenWindowFrame;       /* @ DS:0x00BA */
+
+/*
+ * [LIFTED] sub_0179 -> probable original name: InitClockGdiObjects
+ *
+ * ASM source: src/CLOCK/seg1.asm @ offset 0x0179 (41 instructions)
+ * Original calling convention: NEAR PASCAL (no args, no return)
+ *
+ * Allocates the four GDI objects used to paint the clock:
+ *   - Two solid brushes, one in each of the user's two main system colors.
+ *   - Two pens of width 1, in the same two colors.
+ *
+ * Called once during application start-up (probably from WM_CREATE in
+ * the main WndProc). The four handles are stored in DGROUP globals and
+ * later deleted by the cleanup routine (DeleteObject) at WM_DESTROY.
+ *
+ * Note: this is a plausible reconstruction. The original Microsoft
+ * sources are not public; the function's role is inferred from the API
+ * call sequence and the way the handles are reused later in the clock's
+ * painting code.
+ */
+void NEAR PASCAL InitClockGdiObjects(void)
 {
-    /* TODO: lift body from .asm */
-    return 0;
+    hBrushWindow      = CreateSolidBrush(GetSysColor(COLOR_WINDOW));
+    hBrushWindowFrame = CreateSolidBrush(GetSysColor(COLOR_WINDOWFRAME));
+    hPenWindow        = CreatePen(PS_SOLID, 1, GetSysColor(COLOR_WINDOW));
+    hPenWindowFrame   = CreatePen(PS_SOLID, 1, GetSysColor(COLOR_WINDOWFRAME));
 }
 
 /*
- * sub_01DA (sub_01DA)
+ * [LIFTED] sub_01DA -> probable original name: CleanupClockGdiObjects
+ *
+ * ASM source: src/CLOCK/seg1.asm @ offset 0x01DA (13 instructions)
+ * Original calling convention: NEAR PASCAL (no args, no return)
+ *
+ * Counterpart of InitClockGdiObjects. Frees the four GDI objects that
+ * were allocated at start-up. Called from WM_DESTROY in the main WndProc.
+ *
+ * The ASM literally calls DeleteObject four times in sequence on the
+ * four DGROUP globals.
+ */
+void NEAR PASCAL CleanupClockGdiObjects(void)
+{
+    DeleteObject(hBrushWindow);
+    DeleteObject(hBrushWindowFrame);
+    DeleteObject(hPenWindow);
+    DeleteObject(hPenWindowFrame);
+}
+
+/*
+ * sub_01DA_ORIGINAL_STUB (preserved for diff)
  * segment: seg1.asm    offset: 0x01DA    instructions: 13
  * classification (pass8): c_medium
  * prologue: standard_bp    epilogue: ret

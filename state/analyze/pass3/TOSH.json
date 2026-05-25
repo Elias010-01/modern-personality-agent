@@ -94,7 +94,7 @@
       "callers": [],
       "fanout": 3,
       "fanin": 0,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (259 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (259 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_gdi",
@@ -102,7 +102,7 @@
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0000 -- offset 0x0000 -- 259 instr\n; Dispatcher: tabla de decisiones cmp+jcc (259 instr).\n; tags: calls_gdi, calls_user, dispatcher, far\n; calls (inter): GDI.STARTSPOOLPAGE, USER.SETRECT, USER.SETRECTEMPTY\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0000 -- offset 0x0000 -- 259 instr\n; Dispatcher: cmp+jcc decision table (259 instr).\n; tags: calls_gdi, calls_user, dispatcher, far\n; calls (inter): GDI.STARTSPOOLPAGE, USER.SETRECT, USER.SETRECTEMPTY\n;----------------------------------------------------------------------"
     },
     {
       "module": "TOSH",
@@ -151,12 +151,12 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion hoja (no llama a otras, 8 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 8 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_01BB -- offset 0x01BB -- 8 instr\n; Funcion hoja (no llama a otras, 8 instr): probable helper aritmetico/conversion.\n; tags: leaf\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_01BB -- offset 0x01BB -- 8 instr\n; Leaf function (no callees, 8 instr): likely arithmetic/conversion helper.\n; tags: leaf\n;----------------------------------------------------------------------"
     },
     {
       "module": "TOSH",
@@ -222,14 +222,14 @@
       "callers": [],
       "fanout": 2,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (23 instr).",
+      "description": "Unclassified function (23 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "calls_user",
         "far",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_01CE -- offset 0x01CE -- 23 instr\n; Funcion sin clasificar definitiva (23 instr).\n; tags: calls_user, far, small\n; calls (inter): USER.CHECKRADIOBUTTON, USER.ENDDIALOG\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_01CE -- offset 0x01CE -- 23 instr\n; Unclassified function (23 instr).\n; tags: calls_user, far, small\n; calls (inter): USER.CHECKRADIOBUTTON, USER.ENDDIALOG\n;----------------------------------------------------------------------"
     },
     {
       "module": "TOSH",
@@ -291,13 +291,13 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Funcion sin clasificar definitiva (29 instr).",
+      "description": "Unclassified function (29 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "far",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0205 -- offset 0x0205 -- 29 instr\n; Funcion sin clasificar definitiva (29 instr).\n; tags: far, small\n; callers: sub_082C, sub_0B53\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0205 -- offset 0x0205 -- 29 instr\n; Unclassified function (29 instr).\n; tags: far, small\n; callers: sub_082C, sub_0B53\n;----------------------------------------------------------------------"
     },
     {
       "module": "TOSH",
@@ -359,12 +359,12 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Funcion mediana (44 instr, 0 calls).",
+      "description": "Mid-size function (44 instr, 0 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0240 -- offset 0x0240 -- 44 instr\n; Funcion mediana (44 instr, 0 calls).\n; tags: medium\n; callers: sub_0D20, sub_0F15\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0240 -- offset 0x0240 -- 44 instr\n; Mid-size function (44 instr, 0 calls).\n; tags: medium\n; callers: sub_0D20, sub_0F15\n;----------------------------------------------------------------------"
     },
     {
       "module": "TOSH",
@@ -475,14 +475,14 @@
       ],
       "fanout": 10,
       "fanin": 2,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (308 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (308 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_02B4 -- offset 0x02B4 -- 308 instr\n; Dispatcher: tabla de decisiones cmp+jcc (308 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_0D20, sub_0F15\n; calls (intra): sub_05C8, sub_0770, sub_082C\n; calls (inter): KERNEL.FINDRESOURCE, KERNEL.FREERESOURCE, KERNEL.GETMODULEHANDLE, KERNEL.GLOBALUNLOCK, KERNEL.LOADRESOURCE, KERNEL.LOCKRESOURCE (+1 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_02B4 -- offset 0x02B4 -- 308 instr\n; Dispatcher: cmp+jcc decision table (308 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_0D20, sub_0F15\n; calls (intra): sub_05C8, sub_0770, sub_082C\n; calls (inter): KERNEL.FINDRESOURCE, KERNEL.FREERESOURCE, KERNEL.GETMODULEHANDLE, KERNEL.GLOBALUNLOCK, KERNEL.LOADRESOURCE, KERNEL.LOCKRESOURCE (+1 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "TOSH",
@@ -552,13 +552,13 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Funcion compleja: 132 instrucciones, 1 llamadas, 3 branches.",
+      "description": "Complex function: 132 instructions, 1 calls, 3 branches.",
       "confidence": "low",
       "semantic_tags": [
         "calls_kernel",
         "complex"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_05C8 -- offset 0x05C8 -- 132 instr\n; Funcion compleja: 132 instrucciones, 1 llamadas, 3 branches.\n; tags: calls_kernel, complex\n; callers: sub_02B4\n; calls (inter): KERNEL.LSTRCPY\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_05C8 -- offset 0x05C8 -- 132 instr\n; Complex function: 132 instructions, 1 calls, 3 branches.\n; tags: calls_kernel, complex\n; callers: sub_02B4\n; calls (inter): KERNEL.LSTRCPY\n;----------------------------------------------------------------------"
     },
     {
       "module": "TOSH",
@@ -625,12 +625,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Funcion mediana (69 instr, 1 calls).",
+      "description": "Mid-size function (69 instr, 1 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0770 -- offset 0x0770 -- 69 instr\n; Funcion mediana (69 instr, 1 calls).\n; tags: medium\n; callers: sub_02B4\n; calls (intra): sub_082C\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0770 -- offset 0x0770 -- 69 instr\n; Mid-size function (69 instr, 1 calls).\n; tags: medium\n; callers: sub_02B4\n; calls (intra): sub_082C\n;----------------------------------------------------------------------"
     },
     {
       "module": "TOSH",
@@ -716,14 +716,14 @@
       ],
       "fanout": 6,
       "fanin": 2,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (225 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (225 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_082C -- offset 0x082C -- 225 instr\n; Dispatcher: tabla de decisiones cmp+jcc (225 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_02B4, sub_0770\n; calls (intra): sub_0205, sub_0A7D, sub_0B53, sub_0D20\n; calls (inter): KERNEL.GLOBALFREE, KERNEL.LSTRCMP\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_082C -- offset 0x082C -- 225 instr\n; Dispatcher: cmp+jcc decision table (225 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_02B4, sub_0770\n; calls (intra): sub_0205, sub_0A7D, sub_0B53, sub_0D20\n; calls (inter): KERNEL.GLOBALFREE, KERNEL.LSTRCMP\n;----------------------------------------------------------------------"
     },
     {
       "module": "TOSH",
@@ -809,14 +809,14 @@
       ],
       "fanout": 5,
       "fanin": 1,
-      "description": "Funcion mediana (74 instr, 5 calls).",
+      "description": "Mid-size function (74 instr, 5 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_gdi",
         "calls_kernel",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0A7D -- offset 0x0A7D -- 74 instr\n; Funcion mediana (74 instr, 5 calls).\n; tags: calls_gdi, calls_kernel, medium\n; callers: sub_082C\n; calls (intra): sub_0C7F\n; calls (inter): GDI.INSERTPQ, GDI.SIZEPQ, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0A7D -- offset 0x0A7D -- 74 instr\n; Mid-size function (74 instr, 5 calls).\n; tags: calls_gdi, calls_kernel, medium\n; callers: sub_082C\n; calls (intra): sub_0C7F\n; calls (inter): GDI.INSERTPQ, GDI.SIZEPQ, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK\n;----------------------------------------------------------------------"
     },
     {
       "module": "TOSH",
@@ -901,13 +901,13 @@
       ],
       "fanout": 4,
       "fanin": 2,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (110 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (110 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0B53 -- offset 0x0B53 -- 110 instr\n; Dispatcher: tabla de decisiones cmp+jcc (110 instr).\n; tags: calls_kernel, dispatcher\n; callers: sub_082C, sub_0F15\n; calls (intra): sub_0205\n; calls (inter): KERNEL.GLOBALALLOC, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0B53 -- offset 0x0B53 -- 110 instr\n; Dispatcher: cmp+jcc decision table (110 instr).\n; tags: calls_kernel, dispatcher\n; callers: sub_082C, sub_0F15\n; calls (intra): sub_0205\n; calls (inter): KERNEL.GLOBALALLOC, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK\n;----------------------------------------------------------------------"
     },
     {
       "module": "TOSH",
@@ -982,14 +982,14 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Funcion mediana (66 instr, 2 calls).",
+      "description": "Mid-size function (66 instr, 2 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_kernel",
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0C7F -- offset 0x0C7F -- 66 instr\n; Funcion mediana (66 instr, 2 calls).\n; tags: calls_kernel, far, medium\n; callers: sub_0A7D\n; calls (inter): KERNEL.GLOBALALLOC, KERNEL.GLOBALREALLOC\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0C7F -- offset 0x0C7F -- 66 instr\n; Mid-size function (66 instr, 2 calls).\n; tags: calls_kernel, far, medium\n; callers: sub_0A7D\n; calls (inter): KERNEL.GLOBALALLOC, KERNEL.GLOBALREALLOC\n;----------------------------------------------------------------------"
     },
     {
       "module": "TOSH",
@@ -1062,12 +1062,12 @@
       ],
       "fanout": 3,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (177 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (177 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0D20 -- offset 0x0D20 -- 177 instr\n; Dispatcher: tabla de decisiones cmp+jcc (177 instr).\n; tags: dispatcher\n; callers: sub_082C\n; calls (intra): sub_0240, sub_02B4, sub_0F15\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0D20 -- offset 0x0D20 -- 177 instr\n; Dispatcher: cmp+jcc decision table (177 instr).\n; tags: dispatcher\n; callers: sub_082C\n; calls (intra): sub_0240, sub_02B4, sub_0F15\n;----------------------------------------------------------------------"
     },
     {
       "module": "TOSH",
@@ -1154,14 +1154,14 @@
       ],
       "fanout": 6,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (217 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (217 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0F15 -- offset 0x0F15 -- 217 instr\n; Dispatcher: tabla de decisiones cmp+jcc (217 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_0D20\n; calls (intra): sub_0240, sub_02B4, sub_0B53, sub_1164, sub_119E\n; calls (inter): KERNEL.GLOBALFREE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0F15 -- offset 0x0F15 -- 217 instr\n; Dispatcher: cmp+jcc decision table (217 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_0D20\n; calls (intra): sub_0240, sub_02B4, sub_0B53, sub_1164, sub_119E\n; calls (inter): KERNEL.GLOBALFREE\n;----------------------------------------------------------------------"
     },
     {
       "module": "TOSH",
@@ -1221,12 +1221,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (26 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (26 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1164 -- offset 0x1164 -- 26 instr\n; Dispatcher: tabla de decisiones cmp+jcc (26 instr).\n; tags: dispatcher\n; callers: sub_0F15\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1164 -- offset 0x1164 -- 26 instr\n; Dispatcher: cmp+jcc decision table (26 instr).\n; tags: dispatcher\n; callers: sub_0F15\n;----------------------------------------------------------------------"
     },
     {
       "module": "TOSH",
@@ -1290,12 +1290,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (64 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (64 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_119E -- offset 0x119E -- 64 instr\n; Dispatcher: tabla de decisiones cmp+jcc (64 instr).\n; tags: dispatcher\n; callers: sub_0F15\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_119E -- offset 0x119E -- 64 instr\n; Dispatcher: cmp+jcc decision table (64 instr).\n; tags: dispatcher\n; callers: sub_0F15\n;----------------------------------------------------------------------"
     }
   ]
 }

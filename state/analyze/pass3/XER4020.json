@@ -94,7 +94,7 @@
       "callers": [],
       "fanout": 3,
       "fanin": 0,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (283 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (283 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_gdi",
@@ -102,7 +102,7 @@
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0000 -- offset 0x0000 -- 283 instr\n; Dispatcher: tabla de decisiones cmp+jcc (283 instr).\n; tags: calls_gdi, calls_user, dispatcher, far\n; calls (inter): GDI.STARTSPOOLPAGE, USER.SETRECT, USER.SETRECTEMPTY\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0000 -- offset 0x0000 -- 283 instr\n; Dispatcher: cmp+jcc decision table (283 instr).\n; tags: calls_gdi, calls_user, dispatcher, far\n; calls (inter): GDI.STARTSPOOLPAGE, USER.SETRECT, USER.SETRECTEMPTY\n;----------------------------------------------------------------------"
     },
     {
       "module": "XER4020",
@@ -184,7 +184,7 @@
       "callers": [],
       "fanout": 3,
       "fanin": 0,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (386 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (386 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_gdi",
@@ -193,7 +193,7 @@
         "far",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_02C0 -- offset 0x02C0 -- 386 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (386 instr).\n; tags: calls_gdi, calls_kernel, complex_iterator, far, string_op\n; calls (inter): GDI.GETENVIRONMENT, KERNEL.LSTRCMP, KERNEL.LSTRCPY\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_02C0 -- offset 0x02C0 -- 386 instr\n; Iterator with string ops (movsb/scasb/...) (386 instr).\n; tags: calls_gdi, calls_kernel, complex_iterator, far, string_op\n; calls (inter): GDI.GETENVIRONMENT, KERNEL.LSTRCMP, KERNEL.LSTRCPY\n;----------------------------------------------------------------------"
     },
     {
       "module": "XER4020",
@@ -256,13 +256,13 @@
       ],
       "fanout": 0,
       "fanin": 3,
-      "description": "Funcion sin clasificar definitiva (29 instr).",
+      "description": "Unclassified function (29 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "far",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_066C -- offset 0x066C -- 29 instr\n; Funcion sin clasificar definitiva (29 instr).\n; tags: far, small\n; callers: sub_0BE8, sub_0EE7, sub_12A9\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_066C -- offset 0x066C -- 29 instr\n; Unclassified function (29 instr).\n; tags: far, small\n; callers: sub_0BE8, sub_0EE7, sub_12A9\n;----------------------------------------------------------------------"
     },
     {
       "module": "XER4020",
@@ -322,12 +322,12 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Funcion sin clasificar definitiva (27 instr).",
+      "description": "Unclassified function (27 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_06A7 -- offset 0x06A7 -- 27 instr\n; Funcion sin clasificar definitiva (27 instr).\n; tags: small\n; callers: sub_10B4, sub_12A9\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_06A7 -- offset 0x06A7 -- 27 instr\n; Unclassified function (27 instr).\n; tags: small\n; callers: sub_10B4, sub_12A9\n;----------------------------------------------------------------------"
     },
     {
       "module": "XER4020",
@@ -436,14 +436,14 @@
       ],
       "fanout": 9,
       "fanin": 2,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (221 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (221 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_06ED -- offset 0x06ED -- 221 instr\n; Dispatcher: tabla de decisiones cmp+jcc (221 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_10B4, sub_12A9\n; calls (intra): sub_0984, sub_0B2C\n; calls (inter): KERNEL.FINDRESOURCE, KERNEL.FREERESOURCE, KERNEL.GETMODULEHANDLE, KERNEL.GLOBALUNLOCK, KERNEL.LOADRESOURCE, KERNEL.LOCKRESOURCE (+1 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_06ED -- offset 0x06ED -- 221 instr\n; Dispatcher: cmp+jcc decision table (221 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_10B4, sub_12A9\n; calls (intra): sub_0984, sub_0B2C\n; calls (inter): KERNEL.FINDRESOURCE, KERNEL.FREERESOURCE, KERNEL.GETMODULEHANDLE, KERNEL.GLOBALUNLOCK, KERNEL.LOADRESOURCE, KERNEL.LOCKRESOURCE (+1 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "XER4020",
@@ -508,13 +508,13 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Funcion mediana (43 instr, 1 calls).",
+      "description": "Mid-size function (43 instr, 1 calls).",
       "confidence": "low",
       "semantic_tags": [
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0923 -- offset 0x0923 -- 43 instr\n; Funcion mediana (43 instr, 1 calls).\n; tags: far, medium\n; calls (intra): sub_0984\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0923 -- offset 0x0923 -- 43 instr\n; Mid-size function (43 instr, 1 calls).\n; tags: far, medium\n; calls (intra): sub_0984\n;----------------------------------------------------------------------"
     },
     {
       "module": "XER4020",
@@ -585,13 +585,13 @@
       ],
       "fanout": 1,
       "fanin": 2,
-      "description": "Funcion compleja: 132 instrucciones, 1 llamadas, 3 branches.",
+      "description": "Complex function: 132 instructions, 1 calls, 3 branches.",
       "confidence": "low",
       "semantic_tags": [
         "calls_kernel",
         "complex"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0984 -- offset 0x0984 -- 132 instr\n; Funcion compleja: 132 instrucciones, 1 llamadas, 3 branches.\n; tags: calls_kernel, complex\n; callers: sub_06ED, sub_0923\n; calls (inter): KERNEL.LSTRCPY\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0984 -- offset 0x0984 -- 132 instr\n; Complex function: 132 instructions, 1 calls, 3 branches.\n; tags: calls_kernel, complex\n; callers: sub_06ED, sub_0923\n; calls (inter): KERNEL.LSTRCPY\n;----------------------------------------------------------------------"
     },
     {
       "module": "XER4020",
@@ -658,12 +658,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Funcion mediana (69 instr, 1 calls).",
+      "description": "Mid-size function (69 instr, 1 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0B2C -- offset 0x0B2C -- 69 instr\n; Funcion mediana (69 instr, 1 calls).\n; tags: medium\n; callers: sub_06ED\n; calls (intra): sub_0BE8\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0B2C -- offset 0x0B2C -- 69 instr\n; Mid-size function (69 instr, 1 calls).\n; tags: medium\n; callers: sub_06ED\n; calls (intra): sub_0BE8\n;----------------------------------------------------------------------"
     },
     {
       "module": "XER4020",
@@ -743,14 +743,14 @@
       ],
       "fanout": 5,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (210 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (210 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0BE8 -- offset 0x0BE8 -- 210 instr\n; Dispatcher: tabla de decisiones cmp+jcc (210 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_0B2C\n; calls (intra): sub_066C, sub_0E11, sub_0EE7, sub_10B4\n; calls (inter): KERNEL.GLOBALFREE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0BE8 -- offset 0x0BE8 -- 210 instr\n; Dispatcher: cmp+jcc decision table (210 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_0B2C\n; calls (intra): sub_066C, sub_0E11, sub_0EE7, sub_10B4\n; calls (inter): KERNEL.GLOBALFREE\n;----------------------------------------------------------------------"
     },
     {
       "module": "XER4020",
@@ -836,14 +836,14 @@
       ],
       "fanout": 5,
       "fanin": 1,
-      "description": "Funcion mediana (74 instr, 5 calls).",
+      "description": "Mid-size function (74 instr, 5 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_gdi",
         "calls_kernel",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0E11 -- offset 0x0E11 -- 74 instr\n; Funcion mediana (74 instr, 5 calls).\n; tags: calls_gdi, calls_kernel, medium\n; callers: sub_0BE8\n; calls (intra): sub_1013\n; calls (inter): GDI.INSERTPQ, GDI.SIZEPQ, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0E11 -- offset 0x0E11 -- 74 instr\n; Mid-size function (74 instr, 5 calls).\n; tags: calls_gdi, calls_kernel, medium\n; callers: sub_0BE8\n; calls (intra): sub_1013\n; calls (inter): GDI.INSERTPQ, GDI.SIZEPQ, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK\n;----------------------------------------------------------------------"
     },
     {
       "module": "XER4020",
@@ -928,13 +928,13 @@
       ],
       "fanout": 4,
       "fanin": 2,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (110 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (110 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0EE7 -- offset 0x0EE7 -- 110 instr\n; Dispatcher: tabla de decisiones cmp+jcc (110 instr).\n; tags: calls_kernel, dispatcher\n; callers: sub_0BE8, sub_12A9\n; calls (intra): sub_066C\n; calls (inter): KERNEL.GLOBALALLOC, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0EE7 -- offset 0x0EE7 -- 110 instr\n; Dispatcher: cmp+jcc decision table (110 instr).\n; tags: calls_kernel, dispatcher\n; callers: sub_0BE8, sub_12A9\n; calls (intra): sub_066C\n; calls (inter): KERNEL.GLOBALALLOC, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK\n;----------------------------------------------------------------------"
     },
     {
       "module": "XER4020",
@@ -1009,14 +1009,14 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Funcion mediana (66 instr, 2 calls).",
+      "description": "Mid-size function (66 instr, 2 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_kernel",
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1013 -- offset 0x1013 -- 66 instr\n; Funcion mediana (66 instr, 2 calls).\n; tags: calls_kernel, far, medium\n; callers: sub_0E11\n; calls (inter): KERNEL.GLOBALALLOC, KERNEL.GLOBALREALLOC\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1013 -- offset 0x1013 -- 66 instr\n; Mid-size function (66 instr, 2 calls).\n; tags: calls_kernel, far, medium\n; callers: sub_0E11\n; calls (inter): KERNEL.GLOBALALLOC, KERNEL.GLOBALREALLOC\n;----------------------------------------------------------------------"
     },
     {
       "module": "XER4020",
@@ -1089,12 +1089,12 @@
       ],
       "fanout": 3,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (177 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (177 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_10B4 -- offset 0x10B4 -- 177 instr\n; Dispatcher: tabla de decisiones cmp+jcc (177 instr).\n; tags: dispatcher\n; callers: sub_0BE8\n; calls (intra): sub_06A7, sub_06ED, sub_12A9\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_10B4 -- offset 0x10B4 -- 177 instr\n; Dispatcher: cmp+jcc decision table (177 instr).\n; tags: dispatcher\n; callers: sub_0BE8\n; calls (intra): sub_06A7, sub_06ED, sub_12A9\n;----------------------------------------------------------------------"
     },
     {
       "module": "XER4020",
@@ -1182,14 +1182,14 @@
       ],
       "fanout": 7,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (256 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (256 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_12A9 -- offset 0x12A9 -- 256 instr\n; Dispatcher: tabla de decisiones cmp+jcc (256 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_10B4\n; calls (intra): sub_066C, sub_06A7, sub_06ED, sub_0EE7, sub_1549, sub_1583\n; calls (inter): KERNEL.GLOBALFREE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_12A9 -- offset 0x12A9 -- 256 instr\n; Dispatcher: cmp+jcc decision table (256 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_10B4\n; calls (intra): sub_066C, sub_06A7, sub_06ED, sub_0EE7, sub_1549, sub_1583\n; calls (inter): KERNEL.GLOBALFREE\n;----------------------------------------------------------------------"
     },
     {
       "module": "XER4020",
@@ -1249,12 +1249,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (26 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (26 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1549 -- offset 0x1549 -- 26 instr\n; Dispatcher: tabla de decisiones cmp+jcc (26 instr).\n; tags: dispatcher\n; callers: sub_12A9\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1549 -- offset 0x1549 -- 26 instr\n; Dispatcher: cmp+jcc decision table (26 instr).\n; tags: dispatcher\n; callers: sub_12A9\n;----------------------------------------------------------------------"
     },
     {
       "module": "XER4020",
@@ -1317,12 +1317,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion mediana (44 instr, 0 calls).",
+      "description": "Mid-size function (44 instr, 0 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1583 -- offset 0x1583 -- 44 instr\n; Funcion mediana (44 instr, 0 calls).\n; tags: medium\n; callers: sub_12A9\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1583 -- offset 0x1583 -- 44 instr\n; Mid-size function (44 instr, 0 calls).\n; tags: medium\n; callers: sub_12A9\n;----------------------------------------------------------------------"
     }
   ]
 }

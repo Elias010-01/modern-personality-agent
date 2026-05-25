@@ -1,0 +1,246 @@
+{
+  "module": "SYSTEM",
+  "num_functions": 5,
+  "num_lines": 595,
+  "num_instructions": 99,
+  "functions": [
+    {
+      "module": "SYSTEM",
+      "segment_file": "seg1.asm",
+      "name": "ENABLESYSTEMTIMERS",
+      "kind": "FAR",
+      "offset": 884,
+      "size_bytes": 44,
+      "start_line": 452,
+      "end_line": 471,
+      "num_instructions": 17,
+      "prologue": "none",
+      "epilogue": "retf",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 1,
+      "num_jumps_uncond": 0,
+      "ints": [
+        "0x21",
+        "0x21"
+      ],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 4,
+      "mnemonic_histogram": {
+        "mov": 8,
+        "int": 2,
+        "push": 2,
+        "pop": 2,
+        "cmp": 1,
+        "jne": 1,
+        "retf": 1
+      },
+      "classification": "dos_caller",
+      "first_instructions": [
+        "cmp byte ptr cs:[0x2e2], 0",
+        "jne L_039F",
+        "mov ah, 0x35",
+        "mov al, 8",
+        "int 0x21",
+        "mov word ptr cs:[0x2d6], bx"
+      ],
+      "last_instructions": [
+        "int 0x21",
+        "pop ds",
+        "mov byte ptr cs:[0x2e2], 1",
+        "retf"
+      ]
+    },
+    {
+      "module": "SYSTEM",
+      "segment_file": "seg1.asm",
+      "name": "DISABLESYSTEMTIMERS",
+      "kind": "FAR",
+      "offset": 928,
+      "size_bytes": 28,
+      "start_line": 477,
+      "end_line": 489,
+      "num_instructions": 10,
+      "prologue": "none",
+      "epilogue": "retf",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 1,
+      "num_jumps_uncond": 0,
+      "ints": [
+        "0x21"
+      ],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 3,
+      "mnemonic_histogram": {
+        "mov": 3,
+        "cmp": 1,
+        "je": 1,
+        "push": 1,
+        "lds": 1,
+        "int": 1,
+        "pop": 1,
+        "retf": 1
+      },
+      "classification": "dos_caller",
+      "first_instructions": [
+        "cmp byte ptr cs:[0x2e2], 0",
+        "je L_03BB",
+        "mov byte ptr cs:[0x2e2], 0",
+        "mov ah, 0x25",
+        "mov al, 8",
+        "push ds"
+      ],
+      "last_instructions": [
+        "lds dx, ptr cs:[0x2d6]",
+        "int 0x21",
+        "pop ds",
+        "retf"
+      ]
+    },
+    {
+      "module": "SYSTEM",
+      "segment_file": "seg1.asm",
+      "name": "CREATESYSTEMTIMER",
+      "kind": "FAR",
+      "offset": 956,
+      "size_bytes": 79,
+      "start_line": 495,
+      "end_line": 535,
+      "num_instructions": 35,
+      "prologue": "far_inc_bp_standard",
+      "epilogue": "retf_n",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 3,
+      "num_jumps_uncond": 2,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 10,
+      "mnemonic_histogram": {
+        "mov": 13,
+        "push": 2,
+        "je": 2,
+        "cmp": 2,
+        "jmp": 2,
+        "pop": 2,
+        "inc": 1,
+        "lds": 1,
+        "or": 1,
+        "mul": 1,
+        "div": 1,
+        "jne": 1,
+        "nop": 1,
+        "add": 1,
+        "xor": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "inc bp",
+        "push bp",
+        "mov bp, sp",
+        "push ds",
+        "lds bx, ptr cs:[0x2da]",
+        "mov ax, word ptr [bp + 0xa]"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 6"
+      ]
+    },
+    {
+      "module": "SYSTEM",
+      "segment_file": "seg1.asm",
+      "name": "KILLSYSTEMTIMER",
+      "kind": "FAR",
+      "offset": 1036,
+      "size_bytes": 64,
+      "start_line": 541,
+      "end_line": 580,
+      "num_instructions": 34,
+      "prologue": "far_inc_bp_standard",
+      "epilogue": "retf_n",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 3,
+      "num_jumps_uncond": 3,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": true,
+      "num_mem_refs": 8,
+      "mnemonic_histogram": {
+        "mov": 5,
+        "stosw": 4,
+        "push": 3,
+        "cmp": 3,
+        "jne": 3,
+        "jmp": 3,
+        "pop": 3,
+        "nop": 2,
+        "inc": 1,
+        "les": 1,
+        "cld": 1,
+        "not": 1,
+        "add": 1,
+        "sub": 1,
+        "dec": 1
+      },
+      "classification": "iterator",
+      "first_instructions": [
+        "inc bp",
+        "push bp",
+        "mov bp, sp",
+        "push ds",
+        "push di",
+        "les di, ptr cs:[0x2da]"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 2"
+      ]
+    },
+    {
+      "module": "SYSTEM",
+      "segment_file": "seg1.asm",
+      "name": "INQUIRELONGINTS",
+      "kind": "FAR",
+      "offset": 1102,
+      "size_bytes": 7,
+      "start_line": 586,
+      "end_line": 590,
+      "num_instructions": 3,
+      "prologue": "none",
+      "epilogue": "retf",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 1,
+      "mnemonic_histogram": {
+        "mov": 2,
+        "retf": 1
+      },
+      "classification": "trivial_stub",
+      "first_instructions": [
+        "mov ax, word ptr cs:[0x2e3]",
+        "mov cx, ax",
+        "retf"
+      ],
+      "last_instructions": [
+        "mov ax, word ptr cs:[0x2e3]",
+        "mov cx, ax",
+        "retf"
+      ]
+    }
+  ]
+}

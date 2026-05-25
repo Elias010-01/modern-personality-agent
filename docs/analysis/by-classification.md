@@ -1,9 +1,9 @@
-# Funciones por clasificacion semantica
+# Functions by semantic classification
 
-## Totales globales
+## Global totals
 
-| Clasificacion | Cantidad |
-|---------------|---------:|
+| Classification | Count |
+|----------------|------:|
 | `dispatcher` | 1020 |
 | `medium` | 761 |
 | `small` | 727 |
@@ -17,9 +17,9 @@
 | `bios_caller` | 26 |
 | `isr` | 8 |
 
-## Por modulo
+## By module
 
-| Modulo | bios_caller | complex | complex_iterator | dispatcher | dos_caller | isr | iterator | leaf | medium | small | trivial_stub | wrapper |
+| Module | bios_caller | complex | complex_iterator | dispatcher | dos_caller | isr | iterator | leaf | medium | small | trivial_stub | wrapper |
 |--------|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|-----:|
 | ATTDC | 0 | 1 | 8 | 2 | 0 | 0 | 7 | 3 | 2 | 11 | 2 | 5 |
 | ATTDEB | 0 | 1 | 10 | 3 | 0 | 0 | 5 | 2 | 2 | 10 | 2 | 4 |

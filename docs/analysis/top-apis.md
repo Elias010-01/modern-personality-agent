@@ -1,10 +1,10 @@
-# Top APIs invocadas (cross-module)
+# Top APIs invoked (cross-module)
 
-Top 100 funciones mas llamadas por otros modulos. Util para identificar
-que partes del sistema son criticas / mas usadas.
+Top 100 functions most called by other modules. Useful for identifying
+which parts of the system are critical / most used.
 
-| # | API | Llamadas |
-|---|-----|---------:|
+| # | API | Calls |
+|---|-----|------:|
 | 1 | `KERNEL.GLOBALUNLOCK` | 167 |
 | 2 | `KERNEL.GLOBALLOCK` | 137 |
 | 3 | `KERNEL.LOCALFREE` | 132 |

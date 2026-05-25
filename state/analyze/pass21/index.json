@@ -1,0 +1,25 @@
+{
+  "modules": [
+    {
+      "module": "KERNEL",
+      "symbols": 388,
+      "constants": 6,
+      "confirmed": 103
+    },
+    {
+      "module": "USER",
+      "symbols": 1112,
+      "constants": 6,
+      "confirmed": 235
+    },
+    {
+      "module": "GDI",
+      "symbols": 517,
+      "constants": 6,
+      "confirmed": 182
+    }
+  ],
+  "total_symbols": 2017,
+  "total_constants": 18,
+  "total_confirmed": 520
+}

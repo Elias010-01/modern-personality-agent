@@ -64,13 +64,13 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (29 instr).",
+      "description": "Unclassified function (29 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "bios_caller",
         "int_16"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_010A -- offset 0x010A -- 29 instr\n; Funcion sin clasificar definitiva (29 instr).\n; tags: bios_caller, int_16\n; calls (intra): sub_0150\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_010A -- offset 0x010A -- 29 instr\n; Unclassified function (29 instr).\n; tags: bios_caller, int_16\n; calls (intra): sub_0150\n;----------------------------------------------------------------------"
     },
     {
       "module": "FRANCE",
@@ -139,7 +139,7 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (160 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (160 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
@@ -147,7 +147,7 @@
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0150 -- offset 0x0150 -- 160 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (160 instr).\n; tags: complex_iterator, far, loop, string_op\n; callers: sub_010A\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0150 -- offset 0x0150 -- 160 instr\n; Iterator with string ops (movsb/scasb/...) (160 instr).\n; tags: complex_iterator, far, loop, string_op\n; callers: sub_010A\n;----------------------------------------------------------------------"
     },
     {
       "module": "FRANCE",
@@ -217,14 +217,14 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (191 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (191 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
         "far",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_026A -- offset 0x026A -- 191 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (191 instr).\n; tags: complex_iterator, far, string_op\n; calls (intra): sub_0428\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_026A -- offset 0x026A -- 191 instr\n; Iterator with string ops (movsb/scasb/...) (191 instr).\n; tags: complex_iterator, far, string_op\n; calls (intra): sub_0428\n;----------------------------------------------------------------------"
     },
     {
       "module": "FRANCE",
@@ -288,12 +288,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (24 instr).",
+      "description": "Unclassified function (24 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0428 -- offset 0x0428 -- 24 instr\n; Funcion sin clasificar definitiva (24 instr).\n; tags: small\n; callers: sub_026A\n; calls (intra): sub_0467\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0428 -- offset 0x0428 -- 24 instr\n; Unclassified function (24 instr).\n; tags: small\n; callers: sub_026A\n; calls (intra): sub_0467\n;----------------------------------------------------------------------"
     },
     {
       "module": "FRANCE",
@@ -349,12 +349,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion hoja (no llama a otras, 10 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 10 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0467 -- offset 0x0467 -- 10 instr\n; Funcion hoja (no llama a otras, 10 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_0428\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0467 -- offset 0x0467 -- 10 instr\n; Leaf function (no callees, 10 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_0428\n;----------------------------------------------------------------------"
     }
   ]
 }

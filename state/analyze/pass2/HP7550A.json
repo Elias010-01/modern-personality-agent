@@ -1,0 +1,145 @@
+{
+  "module": "HP7550A",
+  "num_functions": 2,
+  "intra_edges": [],
+  "inter_edges": [],
+  "external_modules": [],
+  "functions": [
+    {
+      "module": "HP7550A",
+      "segment_file": "seg1.asm",
+      "name": "sub_0234",
+      "kind": "FAR",
+      "offset": 564,
+      "size_bytes": null,
+      "start_line": 227,
+      "end_line": 552,
+      "num_instructions": 295,
+      "prologue": "saves_regs",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_149D",
+        "L_17DF",
+        "L_1C4D"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 18,
+      "num_jumps_uncond": 17,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 119,
+      "mnemonic_histogram": {
+        "mov": 105,
+        "push": 67,
+        "jmp": 17,
+        "les": 17,
+        "nop": 10,
+        "cmp": 10,
+        "jne": 9,
+        "or": 8,
+        "shl": 8,
+        "call": 8,
+        "pop": 7,
+        "je": 7,
+        "sub": 5,
+        "inc": 4,
+        "add": 3
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push ds",
+        "pop ax",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 6"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_149D",
+        "L_17DF",
+        "L_1C4D"
+      ],
+      "callers": [],
+      "fanout": 0,
+      "fanin": 0
+    },
+    {
+      "module": "HP7550A",
+      "segment_file": "seg1.asm",
+      "name": "sub_05B0",
+      "kind": "NEAR",
+      "offset": 1456,
+      "size_bytes": null,
+      "start_line": 553,
+      "end_line": 699,
+      "num_instructions": 135,
+      "prologue": "saves_regs",
+      "epilogue": "jmp_tail",
+      "calls_near": [
+        "L_149D",
+        "L_1C4D",
+        "L_1CE0"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 8,
+      "num_jumps_uncond": 8,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 53,
+      "mnemonic_histogram": {
+        "push": 36,
+        "mov": 35,
+        "les": 18,
+        "jmp": 8,
+        "cmp": 7,
+        "nop": 6,
+        "jne": 5,
+        "call": 5,
+        "inc": 2,
+        "sub": 2,
+        "xor": 2,
+        "je": 2,
+        "pop": 1,
+        "jbe": 1,
+        "add": 1
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push ds",
+        "pop ax",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp"
+      ],
+      "last_instructions": [
+        "push cs",
+        "call L_1CE0",
+        "les bx, ptr [bp + 0x10]",
+        "push word ptr es:[bx + 7]"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_149D",
+        "L_1C4D",
+        "L_1CE0"
+      ],
+      "callers": [],
+      "fanout": 0,
+      "fanin": 0
+    }
+  ]
+}

@@ -69,7 +69,7 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (97 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (97 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
@@ -77,7 +77,7 @@
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0034 -- offset 0x0034 -- 97 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (97 instr).\n; tags: complex_iterator, far, loop, string_op\n; callers: sub_0101\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0034 -- offset 0x0034 -- 97 instr\n; Iterator with string ops (movsb/scasb/...) (97 instr).\n; tags: complex_iterator, far, loop, string_op\n; callers: sub_0101\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSMOUSE2",
@@ -146,13 +146,13 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Llama a servicios DOS via INT 21h (25 instr).",
+      "description": "Calls DOS services via INT 21h (25 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0101 -- offset 0x0101 -- 25 instr\n; Llama a servicios DOS via INT 21h (25 instr).\n; tags: dos_caller, int_21\n; calls (intra): sub_0034\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0101 -- offset 0x0101 -- 25 instr\n; Calls DOS services via INT 21h (25 instr).\n; tags: dos_caller, int_21\n; calls (intra): sub_0034\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSMOUSE2",
@@ -221,7 +221,7 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Llama a servicios DOS via INT 21h (54 instr).",
+      "description": "Calls DOS services via INT 21h (54 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
@@ -229,7 +229,7 @@
         "int_21",
         "int_33"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0142 -- offset 0x0142 -- 54 instr\n; Llama a servicios DOS via INT 21h (54 instr).\n; tags: dos_caller, far, int_21, int_33\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0142 -- offset 0x0142 -- 54 instr\n; Calls DOS services via INT 21h (54 instr).\n; tags: dos_caller, far, int_21, int_33\n;----------------------------------------------------------------------"
     },
     {
       "module": "MSMOUSE2",
@@ -287,13 +287,13 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (11 instr).",
+      "description": "Unclassified function (11 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "far",
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_01B1 -- offset 0x01B1 -- 11 instr\n; Funcion sin clasificar definitiva (11 instr).\n; tags: far, wrapper\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_01B1 -- offset 0x01B1 -- 11 instr\n; Unclassified function (11 instr).\n; tags: far, wrapper\n;----------------------------------------------------------------------"
     }
   ]
 }

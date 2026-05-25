@@ -66,14 +66,14 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Llama a servicios BIOS via INT 10h (video, 18 instr).",
+      "description": "Calls BIOS services via INT 10h (video, 18 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "int_10",
         "iterator",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0182 -- offset 0x0182 -- 18 instr\n; Llama a servicios BIOS via INT 10h (video, 18 instr).\n; tags: int_10, iterator, string_op\n; callers: sub_1954\n; calls (intra): sub_01BF\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0182 -- offset 0x0182 -- 18 instr\n; Calls BIOS services via INT 10h (video, 18 instr).\n; tags: int_10, iterator, string_op\n; callers: sub_1954\n; calls (intra): sub_01BF\n;----------------------------------------------------------------------"
     },
     {
       "module": "GENIUS",
@@ -133,13 +133,13 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Llama a servicios BIOS via INT 10h (video, 12 instr).",
+      "description": "Calls BIOS services via INT 10h (video, 12 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "bios_caller",
         "int_10"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_01A6 -- offset 0x01A6 -- 12 instr\n; Llama a servicios BIOS via INT 10h (video, 12 instr).\n; tags: bios_caller, int_10\n; callers: sub_1954\n; calls (intra): sub_01BF\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_01A6 -- offset 0x01A6 -- 12 instr\n; Calls BIOS services via INT 10h (video, 12 instr).\n; tags: bios_caller, int_10\n; callers: sub_1954\n; calls (intra): sub_01BF\n;----------------------------------------------------------------------"
     },
     {
       "module": "GENIUS",
@@ -197,12 +197,12 @@
       ],
       "fanout": 2,
       "fanin": 2,
-      "description": "Funcion sin clasificar definitiva (8 instr).",
+      "description": "Unclassified function (8 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_01BF -- offset 0x01BF -- 8 instr\n; Funcion sin clasificar definitiva (8 instr).\n; tags: small\n; callers: sub_0182, sub_01A6\n; calls (intra): sub_01D5, sub_01DA\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_01BF -- offset 0x01BF -- 8 instr\n; Unclassified function (8 instr).\n; tags: small\n; callers: sub_0182, sub_01A6\n; calls (intra): sub_01D5, sub_01DA\n;----------------------------------------------------------------------"
     },
     {
       "module": "GENIUS",
@@ -246,12 +246,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Stub trivial (2 instrucciones, sin logica significativa).",
+      "description": "Trivial stub (2 instructions, no significant logic).",
       "confidence": "low",
       "semantic_tags": [
         "trivial_stub"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_01D5 -- offset 0x01D5 -- 2 instr\n; Stub trivial (2 instrucciones, sin logica significativa).\n; tags: trivial_stub\n; callers: sub_01BF\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_01D5 -- offset 0x01D5 -- 2 instr\n; Trivial stub (2 instructions, no significant logic).\n; tags: trivial_stub\n; callers: sub_01BF\n;----------------------------------------------------------------------"
     },
     {
       "module": "GENIUS",
@@ -301,12 +301,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion hoja (no llama a otras, 4 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 4 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_01DA -- offset 0x01DA -- 4 instr\n; Funcion hoja (no llama a otras, 4 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_01BF\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_01DA -- offset 0x01DA -- 4 instr\n; Leaf function (no callees, 4 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_01BF\n;----------------------------------------------------------------------"
     },
     {
       "module": "GENIUS",
@@ -362,12 +362,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Wrapper que delega en sub_01F3.",
+      "description": "Wrapper delegating to sub_01F3.",
       "confidence": "medium",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_01E1 -- offset 0x01E1 -- 7 instr\n; Wrapper que delega en sub_01F3.\n; tags: wrapper\n; callers: sub_18B4\n; calls (intra): sub_01F3\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_01E1 -- offset 0x01E1 -- 7 instr\n; Wrapper delegating to sub_01F3.\n; tags: wrapper\n; callers: sub_18B4\n; calls (intra): sub_01F3\n;----------------------------------------------------------------------"
     },
     {
       "module": "GENIUS",
@@ -420,14 +420,14 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (9 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (9 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_01F3 -- offset 0x01F3 -- 9 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (9 instr).\n; tags: iterator, loop, string_op\n; callers: sub_01E1\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_01F3 -- offset 0x01F3 -- 9 instr\n; Iterator with string ops (movsb/scasb/...) (9 instr).\n; tags: iterator, loop, string_op\n; callers: sub_01E1\n;----------------------------------------------------------------------"
     },
     {
       "module": "GENIUS",
@@ -492,12 +492,12 @@
       ],
       "fanout": 5,
       "fanin": 2,
-      "description": "Funcion sin clasificar definitiva (8 instr).",
+      "description": "Unclassified function (8 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_01FF -- offset 0x01FF -- 8 instr\n; Funcion sin clasificar definitiva (8 instr).\n; tags: small\n; callers: sub_1AA7, sub_1B21\n; calls (intra): sub_0236, sub_026B, sub_032E, sub_0397, sub_03CA\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_01FF -- offset 0x01FF -- 8 instr\n; Unclassified function (8 instr).\n; tags: small\n; callers: sub_1AA7, sub_1B21\n; calls (intra): sub_0236, sub_026B, sub_032E, sub_0397, sub_03CA\n;----------------------------------------------------------------------"
     },
     {
       "module": "GENIUS",
@@ -558,12 +558,12 @@
       ],
       "fanout": 1,
       "fanin": 4,
-      "description": "Wrapper que delega en sub_021E.",
+      "description": "Wrapper delegating to sub_021E.",
       "confidence": "medium",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0211 -- offset 0x0211 -- 6 instr\n; Wrapper que delega en sub_021E.\n; tags: wrapper\n; callers: sub_1828, sub_18B4, sub_1A84, sub_1B6B\n; calls (intra): sub_021E\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0211 -- offset 0x0211 -- 6 instr\n; Wrapper delegating to sub_021E.\n; tags: wrapper\n; callers: sub_1828, sub_18B4, sub_1A84, sub_1B6B\n; calls (intra): sub_021E\n;----------------------------------------------------------------------"
     },
     {
       "module": "GENIUS",
@@ -614,12 +614,12 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Funcion hoja (no llama a otras, 7 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 7 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_021E -- offset 0x021E -- 7 instr\n; Funcion hoja (no llama a otras, 7 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_0211, sub_03CA\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_021E -- offset 0x021E -- 7 instr\n; Leaf function (no callees, 7 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_0211, sub_03CA\n;----------------------------------------------------------------------"
     },
     {
       "module": "GENIUS",
@@ -681,14 +681,14 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (25 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (25 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0236 -- offset 0x0236 -- 25 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (25 instr).\n; tags: iterator, loop, string_op\n; callers: sub_01FF\n; calls (intra): sub_0375\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0236 -- offset 0x0236 -- 25 instr\n; Iterator with string ops (movsb/scasb/...) (25 instr).\n; tags: iterator, loop, string_op\n; callers: sub_01FF\n; calls (intra): sub_0375\n;----------------------------------------------------------------------"
     },
     {
       "module": "GENIUS",
@@ -746,12 +746,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Wrapper que delega en sub_0290.",
+      "description": "Wrapper delegating to sub_0290.",
       "confidence": "medium",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_026B -- offset 0x026B -- 15 instr\n; Wrapper que delega en sub_0290.\n; tags: wrapper\n; callers: sub_01FF\n; calls (intra): sub_0290\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_026B -- offset 0x026B -- 15 instr\n; Wrapper delegating to sub_0290.\n; tags: wrapper\n; callers: sub_01FF\n; calls (intra): sub_0290\n;----------------------------------------------------------------------"
     },
     {
       "module": "GENIUS",
@@ -818,14 +818,14 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (39 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (39 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0290 -- offset 0x0290 -- 39 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (39 instr).\n; tags: iterator, loop, string_op\n; callers: sub_026B\n; calls (intra): sub_02DE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0290 -- offset 0x0290 -- 39 instr\n; Iterator with string ops (movsb/scasb/...) (39 instr).\n; tags: iterator, loop, string_op\n; callers: sub_026B\n; calls (intra): sub_02DE\n;----------------------------------------------------------------------"
     },
     {
       "module": "GENIUS",
@@ -888,14 +888,14 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (42 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (42 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_02DE -- offset 0x02DE -- 42 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (42 instr).\n; tags: iterator, loop, string_op\n; callers: sub_0290\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_02DE -- offset 0x02DE -- 42 instr\n; Iterator with string ops (movsb/scasb/...) (42 instr).\n; tags: iterator, loop, string_op\n; callers: sub_0290\n;----------------------------------------------------------------------"
     },
     {
       "module": "GENIUS",
@@ -954,14 +954,14 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (15 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (15 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_032E -- offset 0x032E -- 15 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (15 instr).\n; tags: iterator, loop, string_op\n; callers: sub_01FF\n; calls (intra): sub_0375\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_032E -- offset 0x032E -- 15 instr\n; Iterator with string ops (movsb/scasb/...) (15 instr).\n; tags: iterator, loop, string_op\n; callers: sub_01FF\n; calls (intra): sub_0375\n;----------------------------------------------------------------------"
     },
     {
       "module": "GENIUS",
@@ -1021,14 +1021,14 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (14 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (14 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0354 -- offset 0x0354 -- 14 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (14 instr).\n; tags: iterator, loop, string_op\n; callers: sub_03CA\n; calls (intra): sub_0375\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0354 -- offset 0x0354 -- 14 instr\n; Iterator with string ops (movsb/scasb/...) (14 instr).\n; tags: iterator, loop, string_op\n; callers: sub_03CA\n; calls (intra): sub_0375\n;----------------------------------------------------------------------"
     },
     {
       "module": "GENIUS",
@@ -1084,12 +1084,12 @@
       ],
       "fanout": 0,
       "fanin": 3,
-      "description": "Funcion hoja (no llama a otras, 14 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 14 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0375 -- offset 0x0375 -- 14 instr\n; Funcion hoja (no llama a otras, 14 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_0236, sub_032E, sub_0354\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0375 -- offset 0x0375 -- 14 instr\n; Leaf function (no callees, 14 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_0236, sub_032E, sub_0354\n;----------------------------------------------------------------------"
     },
     {
       "module": "GENIUS",
@@ -1151,12 +1151,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (21 instr).",
+      "description": "Unclassified function (21 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0397 -- offset 0x0397 -- 21 instr\n; Funcion sin clasificar definitiva (21 instr).\n; tags: small\n; callers: sub_01FF\n; calls (intra): sub_0472\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0397 -- offset 0x0397 -- 21 instr\n; Unclassified function (21 instr).\n; tags: small\n; callers: sub_01FF\n; calls (intra): sub_0472\n;----------------------------------------------------------------------"
     },
     {
       "module": "GENIUS",
@@ -1219,12 +1219,12 @@
       ],
       "fanout": 4,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (11 instr).",
+      "description": "Unclassified function (11 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_03CA -- offset 0x03CA -- 11 instr\n; Funcion sin clasificar definitiva (11 instr).\n; tags: small\n; callers: sub_01FF\n; calls (intra): sub_021E, sub_0354, sub_03E6, sub_0421\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_03CA -- offset 0x03CA -- 11 instr\n; Unclassified function (11 instr).\n; tags: small\n; callers: sub_01FF\n; calls (intra): sub_021E, sub_0354, sub_03E6, sub_0421\n;----------------------------------------------------------------------"
     },
     {
       "module": "GENIUS",
@@ -1289,12 +1289,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (28 instr).",
+      "description": "Unclassified function (28 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_03E6 -- offset 0x03E6 -- 28 instr\n; Funcion sin clasificar definitiva (28 instr).\n; tags: small\n; callers: sub_03CA\n; calls (intra): sub_0472\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_03E6 -- offset 0x03E6 -- 28 instr\n; Unclassified function (28 instr).\n; tags: small\n; callers: sub_03CA\n; calls (intra): sub_0472\n;----------------------------------------------------------------------"
     },
     {
       "module": "GENIUS",
@@ -1354,12 +1354,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (31 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (31 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0421 -- offset 0x0421 -- 31 instr\n; Dispatcher: tabla de decisiones cmp+jcc (31 instr).\n; tags: dispatcher\n; callers: sub_03CA\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0421 -- offset 0x0421 -- 31 instr\n; Dispatcher: cmp+jcc decision table (31 instr).\n; tags: dispatcher\n; callers: sub_03CA\n;----------------------------------------------------------------------"
     },
     {
       "module": "GENIUS",
@@ -1438,7 +1438,7 @@
       ],
       "fanout": 5,
       "fanin": 2,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (1740 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (1740 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
@@ -1446,7 +1446,7 @@
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0472 -- offset 0x0472 -- 1740 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (1740 instr).\n; tags: complex_iterator, far, loop, string_op\n; callers: sub_0397, sub_03E6\n; calls (intra): sub_13D0, sub_1455, sub_1828, sub_18B4, sub_1C10\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0472 -- offset 0x0472 -- 1740 instr\n; Iterator with string ops (movsb/scasb/...) (1740 instr).\n; tags: complex_iterator, far, loop, string_op\n; callers: sub_0397, sub_03E6\n; calls (intra): sub_13D0, sub_1455, sub_1828, sub_18B4, sub_1C10\n;----------------------------------------------------------------------"
     },
     {
       "module": "GENIUS",
@@ -1509,12 +1509,12 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (50 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (50 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_13D0 -- offset 0x13D0 -- 50 instr\n; Dispatcher: tabla de decisiones cmp+jcc (50 instr).\n; tags: dispatcher\n; callers: sub_0472, sub_1455\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_13D0 -- offset 0x13D0 -- 50 instr\n; Dispatcher: cmp+jcc decision table (50 instr).\n; tags: dispatcher\n; callers: sub_0472, sub_1455\n;----------------------------------------------------------------------"
     },
     {
       "module": "GENIUS",
@@ -1588,14 +1588,14 @@
       ],
       "fanout": 3,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (180 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (180 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
         "far",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1455 -- offset 0x1455 -- 180 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (180 instr).\n; tags: complex_iterator, far, string_op\n; callers: sub_0472\n; calls (intra): sub_13D0, sub_160A, sub_1828\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1455 -- offset 0x1455 -- 180 instr\n; Iterator with string ops (movsb/scasb/...) (180 instr).\n; tags: complex_iterator, far, string_op\n; callers: sub_0472\n; calls (intra): sub_13D0, sub_160A, sub_1828\n;----------------------------------------------------------------------"
     },
     {
       "module": "GENIUS",
@@ -1664,7 +1664,7 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (149 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (149 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
@@ -1672,7 +1672,7 @@
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_160A -- offset 0x160A -- 149 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (149 instr).\n; tags: complex_iterator, far, loop, string_op\n; callers: sub_1455\n; calls (intra): sub_175A, sub_1BA8\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_160A -- offset 0x160A -- 149 instr\n; Iterator with string ops (movsb/scasb/...) (149 instr).\n; tags: complex_iterator, far, loop, string_op\n; callers: sub_1455\n; calls (intra): sub_175A, sub_1BA8\n;----------------------------------------------------------------------"
     },
     {
       "module": "GENIUS",
@@ -1715,12 +1715,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Stub trivial (2 instrucciones, sin logica significativa).",
+      "description": "Trivial stub (2 instructions, no significant logic).",
       "confidence": "low",
       "semantic_tags": [
         "trivial_stub"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_175A -- offset 0x175A -- 2 instr\n; Stub trivial (2 instrucciones, sin logica significativa).\n; tags: trivial_stub\n; callers: sub_160A\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_175A -- offset 0x175A -- 2 instr\n; Trivial stub (2 instructions, no significant logic).\n; tags: trivial_stub\n; callers: sub_160A\n;----------------------------------------------------------------------"
     },
     {
       "module": "GENIUS",
@@ -1785,14 +1785,14 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (103 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (103 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
         "far",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_175F -- offset 0x175F -- 103 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (103 instr).\n; tags: complex_iterator, far, string_op\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_175F -- offset 0x175F -- 103 instr\n; Iterator with string ops (movsb/scasb/...) (103 instr).\n; tags: complex_iterator, far, string_op\n;----------------------------------------------------------------------"
     },
     {
       "module": "GENIUS",
@@ -1861,12 +1861,12 @@
       ],
       "fanout": 2,
       "fanin": 2,
-      "description": "Funcion sin clasificar definitiva (26 instr).",
+      "description": "Unclassified function (26 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1828 -- offset 0x1828 -- 26 instr\n; Funcion sin clasificar definitiva (26 instr).\n; tags: small\n; callers: sub_0472, sub_1455\n; calls (intra): sub_0211, sub_187C\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1828 -- offset 0x1828 -- 26 instr\n; Unclassified function (26 instr).\n; tags: small\n; callers: sub_0472, sub_1455\n; calls (intra): sub_0211, sub_187C\n;----------------------------------------------------------------------"
     },
     {
       "module": "GENIUS",
@@ -1918,12 +1918,12 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (4 instr).",
+      "description": "Unclassified function (4 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1876 -- offset 0x1876 -- 4 instr\n; Funcion sin clasificar definitiva (4 instr).\n; tags: wrapper\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1876 -- offset 0x1876 -- 4 instr\n; Unclassified function (4 instr).\n; tags: wrapper\n;----------------------------------------------------------------------"
     },
     {
       "module": "GENIUS",
@@ -1986,12 +1986,12 @@
       ],
       "fanout": 0,
       "fanin": 3,
-      "description": "Funcion hoja (no llama a otras, 20 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 20 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_187C -- offset 0x187C -- 20 instr\n; Funcion hoja (no llama a otras, 20 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_1828, sub_1A84, sub_1B21\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_187C -- offset 0x187C -- 20 instr\n; Leaf function (no callees, 20 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_1828, sub_1A84, sub_1B21\n;----------------------------------------------------------------------"
     },
     {
       "module": "GENIUS",
@@ -2060,13 +2060,13 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Funcion mediana (69 instr, 2 calls).",
+      "description": "Mid-size function (69 instr, 2 calls).",
       "confidence": "low",
       "semantic_tags": [
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_18B4 -- offset 0x18B4 -- 69 instr\n; Funcion mediana (69 instr, 2 calls).\n; tags: far, medium\n; callers: sub_0472\n; calls (intra): sub_01E1, sub_0211\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_18B4 -- offset 0x18B4 -- 69 instr\n; Mid-size function (69 instr, 2 calls).\n; tags: far, medium\n; callers: sub_0472\n; calls (intra): sub_01E1, sub_0211\n;----------------------------------------------------------------------"
     },
     {
       "module": "GENIUS",
@@ -2136,13 +2136,13 @@
       "callers": [],
       "fanout": 2,
       "fanin": 0,
-      "description": "Funcion compleja: 158 instrucciones, 2 llamadas, 2 branches.",
+      "description": "Complex function: 158 instructions, 2 calls, 2 branches.",
       "confidence": "low",
       "semantic_tags": [
         "complex",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1954 -- offset 0x1954 -- 158 instr\n; Funcion compleja: 158 instrucciones, 2 llamadas, 2 branches.\n; tags: complex, far\n; calls (intra): sub_0182, sub_01A6\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1954 -- offset 0x1954 -- 158 instr\n; Complex function: 158 instructions, 2 calls, 2 branches.\n; tags: complex, far\n; calls (intra): sub_0182, sub_01A6\n;----------------------------------------------------------------------"
     },
     {
       "module": "GENIUS",
@@ -2208,12 +2208,12 @@
       "callers": [],
       "fanout": 2,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (15 instr).",
+      "description": "Unclassified function (15 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1A84 -- offset 0x1A84 -- 15 instr\n; Funcion sin clasificar definitiva (15 instr).\n; tags: small\n; calls (intra): sub_0211, sub_187C\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1A84 -- offset 0x1A84 -- 15 instr\n; Unclassified function (15 instr).\n; tags: small\n; calls (intra): sub_0211, sub_187C\n;----------------------------------------------------------------------"
     },
     {
       "module": "GENIUS",
@@ -2273,12 +2273,12 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (10 instr).",
+      "description": "Unclassified function (10 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1AA7 -- offset 0x1AA7 -- 10 instr\n; Funcion sin clasificar definitiva (10 instr).\n; tags: small\n; calls (intra): sub_01FF\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1AA7 -- offset 0x1AA7 -- 10 instr\n; Unclassified function (10 instr).\n; tags: small\n; calls (intra): sub_01FF\n;----------------------------------------------------------------------"
     },
     {
       "module": "GENIUS",
@@ -2337,12 +2337,12 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (15 instr).",
+      "description": "Unclassified function (15 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1ABF -- offset 0x1ABF -- 15 instr\n; Funcion sin clasificar definitiva (15 instr).\n; tags: wrapper\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1ABF -- offset 0x1ABF -- 15 instr\n; Unclassified function (15 instr).\n; tags: wrapper\n;----------------------------------------------------------------------"
     },
     {
       "module": "GENIUS",
@@ -2407,13 +2407,13 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion mediana (33 instr, 0 calls).",
+      "description": "Mid-size function (33 instr, 0 calls).",
       "confidence": "low",
       "semantic_tags": [
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1AE6 -- offset 0x1AE6 -- 33 instr\n; Funcion mediana (33 instr, 0 calls).\n; tags: far, medium\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1AE6 -- offset 0x1AE6 -- 33 instr\n; Mid-size function (33 instr, 0 calls).\n; tags: far, medium\n;----------------------------------------------------------------------"
     },
     {
       "module": "GENIUS",
@@ -2477,12 +2477,12 @@
       "callers": [],
       "fanout": 2,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (14 instr).",
+      "description": "Unclassified function (14 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1B21 -- offset 0x1B21 -- 14 instr\n; Funcion sin clasificar definitiva (14 instr).\n; tags: small\n; calls (intra): sub_01FF, sub_187C\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1B21 -- offset 0x1B21 -- 14 instr\n; Unclassified function (14 instr).\n; tags: small\n; calls (intra): sub_01FF, sub_187C\n;----------------------------------------------------------------------"
     },
     {
       "module": "GENIUS",
@@ -2541,12 +2541,12 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (15 instr).",
+      "description": "Unclassified function (15 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1B40 -- offset 0x1B40 -- 15 instr\n; Funcion sin clasificar definitiva (15 instr).\n; tags: wrapper\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1B40 -- offset 0x1B40 -- 15 instr\n; Unclassified function (15 instr).\n; tags: wrapper\n;----------------------------------------------------------------------"
     },
     {
       "module": "GENIUS",
@@ -2607,12 +2607,12 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (10 instr).",
+      "description": "Unclassified function (10 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1B6B -- offset 0x1B6B -- 10 instr\n; Funcion sin clasificar definitiva (10 instr).\n; tags: small\n; calls (intra): sub_0211\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1B6B -- offset 0x1B6B -- 10 instr\n; Unclassified function (10 instr).\n; tags: small\n; calls (intra): sub_0211\n;----------------------------------------------------------------------"
     },
     {
       "module": "GENIUS",
@@ -2671,13 +2671,13 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (19 instr).",
+      "description": "Unclassified function (19 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "far",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1B80 -- offset 0x1B80 -- 19 instr\n; Funcion sin clasificar definitiva (19 instr).\n; tags: far, small\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1B80 -- offset 0x1B80 -- 19 instr\n; Unclassified function (19 instr).\n; tags: far, small\n;----------------------------------------------------------------------"
     },
     {
       "module": "GENIUS",
@@ -2740,14 +2740,14 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (50 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (50 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1BA8 -- offset 0x1BA8 -- 50 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (50 instr).\n; tags: iterator, loop, string_op\n; callers: sub_160A\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1BA8 -- offset 0x1BA8 -- 50 instr\n; Iterator with string ops (movsb/scasb/...) (50 instr).\n; tags: iterator, loop, string_op\n; callers: sub_160A\n;----------------------------------------------------------------------"
     },
     {
       "module": "GENIUS",
@@ -2807,12 +2807,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion hoja (no llama a otras, 19 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 19 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1C10 -- offset 0x1C10 -- 19 instr\n; Funcion hoja (no llama a otras, 19 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_0472\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1C10 -- offset 0x1C10 -- 19 instr\n; Leaf function (no callees, 19 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_0472\n;----------------------------------------------------------------------"
     }
   ]
 }

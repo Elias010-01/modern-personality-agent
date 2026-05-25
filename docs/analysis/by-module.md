@@ -1,6 +1,6 @@
-# Funciones por modulo
+# Functions by module
 
-| Modulo | Funcs | High | Medium | Low | Unknown |
+| Module | Funcs | High | Medium | Low | Unknown |
 |--------|------:|-----:|-------:|----:|--------:|
 | [USER](USER.md) | 606 | 59 | 233 | 183 | 131 |
 | [WRITE](WRITE.md) | 387 | 0 | 194 | 146 | 47 |

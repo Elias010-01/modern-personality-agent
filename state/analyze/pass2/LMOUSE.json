@@ -1,0 +1,1102 @@
+{
+  "module": "LMOUSE",
+  "num_functions": 17,
+  "intra_edges": [
+    [
+      "sub_0028",
+      "sub_00D9"
+    ],
+    [
+      "sub_00D9",
+      "sub_0267"
+    ],
+    [
+      "sub_00D9",
+      "sub_0278"
+    ],
+    [
+      "sub_00D9",
+      "sub_028B"
+    ],
+    [
+      "sub_00D9",
+      "sub_02A2"
+    ],
+    [
+      "sub_00D9",
+      "sub_02C0"
+    ],
+    [
+      "sub_00D9",
+      "sub_02E4"
+    ],
+    [
+      "sub_00D9",
+      "sub_032F"
+    ],
+    [
+      "sub_00D9",
+      "sub_0387"
+    ],
+    [
+      "sub_00D9",
+      "sub_03F3"
+    ],
+    [
+      "sub_02A2",
+      "sub_0267"
+    ],
+    [
+      "sub_02A2",
+      "sub_02D1"
+    ],
+    [
+      "sub_02C0",
+      "sub_0267"
+    ],
+    [
+      "sub_02C0",
+      "sub_02D1"
+    ],
+    [
+      "sub_02E4",
+      "sub_024C"
+    ],
+    [
+      "sub_02E4",
+      "sub_0267"
+    ],
+    [
+      "sub_032F",
+      "sub_025C"
+    ],
+    [
+      "sub_0513",
+      "sub_03F3"
+    ]
+  ],
+  "inter_edges": [],
+  "external_modules": [],
+  "functions": [
+    {
+      "module": "LMOUSE",
+      "segment_file": "seg1.asm",
+      "name": "sub_0028",
+      "kind": "NEAR",
+      "offset": 40,
+      "size_bytes": null,
+      "start_line": 41,
+      "end_line": 117,
+      "num_instructions": 64,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_00D9"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 11,
+      "num_jumps_uncond": 5,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 21,
+      "mnemonic_histogram": {
+        "mov": 17,
+        "or": 8,
+        "je": 6,
+        "jmp": 5,
+        "cmp": 3,
+        "xor": 3,
+        "call": 3,
+        "ja": 3,
+        "in": 1,
+        "and": 1,
+        "nop": 1,
+        "not": 1,
+        "test": 1,
+        "jne": 1,
+        "cwde": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "mov dx, word ptr [0xe]",
+        "in al, dx",
+        "mov dl, al",
+        "and dl, 0xf8",
+        "cmp dl, 0x80",
+        "je L_003A"
+      ],
+      "last_instructions": [
+        "out 0x20, al",
+        "sti",
+        "pop ax",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_00D9"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 1,
+      "fanin": 0
+    },
+    {
+      "module": "LMOUSE",
+      "segment_file": "seg1.asm",
+      "name": "sub_00D9",
+      "kind": "NEAR",
+      "offset": 217,
+      "size_bytes": null,
+      "start_line": 118,
+      "end_line": 273,
+      "num_instructions": 143,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_0267",
+        "L_0278",
+        "L_028B",
+        "L_02A2",
+        "L_02C0",
+        "L_02E4",
+        "L_032F",
+        "L_0387",
+        "L_03F3"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 8,
+      "num_jumps_uncond": 3,
+      "ints": [
+        "0x21"
+      ],
+      "has_loop": true,
+      "has_string_op": true,
+      "num_mem_refs": 55,
+      "mnemonic_histogram": {
+        "mov": 40,
+        "add": 14,
+        "call": 9,
+        "in": 8,
+        "cmp": 7,
+        "je": 6,
+        "shl": 6,
+        "stosb": 5,
+        "xor": 4,
+        "and": 4,
+        "out": 4,
+        "push": 3,
+        "pop": 3,
+        "jmp": 3,
+        "not": 2
+      },
+      "classification": "complex_iterator",
+      "first_instructions": [
+        "xor ch, ch",
+        "mov dl, al",
+        "and dx, cx",
+        "not cx",
+        "and cx, word ptr [0x39]",
+        "or dx, cx"
+      ],
+      "last_instructions": [
+        "je L_024B",
+        "mov si, 0x25",
+        "jmp L_0106",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0267",
+        "sub_0278",
+        "sub_028B",
+        "sub_02A2",
+        "sub_02C0",
+        "sub_02E4",
+        "sub_032F",
+        "sub_0387",
+        "sub_03F3"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0028"
+      ],
+      "fanout": 9,
+      "fanin": 1
+    },
+    {
+      "module": "LMOUSE",
+      "segment_file": "seg1.asm",
+      "name": "sub_024C",
+      "kind": "NEAR",
+      "offset": 588,
+      "size_bytes": null,
+      "start_line": 274,
+      "end_line": 285,
+      "num_instructions": 9,
+      "prologue": "saves_regs",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": true,
+      "has_string_op": false,
+      "num_mem_refs": 1,
+      "mnemonic_histogram": {
+        "push": 2,
+        "mov": 2,
+        "loop": 2,
+        "pop": 2,
+        "ret": 1
+      },
+      "classification": "iterator",
+      "first_instructions": [
+        "push cx",
+        "mov cx, 0xa",
+        "push cx",
+        "mov cx, word ptr [0x35]",
+        "loop L_0255",
+        "pop cx"
+      ],
+      "last_instructions": [
+        "pop cx",
+        "loop L_0250",
+        "pop cx",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_02E4"
+      ],
+      "fanout": 0,
+      "fanin": 1
+    },
+    {
+      "module": "LMOUSE",
+      "segment_file": "seg1.asm",
+      "name": "sub_025C",
+      "kind": "NEAR",
+      "offset": 604,
+      "size_bytes": null,
+      "start_line": 286,
+      "end_line": 293,
+      "num_instructions": 6,
+      "prologue": "saves_regs",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": true,
+      "has_string_op": false,
+      "num_mem_refs": 1,
+      "mnemonic_histogram": {
+        "loop": 2,
+        "push": 1,
+        "mov": 1,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "iterator",
+      "first_instructions": [
+        "push cx",
+        "mov cx, word ptr [0x35]",
+        "loop L_0261",
+        "pop cx",
+        "loop L_025C",
+        "ret"
+      ],
+      "last_instructions": [
+        "loop L_0261",
+        "pop cx",
+        "loop L_025C",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_032F"
+      ],
+      "fanout": 0,
+      "fanin": 1
+    },
+    {
+      "module": "LMOUSE",
+      "segment_file": "seg1.asm",
+      "name": "sub_0267",
+      "kind": "NEAR",
+      "offset": 615,
+      "size_bytes": null,
+      "start_line": 294,
+      "end_line": 304,
+      "num_instructions": 9,
+      "prologue": "saves_regs",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 1,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 1,
+      "mnemonic_histogram": {
+        "push": 1,
+        "mov": 1,
+        "add": 1,
+        "in": 1,
+        "and": 1,
+        "cmp": 1,
+        "jne": 1,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "leaf",
+      "first_instructions": [
+        "push ax",
+        "mov dx, word ptr [0xe]",
+        "add dx, 5",
+        "in al, dx",
+        "and al, 0x60",
+        "cmp al, 0x60"
+      ],
+      "last_instructions": [
+        "cmp al, 0x60",
+        "jne L_0268",
+        "pop ax",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_00D9",
+        "sub_02A2",
+        "sub_02C0",
+        "sub_02E4"
+      ],
+      "fanout": 0,
+      "fanin": 4
+    },
+    {
+      "module": "LMOUSE",
+      "segment_file": "seg1.asm",
+      "name": "sub_0278",
+      "kind": "NEAR",
+      "offset": 632,
+      "size_bytes": null,
+      "start_line": 305,
+      "end_line": 313,
+      "num_instructions": 8,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 2,
+      "mnemonic_histogram": {
+        "mov": 2,
+        "out": 2,
+        "add": 1,
+        "in": 1,
+        "and": 1,
+        "ret": 1
+      },
+      "classification": "leaf",
+      "first_instructions": [
+        "mov dx, word ptr [0xe]",
+        "add dl, 1",
+        "mov al, 1",
+        "out dx, al",
+        "in al, 0x21",
+        "and al, byte ptr [0x11]"
+      ],
+      "last_instructions": [
+        "in al, 0x21",
+        "and al, byte ptr [0x11]",
+        "out 0x21, al",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_00D9"
+      ],
+      "fanout": 0,
+      "fanin": 1
+    },
+    {
+      "module": "LMOUSE",
+      "segment_file": "seg1.asm",
+      "name": "sub_028B",
+      "kind": "NEAR",
+      "offset": 651,
+      "size_bytes": null,
+      "start_line": 314,
+      "end_line": 324,
+      "num_instructions": 10,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 2,
+      "mnemonic_histogram": {
+        "mov": 3,
+        "out": 2,
+        "add": 1,
+        "in": 1,
+        "not": 1,
+        "or": 1,
+        "ret": 1
+      },
+      "classification": "leaf",
+      "first_instructions": [
+        "mov dx, word ptr [0xe]",
+        "add dl, 1",
+        "mov al, 0",
+        "out dx, al",
+        "in al, 0x21",
+        "mov bl, byte ptr [0x11]"
+      ],
+      "last_instructions": [
+        "not bl",
+        "or al, bl",
+        "out 0x21, al",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_00D9"
+      ],
+      "fanout": 0,
+      "fanin": 1
+    },
+    {
+      "module": "LMOUSE",
+      "segment_file": "seg1.asm",
+      "name": "sub_02A2",
+      "kind": "NEAR",
+      "offset": 674,
+      "size_bytes": null,
+      "start_line": 325,
+      "end_line": 337,
+      "num_instructions": 12,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_0267",
+        "L_02D1"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 2,
+      "mnemonic_histogram": {
+        "mov": 4,
+        "call": 3,
+        "add": 2,
+        "out": 2,
+        "ret": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "mov dx, word ptr [0xe]",
+        "add dl, 0",
+        "mov al, 0x55",
+        "out dx, al",
+        "call L_0267",
+        "mov dx, word ptr [0xe]"
+      ],
+      "last_instructions": [
+        "out dx, al",
+        "call L_0267",
+        "call L_02D1",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0267",
+        "sub_02D1"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_00D9"
+      ],
+      "fanout": 2,
+      "fanin": 1
+    },
+    {
+      "module": "LMOUSE",
+      "segment_file": "seg1.asm",
+      "name": "sub_02C0",
+      "kind": "NEAR",
+      "offset": 704,
+      "size_bytes": null,
+      "start_line": 338,
+      "end_line": 345,
+      "num_instructions": 7,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_0267",
+        "L_02D1"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 1,
+      "mnemonic_histogram": {
+        "mov": 2,
+        "call": 2,
+        "add": 1,
+        "out": 1,
+        "ret": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "mov dx, word ptr [0xe]",
+        "add dl, 0",
+        "mov al, 0x4e",
+        "out dx, al",
+        "call L_0267",
+        "call L_02D1"
+      ],
+      "last_instructions": [
+        "out dx, al",
+        "call L_0267",
+        "call L_02D1",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0267",
+        "sub_02D1"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_00D9"
+      ],
+      "fanout": 2,
+      "fanin": 1
+    },
+    {
+      "module": "LMOUSE",
+      "segment_file": "seg1.asm",
+      "name": "sub_02D1",
+      "kind": "NEAR",
+      "offset": 721,
+      "size_bytes": null,
+      "start_line": 346,
+      "end_line": 354,
+      "num_instructions": 8,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 2,
+      "mnemonic_histogram": {
+        "mov": 3,
+        "add": 2,
+        "out": 1,
+        "in": 1,
+        "ret": 1
+      },
+      "classification": "leaf",
+      "first_instructions": [
+        "mov dx, word ptr [0xe]",
+        "add dl, 5",
+        "mov al, 0",
+        "out dx, al",
+        "mov dx, word ptr [0xe]",
+        "add dl, 5"
+      ],
+      "last_instructions": [
+        "mov dx, word ptr [0xe]",
+        "add dl, 5",
+        "in al, dx",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_02A2",
+        "sub_02C0"
+      ],
+      "fanout": 0,
+      "fanin": 2
+    },
+    {
+      "module": "LMOUSE",
+      "segment_file": "seg1.asm",
+      "name": "sub_02E4",
+      "kind": "NEAR",
+      "offset": 740,
+      "size_bytes": null,
+      "start_line": 355,
+      "end_line": 384,
+      "num_instructions": 29,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_024C",
+        "L_0267"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 8,
+      "mnemonic_histogram": {
+        "mov": 12,
+        "add": 6,
+        "out": 6,
+        "call": 4,
+        "ret": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "call L_0267",
+        "mov dx, word ptr [0xe]",
+        "add dl, 0",
+        "mov al, 0x2a",
+        "out dx, al",
+        "call L_0267"
+      ],
+      "last_instructions": [
+        "mov al, 0xf",
+        "out dx, al",
+        "call L_024C",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_024C",
+        "sub_0267"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_00D9"
+      ],
+      "fanout": 2,
+      "fanin": 1
+    },
+    {
+      "module": "LMOUSE",
+      "segment_file": "seg1.asm",
+      "name": "sub_032F",
+      "kind": "NEAR",
+      "offset": 815,
+      "size_bytes": null,
+      "start_line": 385,
+      "end_line": 419,
+      "num_instructions": 34,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_025C"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 9,
+      "mnemonic_histogram": {
+        "mov": 16,
+        "add": 8,
+        "out": 6,
+        "in": 2,
+        "call": 1,
+        "ret": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "mov dx, word ptr [0xe]",
+        "add dl, 4",
+        "mov al, 0xb",
+        "out dx, al",
+        "mov cx, 0xfa",
+        "call L_025C"
+      ],
+      "last_instructions": [
+        "mov dx, word ptr [0xe]",
+        "add dl, 5",
+        "in al, dx",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_025C"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_00D9"
+      ],
+      "fanout": 1,
+      "fanin": 1
+    },
+    {
+      "module": "LMOUSE",
+      "segment_file": "seg1.asm",
+      "name": "sub_0387",
+      "kind": "NEAR",
+      "offset": 903,
+      "size_bytes": null,
+      "start_line": 420,
+      "end_line": 465,
+      "num_instructions": 43,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 1,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": true,
+      "num_mem_refs": 14,
+      "mnemonic_histogram": {
+        "mov": 19,
+        "add": 6,
+        "out": 6,
+        "ret": 3,
+        "shr": 1,
+        "cmp": 1,
+        "je": 1,
+        "clc": 1,
+        "in": 1,
+        "stc": 1,
+        "inc": 1,
+        "xor": 1,
+        "stosw": 1
+      },
+      "classification": "iterator",
+      "first_instructions": [
+        "mov dx, word ptr [0xe]",
+        "add dl, 3",
+        "mov al, 0x8f",
+        "out dx, al",
+        "shr byte ptr [0x31], 1",
+        "cmp byte ptr [0x31], 6"
+      ],
+      "last_instructions": [
+        "stosw word ptr es:[di], ax",
+        "mov word ptr [4], 0x28",
+        "mov ax, 1",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_00D9"
+      ],
+      "fanout": 0,
+      "fanin": 1
+    },
+    {
+      "module": "LMOUSE",
+      "segment_file": "seg1.asm",
+      "name": "sub_03F3",
+      "kind": "FAR",
+      "offset": 1011,
+      "size_bytes": null,
+      "start_line": 466,
+      "end_line": 548,
+      "num_instructions": 82,
+      "prologue": "none",
+      "epilogue": "jmp_tail",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 2,
+      "num_jumps_uncond": 2,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 25,
+      "mnemonic_histogram": {
+        "mov": 18,
+        "push": 10,
+        "add": 8,
+        "out": 7,
+        "xchg": 5,
+        "pop": 4,
+        "and": 4,
+        "nop": 3,
+        "or": 2,
+        "inc": 2,
+        "sub": 2,
+        "jmp": 2,
+        "ret": 1,
+        "les": 1,
+        "rep": 1
+      },
+      "classification": "complex",
+      "first_instructions": [
+        "mov al, byte ptr [0x20]",
+        "or al, 0x80",
+        "mov dx, word ptr [0xe]",
+        "add dl, 3",
+        "out dx, al",
+        "xchg byte ptr [0x21], al"
+      ],
+      "last_instructions": [
+        "in al, 0x21",
+        "or al, ah",
+        "out 0x21, al",
+        "jmp L_04AD"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_00D9",
+        "sub_0513"
+      ],
+      "fanout": 0,
+      "fanin": 2
+    },
+    {
+      "module": "LMOUSE",
+      "segment_file": "seg1.asm",
+      "name": "sub_04AC",
+      "kind": "NEAR",
+      "offset": 1196,
+      "size_bytes": null,
+      "start_line": 549,
+      "end_line": 587,
+      "num_instructions": 36,
+      "prologue": "none",
+      "epilogue": "jmp_tail",
+      "calls_near": [
+        "L_00FF",
+        "L_04AC"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 3,
+      "num_jumps_uncond": 1,
+      "ints": [
+        "0x21",
+        "0x21"
+      ],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 13,
+      "mnemonic_histogram": {
+        "mov": 17,
+        "call": 2,
+        "cmp": 2,
+        "je": 2,
+        "int": 2,
+        "iret": 1,
+        "push": 1,
+        "or": 1,
+        "les": 1,
+        "jne": 1,
+        "pushf": 1,
+        "cli": 1,
+        "in": 1,
+        "and": 1,
+        "out": 1
+      },
+      "classification": "dos_caller",
+      "first_instructions": [
+        "iret",
+        "push cs",
+        "call L_04AC",
+        "mov ax, 1",
+        "mov si, 0x2b",
+        "cmp word ptr [0x23], 0"
+      ],
+      "last_instructions": [
+        "and al, byte ptr [0x11]",
+        "out 0x21, al",
+        "mov word ptr [0x14], 0xffff",
+        "jmp L_0514"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_00FF",
+        "L_04AC"
+      ],
+      "callers": [],
+      "fanout": 0,
+      "fanin": 0
+    },
+    {
+      "module": "LMOUSE",
+      "segment_file": "seg1.asm",
+      "name": "sub_0513",
+      "kind": "FAR",
+      "offset": 1299,
+      "size_bytes": null,
+      "start_line": 588,
+      "end_line": 642,
+      "num_instructions": 48,
+      "prologue": "none",
+      "epilogue": "jmp_tail",
+      "calls_near": [
+        "L_03F3",
+        "L_0513"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 3,
+      "num_jumps_uncond": 2,
+      "ints": [
+        "0x21"
+      ],
+      "has_loop": false,
+      "has_string_op": true,
+      "num_mem_refs": 10,
+      "mnemonic_histogram": {
+        "mov": 12,
+        "push": 6,
+        "pop": 5,
+        "cmp": 3,
+        "call": 2,
+        "jae": 2,
+        "jmp": 2,
+        "iret": 1,
+        "sub": 1,
+        "dec": 1,
+        "retf": 1,
+        "nop": 1,
+        "inc": 1,
+        "pushf": 1,
+        "cli": 1
+      },
+      "classification": "iterator",
+      "first_instructions": [
+        "iret",
+        "push cs",
+        "call L_0513",
+        "pop di",
+        "pop si",
+        "sub bp, 2"
+      ],
+      "last_instructions": [
+        "int 0x21",
+        "pop ds",
+        "mov word ptr [0x14], 0",
+        "jmp L_057E"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_03F3"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_0513"
+      ],
+      "callers": [],
+      "fanout": 1,
+      "fanin": 0
+    },
+    {
+      "module": "LMOUSE",
+      "segment_file": "seg1.asm",
+      "name": "sub_057D",
+      "kind": "FAR",
+      "offset": 1405,
+      "size_bytes": null,
+      "start_line": 643,
+      "end_line": 655,
+      "num_instructions": 11,
+      "prologue": "none",
+      "epilogue": "retf",
+      "calls_near": [
+        "L_057D"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 0,
+      "mnemonic_histogram": {
+        "pop": 4,
+        "iret": 1,
+        "push": 1,
+        "call": 1,
+        "sub": 1,
+        "mov": 1,
+        "dec": 1,
+        "retf": 1
+      },
+      "classification": "wrapper",
+      "first_instructions": [
+        "iret",
+        "push cs",
+        "call L_057D",
+        "pop di",
+        "pop si",
+        "sub bp, 2"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_057D"
+      ],
+      "callers": [],
+      "fanout": 0,
+      "fanin": 0
+    }
+  ]
+}

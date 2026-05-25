@@ -61,13 +61,13 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (21 instr).",
+      "description": "Unclassified function (21 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "bios_caller",
         "int_16"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_010A -- offset 0x010A -- 21 instr\n; Funcion sin clasificar definitiva (21 instr).\n; tags: bios_caller, int_16\n; calls (intra): sub_013A\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_010A -- offset 0x010A -- 21 instr\n; Unclassified function (21 instr).\n; tags: bios_caller, int_16\n; calls (intra): sub_013A\n;----------------------------------------------------------------------"
     },
     {
       "module": "DENMARK",
@@ -132,14 +132,14 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (138 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (138 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_013A -- offset 0x013A -- 138 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (138 instr).\n; tags: complex_iterator, loop, string_op\n; callers: sub_010A\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_013A -- offset 0x013A -- 138 instr\n; Iterator with string ops (movsb/scasb/...) (138 instr).\n; tags: complex_iterator, loop, string_op\n; callers: sub_010A\n;----------------------------------------------------------------------"
     },
     {
       "module": "DENMARK",
@@ -206,14 +206,14 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (27 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (27 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "far",
         "iterator",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0222 -- offset 0x0222 -- 27 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (27 instr).\n; tags: far, iterator, string_op\n; callers: sub_0254\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0222 -- offset 0x0222 -- 27 instr\n; Iterator with string ops (movsb/scasb/...) (27 instr).\n; tags: far, iterator, string_op\n; callers: sub_0254\n;----------------------------------------------------------------------"
     },
     {
       "module": "DENMARK",
@@ -283,14 +283,14 @@
       "callers": [],
       "fanout": 2,
       "fanin": 0,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (191 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (191 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
         "far",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0254 -- offset 0x0254 -- 191 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (191 instr).\n; tags: complex_iterator, far, string_op\n; calls (intra): sub_0222, sub_0412\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0254 -- offset 0x0254 -- 191 instr\n; Iterator with string ops (movsb/scasb/...) (191 instr).\n; tags: complex_iterator, far, string_op\n; calls (intra): sub_0222, sub_0412\n;----------------------------------------------------------------------"
     },
     {
       "module": "DENMARK",
@@ -348,12 +348,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Wrapper que delega en sub_0431.",
+      "description": "Wrapper delegating to sub_0431.",
       "confidence": "medium",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0412 -- offset 0x0412 -- 14 instr\n; Wrapper que delega en sub_0431.\n; tags: wrapper\n; callers: sub_0254\n; calls (intra): sub_0431\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0412 -- offset 0x0412 -- 14 instr\n; Wrapper delegating to sub_0431.\n; tags: wrapper\n; callers: sub_0254\n; calls (intra): sub_0431\n;----------------------------------------------------------------------"
     },
     {
       "module": "DENMARK",
@@ -409,12 +409,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion hoja (no llama a otras, 10 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 10 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0431 -- offset 0x0431 -- 10 instr\n; Funcion hoja (no llama a otras, 10 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_0412\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0431 -- offset 0x0431 -- 10 instr\n; Leaf function (no callees, 10 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_0412\n;----------------------------------------------------------------------"
     }
   ]
 }

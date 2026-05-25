@@ -275,7 +275,7 @@
       ],
       "fanout": 44,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (544 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (544 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_gdi",
@@ -284,7 +284,7 @@
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0036 -- offset 0x0036 -- 544 instr\n; Dispatcher: tabla de decisiones cmp+jcc (544 instr).\n; tags: calls_gdi, calls_kernel, calls_user, dispatcher, far\n; callers: sub_13C6\n; calls (intra): sub_0578, sub_05F8, sub_0746, sub_088E, sub_134C, sub_13C6\n; calls (inter): GDI.CREATESOLIDBRUSH, GDI.DELETEOBJECT, GDI.GETSTOCKOBJECT, GDI.GETTEXTMETRICS, GDI.SELECTOBJECT, GDI.SETBKCOLOR (+32 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0036 -- offset 0x0036 -- 544 instr\n; Dispatcher: cmp+jcc decision table (544 instr).\n; tags: calls_gdi, calls_kernel, calls_user, dispatcher, far\n; callers: sub_13C6\n; calls (intra): sub_0578, sub_05F8, sub_0746, sub_088E, sub_134C, sub_13C6\n; calls (inter): GDI.CREATESOLIDBRUSH, GDI.DELETEOBJECT, GDI.GETSTOCKOBJECT, GDI.GETTEXTMETRICS, GDI.SELECTOBJECT, GDI.SETBKCOLOR (+32 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "CLIPBRD",
@@ -367,14 +367,14 @@
       ],
       "fanout": 5,
       "fanin": 1,
-      "description": "Funcion mediana (46 instr, 5 calls).",
+      "description": "Mid-size function (46 instr, 5 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_gdi",
         "calls_user",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0578 -- offset 0x0578 -- 46 instr\n; Funcion mediana (46 instr, 5 calls).\n; tags: calls_gdi, calls_user, medium\n; callers: sub_0036\n; calls (inter): GDI.CREATESOLIDBRUSH, USER.GETSYSCOLOR, USER.LOADCURSOR, USER.LOADICON, USER.REGISTERCLASS\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0578 -- offset 0x0578 -- 46 instr\n; Mid-size function (46 instr, 5 calls).\n; tags: calls_gdi, calls_user, medium\n; callers: sub_0036\n; calls (inter): GDI.CREATESOLIDBRUSH, USER.GETSYSCOLOR, USER.LOADCURSOR, USER.LOADICON, USER.REGISTERCLASS\n;----------------------------------------------------------------------"
     },
     {
       "module": "CLIPBRD",
@@ -469,13 +469,13 @@
       ],
       "fanout": 8,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (144 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (144 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_user",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_05F8 -- offset 0x05F8 -- 144 instr\n; Dispatcher: tabla de decisiones cmp+jcc (144 instr).\n; tags: calls_user, dispatcher\n; callers: sub_0036\n; calls (intra): sub_1600, sub_16A1, sub_1705, sub_1768\n; calls (inter): USER.INVALIDATERECT, USER.SCROLLWINDOW, USER.SETSCROLLPOS, USER.UPDATEWINDOW\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_05F8 -- offset 0x05F8 -- 144 instr\n; Dispatcher: cmp+jcc decision table (144 instr).\n; tags: calls_user, dispatcher\n; callers: sub_0036\n; calls (intra): sub_1600, sub_16A1, sub_1705, sub_1768\n; calls (inter): USER.INVALIDATERECT, USER.SCROLLWINDOW, USER.SETSCROLLPOS, USER.UPDATEWINDOW\n;----------------------------------------------------------------------"
     },
     {
       "module": "CLIPBRD",
@@ -570,13 +570,13 @@
       ],
       "fanout": 8,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (144 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (144 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_user",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0746 -- offset 0x0746 -- 144 instr\n; Dispatcher: tabla de decisiones cmp+jcc (144 instr).\n; tags: calls_user, dispatcher\n; callers: sub_0036\n; calls (intra): sub_1600, sub_16A1, sub_1705, sub_1768\n; calls (inter): USER.INVALIDATERECT, USER.SCROLLWINDOW, USER.SETSCROLLPOS, USER.UPDATEWINDOW\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0746 -- offset 0x0746 -- 144 instr\n; Dispatcher: cmp+jcc decision table (144 instr).\n; tags: calls_user, dispatcher\n; callers: sub_0036\n; calls (intra): sub_1600, sub_16A1, sub_1705, sub_1768\n; calls (inter): USER.INVALIDATERECT, USER.SCROLLWINDOW, USER.SETSCROLLPOS, USER.UPDATEWINDOW\n;----------------------------------------------------------------------"
     },
     {
       "module": "CLIPBRD",
@@ -744,7 +744,7 @@
       ],
       "fanout": 22,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (329 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (329 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_gdi",
@@ -752,7 +752,7 @@
         "calls_user",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_088E -- offset 0x088E -- 329 instr\n; Dispatcher: tabla de decisiones cmp+jcc (329 instr).\n; tags: calls_gdi, calls_kernel, calls_user, dispatcher\n; callers: sub_0036\n; calls (intra): sub_0C02, sub_134C, sub_13C6\n; calls (inter): GDI.GETTEXTEXTENT, GDI.PATBLT, GDI.TEXTOUT, KERNEL.GLOBALALLOC, KERNEL.GLOBALFREE, KERNEL.GLOBALLOCK (+13 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_088E -- offset 0x088E -- 329 instr\n; Dispatcher: cmp+jcc decision table (329 instr).\n; tags: calls_gdi, calls_kernel, calls_user, dispatcher\n; callers: sub_0036\n; calls (intra): sub_0C02, sub_134C, sub_13C6\n; calls (inter): GDI.GETTEXTEXTENT, GDI.PATBLT, GDI.TEXTOUT, KERNEL.GLOBALALLOC, KERNEL.GLOBALFREE, KERNEL.GLOBALLOCK (+13 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "CLIPBRD",
@@ -832,13 +832,13 @@
       ],
       "fanout": 5,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (82 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (82 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_user",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0C02 -- offset 0x0C02 -- 82 instr\n; Dispatcher: tabla de decisiones cmp+jcc (82 instr).\n; tags: calls_user, dispatcher\n; callers: sub_088E\n; calls (intra): sub_0CD8, sub_0DBF, sub_1072, sub_10C5\n; calls (inter): USER.GETCLIPBOARDDATA\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0C02 -- offset 0x0C02 -- 82 instr\n; Dispatcher: cmp+jcc decision table (82 instr).\n; tags: calls_user, dispatcher\n; callers: sub_088E\n; calls (intra): sub_0CD8, sub_0DBF, sub_1072, sub_10C5\n; calls (inter): USER.GETCLIPBOARDDATA\n;----------------------------------------------------------------------"
     },
     {
       "module": "CLIPBRD",
@@ -926,13 +926,13 @@
       ],
       "fanout": 5,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (84 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (84 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_gdi",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0CD8 -- offset 0x0CD8 -- 84 instr\n; Dispatcher: tabla de decisiones cmp+jcc (84 instr).\n; tags: calls_gdi, dispatcher\n; callers: sub_0C02\n; calls (inter): GDI.BITBLT, GDI.CREATECOMPATIBLEDC, GDI.DELETEDC, GDI.GETOBJECT, GDI.SELECTOBJECT\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0CD8 -- offset 0x0CD8 -- 84 instr\n; Dispatcher: cmp+jcc decision table (84 instr).\n; tags: calls_gdi, dispatcher\n; callers: sub_0C02\n; calls (inter): GDI.BITBLT, GDI.CREATECOMPATIBLEDC, GDI.DELETEDC, GDI.GETOBJECT, GDI.SELECTOBJECT\n;----------------------------------------------------------------------"
     },
     {
       "module": "CLIPBRD",
@@ -1020,7 +1020,7 @@
       ],
       "fanout": 5,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (65 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (65 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_gdi",
@@ -1028,7 +1028,7 @@
         "complex_iterator",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0DBF -- offset 0x0DBF -- 65 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (65 instr).\n; tags: calls_gdi, calls_kernel, complex_iterator, string_op\n; callers: sub_0C02\n; calls (intra): sub_0F92\n; calls (inter): GDI.GETDEVICECAPS, GDI.SAVEDC, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0DBF -- offset 0x0DBF -- 65 instr\n; Iterator with string ops (movsb/scasb/...) (65 instr).\n; tags: calls_gdi, calls_kernel, complex_iterator, string_op\n; callers: sub_0C02\n; calls (intra): sub_0F92\n; calls (inter): GDI.GETDEVICECAPS, GDI.SAVEDC, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK\n;----------------------------------------------------------------------"
     },
     {
       "module": "CLIPBRD",
@@ -1138,13 +1138,13 @@
       "callers": [],
       "fanout": 10,
       "fanin": 0,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (101 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (101 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_gdi",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0E60 -- offset 0x0E60 -- 101 instr\n; Dispatcher: tabla de decisiones cmp+jcc (101 instr).\n; tags: calls_gdi, dispatcher\n; calls (intra): sub_0F92\n; calls (inter): GDI.GETDEVICECAPS, GDI.INTERSECTCLIPRECT, GDI.PLAYMETAFILE, GDI.RESTOREDC, GDI.SETBRUSHORG, GDI.SETMAPMODE (+3 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0E60 -- offset 0x0E60 -- 101 instr\n; Dispatcher: cmp+jcc decision table (101 instr).\n; tags: calls_gdi, dispatcher\n; calls (intra): sub_0F92\n; calls (inter): GDI.GETDEVICECAPS, GDI.INTERSECTCLIPRECT, GDI.PLAYMETAFILE, GDI.RESTOREDC, GDI.SETBRUSHORG, GDI.SETMAPMODE (+3 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "CLIPBRD",
@@ -1214,12 +1214,12 @@
       ],
       "fanout": 2,
       "fanin": 2,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (88 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (88 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0F92 -- offset 0x0F92 -- 88 instr\n; Dispatcher: tabla de decisiones cmp+jcc (88 instr).\n; tags: dispatcher\n; callers: sub_0DBF, sub_0E60\n; calls (intra): sub_1705, sub_1768\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0F92 -- offset 0x0F92 -- 88 instr\n; Dispatcher: cmp+jcc decision table (88 instr).\n; tags: dispatcher\n; callers: sub_0DBF, sub_0E60\n; calls (intra): sub_1705, sub_1768\n;----------------------------------------------------------------------"
     },
     {
       "module": "CLIPBRD",
@@ -1290,13 +1290,13 @@
       ],
       "fanout": 3,
       "fanin": 2,
-      "description": "Funcion mediana (33 instr, 3 calls).",
+      "description": "Mid-size function (33 instr, 3 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_user",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1072 -- offset 0x1072 -- 33 instr\n; Funcion mediana (33 instr, 3 calls).\n; tags: calls_user, medium\n; callers: sub_0C02, sub_10C5\n; calls (inter): USER.DRAWTEXT, USER.FILLRECT, USER.LOADSTRING\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1072 -- offset 0x1072 -- 33 instr\n; Mid-size function (33 instr, 3 calls).\n; tags: calls_user, medium\n; callers: sub_0C02, sub_10C5\n; calls (inter): USER.DRAWTEXT, USER.FILLRECT, USER.LOADSTRING\n;----------------------------------------------------------------------"
     },
     {
       "module": "CLIPBRD",
@@ -1387,7 +1387,7 @@
       ],
       "fanout": 6,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (173 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (173 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_gdi",
@@ -1395,7 +1395,7 @@
         "complex_iterator",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_10C5 -- offset 0x10C5 -- 173 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (173 instr).\n; tags: calls_gdi, calls_kernel, complex_iterator, string_op\n; callers: sub_0C02\n; calls (intra): sub_1072, sub_12B3\n; calls (inter): GDI.TEXTOUT, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK, KERNEL.LSTRLEN\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_10C5 -- offset 0x10C5 -- 173 instr\n; Iterator with string ops (movsb/scasb/...) (173 instr).\n; tags: calls_gdi, calls_kernel, complex_iterator, string_op\n; callers: sub_0C02\n; calls (intra): sub_1072, sub_12B3\n; calls (inter): GDI.TEXTOUT, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK, KERNEL.LSTRLEN\n;----------------------------------------------------------------------"
     },
     {
       "module": "CLIPBRD",
@@ -1458,12 +1458,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (71 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (71 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_12B3 -- offset 0x12B3 -- 71 instr\n; Dispatcher: tabla de decisiones cmp+jcc (71 instr).\n; tags: dispatcher\n; callers: sub_10C5\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_12B3 -- offset 0x12B3 -- 71 instr\n; Dispatcher: cmp+jcc decision table (71 instr).\n; tags: dispatcher\n; callers: sub_10C5\n;----------------------------------------------------------------------"
     },
     {
       "module": "CLIPBRD",
@@ -1549,13 +1549,13 @@
       ],
       "fanout": 5,
       "fanin": 2,
-      "description": "Funcion mediana (46 instr, 5 calls).",
+      "description": "Mid-size function (46 instr, 5 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_kernel",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_134C -- offset 0x134C -- 46 instr\n; Funcion mediana (46 instr, 5 calls).\n; tags: calls_kernel, medium\n; callers: sub_0036, sub_088E\n; calls (intra): sub_13C6\n; calls (inter): KERNEL.GLOBALALLOC, KERNEL.GLOBALFREE, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_134C -- offset 0x134C -- 46 instr\n; Mid-size function (46 instr, 5 calls).\n; tags: calls_kernel, medium\n; callers: sub_0036, sub_088E\n; calls (intra): sub_13C6\n; calls (inter): KERNEL.GLOBALALLOC, KERNEL.GLOBALFREE, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK\n;----------------------------------------------------------------------"
     },
     {
       "module": "CLIPBRD",
@@ -1662,7 +1662,7 @@
       ],
       "fanout": 9,
       "fanin": 3,
-      "description": "Llama a servicios DOS via INT 21h (57 instr).",
+      "description": "Calls DOS services via INT 21h (57 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
@@ -1670,7 +1670,7 @@
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_13C6 -- offset 0x13C6 -- 57 instr\n; Llama a servicios DOS via INT 21h (57 instr).\n; tags: calls_kernel, calls_user, dos_caller, int_21\n; callers: sub_0036, sub_088E, sub_134C\n; calls (intra): sub_0036, sub_155E, sub_15F0\n; calls (inter): KERNEL.FATALEXIT, KERNEL.INITTASK, KERNEL.WAITEVENT, USER.GETCLIPBOARDOWNER, USER.INITAPP, USER.SENDMESSAGE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_13C6 -- offset 0x13C6 -- 57 instr\n; Calls DOS services via INT 21h (57 instr).\n; tags: calls_kernel, calls_user, dos_caller, int_21\n; callers: sub_0036, sub_088E, sub_134C\n; calls (intra): sub_0036, sub_155E, sub_15F0\n; calls (inter): KERNEL.FATALEXIT, KERNEL.INITTASK, KERNEL.WAITEVENT, USER.GETCLIPBOARDOWNER, USER.INITAPP, USER.SENDMESSAGE\n;----------------------------------------------------------------------"
     },
     {
       "module": "CLIPBRD",
@@ -1775,13 +1775,13 @@
       ],
       "fanout": 9,
       "fanin": 1,
-      "description": "Funcion compleja: 130 instrucciones, 9 llamadas, 1 branches.",
+      "description": "Complex function: 130 instructions, 9 calls, 1 branches.",
       "confidence": "low",
       "semantic_tags": [
         "calls_kernel",
         "complex"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1455 -- offset 0x1455 -- 130 instr\n; Funcion compleja: 130 instrucciones, 9 llamadas, 1 branches.\n; tags: calls_kernel, complex\n; callers: sub_1799\n; calls (intra): sub_178E\n; calls (inter): KERNEL.GLOBALALLOC, KERNEL.GLOBALCOMPACT, KERNEL.GLOBALFREE, KERNEL.GLOBALSIZE, KERNEL.LOCALALLOC, KERNEL.LOCALFREE (+2 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1455 -- offset 0x1455 -- 130 instr\n; Complex function: 130 instructions, 9 calls, 1 branches.\n; tags: calls_kernel, complex\n; callers: sub_1799\n; calls (intra): sub_178E\n; calls (inter): KERNEL.GLOBALALLOC, KERNEL.GLOBALCOMPACT, KERNEL.GLOBALFREE, KERNEL.GLOBALSIZE, KERNEL.LOCALALLOC, KERNEL.LOCALFREE (+2 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "CLIPBRD",
@@ -1852,14 +1852,14 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (59 instr).",
+      "description": "Calls DOS services via INT 21h (59 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
         "int_21",
         "loop"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_155E -- offset 0x155E -- 59 instr\n; Llama a servicios DOS via INT 21h (59 instr).\n; tags: complex_iterator, int_21, loop\n; callers: sub_13C6\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_155E -- offset 0x155E -- 59 instr\n; Calls DOS services via INT 21h (59 instr).\n; tags: complex_iterator, int_21, loop\n; callers: sub_13C6\n;----------------------------------------------------------------------"
     },
     {
       "module": "CLIPBRD",
@@ -1918,12 +1918,12 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (8 instr).",
+      "description": "Unclassified function (8 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_15F0 -- offset 0x15F0 -- 8 instr\n; Funcion sin clasificar definitiva (8 instr).\n; tags: small\n; callers: sub_13C6\n; calls (intra): sub_1799, sub_17CF\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_15F0 -- offset 0x15F0 -- 8 instr\n; Unclassified function (8 instr).\n; tags: small\n; callers: sub_13C6\n; calls (intra): sub_1799, sub_17CF\n;----------------------------------------------------------------------"
     },
     {
       "module": "CLIPBRD",
@@ -1991,12 +1991,12 @@
       ],
       "fanout": 1,
       "fanin": 2,
-      "description": "Funcion mediana (74 instr, 1 calls).",
+      "description": "Mid-size function (74 instr, 1 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1600 -- offset 0x1600 -- 74 instr\n; Funcion mediana (74 instr, 1 calls).\n; tags: medium\n; callers: sub_05F8, sub_0746\n; calls (intra): sub_1768\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1600 -- offset 0x1600 -- 74 instr\n; Mid-size function (74 instr, 1 calls).\n; tags: medium\n; callers: sub_05F8, sub_0746\n; calls (intra): sub_1768\n;----------------------------------------------------------------------"
     },
     {
       "module": "CLIPBRD",
@@ -2059,12 +2059,12 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Funcion mediana (46 instr, 0 calls).",
+      "description": "Mid-size function (46 instr, 0 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_16A1 -- offset 0x16A1 -- 46 instr\n; Funcion mediana (46 instr, 0 calls).\n; tags: medium\n; callers: sub_05F8, sub_0746\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_16A1 -- offset 0x16A1 -- 46 instr\n; Mid-size function (46 instr, 0 calls).\n; tags: medium\n; callers: sub_05F8, sub_0746\n;----------------------------------------------------------------------"
     },
     {
       "module": "CLIPBRD",
@@ -2133,12 +2133,12 @@
       ],
       "fanout": 1,
       "fanin": 3,
-      "description": "Funcion mediana (47 instr, 1 calls).",
+      "description": "Mid-size function (47 instr, 1 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1705 -- offset 0x1705 -- 47 instr\n; Funcion mediana (47 instr, 1 calls).\n; tags: medium\n; callers: sub_05F8, sub_0746, sub_0F92\n; calls (intra): sub_1768\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1705 -- offset 0x1705 -- 47 instr\n; Mid-size function (47 instr, 1 calls).\n; tags: medium\n; callers: sub_05F8, sub_0746, sub_0F92\n; calls (intra): sub_1768\n;----------------------------------------------------------------------"
     },
     {
       "module": "CLIPBRD",
@@ -2197,12 +2197,12 @@
       ],
       "fanout": 0,
       "fanin": 5,
-      "description": "Funcion hoja (no llama a otras, 19 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 19 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1768 -- offset 0x1768 -- 19 instr\n; Funcion hoja (no llama a otras, 19 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_05F8, sub_0746, sub_0F92, sub_1600, sub_1705\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1768 -- offset 0x1768 -- 19 instr\n; Leaf function (no callees, 19 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_05F8, sub_0746, sub_0F92, sub_1600, sub_1705\n;----------------------------------------------------------------------"
     },
     {
       "module": "CLIPBRD",
@@ -2256,13 +2256,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Iterador con bucle (6 instr).",
+      "description": "Iterator with loop (6 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "loop"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_178E -- offset 0x178E -- 6 instr\n; Iterador con bucle (6 instr).\n; tags: iterator, loop\n; callers: sub_1455\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_178E -- offset 0x178E -- 6 instr\n; Iterator with loop (6 instr).\n; tags: iterator, loop\n; callers: sub_1455\n;----------------------------------------------------------------------"
     },
     {
       "module": "CLIPBRD",
@@ -2331,13 +2331,13 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (21 instr).",
+      "description": "Calls DOS services via INT 21h (21 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1799 -- offset 0x1799 -- 21 instr\n; Llama a servicios DOS via INT 21h (21 instr).\n; tags: dos_caller, int_21\n; callers: sub_15F0\n; calls (intra): sub_1455, sub_17E1\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1799 -- offset 0x1799 -- 21 instr\n; Calls DOS services via INT 21h (21 instr).\n; tags: dos_caller, int_21\n; callers: sub_15F0\n; calls (intra): sub_1455, sub_17E1\n;----------------------------------------------------------------------"
     },
     {
       "module": "CLIPBRD",
@@ -2396,12 +2396,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (10 instr).",
+      "description": "Unclassified function (10 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_17CF -- offset 0x17CF -- 10 instr\n; Funcion sin clasificar definitiva (10 instr).\n; tags: wrapper\n; callers: sub_15F0\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_17CF -- offset 0x17CF -- 10 instr\n; Unclassified function (10 instr).\n; tags: wrapper\n; callers: sub_15F0\n;----------------------------------------------------------------------"
     },
     {
       "module": "CLIPBRD",
@@ -2460,12 +2460,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (10 instr).",
+      "description": "Unclassified function (10 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_17E1 -- offset 0x17E1 -- 10 instr\n; Funcion sin clasificar definitiva (10 instr).\n; tags: wrapper\n; callers: sub_1799\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_17E1 -- offset 0x17E1 -- 10 instr\n; Unclassified function (10 instr).\n; tags: wrapper\n; callers: sub_1799\n;----------------------------------------------------------------------"
     }
   ]
 }

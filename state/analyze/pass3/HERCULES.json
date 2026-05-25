@@ -67,14 +67,14 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Llama a servicios BIOS via INT 10h (video, 13 instr).",
+      "description": "Calls BIOS services via INT 10h (video, 13 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "int_10",
         "iterator",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0192 -- offset 0x0192 -- 13 instr\n; Llama a servicios BIOS via INT 10h (video, 13 instr).\n; tags: int_10, iterator, string_op\n; callers: ENABLE\n; calls (intra): sub_01CA\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0192 -- offset 0x0192 -- 13 instr\n; Calls BIOS services via INT 10h (video, 13 instr).\n; tags: int_10, iterator, string_op\n; callers: ENABLE\n; calls (intra): sub_01CA\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -135,13 +135,13 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Llama a servicios BIOS via INT 10h (video, 12 instr).",
+      "description": "Calls BIOS services via INT 10h (video, 12 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "bios_caller",
         "int_10"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_01AF -- offset 0x01AF -- 12 instr\n; Llama a servicios BIOS via INT 10h (video, 12 instr).\n; tags: bios_caller, int_10\n; callers: DISABLE\n; calls (intra): sub_01CA\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_01AF -- offset 0x01AF -- 12 instr\n; Calls BIOS services via INT 10h (video, 12 instr).\n; tags: bios_caller, int_10\n; callers: DISABLE\n; calls (intra): sub_01CA\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -213,7 +213,7 @@
       ],
       "fanout": 3,
       "fanin": 2,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (735 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (735 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
@@ -221,7 +221,7 @@
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_01CA -- offset 0x01CA -- 735 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (735 instr).\n; tags: complex_iterator, far, loop, string_op\n; callers: sub_0192, sub_01AF\n; calls (intra): sub_1A53, sub_1ADF, sub_1E2F\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_01CA -- offset 0x01CA -- 735 instr\n; Iterator with string ops (movsb/scasb/...) (735 instr).\n; tags: complex_iterator, far, loop, string_op\n; callers: sub_0192, sub_01AF\n; calls (intra): sub_1A53, sub_1ADF, sub_1E2F\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -292,14 +292,14 @@
       "callers": [],
       "fanout": 3,
       "fanin": 0,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (530 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (530 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
         "far",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; STRBLT -- 530 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (530 instr).\n; tags: complex_iterator, far, string_op\n; calls (intra): sub_1A53, sub_1ADF, sub_1E2F\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; STRBLT -- 530 instr\n; Iterator with string ops (movsb/scasb/...) (530 instr).\n; tags: complex_iterator, far, string_op\n; calls (intra): sub_1A53, sub_1ADF, sub_1E2F\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -359,12 +359,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (22 instr).",
+      "description": "Unclassified function (22 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0DC8 -- offset 0x0DC8 -- 22 instr\n; Funcion sin clasificar definitiva (22 instr).\n; tags: small\n; callers: SETCURSOR\n; calls (intra): sub_0E06\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0DC8 -- offset 0x0DC8 -- 22 instr\n; Unclassified function (22 instr).\n; tags: small\n; callers: SETCURSOR\n; calls (intra): sub_0E06\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -419,14 +419,14 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (17 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (17 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0E06 -- offset 0x0E06 -- 17 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (17 instr).\n; tags: iterator, loop, string_op\n; callers: sub_0DC8\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0E06 -- offset 0x0E06 -- 17 instr\n; Iterator with string ops (movsb/scasb/...) (17 instr).\n; tags: iterator, loop, string_op\n; callers: sub_0DC8\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -493,12 +493,12 @@
       ],
       "fanout": 5,
       "fanin": 2,
-      "description": "Funcion sin clasificar definitiva (11 instr).",
+      "description": "Unclassified function (11 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0E1E -- offset 0x0E1E -- 11 instr\n; Funcion sin clasificar definitiva (11 instr).\n; tags: small\n; callers: sub_1CD2, sub_1D4C\n; calls (intra): sub_0E73, sub_0EC4, sub_0F8D, sub_1022, sub_10BE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0E1E -- offset 0x0E1E -- 11 instr\n; Unclassified function (11 instr).\n; tags: small\n; callers: sub_1CD2, sub_1D4C\n; calls (intra): sub_0E73, sub_0EC4, sub_0F8D, sub_1022, sub_10BE\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -561,12 +561,12 @@
       ],
       "fanout": 1,
       "fanin": 4,
-      "description": "Wrapper que delega en sub_0E4C.",
+      "description": "Wrapper delegating to sub_0E4C.",
       "confidence": "medium",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0E35 -- offset 0x0E35 -- 10 instr\n; Wrapper que delega en sub_0E4C.\n; tags: wrapper\n; callers: SETCURSOR, sub_1A53, sub_1CAF, sub_1D96\n; calls (intra): sub_0E4C\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0E35 -- offset 0x0E35 -- 10 instr\n; Wrapper delegating to sub_0E4C.\n; tags: wrapper\n; callers: SETCURSOR, sub_1A53, sub_1CAF, sub_1D96\n; calls (intra): sub_0E4C\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -628,12 +628,12 @@
       ],
       "fanout": 2,
       "fanin": 2,
-      "description": "Funcion sin clasificar definitiva (15 instr).",
+      "description": "Unclassified function (15 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0E4C -- offset 0x0E4C -- 15 instr\n; Funcion sin clasificar definitiva (15 instr).\n; tags: small\n; callers: sub_0E35, sub_10BE\n; calls (intra): sub_11CC, sub_1200\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0E4C -- offset 0x0E4C -- 15 instr\n; Unclassified function (15 instr).\n; tags: small\n; callers: sub_0E35, sub_10BE\n; calls (intra): sub_11CC, sub_1200\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -696,14 +696,14 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (39 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (39 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0E73 -- offset 0x0E73 -- 39 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (39 instr).\n; tags: iterator, loop, string_op\n; callers: sub_0E1E\n; calls (intra): sub_0FF9\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0E73 -- offset 0x0E73 -- 39 instr\n; Iterator with string ops (movsb/scasb/...) (39 instr).\n; tags: iterator, loop, string_op\n; callers: sub_0E1E\n; calls (intra): sub_0FF9\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -761,12 +761,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Wrapper que delega en sub_0EE9.",
+      "description": "Wrapper delegating to sub_0EE9.",
       "confidence": "medium",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0EC4 -- offset 0x0EC4 -- 15 instr\n; Wrapper que delega en sub_0EE9.\n; tags: wrapper\n; callers: sub_0E1E\n; calls (intra): sub_0EE9\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0EC4 -- offset 0x0EC4 -- 15 instr\n; Wrapper delegating to sub_0EE9.\n; tags: wrapper\n; callers: sub_0E1E\n; calls (intra): sub_0EE9\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -833,14 +833,14 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (40 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (40 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0EE9 -- offset 0x0EE9 -- 40 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (40 instr).\n; tags: iterator, loop, string_op\n; callers: sub_0EC4\n; calls (intra): sub_0F3B\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0EE9 -- offset 0x0EE9 -- 40 instr\n; Iterator with string ops (movsb/scasb/...) (40 instr).\n; tags: iterator, loop, string_op\n; callers: sub_0EC4\n; calls (intra): sub_0F3B\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -903,14 +903,14 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (42 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (42 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0F3B -- offset 0x0F3B -- 42 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (42 instr).\n; tags: iterator, loop, string_op\n; callers: sub_0EE9\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0F3B -- offset 0x0F3B -- 42 instr\n; Iterator with string ops (movsb/scasb/...) (42 instr).\n; tags: iterator, loop, string_op\n; callers: sub_0EE9\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -971,14 +971,14 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (28 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (28 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0F8D -- offset 0x0F8D -- 28 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (28 instr).\n; tags: iterator, loop, string_op\n; callers: sub_0E1E\n; calls (intra): sub_0FF9\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0F8D -- offset 0x0F8D -- 28 instr\n; Iterator with string ops (movsb/scasb/...) (28 instr).\n; tags: iterator, loop, string_op\n; callers: sub_0E1E\n; calls (intra): sub_0FF9\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -1040,14 +1040,14 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (26 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (26 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0FC8 -- offset 0x0FC8 -- 26 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (26 instr).\n; tags: iterator, loop, string_op\n; callers: sub_10BE\n; calls (intra): sub_0FF9\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0FC8 -- offset 0x0FC8 -- 26 instr\n; Iterator with string ops (movsb/scasb/...) (26 instr).\n; tags: iterator, loop, string_op\n; callers: sub_10BE\n; calls (intra): sub_0FF9\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -1105,12 +1105,12 @@
       ],
       "fanout": 0,
       "fanin": 3,
-      "description": "Funcion hoja (no llama a otras, 16 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 16 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0FF9 -- offset 0x0FF9 -- 16 instr\n; Funcion hoja (no llama a otras, 16 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_0E73, sub_0F8D, sub_0FC8\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0FF9 -- offset 0x0FF9 -- 16 instr\n; Leaf function (no callees, 16 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_0E73, sub_0F8D, sub_0FC8\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -1177,13 +1177,13 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Iterador con bucle (65 instr).",
+      "description": "Iterator with loop (65 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
         "loop"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1022 -- offset 0x1022 -- 65 instr\n; Iterador con bucle (65 instr).\n; tags: complex_iterator, loop\n; callers: sub_0E1E\n; calls (intra): sub_11FC\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1022 -- offset 0x1022 -- 65 instr\n; Iterator with loop (65 instr).\n; tags: complex_iterator, loop\n; callers: sub_0E1E\n; calls (intra): sub_11FC\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -1248,12 +1248,12 @@
       ],
       "fanout": 4,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (14 instr).",
+      "description": "Unclassified function (14 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_10BE -- offset 0x10BE -- 14 instr\n; Funcion sin clasificar definitiva (14 instr).\n; tags: small\n; callers: sub_0E1E\n; calls (intra): sub_0E4C, sub_0FC8, sub_10DE, sub_116B\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_10BE -- offset 0x10BE -- 14 instr\n; Unclassified function (14 instr).\n; tags: small\n; callers: sub_0E1E\n; calls (intra): sub_0E4C, sub_0FC8, sub_10DE, sub_116B\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -1320,14 +1320,14 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (70 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (70 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_10DE -- offset 0x10DE -- 70 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (70 instr).\n; tags: complex_iterator, loop, string_op\n; callers: sub_10BE\n; calls (intra): sub_11FC\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_10DE -- offset 0x10DE -- 70 instr\n; Iterator with string ops (movsb/scasb/...) (70 instr).\n; tags: complex_iterator, loop, string_op\n; callers: sub_10BE\n; calls (intra): sub_11FC\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -1393,12 +1393,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (36 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (36 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_116B -- offset 0x116B -- 36 instr\n; Dispatcher: tabla de decisiones cmp+jcc (36 instr).\n; tags: dispatcher\n; callers: sub_10BE\n; calls (intra): sub_11CC\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_116B -- offset 0x116B -- 36 instr\n; Dispatcher: cmp+jcc decision table (36 instr).\n; tags: dispatcher\n; callers: sub_10BE\n; calls (intra): sub_11CC\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -1454,12 +1454,12 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Funcion sin clasificar definitiva (23 instr).",
+      "description": "Unclassified function (23 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_11CC -- offset 0x11CC -- 23 instr\n; Funcion sin clasificar definitiva (23 instr).\n; tags: small\n; callers: sub_0E4C, sub_116B\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_11CC -- offset 0x11CC -- 23 instr\n; Unclassified function (23 instr).\n; tags: small\n; callers: sub_0E4C, sub_116B\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -1501,12 +1501,12 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Stub trivial (1 instrucciones, sin logica significativa).",
+      "description": "Trivial stub (1 instructions, no significant logic).",
       "confidence": "low",
       "semantic_tags": [
         "trivial_stub"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_11FC -- offset 0x11FC -- 1 instr\n; Stub trivial (1 instrucciones, sin logica significativa).\n; tags: trivial_stub\n; callers: sub_1022, sub_10DE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_11FC -- offset 0x11FC -- 1 instr\n; Trivial stub (1 instructions, no significant logic).\n; tags: trivial_stub\n; callers: sub_1022, sub_10DE\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -1550,12 +1550,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Stub trivial (2 instrucciones, sin logica significativa).",
+      "description": "Trivial stub (2 instructions, no significant logic).",
       "confidence": "low",
       "semantic_tags": [
         "trivial_stub"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1200 -- offset 0x1200 -- 2 instr\n; Stub trivial (2 instrucciones, sin logica significativa).\n; tags: trivial_stub\n; callers: sub_0E4C\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1200 -- offset 0x1200 -- 2 instr\n; Trivial stub (2 instructions, no significant logic).\n; tags: trivial_stub\n; callers: sub_0E4C\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -1622,14 +1622,14 @@
       "callers": [],
       "fanout": 2,
       "fanin": 0,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (114 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (114 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
         "far",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; SCANLR -- 114 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (114 instr).\n; tags: complex_iterator, far, string_op\n; calls (intra): sub_1A53, sub_1ADF\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; SCANLR -- 114 instr\n; Iterator with string ops (movsb/scasb/...) (114 instr).\n; tags: complex_iterator, far, string_op\n; calls (intra): sub_1A53, sub_1ADF\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -1700,14 +1700,14 @@
       "callers": [],
       "fanout": 3,
       "fanin": 0,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (75 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (75 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
         "far",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; PIXEL -- 75 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (75 instr).\n; tags: complex_iterator, far, string_op\n; calls (intra): sub_1A53, sub_1ADF, sub_1E2F\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; PIXEL -- 75 instr\n; Iterator with string ops (movsb/scasb/...) (75 instr).\n; tags: complex_iterator, far, string_op\n; calls (intra): sub_1A53, sub_1ADF, sub_1E2F\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -1780,14 +1780,14 @@
       "callers": [],
       "fanout": 5,
       "fanin": 0,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (206 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (206 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
         "far",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; OUTPUT -- 206 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (206 instr).\n; tags: complex_iterator, far, string_op\n; calls (intra): sub_15FB, sub_1680, sub_1A53, sub_1ADF, sub_1E2F\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; OUTPUT -- 206 instr\n; Iterator with string ops (movsb/scasb/...) (206 instr).\n; tags: complex_iterator, far, string_op\n; calls (intra): sub_15FB, sub_1680, sub_1A53, sub_1ADF, sub_1E2F\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -1850,12 +1850,12 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (50 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (50 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_15FB -- offset 0x15FB -- 50 instr\n; Dispatcher: tabla de decisiones cmp+jcc (50 instr).\n; tags: dispatcher\n; callers: OUTPUT, sub_1680\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_15FB -- offset 0x15FB -- 50 instr\n; Dispatcher: cmp+jcc decision table (50 instr).\n; tags: dispatcher\n; callers: OUTPUT, sub_1680\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -1927,13 +1927,13 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (102 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (102 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1680 -- offset 0x1680 -- 102 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (102 instr).\n; tags: complex_iterator, string_op\n; callers: OUTPUT\n; calls (intra): sub_15FB, sub_1A53\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1680 -- offset 0x1680 -- 102 instr\n; Iterator with string ops (movsb/scasb/...) (102 instr).\n; tags: complex_iterator, string_op\n; callers: OUTPUT\n; calls (intra): sub_15FB, sub_1A53\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -1987,13 +1987,13 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Enumerador: itera sobre dfonts.",
+      "description": "Enumerator: iterates over dfonts.",
       "confidence": "medium",
       "semantic_tags": [
         "far",
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; ENUMDFONTS -- 14 instr\n; Enumerador: itera sobre dfonts.\n; tags: far, leaf\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; ENUMDFONTS -- 14 instr\n; Enumerator: iterates over dfonts.\n; tags: far, leaf\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -2058,13 +2058,13 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Enumerador: itera sobre obj.",
+      "description": "Enumerator: iterates over obj.",
       "confidence": "medium",
       "semantic_tags": [
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; ENUMOBJ -- 64 instr\n; Enumerador: itera sobre obj.\n; tags: far, medium\n; calls (intra): sub_1835\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; ENUMOBJ -- 64 instr\n; Enumerator: iterates over obj.\n; tags: far, medium\n; calls (intra): sub_1835\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -2119,12 +2119,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion hoja (no llama a otras, 10 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 10 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1835 -- offset 0x1835 -- 10 instr\n; Funcion hoja (no llama a otras, 10 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: ENUMOBJ\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1835 -- offset 0x1835 -- 10 instr\n; Leaf function (no callees, 10 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: ENUMOBJ\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -2185,13 +2185,13 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (34 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (34 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; REALIZEOBJECT -- 34 instr\n; Dispatcher: tabla de decisiones cmp+jcc (34 instr).\n; tags: dispatcher, far\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; REALIZEOBJECT -- 34 instr\n; Dispatcher: cmp+jcc decision table (34 instr).\n; tags: dispatcher, far\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -2232,12 +2232,12 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Stub trivial (2 instrucciones, sin logica significativa).",
+      "description": "Trivial stub (2 instructions, no significant logic).",
       "confidence": "low",
       "semantic_tags": [
         "trivial_stub"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1985 -- offset 0x1985 -- 2 instr\n; Stub trivial (2 instrucciones, sin logica significativa).\n; tags: trivial_stub\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1985 -- offset 0x1985 -- 2 instr\n; Trivial stub (2 instructions, no significant logic).\n; tags: trivial_stub\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -2304,7 +2304,7 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (70 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (70 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
@@ -2312,7 +2312,7 @@
         "int_18",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_198A -- offset 0x198A -- 70 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (70 instr).\n; tags: complex_iterator, far, int_18, string_op\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_198A -- offset 0x198A -- 70 instr\n; Iterator with string ops (movsb/scasb/...) (70 instr).\n; tags: complex_iterator, far, int_18, string_op\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -2373,14 +2373,14 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (31 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (31 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "far",
         "iterator",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; CONTROL -- 31 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (31 instr).\n; tags: far, iterator, string_op\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; CONTROL -- 31 instr\n; Iterator with string ops (movsb/scasb/...) (31 instr).\n; tags: far, iterator, string_op\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -2453,12 +2453,12 @@
       ],
       "fanout": 2,
       "fanin": 6,
-      "description": "Funcion sin clasificar definitiva (26 instr).",
+      "description": "Unclassified function (26 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1A53 -- offset 0x1A53 -- 26 instr\n; Funcion sin clasificar definitiva (26 instr).\n; tags: small\n; callers: OUTPUT, PIXEL, SCANLR, STRBLT, sub_01CA, sub_1680\n; calls (intra): sub_0E35, sub_1AA7\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1A53 -- offset 0x1A53 -- 26 instr\n; Unclassified function (26 instr).\n; tags: small\n; callers: OUTPUT, PIXEL, SCANLR, STRBLT, sub_01CA, sub_1680\n; calls (intra): sub_0E35, sub_1AA7\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -2510,12 +2510,12 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (4 instr).",
+      "description": "Unclassified function (4 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1AA1 -- offset 0x1AA1 -- 4 instr\n; Funcion sin clasificar definitiva (4 instr).\n; tags: wrapper\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1AA1 -- offset 0x1AA1 -- 4 instr\n; Unclassified function (4 instr).\n; tags: wrapper\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -2578,12 +2578,12 @@
       ],
       "fanout": 0,
       "fanin": 3,
-      "description": "Funcion hoja (no llama a otras, 20 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 20 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1AA7 -- offset 0x1AA7 -- 20 instr\n; Funcion hoja (no llama a otras, 20 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_1A53, sub_1CAF, sub_1D4C\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1AA7 -- offset 0x1AA7 -- 20 instr\n; Leaf function (no callees, 20 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_1A53, sub_1CAF, sub_1D4C\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -2633,12 +2633,12 @@
       ],
       "fanout": 0,
       "fanin": 5,
-      "description": "Stub trivial (3 instrucciones, sin logica significativa).",
+      "description": "Trivial stub (3 instructions, no significant logic).",
       "confidence": "low",
       "semantic_tags": [
         "trivial_stub"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1ADF -- offset 0x1ADF -- 3 instr\n; Stub trivial (3 instrucciones, sin logica significativa).\n; tags: trivial_stub\n; callers: OUTPUT, PIXEL, SCANLR, STRBLT, sub_01CA\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1ADF -- offset 0x1ADF -- 3 instr\n; Trivial stub (3 instructions, no significant logic).\n; tags: trivial_stub\n; callers: OUTPUT, PIXEL, SCANLR, STRBLT, sub_01CA\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -2695,13 +2695,13 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (23 instr).",
+      "description": "Unclassified function (23 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "far",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; INQUIRE -- 23 instr\n; Funcion sin clasificar definitiva (23 instr).\n; tags: far, small\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; INQUIRE -- 23 instr\n; Unclassified function (23 instr).\n; tags: far, small\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -2768,13 +2768,13 @@
       "callers": [],
       "fanout": 2,
       "fanin": 0,
-      "description": "Setter: cambia cursor.",
+      "description": "Setter: changes cursor.",
       "confidence": "medium",
       "semantic_tags": [
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; SETCURSOR -- 43 instr\n; Setter: cambia cursor.\n; tags: far, medium\n; calls (intra): sub_0DC8, sub_0E35\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; SETCURSOR -- 43 instr\n; Setter: changes cursor.\n; tags: far, medium\n; calls (intra): sub_0DC8, sub_0E35\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -2839,12 +2839,12 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion mediana (72 instr, 0 calls).",
+      "description": "Mid-size function (72 instr, 0 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1B7F -- offset 0x1B7F -- 72 instr\n; Funcion mediana (72 instr, 0 calls).\n; tags: medium\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1B7F -- offset 0x1B7F -- 72 instr\n; Mid-size function (72 instr, 0 calls).\n; tags: medium\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -2898,13 +2898,13 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion hoja (no llama a otras, 14 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 14 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "far",
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; DEVICEMODE -- 14 instr\n; Funcion hoja (no llama a otras, 14 instr): probable helper aritmetico/conversion.\n; tags: far, leaf\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; DEVICEMODE -- 14 instr\n; Leaf function (no callees, 14 instr): likely arithmetic/conversion helper.\n; tags: far, leaf\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -2969,13 +2969,13 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Funcion mediana (32 instr, 1 calls).",
+      "description": "Mid-size function (32 instr, 1 calls).",
       "confidence": "low",
       "semantic_tags": [
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; ENABLE -- 32 instr\n; Funcion mediana (32 instr, 1 calls).\n; tags: far, medium\n; calls (intra): sub_0192\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; ENABLE -- 32 instr\n; Mid-size function (32 instr, 1 calls).\n; tags: far, medium\n; calls (intra): sub_0192\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -3035,13 +3035,13 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (20 instr).",
+      "description": "Unclassified function (20 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "far",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; DISABLE -- 20 instr\n; Funcion sin clasificar definitiva (20 instr).\n; tags: far, small\n; calls (intra): sub_01AF\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; DISABLE -- 20 instr\n; Unclassified function (20 instr).\n; tags: far, small\n; calls (intra): sub_01AF\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -3097,13 +3097,13 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion hoja (no llama a otras, 20 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 20 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "far",
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; MOVECURSOR -- 20 instr\n; Funcion hoja (no llama a otras, 20 instr): probable helper aritmetico/conversion.\n; tags: far, leaf\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; MOVECURSOR -- 20 instr\n; Leaf function (no callees, 20 instr): likely arithmetic/conversion helper.\n; tags: far, leaf\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -3169,12 +3169,12 @@
       "callers": [],
       "fanout": 2,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (15 instr).",
+      "description": "Unclassified function (15 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1CAF -- offset 0x1CAF -- 15 instr\n; Funcion sin clasificar definitiva (15 instr).\n; tags: small\n; calls (intra): sub_0E35, sub_1AA7\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1CAF -- offset 0x1CAF -- 15 instr\n; Unclassified function (15 instr).\n; tags: small\n; calls (intra): sub_0E35, sub_1AA7\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -3234,12 +3234,12 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (10 instr).",
+      "description": "Unclassified function (10 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1CD2 -- offset 0x1CD2 -- 10 instr\n; Funcion sin clasificar definitiva (10 instr).\n; tags: small\n; calls (intra): sub_0E1E\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1CD2 -- offset 0x1CD2 -- 10 instr\n; Unclassified function (10 instr).\n; tags: small\n; calls (intra): sub_0E1E\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -3298,12 +3298,12 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (15 instr).",
+      "description": "Unclassified function (15 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1CEA -- offset 0x1CEA -- 15 instr\n; Funcion sin clasificar definitiva (15 instr).\n; tags: wrapper\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1CEA -- offset 0x1CEA -- 15 instr\n; Unclassified function (15 instr).\n; tags: wrapper\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -3361,13 +3361,13 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (11 instr).",
+      "description": "Unclassified function (11 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "far",
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1D11 -- offset 0x1D11 -- 11 instr\n; Funcion sin clasificar definitiva (11 instr).\n; tags: far, wrapper\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1D11 -- offset 0x1D11 -- 11 instr\n; Unclassified function (11 instr).\n; tags: far, wrapper\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -3426,13 +3426,13 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (22 instr).",
+      "description": "Unclassified function (22 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "far",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; CHECKCURSOR -- 22 instr\n; Funcion sin clasificar definitiva (22 instr).\n; tags: far, small\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; CHECKCURSOR -- 22 instr\n; Unclassified function (22 instr).\n; tags: far, small\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -3496,12 +3496,12 @@
       "callers": [],
       "fanout": 2,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (14 instr).",
+      "description": "Unclassified function (14 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1D4C -- offset 0x1D4C -- 14 instr\n; Funcion sin clasificar definitiva (14 instr).\n; tags: small\n; calls (intra): sub_0E1E, sub_1AA7\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1D4C -- offset 0x1D4C -- 14 instr\n; Unclassified function (14 instr).\n; tags: small\n; calls (intra): sub_0E1E, sub_1AA7\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -3560,12 +3560,12 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (15 instr).",
+      "description": "Unclassified function (15 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1D6B -- offset 0x1D6B -- 15 instr\n; Funcion sin clasificar definitiva (15 instr).\n; tags: wrapper\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1D6B -- offset 0x1D6B -- 15 instr\n; Unclassified function (15 instr).\n; tags: wrapper\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -3626,12 +3626,12 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (10 instr).",
+      "description": "Unclassified function (10 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1D96 -- offset 0x1D96 -- 10 instr\n; Funcion sin clasificar definitiva (10 instr).\n; tags: small\n; calls (intra): sub_0E35\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1D96 -- offset 0x1D96 -- 10 instr\n; Unclassified function (10 instr).\n; tags: small\n; calls (intra): sub_0E35\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -3690,13 +3690,13 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (19 instr).",
+      "description": "Unclassified function (19 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "far",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1DAB -- offset 0x1DAB -- 19 instr\n; Funcion sin clasificar definitiva (19 instr).\n; tags: far, small\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1DAB -- offset 0x1DAB -- 19 instr\n; Unclassified function (19 instr).\n; tags: far, small\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -3757,14 +3757,14 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (44 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (44 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1DD3 -- offset 0x1DD3 -- 44 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (44 instr).\n; tags: iterator, loop, string_op\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1DD3 -- offset 0x1DD3 -- 44 instr\n; Iterator with string ops (movsb/scasb/...) (44 instr).\n; tags: iterator, loop, string_op\n;----------------------------------------------------------------------"
     },
     {
       "module": "HERCULES",
@@ -3827,12 +3827,12 @@
       ],
       "fanout": 0,
       "fanin": 4,
-      "description": "Funcion hoja (no llama a otras, 18 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 18 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1E2F -- offset 0x1E2F -- 18 instr\n; Funcion hoja (no llama a otras, 18 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: OUTPUT, PIXEL, STRBLT, sub_01CA\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1E2F -- offset 0x1E2F -- 18 instr\n; Leaf function (no callees, 18 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: OUTPUT, PIXEL, STRBLT, sub_01CA\n;----------------------------------------------------------------------"
     }
   ]
 }

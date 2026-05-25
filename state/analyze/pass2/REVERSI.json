@@ -1,0 +1,4319 @@
+{
+  "module": "REVERSI",
+  "num_functions": 46,
+  "intra_edges": [
+    [
+      "sub_006C",
+      "sub_03F2"
+    ],
+    [
+      "sub_006C",
+      "sub_0B27"
+    ],
+    [
+      "sub_0115",
+      "sub_08DD"
+    ],
+    [
+      "sub_0115",
+      "sub_120D"
+    ],
+    [
+      "sub_0231",
+      "sub_160A"
+    ],
+    [
+      "sub_0270",
+      "sub_03F2"
+    ],
+    [
+      "sub_0270",
+      "sub_0429"
+    ],
+    [
+      "sub_0270",
+      "sub_064B"
+    ],
+    [
+      "sub_0270",
+      "sub_08DD"
+    ],
+    [
+      "sub_0270",
+      "sub_0B27"
+    ],
+    [
+      "sub_0270",
+      "sub_1349"
+    ],
+    [
+      "sub_0270",
+      "sub_1E2A"
+    ],
+    [
+      "sub_0429",
+      "sub_0BE0"
+    ],
+    [
+      "sub_0429",
+      "sub_2082"
+    ],
+    [
+      "sub_0537",
+      "sub_223E"
+    ],
+    [
+      "sub_064B",
+      "sub_0812"
+    ],
+    [
+      "sub_08DD",
+      "sub_0598"
+    ],
+    [
+      "sub_0BE0",
+      "sub_120D"
+    ],
+    [
+      "sub_0BE0",
+      "sub_12B8"
+    ],
+    [
+      "sub_0F41",
+      "sub_0C7A"
+    ],
+    [
+      "sub_0F70",
+      "sub_0537"
+    ],
+    [
+      "sub_120D",
+      "sub_1349"
+    ],
+    [
+      "sub_120D",
+      "sub_1398"
+    ],
+    [
+      "sub_13BA",
+      "sub_2082"
+    ],
+    [
+      "sub_1479",
+      "sub_0429"
+    ],
+    [
+      "sub_1479",
+      "sub_064B"
+    ],
+    [
+      "sub_1479",
+      "sub_1349"
+    ],
+    [
+      "sub_1479",
+      "sub_1E2A"
+    ],
+    [
+      "sub_1479",
+      "sub_2082"
+    ],
+    [
+      "sub_1479",
+      "sub_20A6"
+    ],
+    [
+      "sub_160A",
+      "sub_0812"
+    ],
+    [
+      "sub_160A",
+      "sub_13BA"
+    ],
+    [
+      "sub_160A",
+      "sub_1B6E"
+    ],
+    [
+      "sub_160A",
+      "sub_1E2A"
+    ],
+    [
+      "sub_160A",
+      "sub_2082"
+    ],
+    [
+      "sub_17BD",
+      "sub_13BA"
+    ],
+    [
+      "sub_17BD",
+      "sub_18B3"
+    ],
+    [
+      "sub_17BD",
+      "sub_18DC"
+    ],
+    [
+      "sub_17BD",
+      "sub_1B6E"
+    ],
+    [
+      "sub_17BD",
+      "sub_2082"
+    ],
+    [
+      "sub_1905",
+      "sub_13BA"
+    ],
+    [
+      "sub_1905",
+      "sub_1479"
+    ],
+    [
+      "sub_1905",
+      "sub_17BD"
+    ],
+    [
+      "sub_1905",
+      "sub_1B6E"
+    ],
+    [
+      "sub_1B6E",
+      "sub_006C"
+    ],
+    [
+      "sub_1B6E",
+      "sub_0115"
+    ],
+    [
+      "sub_1B6E",
+      "sub_0231"
+    ],
+    [
+      "sub_1B6E",
+      "sub_13BA"
+    ],
+    [
+      "sub_1B6E",
+      "sub_1479"
+    ],
+    [
+      "sub_1B6E",
+      "sub_1905"
+    ],
+    [
+      "sub_1E2A",
+      "sub_0537"
+    ],
+    [
+      "sub_1E2A",
+      "sub_064B"
+    ],
+    [
+      "sub_1E2A",
+      "sub_1F72"
+    ],
+    [
+      "sub_1E2A",
+      "sub_1F9B"
+    ],
+    [
+      "sub_1E2A",
+      "sub_1FDA"
+    ],
+    [
+      "sub_1E2A",
+      "sub_2046"
+    ],
+    [
+      "sub_2082",
+      "sub_1F78"
+    ],
+    [
+      "sub_20A6",
+      "sub_0F41"
+    ],
+    [
+      "sub_20A6",
+      "sub_1FAC"
+    ],
+    [
+      "sub_20A6",
+      "sub_2274"
+    ],
+    [
+      "sub_20A6",
+      "sub_2306"
+    ],
+    [
+      "sub_2135",
+      "sub_2316"
+    ],
+    [
+      "sub_223E",
+      "sub_2135"
+    ],
+    [
+      "sub_223E",
+      "sub_2333"
+    ],
+    [
+      "sub_2306",
+      "sub_223E"
+    ],
+    [
+      "sub_2306",
+      "sub_2321"
+    ]
+  ],
+  "inter_edges": [
+    [
+      "sub_006C",
+      "GDI",
+      "GETSTOCKOBJECT"
+    ],
+    [
+      "sub_006C",
+      "GDI",
+      "GETTEXTMETRICS"
+    ],
+    [
+      "sub_006C",
+      "GDI",
+      "SELECTOBJECT"
+    ],
+    [
+      "sub_006C",
+      "USER",
+      "GETDC"
+    ],
+    [
+      "sub_006C",
+      "USER",
+      "RELEASEDC"
+    ],
+    [
+      "sub_0115",
+      "GDI",
+      "PATBLT"
+    ],
+    [
+      "sub_0115",
+      "GDI",
+      "SETBKMODE"
+    ],
+    [
+      "sub_0115",
+      "USER",
+      "GETCLIENTRECT"
+    ],
+    [
+      "sub_0270",
+      "GDI",
+      "SETBKMODE"
+    ],
+    [
+      "sub_0270",
+      "USER",
+      "DIALOGBOX"
+    ],
+    [
+      "sub_0270",
+      "USER",
+      "GETDC"
+    ],
+    [
+      "sub_0270",
+      "USER",
+      "RELEASEDC"
+    ],
+    [
+      "sub_0270",
+      "USER",
+      "SETCURSOR"
+    ],
+    [
+      "sub_0270",
+      "USER",
+      "SETWINDOWTEXT"
+    ],
+    [
+      "sub_03F2",
+      "USER",
+      "CHECKMENUITEM"
+    ],
+    [
+      "sub_03F2",
+      "USER",
+      "GETMENU"
+    ],
+    [
+      "sub_0537",
+      "USER",
+      "DISPATCHMESSAGE"
+    ],
+    [
+      "sub_0537",
+      "USER",
+      "PEEKMESSAGE"
+    ],
+    [
+      "sub_0537",
+      "USER",
+      "TRANSLATEACCELERATOR"
+    ],
+    [
+      "sub_0537",
+      "USER",
+      "TRANSLATEMESSAGE"
+    ],
+    [
+      "sub_0598",
+      "GDI",
+      "ELLIPSE"
+    ],
+    [
+      "sub_0598",
+      "GDI",
+      "SELECTOBJECT"
+    ],
+    [
+      "sub_064B",
+      "GDI",
+      "ELLIPSE"
+    ],
+    [
+      "sub_064B",
+      "GDI",
+      "SELECTOBJECT"
+    ],
+    [
+      "sub_0812",
+      "GDI",
+      "ELLIPSE"
+    ],
+    [
+      "sub_0812",
+      "GDI",
+      "GETSTOCKOBJECT"
+    ],
+    [
+      "sub_0812",
+      "GDI",
+      "SELECTOBJECT"
+    ],
+    [
+      "sub_0812",
+      "GDI",
+      "SETBKMODE"
+    ],
+    [
+      "sub_0812",
+      "USER",
+      "SETCURSOR"
+    ],
+    [
+      "sub_08DD",
+      "GDI",
+      "LINETO"
+    ],
+    [
+      "sub_08DD",
+      "GDI",
+      "MOVETO"
+    ],
+    [
+      "sub_08DD",
+      "GDI",
+      "PATBLT"
+    ],
+    [
+      "sub_08DD",
+      "GDI",
+      "SELECTOBJECT"
+    ],
+    [
+      "sub_0C7A",
+      "GDI",
+      "CREATEBITMAP"
+    ],
+    [
+      "sub_0C7A",
+      "GDI",
+      "CREATEPATTERNBRUSH"
+    ],
+    [
+      "sub_0C7A",
+      "GDI",
+      "CREATESOLIDBRUSH"
+    ],
+    [
+      "sub_0C7A",
+      "GDI",
+      "DELETEOBJECT"
+    ],
+    [
+      "sub_0C7A",
+      "GDI",
+      "GETDEVICECAPS"
+    ],
+    [
+      "sub_0C7A",
+      "GDI",
+      "GETSTOCKOBJECT"
+    ],
+    [
+      "sub_0C7A",
+      "KERNEL",
+      "LOCALALLOC"
+    ],
+    [
+      "sub_0C7A",
+      "USER",
+      "GETDC"
+    ],
+    [
+      "sub_0C7A",
+      "USER",
+      "LOADACCELERATORS"
+    ],
+    [
+      "sub_0C7A",
+      "USER",
+      "LOADCURSOR"
+    ],
+    [
+      "sub_0C7A",
+      "USER",
+      "LOADSTRING"
+    ],
+    [
+      "sub_0C7A",
+      "USER",
+      "RELEASEDC"
+    ],
+    [
+      "sub_0EBA",
+      "KERNEL",
+      "LOCALFREE"
+    ],
+    [
+      "sub_0EBA",
+      "USER",
+      "LOADICON"
+    ],
+    [
+      "sub_0EBA",
+      "USER",
+      "REGISTERCLASS"
+    ],
+    [
+      "sub_0F70",
+      "KERNEL",
+      "GETINSTANCEDATA"
+    ],
+    [
+      "sub_0F70",
+      "KERNEL",
+      "MAKEPROCINSTANCE"
+    ],
+    [
+      "sub_0F70",
+      "USER",
+      "CHANGEMENU"
+    ],
+    [
+      "sub_0F70",
+      "USER",
+      "CREATEWINDOW"
+    ],
+    [
+      "sub_0F70",
+      "USER",
+      "GETSYSTEMMENU"
+    ],
+    [
+      "sub_0F70",
+      "USER",
+      "SHOWWINDOW"
+    ],
+    [
+      "sub_0F70",
+      "USER",
+      "UPDATEWINDOW"
+    ],
+    [
+      "sub_120D",
+      "GDI",
+      "GETSTOCKOBJECT"
+    ],
+    [
+      "sub_120D",
+      "GDI",
+      "GETTEXTEXTENT"
+    ],
+    [
+      "sub_120D",
+      "GDI",
+      "PATBLT"
+    ],
+    [
+      "sub_120D",
+      "GDI",
+      "SELECTOBJECT"
+    ],
+    [
+      "sub_120D",
+      "GDI",
+      "SETBKMODE"
+    ],
+    [
+      "sub_120D",
+      "GDI",
+      "TEXTOUT"
+    ],
+    [
+      "sub_12B8",
+      "GDI",
+      "PATBLT"
+    ],
+    [
+      "sub_12B8",
+      "USER",
+      "GETDC"
+    ],
+    [
+      "sub_12B8",
+      "USER",
+      "RELEASEDC"
+    ],
+    [
+      "sub_12B8",
+      "USER",
+      "SETTIMER"
+    ],
+    [
+      "sub_1332",
+      "USER",
+      "KILLTIMER"
+    ],
+    [
+      "sub_1349",
+      "GDI",
+      "PATBLT"
+    ],
+    [
+      "sub_1349",
+      "GDI",
+      "SELECTOBJECT"
+    ],
+    [
+      "sub_13BA",
+      "USER",
+      "SETCURSOR"
+    ],
+    [
+      "sub_1479",
+      "USER",
+      "DIALOGBOX"
+    ],
+    [
+      "sub_1479",
+      "USER",
+      "GETDC"
+    ],
+    [
+      "sub_1479",
+      "USER",
+      "RELEASEDC"
+    ],
+    [
+      "sub_1479",
+      "USER",
+      "SETCURSOR"
+    ],
+    [
+      "sub_160A",
+      "USER",
+      "GETDC"
+    ],
+    [
+      "sub_160A",
+      "USER",
+      "RELEASEDC"
+    ],
+    [
+      "sub_160A",
+      "USER",
+      "SETCURSOR"
+    ],
+    [
+      "sub_160A",
+      "USER",
+      "SETWINDOWTEXT"
+    ],
+    [
+      "sub_1905",
+      "USER",
+      "GETKEYSTATE"
+    ],
+    [
+      "sub_1B6E",
+      "GDI",
+      "DELETEOBJECT"
+    ],
+    [
+      "sub_1B6E",
+      "KERNEL",
+      "GETMODULEUSAGE"
+    ],
+    [
+      "sub_1B6E",
+      "USER",
+      "BEGINPAINT"
+    ],
+    [
+      "sub_1B6E",
+      "USER",
+      "CLIENTTOSCREEN"
+    ],
+    [
+      "sub_1B6E",
+      "USER",
+      "DEFWINDOWPROC"
+    ],
+    [
+      "sub_1B6E",
+      "USER",
+      "DIALOGBOX"
+    ],
+    [
+      "sub_1B6E",
+      "USER",
+      "ENABLEMENUITEM"
+    ],
+    [
+      "sub_1B6E",
+      "USER",
+      "ENDPAINT"
+    ],
+    [
+      "sub_1B6E",
+      "USER",
+      "GETMENU"
+    ],
+    [
+      "sub_1B6E",
+      "USER",
+      "GETSYSTEMMETRICS"
+    ],
+    [
+      "sub_1B6E",
+      "USER",
+      "ISICONIC"
+    ],
+    [
+      "sub_1B6E",
+      "USER",
+      "POSTQUITMESSAGE"
+    ],
+    [
+      "sub_1B6E",
+      "USER",
+      "RELEASECAPTURE"
+    ],
+    [
+      "sub_1B6E",
+      "USER",
+      "SETCAPTURE"
+    ],
+    [
+      "sub_1B6E",
+      "USER",
+      "SETCURSOR"
+    ],
+    [
+      "sub_1B6E",
+      "USER",
+      "SETCURSORPOS"
+    ],
+    [
+      "sub_1B6E",
+      "USER",
+      "SETFOCUS"
+    ],
+    [
+      "sub_1B6E",
+      "USER",
+      "SHOWCURSOR"
+    ],
+    [
+      "sub_1E2A",
+      "USER",
+      "GETDC"
+    ],
+    [
+      "sub_1E2A",
+      "USER",
+      "RELEASEDC"
+    ],
+    [
+      "sub_20A6",
+      "KERNEL",
+      "FATALEXIT"
+    ],
+    [
+      "sub_20A6",
+      "KERNEL",
+      "INITTASK"
+    ],
+    [
+      "sub_20A6",
+      "KERNEL",
+      "WAITEVENT"
+    ],
+    [
+      "sub_20A6",
+      "USER",
+      "INITAPP"
+    ],
+    [
+      "sub_2135",
+      "KERNEL",
+      "GLOBALALLOC"
+    ],
+    [
+      "sub_2135",
+      "KERNEL",
+      "GLOBALCOMPACT"
+    ],
+    [
+      "sub_2135",
+      "KERNEL",
+      "GLOBALFREE"
+    ],
+    [
+      "sub_2135",
+      "KERNEL",
+      "GLOBALSIZE"
+    ],
+    [
+      "sub_2135",
+      "KERNEL",
+      "LOCALALLOC"
+    ],
+    [
+      "sub_2135",
+      "KERNEL",
+      "LOCALFREE"
+    ],
+    [
+      "sub_2135",
+      "KERNEL",
+      "LOCALREALLOC"
+    ],
+    [
+      "sub_2135",
+      "KERNEL",
+      "LOCALSIZE"
+    ]
+  ],
+  "external_modules": [
+    "GDI",
+    "KERNEL",
+    "USER"
+  ],
+  "functions": [
+    {
+      "module": "REVERSI",
+      "segment_file": "seg1.asm",
+      "name": "sub_006C",
+      "kind": "NEAR",
+      "offset": 108,
+      "size_bytes": null,
+      "start_line": 70,
+      "end_line": 127,
+      "num_instructions": 55,
+      "prologue": "standard_bp",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_03F2",
+        "L_0B27"
+      ],
+      "calls_far": [
+        "far GDI.GETSTOCKOBJECT",
+        "far GDI.GETTEXTMETRICS",
+        "far GDI.SELECTOBJECT",
+        "far USER.GETDC",
+        "far USER.RELEASEDC"
+      ],
+      "num_jumps_cond": 1,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 26,
+      "mnemonic_histogram": {
+        "mov": 25,
+        "push": 13,
+        "call": 7,
+        "add": 2,
+        "sub": 1,
+        "lea": 1,
+        "cmp": 1,
+        "jne": 1,
+        "jmp": 1,
+        "imul": 1,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 0x22",
+        "mov word ptr [0x978], 0",
+        "push word ptr [bp + 4]",
+        "call far USER.GETDC"
+      ],
+      "last_instructions": [
+        "mov ax, 1",
+        "mov sp, bp",
+        "pop bp",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_03F2",
+        "sub_0B27"
+      ],
+      "callees_inter": [
+        {
+          "module": "GDI",
+          "func": "GETSTOCKOBJECT"
+        },
+        {
+          "module": "GDI",
+          "func": "GETTEXTMETRICS"
+        },
+        {
+          "module": "GDI",
+          "func": "SELECTOBJECT"
+        },
+        {
+          "module": "USER",
+          "func": "GETDC"
+        },
+        {
+          "module": "USER",
+          "func": "RELEASEDC"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_1B6E"
+      ],
+      "fanout": 7,
+      "fanin": 1
+    },
+    {
+      "module": "REVERSI",
+      "segment_file": "seg1.asm",
+      "name": "sub_0115",
+      "kind": "NEAR",
+      "offset": 277,
+      "size_bytes": null,
+      "start_line": 128,
+      "end_line": 246,
+      "num_instructions": 109,
+      "prologue": "standard_bp",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_08DD",
+        "L_120D"
+      ],
+      "calls_far": [
+        "far GDI.PATBLT",
+        "far GDI.SETBKMODE",
+        "far USER.GETCLIENTRECT"
+      ],
+      "num_jumps_cond": 6,
+      "num_jumps_uncond": 3,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 52,
+      "mnemonic_histogram": {
+        "mov": 42,
+        "push": 16,
+        "sub": 10,
+        "cmp": 6,
+        "cdq": 6,
+        "call": 5,
+        "idiv": 4,
+        "jle": 3,
+        "jmp": 3,
+        "imul": 2,
+        "jge": 2,
+        "shl": 2,
+        "sar": 2,
+        "add": 2,
+        "lea": 1
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 0x1e",
+        "mov ax, word ptr [bp + 6]",
+        "mov word ptr [0xa10], ax",
+        "mov ax, word ptr [bp + 4]"
+      ],
+      "last_instructions": [
+        "call far GDI.PATBLT",
+        "mov sp, bp",
+        "pop bp",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_08DD",
+        "sub_120D"
+      ],
+      "callees_inter": [
+        {
+          "module": "GDI",
+          "func": "PATBLT"
+        },
+        {
+          "module": "GDI",
+          "func": "SETBKMODE"
+        },
+        {
+          "module": "USER",
+          "func": "GETCLIENTRECT"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_1B6E"
+      ],
+      "fanout": 5,
+      "fanin": 1
+    },
+    {
+      "module": "REVERSI",
+      "segment_file": "seg1.asm",
+      "name": "sub_0231",
+      "kind": "NEAR",
+      "offset": 561,
+      "size_bytes": null,
+      "start_line": 247,
+      "end_line": 274,
+      "num_instructions": 23,
+      "prologue": "standard_bp",
+      "epilogue": "jmp_tail",
+      "calls_near": [
+        "L_160A"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 5,
+      "num_jumps_uncond": 5,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 5,
+      "mnemonic_histogram": {
+        "jmp": 5,
+        "mov": 4,
+        "cmp": 4,
+        "je": 3,
+        "push": 2,
+        "sub": 1,
+        "jle": 1,
+        "jne": 1,
+        "call": 1,
+        "add": 1
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 0xc",
+        "cmp word ptr [0x10], 0",
+        "je L_0241",
+        "jmp L_03EE"
+      ],
+      "last_instructions": [
+        "push word ptr [bp + 4]",
+        "call L_160A",
+        "add sp, 2",
+        "jmp L_03EE"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_160A"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_1B6E"
+      ],
+      "fanout": 1,
+      "fanin": 1
+    },
+    {
+      "module": "REVERSI",
+      "segment_file": "seg1.asm",
+      "name": "sub_0270",
+      "kind": "NEAR",
+      "offset": 624,
+      "size_bytes": null,
+      "start_line": 275,
+      "end_line": 419,
+      "num_instructions": 130,
+      "prologue": "standard_bp",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_03F2",
+        "L_0429",
+        "L_064B",
+        "L_08DD",
+        "L_0B27",
+        "L_1349",
+        "L_1E2A"
+      ],
+      "calls_far": [
+        "far GDI.SETBKMODE",
+        "far USER.DIALOGBOX",
+        "far USER.GETDC",
+        "far USER.RELEASEDC",
+        "far USER.SETCURSOR",
+        "far USER.SETWINDOWTEXT"
+      ],
+      "num_jumps_cond": 5,
+      "num_jumps_uncond": 12,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 37,
+      "mnemonic_histogram": {
+        "push": 43,
+        "mov": 36,
+        "call": 19,
+        "jmp": 12,
+        "add": 6,
+        "cmp": 5,
+        "jne": 4,
+        "je": 1,
+        "sub": 1,
+        "cdq": 1,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push word ptr [bp + 4]",
+        "mov ax, 0xb22",
+        "push ds",
+        "push ax",
+        "call far USER.SETWINDOWTEXT",
+        "mov word ptr [0x97c], 1"
+      ],
+      "last_instructions": [
+        "jmp L_0264",
+        "mov sp, bp",
+        "pop bp",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_03F2",
+        "sub_0429",
+        "sub_064B",
+        "sub_08DD",
+        "sub_0B27",
+        "sub_1349",
+        "sub_1E2A"
+      ],
+      "callees_inter": [
+        {
+          "module": "GDI",
+          "func": "SETBKMODE"
+        },
+        {
+          "module": "USER",
+          "func": "DIALOGBOX"
+        },
+        {
+          "module": "USER",
+          "func": "GETDC"
+        },
+        {
+          "module": "USER",
+          "func": "RELEASEDC"
+        },
+        {
+          "module": "USER",
+          "func": "SETCURSOR"
+        },
+        {
+          "module": "USER",
+          "func": "SETWINDOWTEXT"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 13,
+      "fanin": 0
+    },
+    {
+      "module": "REVERSI",
+      "segment_file": "seg1.asm",
+      "name": "sub_03F2",
+      "kind": "NEAR",
+      "offset": 1010,
+      "size_bytes": null,
+      "start_line": 420,
+      "end_line": 441,
+      "num_instructions": 21,
+      "prologue": "standard_bp",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [
+        "far USER.CHECKMENUITEM",
+        "far USER.GETMENU"
+      ],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 7,
+      "mnemonic_histogram": {
+        "push": 8,
+        "mov": 6,
+        "call": 3,
+        "sub": 2,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 2",
+        "push word ptr [bp + 4]",
+        "call far USER.GETMENU",
+        "mov word ptr [bp - 2], ax"
+      ],
+      "last_instructions": [
+        "mov word ptr [0x9ee], ax",
+        "mov sp, bp",
+        "pop bp",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [
+        {
+          "module": "USER",
+          "func": "CHECKMENUITEM"
+        },
+        {
+          "module": "USER",
+          "func": "GETMENU"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_006C",
+        "sub_0270"
+      ],
+      "fanout": 2,
+      "fanin": 2
+    },
+    {
+      "module": "REVERSI",
+      "segment_file": "seg1.asm",
+      "name": "sub_0429",
+      "kind": "NEAR",
+      "offset": 1065,
+      "size_bytes": null,
+      "start_line": 442,
+      "end_line": 562,
+      "num_instructions": 106,
+      "prologue": "standard_bp",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_0BE0",
+        "L_2082"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 12,
+      "num_jumps_uncond": 8,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 42,
+      "mnemonic_histogram": {
+        "mov": 34,
+        "push": 23,
+        "cmp": 9,
+        "jmp": 8,
+        "sub": 6,
+        "jne": 5,
+        "je": 4,
+        "call": 3,
+        "or": 3,
+        "inc": 3,
+        "add": 2,
+        "jle": 2,
+        "pop": 2,
+        "jge": 1,
+        "ret": 1
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 0xc",
+        "push si",
+        "mov word ptr [bp - 0xa], 0x2a",
+        "mov word ptr [0x9f8], 0x14"
+      ],
+      "last_instructions": [
+        "pop si",
+        "mov sp, bp",
+        "pop bp",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0BE0",
+        "sub_2082"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0270",
+        "sub_1479"
+      ],
+      "fanout": 2,
+      "fanin": 2
+    },
+    {
+      "module": "REVERSI",
+      "segment_file": "seg1.asm",
+      "name": "sub_0537",
+      "kind": "NEAR",
+      "offset": 1335,
+      "size_bytes": null,
+      "start_line": 563,
+      "end_line": 610,
+      "num_instructions": 43,
+      "prologue": "standard_bp",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_223E"
+      ],
+      "calls_far": [
+        "far USER.DISPATCHMESSAGE",
+        "far USER.PEEKMESSAGE",
+        "far USER.TRANSLATEACCELERATOR",
+        "far USER.TRANSLATEMESSAGE"
+      ],
+      "num_jumps_cond": 3,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 7,
+      "mnemonic_histogram": {
+        "push": 16,
+        "call": 5,
+        "mov": 4,
+        "sub": 4,
+        "lea": 4,
+        "or": 2,
+        "jne": 2,
+        "je": 1,
+        "cmp": 1,
+        "add": 1,
+        "jmp": 1,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 0x12",
+        "lea ax, [bp - 0x12]",
+        "push ss",
+        "push ax"
+      ],
+      "last_instructions": [
+        "mov ax, 1",
+        "mov sp, bp",
+        "pop bp",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_223E"
+      ],
+      "callees_inter": [
+        {
+          "module": "USER",
+          "func": "DISPATCHMESSAGE"
+        },
+        {
+          "module": "USER",
+          "func": "PEEKMESSAGE"
+        },
+        {
+          "module": "USER",
+          "func": "TRANSLATEACCELERATOR"
+        },
+        {
+          "module": "USER",
+          "func": "TRANSLATEMESSAGE"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0F70",
+        "sub_1E2A"
+      ],
+      "fanout": 5,
+      "fanin": 2
+    },
+    {
+      "module": "REVERSI",
+      "segment_file": "seg1.asm",
+      "name": "sub_0598",
+      "kind": "NEAR",
+      "offset": 1432,
+      "size_bytes": null,
+      "start_line": 611,
+      "end_line": 686,
+      "num_instructions": 68,
+      "prologue": "standard_bp",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [
+        "far GDI.ELLIPSE",
+        "far GDI.SELECTOBJECT"
+      ],
+      "num_jumps_cond": 4,
+      "num_jumps_uncond": 3,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 28,
+      "mnemonic_histogram": {
+        "mov": 17,
+        "push": 12,
+        "add": 7,
+        "cmp": 4,
+        "sub": 3,
+        "imul": 3,
+        "jmp": 3,
+        "shl": 3,
+        "pop": 3,
+        "call": 2,
+        "dec": 2,
+        "inc": 2,
+        "jge": 2,
+        "je": 1,
+        "jne": 1
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 6",
+        "push di",
+        "push si",
+        "mov word ptr [bp - 2], 0"
+      ],
+      "last_instructions": [
+        "pop di",
+        "mov sp, bp",
+        "pop bp",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [
+        {
+          "module": "GDI",
+          "func": "ELLIPSE"
+        },
+        {
+          "module": "GDI",
+          "func": "SELECTOBJECT"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_08DD"
+      ],
+      "fanout": 2,
+      "fanin": 1
+    },
+    {
+      "module": "REVERSI",
+      "segment_file": "seg1.asm",
+      "name": "sub_064B",
+      "kind": "NEAR",
+      "offset": 1611,
+      "size_bytes": null,
+      "start_line": 687,
+      "end_line": 864,
+      "num_instructions": 166,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [
+        "L_0812"
+      ],
+      "calls_far": [
+        "far GDI.ELLIPSE",
+        "far GDI.SELECTOBJECT"
+      ],
+      "num_jumps_cond": 7,
+      "num_jumps_uncond": 8,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 83,
+      "mnemonic_histogram": {
+        "mov": 58,
+        "push": 24,
+        "sub": 16,
+        "add": 14,
+        "jmp": 8,
+        "shl": 8,
+        "cmp": 6,
+        "call": 5,
+        "cdq": 4,
+        "idiv": 4,
+        "imul": 4,
+        "inc": 4,
+        "je": 4,
+        "jne": 3,
+        "pop": 2
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 0xc",
+        "push si",
+        "cmp word ptr [bp + 8], 0x14",
+        "jne L_065B"
+      ],
+      "last_instructions": [
+        "pop si",
+        "mov sp, bp",
+        "pop bp",
+        "ret 8"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0812"
+      ],
+      "callees_inter": [
+        {
+          "module": "GDI",
+          "func": "ELLIPSE"
+        },
+        {
+          "module": "GDI",
+          "func": "SELECTOBJECT"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0270",
+        "sub_1479",
+        "sub_1E2A"
+      ],
+      "fanout": 3,
+      "fanin": 3
+    },
+    {
+      "module": "REVERSI",
+      "segment_file": "seg1.asm",
+      "name": "sub_0812",
+      "kind": "NEAR",
+      "offset": 2066,
+      "size_bytes": null,
+      "start_line": 865,
+      "end_line": 941,
+      "num_instructions": 67,
+      "prologue": "standard_bp",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [
+        "far GDI.ELLIPSE",
+        "far GDI.GETSTOCKOBJECT",
+        "far GDI.SELECTOBJECT",
+        "far GDI.SETBKMODE",
+        "far USER.SETCURSOR"
+      ],
+      "num_jumps_cond": 5,
+      "num_jumps_uncond": 4,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 34,
+      "mnemonic_histogram": {
+        "push": 24,
+        "mov": 12,
+        "call": 9,
+        "cmp": 5,
+        "jmp": 4,
+        "add": 4,
+        "je": 2,
+        "jne": 2,
+        "sub": 1,
+        "inc": 1,
+        "jl": 1,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 6",
+        "cmp word ptr [bp + 0x10], 0",
+        "je L_0830",
+        "push word ptr [bp + 4]"
+      ],
+      "last_instructions": [
+        "call far USER.SETCURSOR",
+        "mov sp, bp",
+        "pop bp",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [
+        {
+          "module": "GDI",
+          "func": "ELLIPSE"
+        },
+        {
+          "module": "GDI",
+          "func": "GETSTOCKOBJECT"
+        },
+        {
+          "module": "GDI",
+          "func": "SELECTOBJECT"
+        },
+        {
+          "module": "GDI",
+          "func": "SETBKMODE"
+        },
+        {
+          "module": "USER",
+          "func": "SETCURSOR"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_064B",
+        "sub_160A"
+      ],
+      "fanout": 5,
+      "fanin": 2
+    },
+    {
+      "module": "REVERSI",
+      "segment_file": "seg1.asm",
+      "name": "sub_08DD",
+      "kind": "NEAR",
+      "offset": 2269,
+      "size_bytes": null,
+      "start_line": 942,
+      "end_line": 1144,
+      "num_instructions": 194,
+      "prologue": "standard_bp",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_0598"
+      ],
+      "calls_far": [
+        "far GDI.LINETO",
+        "far GDI.MOVETO",
+        "far GDI.PATBLT",
+        "far GDI.SELECTOBJECT"
+      ],
+      "num_jumps_cond": 4,
+      "num_jumps_uncond": 4,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 110,
+      "mnemonic_histogram": {
+        "push": 75,
+        "mov": 55,
+        "add": 20,
+        "call": 19,
+        "shl": 4,
+        "jmp": 4,
+        "cmp": 4,
+        "imul": 2,
+        "jge": 2,
+        "inc": 2,
+        "jl": 2,
+        "sub": 1,
+        "cdq": 1,
+        "idiv": 1,
+        "pop": 1
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 0xc",
+        "mov ax, word ptr [0x654]",
+        "mov cl, 3",
+        "shl ax, cl"
+      ],
+      "last_instructions": [
+        "call L_0598",
+        "mov sp, bp",
+        "pop bp",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0598"
+      ],
+      "callees_inter": [
+        {
+          "module": "GDI",
+          "func": "LINETO"
+        },
+        {
+          "module": "GDI",
+          "func": "MOVETO"
+        },
+        {
+          "module": "GDI",
+          "func": "PATBLT"
+        },
+        {
+          "module": "GDI",
+          "func": "SELECTOBJECT"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0115",
+        "sub_0270"
+      ],
+      "fanout": 5,
+      "fanin": 2
+    },
+    {
+      "module": "REVERSI",
+      "segment_file": "seg1.asm",
+      "name": "sub_0B27",
+      "kind": "NEAR",
+      "offset": 2855,
+      "size_bytes": null,
+      "start_line": 1145,
+      "end_line": 1215,
+      "num_instructions": 64,
+      "prologue": "standard_bp",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 5,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 37,
+      "mnemonic_histogram": {
+        "mov": 33,
+        "imul": 6,
+        "cmp": 5,
+        "add": 4,
+        "inc": 4,
+        "jle": 4,
+        "push": 2,
+        "pop": 2,
+        "sub": 1,
+        "jmp": 1,
+        "jg": 1,
+        "ret": 1
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 6",
+        "push si",
+        "mov word ptr [bp - 2], 0",
+        "mov word ptr [bp - 4], 0"
+      ],
+      "last_instructions": [
+        "pop si",
+        "mov sp, bp",
+        "pop bp",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_006C",
+        "sub_0270"
+      ],
+      "fanout": 0,
+      "fanin": 2
+    },
+    {
+      "module": "REVERSI",
+      "segment_file": "seg1.asm",
+      "name": "sub_0BE0",
+      "kind": "NEAR",
+      "offset": 3040,
+      "size_bytes": null,
+      "start_line": 1216,
+      "end_line": 1285,
+      "num_instructions": 62,
+      "prologue": "standard_bp",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_120D",
+        "L_12B8"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 5,
+      "num_jumps_uncond": 2,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 31,
+      "mnemonic_histogram": {
+        "mov": 25,
+        "inc": 6,
+        "push": 5,
+        "cmp": 4,
+        "add": 4,
+        "je": 3,
+        "jmp": 2,
+        "jne": 2,
+        "cdq": 2,
+        "idiv": 2,
+        "call": 2,
+        "pop": 2,
+        "sub": 1,
+        "or": 1,
+        "ret": 1
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 2",
+        "push si",
+        "mov word ptr [bp - 2], 0x988",
+        "jmp L_0BFE"
+      ],
+      "last_instructions": [
+        "pop si",
+        "mov sp, bp",
+        "pop bp",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_120D",
+        "sub_12B8"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0429"
+      ],
+      "fanout": 2,
+      "fanin": 1
+    },
+    {
+      "module": "REVERSI",
+      "segment_file": "seg1.asm",
+      "name": "sub_0C7A",
+      "kind": "NEAR",
+      "offset": 3194,
+      "size_bytes": null,
+      "start_line": 1286,
+      "end_line": 1524,
+      "num_instructions": 228,
+      "prologue": "standard_bp",
+      "epilogue": "jmp_tail",
+      "calls_near": [],
+      "calls_far": [
+        "far GDI.CREATEBITMAP",
+        "far GDI.CREATEPATTERNBRUSH",
+        "far GDI.CREATESOLIDBRUSH",
+        "far GDI.DELETEOBJECT",
+        "far GDI.GETDEVICECAPS",
+        "far GDI.GETSTOCKOBJECT",
+        "far KERNEL.LOCALALLOC",
+        "far USER.GETDC",
+        "far USER.LOADACCELERATORS",
+        "far USER.LOADCURSOR",
+        "far USER.LOADSTRING",
+        "far USER.RELEASEDC"
+      ],
+      "num_jumps_cond": 8,
+      "num_jumps_uncond": 8,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 38,
+      "mnemonic_histogram": {
+        "push": 92,
+        "mov": 68,
+        "call": 29,
+        "sub": 10,
+        "jmp": 8,
+        "jne": 7,
+        "cmp": 5,
+        "cdq": 5,
+        "or": 3,
+        "jle": 1
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 0xc",
+        "mov ax, 2",
+        "push ax",
+        "call far GDI.GETSTOCKOBJECT"
+      ],
+      "last_instructions": [
+        "jmp L_0CC7",
+        "or ax, ax",
+        "jne L_0EBA",
+        "jmp L_0CC7"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [
+        {
+          "module": "GDI",
+          "func": "CREATEBITMAP"
+        },
+        {
+          "module": "GDI",
+          "func": "CREATEPATTERNBRUSH"
+        },
+        {
+          "module": "GDI",
+          "func": "CREATESOLIDBRUSH"
+        },
+        {
+          "module": "GDI",
+          "func": "DELETEOBJECT"
+        },
+        {
+          "module": "GDI",
+          "func": "GETDEVICECAPS"
+        },
+        {
+          "module": "GDI",
+          "func": "GETSTOCKOBJECT"
+        },
+        {
+          "module": "KERNEL",
+          "func": "LOCALALLOC"
+        },
+        {
+          "module": "USER",
+          "func": "GETDC"
+        },
+        {
+          "module": "USER",
+          "func": "LOADACCELERATORS"
+        },
+        {
+          "module": "USER",
+          "func": "LOADCURSOR"
+        },
+        {
+          "module": "USER",
+          "func": "LOADSTRING"
+        },
+        {
+          "module": "USER",
+          "func": "RELEASEDC"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0F41"
+      ],
+      "fanout": 12,
+      "fanin": 1
+    },
+    {
+      "module": "REVERSI",
+      "segment_file": "seg1.asm",
+      "name": "sub_0EBA",
+      "kind": "NEAR",
+      "offset": 3770,
+      "size_bytes": null,
+      "start_line": 1525,
+      "end_line": 1574,
+      "num_instructions": 45,
+      "prologue": "standard_bp",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [
+        "far KERNEL.LOCALFREE",
+        "far USER.LOADICON",
+        "far USER.REGISTERCLASS"
+      ],
+      "num_jumps_cond": 2,
+      "num_jumps_uncond": 2,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 25,
+      "mnemonic_histogram": {
+        "mov": 25,
+        "push": 7,
+        "call": 4,
+        "jmp": 2,
+        "cdq": 1,
+        "cmp": 1,
+        "je": 1,
+        "or": 1,
+        "jne": 1,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "push word ptr [bp + 4]",
+        "mov ax, 3",
+        "cdq",
+        "push dx",
+        "push ax",
+        "call far USER.LOADICON"
+      ],
+      "last_instructions": [
+        "mov ax, 1",
+        "mov sp, bp",
+        "pop bp",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [
+        {
+          "module": "KERNEL",
+          "func": "LOCALFREE"
+        },
+        {
+          "module": "USER",
+          "func": "LOADICON"
+        },
+        {
+          "module": "USER",
+          "func": "REGISTERCLASS"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 3,
+      "fanin": 0
+    },
+    {
+      "module": "REVERSI",
+      "segment_file": "seg1.asm",
+      "name": "sub_0F41",
+      "kind": "NEAR",
+      "offset": 3905,
+      "size_bytes": null,
+      "start_line": 1575,
+      "end_line": 1595,
+      "num_instructions": 18,
+      "prologue": "standard_bp",
+      "epilogue": "jmp_tail",
+      "calls_near": [
+        "L_0C7A"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 3,
+      "num_jumps_uncond": 3,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 4,
+      "mnemonic_histogram": {
+        "mov": 3,
+        "jmp": 3,
+        "push": 2,
+        "sub": 2,
+        "cmp": 2,
+        "je": 2,
+        "jne": 1,
+        "call": 1,
+        "add": 1,
+        "or": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 4",
+        "mov ax, word ptr [bp + 0xc]",
+        "mov word ptr [0x650], ax",
+        "cmp word ptr [bp + 0xa], 0"
+      ],
+      "last_instructions": [
+        "jmp L_1207",
+        "cmp word ptr [0x10], 0",
+        "je L_0F70",
+        "jmp L_1207"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0C7A"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_20A6"
+      ],
+      "fanout": 1,
+      "fanin": 1
+    },
+    {
+      "module": "REVERSI",
+      "segment_file": "seg1.asm",
+      "name": "sub_0F70",
+      "kind": "NEAR",
+      "offset": 3952,
+      "size_bytes": null,
+      "start_line": 1596,
+      "end_line": 1859,
+      "num_instructions": 258,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [
+        "L_0537"
+      ],
+      "calls_far": [
+        "far KERNEL.GETINSTANCEDATA",
+        "far KERNEL.MAKEPROCINSTANCE",
+        "far USER.CHANGEMENU",
+        "far USER.CREATEWINDOW",
+        "far USER.GETSYSTEMMENU",
+        "far USER.SHOWWINDOW",
+        "far USER.UPDATEWINDOW"
+      ],
+      "num_jumps_cond": 1,
+      "num_jumps_uncond": 2,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 47,
+      "mnemonic_histogram": {
+        "push": 125,
+        "mov": 84,
+        "call": 38,
+        "sub": 5,
+        "jmp": 2,
+        "cmp": 1,
+        "je": 1,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "complex",
+      "first_instructions": [
+        "push word ptr [bp + 0xa]",
+        "mov ax, 0x9fe",
+        "push ax",
+        "mov ax, 2",
+        "push ax",
+        "call far KERNEL.GETINSTANCEDATA"
+      ],
+      "last_instructions": [
+        "jmp L_1202",
+        "mov sp, bp",
+        "pop bp",
+        "ret 0xa"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0537"
+      ],
+      "callees_inter": [
+        {
+          "module": "KERNEL",
+          "func": "GETINSTANCEDATA"
+        },
+        {
+          "module": "KERNEL",
+          "func": "MAKEPROCINSTANCE"
+        },
+        {
+          "module": "USER",
+          "func": "CHANGEMENU"
+        },
+        {
+          "module": "USER",
+          "func": "CREATEWINDOW"
+        },
+        {
+          "module": "USER",
+          "func": "GETSYSTEMMENU"
+        },
+        {
+          "module": "USER",
+          "func": "SHOWWINDOW"
+        },
+        {
+          "module": "USER",
+          "func": "UPDATEWINDOW"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 8,
+      "fanin": 0
+    },
+    {
+      "module": "REVERSI",
+      "segment_file": "seg1.asm",
+      "name": "sub_120D",
+      "kind": "NEAR",
+      "offset": 4621,
+      "size_bytes": null,
+      "start_line": 1860,
+      "end_line": 1927,
+      "num_instructions": 67,
+      "prologue": "standard_bp",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_1349",
+        "L_1398"
+      ],
+      "calls_far": [
+        "far GDI.GETSTOCKOBJECT",
+        "far GDI.GETTEXTEXTENT",
+        "far GDI.PATBLT",
+        "far GDI.SELECTOBJECT",
+        "far GDI.SETBKMODE",
+        "far GDI.TEXTOUT"
+      ],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 17,
+      "mnemonic_histogram": {
+        "push": 30,
+        "mov": 14,
+        "call": 11,
+        "sub": 5,
+        "add": 3,
+        "cdq": 1,
+        "sar": 1,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 2",
+        "mov ax, word ptr [bp + 6]",
+        "mov word ptr [0xa12], ax",
+        "push word ptr [bp + 4]"
+      ],
+      "last_instructions": [
+        "call far GDI.SETBKMODE",
+        "mov sp, bp",
+        "pop bp",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_1349",
+        "sub_1398"
+      ],
+      "callees_inter": [
+        {
+          "module": "GDI",
+          "func": "GETSTOCKOBJECT"
+        },
+        {
+          "module": "GDI",
+          "func": "GETTEXTEXTENT"
+        },
+        {
+          "module": "GDI",
+          "func": "PATBLT"
+        },
+        {
+          "module": "GDI",
+          "func": "SELECTOBJECT"
+        },
+        {
+          "module": "GDI",
+          "func": "SETBKMODE"
+        },
+        {
+          "module": "GDI",
+          "func": "TEXTOUT"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0115",
+        "sub_0BE0"
+      ],
+      "fanout": 8,
+      "fanin": 2
+    },
+    {
+      "module": "REVERSI",
+      "segment_file": "seg1.asm",
+      "name": "sub_12B8",
+      "kind": "NEAR",
+      "offset": 4792,
+      "size_bytes": null,
+      "start_line": 1928,
+      "end_line": 1975,
+      "num_instructions": 47,
+      "prologue": "standard_bp",
+      "epilogue": "jmp_tail",
+      "calls_near": [],
+      "calls_far": [
+        "far GDI.PATBLT",
+        "far USER.GETDC",
+        "far USER.RELEASEDC",
+        "far USER.SETTIMER"
+      ],
+      "num_jumps_cond": 1,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 14,
+      "mnemonic_histogram": {
+        "push": 19,
+        "mov": 12,
+        "call": 4,
+        "sub": 3,
+        "pop": 2,
+        "inc": 2,
+        "ret": 1,
+        "nop": 1,
+        "cmp": 1,
+        "jg": 1,
+        "jmp": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 2",
+        "mov word ptr [0x9f6], 0",
+        "mov word ptr [0x9f4], 4",
+        "push word ptr [bp + 4]"
+      ],
+      "last_instructions": [
+        "push word ptr [bp + 0xe]",
+        "push word ptr [bp - 4]",
+        "call far USER.RELEASEDC",
+        "jmp L_133E"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [
+        {
+          "module": "GDI",
+          "func": "PATBLT"
+        },
+        {
+          "module": "USER",
+          "func": "GETDC"
+        },
+        {
+          "module": "USER",
+          "func": "RELEASEDC"
+        },
+        {
+          "module": "USER",
+          "func": "SETTIMER"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0BE0"
+      ],
+      "fanout": 4,
+      "fanin": 1
+    },
+    {
+      "module": "REVERSI",
+      "segment_file": "seg1.asm",
+      "name": "sub_1332",
+      "kind": "FAR",
+      "offset": 4914,
+      "size_bytes": null,
+      "start_line": 1976,
+      "end_line": 1987,
+      "num_instructions": 10,
+      "prologue": "standard_bp",
+      "epilogue": "retf_n",
+      "calls_near": [],
+      "calls_far": [
+        "far USER.KILLTIMER"
+      ],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 1,
+      "mnemonic_histogram": {
+        "push": 2,
+        "mov": 2,
+        "pop": 2,
+        "call": 1,
+        "sub": 1,
+        "dec": 1,
+        "retf": 1
+      },
+      "classification": "wrapper",
+      "first_instructions": [
+        "push word ptr [bp + 0xe]",
+        "mov ax, 0x29a",
+        "push ax",
+        "call far USER.KILLTIMER",
+        "sub bp, 2",
+        "mov sp, bp"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 0xa"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [
+        {
+          "module": "USER",
+          "func": "KILLTIMER"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 1,
+      "fanin": 0
+    },
+    {
+      "module": "REVERSI",
+      "segment_file": "seg1.asm",
+      "name": "sub_1349",
+      "kind": "NEAR",
+      "offset": 4937,
+      "size_bytes": null,
+      "start_line": 1988,
+      "end_line": 2021,
+      "num_instructions": 30,
+      "prologue": "standard_bp",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [
+        "far GDI.PATBLT",
+        "far GDI.SELECTOBJECT"
+      ],
+      "num_jumps_cond": 2,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 11,
+      "mnemonic_histogram": {
+        "push": 10,
+        "mov": 9,
+        "cmp": 2,
+        "call": 2,
+        "jne": 1,
+        "inc": 1,
+        "je": 1,
+        "jmp": 1,
+        "sub": 1,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "cmp word ptr [0x978], 1",
+        "jne L_1394",
+        "mov ax, word ptr [0x9f4]",
+        "inc ax"
+      ],
+      "last_instructions": [
+        "mov word ptr [0x978], 0",
+        "mov sp, bp",
+        "pop bp",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [
+        {
+          "module": "GDI",
+          "func": "PATBLT"
+        },
+        {
+          "module": "GDI",
+          "func": "SELECTOBJECT"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0270",
+        "sub_120D",
+        "sub_1479"
+      ],
+      "fanout": 2,
+      "fanin": 3
+    },
+    {
+      "module": "REVERSI",
+      "segment_file": "seg1.asm",
+      "name": "sub_1398",
+      "kind": "NEAR",
+      "offset": 5016,
+      "size_bytes": null,
+      "start_line": 2022,
+      "end_line": 2038,
+      "num_instructions": 14,
+      "prologue": "standard_bp",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 1,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 6,
+      "mnemonic_histogram": {
+        "mov": 5,
+        "inc": 2,
+        "push": 1,
+        "sub": 1,
+        "jmp": 1,
+        "cmp": 1,
+        "jne": 1,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "leaf",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 2",
+        "mov word ptr [bp - 2], 0",
+        "jmp L_13AB",
+        "inc word ptr [bp - 2]"
+      ],
+      "last_instructions": [
+        "mov ax, word ptr [bp - 2]",
+        "mov sp, bp",
+        "pop bp",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_120D"
+      ],
+      "fanout": 0,
+      "fanin": 1
+    },
+    {
+      "module": "REVERSI",
+      "segment_file": "seg1.asm",
+      "name": "sub_13BA",
+      "kind": "NEAR",
+      "offset": 5050,
+      "size_bytes": null,
+      "start_line": 2039,
+      "end_line": 2113,
+      "num_instructions": 70,
+      "prologue": "standard_bp",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_2082"
+      ],
+      "calls_far": [
+        "far USER.SETCURSOR"
+      ],
+      "num_jumps_cond": 7,
+      "num_jumps_uncond": 2,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 37,
+      "mnemonic_histogram": {
+        "mov": 30,
+        "push": 6,
+        "cmp": 6,
+        "jle": 4,
+        "add": 4,
+        "sub": 3,
+        "shl": 2,
+        "jne": 2,
+        "jmp": 2,
+        "cdq": 2,
+        "idiv": 2,
+        "call": 2,
+        "imul": 1,
+        "or": 1,
+        "je": 1
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 0xe",
+        "mov ax, word ptr [0x654]",
+        "mov cl, 3",
+        "shl ax, cl"
+      ],
+      "last_instructions": [
+        "call far USER.SETCURSOR",
+        "mov sp, bp",
+        "pop bp",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_2082"
+      ],
+      "callees_inter": [
+        {
+          "module": "USER",
+          "func": "SETCURSOR"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_160A",
+        "sub_17BD",
+        "sub_1905",
+        "sub_1B6E"
+      ],
+      "fanout": 2,
+      "fanin": 4
+    },
+    {
+      "module": "REVERSI",
+      "segment_file": "seg1.asm",
+      "name": "sub_1479",
+      "kind": "NEAR",
+      "offset": 5241,
+      "size_bytes": null,
+      "start_line": 2114,
+      "end_line": 2265,
+      "num_instructions": 142,
+      "prologue": "standard_bp",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_0429",
+        "L_064B",
+        "L_1349",
+        "L_1E2A",
+        "L_2082",
+        "L_20A6"
+      ],
+      "calls_far": [
+        "far USER.DIALOGBOX",
+        "far USER.GETDC",
+        "far USER.RELEASEDC",
+        "far USER.SETCURSOR"
+      ],
+      "num_jumps_cond": 7,
+      "num_jumps_uncond": 8,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 59,
+      "mnemonic_histogram": {
+        "mov": 48,
+        "push": 39,
+        "call": 13,
+        "jmp": 8,
+        "cmp": 6,
+        "add": 6,
+        "sub": 4,
+        "jg": 4,
+        "jne": 3,
+        "cdq": 3,
+        "shl": 2,
+        "idiv": 2,
+        "imul": 1,
+        "or": 1,
+        "pop": 1
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 0xe",
+        "mov ax, word ptr [0x654]",
+        "mov cl, 3",
+        "shl ax, cl"
+      ],
+      "last_instructions": [
+        "call far USER.DIALOGBOX",
+        "mov sp, bp",
+        "pop bp",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0429",
+        "sub_064B",
+        "sub_1349",
+        "sub_1E2A",
+        "sub_2082",
+        "sub_20A6"
+      ],
+      "callees_inter": [
+        {
+          "module": "USER",
+          "func": "DIALOGBOX"
+        },
+        {
+          "module": "USER",
+          "func": "GETDC"
+        },
+        {
+          "module": "USER",
+          "func": "RELEASEDC"
+        },
+        {
+          "module": "USER",
+          "func": "SETCURSOR"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_1905",
+        "sub_1B6E"
+      ],
+      "fanout": 10,
+      "fanin": 2
+    },
+    {
+      "module": "REVERSI",
+      "segment_file": "seg1.asm",
+      "name": "sub_160A",
+      "kind": "NEAR",
+      "offset": 5642,
+      "size_bytes": null,
+      "start_line": 2266,
+      "end_line": 2430,
+      "num_instructions": 154,
+      "prologue": "standard_bp",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_0812",
+        "L_13BA",
+        "L_1B6E",
+        "L_1E2A",
+        "L_2082"
+      ],
+      "calls_far": [
+        "far USER.GETDC",
+        "far USER.RELEASEDC",
+        "far USER.SETCURSOR",
+        "far USER.SETWINDOWTEXT"
+      ],
+      "num_jumps_cond": 7,
+      "num_jumps_uncond": 5,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 64,
+      "mnemonic_histogram": {
+        "mov": 55,
+        "push": 31,
+        "add": 11,
+        "call": 9,
+        "sub": 8,
+        "cmp": 6,
+        "jmp": 5,
+        "cdq": 5,
+        "jne": 4,
+        "imul": 4,
+        "je": 3,
+        "idiv": 3,
+        "shl": 3,
+        "sar": 2,
+        "inc": 2
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 0xc",
+        "cmp word ptr [0x9f8], 0x14",
+        "jne L_1621",
+        "cmp word ptr [0x97c], 0"
+      ],
+      "last_instructions": [
+        "add sp, 6",
+        "mov sp, bp",
+        "pop bp",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0812",
+        "sub_13BA",
+        "sub_1B6E",
+        "sub_1E2A",
+        "sub_2082"
+      ],
+      "callees_inter": [
+        {
+          "module": "USER",
+          "func": "GETDC"
+        },
+        {
+          "module": "USER",
+          "func": "RELEASEDC"
+        },
+        {
+          "module": "USER",
+          "func": "SETCURSOR"
+        },
+        {
+          "module": "USER",
+          "func": "SETWINDOWTEXT"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0231"
+      ],
+      "fanout": 9,
+      "fanin": 1
+    },
+    {
+      "module": "REVERSI",
+      "segment_file": "seg1.asm",
+      "name": "sub_17BD",
+      "kind": "NEAR",
+      "offset": 6077,
+      "size_bytes": null,
+      "start_line": 2431,
+      "end_line": 2526,
+      "num_instructions": 89,
+      "prologue": "standard_bp",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_13BA",
+        "L_18B3",
+        "L_18DC",
+        "L_1B6E",
+        "L_2082"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 6,
+      "num_jumps_uncond": 2,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 38,
+      "mnemonic_histogram": {
+        "mov": 26,
+        "push": 13,
+        "add": 9,
+        "sub": 5,
+        "cmp": 5,
+        "call": 5,
+        "cdq": 4,
+        "lea": 4,
+        "jne": 3,
+        "je": 3,
+        "imul": 3,
+        "jmp": 2,
+        "idiv": 2,
+        "sar": 2,
+        "or": 1
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 0xc",
+        "cmp word ptr [0x9f8], 0x14",
+        "jne L_17D4",
+        "cmp word ptr [0x97c], 0"
+      ],
+      "last_instructions": [
+        "add sp, 6",
+        "mov sp, bp",
+        "pop bp",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_13BA",
+        "sub_18B3",
+        "sub_18DC",
+        "sub_1B6E",
+        "sub_2082"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_1905"
+      ],
+      "fanout": 5,
+      "fanin": 1
+    },
+    {
+      "module": "REVERSI",
+      "segment_file": "seg1.asm",
+      "name": "sub_18B3",
+      "kind": "NEAR",
+      "offset": 6323,
+      "size_bytes": null,
+      "start_line": 2527,
+      "end_line": 2545,
+      "num_instructions": 17,
+      "prologue": "standard_bp",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 2,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 10,
+      "mnemonic_histogram": {
+        "mov": 8,
+        "inc": 2,
+        "cmp": 2,
+        "jle": 2,
+        "push": 1,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "leaf",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "mov bx, word ptr [bp + 4]",
+        "inc word ptr [bx]",
+        "mov bx, word ptr [bp + 4]",
+        "cmp word ptr [bx], 7"
+      ],
+      "last_instructions": [
+        "mov word ptr [bx], 0",
+        "mov sp, bp",
+        "pop bp",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_17BD"
+      ],
+      "fanout": 0,
+      "fanin": 1
+    },
+    {
+      "module": "REVERSI",
+      "segment_file": "seg1.asm",
+      "name": "sub_18DC",
+      "kind": "NEAR",
+      "offset": 6364,
+      "size_bytes": null,
+      "start_line": 2546,
+      "end_line": 2564,
+      "num_instructions": 17,
+      "prologue": "standard_bp",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 2,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 10,
+      "mnemonic_histogram": {
+        "mov": 8,
+        "dec": 2,
+        "cmp": 2,
+        "jge": 2,
+        "push": 1,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "leaf",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "mov bx, word ptr [bp + 4]",
+        "dec word ptr [bx]",
+        "mov bx, word ptr [bp + 4]",
+        "cmp word ptr [bx], 0"
+      ],
+      "last_instructions": [
+        "mov word ptr [bx], 7",
+        "mov sp, bp",
+        "pop bp",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_17BD"
+      ],
+      "fanout": 0,
+      "fanin": 1
+    },
+    {
+      "module": "REVERSI",
+      "segment_file": "seg1.asm",
+      "name": "sub_1905",
+      "kind": "NEAR",
+      "offset": 6405,
+      "size_bytes": null,
+      "start_line": 2565,
+      "end_line": 2811,
+      "num_instructions": 230,
+      "prologue": "standard_bp",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_13BA",
+        "L_1479",
+        "L_17BD",
+        "L_1B6E"
+      ],
+      "calls_far": [
+        "far USER.GETKEYSTATE"
+      ],
+      "num_jumps_cond": 14,
+      "num_jumps_uncond": 13,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": true,
+      "num_mem_refs": 100,
+      "mnemonic_histogram": {
+        "mov": 61,
+        "push": 31,
+        "sub": 23,
+        "add": 18,
+        "cdq": 16,
+        "jmp": 13,
+        "cmp": 11,
+        "idiv": 10,
+        "sbb": 7,
+        "jg": 6,
+        "sar": 6,
+        "call": 5,
+        "jne": 5,
+        "imul": 4,
+        "or": 3
+      },
+      "classification": "complex_iterator",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 6",
+        "mov ax, 1",
+        "mov word ptr [bp - 2], ax",
+        "mov word ptr [bp - 4], ax"
+      ],
+      "last_instructions": [
+        "add sp, 6",
+        "mov sp, bp",
+        "pop bp",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_13BA",
+        "sub_1479",
+        "sub_17BD",
+        "sub_1B6E"
+      ],
+      "callees_inter": [
+        {
+          "module": "USER",
+          "func": "GETKEYSTATE"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_1B6E"
+      ],
+      "fanout": 5,
+      "fanin": 1
+    },
+    {
+      "module": "REVERSI",
+      "segment_file": "seg1.asm",
+      "name": "sub_1B6E",
+      "kind": "FAR",
+      "offset": 7022,
+      "size_bytes": null,
+      "start_line": 2812,
+      "end_line": 3095,
+      "num_instructions": 244,
+      "prologue": "standard_bp",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_006C",
+        "L_0115",
+        "L_0231",
+        "L_13BA",
+        "L_1479",
+        "L_1905"
+      ],
+      "calls_far": [
+        "far GDI.DELETEOBJECT",
+        "far KERNEL.GETMODULEUSAGE",
+        "far USER.BEGINPAINT",
+        "far USER.CLIENTTOSCREEN",
+        "far USER.DEFWINDOWPROC",
+        "far USER.DIALOGBOX",
+        "far USER.ENABLEMENUITEM",
+        "far USER.ENDPAINT",
+        "far USER.GETMENU",
+        "far USER.GETSYSTEMMETRICS",
+        "far USER.ISICONIC",
+        "far USER.POSTQUITMESSAGE",
+        "far USER.RELEASECAPTURE",
+        "far USER.SETCAPTURE",
+        "far USER.SETCURSOR",
+        "far USER.SETCURSORPOS",
+        "far USER.SETFOCUS",
+        "far USER.SHOWCURSOR"
+      ],
+      "num_jumps_cond": 27,
+      "num_jumps_uncond": 31,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 75,
+      "mnemonic_histogram": {
+        "push": 71,
+        "call": 32,
+        "jmp": 31,
+        "mov": 29,
+        "cmp": 24,
+        "jne": 14,
+        "je": 10,
+        "sub": 7,
+        "add": 6,
+        "lea": 4,
+        "pop": 4,
+        "cdq": 2,
+        "or": 2,
+        "ret": 1,
+        "nop": 1
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 4",
+        "mov ax, word ptr [0x9e4]",
+        "mov word ptr [bp - 4], ax",
+        "mov ax, word ptr [0x9e6]"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 0xa"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_006C",
+        "sub_0115",
+        "sub_0231",
+        "sub_13BA",
+        "sub_1479",
+        "sub_1905"
+      ],
+      "callees_inter": [
+        {
+          "module": "GDI",
+          "func": "DELETEOBJECT"
+        },
+        {
+          "module": "KERNEL",
+          "func": "GETMODULEUSAGE"
+        },
+        {
+          "module": "USER",
+          "func": "BEGINPAINT"
+        },
+        {
+          "module": "USER",
+          "func": "CLIENTTOSCREEN"
+        },
+        {
+          "module": "USER",
+          "func": "DEFWINDOWPROC"
+        },
+        {
+          "module": "USER",
+          "func": "DIALOGBOX"
+        },
+        {
+          "module": "USER",
+          "func": "ENABLEMENUITEM"
+        },
+        {
+          "module": "USER",
+          "func": "ENDPAINT"
+        },
+        {
+          "module": "USER",
+          "func": "GETMENU"
+        },
+        {
+          "module": "USER",
+          "func": "GETSYSTEMMETRICS"
+        },
+        {
+          "module": "USER",
+          "func": "ISICONIC"
+        },
+        {
+          "module": "USER",
+          "func": "POSTQUITMESSAGE"
+        },
+        {
+          "module": "USER",
+          "func": "RELEASECAPTURE"
+        },
+        {
+          "module": "USER",
+          "func": "SETCAPTURE"
+        },
+        {
+          "module": "USER",
+          "func": "SETCURSOR"
+        },
+        {
+          "module": "USER",
+          "func": "SETCURSORPOS"
+        },
+        {
+          "module": "USER",
+          "func": "SETFOCUS"
+        },
+        {
+          "module": "USER",
+          "func": "SHOWCURSOR"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_160A",
+        "sub_17BD",
+        "sub_1905"
+      ],
+      "fanout": 24,
+      "fanin": 3
+    },
+    {
+      "module": "REVERSI",
+      "segment_file": "seg1.asm",
+      "name": "sub_1E2A",
+      "kind": "NEAR",
+      "offset": 7722,
+      "size_bytes": null,
+      "start_line": 3096,
+      "end_line": 3243,
+      "num_instructions": 136,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [
+        "L_0537",
+        "L_064B",
+        "L_1E2A",
+        "L_1F72",
+        "L_1F9B",
+        "L_1FDA",
+        "L_2046"
+      ],
+      "calls_far": [
+        "far USER.GETDC",
+        "far USER.RELEASEDC"
+      ],
+      "num_jumps_cond": 15,
+      "num_jumps_uncond": 6,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": true,
+      "num_mem_refs": 49,
+      "mnemonic_histogram": {
+        "mov": 34,
+        "push": 27,
+        "call": 11,
+        "cmp": 10,
+        "add": 6,
+        "jne": 6,
+        "je": 6,
+        "jmp": 6,
+        "neg": 5,
+        "cld": 3,
+        "or": 3,
+        "pop": 3,
+        "lodsw": 2,
+        "inc": 2,
+        "jle": 2
+      },
+      "classification": "complex_iterator",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 4",
+        "push si",
+        "push di",
+        "call L_0537"
+      ],
+      "last_instructions": [
+        "pop si",
+        "mov sp, bp",
+        "pop bp",
+        "ret 0xe"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0537",
+        "sub_064B",
+        "sub_1F72",
+        "sub_1F9B",
+        "sub_1FDA",
+        "sub_2046"
+      ],
+      "callees_inter": [
+        {
+          "module": "USER",
+          "func": "GETDC"
+        },
+        {
+          "module": "USER",
+          "func": "RELEASEDC"
+        }
+      ],
+      "callees_unresolved": [
+        "L_1E2A"
+      ],
+      "callers": [
+        "sub_0270",
+        "sub_1479",
+        "sub_160A"
+      ],
+      "fanout": 8,
+      "fanin": 3
+    },
+    {
+      "module": "REVERSI",
+      "segment_file": "seg1.asm",
+      "name": "sub_1F72",
+      "kind": "NEAR",
+      "offset": 8050,
+      "size_bytes": null,
+      "start_line": 3244,
+      "end_line": 3246,
+      "num_instructions": 2,
+      "prologue": "none",
+      "epilogue": "unknown",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 2,
+      "mnemonic_histogram": {
+        "mov": 2
+      },
+      "classification": "trivial_stub",
+      "first_instructions": [
+        "mov dl, byte ptr [bp + 0xa]",
+        "mov dh, byte ptr [bp + 0xc]"
+      ],
+      "last_instructions": [
+        "mov dl, byte ptr [bp + 0xa]",
+        "mov dh, byte ptr [bp + 0xc]"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_1E2A"
+      ],
+      "fanout": 0,
+      "fanin": 1
+    },
+    {
+      "module": "REVERSI",
+      "segment_file": "seg1.asm",
+      "name": "sub_1F78",
+      "kind": "NEAR",
+      "offset": 8056,
+      "size_bytes": null,
+      "start_line": 3247,
+      "end_line": 3269,
+      "num_instructions": 19,
+      "prologue": "saves_regs",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 4,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 4,
+      "mnemonic_histogram": {
+        "mov": 3,
+        "cmp": 3,
+        "push": 2,
+        "add": 2,
+        "or": 2,
+        "je": 2,
+        "jne": 2,
+        "pop": 2,
+        "ret": 1
+      },
+      "classification": "leaf",
+      "first_instructions": [
+        "push di",
+        "push si",
+        "mov di, 0xcc",
+        "mov ax, word ptr [di]",
+        "add di, 2",
+        "or ax, ax"
+      ],
+      "last_instructions": [
+        "or ax, ax",
+        "pop si",
+        "pop di",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_2082"
+      ],
+      "fanout": 0,
+      "fanin": 1
+    },
+    {
+      "module": "REVERSI",
+      "segment_file": "seg1.asm",
+      "name": "sub_1F9B",
+      "kind": "NEAR",
+      "offset": 8091,
+      "size_bytes": null,
+      "start_line": 3270,
+      "end_line": 3276,
+      "num_instructions": 6,
+      "prologue": "none",
+      "epilogue": "unknown",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 1,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 4,
+      "mnemonic_histogram": {
+        "mov": 4,
+        "cmp": 1,
+        "je": 1
+      },
+      "classification": "leaf",
+      "first_instructions": [
+        "mov dh, byte ptr [bp + 0xa]",
+        "mov dl, byte ptr [bp + 0xc]",
+        "mov bx, word ptr [bp - 2]",
+        "mov ax, word ptr [bp + 0xe]",
+        "cmp ax, 0x14",
+        "je L_1FD8"
+      ],
+      "last_instructions": [
+        "mov bx, word ptr [bp - 2]",
+        "mov ax, word ptr [bp + 0xe]",
+        "cmp ax, 0x14",
+        "je L_1FD8"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_1E2A"
+      ],
+      "fanout": 0,
+      "fanin": 1
+    },
+    {
+      "module": "REVERSI",
+      "segment_file": "seg1.asm",
+      "name": "sub_1FAC",
+      "kind": "NEAR",
+      "offset": 8108,
+      "size_bytes": null,
+      "start_line": 3277,
+      "end_line": 3306,
+      "num_instructions": 24,
+      "prologue": "saves_regs",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 4,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": true,
+      "has_string_op": false,
+      "num_mem_refs": 6,
+      "mnemonic_histogram": {
+        "mov": 5,
+        "add": 3,
+        "cmp": 3,
+        "je": 2,
+        "jne": 2,
+        "push": 1,
+        "or": 1,
+        "xor": 1,
+        "inc": 1,
+        "sub": 1,
+        "loop": 1,
+        "jmp": 1,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "iterator",
+      "first_instructions": [
+        "push si",
+        "add bx, ax",
+        "mov di, 0xcc",
+        "mov ax, word ptr [di]",
+        "add di, 2",
+        "or ax, ax"
+      ],
+      "last_instructions": [
+        "jmp L_1FB2",
+        "mov byte ptr [bx], dl",
+        "pop si",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_20A6"
+      ],
+      "fanout": 0,
+      "fanin": 1
+    },
+    {
+      "module": "REVERSI",
+      "segment_file": "seg1.asm",
+      "name": "sub_1FDA",
+      "kind": "NEAR",
+      "offset": 8154,
+      "size_bytes": null,
+      "start_line": 3307,
+      "end_line": 3355,
+      "num_instructions": 45,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 2,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": true,
+      "has_string_op": true,
+      "num_mem_refs": 14,
+      "mnemonic_histogram": {
+        "mov": 10,
+        "or": 5,
+        "xor": 4,
+        "and": 4,
+        "add": 4,
+        "shl": 3,
+        "shr": 3,
+        "mul": 1,
+        "cld": 1,
+        "lodsb": 1,
+        "cwde": 1,
+        "inc": 1,
+        "loop": 1,
+        "cmp": 1,
+        "je": 1
+      },
+      "classification": "iterator",
+      "first_instructions": [
+        "mov di, word ptr [bp - 2]",
+        "xor bx, bx",
+        "or bl, byte ptr [di + 0xb]",
+        "and bl, 2",
+        "shl bx, 1",
+        "or bl, byte ptr [di + 0x12]"
+      ],
+      "last_instructions": [
+        "shr dl, 1",
+        "jb L_2045",
+        "mov ax, 0x7d00",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_1E2A"
+      ],
+      "fanout": 0,
+      "fanin": 1
+    },
+    {
+      "module": "REVERSI",
+      "segment_file": "seg1.asm",
+      "name": "sub_2046",
+      "kind": "NEAR",
+      "offset": 8262,
+      "size_bytes": null,
+      "start_line": 3356,
+      "end_line": 3388,
+      "num_instructions": 29,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 3,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": true,
+      "has_string_op": false,
+      "num_mem_refs": 4,
+      "mnemonic_histogram": {
+        "mov": 9,
+        "push": 3,
+        "add": 3,
+        "pop": 3,
+        "xor": 2,
+        "je": 2,
+        "cmp": 1,
+        "inc": 1,
+        "loop": 1,
+        "cwde": 1,
+        "or": 1,
+        "jns": 1,
+        "ret": 1
+      },
+      "classification": "iterator",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "push si",
+        "push di",
+        "xor ax, ax",
+        "mov di, 0xb"
+      ],
+      "last_instructions": [
+        "pop si",
+        "mov sp, bp",
+        "pop bp",
+        "ret 6"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_1E2A"
+      ],
+      "fanout": 0,
+      "fanin": 1
+    },
+    {
+      "module": "REVERSI",
+      "segment_file": "seg1.asm",
+      "name": "sub_2082",
+      "kind": "NEAR",
+      "offset": 8322,
+      "size_bytes": null,
+      "start_line": 3389,
+      "end_line": 3406,
+      "num_instructions": 15,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [
+        "L_1F78"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 2,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 5,
+      "mnemonic_histogram": {
+        "mov": 6,
+        "jne": 2,
+        "push": 1,
+        "add": 1,
+        "cmp": 1,
+        "call": 1,
+        "xor": 1,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "wrapper",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "mov bx, word ptr [bp + 8]",
+        "add bx, word ptr [bp + 0xa]",
+        "cmp byte ptr [bx], 1",
+        "jne L_209E"
+      ],
+      "last_instructions": [
+        "xor ax, ax",
+        "mov sp, bp",
+        "pop bp",
+        "ret 8"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_1F78"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0429",
+        "sub_13BA",
+        "sub_1479",
+        "sub_160A",
+        "sub_17BD"
+      ],
+      "fanout": 1,
+      "fanin": 5
+    },
+    {
+      "module": "REVERSI",
+      "segment_file": "seg1.asm",
+      "name": "sub_20A6",
+      "kind": "NEAR",
+      "offset": 8358,
+      "size_bytes": null,
+      "start_line": 3407,
+      "end_line": 3469,
+      "num_instructions": 58,
+      "prologue": "standard_bp",
+      "epilogue": "jmp_tail",
+      "calls_near": [
+        "L_0F41",
+        "L_1FAC",
+        "L_2274",
+        "L_2306"
+      ],
+      "calls_far": [
+        "far KERNEL.FATALEXIT",
+        "far KERNEL.INITTASK",
+        "far KERNEL.WAITEVENT",
+        "far USER.INITAPP"
+      ],
+      "num_jumps_cond": 5,
+      "num_jumps_uncond": 1,
+      "ints": [
+        "0x21"
+      ],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 16,
+      "mnemonic_histogram": {
+        "mov": 14,
+        "push": 11,
+        "call": 8,
+        "add": 6,
+        "cmp": 3,
+        "je": 3,
+        "pop": 2,
+        "or": 2,
+        "ret": 1,
+        "les": 1,
+        "neg": 1,
+        "ja": 1,
+        "jbe": 1,
+        "jmp": 1,
+        "cwde": 1
+      },
+      "classification": "dos_caller",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "push di",
+        "mov ax, word ptr [bp + 8]",
+        "cmp ax, 0x14",
+        "je L_20BE"
+      ],
+      "last_instructions": [
+        "push ax",
+        "call L_2306",
+        "mov ax, 0x4cff",
+        "int 0x21"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0F41",
+        "sub_1FAC",
+        "sub_2274",
+        "sub_2306"
+      ],
+      "callees_inter": [
+        {
+          "module": "KERNEL",
+          "func": "FATALEXIT"
+        },
+        {
+          "module": "KERNEL",
+          "func": "INITTASK"
+        },
+        {
+          "module": "KERNEL",
+          "func": "WAITEVENT"
+        },
+        {
+          "module": "USER",
+          "func": "INITAPP"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_1479"
+      ],
+      "fanout": 8,
+      "fanin": 1
+    },
+    {
+      "module": "REVERSI",
+      "segment_file": "seg1.asm",
+      "name": "sub_2135",
+      "kind": "NEAR",
+      "offset": 8501,
+      "size_bytes": null,
+      "start_line": 3470,
+      "end_line": 3602,
+      "num_instructions": 130,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_2316"
+      ],
+      "calls_far": [
+        "far KERNEL.GLOBALALLOC",
+        "far KERNEL.GLOBALCOMPACT",
+        "far KERNEL.GLOBALFREE",
+        "far KERNEL.GLOBALSIZE",
+        "far KERNEL.LOCALALLOC",
+        "far KERNEL.LOCALFREE",
+        "far KERNEL.LOCALREALLOC",
+        "far KERNEL.LOCALSIZE"
+      ],
+      "num_jumps_cond": 1,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 15,
+      "mnemonic_histogram": {
+        "mov": 40,
+        "push": 34,
+        "ret": 15,
+        "pop": 14,
+        "call": 13,
+        "sub": 9,
+        "imul": 1,
+        "cdq": 1,
+        "or": 1,
+        "je": 1,
+        "jmp": 1
+      },
+      "classification": "complex",
+      "first_instructions": [
+        "ret",
+        "push bp",
+        "mov bp, sp",
+        "mov ax, 0xffff",
+        "pop bp",
+        "ret"
+      ],
+      "last_instructions": [
+        "call L_2316",
+        "mov sp, bp",
+        "pop bp",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_2316"
+      ],
+      "callees_inter": [
+        {
+          "module": "KERNEL",
+          "func": "GLOBALALLOC"
+        },
+        {
+          "module": "KERNEL",
+          "func": "GLOBALCOMPACT"
+        },
+        {
+          "module": "KERNEL",
+          "func": "GLOBALFREE"
+        },
+        {
+          "module": "KERNEL",
+          "func": "GLOBALSIZE"
+        },
+        {
+          "module": "KERNEL",
+          "func": "LOCALALLOC"
+        },
+        {
+          "module": "KERNEL",
+          "func": "LOCALFREE"
+        },
+        {
+          "module": "KERNEL",
+          "func": "LOCALREALLOC"
+        },
+        {
+          "module": "KERNEL",
+          "func": "LOCALSIZE"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_223E"
+      ],
+      "fanout": 9,
+      "fanin": 1
+    },
+    {
+      "module": "REVERSI",
+      "segment_file": "seg1.asm",
+      "name": "sub_223E",
+      "kind": "NEAR",
+      "offset": 8766,
+      "size_bytes": null,
+      "start_line": 3603,
+      "end_line": 3626,
+      "num_instructions": 21,
+      "prologue": "standard_bp",
+      "epilogue": "unknown",
+      "calls_near": [
+        "L_2135",
+        "L_2333"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 3,
+      "num_jumps_uncond": 0,
+      "ints": [
+        "0x21",
+        "0x21"
+      ],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 6,
+      "mnemonic_histogram": {
+        "mov": 7,
+        "push": 2,
+        "call": 2,
+        "int": 2,
+        "or": 1,
+        "je": 1,
+        "cmp": 1,
+        "jne": 1,
+        "lds": 1,
+        "pop": 1,
+        "jcxz": 1,
+        "lcall": 1
+      },
+      "classification": "dos_caller",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "call L_2333",
+        "call L_2135",
+        "or ah, ah",
+        "je L_2255"
+      ],
+      "last_instructions": [
+        "lcall [0x632]",
+        "mov ax, word ptr [bp + 4]",
+        "mov ah, 0x4c",
+        "int 0x21"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_2135",
+        "sub_2333"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0537",
+        "sub_2306"
+      ],
+      "fanout": 2,
+      "fanin": 2
+    },
+    {
+      "module": "REVERSI",
+      "segment_file": "seg1.asm",
+      "name": "sub_2274",
+      "kind": "NEAR",
+      "offset": 8820,
+      "size_bytes": null,
+      "start_line": 3627,
+      "end_line": 3694,
+      "num_instructions": 59,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [
+        "word ptr [bx]"
+      ],
+      "num_jumps_cond": 7,
+      "num_jumps_uncond": 2,
+      "ints": [
+        "0x21",
+        "0x21",
+        "0x21",
+        "0x21",
+        "0x21"
+      ],
+      "has_loop": true,
+      "has_string_op": false,
+      "num_mem_refs": 13,
+      "mnemonic_histogram": {
+        "mov": 18,
+        "ret": 5,
+        "int": 5,
+        "push": 3,
+        "pop": 3,
+        "inc": 3,
+        "jae": 2,
+        "jmp": 2,
+        "test": 2,
+        "je": 2,
+        "lds": 2,
+        "xor": 2,
+        "lcall": 2,
+        "cmp": 1,
+        "call": 1
+      },
+      "classification": "complex_iterator",
+      "first_instructions": [
+        "mov bx, 0x63e",
+        "cmp bx, 0x644",
+        "jae L_2285",
+        "push bx",
+        "call word ptr [bx]",
+        "pop bx"
+      ],
+      "last_instructions": [
+        "int 0x21",
+        "inc bx",
+        "loop L_22F7",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_20A6"
+      ],
+      "fanout": 0,
+      "fanin": 1
+    },
+    {
+      "module": "REVERSI",
+      "segment_file": "seg1.asm",
+      "name": "sub_2306",
+      "kind": "NEAR",
+      "offset": 8966,
+      "size_bytes": null,
+      "start_line": 3695,
+      "end_line": 3703,
+      "num_instructions": 8,
+      "prologue": "standard_bp",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_223E",
+        "L_2321"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 1,
+      "mnemonic_histogram": {
+        "push": 2,
+        "mov": 2,
+        "call": 2,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "call L_2321",
+        "push word ptr [bp + 4]",
+        "call L_223E",
+        "mov sp, bp"
+      ],
+      "last_instructions": [
+        "call L_223E",
+        "mov sp, bp",
+        "pop bp",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_223E",
+        "sub_2321"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_20A6"
+      ],
+      "fanout": 2,
+      "fanin": 1
+    },
+    {
+      "module": "REVERSI",
+      "segment_file": "seg1.asm",
+      "name": "sub_2316",
+      "kind": "NEAR",
+      "offset": 8982,
+      "size_bytes": null,
+      "start_line": 3704,
+      "end_line": 3712,
+      "num_instructions": 6,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 1,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": true,
+      "has_string_op": false,
+      "num_mem_refs": 0,
+      "mnemonic_histogram": {
+        "xor": 1,
+        "jcxz": 1,
+        "shr": 1,
+        "rcr": 1,
+        "loop": 1,
+        "ret": 1
+      },
+      "classification": "iterator",
+      "first_instructions": [
+        "xor ch, ch",
+        "jcxz L_2320",
+        "shr dx, 1",
+        "rcr ax, 1",
+        "loop L_231A",
+        "ret"
+      ],
+      "last_instructions": [
+        "shr dx, 1",
+        "rcr ax, 1",
+        "loop L_231A",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_2135"
+      ],
+      "fanout": 0,
+      "fanin": 1
+    },
+    {
+      "module": "REVERSI",
+      "segment_file": "seg1.asm",
+      "name": "sub_2321",
+      "kind": "NEAR",
+      "offset": 8993,
+      "size_bytes": null,
+      "start_line": 3713,
+      "end_line": 3725,
+      "num_instructions": 10,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [
+        "word ptr [bx]"
+      ],
+      "num_jumps_cond": 1,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 1,
+      "mnemonic_histogram": {
+        "inc": 2,
+        "mov": 1,
+        "cmp": 1,
+        "jae": 1,
+        "push": 1,
+        "call": 1,
+        "pop": 1,
+        "jmp": 1,
+        "ret": 1
+      },
+      "classification": "wrapper",
+      "first_instructions": [
+        "mov bx, 0x644",
+        "cmp bx, 0x644",
+        "jae L_2332",
+        "push bx",
+        "call word ptr [bx]",
+        "pop bx"
+      ],
+      "last_instructions": [
+        "inc bx",
+        "inc bx",
+        "jmp L_2324",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_2306"
+      ],
+      "fanout": 0,
+      "fanin": 1
+    },
+    {
+      "module": "REVERSI",
+      "segment_file": "seg1.asm",
+      "name": "sub_2333",
+      "kind": "NEAR",
+      "offset": 9011,
+      "size_bytes": null,
+      "start_line": 3726,
+      "end_line": 3738,
+      "num_instructions": 10,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [
+        "word ptr [bx]"
+      ],
+      "num_jumps_cond": 1,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 1,
+      "mnemonic_histogram": {
+        "inc": 2,
+        "mov": 1,
+        "cmp": 1,
+        "jae": 1,
+        "push": 1,
+        "call": 1,
+        "pop": 1,
+        "jmp": 1,
+        "ret": 1
+      },
+      "classification": "wrapper",
+      "first_instructions": [
+        "mov bx, 0x644",
+        "cmp bx, 0x646",
+        "jae L_2344",
+        "push bx",
+        "call word ptr [bx]",
+        "pop bx"
+      ],
+      "last_instructions": [
+        "inc bx",
+        "inc bx",
+        "jmp L_2336",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_223E"
+      ],
+      "fanout": 0,
+      "fanin": 1
+    }
+  ]
+}

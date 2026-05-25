@@ -125,7 +125,7 @@ def main() -> int:
             "from": src,
             "to": dst,
             "value": n,
-            "title": f"{src} -> {dst}: {n} llamadas",
+            "title": f"{src} -> {dst}: {n} calls",
             "width": 1 + 4 * (n / max_w),
         })
 
@@ -212,33 +212,33 @@ HTML_TEMPLATE = r"""<!doctype html>
 <body>
 
 <header>
-  <h1>Windows 1.03 - Call Graph Interactivo</h1>
+  <h1>Windows 1.03 - Interactive Call Graph</h1>
   <div class="stats" id="hdr-stats"></div>
 </header>
 
 <div id="main">
   <div id="graph">
     <div id="controls">
-      <h3>Filtros</h3>
+      <h3>Filters</h3>
       <label><input type="checkbox" data-kind="kernel"  checked> <span class="legend-dot" style="background:#e74c3c"></span> kernel core (KERNEL, GDI, USER)</label>
       <label><input type="checkbox" data-kind="shell"   checked> <span class="legend-dot" style="background:#e67e22"></span> shell (MSDOS, MSDOSD)</label>
-      <label><input type="checkbox" data-kind="driver"  checked> <span class="legend-dot" style="background:#3498db"></span> drivers sistema (SYSTEM, SOUND, COMM, mice...)</label>
+      <label><input type="checkbox" data-kind="driver"  checked> <span class="legend-dot" style="background:#3498db"></span> system drivers (SYSTEM, SOUND, COMM, mice...)</label>
       <label><input type="checkbox" data-kind="display" checked> <span class="legend-dot" style="background:#9b59b6"></span> display drivers (CGA, EGA, HERCULES...)</label>
       <label><input type="checkbox" data-kind="printer" checked> <span class="legend-dot" style="background:#95a5a6"></span> printer drivers</label>
       <label><input type="checkbox" data-kind="keymap"  checked> <span class="legend-dot" style="background:#7f8c8d"></span> keyboard layouts</label>
       <label><input type="checkbox" data-kind="app"     checked> <span class="legend-dot" style="background:#2ecc71"></span> apps (CALC, PAINT, WRITE...)</label>
-      <input type="text" id="search" placeholder="Buscar modulo... (ej: USER)">
+      <input type="text" id="search" placeholder="Search module... (e.g. USER)">
     </div>
   </div>
   <div id="sidebar">
-    <div id="empty-hint">Click en un nodo para ver sus funciones.</div>
+    <div id="empty-hint">Click a node to see its functions.</div>
   </div>
 </div>
 
 <script>
 const PAYLOAD = __PAYLOAD__;
 document.getElementById("hdr-stats").innerHTML =
-  `<b>${PAYLOAD.stats.total_modules}</b> modulos &nbsp; <b>${PAYLOAD.stats.total_functions}</b> funciones &nbsp; <b>${PAYLOAD.stats.total_edges}</b> aristas inter-modulo`;
+  `<b>${PAYLOAD.stats.total_modules}</b> modules &nbsp; <b>${PAYLOAD.stats.total_functions}</b> functions &nbsp; <b>${PAYLOAD.stats.total_edges}</b> inter-module edges`;
 
 const container = document.getElementById("graph");
 const data = {
@@ -286,7 +286,7 @@ function showModule(mod) {
   let html = `<h2>${mod}</h2>`;
   html += `<div class="module-meta">`;
   html += `<span class="pill" style="background:${node.color}">${node.kind}</span> `;
-  html += `<b>${funcs.length}</b> funciones`;
+  html += `<b>${funcs.length}</b> functions`;
   html += `</div>`;
 
   // Cuenta confidence

@@ -58,13 +58,13 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Stub trivial (3 instrucciones, sin logica significativa).",
+      "description": "Trivial stub (3 instructions, no significant logic).",
       "confidence": "low",
       "semantic_tags": [
         "calls_kernel",
         "trivial_stub"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0000 -- offset 0x0000 -- 3 instr\n; Stub trivial (3 instrucciones, sin logica significativa).\n; tags: calls_kernel, trivial_stub\n; calls (inter): KERNEL.GETCURRENTTASK\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0000 -- offset 0x0000 -- 3 instr\n; Trivial stub (3 instructions, no significant logic).\n; tags: calls_kernel, trivial_stub\n; calls (inter): KERNEL.GETCURRENTTASK\n;----------------------------------------------------------------------"
     },
     {
       "module": "SOUND",
@@ -139,7 +139,7 @@
       "callers": [],
       "fanout": 2,
       "fanin": 0,
-      "description": "Iterador con bucle (44 instr).",
+      "description": "Iterator with loop (44 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
@@ -147,7 +147,7 @@
         "iterator",
         "loop"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; CLOSESOUND -- 44 instr\n; Iterador con bucle (44 instr).\n; tags: calls_kernel, far, iterator, loop\n; calls (intra): sub_0623\n; calls (inter): KERNEL.GLOBALFREE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; CLOSESOUND -- 44 instr\n; Iterator with loop (44 instr).\n; tags: calls_kernel, far, iterator, loop\n; calls (intra): sub_0623\n; calls (inter): KERNEL.GLOBALFREE\n;----------------------------------------------------------------------"
     },
     {
       "module": "SOUND",
@@ -231,7 +231,7 @@
       "callers": [],
       "fanout": 3,
       "fanin": 0,
-      "description": "Iterador con bucle (130 instr).",
+      "description": "Iterator with loop (130 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
@@ -239,7 +239,7 @@
         "far",
         "loop"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; MYOPENSOUND -- 130 instr\n; Iterador con bucle (130 instr).\n; tags: calls_kernel, complex_iterator, far, loop\n; calls (intra): sub_0623\n; calls (inter): KERNEL.GETCURRENTTASK, KERNEL.GLOBALALLOC\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; MYOPENSOUND -- 130 instr\n; Iterator with loop (130 instr).\n; tags: calls_kernel, complex_iterator, far, loop\n; calls (intra): sub_0623\n; calls (inter): KERNEL.GETCURRENTTASK, KERNEL.GLOBALALLOC\n;----------------------------------------------------------------------"
     },
     {
       "module": "SOUND",
@@ -319,14 +319,14 @@
       "callers": [],
       "fanout": 3,
       "fanin": 0,
-      "description": "Setter: cambia voicequeuesize.",
+      "description": "Setter: changes voicequeuesize.",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; SETVOICEQUEUESIZE -- 64 instr\n; Setter: cambia voicequeuesize.\n; tags: calls_kernel, far, medium\n; calls (intra): sub_0623\n; calls (inter): KERNEL.GLOBALALLOC, KERNEL.GLOBALFREE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; SETVOICEQUEUESIZE -- 64 instr\n; Setter: changes voicequeuesize.\n; tags: calls_kernel, far, medium\n; calls (intra): sub_0623\n; calls (inter): KERNEL.GLOBALALLOC, KERNEL.GLOBALFREE\n;----------------------------------------------------------------------"
     },
     {
       "module": "SOUND",
@@ -393,13 +393,13 @@
       "callers": [],
       "fanout": 2,
       "fanin": 0,
-      "description": "Setter: cambia voicenote.",
+      "description": "Setter: changes voicenote.",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; SETVOICENOTE -- 122 instr\n; Setter: cambia voicenote.\n; tags: dispatcher, far\n; calls (intra): sub_0383, sub_0623\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; SETVOICENOTE -- 122 instr\n; Setter: changes voicenote.\n; tags: dispatcher, far\n; calls (intra): sub_0383, sub_0623\n;----------------------------------------------------------------------"
     },
     {
       "module": "SOUND",
@@ -466,13 +466,13 @@
       "callers": [],
       "fanout": 2,
       "fanin": 0,
-      "description": "Setter: cambia voiceaccent.",
+      "description": "Setter: changes voiceaccent.",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; SETVOICEACCENT -- 58 instr\n; Setter: cambia voiceaccent.\n; tags: dispatcher, far\n; calls (intra): sub_0383, sub_0623\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; SETVOICEACCENT -- 58 instr\n; Setter: changes voiceaccent.\n; tags: dispatcher, far\n; calls (intra): sub_0383, sub_0623\n;----------------------------------------------------------------------"
     },
     {
       "module": "SOUND",
@@ -556,14 +556,14 @@
       ],
       "fanout": 2,
       "fanin": 6,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (91 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (91 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0383 -- offset 0x0383 -- 91 instr\n; Dispatcher: tabla de decisiones cmp+jcc (91 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: SETSOUNDNOISE, SETVOICEACCENT, SETVOICEENVELOPE, SETVOICENOTE, SETVOICESOUND, SYNCALLVOICES\n; calls (intra): sub_0623\n; calls (inter): KERNEL.YIELD\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0383 -- offset 0x0383 -- 91 instr\n; Dispatcher: cmp+jcc decision table (91 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: SETSOUNDNOISE, SETVOICEACCENT, SETVOICEENVELOPE, SETVOICENOTE, SETVOICESOUND, SYNCALLVOICES\n; calls (intra): sub_0623\n; calls (inter): KERNEL.YIELD\n;----------------------------------------------------------------------"
     },
     {
       "module": "SOUND",
@@ -624,13 +624,13 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (22 instr).",
+      "description": "Unclassified function (22 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "far",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; STARTSOUND -- 22 instr\n; Funcion sin clasificar definitiva (22 instr).\n; tags: far, small\n; calls (intra): sub_0623\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; STARTSOUND -- 22 instr\n; Unclassified function (22 instr).\n; tags: far, small\n; calls (intra): sub_0623\n;----------------------------------------------------------------------"
     },
     {
       "module": "SOUND",
@@ -691,13 +691,13 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (22 instr).",
+      "description": "Unclassified function (22 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "far",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; STOPSOUND -- 22 instr\n; Funcion sin clasificar definitiva (22 instr).\n; tags: far, small\n; calls (intra): sub_0623\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; STOPSOUND -- 22 instr\n; Unclassified function (22 instr).\n; tags: far, small\n; calls (intra): sub_0623\n;----------------------------------------------------------------------"
     },
     {
       "module": "SOUND",
@@ -755,13 +755,13 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Getter: devuelve thresholdevent.",
+      "description": "Getter: returns thresholdevent.",
       "confidence": "medium",
       "semantic_tags": [
         "far",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; GETTHRESHOLDEVENT -- 23 instr\n; Getter: devuelve thresholdevent.\n; tags: far, small\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; GETTHRESHOLDEVENT -- 23 instr\n; Getter: returns thresholdevent.\n; tags: far, small\n;----------------------------------------------------------------------"
     },
     {
       "module": "SOUND",
@@ -823,13 +823,13 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Getter: devuelve thresholdstatus.",
+      "description": "Getter: returns thresholdstatus.",
       "confidence": "medium",
       "semantic_tags": [
         "far",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; GETTHRESHOLDSTATUS -- 24 instr\n; Getter: devuelve thresholdstatus.\n; tags: far, small\n; calls (intra): sub_0623\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; GETTHRESHOLDSTATUS -- 24 instr\n; Getter: returns thresholdstatus.\n; tags: far, small\n; calls (intra): sub_0623\n;----------------------------------------------------------------------"
     },
     {
       "module": "SOUND",
@@ -892,13 +892,13 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Setter: cambia voicethreshold.",
+      "description": "Setter: changes voicethreshold.",
       "confidence": "medium",
       "semantic_tags": [
         "far",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; SETVOICETHRESHOLD -- 28 instr\n; Setter: cambia voicethreshold.\n; tags: far, small\n; calls (intra): sub_0623\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; SETVOICETHRESHOLD -- 28 instr\n; Setter: changes voicethreshold.\n; tags: far, small\n; calls (intra): sub_0623\n;----------------------------------------------------------------------"
     },
     {
       "module": "SOUND",
@@ -962,13 +962,13 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (29 instr).",
+      "description": "Unclassified function (29 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "far",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; COUNTVOICENOTES -- 29 instr\n; Funcion sin clasificar definitiva (29 instr).\n; tags: far, small\n; calls (intra): sub_0623\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; COUNTVOICENOTES -- 29 instr\n; Unclassified function (29 instr).\n; tags: far, small\n; calls (intra): sub_0623\n;----------------------------------------------------------------------"
     },
     {
       "module": "SOUND",
@@ -1034,13 +1034,13 @@
       "callers": [],
       "fanout": 2,
       "fanin": 0,
-      "description": "Funcion mediana (32 instr, 2 calls).",
+      "description": "Mid-size function (32 instr, 2 calls).",
       "confidence": "low",
       "semantic_tags": [
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; SYNCALLVOICES -- 32 instr\n; Funcion mediana (32 instr, 2 calls).\n; tags: far, medium\n; calls (intra): sub_0383, sub_0623\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; SYNCALLVOICES -- 32 instr\n; Mid-size function (32 instr, 2 calls).\n; tags: far, medium\n; calls (intra): sub_0383, sub_0623\n;----------------------------------------------------------------------"
     },
     {
       "module": "SOUND",
@@ -1105,13 +1105,13 @@
       "callers": [],
       "fanout": 2,
       "fanin": 0,
-      "description": "Setter: cambia soundnoise.",
+      "description": "Setter: changes soundnoise.",
       "confidence": "medium",
       "semantic_tags": [
         "far",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; SETSOUNDNOISE -- 27 instr\n; Setter: cambia soundnoise.\n; tags: far, small\n; calls (intra): sub_0383, sub_0623\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; SETSOUNDNOISE -- 27 instr\n; Setter: changes soundnoise.\n; tags: far, small\n; calls (intra): sub_0383, sub_0623\n;----------------------------------------------------------------------"
     },
     {
       "module": "SOUND",
@@ -1178,13 +1178,13 @@
       "callers": [],
       "fanout": 2,
       "fanin": 0,
-      "description": "Setter: cambia voicesound.",
+      "description": "Setter: changes voicesound.",
       "confidence": "medium",
       "semantic_tags": [
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; SETVOICESOUND -- 37 instr\n; Setter: cambia voicesound.\n; tags: far, medium\n; calls (intra): sub_0383, sub_0623\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; SETVOICESOUND -- 37 instr\n; Setter: changes voicesound.\n; tags: far, medium\n; calls (intra): sub_0383, sub_0623\n;----------------------------------------------------------------------"
     },
     {
       "module": "SOUND",
@@ -1251,13 +1251,13 @@
       "callers": [],
       "fanout": 2,
       "fanin": 0,
-      "description": "Setter: cambia voiceenvelope.",
+      "description": "Setter: changes voiceenvelope.",
       "confidence": "medium",
       "semantic_tags": [
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; SETVOICEENVELOPE -- 32 instr\n; Setter: cambia voiceenvelope.\n; tags: far, medium\n; calls (intra): sub_0383, sub_0623\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; SETVOICEENVELOPE -- 32 instr\n; Setter: changes voiceenvelope.\n; tags: far, medium\n; calls (intra): sub_0383, sub_0623\n;----------------------------------------------------------------------"
     },
     {
       "module": "SOUND",
@@ -1340,12 +1340,12 @@
       ],
       "fanout": 1,
       "fanin": 15,
-      "description": "Funcion mediana (60 instr, 1 calls).",
+      "description": "Mid-size function (60 instr, 1 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0623 -- offset 0x0623 -- 60 instr\n; Funcion mediana (60 instr, 1 calls).\n; tags: medium\n; callers: CLOSESOUND, COUNTVOICENOTES, GETTHRESHOLDSTATUS, MYOPENSOUND, SETSOUNDNOISE, SETVOICEACCENT (+9 mas)\n; calls (intra): sub_0936\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0623 -- offset 0x0623 -- 60 instr\n; Mid-size function (60 instr, 1 calls).\n; tags: medium\n; callers: CLOSESOUND, COUNTVOICENOTES, GETTHRESHOLDSTATUS, MYOPENSOUND, SETSOUNDNOISE, SETVOICEACCENT (+9 more)\n; calls (intra): sub_0936\n;----------------------------------------------------------------------"
     },
     {
       "module": "SOUND",
@@ -1400,12 +1400,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion hoja (no llama a otras, 11 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 11 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0694 -- offset 0x0694 -- 11 instr\n; Funcion hoja (no llama a otras, 11 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_06AC\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0694 -- offset 0x0694 -- 11 instr\n; Leaf function (no callees, 11 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_06AC\n;----------------------------------------------------------------------"
     },
     {
       "module": "SOUND",
@@ -1483,12 +1483,12 @@
       "callers": [],
       "fanout": 6,
       "fanin": 0,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (143 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (143 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_06AC -- offset 0x06AC -- 143 instr\n; Dispatcher: tabla de decisiones cmp+jcc (143 instr).\n; tags: dispatcher\n; calls (intra): sub_0694, sub_07C6, sub_07D4, sub_07E4, sub_0936, sub_095B\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_06AC -- offset 0x06AC -- 143 instr\n; Dispatcher: cmp+jcc decision table (143 instr).\n; tags: dispatcher\n; calls (intra): sub_0694, sub_07C6, sub_07D4, sub_07E4, sub_0936, sub_095B\n;----------------------------------------------------------------------"
     },
     {
       "module": "SOUND",
@@ -1543,12 +1543,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion hoja (no llama a otras, 8 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 8 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_07C6 -- offset 0x07C6 -- 8 instr\n; Funcion hoja (no llama a otras, 8 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_06AC\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_07C6 -- offset 0x07C6 -- 8 instr\n; Leaf function (no callees, 8 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_06AC\n;----------------------------------------------------------------------"
     },
     {
       "module": "SOUND",
@@ -1603,12 +1603,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion hoja (no llama a otras, 9 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 9 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_07D4 -- offset 0x07D4 -- 9 instr\n; Funcion hoja (no llama a otras, 9 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_06AC\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_07D4 -- offset 0x07D4 -- 9 instr\n; Leaf function (no callees, 9 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_06AC\n;----------------------------------------------------------------------"
     },
     {
       "module": "SOUND",
@@ -1683,12 +1683,12 @@
       ],
       "fanout": 5,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (84 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (84 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_07E4 -- offset 0x07E4 -- 84 instr\n; Dispatcher: tabla de decisiones cmp+jcc (84 instr).\n; tags: dispatcher\n; callers: sub_06AC\n; calls (intra): sub_08A6, sub_08E4, sub_095B, sub_0C16, sub_0C3C\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_07E4 -- offset 0x07E4 -- 84 instr\n; Dispatcher: cmp+jcc decision table (84 instr).\n; tags: dispatcher\n; callers: sub_06AC\n; calls (intra): sub_08A6, sub_08E4, sub_095B, sub_0C16, sub_0C3C\n;----------------------------------------------------------------------"
     },
     {
       "module": "SOUND",
@@ -1755,13 +1755,13 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (27 instr).",
+      "description": "Unclassified function (27 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "bios_caller",
         "int_1a"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_08A6 -- offset 0x08A6 -- 27 instr\n; Funcion sin clasificar definitiva (27 instr).\n; tags: bios_caller, int_1a\n; callers: sub_07E4\n; calls (intra): sub_0936\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_08A6 -- offset 0x08A6 -- 27 instr\n; Unclassified function (27 instr).\n; tags: bios_caller, int_1a\n; callers: sub_07E4\n; calls (intra): sub_0936\n;----------------------------------------------------------------------"
     },
     {
       "module": "SOUND",
@@ -1833,14 +1833,14 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (35 instr).",
+      "description": "Calls DOS services via INT 21h (35 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_1a",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_08E4 -- offset 0x08E4 -- 35 instr\n; Llama a servicios DOS via INT 21h (35 instr).\n; tags: dos_caller, int_1a, int_21\n; callers: sub_07E4\n; calls (intra): sub_0936, sub_0C3C\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_08E4 -- offset 0x08E4 -- 35 instr\n; Calls DOS services via INT 21h (35 instr).\n; tags: dos_caller, int_1a, int_21\n; callers: sub_07E4\n; calls (intra): sub_0936, sub_0C3C\n;----------------------------------------------------------------------"
     },
     {
       "module": "SOUND",
@@ -1888,12 +1888,12 @@
       ],
       "fanout": 0,
       "fanin": 5,
-      "description": "Stub trivial (2 instrucciones, sin logica significativa).",
+      "description": "Trivial stub (2 instructions, no significant logic).",
       "confidence": "low",
       "semantic_tags": [
         "trivial_stub"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0936 -- offset 0x0936 -- 2 instr\n; Stub trivial (2 instrucciones, sin logica significativa).\n; tags: trivial_stub\n; callers: sub_0623, sub_06AC, sub_08A6, sub_08E4, sub_0C3C\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0936 -- offset 0x0936 -- 2 instr\n; Trivial stub (2 instructions, no significant logic).\n; tags: trivial_stub\n; callers: sub_0623, sub_06AC, sub_08A6, sub_08E4, sub_0C3C\n;----------------------------------------------------------------------"
     },
     {
       "module": "SOUND",
@@ -1948,12 +1948,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion hoja (no llama a otras, 17 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 17 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_093C -- offset 0x093C -- 17 instr\n; Funcion hoja (no llama a otras, 17 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_0C3C\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_093C -- offset 0x093C -- 17 instr\n; Leaf function (no callees, 17 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_0C3C\n;----------------------------------------------------------------------"
     },
     {
       "module": "SOUND",
@@ -2010,12 +2010,12 @@
       ],
       "fanout": 0,
       "fanin": 4,
-      "description": "Funcion hoja (no llama a otras, 11 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 11 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_095B -- offset 0x095B -- 11 instr\n; Funcion hoja (no llama a otras, 11 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_06AC, sub_07E4, sub_0A04, sub_0C3C\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_095B -- offset 0x095B -- 11 instr\n; Leaf function (no callees, 11 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_06AC, sub_07E4, sub_0A04, sub_0C3C\n;----------------------------------------------------------------------"
     },
     {
       "module": "SOUND",
@@ -2082,13 +2082,13 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Interrupt Service Routine (64 instrucciones, posible manejador de INT).",
+      "description": "Interrupt service routine (64 instructions, likely INT handler).",
       "confidence": "medium",
       "semantic_tags": [
         "isr",
         "loop"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0972 -- offset 0x0972 -- 64 instr\n; Interrupt Service Routine (64 instrucciones, posible manejador de INT).\n; tags: isr, loop\n; callers: sub_0A84\n; calls (intra): sub_0A04\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0972 -- offset 0x0972 -- 64 instr\n; Interrupt service routine (64 instructions, likely INT handler).\n; tags: isr, loop\n; callers: sub_0A84\n; calls (intra): sub_0A04\n;----------------------------------------------------------------------"
     },
     {
       "module": "SOUND",
@@ -2159,12 +2159,12 @@
       ],
       "fanout": 3,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (52 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (52 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0A04 -- offset 0x0A04 -- 52 instr\n; Dispatcher: tabla de decisiones cmp+jcc (52 instr).\n; tags: dispatcher\n; callers: sub_0972\n; calls (intra): sub_095B, sub_0A84, sub_0C16\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0A04 -- offset 0x0A04 -- 52 instr\n; Dispatcher: cmp+jcc decision table (52 instr).\n; tags: dispatcher\n; callers: sub_0972\n; calls (intra): sub_095B, sub_0A84, sub_0C16\n;----------------------------------------------------------------------"
     },
     {
       "module": "SOUND",
@@ -2233,12 +2233,12 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (69 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (69 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0A84 -- offset 0x0A84 -- 69 instr\n; Dispatcher: tabla de decisiones cmp+jcc (69 instr).\n; tags: dispatcher\n; callers: sub_0A04\n; calls (intra): sub_0972, sub_0B45\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0A84 -- offset 0x0A84 -- 69 instr\n; Dispatcher: cmp+jcc decision table (69 instr).\n; tags: dispatcher\n; callers: sub_0A04\n; calls (intra): sub_0972, sub_0B45\n;----------------------------------------------------------------------"
     },
     {
       "module": "SOUND",
@@ -2303,13 +2303,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (84 instr).",
+      "description": "Calls DOS services via INT 21h (84 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0B45 -- offset 0x0B45 -- 84 instr\n; Llama a servicios DOS via INT 21h (84 instr).\n; tags: dos_caller, int_21\n; callers: sub_0A84\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0B45 -- offset 0x0B45 -- 84 instr\n; Calls DOS services via INT 21h (84 instr).\n; tags: dos_caller, int_21\n; callers: sub_0A84\n;----------------------------------------------------------------------"
     },
     {
       "module": "SOUND",
@@ -2374,12 +2374,12 @@
       ],
       "fanout": 1,
       "fanin": 2,
-      "description": "Funcion sin clasificar definitiva (18 instr).",
+      "description": "Unclassified function (18 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0C16 -- offset 0x0C16 -- 18 instr\n; Funcion sin clasificar definitiva (18 instr).\n; tags: small\n; callers: sub_07E4, sub_0A04\n; calls (intra): sub_0C3C\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0C16 -- offset 0x0C16 -- 18 instr\n; Unclassified function (18 instr).\n; tags: small\n; callers: sub_07E4, sub_0A04\n; calls (intra): sub_0C3C\n;----------------------------------------------------------------------"
     },
     {
       "module": "SOUND",
@@ -2454,13 +2454,13 @@
       ],
       "fanout": 3,
       "fanin": 3,
-      "description": "Llama a servicios DOS via INT 21h (89 instr).",
+      "description": "Calls DOS services via INT 21h (89 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0C3C -- offset 0x0C3C -- 89 instr\n; Llama a servicios DOS via INT 21h (89 instr).\n; tags: dos_caller, int_21\n; callers: sub_07E4, sub_08E4, sub_0C16\n; calls (intra): sub_0936, sub_093C, sub_095B\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0C3C -- offset 0x0C3C -- 89 instr\n; Calls DOS services via INT 21h (89 instr).\n; tags: dos_caller, int_21\n; callers: sub_07E4, sub_08E4, sub_0C16\n; calls (intra): sub_0936, sub_093C, sub_095B\n;----------------------------------------------------------------------"
     }
   ]
 }

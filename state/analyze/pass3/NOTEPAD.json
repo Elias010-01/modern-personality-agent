@@ -123,14 +123,14 @@
       "callers": [],
       "fanout": 16,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (29 instr).",
+      "description": "Unclassified function (29 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "calls_kernel",
         "calls_user",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0000 -- offset 0x0000 -- 29 instr\n; Funcion sin clasificar definitiva (29 instr).\n; tags: calls_kernel, calls_user, small\n; calls (intra): sub_02C9, sub_0351\n; calls (inter): KERNEL.ANSIUPPER, KERNEL.LOCALALLOC, KERNEL.LOCALREALLOC, KERNEL.LSTRCPY, KERNEL.MAKEPROCINSTANCE, KERNEL.OPENFILE (+8 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0000 -- offset 0x0000 -- 29 instr\n; Unclassified function (29 instr).\n; tags: calls_kernel, calls_user, small\n; calls (intra): sub_02C9, sub_0351\n; calls (inter): KERNEL.ANSIUPPER, KERNEL.LOCALALLOC, KERNEL.LOCALREALLOC, KERNEL.LSTRCPY, KERNEL.MAKEPROCINSTANCE, KERNEL.OPENFILE (+8 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "NOTEPAD",
@@ -247,14 +247,14 @@
       ],
       "fanout": 10,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (317 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (317 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "calls_user",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0047 -- offset 0x0047 -- 317 instr\n; Dispatcher: tabla de decisiones cmp+jcc (317 instr).\n; tags: calls_kernel, calls_user, dispatcher\n; callers: sub_03E2\n; calls (intra): sub_038D, sub_03E2, sub_0837\n; calls (inter): KERNEL.OPENFILE, USER.GETFOCUS, USER.GETKEYSTATE, USER.POSTMESSAGE, USER.SENDMESSAGE, USER.SETCURSOR (+1 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0047 -- offset 0x0047 -- 317 instr\n; Dispatcher: cmp+jcc decision table (317 instr).\n; tags: calls_kernel, calls_user, dispatcher\n; callers: sub_03E2\n; calls (intra): sub_038D, sub_03E2, sub_0837\n; calls (inter): KERNEL.OPENFILE, USER.GETFOCUS, USER.GETKEYSTATE, USER.POSTMESSAGE, USER.SENDMESSAGE, USER.SETCURSOR (+1 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "NOTEPAD",
@@ -325,13 +325,13 @@
       ],
       "fanout": 2,
       "fanin": 2,
-      "description": "Funcion mediana (33 instr, 2 calls).",
+      "description": "Mid-size function (33 instr, 2 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_user",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_038D -- offset 0x038D -- 33 instr\n; Funcion mediana (33 instr, 2 calls).\n; tags: calls_user, medium\n; callers: sub_0047, sub_03E2\n; calls (intra): sub_0837\n; calls (inter): USER.DIALOGBOX\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_038D -- offset 0x038D -- 33 instr\n; Mid-size function (33 instr, 2 calls).\n; tags: calls_user, medium\n; callers: sub_0047, sub_03E2\n; calls (intra): sub_0837\n; calls (inter): USER.DIALOGBOX\n;----------------------------------------------------------------------"
     },
     {
       "module": "NOTEPAD",
@@ -462,14 +462,14 @@
       ],
       "fanout": 15,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (283 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (283 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_user",
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_03E2 -- offset 0x03E2 -- 283 instr\n; Dispatcher: tabla de decisiones cmp+jcc (283 instr).\n; tags: calls_user, dispatcher, far\n; callers: sub_0047\n; calls (intra): sub_0047, sub_038D, sub_0837, sub_0876, sub_09CC\n; calls (inter): USER.BEGINPAINT, USER.DEFWINDOWPROC, USER.DESTROYWINDOW, USER.ENDPAINT, USER.GETCLIENTRECT, USER.ISICONIC (+4 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_03E2 -- offset 0x03E2 -- 283 instr\n; Dispatcher: cmp+jcc decision table (283 instr).\n; tags: calls_user, dispatcher, far\n; callers: sub_0047\n; calls (intra): sub_0047, sub_038D, sub_0837, sub_0876, sub_09CC\n; calls (inter): USER.BEGINPAINT, USER.DEFWINDOWPROC, USER.DESTROYWINDOW, USER.ENDPAINT, USER.GETCLIENTRECT, USER.ISICONIC (+4 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "NOTEPAD",
@@ -555,13 +555,13 @@
       ],
       "fanout": 5,
       "fanin": 1,
-      "description": "Funcion mediana (48 instr, 5 calls).",
+      "description": "Mid-size function (48 instr, 5 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_user",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_06BB -- offset 0x06BB -- 48 instr\n; Funcion mediana (48 instr, 5 calls).\n; tags: calls_user, medium\n; callers: sub_0A22\n; calls (intra): sub_072E\n; calls (inter): USER.DISPATCHMESSAGE, USER.GETMESSAGE, USER.TRANSLATEACCELERATOR, USER.TRANSLATEMESSAGE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_06BB -- offset 0x06BB -- 48 instr\n; Mid-size function (48 instr, 5 calls).\n; tags: calls_user, medium\n; callers: sub_0A22\n; calls (intra): sub_072E\n; calls (inter): USER.DISPATCHMESSAGE, USER.GETMESSAGE, USER.TRANSLATEACCELERATOR, USER.TRANSLATEMESSAGE\n;----------------------------------------------------------------------"
     },
     {
       "module": "NOTEPAD",
@@ -661,7 +661,7 @@
       ],
       "fanout": 7,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (108 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (108 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
@@ -669,7 +669,7 @@
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_072E -- offset 0x072E -- 108 instr\n; Dispatcher: tabla de decisiones cmp+jcc (108 instr).\n; tags: calls_kernel, calls_user, dispatcher, far\n; callers: sub_06BB\n; calls (intra): sub_0837\n; calls (inter): KERNEL.ANSIUPPER, KERNEL.LSTRCPY, USER.ISICONIC, USER.MESSAGEBEEP, USER.SENDMESSAGE, USER.SETWINDOWTEXT\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_072E -- offset 0x072E -- 108 instr\n; Dispatcher: cmp+jcc decision table (108 instr).\n; tags: calls_kernel, calls_user, dispatcher, far\n; callers: sub_06BB\n; calls (intra): sub_0837\n; calls (inter): KERNEL.ANSIUPPER, KERNEL.LSTRCPY, USER.ISICONIC, USER.MESSAGEBEEP, USER.SENDMESSAGE, USER.SETWINDOWTEXT\n;----------------------------------------------------------------------"
     },
     {
       "module": "NOTEPAD",
@@ -741,14 +741,14 @@
       ],
       "fanout": 2,
       "fanin": 4,
-      "description": "Funcion mediana (31 instr, 2 calls).",
+      "description": "Mid-size function (31 instr, 2 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_user",
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0837 -- offset 0x0837 -- 31 instr\n; Funcion mediana (31 instr, 2 calls).\n; tags: calls_user, far, medium\n; callers: sub_0047, sub_038D, sub_03E2, sub_072E\n; calls (intra): sub_0A22\n; calls (inter): USER.MESSAGEBOX\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0837 -- offset 0x0837 -- 31 instr\n; Mid-size function (31 instr, 2 calls).\n; tags: calls_user, far, medium\n; callers: sub_0047, sub_038D, sub_03E2, sub_072E\n; calls (intra): sub_0A22\n; calls (inter): USER.MESSAGEBOX\n;----------------------------------------------------------------------"
     },
     {
       "module": "NOTEPAD",
@@ -849,13 +849,13 @@
       ],
       "fanout": 8,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (124 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (124 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_user",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0876 -- offset 0x0876 -- 124 instr\n; Dispatcher: tabla de decisiones cmp+jcc (124 instr).\n; tags: calls_user, dispatcher\n; callers: sub_03E2\n; calls (inter): USER.CHECKMENUITEM, USER.CLOSECLIPBOARD, USER.ENABLEMENUITEM, USER.ENUMCLIPBOARDFORMATS, USER.GETMENU, USER.GETSUBMENU (+2 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0876 -- offset 0x0876 -- 124 instr\n; Dispatcher: cmp+jcc decision table (124 instr).\n; tags: calls_user, dispatcher\n; callers: sub_03E2\n; calls (inter): USER.CHECKMENUITEM, USER.CLOSECLIPBOARD, USER.ENABLEMENUITEM, USER.ENUMCLIPBOARDFORMATS, USER.GETMENU, USER.GETSUBMENU (+2 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "NOTEPAD",
@@ -934,7 +934,7 @@
       ],
       "fanout": 3,
       "fanin": 1,
-      "description": "Funcion mediana (36 instr, 3 calls).",
+      "description": "Mid-size function (36 instr, 3 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_gdi",
@@ -942,7 +942,7 @@
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_09CC -- offset 0x09CC -- 36 instr\n; Funcion mediana (36 instr, 3 calls).\n; tags: calls_gdi, calls_user, far, medium\n; callers: sub_03E2\n; calls (inter): GDI.DELETEDC, USER.ENABLEMENUITEM, USER.GETMENU\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_09CC -- offset 0x09CC -- 36 instr\n; Mid-size function (36 instr, 3 calls).\n; tags: calls_gdi, calls_user, far, medium\n; callers: sub_03E2\n; calls (inter): GDI.DELETEDC, USER.ENABLEMENUITEM, USER.GETMENU\n;----------------------------------------------------------------------"
     },
     {
       "module": "NOTEPAD",
@@ -1041,7 +1041,7 @@
       ],
       "fanout": 7,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (157 instr).",
+      "description": "Calls DOS services via INT 21h (157 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
@@ -1051,7 +1051,7 @@
         "int_21",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0A22 -- offset 0x0A22 -- 157 instr\n; Llama a servicios DOS via INT 21h (157 instr).\n; tags: calls_kernel, calls_user, complex_iterator, far, int_21, string_op\n; callers: sub_0837\n; calls (intra): sub_06BB, sub_0C7E, sub_0D10\n; calls (inter): KERNEL.FATALEXIT, KERNEL.INITTASK, KERNEL.WAITEVENT, USER.INITAPP\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0A22 -- offset 0x0A22 -- 157 instr\n; Calls DOS services via INT 21h (157 instr).\n; tags: calls_kernel, calls_user, complex_iterator, far, int_21, string_op\n; callers: sub_0837\n; calls (intra): sub_06BB, sub_0C7E, sub_0D10\n; calls (inter): KERNEL.FATALEXIT, KERNEL.INITTASK, KERNEL.WAITEVENT, USER.INITAPP\n;----------------------------------------------------------------------"
     },
     {
       "module": "NOTEPAD",
@@ -1156,13 +1156,13 @@
       ],
       "fanout": 9,
       "fanin": 1,
-      "description": "Funcion compleja: 130 instrucciones, 9 llamadas, 1 branches.",
+      "description": "Complex function: 130 instructions, 9 calls, 1 branches.",
       "confidence": "low",
       "semantic_tags": [
         "calls_kernel",
         "complex"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0B75 -- offset 0x0B75 -- 130 instr\n; Funcion compleja: 130 instrucciones, 9 llamadas, 1 branches.\n; tags: calls_kernel, complex\n; callers: sub_0D2B\n; calls (intra): sub_0D20\n; calls (inter): KERNEL.GLOBALALLOC, KERNEL.GLOBALCOMPACT, KERNEL.GLOBALFREE, KERNEL.GLOBALSIZE, KERNEL.LOCALALLOC, KERNEL.LOCALFREE (+2 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0B75 -- offset 0x0B75 -- 130 instr\n; Complex function: 130 instructions, 9 calls, 1 branches.\n; tags: calls_kernel, complex\n; callers: sub_0D2B\n; calls (intra): sub_0D20\n; calls (inter): KERNEL.GLOBALALLOC, KERNEL.GLOBALCOMPACT, KERNEL.GLOBALFREE, KERNEL.GLOBALSIZE, KERNEL.LOCALALLOC, KERNEL.LOCALFREE (+2 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "NOTEPAD",
@@ -1233,14 +1233,14 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (59 instr).",
+      "description": "Calls DOS services via INT 21h (59 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
         "int_21",
         "loop"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0C7E -- offset 0x0C7E -- 59 instr\n; Llama a servicios DOS via INT 21h (59 instr).\n; tags: complex_iterator, int_21, loop\n; callers: sub_0A22\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0C7E -- offset 0x0C7E -- 59 instr\n; Calls DOS services via INT 21h (59 instr).\n; tags: complex_iterator, int_21, loop\n; callers: sub_0A22\n;----------------------------------------------------------------------"
     },
     {
       "module": "NOTEPAD",
@@ -1299,12 +1299,12 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (8 instr).",
+      "description": "Unclassified function (8 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0D10 -- offset 0x0D10 -- 8 instr\n; Funcion sin clasificar definitiva (8 instr).\n; tags: small\n; callers: sub_0A22\n; calls (intra): sub_0D2B, sub_0D61\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0D10 -- offset 0x0D10 -- 8 instr\n; Unclassified function (8 instr).\n; tags: small\n; callers: sub_0A22\n; calls (intra): sub_0D2B, sub_0D61\n;----------------------------------------------------------------------"
     },
     {
       "module": "NOTEPAD",
@@ -1358,13 +1358,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Iterador con bucle (6 instr).",
+      "description": "Iterator with loop (6 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "loop"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0D20 -- offset 0x0D20 -- 6 instr\n; Iterador con bucle (6 instr).\n; tags: iterator, loop\n; callers: sub_0B75\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0D20 -- offset 0x0D20 -- 6 instr\n; Iterator with loop (6 instr).\n; tags: iterator, loop\n; callers: sub_0B75\n;----------------------------------------------------------------------"
     },
     {
       "module": "NOTEPAD",
@@ -1433,13 +1433,13 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (21 instr).",
+      "description": "Calls DOS services via INT 21h (21 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0D2B -- offset 0x0D2B -- 21 instr\n; Llama a servicios DOS via INT 21h (21 instr).\n; tags: dos_caller, int_21\n; callers: sub_0D10\n; calls (intra): sub_0B75, sub_0D73\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0D2B -- offset 0x0D2B -- 21 instr\n; Calls DOS services via INT 21h (21 instr).\n; tags: dos_caller, int_21\n; callers: sub_0D10\n; calls (intra): sub_0B75, sub_0D73\n;----------------------------------------------------------------------"
     },
     {
       "module": "NOTEPAD",
@@ -1498,12 +1498,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (10 instr).",
+      "description": "Unclassified function (10 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0D61 -- offset 0x0D61 -- 10 instr\n; Funcion sin clasificar definitiva (10 instr).\n; tags: wrapper\n; callers: sub_0D10\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0D61 -- offset 0x0D61 -- 10 instr\n; Unclassified function (10 instr).\n; tags: wrapper\n; callers: sub_0D10\n;----------------------------------------------------------------------"
     },
     {
       "module": "NOTEPAD",
@@ -1562,12 +1562,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (10 instr).",
+      "description": "Unclassified function (10 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0D73 -- offset 0x0D73 -- 10 instr\n; Funcion sin clasificar definitiva (10 instr).\n; tags: wrapper\n; callers: sub_0D2B\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0D73 -- offset 0x0D73 -- 10 instr\n; Unclassified function (10 instr).\n; tags: wrapper\n; callers: sub_0D2B\n;----------------------------------------------------------------------"
     },
     {
       "module": "NOTEPAD",
@@ -1711,7 +1711,7 @@
       "callers": [],
       "fanout": 16,
       "fanin": 0,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (291 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (291 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
@@ -1719,7 +1719,7 @@
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0000 -- offset 0x0000 -- 291 instr\n; Dispatcher: tabla de decisiones cmp+jcc (291 instr).\n; tags: calls_kernel, calls_user, dispatcher, far\n; calls (intra): sub_02C9, sub_0351\n; calls (inter): KERNEL.ANSIUPPER, KERNEL.LOCALALLOC, KERNEL.LOCALREALLOC, KERNEL.LSTRCPY, KERNEL.MAKEPROCINSTANCE, KERNEL.OPENFILE (+8 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0000 -- offset 0x0000 -- 291 instr\n; Dispatcher: cmp+jcc decision table (291 instr).\n; tags: calls_kernel, calls_user, dispatcher, far\n; calls (intra): sub_02C9, sub_0351\n; calls (inter): KERNEL.ANSIUPPER, KERNEL.LOCALALLOC, KERNEL.LOCALREALLOC, KERNEL.LSTRCPY, KERNEL.MAKEPROCINSTANCE, KERNEL.OPENFILE (+8 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "NOTEPAD",
@@ -1804,14 +1804,14 @@
       ],
       "fanout": 5,
       "fanin": 1,
-      "description": "Funcion mediana (50 instr, 5 calls).",
+      "description": "Mid-size function (50 instr, 5 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_kernel",
         "calls_user",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_02C9 -- offset 0x02C9 -- 50 instr\n; Funcion mediana (50 instr, 5 calls).\n; tags: calls_kernel, calls_user, medium\n; callers: sub_0000\n; calls (inter): KERNEL.LOCALALLOC, KERNEL.LOCALFREE, USER.LOADCURSOR, USER.LOADICON, USER.REGISTERCLASS\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_02C9 -- offset 0x02C9 -- 50 instr\n; Mid-size function (50 instr, 5 calls).\n; tags: calls_kernel, calls_user, medium\n; callers: sub_0000\n; calls (inter): KERNEL.LOCALALLOC, KERNEL.LOCALFREE, USER.LOADCURSOR, USER.LOADICON, USER.REGISTERCLASS\n;----------------------------------------------------------------------"
     },
     {
       "module": "NOTEPAD",
@@ -1886,14 +1886,14 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Funcion compleja: 123 instrucciones, 2 llamadas, 3 branches.",
+      "description": "Complex function: 123 instructions, 2 calls, 3 branches.",
       "confidence": "low",
       "semantic_tags": [
         "calls_kernel",
         "complex",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0351 -- offset 0x0351 -- 123 instr\n; Funcion compleja: 123 instrucciones, 2 llamadas, 3 branches.\n; tags: calls_kernel, complex, far\n; callers: sub_0000\n; calls (inter): KERNEL.GETPROFILEINT, KERNEL.GETPROFILESTRING\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0351 -- offset 0x0351 -- 123 instr\n; Complex function: 123 instructions, 2 calls, 3 branches.\n; tags: calls_kernel, complex, far\n; callers: sub_0000\n; calls (inter): KERNEL.GETPROFILEINT, KERNEL.GETPROFILESTRING\n;----------------------------------------------------------------------"
     },
     {
       "module": "NOTEPAD",
@@ -1956,13 +1956,13 @@
       "callers": [],
       "fanout": 2,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (12 instr).",
+      "description": "Unclassified function (12 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "calls_user",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_03B5 -- offset 0x03B5 -- 12 instr\n; Funcion sin clasificar definitiva (12 instr).\n; tags: calls_user, small\n; calls (inter): USER.DESTROYWINDOW, USER.ENABLEWINDOW\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_03B5 -- offset 0x03B5 -- 12 instr\n; Unclassified function (12 instr).\n; tags: calls_user, small\n; calls (inter): USER.DESTROYWINDOW, USER.ENABLEWINDOW\n;----------------------------------------------------------------------"
     },
     {
       "module": "NOTEPAD",
@@ -2024,13 +2024,13 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (35 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (35 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_user",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_001D -- offset 0x001D -- 35 instr\n; Dispatcher: tabla de decisiones cmp+jcc (35 instr).\n; tags: calls_user, dispatcher\n; calls (inter): USER.SENDDLGITEMMESSAGE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_001D -- offset 0x001D -- 35 instr\n; Dispatcher: cmp+jcc decision table (35 instr).\n; tags: calls_user, dispatcher\n; calls (inter): USER.SENDDLGITEMMESSAGE\n;----------------------------------------------------------------------"
     },
     {
       "module": "NOTEPAD",
@@ -2094,13 +2094,13 @@
       "callers": [],
       "fanout": 2,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (9 instr).",
+      "description": "Unclassified function (9 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "calls_user",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0074 -- offset 0x0074 -- 9 instr\n; Funcion sin clasificar definitiva (9 instr).\n; tags: calls_user, small\n; calls (inter): USER.GETDLGITEM, USER.ISWINDOWENABLED\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0074 -- offset 0x0074 -- 9 instr\n; Unclassified function (9 instr).\n; tags: calls_user, small\n; calls (inter): USER.GETDLGITEM, USER.ISWINDOWENABLED\n;----------------------------------------------------------------------"
     },
     {
       "module": "NOTEPAD",
@@ -2192,14 +2192,14 @@
       "callers": [],
       "fanout": 6,
       "fanin": 0,
-      "description": "Funcion compleja: 100 instrucciones, 6 llamadas, 5 branches.",
+      "description": "Complex function: 100 instructions, 6 calls, 5 branches.",
       "confidence": "low",
       "semantic_tags": [
         "calls_kernel",
         "calls_user",
         "complex"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_008D -- offset 0x008D -- 100 instr\n; Funcion compleja: 100 instrucciones, 6 llamadas, 5 branches.\n; tags: calls_kernel, calls_user, complex\n; calls (intra): sub_01A9, sub_0686\n; calls (inter): KERNEL.ANSIUPPER, KERNEL.LSTRCPY, USER.ENDDIALOG, USER.GETDLGITEMTEXT\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_008D -- offset 0x008D -- 100 instr\n; Complex function: 100 instructions, 6 calls, 5 branches.\n; tags: calls_kernel, calls_user, complex\n; calls (intra): sub_01A9, sub_0686\n; calls (inter): KERNEL.ANSIUPPER, KERNEL.LSTRCPY, USER.ENDDIALOG, USER.GETDLGITEMTEXT\n;----------------------------------------------------------------------"
     },
     {
       "module": "NOTEPAD",
@@ -2255,13 +2255,13 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (12 instr).",
+      "description": "Unclassified function (12 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "far",
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_018D -- offset 0x018D -- 12 instr\n; Funcion sin clasificar definitiva (12 instr).\n; tags: far, wrapper\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_018D -- offset 0x018D -- 12 instr\n; Unclassified function (12 instr).\n; tags: far, wrapper\n;----------------------------------------------------------------------"
     },
     {
       "module": "NOTEPAD",
@@ -2399,7 +2399,7 @@
       ],
       "fanout": 13,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (433 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (433 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
@@ -2407,7 +2407,7 @@
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_01A9 -- offset 0x01A9 -- 433 instr\n; Dispatcher: tabla de decisiones cmp+jcc (433 instr).\n; tags: calls_kernel, calls_user, dispatcher, far\n; callers: sub_008D\n; calls (intra): sub_0615, sub_06F6\n; calls (inter): KERNEL.LOCALLOCK, KERNEL.LOCALREALLOC, KERNEL.LOCALUNLOCK, KERNEL.LSTRCPY, KERNEL.LSTRLEN, KERNEL.OPENFILE (+5 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_01A9 -- offset 0x01A9 -- 433 instr\n; Dispatcher: cmp+jcc decision table (433 instr).\n; tags: calls_kernel, calls_user, dispatcher, far\n; callers: sub_008D\n; calls (intra): sub_0615, sub_06F6\n; calls (inter): KERNEL.LOCALLOCK, KERNEL.LOCALREALLOC, KERNEL.LOCALUNLOCK, KERNEL.LSTRCPY, KERNEL.LSTRLEN, KERNEL.OPENFILE (+5 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "NOTEPAD",
@@ -2481,7 +2481,7 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Funcion mediana (50 instr, 2 calls).",
+      "description": "Mid-size function (50 instr, 2 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_kernel",
@@ -2489,7 +2489,7 @@
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0615 -- offset 0x0615 -- 50 instr\n; Funcion mediana (50 instr, 2 calls).\n; tags: calls_kernel, calls_user, far, medium\n; callers: sub_01A9\n; calls (inter): KERNEL.LSTRCPY, USER.SENDMESSAGE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0615 -- offset 0x0615 -- 50 instr\n; Mid-size function (50 instr, 2 calls).\n; tags: calls_kernel, calls_user, far, medium\n; callers: sub_01A9\n; calls (inter): KERNEL.LSTRCPY, USER.SENDMESSAGE\n;----------------------------------------------------------------------"
     },
     {
       "module": "NOTEPAD",
@@ -2569,14 +2569,14 @@
       ],
       "fanout": 3,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (58 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (58 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0686 -- offset 0x0686 -- 58 instr\n; Dispatcher: tabla de decisiones cmp+jcc (58 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_008D\n; calls (inter): KERNEL.ANSIPREV, KERNEL.LSTRCAT, KERNEL.LSTRLEN\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0686 -- offset 0x0686 -- 58 instr\n; Dispatcher: cmp+jcc decision table (58 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_008D\n; calls (inter): KERNEL.ANSIPREV, KERNEL.LSTRCAT, KERNEL.LSTRLEN\n;----------------------------------------------------------------------"
     },
     {
       "module": "NOTEPAD",
@@ -2642,13 +2642,13 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Funcion mediana (36 instr, 1 calls).",
+      "description": "Mid-size function (36 instr, 1 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_user",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_06F6 -- offset 0x06F6 -- 36 instr\n; Funcion mediana (36 instr, 1 calls).\n; tags: calls_user, medium\n; callers: sub_01A9\n; calls (inter): USER.SENDMESSAGE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_06F6 -- offset 0x06F6 -- 36 instr\n; Mid-size function (36 instr, 1 calls).\n; tags: calls_user, medium\n; callers: sub_01A9\n; calls (inter): USER.SENDMESSAGE\n;----------------------------------------------------------------------"
     },
     {
       "module": "NOTEPAD",
@@ -2721,13 +2721,13 @@
       "callers": [],
       "fanout": 2,
       "fanin": 0,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (153 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (153 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0094 -- offset 0x0094 -- 153 instr\n; Dispatcher: tabla de decisiones cmp+jcc (153 instr).\n; tags: calls_kernel, dispatcher\n; calls (intra): sub_021C\n; calls (inter): KERNEL.LSTRCPY\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0094 -- offset 0x0094 -- 153 instr\n; Dispatcher: cmp+jcc decision table (153 instr).\n; tags: calls_kernel, dispatcher\n; calls (intra): sub_021C\n; calls (inter): KERNEL.LSTRCPY\n;----------------------------------------------------------------------"
     },
     {
       "module": "NOTEPAD",
@@ -2786,12 +2786,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (25 instr).",
+      "description": "Unclassified function (25 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_021C -- offset 0x021C -- 25 instr\n; Funcion sin clasificar definitiva (25 instr).\n; tags: small\n; callers: sub_0094\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_021C -- offset 0x021C -- 25 instr\n; Unclassified function (25 instr).\n; tags: small\n; callers: sub_0094\n;----------------------------------------------------------------------"
     },
     {
       "module": "NOTEPAD",
@@ -2872,13 +2872,13 @@
       "callers": [],
       "fanout": 5,
       "fanin": 0,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (42 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (42 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_user",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0019 -- offset 0x0019 -- 42 instr\n; Dispatcher: tabla de decisiones cmp+jcc (42 instr).\n; tags: calls_user, dispatcher\n; calls (inter): USER.CHECKDLGBUTTON, USER.ENABLEWINDOW, USER.ENDDIALOG, USER.GETDLGITEM, USER.SETDLGITEMTEXT\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0019 -- offset 0x0019 -- 42 instr\n; Dispatcher: cmp+jcc decision table (42 instr).\n; tags: calls_user, dispatcher\n; calls (inter): USER.CHECKDLGBUTTON, USER.ENABLEWINDOW, USER.ENDDIALOG, USER.GETDLGITEM, USER.SETDLGITEMTEXT\n;----------------------------------------------------------------------"
     },
     {
       "module": "NOTEPAD",
@@ -2957,13 +2957,13 @@
       "callers": [],
       "fanout": 5,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (26 instr).",
+      "description": "Unclassified function (26 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "calls_user",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_008B -- offset 0x008B -- 26 instr\n; Funcion sin clasificar definitiva (26 instr).\n; tags: calls_user, small\n; calls (intra): sub_011F\n; calls (inter): USER.ENDDIALOG, USER.GETDLGITEM, USER.GETDLGITEMTEXT, USER.ISWINDOWENABLED\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_008B -- offset 0x008B -- 26 instr\n; Unclassified function (26 instr).\n; tags: calls_user, small\n; calls (intra): sub_011F\n; calls (inter): USER.ENDDIALOG, USER.GETDLGITEM, USER.GETDLGITEMTEXT, USER.ISWINDOWENABLED\n;----------------------------------------------------------------------"
     },
     {
       "module": "NOTEPAD",
@@ -3029,13 +3029,13 @@
       "callers": [],
       "fanout": 2,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (20 instr).",
+      "description": "Unclassified function (20 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "calls_user",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_00CE -- offset 0x00CE -- 20 instr\n; Funcion sin clasificar definitiva (20 instr).\n; tags: calls_user, small\n; calls (inter): USER.CHECKDLGBUTTON, USER.ISDLGBUTTONCHECKED\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_00CE -- offset 0x00CE -- 20 instr\n; Unclassified function (20 instr).\n; tags: calls_user, small\n; calls (inter): USER.CHECKDLGBUTTON, USER.ISDLGBUTTONCHECKED\n;----------------------------------------------------------------------"
     },
     {
       "module": "NOTEPAD",
@@ -3091,13 +3091,13 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (12 instr).",
+      "description": "Unclassified function (12 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "far",
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0102 -- offset 0x0102 -- 12 instr\n; Funcion sin clasificar definitiva (12 instr).\n; tags: far, wrapper\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0102 -- offset 0x0102 -- 12 instr\n; Unclassified function (12 instr).\n; tags: far, wrapper\n;----------------------------------------------------------------------"
     },
     {
       "module": "NOTEPAD",
@@ -3185,7 +3185,7 @@
       ],
       "fanout": 5,
       "fanin": 1,
-      "description": "Funcion compleja: 90 instrucciones, 5 llamadas, 1 branches.",
+      "description": "Complex function: 90 instructions, 5 calls, 1 branches.",
       "confidence": "low",
       "semantic_tags": [
         "calls_kernel",
@@ -3193,7 +3193,7 @@
         "complex",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_011F -- offset 0x011F -- 90 instr\n; Funcion compleja: 90 instrucciones, 5 llamadas, 1 branches.\n; tags: calls_kernel, calls_user, complex, far\n; callers: sub_008B\n; calls (intra): sub_01F5\n; calls (inter): KERNEL.LOCALLOCK, KERNEL.LOCALUNLOCK, KERNEL.LSTRLEN, USER.SENDMESSAGE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_011F -- offset 0x011F -- 90 instr\n; Complex function: 90 instructions, 5 calls, 1 branches.\n; tags: calls_kernel, calls_user, complex, far\n; callers: sub_008B\n; calls (intra): sub_01F5\n; calls (inter): KERNEL.LOCALLOCK, KERNEL.LOCALUNLOCK, KERNEL.LSTRLEN, USER.SENDMESSAGE\n;----------------------------------------------------------------------"
     },
     {
       "module": "NOTEPAD",
@@ -3264,13 +3264,13 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Funcion mediana (31 instr, 2 calls).",
+      "description": "Mid-size function (31 instr, 2 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_kernel",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_01F5 -- offset 0x01F5 -- 31 instr\n; Funcion mediana (31 instr, 2 calls).\n; tags: calls_kernel, medium\n; callers: sub_011F\n; calls (intra): sub_0245\n; calls (inter): KERNEL.LSTRLEN\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_01F5 -- offset 0x01F5 -- 31 instr\n; Mid-size function (31 instr, 2 calls).\n; tags: calls_kernel, medium\n; callers: sub_011F\n; calls (intra): sub_0245\n; calls (inter): KERNEL.LSTRLEN\n;----------------------------------------------------------------------"
     },
     {
       "module": "NOTEPAD",
@@ -3337,13 +3337,13 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Funcion mediana (50 instr, 1 calls).",
+      "description": "Mid-size function (50 instr, 1 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_kernel",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0245 -- offset 0x0245 -- 50 instr\n; Funcion mediana (50 instr, 1 calls).\n; tags: calls_kernel, medium\n; callers: sub_01F5\n; calls (inter): KERNEL.ANSIUPPER\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0245 -- offset 0x0245 -- 50 instr\n; Mid-size function (50 instr, 1 calls).\n; tags: calls_kernel, medium\n; callers: sub_01F5\n; calls (inter): KERNEL.ANSIUPPER\n;----------------------------------------------------------------------"
     },
     {
       "module": "NOTEPAD",
@@ -3517,7 +3517,7 @@
       "callers": [],
       "fanout": 21,
       "fanin": 0,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (414 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (414 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
@@ -3525,7 +3525,7 @@
         "dispatcher",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_02C7 -- offset 0x02C7 -- 414 instr\n; Dispatcher: tabla de decisiones cmp+jcc (414 instr).\n; tags: calls_kernel, calls_user, dispatcher, far\n; calls (inter): KERNEL.ANSINEXT, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK, KERNEL.LOCALALLOC, KERNEL.LOCALFREE, KERNEL.LOCALLOCK (+15 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_02C7 -- offset 0x02C7 -- 414 instr\n; Dispatcher: cmp+jcc decision table (414 instr).\n; tags: calls_kernel, calls_user, dispatcher, far\n; calls (inter): KERNEL.ANSINEXT, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK, KERNEL.LOCALALLOC, KERNEL.LOCALFREE, KERNEL.LOCALLOCK (+15 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "NOTEPAD",
@@ -3665,14 +3665,14 @@
       "callers": [],
       "fanout": 17,
       "fanin": 0,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (203 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (203 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "calls_user",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0141 -- offset 0x0141 -- 203 instr\n; Dispatcher: tabla de decisiones cmp+jcc (203 instr).\n; tags: calls_kernel, calls_user, dispatcher\n; calls (intra): sub_03E8, sub_04BD, sub_04F9\n; calls (inter): KERNEL.ANSINEXT, KERNEL.ANSIPREV, KERNEL.ANSIUPPER, KERNEL.LSTRCPY, KERNEL.LSTRLEN, KERNEL.OPENFILE (+8 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0141 -- offset 0x0141 -- 203 instr\n; Dispatcher: cmp+jcc decision table (203 instr).\n; tags: calls_kernel, calls_user, dispatcher\n; calls (intra): sub_03E8, sub_04BD, sub_04F9\n; calls (inter): KERNEL.ANSINEXT, KERNEL.ANSIPREV, KERNEL.ANSIUPPER, KERNEL.LSTRCPY, KERNEL.LSTRLEN, KERNEL.OPENFILE (+8 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "NOTEPAD",
@@ -3740,14 +3740,14 @@
       "callers": [],
       "fanout": 2,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (27 instr).",
+      "description": "Unclassified function (27 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "calls_user",
         "far",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_035F -- offset 0x035F -- 27 instr\n; Funcion sin clasificar definitiva (27 instr).\n; tags: calls_user, far, small\n; calls (intra): sub_039F\n; calls (inter): USER.DLGDIRLIST\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_035F -- offset 0x035F -- 27 instr\n; Unclassified function (27 instr).\n; tags: calls_user, far, small\n; calls (intra): sub_039F\n; calls (inter): USER.DLGDIRLIST\n;----------------------------------------------------------------------"
     },
     {
       "module": "NOTEPAD",
@@ -3823,14 +3823,14 @@
       ],
       "fanout": 3,
       "fanin": 1,
-      "description": "Funcion mediana (34 instr, 3 calls).",
+      "description": "Mid-size function (34 instr, 3 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_user",
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_039F -- offset 0x039F -- 34 instr\n; Funcion mediana (34 instr, 3 calls).\n; tags: calls_user, far, medium\n; callers: sub_035F\n; calls (inter): USER.ENABLEWINDOW, USER.GETDLGITEM, USER.SENDMESSAGE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_039F -- offset 0x039F -- 34 instr\n; Mid-size function (34 instr, 3 calls).\n; tags: calls_user, far, medium\n; callers: sub_035F\n; calls (inter): USER.ENABLEWINDOW, USER.GETDLGITEM, USER.SENDMESSAGE\n;----------------------------------------------------------------------"
     },
     {
       "module": "NOTEPAD",
@@ -3908,13 +3908,13 @@
       ],
       "fanout": 3,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (90 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (90 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_03E8 -- offset 0x03E8 -- 90 instr\n; Dispatcher: tabla de decisiones cmp+jcc (90 instr).\n; tags: calls_kernel, dispatcher\n; callers: sub_0141\n; calls (inter): KERNEL.ANSIPREV, KERNEL.LSTRCPY, KERNEL.LSTRLEN\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_03E8 -- offset 0x03E8 -- 90 instr\n; Dispatcher: cmp+jcc decision table (90 instr).\n; tags: calls_kernel, dispatcher\n; callers: sub_0141\n; calls (inter): KERNEL.ANSIPREV, KERNEL.LSTRCPY, KERNEL.LSTRLEN\n;----------------------------------------------------------------------"
     },
     {
       "module": "NOTEPAD",
@@ -3982,14 +3982,14 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Funcion mediana (32 instr, 1 calls).",
+      "description": "Mid-size function (32 instr, 1 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_kernel",
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_04BD -- offset 0x04BD -- 32 instr\n; Funcion mediana (32 instr, 1 calls).\n; tags: calls_kernel, far, medium\n; callers: sub_0141\n; calls (inter): KERNEL.OPENFILE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_04BD -- offset 0x04BD -- 32 instr\n; Mid-size function (32 instr, 1 calls).\n; tags: calls_kernel, far, medium\n; callers: sub_0141\n; calls (inter): KERNEL.OPENFILE\n;----------------------------------------------------------------------"
     },
     {
       "module": "NOTEPAD",
@@ -4047,12 +4047,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion hoja (no llama a otras, 20 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 20 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_04F9 -- offset 0x04F9 -- 20 instr\n; Funcion hoja (no llama a otras, 20 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_0141\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_04F9 -- offset 0x04F9 -- 20 instr\n; Leaf function (no callees, 20 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_0141\n;----------------------------------------------------------------------"
     },
     {
       "module": "NOTEPAD",
@@ -4117,14 +4117,14 @@
       "callers": [],
       "fanout": 2,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (15 instr).",
+      "description": "Unclassified function (15 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "calls_user",
         "far",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_00E3 -- offset 0x00E3 -- 15 instr\n; Funcion sin clasificar definitiva (15 instr).\n; tags: calls_user, far, small\n; calls (inter): USER.ENABLEWINDOW, USER.GETDLGITEM\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_00E3 -- offset 0x00E3 -- 15 instr\n; Unclassified function (15 instr).\n; tags: calls_user, far, small\n; calls (inter): USER.ENABLEWINDOW, USER.GETDLGITEM\n;----------------------------------------------------------------------"
     },
     {
       "module": "NOTEPAD",
@@ -4201,13 +4201,13 @@
       "callers": [],
       "fanout": 3,
       "fanin": 0,
-      "description": "Funcion mediana (50 instr, 3 calls).",
+      "description": "Mid-size function (50 instr, 3 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_kernel",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0104 -- offset 0x0104 -- 50 instr\n; Funcion mediana (50 instr, 3 calls).\n; tags: calls_kernel, medium\n; calls (inter): KERNEL.ANSINEXT, KERNEL.ANSIPREV, KERNEL.LSTRLEN\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0104 -- offset 0x0104 -- 50 instr\n; Mid-size function (50 instr, 3 calls).\n; tags: calls_kernel, medium\n; calls (inter): KERNEL.ANSINEXT, KERNEL.ANSIPREV, KERNEL.LSTRLEN\n;----------------------------------------------------------------------"
     }
   ]
 }

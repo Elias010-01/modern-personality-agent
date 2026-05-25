@@ -76,7 +76,7 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (154 instr).",
+      "description": "Calls DOS services via INT 21h (154 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
@@ -84,7 +84,7 @@
         "int_10",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_002F -- offset 0x002F -- 154 instr\n; Llama a servicios DOS via INT 21h (154 instr).\n; tags: dos_caller, far, int_10, int_21\n; callers: sub_0269\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_002F -- offset 0x002F -- 154 instr\n; Calls DOS services via INT 21h (154 instr).\n; tags: dos_caller, far, int_10, int_21\n; callers: sub_0269\n;----------------------------------------------------------------------"
     },
     {
       "module": "LPC",
@@ -149,12 +149,12 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Funcion mediana (38 instr, 1 calls).",
+      "description": "Mid-size function (38 instr, 1 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0227 -- offset 0x0227 -- 38 instr\n; Funcion mediana (38 instr, 1 calls).\n; tags: medium\n; calls (intra): sub_0269\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0227 -- offset 0x0227 -- 38 instr\n; Mid-size function (38 instr, 1 calls).\n; tags: medium\n; calls (intra): sub_0269\n;----------------------------------------------------------------------"
     },
     {
       "module": "LPC",
@@ -243,7 +243,7 @@
       ],
       "fanout": 5,
       "fanin": 1,
-      "description": "Iterador con bucle (201 instr).",
+      "description": "Iterator with loop (201 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_system",
@@ -251,7 +251,7 @@
         "far",
         "loop"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0269 -- offset 0x0269 -- 201 instr\n; Iterador con bucle (201 instr).\n; tags: calls_system, complex_iterator, far, loop\n; callers: sub_0227\n; calls (intra): sub_002F\n; calls (inter): SYSTEM.CREATESYSTEMTIMER, SYSTEM.DISABLESYSTEMTIMERS, SYSTEM.ENABLESYSTEMTIMERS, SYSTEM.KILLSYSTEMTIMER\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0269 -- offset 0x0269 -- 201 instr\n; Iterator with loop (201 instr).\n; tags: calls_system, complex_iterator, far, loop\n; callers: sub_0227\n; calls (intra): sub_002F\n; calls (inter): SYSTEM.CREATESYSTEMTIMER, SYSTEM.DISABLESYSTEMTIMERS, SYSTEM.ENABLESYSTEMTIMERS, SYSTEM.KILLSYSTEMTIMER\n;----------------------------------------------------------------------"
     }
   ]
 }

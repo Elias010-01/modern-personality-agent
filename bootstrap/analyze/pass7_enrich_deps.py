@@ -185,7 +185,7 @@ def regenerate_html(import_edges: dict, library_to_module: dict) -> None:
             edges.append({
                 "from": src, "to": dst,
                 "value": n_call + n_imp,
-                "title": f"{src} -> {dst}\n  calls directos: {n_call}\n  imports: {n_imp}",
+                "title": f"{src} -> {dst}\n  direct calls: {n_call}\n  imports: {n_imp}",
                 "width": 1 + 4 * (n_call / max_call),
                 "edge_kind": "both",
             })
@@ -193,7 +193,7 @@ def regenerate_html(import_edges: dict, library_to_module: dict) -> None:
             edges.append({
                 "from": src, "to": dst,
                 "value": n_call,
-                "title": f"{src} -> {dst}: {n_call} llamadas directas",
+                "title": f"{src} -> {dst}: {n_call} direct calls",
                 "width": 1 + 4 * (n_call / max_call),
                 "edge_kind": "call",
             })
@@ -201,7 +201,7 @@ def regenerate_html(import_edges: dict, library_to_module: dict) -> None:
             edges.append({
                 "from": src, "to": dst,
                 "value": n_imp,
-                "title": f"{src} -> {dst}: solo IMPORT ({n_imp} funcs importadas, sin call directo)",
+                "title": f"{src} -> {dst}: IMPORT-only ({n_imp} functions imported, no direct call)",
                 "width": 1 + 2 * (n_imp / max_imp),
                 "edge_kind": "import",
                 "dashes": True,
@@ -227,14 +227,14 @@ def regenerate_html(import_edges: dict, library_to_module: dict) -> None:
     # Insertar leyenda de tipos de arista
     legend_html = (
         '<div style="margin-top:8px; font-size:11px; opacity:0.8;">'
-        '<b>Aristas:</b><br>'
-        '<span style="border-bottom:2px solid #fff8;">━━━</span> call directo<br>'
-        '<span style="border-bottom:2px dashed #fff8;">╌╌╌</span> IMPORT (carga/ordinal)<br>'
+        '<b>Edges:</b><br>'
+        '<span style="border-bottom:2px solid #fff8;">━━━</span> direct call<br>'
+        '<span style="border-bottom:2px dashed #fff8;">╌╌╌</span> IMPORT (load/ordinal)<br>'
         '</div>'
     )
     html = html.replace(
-        'placeholder="Buscar modulo... (ej: USER)">',
-        'placeholder="Buscar modulo... (ej: USER)">' + legend_html
+        'placeholder="Search module... (e.g. USER)">',
+        'placeholder="Search module... (e.g. USER)">' + legend_html
     )
     # Hacer que el edge respete `dashes` (vis-network ya lo soporta nativamente)
     out = REPO / "docs" / "analysis" / "callgraph.html"

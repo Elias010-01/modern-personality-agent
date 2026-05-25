@@ -77,14 +77,14 @@
       ],
       "fanout": 3,
       "fanin": 1,
-      "description": "Funcion mediana (41 instr, 3 calls).",
+      "description": "Mid-size function (41 instr, 3 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_gdi",
         "calls_user",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0179 -- offset 0x0179 -- 41 instr\n; Funcion mediana (41 instr, 3 calls).\n; tags: calls_gdi, calls_user, medium\n; callers: sub_0205\n; calls (inter): GDI.CREATEPEN, GDI.CREATESOLIDBRUSH, USER.GETSYSCOLOR\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0179 -- offset 0x0179 -- 41 instr\n; Mid-size function (41 instr, 3 calls).\n; tags: calls_gdi, calls_user, medium\n; callers: sub_0205\n; calls (inter): GDI.CREATEPEN, GDI.CREATESOLIDBRUSH, USER.GETSYSCOLOR\n;----------------------------------------------------------------------"
     },
     {
       "module": "CLOCK",
@@ -144,13 +144,13 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Wrapper que delega en GDI.DELETEOBJECT.",
+      "description": "Wrapper delegating to GDI.DELETEOBJECT.",
       "confidence": "medium",
       "semantic_tags": [
         "calls_gdi",
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_01DA -- offset 0x01DA -- 13 instr\n; Wrapper que delega en GDI.DELETEOBJECT.\n; tags: calls_gdi, wrapper\n; callers: sub_0BBA\n; calls (inter): GDI.DELETEOBJECT\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_01DA -- offset 0x01DA -- 13 instr\n; Wrapper delegating to GDI.DELETEOBJECT.\n; tags: calls_gdi, wrapper\n; callers: sub_0BBA\n; calls (inter): GDI.DELETEOBJECT\n;----------------------------------------------------------------------"
     },
     {
       "module": "CLOCK",
@@ -247,7 +247,7 @@
       "callers": [],
       "fanout": 9,
       "fanin": 0,
-      "description": "Funcion compleja: 106 instrucciones, 9 llamadas, 2 branches.",
+      "description": "Complex function: 106 instructions, 9 calls, 2 branches.",
       "confidence": "low",
       "semantic_tags": [
         "calls_gdi",
@@ -255,7 +255,7 @@
         "calls_user",
         "complex"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0205 -- offset 0x0205 -- 106 instr\n; Funcion compleja: 106 instrucciones, 9 llamadas, 2 branches.\n; tags: calls_gdi, calls_kernel, calls_user, complex\n; calls (intra): sub_0179, sub_0DB8, sub_0FF0, sub_1091\n; calls (inter): GDI.GETDEVICECAPS, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK, USER.GETDC, USER.RELEASEDC\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0205 -- offset 0x0205 -- 106 instr\n; Complex function: 106 instructions, 9 calls, 2 branches.\n; tags: calls_gdi, calls_kernel, calls_user, complex\n; calls (intra): sub_0179, sub_0DB8, sub_0FF0, sub_1091\n; calls (inter): GDI.GETDEVICECAPS, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK, USER.GETDC, USER.RELEASEDC\n;----------------------------------------------------------------------"
     },
     {
       "module": "CLOCK",
@@ -332,13 +332,13 @@
       "callers": [],
       "fanout": 4,
       "fanin": 0,
-      "description": "Funcion mediana (44 instr, 4 calls).",
+      "description": "Mid-size function (44 instr, 4 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_user",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0317 -- offset 0x0317 -- 44 instr\n; Funcion mediana (44 instr, 4 calls).\n; tags: calls_user, medium\n; calls (intra): sub_0AE3\n; calls (inter): USER.KILLTIMER, USER.SETRECT, USER.SETTIMER\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0317 -- offset 0x0317 -- 44 instr\n; Mid-size function (44 instr, 4 calls).\n; tags: calls_user, medium\n; calls (intra): sub_0AE3\n; calls (inter): USER.KILLTIMER, USER.SETRECT, USER.SETTIMER\n;----------------------------------------------------------------------"
     },
     {
       "module": "CLOCK",
@@ -413,13 +413,13 @@
       "callers": [],
       "fanout": 4,
       "fanin": 0,
-      "description": "Funcion mediana (31 instr, 4 calls).",
+      "description": "Mid-size function (31 instr, 4 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_user",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0390 -- offset 0x0390 -- 31 instr\n; Funcion mediana (31 instr, 4 calls).\n; tags: calls_user, medium\n; calls (intra): sub_03E2, sub_0DB8\n; calls (inter): USER.GETDC, USER.RELEASEDC\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0390 -- offset 0x0390 -- 31 instr\n; Mid-size function (31 instr, 4 calls).\n; tags: calls_user, medium\n; calls (intra): sub_03E2, sub_0DB8\n; calls (inter): USER.GETDC, USER.RELEASEDC\n;----------------------------------------------------------------------"
     },
     {
       "module": "CLOCK",
@@ -514,7 +514,7 @@
       ],
       "fanout": 8,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (211 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (211 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_gdi",
@@ -522,7 +522,7 @@
         "calls_user",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_03E2 -- offset 0x03E2 -- 211 instr\n; Dispatcher: tabla de decisiones cmp+jcc (211 instr).\n; tags: calls_gdi, calls_kernel, calls_user, dispatcher\n; callers: sub_0390\n; calls (intra): sub_0615, sub_079E, sub_084D, sub_0DB8\n; calls (inter): GDI.SETBKMODE, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK, USER.FILLRECT\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_03E2 -- offset 0x03E2 -- 211 instr\n; Dispatcher: cmp+jcc decision table (211 instr).\n; tags: calls_gdi, calls_kernel, calls_user, dispatcher\n; callers: sub_0390\n; calls (intra): sub_0615, sub_079E, sub_084D, sub_0DB8\n; calls (inter): GDI.SETBKMODE, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK, USER.FILLRECT\n;----------------------------------------------------------------------"
     },
     {
       "module": "CLOCK",
@@ -608,13 +608,13 @@
       ],
       "fanout": 5,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (167 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (167 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_user",
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0615 -- offset 0x0615 -- 167 instr\n; Dispatcher: tabla de decisiones cmp+jcc (167 instr).\n; tags: calls_user, dispatcher\n; callers: sub_03E2\n; calls (intra): sub_0FF0, sub_1091\n; calls (inter): USER.FILLRECT, USER.INFLATERECT, USER.OFFSETRECT\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0615 -- offset 0x0615 -- 167 instr\n; Dispatcher: cmp+jcc decision table (167 instr).\n; tags: calls_user, dispatcher\n; callers: sub_03E2\n; calls (intra): sub_0FF0, sub_1091\n; calls (inter): USER.FILLRECT, USER.INFLATERECT, USER.OFFSETRECT\n;----------------------------------------------------------------------"
     },
     {
       "module": "CLOCK",
@@ -700,13 +700,13 @@
       ],
       "fanout": 6,
       "fanin": 1,
-      "description": "Funcion mediana (80 instr, 6 calls).",
+      "description": "Mid-size function (80 instr, 6 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_gdi",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_079E -- offset 0x079E -- 80 instr\n; Funcion mediana (80 instr, 6 calls).\n; tags: calls_gdi, medium\n; callers: sub_03E2\n; calls (intra): sub_0FF0, sub_1091\n; calls (inter): GDI.LINETO, GDI.MOVETO, GDI.SELECTOBJECT, GDI.SETROP2\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_079E -- offset 0x079E -- 80 instr\n; Mid-size function (80 instr, 6 calls).\n; tags: calls_gdi, medium\n; callers: sub_03E2\n; calls (intra): sub_0FF0, sub_1091\n; calls (inter): GDI.LINETO, GDI.MOVETO, GDI.SELECTOBJECT, GDI.SETROP2\n;----------------------------------------------------------------------"
     },
     {
       "module": "CLOCK",
@@ -796,13 +796,13 @@
       ],
       "fanout": 6,
       "fanin": 1,
-      "description": "Funcion compleja: 298 instrucciones, 6 llamadas, 3 branches.",
+      "description": "Complex function: 298 instructions, 6 calls, 3 branches.",
       "confidence": "low",
       "semantic_tags": [
         "calls_gdi",
         "complex"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_084D -- offset 0x084D -- 298 instr\n; Funcion compleja: 298 instrucciones, 6 llamadas, 3 branches.\n; tags: calls_gdi, complex\n; callers: sub_03E2\n; calls (intra): sub_0FF0, sub_1091\n; calls (inter): GDI.LINETO, GDI.MOVETO, GDI.SELECTOBJECT, GDI.SETROP2\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_084D -- offset 0x084D -- 298 instr\n; Complex function: 298 instructions, 6 calls, 3 branches.\n; tags: calls_gdi, complex\n; callers: sub_03E2\n; calls (intra): sub_0FF0, sub_1091\n; calls (inter): GDI.LINETO, GDI.MOVETO, GDI.SELECTOBJECT, GDI.SETROP2\n;----------------------------------------------------------------------"
     },
     {
       "module": "CLOCK",
@@ -870,12 +870,12 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Funcion mediana (62 instr, 2 calls).",
+      "description": "Mid-size function (62 instr, 2 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0AE3 -- offset 0x0AE3 -- 62 instr\n; Funcion mediana (62 instr, 2 calls).\n; tags: medium\n; callers: sub_0317\n; calls (intra): sub_0FF0, sub_1091\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0AE3 -- offset 0x0AE3 -- 62 instr\n; Mid-size function (62 instr, 2 calls).\n; tags: medium\n; callers: sub_0317\n; calls (intra): sub_0FF0, sub_1091\n;----------------------------------------------------------------------"
     },
     {
       "module": "CLOCK",
@@ -943,13 +943,13 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (21 instr).",
+      "description": "Unclassified function (21 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "calls_user",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0B87 -- offset 0x0B87 -- 21 instr\n; Funcion sin clasificar definitiva (21 instr).\n; tags: calls_user, small\n; callers: sub_0DB8\n; calls (intra): sub_0CFB\n; calls (inter): USER.LOADSTRING\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0B87 -- offset 0x0B87 -- 21 instr\n; Unclassified function (21 instr).\n; tags: calls_user, small\n; callers: sub_0DB8\n; calls (intra): sub_0CFB\n; calls (inter): USER.LOADSTRING\n;----------------------------------------------------------------------"
     },
     {
       "module": "CLOCK",
@@ -1079,14 +1079,14 @@
       "callers": [],
       "fanout": 15,
       "fanin": 0,
-      "description": "Funcion compleja: 140 instrucciones, 15 llamadas, 2 branches.",
+      "description": "Complex function: 140 instructions, 15 calls, 2 branches.",
       "confidence": "low",
       "semantic_tags": [
         "calls_kernel",
         "calls_user",
         "complex"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0BBA -- offset 0x0BBA -- 140 instr\n; Funcion compleja: 140 instrucciones, 15 llamadas, 2 branches.\n; tags: calls_kernel, calls_user, complex\n; calls (intra): sub_01DA, sub_0FE0\n; calls (inter): KERNEL.GETINSTANCEDATA, KERNEL.LOCALALLOC, KERNEL.MAKEPROCINSTANCE, USER.CHANGEMENU, USER.CREATEWINDOW, USER.DISPATCHMESSAGE (+7 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0BBA -- offset 0x0BBA -- 140 instr\n; Complex function: 140 instructions, 15 calls, 2 branches.\n; tags: calls_kernel, calls_user, complex\n; calls (intra): sub_01DA, sub_0FE0\n; calls (inter): KERNEL.GETINSTANCEDATA, KERNEL.LOCALALLOC, KERNEL.MAKEPROCINSTANCE, USER.CHANGEMENU, USER.CREATEWINDOW, USER.DISPATCHMESSAGE (+7 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "CLOCK",
@@ -1183,14 +1183,14 @@
       ],
       "fanout": 7,
       "fanin": 1,
-      "description": "Funcion mediana (72 instr, 7 calls).",
+      "description": "Mid-size function (72 instr, 7 calls).",
       "confidence": "low",
       "semantic_tags": [
         "calls_kernel",
         "calls_user",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0CFB -- offset 0x0CFB -- 72 instr\n; Funcion mediana (72 instr, 7 calls).\n; tags: calls_kernel, calls_user, medium\n; callers: sub_0B87\n; calls (inter): KERNEL.FINDRESOURCE, KERNEL.LOADRESOURCE, KERNEL.LOCALALLOC, KERNEL.LOCALFREE, USER.LOADCURSOR, USER.LOADSTRING (+1 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0CFB -- offset 0x0CFB -- 72 instr\n; Mid-size function (72 instr, 7 calls).\n; tags: calls_kernel, calls_user, medium\n; callers: sub_0B87\n; calls (inter): KERNEL.FINDRESOURCE, KERNEL.LOADRESOURCE, KERNEL.LOCALALLOC, KERNEL.LOCALFREE, USER.LOADCURSOR, USER.LOADSTRING (+1 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "CLOCK",
@@ -1288,7 +1288,7 @@
       ],
       "fanout": 7,
       "fanin": 3,
-      "description": "Llama a servicios DOS via INT 21h (57 instr).",
+      "description": "Calls DOS services via INT 21h (57 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "calls_kernel",
@@ -1296,7 +1296,7 @@
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0DB8 -- offset 0x0DB8 -- 57 instr\n; Llama a servicios DOS via INT 21h (57 instr).\n; tags: calls_kernel, calls_user, dos_caller, int_21\n; callers: sub_0205, sub_0390, sub_03E2\n; calls (intra): sub_0B87, sub_0F4E, sub_0FE0\n; calls (inter): KERNEL.FATALEXIT, KERNEL.INITTASK, KERNEL.WAITEVENT, USER.INITAPP\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0DB8 -- offset 0x0DB8 -- 57 instr\n; Calls DOS services via INT 21h (57 instr).\n; tags: calls_kernel, calls_user, dos_caller, int_21\n; callers: sub_0205, sub_0390, sub_03E2\n; calls (intra): sub_0B87, sub_0F4E, sub_0FE0\n; calls (inter): KERNEL.FATALEXIT, KERNEL.INITTASK, KERNEL.WAITEVENT, USER.INITAPP\n;----------------------------------------------------------------------"
     },
     {
       "module": "CLOCK",
@@ -1401,13 +1401,13 @@
       ],
       "fanout": 9,
       "fanin": 1,
-      "description": "Funcion compleja: 130 instrucciones, 9 llamadas, 1 branches.",
+      "description": "Complex function: 130 instructions, 9 calls, 1 branches.",
       "confidence": "low",
       "semantic_tags": [
         "calls_kernel",
         "complex"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0E45 -- offset 0x0E45 -- 130 instr\n; Funcion compleja: 130 instrucciones, 9 llamadas, 1 branches.\n; tags: calls_kernel, complex\n; callers: sub_1100\n; calls (intra): sub_10F5\n; calls (inter): KERNEL.GLOBALALLOC, KERNEL.GLOBALCOMPACT, KERNEL.GLOBALFREE, KERNEL.GLOBALSIZE, KERNEL.LOCALALLOC, KERNEL.LOCALFREE (+2 mas)\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0E45 -- offset 0x0E45 -- 130 instr\n; Complex function: 130 instructions, 9 calls, 1 branches.\n; tags: calls_kernel, complex\n; callers: sub_1100\n; calls (intra): sub_10F5\n; calls (inter): KERNEL.GLOBALALLOC, KERNEL.GLOBALCOMPACT, KERNEL.GLOBALFREE, KERNEL.GLOBALSIZE, KERNEL.LOCALALLOC, KERNEL.LOCALFREE (+2 more)\n;----------------------------------------------------------------------"
     },
     {
       "module": "CLOCK",
@@ -1478,14 +1478,14 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (59 instr).",
+      "description": "Calls DOS services via INT 21h (59 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
         "int_21",
         "loop"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0F4E -- offset 0x0F4E -- 59 instr\n; Llama a servicios DOS via INT 21h (59 instr).\n; tags: complex_iterator, int_21, loop\n; callers: sub_0DB8\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0F4E -- offset 0x0F4E -- 59 instr\n; Calls DOS services via INT 21h (59 instr).\n; tags: complex_iterator, int_21, loop\n; callers: sub_0DB8\n;----------------------------------------------------------------------"
     },
     {
       "module": "CLOCK",
@@ -1545,12 +1545,12 @@
       ],
       "fanout": 2,
       "fanin": 2,
-      "description": "Funcion sin clasificar definitiva (8 instr).",
+      "description": "Unclassified function (8 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0FE0 -- offset 0x0FE0 -- 8 instr\n; Funcion sin clasificar definitiva (8 instr).\n; tags: small\n; callers: sub_0BBA, sub_0DB8\n; calls (intra): sub_1100, sub_1136\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0FE0 -- offset 0x0FE0 -- 8 instr\n; Unclassified function (8 instr).\n; tags: small\n; callers: sub_0BBA, sub_0DB8\n; calls (intra): sub_1100, sub_1136\n;----------------------------------------------------------------------"
     },
     {
       "module": "CLOCK",
@@ -1621,12 +1621,12 @@
       ],
       "fanout": 1,
       "fanin": 5,
-      "description": "Funcion mediana (74 instr, 1 calls).",
+      "description": "Mid-size function (74 instr, 1 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0FF0 -- offset 0x0FF0 -- 74 instr\n; Funcion mediana (74 instr, 1 calls).\n; tags: medium\n; callers: sub_0205, sub_0615, sub_079E, sub_084D, sub_0AE3\n; calls (intra): sub_1148\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0FF0 -- offset 0x0FF0 -- 74 instr\n; Mid-size function (74 instr, 1 calls).\n; tags: medium\n; callers: sub_0205, sub_0615, sub_079E, sub_084D, sub_0AE3\n; calls (intra): sub_1148\n;----------------------------------------------------------------------"
     },
     {
       "module": "CLOCK",
@@ -1692,12 +1692,12 @@
       ],
       "fanout": 0,
       "fanin": 5,
-      "description": "Funcion mediana (46 instr, 0 calls).",
+      "description": "Mid-size function (46 instr, 0 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1091 -- offset 0x1091 -- 46 instr\n; Funcion mediana (46 instr, 0 calls).\n; tags: medium\n; callers: sub_0205, sub_0615, sub_079E, sub_084D, sub_0AE3\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1091 -- offset 0x1091 -- 46 instr\n; Mid-size function (46 instr, 0 calls).\n; tags: medium\n; callers: sub_0205, sub_0615, sub_079E, sub_084D, sub_0AE3\n;----------------------------------------------------------------------"
     },
     {
       "module": "CLOCK",
@@ -1751,13 +1751,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Iterador con bucle (6 instr).",
+      "description": "Iterator with loop (6 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "loop"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_10F5 -- offset 0x10F5 -- 6 instr\n; Iterador con bucle (6 instr).\n; tags: iterator, loop\n; callers: sub_0E45\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_10F5 -- offset 0x10F5 -- 6 instr\n; Iterator with loop (6 instr).\n; tags: iterator, loop\n; callers: sub_0E45\n;----------------------------------------------------------------------"
     },
     {
       "module": "CLOCK",
@@ -1826,13 +1826,13 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Llama a servicios DOS via INT 21h (21 instr).",
+      "description": "Calls DOS services via INT 21h (21 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dos_caller",
         "int_21"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1100 -- offset 0x1100 -- 21 instr\n; Llama a servicios DOS via INT 21h (21 instr).\n; tags: dos_caller, int_21\n; callers: sub_0FE0\n; calls (intra): sub_0E45, sub_116E\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1100 -- offset 0x1100 -- 21 instr\n; Calls DOS services via INT 21h (21 instr).\n; tags: dos_caller, int_21\n; callers: sub_0FE0\n; calls (intra): sub_0E45, sub_116E\n;----------------------------------------------------------------------"
     },
     {
       "module": "CLOCK",
@@ -1891,12 +1891,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (10 instr).",
+      "description": "Unclassified function (10 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1136 -- offset 0x1136 -- 10 instr\n; Funcion sin clasificar definitiva (10 instr).\n; tags: wrapper\n; callers: sub_0FE0\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1136 -- offset 0x1136 -- 10 instr\n; Unclassified function (10 instr).\n; tags: wrapper\n; callers: sub_0FE0\n;----------------------------------------------------------------------"
     },
     {
       "module": "CLOCK",
@@ -1951,12 +1951,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion hoja (no llama a otras, 19 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 19 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1148 -- offset 0x1148 -- 19 instr\n; Funcion hoja (no llama a otras, 19 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_0FF0\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1148 -- offset 0x1148 -- 19 instr\n; Leaf function (no callees, 19 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_0FF0\n;----------------------------------------------------------------------"
     },
     {
       "module": "CLOCK",
@@ -2015,12 +2015,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (10 instr).",
+      "description": "Unclassified function (10 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_116E -- offset 0x116E -- 10 instr\n; Funcion sin clasificar definitiva (10 instr).\n; tags: wrapper\n; callers: sub_1100\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_116E -- offset 0x116E -- 10 instr\n; Unclassified function (10 instr).\n; tags: wrapper\n; callers: sub_1100\n;----------------------------------------------------------------------"
     }
   ]
 }

@@ -59,13 +59,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Llama a servicios BIOS via INT 10h (video, 5 instr).",
+      "description": "Calls BIOS services via INT 10h (video, 5 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "bios_caller",
         "int_10"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_014D -- offset 0x014D -- 5 instr\n; Llama a servicios BIOS via INT 10h (video, 5 instr).\n; tags: bios_caller, int_10\n; callers: sub_18B6\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_014D -- offset 0x014D -- 5 instr\n; Calls BIOS services via INT 10h (video, 5 instr).\n; tags: bios_caller, int_10\n; callers: sub_18B6\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGAHIBW",
@@ -121,12 +121,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Wrapper que delega en sub_0169.",
+      "description": "Wrapper delegating to sub_0169.",
       "confidence": "medium",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0157 -- offset 0x0157 -- 7 instr\n; Wrapper que delega en sub_0169.\n; tags: wrapper\n; callers: sub_1816\n; calls (intra): sub_0169\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0157 -- offset 0x0157 -- 7 instr\n; Wrapper delegating to sub_0169.\n; tags: wrapper\n; callers: sub_1816\n; calls (intra): sub_0169\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGAHIBW",
@@ -179,14 +179,14 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (9 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (9 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0169 -- offset 0x0169 -- 9 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (9 instr).\n; tags: iterator, loop, string_op\n; callers: sub_0157\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0169 -- offset 0x0169 -- 9 instr\n; Iterator with string ops (movsb/scasb/...) (9 instr).\n; tags: iterator, loop, string_op\n; callers: sub_0157\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGAHIBW",
@@ -253,12 +253,12 @@
       ],
       "fanout": 5,
       "fanin": 2,
-      "description": "Funcion sin clasificar definitiva (11 instr).",
+      "description": "Unclassified function (11 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0175 -- offset 0x0175 -- 11 instr\n; Funcion sin clasificar definitiva (11 instr).\n; tags: small\n; callers: sub_1A09, sub_1A83\n; calls (intra): sub_01C0, sub_01FA, sub_02BD, sub_0341, sub_03D7\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0175 -- offset 0x0175 -- 11 instr\n; Unclassified function (11 instr).\n; tags: small\n; callers: sub_1A09, sub_1A83\n; calls (intra): sub_01C0, sub_01FA, sub_02BD, sub_0341, sub_03D7\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGAHIBW",
@@ -321,12 +321,12 @@
       ],
       "fanout": 1,
       "fanin": 4,
-      "description": "Wrapper que delega en sub_01A3.",
+      "description": "Wrapper delegating to sub_01A3.",
       "confidence": "medium",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_018C -- offset 0x018C -- 10 instr\n; Wrapper que delega en sub_01A3.\n; tags: wrapper\n; callers: sub_178A, sub_1816, sub_19E6, sub_1ACD\n; calls (intra): sub_01A3\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_018C -- offset 0x018C -- 10 instr\n; Wrapper delegating to sub_01A3.\n; tags: wrapper\n; callers: sub_178A, sub_1816, sub_19E6, sub_1ACD\n; calls (intra): sub_01A3\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGAHIBW",
@@ -384,12 +384,12 @@
       ],
       "fanout": 1,
       "fanin": 2,
-      "description": "Wrapper que delega en sub_048C.",
+      "description": "Wrapper delegating to sub_048C.",
       "confidence": "medium",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_01A3 -- offset 0x01A3 -- 11 instr\n; Wrapper que delega en sub_048C.\n; tags: wrapper\n; callers: sub_018C, sub_03D7\n; calls (intra): sub_048C\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_01A3 -- offset 0x01A3 -- 11 instr\n; Wrapper delegating to sub_048C.\n; tags: wrapper\n; callers: sub_018C, sub_03D7\n; calls (intra): sub_048C\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGAHIBW",
@@ -451,14 +451,14 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (25 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (25 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_01C0 -- offset 0x01C0 -- 25 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (25 instr).\n; tags: iterator, loop, string_op\n; callers: sub_0175\n; calls (intra): sub_031F\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_01C0 -- offset 0x01C0 -- 25 instr\n; Iterator with string ops (movsb/scasb/...) (25 instr).\n; tags: iterator, loop, string_op\n; callers: sub_0175\n; calls (intra): sub_031F\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGAHIBW",
@@ -516,12 +516,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Wrapper que delega en sub_021F.",
+      "description": "Wrapper delegating to sub_021F.",
       "confidence": "medium",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_01FA -- offset 0x01FA -- 15 instr\n; Wrapper que delega en sub_021F.\n; tags: wrapper\n; callers: sub_0175\n; calls (intra): sub_021F\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_01FA -- offset 0x01FA -- 15 instr\n; Wrapper delegating to sub_021F.\n; tags: wrapper\n; callers: sub_0175\n; calls (intra): sub_021F\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGAHIBW",
@@ -588,14 +588,14 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (39 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (39 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_021F -- offset 0x021F -- 39 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (39 instr).\n; tags: iterator, loop, string_op\n; callers: sub_01FA\n; calls (intra): sub_026D\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_021F -- offset 0x021F -- 39 instr\n; Iterator with string ops (movsb/scasb/...) (39 instr).\n; tags: iterator, loop, string_op\n; callers: sub_01FA\n; calls (intra): sub_026D\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGAHIBW",
@@ -658,14 +658,14 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (42 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (42 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_026D -- offset 0x026D -- 42 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (42 instr).\n; tags: iterator, loop, string_op\n; callers: sub_021F\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_026D -- offset 0x026D -- 42 instr\n; Iterator with string ops (movsb/scasb/...) (42 instr).\n; tags: iterator, loop, string_op\n; callers: sub_021F\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGAHIBW",
@@ -725,14 +725,14 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (24 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (24 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_02BD -- offset 0x02BD -- 24 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (24 instr).\n; tags: iterator, loop, string_op\n; callers: sub_0175\n; calls (intra): sub_031F\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_02BD -- offset 0x02BD -- 24 instr\n; Iterator with string ops (movsb/scasb/...) (24 instr).\n; tags: iterator, loop, string_op\n; callers: sub_0175\n; calls (intra): sub_031F\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGAHIBW",
@@ -793,14 +793,14 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (22 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (22 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_02F3 -- offset 0x02F3 -- 22 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (22 instr).\n; tags: iterator, loop, string_op\n; callers: sub_03D7\n; calls (intra): sub_031F\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_02F3 -- offset 0x02F3 -- 22 instr\n; Iterator with string ops (movsb/scasb/...) (22 instr).\n; tags: iterator, loop, string_op\n; callers: sub_03D7\n; calls (intra): sub_031F\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGAHIBW",
@@ -856,12 +856,12 @@
       ],
       "fanout": 0,
       "fanin": 3,
-      "description": "Funcion hoja (no llama a otras, 14 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 14 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_031F -- offset 0x031F -- 14 instr\n; Funcion hoja (no llama a otras, 14 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_01C0, sub_02BD, sub_02F3\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_031F -- offset 0x031F -- 14 instr\n; Leaf function (no callees, 14 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_01C0, sub_02BD, sub_02F3\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGAHIBW",
@@ -924,13 +924,13 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Iterador con bucle (63 instr).",
+      "description": "Iterator with loop (63 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
         "loop"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0341 -- offset 0x0341 -- 63 instr\n; Iterador con bucle (63 instr).\n; tags: complex_iterator, loop\n; callers: sub_0175\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0341 -- offset 0x0341 -- 63 instr\n; Iterator with loop (63 instr).\n; tags: complex_iterator, loop\n; callers: sub_0175\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGAHIBW",
@@ -995,12 +995,12 @@
       ],
       "fanout": 4,
       "fanin": 1,
-      "description": "Funcion sin clasificar definitiva (14 instr).",
+      "description": "Unclassified function (14 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_03D7 -- offset 0x03D7 -- 14 instr\n; Funcion sin clasificar definitiva (14 instr).\n; tags: small\n; callers: sub_0175\n; calls (intra): sub_01A3, sub_02F3, sub_03F7, sub_042C\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_03D7 -- offset 0x03D7 -- 14 instr\n; Unclassified function (14 instr).\n; tags: small\n; callers: sub_0175\n; calls (intra): sub_01A3, sub_02F3, sub_03F7, sub_042C\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGAHIBW",
@@ -1055,14 +1055,14 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (33 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (33 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_03F7 -- offset 0x03F7 -- 33 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (33 instr).\n; tags: iterator, loop, string_op\n; callers: sub_03D7\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_03F7 -- offset 0x03F7 -- 33 instr\n; Iterator with string ops (movsb/scasb/...) (33 instr).\n; tags: iterator, loop, string_op\n; callers: sub_03D7\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGAHIBW",
@@ -1128,12 +1128,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (36 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (36 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_042C -- offset 0x042C -- 36 instr\n; Dispatcher: tabla de decisiones cmp+jcc (36 instr).\n; tags: dispatcher\n; callers: sub_03D7\n; calls (intra): sub_048C\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_042C -- offset 0x042C -- 36 instr\n; Dispatcher: cmp+jcc decision table (36 instr).\n; tags: dispatcher\n; callers: sub_03D7\n; calls (intra): sub_048C\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGAHIBW",
@@ -1212,7 +1212,7 @@
       ],
       "fanout": 5,
       "fanin": 2,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (1660 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (1660 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
@@ -1220,7 +1220,7 @@
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_048C -- offset 0x048C -- 1660 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (1660 instr).\n; tags: complex_iterator, far, loop, string_op\n; callers: sub_01A3, sub_042C\n; calls (intra): sub_1332, sub_13B7, sub_178A, sub_1816, sub_1B66\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_048C -- offset 0x048C -- 1660 instr\n; Iterator with string ops (movsb/scasb/...) (1660 instr).\n; tags: complex_iterator, far, loop, string_op\n; callers: sub_01A3, sub_042C\n; calls (intra): sub_1332, sub_13B7, sub_178A, sub_1816, sub_1B66\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGAHIBW",
@@ -1283,12 +1283,12 @@
       ],
       "fanout": 0,
       "fanin": 2,
-      "description": "Dispatcher: tabla de decisiones cmp+jcc (50 instr).",
+      "description": "Dispatcher: cmp+jcc decision table (50 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "dispatcher"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1332 -- offset 0x1332 -- 50 instr\n; Dispatcher: tabla de decisiones cmp+jcc (50 instr).\n; tags: dispatcher\n; callers: sub_048C, sub_13B7\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1332 -- offset 0x1332 -- 50 instr\n; Dispatcher: cmp+jcc decision table (50 instr).\n; tags: dispatcher\n; callers: sub_048C, sub_13B7\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGAHIBW",
@@ -1362,14 +1362,14 @@
       ],
       "fanout": 3,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (180 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (180 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
         "far",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_13B7 -- offset 0x13B7 -- 180 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (180 instr).\n; tags: complex_iterator, far, string_op\n; callers: sub_048C\n; calls (intra): sub_1332, sub_156C, sub_178A\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_13B7 -- offset 0x13B7 -- 180 instr\n; Iterator with string ops (movsb/scasb/...) (180 instr).\n; tags: complex_iterator, far, string_op\n; callers: sub_048C\n; calls (intra): sub_1332, sub_156C, sub_178A\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGAHIBW",
@@ -1438,7 +1438,7 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (149 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (149 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
@@ -1446,7 +1446,7 @@
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_156C -- offset 0x156C -- 149 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (149 instr).\n; tags: complex_iterator, far, loop, string_op\n; callers: sub_13B7\n; calls (intra): sub_16BC, sub_1B0A\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_156C -- offset 0x156C -- 149 instr\n; Iterator with string ops (movsb/scasb/...) (149 instr).\n; tags: complex_iterator, far, loop, string_op\n; callers: sub_13B7\n; calls (intra): sub_16BC, sub_1B0A\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGAHIBW",
@@ -1489,12 +1489,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Stub trivial (2 instrucciones, sin logica significativa).",
+      "description": "Trivial stub (2 instructions, no significant logic).",
       "confidence": "low",
       "semantic_tags": [
         "trivial_stub"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_16BC -- offset 0x16BC -- 2 instr\n; Stub trivial (2 instrucciones, sin logica significativa).\n; tags: trivial_stub\n; callers: sub_156C\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_16BC -- offset 0x16BC -- 2 instr\n; Trivial stub (2 instructions, no significant logic).\n; tags: trivial_stub\n; callers: sub_156C\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGAHIBW",
@@ -1559,14 +1559,14 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (104 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (104 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
         "far",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_16C1 -- offset 0x16C1 -- 104 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (104 instr).\n; tags: complex_iterator, far, string_op\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_16C1 -- offset 0x16C1 -- 104 instr\n; Iterator with string ops (movsb/scasb/...) (104 instr).\n; tags: complex_iterator, far, string_op\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGAHIBW",
@@ -1635,12 +1635,12 @@
       ],
       "fanout": 2,
       "fanin": 2,
-      "description": "Funcion sin clasificar definitiva (26 instr).",
+      "description": "Unclassified function (26 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_178A -- offset 0x178A -- 26 instr\n; Funcion sin clasificar definitiva (26 instr).\n; tags: small\n; callers: sub_048C, sub_13B7\n; calls (intra): sub_018C, sub_17DE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_178A -- offset 0x178A -- 26 instr\n; Unclassified function (26 instr).\n; tags: small\n; callers: sub_048C, sub_13B7\n; calls (intra): sub_018C, sub_17DE\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGAHIBW",
@@ -1692,12 +1692,12 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (4 instr).",
+      "description": "Unclassified function (4 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_17D8 -- offset 0x17D8 -- 4 instr\n; Funcion sin clasificar definitiva (4 instr).\n; tags: wrapper\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_17D8 -- offset 0x17D8 -- 4 instr\n; Unclassified function (4 instr).\n; tags: wrapper\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGAHIBW",
@@ -1760,12 +1760,12 @@
       ],
       "fanout": 0,
       "fanin": 3,
-      "description": "Funcion hoja (no llama a otras, 20 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 20 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_17DE -- offset 0x17DE -- 20 instr\n; Funcion hoja (no llama a otras, 20 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_178A, sub_19E6, sub_1A83\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_17DE -- offset 0x17DE -- 20 instr\n; Leaf function (no callees, 20 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_178A, sub_19E6, sub_1A83\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGAHIBW",
@@ -1834,13 +1834,13 @@
       ],
       "fanout": 2,
       "fanin": 1,
-      "description": "Funcion mediana (69 instr, 2 calls).",
+      "description": "Mid-size function (69 instr, 2 calls).",
       "confidence": "low",
       "semantic_tags": [
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1816 -- offset 0x1816 -- 69 instr\n; Funcion mediana (69 instr, 2 calls).\n; tags: far, medium\n; callers: sub_048C\n; calls (intra): sub_0157, sub_018C\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1816 -- offset 0x1816 -- 69 instr\n; Mid-size function (69 instr, 2 calls).\n; tags: far, medium\n; callers: sub_048C\n; calls (intra): sub_0157, sub_018C\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGAHIBW",
@@ -1910,13 +1910,13 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Funcion compleja: 163 instrucciones, 1 llamadas, 1 branches.",
+      "description": "Complex function: 163 instructions, 1 calls, 1 branches.",
       "confidence": "low",
       "semantic_tags": [
         "complex",
         "far"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_18B6 -- offset 0x18B6 -- 163 instr\n; Funcion compleja: 163 instrucciones, 1 llamadas, 1 branches.\n; tags: complex, far\n; calls (intra): sub_014D\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_18B6 -- offset 0x18B6 -- 163 instr\n; Complex function: 163 instructions, 1 calls, 1 branches.\n; tags: complex, far\n; calls (intra): sub_014D\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGAHIBW",
@@ -1982,12 +1982,12 @@
       "callers": [],
       "fanout": 2,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (15 instr).",
+      "description": "Unclassified function (15 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_19E6 -- offset 0x19E6 -- 15 instr\n; Funcion sin clasificar definitiva (15 instr).\n; tags: small\n; calls (intra): sub_018C, sub_17DE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_19E6 -- offset 0x19E6 -- 15 instr\n; Unclassified function (15 instr).\n; tags: small\n; calls (intra): sub_018C, sub_17DE\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGAHIBW",
@@ -2047,12 +2047,12 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (10 instr).",
+      "description": "Unclassified function (10 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1A09 -- offset 0x1A09 -- 10 instr\n; Funcion sin clasificar definitiva (10 instr).\n; tags: small\n; calls (intra): sub_0175\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1A09 -- offset 0x1A09 -- 10 instr\n; Unclassified function (10 instr).\n; tags: small\n; calls (intra): sub_0175\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGAHIBW",
@@ -2111,12 +2111,12 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (15 instr).",
+      "description": "Unclassified function (15 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1A21 -- offset 0x1A21 -- 15 instr\n; Funcion sin clasificar definitiva (15 instr).\n; tags: wrapper\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1A21 -- offset 0x1A21 -- 15 instr\n; Unclassified function (15 instr).\n; tags: wrapper\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGAHIBW",
@@ -2181,13 +2181,13 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion mediana (33 instr, 0 calls).",
+      "description": "Mid-size function (33 instr, 0 calls).",
       "confidence": "low",
       "semantic_tags": [
         "far",
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1A48 -- offset 0x1A48 -- 33 instr\n; Funcion mediana (33 instr, 0 calls).\n; tags: far, medium\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1A48 -- offset 0x1A48 -- 33 instr\n; Mid-size function (33 instr, 0 calls).\n; tags: far, medium\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGAHIBW",
@@ -2251,12 +2251,12 @@
       "callers": [],
       "fanout": 2,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (14 instr).",
+      "description": "Unclassified function (14 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1A83 -- offset 0x1A83 -- 14 instr\n; Funcion sin clasificar definitiva (14 instr).\n; tags: small\n; calls (intra): sub_0175, sub_17DE\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1A83 -- offset 0x1A83 -- 14 instr\n; Unclassified function (14 instr).\n; tags: small\n; calls (intra): sub_0175, sub_17DE\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGAHIBW",
@@ -2315,12 +2315,12 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (15 instr).",
+      "description": "Unclassified function (15 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1AA2 -- offset 0x1AA2 -- 15 instr\n; Funcion sin clasificar definitiva (15 instr).\n; tags: wrapper\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1AA2 -- offset 0x1AA2 -- 15 instr\n; Unclassified function (15 instr).\n; tags: wrapper\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGAHIBW",
@@ -2381,12 +2381,12 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (10 instr).",
+      "description": "Unclassified function (10 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1ACD -- offset 0x1ACD -- 10 instr\n; Funcion sin clasificar definitiva (10 instr).\n; tags: small\n; calls (intra): sub_018C\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1ACD -- offset 0x1ACD -- 10 instr\n; Unclassified function (10 instr).\n; tags: small\n; calls (intra): sub_018C\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGAHIBW",
@@ -2445,13 +2445,13 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (19 instr).",
+      "description": "Unclassified function (19 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "far",
         "small"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1AE2 -- offset 0x1AE2 -- 19 instr\n; Funcion sin clasificar definitiva (19 instr).\n; tags: far, small\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1AE2 -- offset 0x1AE2 -- 19 instr\n; Unclassified function (19 instr).\n; tags: far, small\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGAHIBW",
@@ -2514,14 +2514,14 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (44 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (44 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "iterator",
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1B0A -- offset 0x1B0A -- 44 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (44 instr).\n; tags: iterator, loop, string_op\n; callers: sub_156C\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1B0A -- offset 0x1B0A -- 44 instr\n; Iterator with string ops (movsb/scasb/...) (44 instr).\n; tags: iterator, loop, string_op\n; callers: sub_156C\n;----------------------------------------------------------------------"
     },
     {
       "module": "EGAHIBW",
@@ -2581,12 +2581,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion hoja (no llama a otras, 18 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 18 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_1B66 -- offset 0x1B66 -- 18 instr\n; Funcion hoja (no llama a otras, 18 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_048C\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1B66 -- offset 0x1B66 -- 18 instr\n; Leaf function (no callees, 18 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_048C\n;----------------------------------------------------------------------"
     }
   ]
 }

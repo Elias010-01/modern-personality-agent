@@ -61,13 +61,13 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (21 instr).",
+      "description": "Unclassified function (21 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "bios_caller",
         "int_16"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_00E4 -- offset 0x00E4 -- 21 instr\n; Funcion sin clasificar definitiva (21 instr).\n; tags: bios_caller, int_16\n; calls (intra): sub_0114\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_00E4 -- offset 0x00E4 -- 21 instr\n; Unclassified function (21 instr).\n; tags: bios_caller, int_16\n; calls (intra): sub_0114\n;----------------------------------------------------------------------"
     },
     {
       "module": "ATTKBD",
@@ -136,7 +136,7 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (160 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (160 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
@@ -144,7 +144,7 @@
         "loop",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0114 -- offset 0x0114 -- 160 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (160 instr).\n; tags: complex_iterator, far, loop, string_op\n; callers: sub_00E4\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0114 -- offset 0x0114 -- 160 instr\n; Iterator with string ops (movsb/scasb/...) (160 instr).\n; tags: complex_iterator, far, loop, string_op\n; callers: sub_00E4\n;----------------------------------------------------------------------"
     },
     {
       "module": "ATTKBD",
@@ -214,14 +214,14 @@
       "callers": [],
       "fanout": 1,
       "fanin": 0,
-      "description": "Iterador con instrucciones de string (movsb/scasb/...) (118 instr).",
+      "description": "Iterator with string ops (movsb/scasb/...) (118 instr).",
       "confidence": "medium",
       "semantic_tags": [
         "complex_iterator",
         "far",
         "string_op"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_022E -- offset 0x022E -- 118 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (118 instr).\n; tags: complex_iterator, far, string_op\n; calls (intra): sub_033B\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_022E -- offset 0x022E -- 118 instr\n; Iterator with string ops (movsb/scasb/...) (118 instr).\n; tags: complex_iterator, far, string_op\n; calls (intra): sub_033B\n;----------------------------------------------------------------------"
     },
     {
       "module": "ATTKBD",
@@ -285,12 +285,12 @@
       ],
       "fanout": 1,
       "fanin": 1,
-      "description": "Funcion mediana (40 instr, 1 calls).",
+      "description": "Mid-size function (40 instr, 1 calls).",
       "confidence": "low",
       "semantic_tags": [
         "medium"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_033B -- offset 0x033B -- 40 instr\n; Funcion mediana (40 instr, 1 calls).\n; tags: medium\n; callers: sub_022E\n; calls (intra): sub_03A1\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_033B -- offset 0x033B -- 40 instr\n; Mid-size function (40 instr, 1 calls).\n; tags: medium\n; callers: sub_022E\n; calls (intra): sub_03A1\n;----------------------------------------------------------------------"
     },
     {
       "module": "ATTKBD",
@@ -347,12 +347,12 @@
       "callers": [],
       "fanout": 0,
       "fanin": 0,
-      "description": "Funcion sin clasificar definitiva (8 instr).",
+      "description": "Unclassified function (8 instr).",
       "confidence": "unknown",
       "semantic_tags": [
         "wrapper"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_0393 -- offset 0x0393 -- 8 instr\n; Funcion sin clasificar definitiva (8 instr).\n; tags: wrapper\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0393 -- offset 0x0393 -- 8 instr\n; Unclassified function (8 instr).\n; tags: wrapper\n;----------------------------------------------------------------------"
     },
     {
       "module": "ATTKBD",
@@ -408,12 +408,12 @@
       ],
       "fanout": 0,
       "fanin": 1,
-      "description": "Funcion hoja (no llama a otras, 10 instr): probable helper aritmetico/conversion.",
+      "description": "Leaf function (no callees, 10 instr): likely arithmetic/conversion helper.",
       "confidence": "low",
       "semantic_tags": [
         "leaf"
       ],
-      "comment_block": ";----------------------------------------------------------------------\n; sub_03A1 -- offset 0x03A1 -- 10 instr\n; Funcion hoja (no llama a otras, 10 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_033B\n;----------------------------------------------------------------------"
+      "comment_block": ";----------------------------------------------------------------------\n; sub_03A1 -- offset 0x03A1 -- 10 instr\n; Leaf function (no callees, 10 instr): likely arithmetic/conversion helper.\n; tags: leaf\n; callers: sub_033B\n;----------------------------------------------------------------------"
     }
   ]
 }
