@@ -15,3 +15,13 @@ TIMELINE
 
 [T+0:00]  Start. State: pass24 v4 committed at e28e4af (95.3%).
           Next: investigate FPU misdecodes (DD..) and REP+seg fails.
+
+[T+1:00]  PASS 24 = 100% (1201/1201) byte-exact. Commit d8a40b4.
+          Patches that bought us the last 5%:
+            v5  32-bit reg in 16-bit code -> db
+            v6  LST parser handles MASM '/' prefix separator
+            v7  FPU/0x66/0x67 prefix -> db
+            v8  fix F2/F3 prefix, FS/GS, int3, pushaw, arpl, ud0/1/2
+            v9  always db on seg-prefix; cmov*; ptr->dword ptr
+            v10 0F-escape opcodes -> db; imul imm8-fit -> db
+          Next: PHASE 2 - link OBJ to .EXE/.DRV/.COM and hash vs originals.
