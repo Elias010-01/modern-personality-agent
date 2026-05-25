@@ -1,0 +1,672 @@
+{
+  "library_to_module": {
+    "DISPLAY": "HERCULES",
+    "KEYBOARD": "USA",
+    "MOUSE": "NOMOUSE",
+    "CITOH": "CITOH",
+    "COMM": "COMM",
+    "EPSON": "EPSON",
+    "EPSONMX": "EPSONMX",
+    "GDI": "GDI",
+    "HP7470A": "HP7470A",
+    "HP7475A": "HP7475A",
+    "HP7550A": "HP7550A",
+    "HPLASER": "HPLASER",
+    "HPLASERP": "HPLASERP",
+    "IBMGRX": "IBMGRX",
+    "KERNEL": "KERNEL",
+    "LQ1500": "LQ1500",
+    "MSDOSD": "MSDOSD",
+    "NEC3550": "NEC3550",
+    "NECP2": "NECP2",
+    "OKI92": "OKI92",
+    "PSCRIPT": "PSCRIPT",
+    "SG10": "SG10",
+    "SOUND": "SOUND",
+    "SYSTEM": "SYSTEM",
+    "THINKJET": "THINKJET",
+    "TI850": "TI850",
+    "TOSH": "TOSH",
+    "TTY": "TTY",
+    "USER": "USER",
+    "XER4020": "XER4020"
+  },
+  "import_edges": [
+    {
+      "from": "ATTDC",
+      "to": "KERNEL",
+      "count": 1
+    },
+    {
+      "from": "ATTDEB",
+      "to": "KERNEL",
+      "count": 1
+    },
+    {
+      "from": "ATTMOUSE",
+      "to": "KERNEL",
+      "count": 2
+    },
+    {
+      "from": "CALC",
+      "to": "GDI",
+      "count": 23
+    },
+    {
+      "from": "CALC",
+      "to": "KERNEL",
+      "count": 19
+    },
+    {
+      "from": "CALC",
+      "to": "USER",
+      "count": 41
+    },
+    {
+      "from": "CALENDAR",
+      "to": "GDI",
+      "count": 15
+    },
+    {
+      "from": "CALENDAR",
+      "to": "KERNEL",
+      "count": 35
+    },
+    {
+      "from": "CALENDAR",
+      "to": "USER",
+      "count": 85
+    },
+    {
+      "from": "CARDFILE",
+      "to": "GDI",
+      "count": 28
+    },
+    {
+      "from": "CARDFILE",
+      "to": "KERNEL",
+      "count": 33
+    },
+    {
+      "from": "CARDFILE",
+      "to": "USER",
+      "count": 85
+    },
+    {
+      "from": "CITOH",
+      "to": "GDI",
+      "count": 23
+    },
+    {
+      "from": "CITOH",
+      "to": "KERNEL",
+      "count": 15
+    },
+    {
+      "from": "CITOH",
+      "to": "USER",
+      "count": 11
+    },
+    {
+      "from": "CLIPBRD",
+      "to": "GDI",
+      "count": 24
+    },
+    {
+      "from": "CLIPBRD",
+      "to": "KERNEL",
+      "count": 15
+    },
+    {
+      "from": "CLIPBRD",
+      "to": "USER",
+      "count": 46
+    },
+    {
+      "from": "CLOCK",
+      "to": "GDI",
+      "count": 9
+    },
+    {
+      "from": "CLOCK",
+      "to": "KERNEL",
+      "count": 17
+    },
+    {
+      "from": "CLOCK",
+      "to": "USER",
+      "count": 29
+    },
+    {
+      "from": "COMM",
+      "to": "SYSTEM",
+      "count": 2
+    },
+    {
+      "from": "CONTROL",
+      "to": "GDI",
+      "count": 19
+    },
+    {
+      "from": "CONTROL",
+      "to": "KERNEL",
+      "count": 39
+    },
+    {
+      "from": "CONTROL",
+      "to": "USA",
+      "count": 2
+    },
+    {
+      "from": "CONTROL",
+      "to": "USER",
+      "count": 76
+    },
+    {
+      "from": "EPSON",
+      "to": "GDI",
+      "count": 23
+    },
+    {
+      "from": "EPSON",
+      "to": "KERNEL",
+      "count": 15
+    },
+    {
+      "from": "EPSON",
+      "to": "USER",
+      "count": 11
+    },
+    {
+      "from": "EPSONMX",
+      "to": "GDI",
+      "count": 23
+    },
+    {
+      "from": "EPSONMX",
+      "to": "KERNEL",
+      "count": 15
+    },
+    {
+      "from": "EPSONMX",
+      "to": "USER",
+      "count": 11
+    },
+    {
+      "from": "GDI",
+      "to": "KERNEL",
+      "count": 48
+    },
+    {
+      "from": "GENIUS",
+      "to": "KERNEL",
+      "count": 1
+    },
+    {
+      "from": "HP7470A",
+      "to": "GDI",
+      "count": 11
+    },
+    {
+      "from": "HP7470A",
+      "to": "KERNEL",
+      "count": 5
+    },
+    {
+      "from": "HP7470A",
+      "to": "USER",
+      "count": 13
+    },
+    {
+      "from": "HP7475A",
+      "to": "GDI",
+      "count": 11
+    },
+    {
+      "from": "HP7475A",
+      "to": "KERNEL",
+      "count": 5
+    },
+    {
+      "from": "HP7475A",
+      "to": "USER",
+      "count": 13
+    },
+    {
+      "from": "HP7550A",
+      "to": "GDI",
+      "count": 11
+    },
+    {
+      "from": "HP7550A",
+      "to": "KERNEL",
+      "count": 5
+    },
+    {
+      "from": "HP7550A",
+      "to": "USER",
+      "count": 13
+    },
+    {
+      "from": "HPLASER",
+      "to": "GDI",
+      "count": 17
+    },
+    {
+      "from": "HPLASER",
+      "to": "KERNEL",
+      "count": 16
+    },
+    {
+      "from": "HPLASER",
+      "to": "USER",
+      "count": 11
+    },
+    {
+      "from": "HPLASERP",
+      "to": "GDI",
+      "count": 17
+    },
+    {
+      "from": "HPLASERP",
+      "to": "KERNEL",
+      "count": 16
+    },
+    {
+      "from": "HPLASERP",
+      "to": "USER",
+      "count": 11
+    },
+    {
+      "from": "IBMGRX",
+      "to": "GDI",
+      "count": 23
+    },
+    {
+      "from": "IBMGRX",
+      "to": "KERNEL",
+      "count": 15
+    },
+    {
+      "from": "IBMGRX",
+      "to": "USER",
+      "count": 11
+    },
+    {
+      "from": "JOYMOUSE",
+      "to": "SYSTEM",
+      "count": 4
+    },
+    {
+      "from": "LPC",
+      "to": "SYSTEM",
+      "count": 4
+    },
+    {
+      "from": "LQ1500",
+      "to": "GDI",
+      "count": 23
+    },
+    {
+      "from": "LQ1500",
+      "to": "KERNEL",
+      "count": 15
+    },
+    {
+      "from": "LQ1500",
+      "to": "USER",
+      "count": 11
+    },
+    {
+      "from": "MSDOS",
+      "to": "GDI",
+      "count": 18
+    },
+    {
+      "from": "MSDOS",
+      "to": "KERNEL",
+      "count": 40
+    },
+    {
+      "from": "MSDOS",
+      "to": "MSDOSD",
+      "count": 2
+    },
+    {
+      "from": "MSDOS",
+      "to": "SYSTEM",
+      "count": 1
+    },
+    {
+      "from": "MSDOS",
+      "to": "USA",
+      "count": 2
+    },
+    {
+      "from": "MSDOS",
+      "to": "USER",
+      "count": 73
+    },
+    {
+      "from": "MSDOSD",
+      "to": "KERNEL",
+      "count": 4
+    },
+    {
+      "from": "MSMOUSE1",
+      "to": "KERNEL",
+      "count": 1
+    },
+    {
+      "from": "MSMOUSE2",
+      "to": "KERNEL",
+      "count": 1
+    },
+    {
+      "from": "NEC3550",
+      "to": "GDI",
+      "count": 17
+    },
+    {
+      "from": "NEC3550",
+      "to": "KERNEL",
+      "count": 9
+    },
+    {
+      "from": "NEC3550",
+      "to": "USER",
+      "count": 12
+    },
+    {
+      "from": "NECP2",
+      "to": "GDI",
+      "count": 23
+    },
+    {
+      "from": "NECP2",
+      "to": "KERNEL",
+      "count": 15
+    },
+    {
+      "from": "NECP2",
+      "to": "USER",
+      "count": 11
+    },
+    {
+      "from": "NOTEPAD",
+      "to": "GDI",
+      "count": 6
+    },
+    {
+      "from": "NOTEPAD",
+      "to": "KERNEL",
+      "count": 32
+    },
+    {
+      "from": "NOTEPAD",
+      "to": "USA",
+      "count": 2
+    },
+    {
+      "from": "NOTEPAD",
+      "to": "USER",
+      "count": 59
+    },
+    {
+      "from": "OKI92",
+      "to": "GDI",
+      "count": 23
+    },
+    {
+      "from": "OKI92",
+      "to": "KERNEL",
+      "count": 15
+    },
+    {
+      "from": "OKI92",
+      "to": "USER",
+      "count": 11
+    },
+    {
+      "from": "PAINT",
+      "to": "GDI",
+      "count": 50
+    },
+    {
+      "from": "PAINT",
+      "to": "KERNEL",
+      "count": 34
+    },
+    {
+      "from": "PAINT",
+      "to": "USER",
+      "count": 83
+    },
+    {
+      "from": "PSCRIPT",
+      "to": "GDI",
+      "count": 8
+    },
+    {
+      "from": "PSCRIPT",
+      "to": "KERNEL",
+      "count": 15
+    },
+    {
+      "from": "PSCRIPT",
+      "to": "USER",
+      "count": 12
+    },
+    {
+      "from": "REVERSI",
+      "to": "GDI",
+      "count": 15
+    },
+    {
+      "from": "REVERSI",
+      "to": "KERNEL",
+      "count": 14
+    },
+    {
+      "from": "REVERSI",
+      "to": "USER",
+      "count": 40
+    },
+    {
+      "from": "SG10",
+      "to": "GDI",
+      "count": 23
+    },
+    {
+      "from": "SG10",
+      "to": "KERNEL",
+      "count": 15
+    },
+    {
+      "from": "SG10",
+      "to": "USER",
+      "count": 11
+    },
+    {
+      "from": "SOUND",
+      "to": "KERNEL",
+      "count": 6
+    },
+    {
+      "from": "SPOOLER",
+      "to": "GDI",
+      "count": 9
+    },
+    {
+      "from": "SPOOLER",
+      "to": "KERNEL",
+      "count": 26
+    },
+    {
+      "from": "SPOOLER",
+      "to": "USER",
+      "count": 48
+    },
+    {
+      "from": "SYSTEM",
+      "to": "KERNEL",
+      "count": 1
+    },
+    {
+      "from": "TERMINAL",
+      "to": "GDI",
+      "count": 15
+    },
+    {
+      "from": "TERMINAL",
+      "to": "KERNEL",
+      "count": 31
+    },
+    {
+      "from": "TERMINAL",
+      "to": "USA",
+      "count": 2
+    },
+    {
+      "from": "TERMINAL",
+      "to": "USER",
+      "count": 88
+    },
+    {
+      "from": "THINKJET",
+      "to": "GDI",
+      "count": 23
+    },
+    {
+      "from": "THINKJET",
+      "to": "KERNEL",
+      "count": 14
+    },
+    {
+      "from": "THINKJET",
+      "to": "USER",
+      "count": 11
+    },
+    {
+      "from": "TI850",
+      "to": "GDI",
+      "count": 23
+    },
+    {
+      "from": "TI850",
+      "to": "KERNEL",
+      "count": 15
+    },
+    {
+      "from": "TI850",
+      "to": "USER",
+      "count": 11
+    },
+    {
+      "from": "TOSH",
+      "to": "GDI",
+      "count": 23
+    },
+    {
+      "from": "TOSH",
+      "to": "KERNEL",
+      "count": 15
+    },
+    {
+      "from": "TOSH",
+      "to": "USER",
+      "count": 11
+    },
+    {
+      "from": "TTY",
+      "to": "GDI",
+      "count": 11
+    },
+    {
+      "from": "TTY",
+      "to": "KERNEL",
+      "count": 5
+    },
+    {
+      "from": "TTY",
+      "to": "USER",
+      "count": 9
+    },
+    {
+      "from": "USER",
+      "to": "COMM",
+      "count": 15
+    },
+    {
+      "from": "USER",
+      "to": "GDI",
+      "count": 52
+    },
+    {
+      "from": "USER",
+      "to": "HERCULES",
+      "count": 4
+    },
+    {
+      "from": "USER",
+      "to": "KERNEL",
+      "count": 57
+    },
+    {
+      "from": "USER",
+      "to": "MOUSE",
+      "count": 3
+    },
+    {
+      "from": "USER",
+      "to": "SOUND",
+      "count": 1
+    },
+    {
+      "from": "USER",
+      "to": "SYSTEM",
+      "count": 4
+    },
+    {
+      "from": "USER",
+      "to": "USA",
+      "count": 6
+    },
+    {
+      "from": "WRITE",
+      "to": "GDI",
+      "count": 45
+    },
+    {
+      "from": "WRITE",
+      "to": "KERNEL",
+      "count": 29
+    },
+    {
+      "from": "WRITE",
+      "to": "USA",
+      "count": 2
+    },
+    {
+      "from": "WRITE",
+      "to": "USER",
+      "count": 100
+    },
+    {
+      "from": "XER4020",
+      "to": "GDI",
+      "count": 15
+    },
+    {
+      "from": "XER4020",
+      "to": "KERNEL",
+      "count": 14
+    },
+    {
+      "from": "XER4020",
+      "to": "USER",
+      "count": 13
+    }
+  ],
+  "unresolved": {}
+}

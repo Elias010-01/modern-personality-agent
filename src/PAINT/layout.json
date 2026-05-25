@@ -1,0 +1,306 @@
+{
+  "module": "PAINT",
+  "original_name": "PAINT.EXE",
+  "original_size": 90176,
+  "ne_off": 1024,
+  "sector": 4,
+  "segments": [
+    {
+      "index": 1,
+      "file_off": 3004,
+      "data_len": 11144,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 127
+    },
+    {
+      "index": 2,
+      "file_off": 15168,
+      "data_len": 803,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 17
+    },
+    {
+      "index": 3,
+      "file_off": 16112,
+      "data_len": 2754,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 23
+    },
+    {
+      "index": 4,
+      "file_off": 19052,
+      "data_len": 3072,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 38
+    },
+    {
+      "index": 5,
+      "file_off": 22432,
+      "data_len": 2415,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 30
+    },
+    {
+      "index": 6,
+      "file_off": 25092,
+      "data_len": 3173,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 49
+    },
+    {
+      "index": 7,
+      "file_off": 28660,
+      "data_len": 3109,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 49
+    },
+    {
+      "index": 8,
+      "file_off": 32164,
+      "data_len": 3184,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 30
+    },
+    {
+      "index": 9,
+      "file_off": 35592,
+      "data_len": 4463,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 41
+    },
+    {
+      "index": 10,
+      "file_off": 40388,
+      "data_len": 8782,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 65
+    },
+    {
+      "index": 11,
+      "file_off": 49692,
+      "data_len": 2149,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 25
+    },
+    {
+      "index": 12,
+      "file_off": 52044,
+      "data_len": 2626,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 48
+    },
+    {
+      "index": 13,
+      "file_off": 55056,
+      "data_len": 1641,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 9
+    },
+    {
+      "index": 14,
+      "file_off": 56772,
+      "data_len": 287,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 9
+    },
+    {
+      "index": 15,
+      "file_off": 57136,
+      "data_len": 149,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 5
+    },
+    {
+      "index": 16,
+      "file_off": 57328,
+      "data_len": 313,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 9
+    },
+    {
+      "index": 17,
+      "file_off": 57716,
+      "data_len": 594,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 11
+    },
+    {
+      "index": 18,
+      "file_off": 58400,
+      "data_len": 864,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 13
+    },
+    {
+      "index": 19,
+      "file_off": 59372,
+      "data_len": 597,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 11
+    },
+    {
+      "index": 20,
+      "file_off": 60060,
+      "data_len": 288,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 7
+    },
+    {
+      "index": 21,
+      "file_off": 60408,
+      "data_len": 594,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 11
+    },
+    {
+      "index": 22,
+      "file_off": 61092,
+      "data_len": 555,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 8
+    },
+    {
+      "index": 23,
+      "file_off": 61716,
+      "data_len": 258,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 7
+    },
+    {
+      "index": 24,
+      "file_off": 62032,
+      "data_len": 2865,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 27
+    },
+    {
+      "index": 25,
+      "file_off": 65116,
+      "data_len": 142,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 5
+    },
+    {
+      "index": 26,
+      "file_off": 65300,
+      "data_len": 2859,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 17
+    },
+    {
+      "index": 27,
+      "file_off": 68300,
+      "data_len": 102,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 4
+    },
+    {
+      "index": 28,
+      "file_off": 68436,
+      "data_len": 271,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 7
+    },
+    {
+      "index": 29,
+      "file_off": 68768,
+      "data_len": 912,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 8
+    },
+    {
+      "index": 30,
+      "file_off": 69748,
+      "data_len": 317,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 6
+    },
+    {
+      "index": 31,
+      "file_off": 70116,
+      "data_len": 3720,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 33
+    },
+    {
+      "index": 32,
+      "file_off": 74104,
+      "data_len": 2304,
+      "flags": 336,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 43
+    },
+    {
+      "index": 33,
+      "file_off": 76756,
+      "data_len": 2310,
+      "flags": 337,
+      "is_data": true,
+      "has_reloc": true,
+      "reloc_count": 23
+    }
+  ]
+}

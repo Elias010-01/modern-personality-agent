@@ -1,0 +1,72 @@
+{
+  "module": "CARDFILE",
+  "original_name": "CARDFILE.EXE",
+  "original_size": 36992,
+  "ne_off": 1024,
+  "sector": 4,
+  "segments": [
+    {
+      "index": 1,
+      "file_off": 1784,
+      "data_len": 885,
+      "flags": 320,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 25
+    },
+    {
+      "index": 2,
+      "file_off": 2872,
+      "data_len": 1650,
+      "flags": 61808,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 47
+    },
+    {
+      "index": 3,
+      "file_off": 4900,
+      "data_len": 4455,
+      "flags": 61808,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 24
+    },
+    {
+      "index": 4,
+      "file_off": 9552,
+      "data_len": 11271,
+      "flags": 61808,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 93
+    },
+    {
+      "index": 5,
+      "file_off": 21572,
+      "data_len": 4511,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 59
+    },
+    {
+      "index": 6,
+      "file_off": 26560,
+      "data_len": 5822,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 47
+    },
+    {
+      "index": 7,
+      "file_off": 32760,
+      "data_len": 342,
+      "flags": 17,
+      "is_data": true,
+      "has_reloc": false,
+      "reloc_count": 0
+    }
+  ]
+}

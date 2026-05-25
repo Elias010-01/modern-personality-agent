@@ -1,0 +1,14 @@
+version:    v06
+slug:       DEFs-generados-imports-exports
+timestamp:  2026-05-24T23:34:46Z
+message:    Anadido extract_ne_def.py: genera src/<MOD>/<MOD>.def para cada uno de los 68 modulos NE con LIBRARY/NAME, DESCRIPTION oficial Microsoft, EXETYPE WINDOWS, STUB WINSTUB.EXE, CODE/DATA attributes deducidos, HEAPSIZE/STACKSIZE del header NE, IMPORTS resueltos (KERNEL.LSTRCPY en vez de KERNEL.101), EXPORTS con ordinales correctos. 69/69 modulos sigue byte-exact, ahora tambien con .DEF listos para LINK4.
+git_branch: (no git)
+git_commit: (no git)
+host:       DESKTOP-GPDC4N2
+user:       elias
+
+stats:
+  src_modules:   70
+  built_files:   69
+  db_functions:  1216
+  db_matched:    1216

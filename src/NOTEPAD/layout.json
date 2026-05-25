@@ -1,0 +1,99 @@
+{
+  "module": "NOTEPAD",
+  "original_name": "NOTEPAD.EXE",
+  "original_size": 18736,
+  "ne_off": 1024,
+  "sector": 16,
+  "segments": [
+    {
+      "index": 1,
+      "file_off": 1728,
+      "data_len": 3461,
+      "flags": 61808,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 62
+    },
+    {
+      "index": 2,
+      "file_off": 5696,
+      "data_len": 1141,
+      "flags": 61808,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 26
+    },
+    {
+      "index": 3,
+      "file_off": 7056,
+      "data_len": 984,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 30
+    },
+    {
+      "index": 4,
+      "file_off": 8288,
+      "data_len": 1874,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 35
+    },
+    {
+      "index": 5,
+      "file_off": 10448,
+      "data_len": 595,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 5
+    },
+    {
+      "index": 6,
+      "file_off": 11088,
+      "data_len": 1755,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 32
+    },
+    {
+      "index": 7,
+      "file_off": 13104,
+      "data_len": 1311,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 22
+    },
+    {
+      "index": 8,
+      "file_off": 14608,
+      "data_len": 362,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 8
+    },
+    {
+      "index": 9,
+      "file_off": 15040,
+      "data_len": 396,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 3
+    },
+    {
+      "index": 10,
+      "file_off": 15472,
+      "data_len": 438,
+      "flags": 273,
+      "is_data": true,
+      "has_reloc": true,
+      "reloc_count": 3
+    }
+  ]
+}

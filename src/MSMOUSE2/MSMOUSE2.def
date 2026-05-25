@@ -1,0 +1,18 @@
+; MOUSE.DEF - module definition para Windows 1.x
+; AUTO-GENERATED desde MSMOUSE2.DRV (NE entry/relocation tables)
+
+LIBRARY     MOUSE
+DESCRIPTION 'Mouse Systems or VisiOn Mouse (COM2)'
+EXETYPE     WINDOWS
+STUB        'WINSTUB.EXE'
+
+CODE        PRELOAD FIXED
+DATA        PRELOAD FIXED SINGLE
+
+IMPORTS
+    KERNEL.LOCALINIT
+
+EXPORTS
+    INQUIRE                @1
+    ENABLE                 @2
+    DISABLE                @3

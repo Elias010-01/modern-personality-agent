@@ -1,0 +1,14 @@
+version:    v05
+slug:       fixups-simbolicos-resueltos
+timestamp:  2026-05-24T23:27:55Z
+message:    Pista A completa al maximo: codigo .asm humano legible con PROC FAR/ENDP por funcion (LSTRCPY, GLOBALALLOC, GETVERSION, etc), labels L_xxxx para branch targets, fixups simbolicos resueltos (call far KERNEL.LSTRCPY en lugar de lcall 0,0xffff), bytes raw en comentario como autoridad para byte-exact. 69/69 modulos byte-exact verificado. Pipeline: decompile_segment.py (24s) + build_from_source.py (3s).
+git_branch: (no git)
+git_commit: (no git)
+host:       DESKTOP-GPDC4N2
+user:       elias
+
+stats:
+  src_modules:   70
+  built_files:   69
+  db_functions:  1216
+  db_matched:    1216

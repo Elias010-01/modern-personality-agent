@@ -1,0 +1,14 @@
+version:    v04
+slug:       asm-humano-legible-PROC-labels
+timestamp:  2026-05-24T23:19:08Z
+message:    Codigo fuente .asm transformado a formato humano legible: instrucciones x86 como cuerpo, bytes raw en comentarios (autoritativos para byte-exact), labels L_xxxx para branch targets, PROC FAR/ENDP con nombres reales (LSTRCPY, GLOBALALLOC, etc.) para las 1216 funciones identificadas. 69/69 modulos siguen byte-exact desde la nueva fuente legible. Editable al 100%, recompilable byte-exact.
+git_branch: (no git)
+git_commit: (no git)
+host:       DESKTOP-GPDC4N2
+user:       elias
+
+stats:
+  src_modules:   70
+  built_files:   69
+  db_functions:  1216
+  db_matched:    1216

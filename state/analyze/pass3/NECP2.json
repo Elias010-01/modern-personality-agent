@@ -1,0 +1,1172 @@
+{
+  "module": "NECP2",
+  "num_functions": 14,
+  "confidence_count": {
+    "high": 0,
+    "medium": 8,
+    "low": 5,
+    "unknown": 1
+  },
+  "functions": [
+    {
+      "module": "NECP2",
+      "segment_file": "seg1.asm",
+      "name": "sub_0000",
+      "kind": "FAR",
+      "offset": 0,
+      "size_bytes": null,
+      "start_line": 14,
+      "end_line": 322,
+      "num_instructions": 285,
+      "prologue": "standard_bp",
+      "epilogue": "jmp_tail",
+      "calls_near": [
+        "L_0482",
+        "L_0814",
+        "L_0963",
+        "L_0AB5"
+      ],
+      "calls_far": [
+        "far GDI.STARTSPOOLPAGE",
+        "far USER.SETRECT",
+        "far USER.SETRECTEMPTY"
+      ],
+      "num_jumps_cond": 18,
+      "num_jumps_uncond": 12,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 104,
+      "mnemonic_histogram": {
+        "push": 84,
+        "mov": 67,
+        "les": 18,
+        "sub": 16,
+        "call": 16,
+        "jmp": 12,
+        "nop": 10,
+        "cmp": 9,
+        "pop": 8,
+        "je": 8,
+        "inc": 5,
+        "jne": 5,
+        "add": 4,
+        "or": 3,
+        "test": 3
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "push ds",
+        "lds bx, ptr [bp + 8]",
+        "mov cx, word ptr [bp + 6]",
+        "mov dx, word ptr [bp + 4]"
+      ],
+      "last_instructions": [
+        "les bx, ptr [bp + 0x10]",
+        "cmp word ptr es:[bx + 0x32], 1",
+        "jne L_02C1",
+        "push word ptr es:[bx + 0x2e]"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [
+        {
+          "module": "GDI",
+          "func": "STARTSPOOLPAGE"
+        },
+        {
+          "module": "USER",
+          "func": "SETRECT"
+        },
+        {
+          "module": "USER",
+          "func": "SETRECTEMPTY"
+        }
+      ],
+      "callees_unresolved": [
+        "L_0482",
+        "L_0814",
+        "L_0963",
+        "L_0AB5"
+      ],
+      "callers": [],
+      "fanout": 3,
+      "fanin": 0,
+      "description": "Dispatcher: tabla de decisiones cmp+jcc (285 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "calls_gdi",
+        "calls_user",
+        "dispatcher",
+        "far"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0000 -- offset 0x0000 -- 285 instr\n; Dispatcher: tabla de decisiones cmp+jcc (285 instr).\n; tags: calls_gdi, calls_user, dispatcher, far\n; calls (inter): GDI.STARTSPOOLPAGE, USER.SETRECT, USER.SETRECTEMPTY\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "NECP2",
+      "segment_file": "seg2.asm",
+      "name": "sub_0238",
+      "kind": "FAR",
+      "offset": 568,
+      "size_bytes": null,
+      "start_line": 250,
+      "end_line": 281,
+      "num_instructions": 29,
+      "prologue": "saves_regs",
+      "epilogue": "retf_n",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 1,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 6,
+      "mnemonic_histogram": {
+        "mov": 8,
+        "push": 4,
+        "pop": 4,
+        "sub": 4,
+        "nop": 1,
+        "inc": 1,
+        "cmp": 1,
+        "jb": 1,
+        "shl": 1,
+        "and": 1,
+        "jmp": 1,
+        "dec": 1,
+        "retf": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "push ds",
+        "pop ax",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 4"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_085F",
+        "sub_0B86"
+      ],
+      "fanout": 0,
+      "fanin": 2,
+      "description": "Funcion sin clasificar definitiva (29 instr).",
+      "confidence": "unknown",
+      "semantic_tags": [
+        "far",
+        "small"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0238 -- offset 0x0238 -- 29 instr\n; Funcion sin clasificar definitiva (29 instr).\n; tags: far, small\n; callers: sub_085F, sub_0B86\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "NECP2",
+      "segment_file": "seg2.asm",
+      "name": "sub_0273",
+      "kind": "NEAR",
+      "offset": 627,
+      "size_bytes": null,
+      "start_line": 282,
+      "end_line": 329,
+      "num_instructions": 44,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [],
+      "calls_far": [
+        "far _entry_107"
+      ],
+      "num_jumps_cond": 4,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 20,
+      "mnemonic_histogram": {
+        "push": 16,
+        "mov": 8,
+        "les": 4,
+        "cmp": 3,
+        "sub": 3,
+        "call": 3,
+        "je": 3,
+        "jl": 1,
+        "test": 1,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "les bx, ptr [bp + 4]",
+        "cmp word ptr es:[bx + 8], 0x258",
+        "jl L_0297",
+        "push word ptr [bp + 0xa]"
+      ],
+      "last_instructions": [
+        "call far _entry_107",
+        "mov sp, bp",
+        "pop bp",
+        "ret 8"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0D53",
+        "sub_0F4A"
+      ],
+      "fanout": 0,
+      "fanin": 2,
+      "description": "Funcion mediana (44 instr, 0 calls).",
+      "confidence": "low",
+      "semantic_tags": [
+        "medium"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0273 -- offset 0x0273 -- 44 instr\n; Funcion mediana (44 instr, 0 calls).\n; tags: medium\n; callers: sub_0D53, sub_0F4A\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "NECP2",
+      "segment_file": "seg2.asm",
+      "name": "sub_02E7",
+      "kind": "FAR",
+      "offset": 743,
+      "size_bytes": null,
+      "start_line": 330,
+      "end_line": 667,
+      "num_instructions": 308,
+      "prologue": "standard_bp",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_05FB",
+        "L_07A3",
+        "L_085F"
+      ],
+      "calls_far": [
+        "far KERNEL.FINDRESOURCE",
+        "far KERNEL.FREERESOURCE",
+        "far KERNEL.GETMODULEHANDLE",
+        "far KERNEL.GLOBALUNLOCK",
+        "far KERNEL.LOADRESOURCE",
+        "far KERNEL.LOCKRESOURCE",
+        "far KERNEL.SIZEOFRESOURCE",
+        "far _entry_106",
+        "far _entry_107"
+      ],
+      "num_jumps_cond": 27,
+      "num_jumps_uncond": 8,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 129,
+      "mnemonic_histogram": {
+        "mov": 82,
+        "push": 68,
+        "je": 17,
+        "call": 16,
+        "les": 14,
+        "cmp": 14,
+        "or": 13,
+        "sub": 11,
+        "add": 10,
+        "pop": 8,
+        "jmp": 8,
+        "inc": 6,
+        "cwde": 6,
+        "shl": 6,
+        "lea": 5
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "les bx, ptr [bp + 4]",
+        "cmp word ptr es:[bx + 8], 0x258",
+        "jle L_030B",
+        "push word ptr [bp + 0xa]"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 0x10"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_05FB",
+        "sub_07A3",
+        "sub_085F"
+      ],
+      "callees_inter": [
+        {
+          "module": "KERNEL",
+          "func": "FINDRESOURCE"
+        },
+        {
+          "module": "KERNEL",
+          "func": "FREERESOURCE"
+        },
+        {
+          "module": "KERNEL",
+          "func": "GETMODULEHANDLE"
+        },
+        {
+          "module": "KERNEL",
+          "func": "GLOBALUNLOCK"
+        },
+        {
+          "module": "KERNEL",
+          "func": "LOADRESOURCE"
+        },
+        {
+          "module": "KERNEL",
+          "func": "LOCKRESOURCE"
+        },
+        {
+          "module": "KERNEL",
+          "func": "SIZEOFRESOURCE"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0D53",
+        "sub_0F4A"
+      ],
+      "fanout": 10,
+      "fanin": 2,
+      "description": "Dispatcher: tabla de decisiones cmp+jcc (308 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "calls_kernel",
+        "dispatcher",
+        "far"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_02E7 -- offset 0x02E7 -- 308 instr\n; Dispatcher: tabla de decisiones cmp+jcc (308 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_0D53, sub_0F4A\n; calls (intra): sub_05FB, sub_07A3, sub_085F\n; calls (inter): KERNEL.FINDRESOURCE, KERNEL.FREERESOURCE, KERNEL.GETMODULEHANDLE, KERNEL.GLOBALUNLOCK, KERNEL.LOADRESOURCE, KERNEL.LOCKRESOURCE (+1 mas)\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "NECP2",
+      "segment_file": "seg2.asm",
+      "name": "sub_05FB",
+      "kind": "NEAR",
+      "offset": 1531,
+      "size_bytes": null,
+      "start_line": 668,
+      "end_line": 806,
+      "num_instructions": 132,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [],
+      "calls_far": [
+        "far KERNEL.LSTRCPY"
+      ],
+      "num_jumps_cond": 3,
+      "num_jumps_uncond": 5,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 83,
+      "mnemonic_histogram": {
+        "mov": 89,
+        "cwde": 9,
+        "push": 7,
+        "jmp": 5,
+        "cmp": 3,
+        "les": 3,
+        "pop": 3,
+        "shl": 2,
+        "or": 2,
+        "jne": 2,
+        "sub": 1,
+        "lea": 1,
+        "imul": 1,
+        "je": 1,
+        "add": 1
+      },
+      "classification": "complex",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 6",
+        "push di",
+        "push si",
+        "mov bx, word ptr [bp + 0xa]"
+      ],
+      "last_instructions": [
+        "pop di",
+        "mov sp, bp",
+        "pop bp",
+        "ret 8"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [
+        {
+          "module": "KERNEL",
+          "func": "LSTRCPY"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_02E7"
+      ],
+      "fanout": 1,
+      "fanin": 1,
+      "description": "Funcion compleja: 132 instrucciones, 1 llamadas, 3 branches.",
+      "confidence": "low",
+      "semantic_tags": [
+        "calls_kernel",
+        "complex"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_05FB -- offset 0x05FB -- 132 instr\n; Funcion compleja: 132 instrucciones, 1 llamadas, 3 branches.\n; tags: calls_kernel, complex\n; callers: sub_02E7\n; calls (inter): KERNEL.LSTRCPY\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "NECP2",
+      "segment_file": "seg2.asm",
+      "name": "sub_07A3",
+      "kind": "NEAR",
+      "offset": 1955,
+      "size_bytes": null,
+      "start_line": 807,
+      "end_line": 883,
+      "num_instructions": 69,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [
+        "L_085F"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 5,
+      "num_jumps_uncond": 2,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 34,
+      "mnemonic_histogram": {
+        "mov": 25,
+        "les": 15,
+        "push": 4,
+        "jne": 4,
+        "or": 3,
+        "and": 2,
+        "jmp": 2,
+        "sub": 2,
+        "pop": 2,
+        "cmp": 1,
+        "shr": 1,
+        "jle": 1,
+        "neg": 1,
+        "cdq": 1,
+        "idiv": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "push si",
+        "les bx, ptr [bp + 8]",
+        "mov al, byte ptr es:[bx + 0x11]",
+        "and al, 0xf"
+      ],
+      "last_instructions": [
+        "pop si",
+        "mov sp, bp",
+        "pop bp",
+        "ret 0xa"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_085F"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_02E7"
+      ],
+      "fanout": 1,
+      "fanin": 1,
+      "description": "Funcion mediana (69 instr, 1 calls).",
+      "confidence": "low",
+      "semantic_tags": [
+        "medium"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_07A3 -- offset 0x07A3 -- 69 instr\n; Funcion mediana (69 instr, 1 calls).\n; tags: medium\n; callers: sub_02E7\n; calls (intra): sub_085F\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "NECP2",
+      "segment_file": "seg2.asm",
+      "name": "sub_085F",
+      "kind": "FAR",
+      "offset": 2143,
+      "size_bytes": null,
+      "start_line": 884,
+      "end_line": 1132,
+      "num_instructions": 225,
+      "prologue": "standard_bp",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_0238",
+        "L_0AB0",
+        "L_0B86",
+        "L_0D53"
+      ],
+      "calls_far": [
+        "far KERNEL.GLOBALFREE",
+        "far KERNEL.LSTRCMP"
+      ],
+      "num_jumps_cond": 17,
+      "num_jumps_uncond": 10,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 122,
+      "mnemonic_histogram": {
+        "push": 73,
+        "mov": 52,
+        "cmp": 15,
+        "les": 11,
+        "call": 10,
+        "jmp": 10,
+        "sub": 7,
+        "jne": 7,
+        "pop": 6,
+        "inc": 5,
+        "or": 3,
+        "jle": 3,
+        "add": 3,
+        "jl": 2,
+        "nop": 2
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 2",
+        "mov word ptr [bp - 2], 0",
+        "push word ptr [bp + 6]",
+        "push word ptr [bp + 4]"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 0x1e"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0238",
+        "sub_0AB0",
+        "sub_0B86",
+        "sub_0D53"
+      ],
+      "callees_inter": [
+        {
+          "module": "KERNEL",
+          "func": "GLOBALFREE"
+        },
+        {
+          "module": "KERNEL",
+          "func": "LSTRCMP"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_02E7",
+        "sub_07A3"
+      ],
+      "fanout": 6,
+      "fanin": 2,
+      "description": "Dispatcher: tabla de decisiones cmp+jcc (225 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "calls_kernel",
+        "dispatcher",
+        "far"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_085F -- offset 0x085F -- 225 instr\n; Dispatcher: tabla de decisiones cmp+jcc (225 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_02E7, sub_07A3\n; calls (intra): sub_0238, sub_0AB0, sub_0B86, sub_0D53\n; calls (inter): KERNEL.GLOBALFREE, KERNEL.LSTRCMP\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "NECP2",
+      "segment_file": "seg2.asm",
+      "name": "sub_0AB0",
+      "kind": "NEAR",
+      "offset": 2736,
+      "size_bytes": null,
+      "start_line": 1133,
+      "end_line": 1212,
+      "num_instructions": 74,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [
+        "L_0CB2"
+      ],
+      "calls_far": [
+        "far GDI.INSERTPQ",
+        "far GDI.SIZEPQ",
+        "far KERNEL.GLOBALLOCK",
+        "far KERNEL.GLOBALUNLOCK",
+        "far _entry_106"
+      ],
+      "num_jumps_cond": 3,
+      "num_jumps_uncond": 2,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 39,
+      "mnemonic_histogram": {
+        "mov": 22,
+        "push": 20,
+        "les": 9,
+        "call": 8,
+        "inc": 3,
+        "jne": 3,
+        "add": 3,
+        "sub": 2,
+        "jmp": 2,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 8",
+        "les bx, ptr [bp + 0xa]",
+        "mov ax, word ptr es:[bx + 0x30]",
+        "mov word ptr [bp - 6], ax"
+      ],
+      "last_instructions": [
+        "mov ax, word ptr [bp + 4]",
+        "mov sp, bp",
+        "pop bp",
+        "ret 0xa"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0CB2"
+      ],
+      "callees_inter": [
+        {
+          "module": "GDI",
+          "func": "INSERTPQ"
+        },
+        {
+          "module": "GDI",
+          "func": "SIZEPQ"
+        },
+        {
+          "module": "KERNEL",
+          "func": "GLOBALLOCK"
+        },
+        {
+          "module": "KERNEL",
+          "func": "GLOBALUNLOCK"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_085F"
+      ],
+      "fanout": 5,
+      "fanin": 1,
+      "description": "Funcion mediana (74 instr, 5 calls).",
+      "confidence": "low",
+      "semantic_tags": [
+        "calls_gdi",
+        "calls_kernel",
+        "medium"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0AB0 -- offset 0x0AB0 -- 74 instr\n; Funcion mediana (74 instr, 5 calls).\n; tags: calls_gdi, calls_kernel, medium\n; callers: sub_085F\n; calls (intra): sub_0CB2\n; calls (inter): GDI.INSERTPQ, GDI.SIZEPQ, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "NECP2",
+      "segment_file": "seg2.asm",
+      "name": "sub_0B86",
+      "kind": "NEAR",
+      "offset": 2950,
+      "size_bytes": null,
+      "start_line": 1213,
+      "end_line": 1336,
+      "num_instructions": 110,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [
+        "L_0238"
+      ],
+      "calls_far": [
+        "far KERNEL.GLOBALALLOC",
+        "far KERNEL.GLOBALLOCK",
+        "far KERNEL.GLOBALUNLOCK"
+      ],
+      "num_jumps_cond": 11,
+      "num_jumps_uncond": 5,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 64,
+      "mnemonic_histogram": {
+        "mov": 44,
+        "push": 10,
+        "les": 10,
+        "cmp": 9,
+        "sub": 5,
+        "jmp": 5,
+        "jb": 4,
+        "inc": 4,
+        "call": 4,
+        "jne": 3,
+        "or": 2,
+        "pop": 2,
+        "add": 1,
+        "jge": 1,
+        "ja": 1
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 0x12",
+        "push si",
+        "les bx, ptr [bp + 4]",
+        "mov ax, word ptr es:[bx + 0x23]"
+      ],
+      "last_instructions": [
+        "pop si",
+        "mov sp, bp",
+        "pop bp",
+        "ret 0xa"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0238"
+      ],
+      "callees_inter": [
+        {
+          "module": "KERNEL",
+          "func": "GLOBALALLOC"
+        },
+        {
+          "module": "KERNEL",
+          "func": "GLOBALLOCK"
+        },
+        {
+          "module": "KERNEL",
+          "func": "GLOBALUNLOCK"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_085F",
+        "sub_0F4A"
+      ],
+      "fanout": 4,
+      "fanin": 2,
+      "description": "Dispatcher: tabla de decisiones cmp+jcc (110 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "calls_kernel",
+        "dispatcher"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0B86 -- offset 0x0B86 -- 110 instr\n; Dispatcher: tabla de decisiones cmp+jcc (110 instr).\n; tags: calls_kernel, dispatcher\n; callers: sub_085F, sub_0F4A\n; calls (intra): sub_0238\n; calls (inter): KERNEL.GLOBALALLOC, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "NECP2",
+      "segment_file": "seg2.asm",
+      "name": "sub_0CB2",
+      "kind": "FAR",
+      "offset": 3250,
+      "size_bytes": null,
+      "start_line": 1337,
+      "end_line": 1407,
+      "num_instructions": 66,
+      "prologue": "standard_bp",
+      "epilogue": "retf_n",
+      "calls_near": [],
+      "calls_far": [
+        "far KERNEL.GLOBALALLOC",
+        "far KERNEL.GLOBALREALLOC"
+      ],
+      "num_jumps_cond": 3,
+      "num_jumps_uncond": 2,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 17,
+      "mnemonic_histogram": {
+        "mov": 19,
+        "push": 13,
+        "pop": 6,
+        "sub": 4,
+        "les": 4,
+        "add": 3,
+        "cdq": 2,
+        "call": 2,
+        "or": 2,
+        "jne": 2,
+        "jmp": 2,
+        "cmp": 1,
+        "jl": 1,
+        "ret": 1,
+        "nop": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 2",
+        "push di",
+        "push si",
+        "les bx, ptr [bp + 6]"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 4"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [
+        {
+          "module": "KERNEL",
+          "func": "GLOBALALLOC"
+        },
+        {
+          "module": "KERNEL",
+          "func": "GLOBALREALLOC"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0AB0"
+      ],
+      "fanout": 2,
+      "fanin": 1,
+      "description": "Funcion mediana (66 instr, 2 calls).",
+      "confidence": "low",
+      "semantic_tags": [
+        "calls_kernel",
+        "far",
+        "medium"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0CB2 -- offset 0x0CB2 -- 66 instr\n; Funcion mediana (66 instr, 2 calls).\n; tags: calls_kernel, far, medium\n; callers: sub_0AB0\n; calls (inter): KERNEL.GLOBALALLOC, KERNEL.GLOBALREALLOC\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "NECP2",
+      "segment_file": "seg2.asm",
+      "name": "sub_0D53",
+      "kind": "NEAR",
+      "offset": 3411,
+      "size_bytes": null,
+      "start_line": 1408,
+      "end_line": 1604,
+      "num_instructions": 178,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [
+        "L_0273",
+        "L_02E7",
+        "L_0F4A"
+      ],
+      "calls_far": [
+        "far _entry_107"
+      ],
+      "num_jumps_cond": 15,
+      "num_jumps_uncond": 8,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 110,
+      "mnemonic_histogram": {
+        "mov": 57,
+        "push": 30,
+        "les": 15,
+        "cmp": 12,
+        "sub": 8,
+        "jmp": 8,
+        "add": 8,
+        "je": 7,
+        "call": 6,
+        "jne": 5,
+        "cwde": 3,
+        "shl": 3,
+        "inc": 3,
+        "or": 2,
+        "pop": 2
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 0x1a",
+        "push si",
+        "cmp word ptr [bp + 0x10], 0",
+        "jle L_0D65"
+      ],
+      "last_instructions": [
+        "pop si",
+        "mov sp, bp",
+        "pop bp",
+        "ret 0x16"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0273",
+        "sub_02E7",
+        "sub_0F4A"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_085F"
+      ],
+      "fanout": 3,
+      "fanin": 1,
+      "description": "Dispatcher: tabla de decisiones cmp+jcc (178 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "dispatcher"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0D53 -- offset 0x0D53 -- 178 instr\n; Dispatcher: tabla de decisiones cmp+jcc (178 instr).\n; tags: dispatcher\n; callers: sub_085F\n; calls (intra): sub_0273, sub_02E7, sub_0F4A\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "NECP2",
+      "segment_file": "seg2.asm",
+      "name": "sub_0F4A",
+      "kind": "FAR",
+      "offset": 3914,
+      "size_bytes": null,
+      "start_line": 1605,
+      "end_line": 1826,
+      "num_instructions": 202,
+      "prologue": "standard_bp",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_0273",
+        "L_02E7",
+        "L_0B86",
+        "L_1173",
+        "L_11AD"
+      ],
+      "calls_far": [
+        "far KERNEL.GLOBALFREE",
+        "far _entry_107",
+        "far _entry_108",
+        "far _entry_109",
+        "far _entry_11"
+      ],
+      "num_jumps_cond": 15,
+      "num_jumps_uncond": 8,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 104,
+      "mnemonic_histogram": {
+        "push": 76,
+        "mov": 39,
+        "call": 15,
+        "cmp": 11,
+        "sub": 9,
+        "jmp": 8,
+        "les": 8,
+        "jne": 5,
+        "je": 5,
+        "pop": 4,
+        "or": 3,
+        "add": 3,
+        "jge": 2,
+        "dec": 2,
+        "lea": 1
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 2",
+        "push word ptr [bp + 0xc]",
+        "push word ptr [bp + 0xa]",
+        "lea ax, [bp + 8]"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 0x1e"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0273",
+        "sub_02E7",
+        "sub_0B86",
+        "sub_1173",
+        "sub_11AD"
+      ],
+      "callees_inter": [
+        {
+          "module": "KERNEL",
+          "func": "GLOBALFREE"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0D53"
+      ],
+      "fanout": 6,
+      "fanin": 1,
+      "description": "Dispatcher: tabla de decisiones cmp+jcc (202 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "calls_kernel",
+        "dispatcher",
+        "far"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0F4A -- offset 0x0F4A -- 202 instr\n; Dispatcher: tabla de decisiones cmp+jcc (202 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_0D53\n; calls (intra): sub_0273, sub_02E7, sub_0B86, sub_1173, sub_11AD\n; calls (inter): KERNEL.GLOBALFREE\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "NECP2",
+      "segment_file": "seg2.asm",
+      "name": "sub_1173",
+      "kind": "NEAR",
+      "offset": 4467,
+      "size_bytes": null,
+      "start_line": 1827,
+      "end_line": 1858,
+      "num_instructions": 26,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 4,
+      "num_jumps_uncond": 2,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 8,
+      "mnemonic_histogram": {
+        "cmp": 4,
+        "inc": 4,
+        "mov": 3,
+        "push": 2,
+        "sub": 2,
+        "jmp": 2,
+        "les": 2,
+        "jg": 2,
+        "pop": 2,
+        "je": 1,
+        "jne": 1,
+        "ret": 1
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 2",
+        "push si",
+        "sub si, si",
+        "jmp L_118B"
+      ],
+      "last_instructions": [
+        "pop si",
+        "mov sp, bp",
+        "pop bp",
+        "ret 6"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0F4A"
+      ],
+      "fanout": 0,
+      "fanin": 1,
+      "description": "Dispatcher: tabla de decisiones cmp+jcc (26 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "dispatcher"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1173 -- offset 0x1173 -- 26 instr\n; Dispatcher: tabla de decisiones cmp+jcc (26 instr).\n; tags: dispatcher\n; callers: sub_0F4A\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "NECP2",
+      "segment_file": "seg2.asm",
+      "name": "sub_11AD",
+      "kind": "NEAR",
+      "offset": 4525,
+      "size_bytes": null,
+      "start_line": 1859,
+      "end_line": 1926,
+      "num_instructions": 63,
+      "prologue": "standard_bp",
+      "epilogue": "jmp_tail",
+      "calls_near": [],
+      "calls_far": [
+        "far _entry_107"
+      ],
+      "num_jumps_cond": 6,
+      "num_jumps_uncond": 2,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 25,
+      "mnemonic_histogram": {
+        "push": 16,
+        "mov": 15,
+        "les": 7,
+        "sub": 5,
+        "cmp": 5,
+        "je": 3,
+        "call": 3,
+        "jge": 2,
+        "jmp": 2,
+        "db": 2,
+        "or": 1,
+        "jne": 1,
+        "pop": 1
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 2",
+        "les bx, ptr [bp + 4]",
+        "mov ax, word ptr es:[bx + 0x14]",
+        "mov word ptr [bp - 2], ax"
+      ],
+      "last_instructions": [
+        "mov sp, bp",
+        "pop bp",
+        "db 0c2h",
+        "db 008h"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0F4A"
+      ],
+      "fanout": 0,
+      "fanin": 1,
+      "description": "Dispatcher: tabla de decisiones cmp+jcc (63 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "dispatcher"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_11AD -- offset 0x11AD -- 63 instr\n; Dispatcher: tabla de decisiones cmp+jcc (63 instr).\n; tags: dispatcher\n; callers: sub_0F4A\n;----------------------------------------------------------------------"
+    }
+  ]
+}

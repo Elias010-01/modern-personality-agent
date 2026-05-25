@@ -1,0 +1,36 @@
+{
+  "module": "EPSONMX",
+  "original_name": "EPSONMX.DRV",
+  "original_size": 12176,
+  "ne_off": 64,
+  "sector": 16,
+  "segments": [
+    {
+      "index": 1,
+      "file_off": 624,
+      "data_len": 5146,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 46
+    },
+    {
+      "index": 2,
+      "file_off": 6144,
+      "data_len": 4201,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 20
+    },
+    {
+      "index": 3,
+      "file_off": 10512,
+      "data_len": 990,
+      "flags": 81,
+      "is_data": true,
+      "has_reloc": false,
+      "reloc_count": 0
+    }
+  ]
+}

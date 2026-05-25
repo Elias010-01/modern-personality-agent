@@ -1,0 +1,36 @@
+{
+  "module": "MOUSE",
+  "original_name": "MOUSE.DRV",
+  "original_size": 3358,
+  "ne_off": 1024,
+  "sector": 512,
+  "segments": [
+    {
+      "index": 1,
+      "file_off": 1536,
+      "data_len": 953,
+      "flags": 61808,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 1
+    },
+    {
+      "index": 2,
+      "file_off": 2560,
+      "data_len": 477,
+      "flags": 64,
+      "is_data": false,
+      "has_reloc": false,
+      "reloc_count": 0
+    },
+    {
+      "index": 3,
+      "file_off": 3072,
+      "data_len": 286,
+      "flags": 65,
+      "is_data": true,
+      "has_reloc": false,
+      "reloc_count": 0
+    }
+  ]
+}

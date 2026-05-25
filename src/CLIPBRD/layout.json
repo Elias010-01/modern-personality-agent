@@ -1,0 +1,27 @@
+{
+  "module": "CLIPBRD",
+  "original_name": "CLIPBRD.EXE",
+  "original_size": 9712,
+  "ne_off": 1024,
+  "sector": 16,
+  "segments": [
+    {
+      "index": 1,
+      "file_off": 1312,
+      "data_len": 6131,
+      "flags": 272,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 89
+    },
+    {
+      "index": 2,
+      "file_off": 8160,
+      "data_len": 166,
+      "flags": 17,
+      "is_data": true,
+      "has_reloc": false,
+      "reloc_count": 0
+    }
+  ]
+}

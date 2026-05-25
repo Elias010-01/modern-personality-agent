@@ -1,0 +1,36 @@
+{
+  "module": "SOUND",
+  "original_name": "SOUND.DRV",
+  "original_size": 5853,
+  "ne_off": 1024,
+  "sector": 512,
+  "segments": [
+    {
+      "index": 1,
+      "file_off": 1536,
+      "data_len": 3312,
+      "flags": 256,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 4
+    },
+    {
+      "index": 2,
+      "file_off": 5120,
+      "data_len": 140,
+      "flags": 320,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 2
+    },
+    {
+      "index": 3,
+      "file_off": 5632,
+      "data_len": 221,
+      "flags": 1,
+      "is_data": true,
+      "has_reloc": false,
+      "reloc_count": 0
+    }
+  ]
+}

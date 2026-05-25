@@ -1,0 +1,18 @@
+; KEYBOARD.DEF - module definition para Windows 1.x
+; AUTO-GENERATED desde USA.DRV (NE entry/relocation tables)
+
+LIBRARY     KEYBOARD
+DESCRIPTION 'KEYBOARD United States, Mexico:1!0!0!2!0!0!AM!PM!$!,!.!/!:!,!!52!1!0!2!0!0!AM!PM!$!,!.!/!:!,'
+EXETYPE     WINDOWS
+STUB        'WINSTUB.EXE'
+
+CODE        PRELOAD MOVABLE DISCARDABLE PURE
+DATA        PRELOAD FIXED SINGLE
+
+EXPORTS
+    INQUIRE                @1
+    ENABLE                 @2
+    DISABLE                @3
+    TOASCII                @4
+    ANSITOOEM              @5
+    OEMTOANSI              @6

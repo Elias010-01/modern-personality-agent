@@ -1,0 +1,14 @@
+version:    
+slug:       copyright-moddeado-todo-visible
+timestamp:  2026-05-25T01:09:01Z
+message:    Mod menubar extendido con substitucion del bloque copyright en WIN.COM splash: Copyright/Trademark de 70+54 bytes -> 'This mod is unofficial. Original (c) Microsoft Corp 1985, 1986.' (63B padded + linea 2 vacia). Total 18 cambios visibles al arrancar Windows 1.03 (splash + copyright + menus + titulos + about dialogs).
+git_branch: (no git)
+git_commit: (no git)
+host:       DESKTOP-GPDC4N2
+user:       elias
+
+stats:
+  src_modules:   70
+  built_files:   69
+  db_functions:  1216
+  db_matched:    1216

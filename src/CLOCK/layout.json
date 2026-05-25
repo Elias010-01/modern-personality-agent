@@ -1,0 +1,27 @@
+{
+  "module": "CLOCK",
+  "original_name": "CLOCK.EXE",
+  "original_size": 7984,
+  "ne_off": 1024,
+  "sector": 16,
+  "segments": [
+    {
+      "index": 1,
+      "file_off": 1328,
+      "data_len": 4480,
+      "flags": 272,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 59
+    },
+    {
+      "index": 2,
+      "file_off": 6288,
+      "data_len": 134,
+      "flags": 17,
+      "is_data": true,
+      "has_reloc": false,
+      "reloc_count": 0
+    }
+  ]
+}

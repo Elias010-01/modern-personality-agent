@@ -1,0 +1,2944 @@
+{
+  "module": "COMM",
+  "num_functions": 43,
+  "confidence_count": {
+    "high": 0,
+    "medium": 16,
+    "low": 14,
+    "unknown": 13
+  },
+  "functions": [
+    {
+      "module": "COMM",
+      "segment_file": "seg1.asm",
+      "name": "INICOM",
+      "kind": "FAR",
+      "offset": null,
+      "size_bytes": null,
+      "start_line": 18,
+      "end_line": 34,
+      "num_instructions": 15,
+      "prologue": "none",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_01D1"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 1,
+      "mnemonic_histogram": {
+        "mov": 4,
+        "push": 2,
+        "pop": 2,
+        "nop": 1,
+        "inc": 1,
+        "les": 1,
+        "call": 1,
+        "sub": 1,
+        "dec": 1,
+        "retf": 1
+      },
+      "classification": "wrapper",
+      "first_instructions": [
+        "mov ax, ds",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp",
+        "push ds"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 4"
+      ],
+      "discovered": false,
+      "callees_intra": [
+        "sub_01D1"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 1,
+      "fanin": 0,
+      "description": "Wrapper que delega en sub_01D1.",
+      "confidence": "medium",
+      "semantic_tags": [
+        "far",
+        "wrapper"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; INICOM -- 15 instr\n; Wrapper que delega en sub_01D1.\n; tags: far, wrapper\n; calls (intra): sub_01D1\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "COMM",
+      "segment_file": "seg1.asm",
+      "name": "SETCOM",
+      "kind": "FAR",
+      "offset": null,
+      "size_bytes": null,
+      "start_line": 40,
+      "end_line": 56,
+      "num_instructions": 15,
+      "prologue": "none",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_044D"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 1,
+      "mnemonic_histogram": {
+        "mov": 4,
+        "push": 2,
+        "pop": 2,
+        "nop": 1,
+        "inc": 1,
+        "les": 1,
+        "call": 1,
+        "sub": 1,
+        "dec": 1,
+        "retf": 1
+      },
+      "classification": "wrapper",
+      "first_instructions": [
+        "mov ax, ds",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp",
+        "push ds"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 4"
+      ],
+      "discovered": false,
+      "callees_intra": [
+        "sub_044D"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 1,
+      "fanin": 0,
+      "description": "Setter: cambia com.",
+      "confidence": "medium",
+      "semantic_tags": [
+        "far",
+        "wrapper"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; SETCOM -- 15 instr\n; Setter: cambia com.\n; tags: far, wrapper\n; calls (intra): sub_044D\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "COMM",
+      "segment_file": "seg1.asm",
+      "name": "SETQUE",
+      "kind": "FAR",
+      "offset": null,
+      "size_bytes": null,
+      "start_line": 62,
+      "end_line": 79,
+      "num_instructions": 16,
+      "prologue": "none",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_06A3"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 2,
+      "mnemonic_histogram": {
+        "mov": 5,
+        "push": 2,
+        "pop": 2,
+        "nop": 1,
+        "inc": 1,
+        "les": 1,
+        "call": 1,
+        "sub": 1,
+        "dec": 1,
+        "retf": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "mov ax, ds",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp",
+        "push ds"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 6"
+      ],
+      "discovered": false,
+      "callees_intra": [
+        "sub_06A3"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 1,
+      "fanin": 0,
+      "description": "Setter: cambia que.",
+      "confidence": "medium",
+      "semantic_tags": [
+        "far",
+        "small"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; SETQUE -- 16 instr\n; Setter: cambia que.\n; tags: far, small\n; calls (intra): sub_06A3\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "COMM",
+      "segment_file": "seg1.asm",
+      "name": "RECCOM",
+      "kind": "FAR",
+      "offset": null,
+      "size_bytes": null,
+      "start_line": 85,
+      "end_line": 108,
+      "num_instructions": 21,
+      "prologue": "none",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_07EE"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 2,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 1,
+      "mnemonic_histogram": {
+        "mov": 8,
+        "inc": 2,
+        "push": 2,
+        "pop": 2,
+        "nop": 1,
+        "call": 1,
+        "jne": 1,
+        "jcxz": 1,
+        "sub": 1,
+        "dec": 1,
+        "retf": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "mov ax, ds",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp",
+        "push ds"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 2"
+      ],
+      "discovered": false,
+      "callees_intra": [
+        "sub_07EE"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 1,
+      "fanin": 0,
+      "description": "Funcion sin clasificar definitiva (21 instr).",
+      "confidence": "unknown",
+      "semantic_tags": [
+        "far",
+        "small"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; RECCOM -- 21 instr\n; Funcion sin clasificar definitiva (21 instr).\n; tags: far, small\n; calls (intra): sub_07EE\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "COMM",
+      "segment_file": "seg1.asm",
+      "name": "SNDCOM",
+      "kind": "FAR",
+      "offset": null,
+      "size_bytes": null,
+      "start_line": 114,
+      "end_line": 131,
+      "num_instructions": 16,
+      "prologue": "none",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_02E7"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 2,
+      "mnemonic_histogram": {
+        "mov": 6,
+        "push": 2,
+        "pop": 2,
+        "nop": 1,
+        "inc": 1,
+        "call": 1,
+        "sub": 1,
+        "dec": 1,
+        "retf": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "mov ax, ds",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp",
+        "push ds"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 4"
+      ],
+      "discovered": false,
+      "callees_intra": [
+        "sub_02E7"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 1,
+      "fanin": 0,
+      "description": "Funcion sin clasificar definitiva (16 instr).",
+      "confidence": "unknown",
+      "semantic_tags": [
+        "far",
+        "small"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; SNDCOM -- 16 instr\n; Funcion sin clasificar definitiva (16 instr).\n; tags: far, small\n; calls (intra): sub_02E7\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "COMM",
+      "segment_file": "seg1.asm",
+      "name": "CTX",
+      "kind": "FAR",
+      "offset": null,
+      "size_bytes": null,
+      "start_line": 137,
+      "end_line": 154,
+      "num_instructions": 16,
+      "prologue": "none",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_02C0"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 2,
+      "mnemonic_histogram": {
+        "mov": 6,
+        "push": 2,
+        "pop": 2,
+        "nop": 1,
+        "inc": 1,
+        "call": 1,
+        "sub": 1,
+        "dec": 1,
+        "retf": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "mov ax, ds",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp",
+        "push ds"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 4"
+      ],
+      "discovered": false,
+      "callees_intra": [
+        "sub_02C0"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 1,
+      "fanin": 0,
+      "description": "Funcion sin clasificar definitiva (16 instr).",
+      "confidence": "unknown",
+      "semantic_tags": [
+        "far",
+        "small"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; CTX -- 16 instr\n; Funcion sin clasificar definitiva (16 instr).\n; tags: far, small\n; calls (intra): sub_02C0\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "COMM",
+      "segment_file": "seg1.asm",
+      "name": "TRMCOM",
+      "kind": "FAR",
+      "offset": null,
+      "size_bytes": null,
+      "start_line": 160,
+      "end_line": 176,
+      "num_instructions": 15,
+      "prologue": "none",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_032D"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 1,
+      "mnemonic_histogram": {
+        "mov": 5,
+        "push": 2,
+        "pop": 2,
+        "nop": 1,
+        "inc": 1,
+        "call": 1,
+        "sub": 1,
+        "dec": 1,
+        "retf": 1
+      },
+      "classification": "wrapper",
+      "first_instructions": [
+        "mov ax, ds",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp",
+        "push ds"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 2"
+      ],
+      "discovered": false,
+      "callees_intra": [
+        "sub_032D"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 1,
+      "fanin": 0,
+      "description": "Wrapper que delega en sub_032D.",
+      "confidence": "medium",
+      "semantic_tags": [
+        "far",
+        "wrapper"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; TRMCOM -- 15 instr\n; Wrapper que delega en sub_032D.\n; tags: far, wrapper\n; calls (intra): sub_032D\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "COMM",
+      "segment_file": "seg1.asm",
+      "name": "STACOM",
+      "kind": "FAR",
+      "offset": null,
+      "size_bytes": null,
+      "start_line": 182,
+      "end_line": 203,
+      "num_instructions": 20,
+      "prologue": "none",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_06F6"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 2,
+      "mnemonic_histogram": {
+        "mov": 5,
+        "push": 4,
+        "pop": 4,
+        "nop": 1,
+        "inc": 1,
+        "les": 1,
+        "call": 1,
+        "sub": 1,
+        "dec": 1,
+        "retf": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "mov ax, ds",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp",
+        "push ds"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 6"
+      ],
+      "discovered": false,
+      "callees_intra": [
+        "sub_06F6"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 1,
+      "fanin": 0,
+      "description": "Funcion sin clasificar definitiva (20 instr).",
+      "confidence": "unknown",
+      "semantic_tags": [
+        "far",
+        "small"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; STACOM -- 20 instr\n; Funcion sin clasificar definitiva (20 instr).\n; tags: far, small\n; calls (intra): sub_06F6\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "COMM",
+      "segment_file": "seg1.asm",
+      "name": "CEXTFCN",
+      "kind": "FAR",
+      "offset": null,
+      "size_bytes": null,
+      "start_line": 209,
+      "end_line": 226,
+      "num_instructions": 16,
+      "prologue": "none",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_076C"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 2,
+      "mnemonic_histogram": {
+        "mov": 6,
+        "push": 2,
+        "pop": 2,
+        "nop": 1,
+        "inc": 1,
+        "call": 1,
+        "sub": 1,
+        "dec": 1,
+        "retf": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "mov ax, ds",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp",
+        "push ds"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 4"
+      ],
+      "discovered": false,
+      "callees_intra": [
+        "sub_076C"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 1,
+      "fanin": 0,
+      "description": "Funcion sin clasificar definitiva (16 instr).",
+      "confidence": "unknown",
+      "semantic_tags": [
+        "far",
+        "small"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; CEXTFCN -- 16 instr\n; Funcion sin clasificar definitiva (16 instr).\n; tags: far, small\n; calls (intra): sub_076C\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "COMM",
+      "segment_file": "seg1.asm",
+      "name": "CFLUSH",
+      "kind": "FAR",
+      "offset": null,
+      "size_bytes": null,
+      "start_line": 232,
+      "end_line": 253,
+      "num_instructions": 20,
+      "prologue": "none",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_086F"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 2,
+      "mnemonic_histogram": {
+        "mov": 6,
+        "push": 4,
+        "pop": 4,
+        "nop": 1,
+        "inc": 1,
+        "call": 1,
+        "sub": 1,
+        "dec": 1,
+        "retf": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "mov ax, ds",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp",
+        "push ds"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 4"
+      ],
+      "discovered": false,
+      "callees_intra": [
+        "sub_086F"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 1,
+      "fanin": 0,
+      "description": "Funcion sin clasificar definitiva (20 instr).",
+      "confidence": "unknown",
+      "semantic_tags": [
+        "far",
+        "small"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; CFLUSH -- 20 instr\n; Funcion sin clasificar definitiva (20 instr).\n; tags: far, small\n; calls (intra): sub_086F\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "COMM",
+      "segment_file": "seg1.asm",
+      "name": "CEVT",
+      "kind": "FAR",
+      "offset": null,
+      "size_bytes": null,
+      "start_line": 259,
+      "end_line": 276,
+      "num_instructions": 16,
+      "prologue": "none",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_06C8"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 2,
+      "mnemonic_histogram": {
+        "mov": 6,
+        "push": 2,
+        "pop": 2,
+        "nop": 1,
+        "inc": 1,
+        "call": 1,
+        "sub": 1,
+        "dec": 1,
+        "retf": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "mov ax, ds",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp",
+        "push ds"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 4"
+      ],
+      "discovered": false,
+      "callees_intra": [
+        "sub_06C8"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 1,
+      "fanin": 0,
+      "description": "Funcion sin clasificar definitiva (16 instr).",
+      "confidence": "unknown",
+      "semantic_tags": [
+        "far",
+        "small"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; CEVT -- 16 instr\n; Funcion sin clasificar definitiva (16 instr).\n; tags: far, small\n; calls (intra): sub_06C8\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "COMM",
+      "segment_file": "seg1.asm",
+      "name": "CEVTGET",
+      "kind": "FAR",
+      "offset": null,
+      "size_bytes": null,
+      "start_line": 282,
+      "end_line": 299,
+      "num_instructions": 16,
+      "prologue": "none",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_06DE"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 2,
+      "mnemonic_histogram": {
+        "mov": 6,
+        "push": 2,
+        "pop": 2,
+        "nop": 1,
+        "inc": 1,
+        "call": 1,
+        "sub": 1,
+        "dec": 1,
+        "retf": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "mov ax, ds",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp",
+        "push ds"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 4"
+      ],
+      "discovered": false,
+      "callees_intra": [
+        "sub_06DE"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 1,
+      "fanin": 0,
+      "description": "Funcion sin clasificar definitiva (16 instr).",
+      "confidence": "unknown",
+      "semantic_tags": [
+        "far",
+        "small"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; CEVTGET -- 16 instr\n; Funcion sin clasificar definitiva (16 instr).\n; tags: far, small\n; calls (intra): sub_06DE\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "COMM",
+      "segment_file": "seg1.asm",
+      "name": "CSETBRK",
+      "kind": "FAR",
+      "offset": null,
+      "size_bytes": null,
+      "start_line": 305,
+      "end_line": 325,
+      "num_instructions": 19,
+      "prologue": "none",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_0741"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 1,
+      "mnemonic_histogram": {
+        "mov": 5,
+        "push": 4,
+        "pop": 4,
+        "nop": 1,
+        "inc": 1,
+        "call": 1,
+        "sub": 1,
+        "dec": 1,
+        "retf": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "mov ax, ds",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp",
+        "push ds"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 2"
+      ],
+      "discovered": false,
+      "callees_intra": [
+        "sub_0741"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 1,
+      "fanin": 0,
+      "description": "Funcion sin clasificar definitiva (19 instr).",
+      "confidence": "unknown",
+      "semantic_tags": [
+        "far",
+        "small"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; CSETBRK -- 19 instr\n; Funcion sin clasificar definitiva (19 instr).\n; tags: far, small\n; calls (intra): sub_0741\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "COMM",
+      "segment_file": "seg1.asm",
+      "name": "CCLRBRK",
+      "kind": "FAR",
+      "offset": null,
+      "size_bytes": null,
+      "start_line": 331,
+      "end_line": 351,
+      "num_instructions": 19,
+      "prologue": "none",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_0746"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 1,
+      "mnemonic_histogram": {
+        "mov": 5,
+        "push": 4,
+        "pop": 4,
+        "nop": 1,
+        "inc": 1,
+        "call": 1,
+        "sub": 1,
+        "dec": 1,
+        "retf": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "mov ax, ds",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp",
+        "push ds"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 2"
+      ],
+      "discovered": false,
+      "callees_intra": [
+        "sub_0746"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 1,
+      "fanin": 0,
+      "description": "Funcion sin clasificar definitiva (19 instr).",
+      "confidence": "unknown",
+      "semantic_tags": [
+        "far",
+        "small"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; CCLRBRK -- 19 instr\n; Funcion sin clasificar definitiva (19 instr).\n; tags: far, small\n; calls (intra): sub_0746\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "COMM",
+      "segment_file": "seg1.asm",
+      "name": "GETDCB",
+      "kind": "FAR",
+      "offset": null,
+      "size_bytes": null,
+      "start_line": 357,
+      "end_line": 377,
+      "num_instructions": 19,
+      "prologue": "none",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_07DE"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 1,
+      "mnemonic_histogram": {
+        "mov": 5,
+        "push": 4,
+        "pop": 4,
+        "nop": 1,
+        "inc": 1,
+        "call": 1,
+        "sub": 1,
+        "dec": 1,
+        "retf": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "mov ax, ds",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp",
+        "push ds"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 2"
+      ],
+      "discovered": false,
+      "callees_intra": [
+        "sub_07DE"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 1,
+      "fanin": 0,
+      "description": "Getter: devuelve dcb.",
+      "confidence": "medium",
+      "semantic_tags": [
+        "far",
+        "small"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; GETDCB -- 19 instr\n; Getter: devuelve dcb.\n; tags: far, small\n; calls (intra): sub_07DE\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "COMM",
+      "segment_file": "seg1.asm",
+      "name": "sub_01D1",
+      "kind": "NEAR",
+      "offset": 465,
+      "size_bytes": null,
+      "start_line": 381,
+      "end_line": 500,
+      "num_instructions": 108,
+      "prologue": "saves_regs",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_03CD",
+        "L_044D",
+        "L_05C6",
+        "L_0677"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 7,
+      "num_jumps_uncond": 5,
+      "ints": [
+        "0x2f",
+        "0x2f",
+        "0x21"
+      ],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 24,
+      "mnemonic_histogram": {
+        "mov": 39,
+        "push": 10,
+        "pop": 10,
+        "call": 5,
+        "jmp": 5,
+        "xor": 5,
+        "je": 4,
+        "out": 4,
+        "int": 3,
+        "cmp": 2,
+        "and": 2,
+        "cli": 2,
+        "in": 2,
+        "sti": 2,
+        "jae": 1
+      },
+      "classification": "dos_caller",
+      "first_instructions": [
+        "push si",
+        "push di",
+        "mov ah, byte ptr es:[bx]",
+        "call L_0677",
+        "jae L_01E1",
+        "mov ax, 0xffff"
+      ],
+      "last_instructions": [
+        "mov word ptr [si + 0x1a], ax",
+        "pop di",
+        "pop si",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_03CD",
+        "sub_044D",
+        "sub_05C6",
+        "sub_0677"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "INICOM"
+      ],
+      "fanout": 4,
+      "fanin": 1,
+      "description": "Llama a servicios DOS via INT 21h (108 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "dos_caller",
+        "int_21",
+        "int_2f"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_01D1 -- offset 0x01D1 -- 108 instr\n; Llama a servicios DOS via INT 21h (108 instr).\n; tags: dos_caller, int_21, int_2f\n; callers: INICOM\n; calls (intra): sub_03CD, sub_044D, sub_05C6, sub_0677\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "COMM",
+      "segment_file": "seg1.asm",
+      "name": "sub_02C0",
+      "kind": "NEAR",
+      "offset": 704,
+      "size_bytes": null,
+      "start_line": 501,
+      "end_line": 525,
+      "num_instructions": 20,
+      "prologue": "saves_regs",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_02E7",
+        "L_0656",
+        "L_0677"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 4,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 1,
+      "mnemonic_histogram": {
+        "call": 3,
+        "jne": 2,
+        "mov": 2,
+        "pop": 2,
+        "ret": 2,
+        "push": 1,
+        "jb": 1,
+        "jns": 1,
+        "or": 1,
+        "jmp": 1,
+        "test": 1,
+        "cli": 1,
+        "sti": 1,
+        "xor": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "push si",
+        "call L_0677",
+        "jb L_02E0",
+        "jns L_02D1",
+        "call L_02E7",
+        "or ax, ax"
+      ],
+      "last_instructions": [
+        "ret",
+        "mov ax, 0x4000",
+        "pop si",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_02E7",
+        "sub_0656",
+        "sub_0677"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "CTX"
+      ],
+      "fanout": 3,
+      "fanin": 1,
+      "description": "Funcion sin clasificar definitiva (20 instr).",
+      "confidence": "unknown",
+      "semantic_tags": [
+        "small"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_02C0 -- offset 0x02C0 -- 20 instr\n; Funcion sin clasificar definitiva (20 instr).\n; tags: small\n; callers: CTX\n; calls (intra): sub_02E7, sub_0656, sub_0677\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "COMM",
+      "segment_file": "seg1.asm",
+      "name": "sub_02E7",
+      "kind": "NEAR",
+      "offset": 743,
+      "size_bytes": null,
+      "start_line": 526,
+      "end_line": 563,
+      "num_instructions": 32,
+      "prologue": "saves_regs",
+      "epilogue": "jmp_tail",
+      "calls_near": [
+        "L_03E8",
+        "L_05E6",
+        "L_065D",
+        "L_0677"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 5,
+      "num_jumps_uncond": 2,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 9,
+      "mnemonic_histogram": {
+        "mov": 5,
+        "call": 4,
+        "push": 3,
+        "xor": 3,
+        "pop": 3,
+        "jb": 2,
+        "jmp": 2,
+        "cmp": 2,
+        "inc": 2,
+        "jns": 1,
+        "jne": 1,
+        "jle": 1,
+        "les": 1,
+        "ret": 1,
+        "or": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "push si",
+        "push di",
+        "call L_0677",
+        "jb L_0321",
+        "jns L_02F7",
+        "xor ch, ch"
+      ],
+      "last_instructions": [
+        "ret",
+        "or byte ptr [si + 0x1b], 1",
+        "mov ax, word ptr [si + 0x1a]",
+        "jmp L_0321"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_03E8",
+        "sub_05E6",
+        "sub_065D",
+        "sub_0677"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "SNDCOM",
+        "sub_02C0"
+      ],
+      "fanout": 4,
+      "fanin": 2,
+      "description": "Funcion mediana (32 instr, 4 calls).",
+      "confidence": "low",
+      "semantic_tags": [
+        "medium"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_02E7 -- offset 0x02E7 -- 32 instr\n; Funcion mediana (32 instr, 4 calls).\n; tags: medium\n; callers: SNDCOM, sub_02C0\n; calls (intra): sub_03E8, sub_05E6, sub_065D, sub_0677\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "COMM",
+      "segment_file": "seg1.asm",
+      "name": "sub_032D",
+      "kind": "NEAR",
+      "offset": 813,
+      "size_bytes": null,
+      "start_line": 564,
+      "end_line": 610,
+      "num_instructions": 40,
+      "prologue": "saves_regs",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_038D",
+        "L_0677",
+        "L_07EE"
+      ],
+      "calls_far": [
+        "far SYSTEM.CREATESYSTEMTIMER",
+        "far SYSTEM.KILLSYSTEMTIMER"
+      ],
+      "num_jumps_cond": 7,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 9,
+      "mnemonic_histogram": {
+        "mov": 10,
+        "push": 8,
+        "call": 5,
+        "pop": 4,
+        "or": 2,
+        "jcxz": 2,
+        "cmp": 2,
+        "xor": 1,
+        "jb": 1,
+        "js": 1,
+        "jne": 1,
+        "jge": 1,
+        "je": 1,
+        "ret": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "push si",
+        "push di",
+        "xor cx, cx",
+        "call L_0677",
+        "jb L_038A",
+        "js L_0382"
+      ],
+      "last_instructions": [
+        "mov ax, cx",
+        "pop di",
+        "pop si",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_038D",
+        "sub_0677",
+        "sub_07EE"
+      ],
+      "callees_inter": [
+        {
+          "module": "SYSTEM",
+          "func": "CREATESYSTEMTIMER"
+        },
+        {
+          "module": "SYSTEM",
+          "func": "KILLSYSTEMTIMER"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "TRMCOM"
+      ],
+      "fanout": 5,
+      "fanin": 1,
+      "description": "Funcion mediana (40 instr, 5 calls).",
+      "confidence": "low",
+      "semantic_tags": [
+        "calls_system",
+        "medium"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_032D -- offset 0x032D -- 40 instr\n; Funcion mediana (40 instr, 5 calls).\n; tags: calls_system, medium\n; callers: TRMCOM\n; calls (intra): sub_038D, sub_0677, sub_07EE\n; calls (inter): SYSTEM.CREATESYSTEMTIMER, SYSTEM.KILLSYSTEMTIMER\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "COMM",
+      "segment_file": "seg1.asm",
+      "name": "sub_038D",
+      "kind": "NEAR",
+      "offset": 909,
+      "size_bytes": null,
+      "start_line": 611,
+      "end_line": 646,
+      "num_instructions": 31,
+      "prologue": "none",
+      "epilogue": "jmp_tail",
+      "calls_near": [
+        "L_05C6"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 3,
+      "num_jumps_uncond": 3,
+      "ints": [
+        "0x2f",
+        "0x2f"
+      ],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 3,
+      "mnemonic_histogram": {
+        "mov": 4,
+        "jmp": 3,
+        "out": 3,
+        "or": 2,
+        "and": 2,
+        "int": 2,
+        "xor": 2,
+        "in": 2,
+        "jns": 1,
+        "call": 1,
+        "jb": 1,
+        "inc": 1,
+        "add": 1,
+        "cmp": 1,
+        "jne": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "or ah, ah",
+        "jns L_03AB",
+        "call L_05C6",
+        "jb L_03A6",
+        "mov dl, byte ptr [si]",
+        "and dx, 3"
+      ],
+      "last_instructions": [
+        "or al, byte ptr [si + 0x48]",
+        "jmp L_03CA",
+        "out 0x21, al",
+        "sti"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_05C6"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_032D"
+      ],
+      "fanout": 1,
+      "fanin": 1,
+      "description": "Funcion mediana (31 instr, 1 calls).",
+      "confidence": "low",
+      "semantic_tags": [
+        "int_2f",
+        "medium"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_038D -- offset 0x038D -- 31 instr\n; Funcion mediana (31 instr, 1 calls).\n; tags: int_2f, medium\n; callers: sub_032D\n; calls (intra): sub_05C6\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "COMM",
+      "segment_file": "seg1.asm",
+      "name": "sub_03CD",
+      "kind": "NEAR",
+      "offset": 973,
+      "size_bytes": null,
+      "start_line": 647,
+      "end_line": 662,
+      "num_instructions": 14,
+      "prologue": "saves_regs",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [
+        "0x21"
+      ],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 5,
+      "mnemonic_histogram": {
+        "mov": 6,
+        "push": 2,
+        "pop": 2,
+        "lds": 1,
+        "int": 1,
+        "xor": 1,
+        "ret": 1
+      },
+      "classification": "dos_caller",
+      "first_instructions": [
+        "push ds",
+        "mov al, byte ptr [si + 0x49]",
+        "lds dx, ptr [si + 0x4a]",
+        "mov ah, 0x25",
+        "int 0x21",
+        "pop ds"
+      ],
+      "last_instructions": [
+        "mov ds, ax",
+        "mov word ptr [bx], dx",
+        "pop ds",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_01D1"
+      ],
+      "fanout": 0,
+      "fanin": 1,
+      "description": "Llama a servicios DOS via INT 21h (14 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "dos_caller",
+        "int_21"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_03CD -- offset 0x03CD -- 14 instr\n; Llama a servicios DOS via INT 21h (14 instr).\n; tags: dos_caller, int_21\n; callers: sub_01D1\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "COMM",
+      "segment_file": "seg1.asm",
+      "name": "sub_03E8",
+      "kind": "NEAR",
+      "offset": 1000,
+      "size_bytes": null,
+      "start_line": 663,
+      "end_line": 719,
+      "num_instructions": 47,
+      "prologue": "saves_regs",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 9,
+      "num_jumps_uncond": 2,
+      "ints": [
+        "0x15"
+      ],
+      "has_loop": true,
+      "has_string_op": false,
+      "num_mem_refs": 8,
+      "mnemonic_histogram": {
+        "mov": 6,
+        "or": 6,
+        "xor": 5,
+        "cmp": 4,
+        "push": 3,
+        "jb": 3,
+        "jae": 3,
+        "shr": 3,
+        "pop": 3,
+        "je": 2,
+        "jmp": 2,
+        "and": 1,
+        "shl": 1,
+        "jne": 1,
+        "loop": 1
+      },
+      "classification": "iterator",
+      "first_instructions": [
+        "push di",
+        "xor di, di",
+        "mov cx, 0xb",
+        "xor dh, dh",
+        "mov al, byte ptr [si + 0x45]",
+        "and al, byte ptr [si + 0x46]"
+      ],
+      "last_instructions": [
+        "or byte ptr [si + 0x1a], al",
+        "or al, al",
+        "pop di",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_02E7"
+      ],
+      "fanout": 0,
+      "fanin": 1,
+      "description": "Iterador con bucle (47 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "int_15",
+        "iterator",
+        "loop"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_03E8 -- offset 0x03E8 -- 47 instr\n; Iterador con bucle (47 instr).\n; tags: int_15, iterator, loop\n; callers: sub_02E7\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "COMM",
+      "segment_file": "seg1.asm",
+      "name": "sub_044D",
+      "kind": "NEAR",
+      "offset": 1101,
+      "size_bytes": null,
+      "start_line": 720,
+      "end_line": 825,
+      "num_instructions": 95,
+      "prologue": "saves_regs",
+      "epilogue": "jmp_tail",
+      "calls_near": [
+        "L_050E",
+        "L_0522",
+        "L_0549",
+        "L_056A",
+        "L_0677"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 4,
+      "num_jumps_uncond": 7,
+      "ints": [],
+      "has_loop": true,
+      "has_string_op": false,
+      "num_mem_refs": 15,
+      "mnemonic_histogram": {
+        "mov": 20,
+        "call": 8,
+        "inc": 7,
+        "out": 7,
+        "jmp": 7,
+        "and": 5,
+        "sub": 5,
+        "in": 5,
+        "xor": 4,
+        "rol": 4,
+        "push": 3,
+        "pop": 3,
+        "jb": 2,
+        "or": 2,
+        "add": 2
+      },
+      "classification": "complex_iterator",
+      "first_instructions": [
+        "push si",
+        "push di",
+        "mov ah, byte ptr es:[bx]",
+        "call L_0677",
+        "mov ax, 0xffff",
+        "jb L_0461"
+      ],
+      "last_instructions": [
+        "jmp L_0509",
+        "in al, dx",
+        "sti",
+        "jmp L_045F"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_050E",
+        "sub_0522",
+        "sub_0549",
+        "sub_056A",
+        "sub_0677"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "SETCOM",
+        "sub_01D1"
+      ],
+      "fanout": 5,
+      "fanin": 2,
+      "description": "Iterador con bucle (95 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "complex_iterator",
+        "loop"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_044D -- offset 0x044D -- 95 instr\n; Iterador con bucle (95 instr).\n; tags: complex_iterator, loop\n; callers: SETCOM, sub_01D1\n; calls (intra): sub_050E, sub_0522, sub_0549, sub_056A, sub_0677\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "COMM",
+      "segment_file": "seg1.asm",
+      "name": "sub_050E",
+      "kind": "NEAR",
+      "offset": 1294,
+      "size_bytes": null,
+      "start_line": 826,
+      "end_line": 838,
+      "num_instructions": 12,
+      "prologue": "saves_regs",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 1,
+      "mnemonic_histogram": {
+        "mov": 6,
+        "push": 2,
+        "pop": 2,
+        "rep": 1,
+        "ret": 1
+      },
+      "classification": "leaf",
+      "first_instructions": [
+        "push si",
+        "mov di, si",
+        "mov si, bx",
+        "push es",
+        "mov ax, ds",
+        "pop ds"
+      ],
+      "last_instructions": [
+        "rep movsb byte ptr es:[di], byte ptr [si]",
+        "mov ds, ax",
+        "pop si",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_044D"
+      ],
+      "fanout": 0,
+      "fanin": 1,
+      "description": "Funcion hoja (no llama a otras, 12 instr): probable helper aritmetico/conversion.",
+      "confidence": "low",
+      "semantic_tags": [
+        "leaf"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_050E -- offset 0x050E -- 12 instr\n; Funcion hoja (no llama a otras, 12 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_044D\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "COMM",
+      "segment_file": "seg1.asm",
+      "name": "sub_0522",
+      "kind": "NEAR",
+      "offset": 1314,
+      "size_bytes": null,
+      "start_line": 839,
+      "end_line": 846,
+      "num_instructions": 7,
+      "prologue": "none",
+      "epilogue": "unknown",
+      "calls_near": [
+        "L_0530"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 0,
+      "mnemonic_histogram": {
+        "xor": 2,
+        "call": 1,
+        "not": 1,
+        "and": 1,
+        "xchg": 1,
+        "dec": 1
+      },
+      "classification": "wrapper",
+      "first_instructions": [
+        "xor ax, ax",
+        "xor cx, cx",
+        "call L_0530",
+        "not al",
+        "and al, 0xb0",
+        "xchg al, ah"
+      ],
+      "last_instructions": [
+        "not al",
+        "and al, 0xb0",
+        "xchg al, ah",
+        "dec cx"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0530"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_044D"
+      ],
+      "fanout": 1,
+      "fanin": 1,
+      "description": "Wrapper que delega en sub_0530.",
+      "confidence": "medium",
+      "semantic_tags": [
+        "wrapper"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0522 -- offset 0x0522 -- 7 instr\n; Wrapper que delega en sub_0530.\n; tags: wrapper\n; callers: sub_044D\n; calls (intra): sub_0530\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "COMM",
+      "segment_file": "seg1.asm",
+      "name": "sub_0530",
+      "kind": "NEAR",
+      "offset": 1328,
+      "size_bytes": null,
+      "start_line": 847,
+      "end_line": 860,
+      "num_instructions": 10,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 3,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 3,
+      "mnemonic_histogram": {
+        "cmp": 3,
+        "jne": 3,
+        "or": 3,
+        "ret": 1
+      },
+      "classification": "leaf",
+      "first_instructions": [
+        "cmp word ptr es:[bx + 6], cx",
+        "jne L_0538",
+        "or al, 0x80",
+        "cmp word ptr es:[bx + 8], cx",
+        "jne L_0540",
+        "or al, 0x10"
+      ],
+      "last_instructions": [
+        "cmp word ptr es:[bx + 0xa], cx",
+        "jne L_0548",
+        "or al, 0x20",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0522"
+      ],
+      "fanout": 0,
+      "fanin": 1,
+      "description": "Funcion hoja (no llama a otras, 10 instr): probable helper aritmetico/conversion.",
+      "confidence": "low",
+      "semantic_tags": [
+        "leaf"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0530 -- offset 0x0530 -- 10 instr\n; Funcion hoja (no llama a otras, 10 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_0522\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "COMM",
+      "segment_file": "seg1.asm",
+      "name": "sub_0549",
+      "kind": "NEAR",
+      "offset": 1353,
+      "size_bytes": null,
+      "start_line": 861,
+      "end_line": 876,
+      "num_instructions": 14,
+      "prologue": "saves_regs",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 2,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 1,
+      "mnemonic_histogram": {
+        "mov": 5,
+        "cmp": 2,
+        "push": 1,
+        "xor": 1,
+        "jb": 1,
+        "jae": 1,
+        "div": 1,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "leaf",
+      "first_instructions": [
+        "push dx",
+        "mov cx, word ptr es:[bx + 1]",
+        "xor ax, ax",
+        "cmp cx, 0x32",
+        "jb L_0563",
+        "cmp cx, 0x4b01"
+      ],
+      "last_instructions": [
+        "mov cx, ax",
+        "mov ax, 0xfff4",
+        "pop dx",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_044D"
+      ],
+      "fanout": 0,
+      "fanin": 1,
+      "description": "Funcion hoja (no llama a otras, 14 instr): probable helper aritmetico/conversion.",
+      "confidence": "low",
+      "semantic_tags": [
+        "leaf"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0549 -- offset 0x0549 -- 14 instr\n; Funcion hoja (no llama a otras, 14 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_044D\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "COMM",
+      "segment_file": "seg1.asm",
+      "name": "sub_056A",
+      "kind": "NEAR",
+      "offset": 1386,
+      "size_bytes": null,
+      "start_line": 877,
+      "end_line": 926,
+      "num_instructions": 43,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 10,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 3,
+      "mnemonic_histogram": {
+        "mov": 8,
+        "or": 4,
+        "shl": 4,
+        "je": 3,
+        "ret": 3,
+        "cmp": 2,
+        "ja": 2,
+        "jne": 2,
+        "sub": 2,
+        "stc": 2,
+        "xor": 1,
+        "jb": 1,
+        "add": 1,
+        "dec": 1,
+        "js": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "mov ax, word ptr es:[bx + 3]",
+        "cmp ah, 4",
+        "ja L_05C1",
+        "mov di, 0xff1e",
+        "or ah, ah",
+        "jne L_057E"
+      ],
+      "last_instructions": [
+        "ret",
+        "mov ax, 0xfffb",
+        "stc",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_044D"
+      ],
+      "fanout": 0,
+      "fanin": 1,
+      "description": "Funcion mediana (43 instr, 0 calls).",
+      "confidence": "low",
+      "semantic_tags": [
+        "medium"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_056A -- offset 0x056A -- 43 instr\n; Funcion mediana (43 instr, 0 calls).\n; tags: medium\n; callers: sub_044D\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "COMM",
+      "segment_file": "seg1.asm",
+      "name": "sub_05C6",
+      "kind": "FAR",
+      "offset": 1478,
+      "size_bytes": null,
+      "start_line": 927,
+      "end_line": 943,
+      "num_instructions": 14,
+      "prologue": "none",
+      "epilogue": "retf",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 3,
+      "num_jumps_uncond": 0,
+      "ints": [
+        "0x21",
+        "0x2f"
+      ],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 1,
+      "mnemonic_histogram": {
+        "mov": 2,
+        "int": 2,
+        "je": 2,
+        "cmp": 1,
+        "jne": 1,
+        "or": 1,
+        "test": 1,
+        "stc": 1,
+        "ret": 1,
+        "dec": 1,
+        "retf": 1
+      },
+      "classification": "dos_caller",
+      "first_instructions": [
+        "mov ax, 0x3000",
+        "int 0x21",
+        "cmp al, 3",
+        "jne L_05DE",
+        "mov ax, 0xb800",
+        "int 0x2f"
+      ],
+      "last_instructions": [
+        "stc",
+        "ret",
+        "dec word ptr cs:[0x1cf]",
+        "retf"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_01D1",
+        "sub_038D"
+      ],
+      "fanout": 0,
+      "fanin": 2,
+      "description": "Llama a servicios DOS via INT 21h (14 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "dos_caller",
+        "far",
+        "int_21",
+        "int_2f"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_05C6 -- offset 0x05C6 -- 14 instr\n; Llama a servicios DOS via INT 21h (14 instr).\n; tags: dos_caller, far, int_21, int_2f\n; callers: sub_01D1, sub_038D\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "COMM",
+      "segment_file": "seg1.asm",
+      "name": "sub_05E6",
+      "kind": "NEAR",
+      "offset": 1510,
+      "size_bytes": null,
+      "start_line": 944,
+      "end_line": 996,
+      "num_instructions": 47,
+      "prologue": "saves_regs",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 7,
+      "num_jumps_uncond": 0,
+      "ints": [
+        "0x17",
+        "0x17"
+      ],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 11,
+      "mnemonic_histogram": {
+        "mov": 10,
+        "or": 6,
+        "pop": 4,
+        "jne": 3,
+        "test": 3,
+        "je": 3,
+        "push": 2,
+        "xor": 2,
+        "shr": 2,
+        "xchg": 2,
+        "int": 2,
+        "ret": 2,
+        "and": 2,
+        "shl": 1,
+        "js": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "push di",
+        "push ds",
+        "mov di, word ptr [0xfd]",
+        "mov dx, word ptr [si + 0x1c]",
+        "xor bx, bx",
+        "mov ds, bx"
+      ],
+      "last_instructions": [
+        "je L_0654",
+        "or byte ptr [si + 0x25], 2",
+        "pop di",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_02E7",
+        "sub_076C"
+      ],
+      "fanout": 0,
+      "fanin": 2,
+      "description": "Funcion mediana (47 instr, 0 calls).",
+      "confidence": "low",
+      "semantic_tags": [
+        "int_17",
+        "medium"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_05E6 -- offset 0x05E6 -- 47 instr\n; Funcion mediana (47 instr, 0 calls).\n; tags: int_17, medium\n; callers: sub_02E7, sub_076C\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "COMM",
+      "segment_file": "seg1.asm",
+      "name": "sub_0656",
+      "kind": "NEAR",
+      "offset": 1622,
+      "size_bytes": null,
+      "start_line": 997,
+      "end_line": 999,
+      "num_instructions": 2,
+      "prologue": "none",
+      "epilogue": "unknown",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 2,
+      "mnemonic_histogram": {
+        "or": 1,
+        "mov": 1
+      },
+      "classification": "trivial_stub",
+      "first_instructions": [
+        "or byte ptr [si + 0x3e], 0x40",
+        "mov byte ptr [si + 0x41], ah"
+      ],
+      "last_instructions": [
+        "or byte ptr [si + 0x3e], 0x40",
+        "mov byte ptr [si + 0x41], ah"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_02C0"
+      ],
+      "fanout": 0,
+      "fanin": 1,
+      "description": "Stub trivial (2 instrucciones, sin logica significativa).",
+      "confidence": "low",
+      "semantic_tags": [
+        "trivial_stub"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0656 -- offset 0x0656 -- 2 instr\n; Stub trivial (2 instrucciones, sin logica significativa).\n; tags: trivial_stub\n; callers: sub_02C0\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "COMM",
+      "segment_file": "seg1.asm",
+      "name": "sub_065D",
+      "kind": "NEAR",
+      "offset": 1629,
+      "size_bytes": null,
+      "start_line": 1000,
+      "end_line": 1016,
+      "num_instructions": 14,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 2,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 1,
+      "mnemonic_histogram": {
+        "in": 2,
+        "out": 2,
+        "mov": 1,
+        "add": 1,
+        "and": 1,
+        "je": 1,
+        "sub": 1,
+        "test": 1,
+        "jne": 1,
+        "or": 1,
+        "jmp": 1,
+        "ret": 1
+      },
+      "classification": "leaf",
+      "first_instructions": [
+        "mov dx, word ptr [si + 0x1c]",
+        "add dl, 5",
+        "in al, dx",
+        "and al, 0x20",
+        "je L_0676",
+        "sub dl, 4"
+      ],
+      "last_instructions": [
+        "out dx, al",
+        "jmp L_0675",
+        "out dx, al",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_02E7",
+        "sub_07EE",
+        "sub_086F"
+      ],
+      "fanout": 0,
+      "fanin": 3,
+      "description": "Funcion hoja (no llama a otras, 14 instr): probable helper aritmetico/conversion.",
+      "confidence": "low",
+      "semantic_tags": [
+        "leaf"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_065D -- offset 0x065D -- 14 instr\n; Funcion hoja (no llama a otras, 14 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_02E7, sub_07EE, sub_086F\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "COMM",
+      "segment_file": "seg1.asm",
+      "name": "sub_0677",
+      "kind": "NEAR",
+      "offset": 1655,
+      "size_bytes": null,
+      "start_line": 1017,
+      "end_line": 1039,
+      "num_instructions": 19,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 6,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 0,
+      "mnemonic_histogram": {
+        "mov": 6,
+        "cmp": 3,
+        "ja": 3,
+        "je": 3,
+        "ret": 2,
+        "or": 1,
+        "stc": 1
+      },
+      "classification": "leaf",
+      "first_instructions": [
+        "cmp ah, 0x82",
+        "ja L_069E",
+        "mov si, 0xdc",
+        "je L_068E",
+        "cmp ah, 1",
+        "ja L_0691"
+      ],
+      "last_instructions": [
+        "ja L_068E",
+        "mov ax, 0x8000",
+        "stc",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_01D1",
+        "sub_02C0",
+        "sub_02E7",
+        "sub_032D",
+        "sub_044D",
+        "sub_06A3",
+        "sub_06C8",
+        "sub_06DE",
+        "sub_06F6",
+        "sub_0746",
+        "sub_076C",
+        "sub_07DE",
+        "sub_07EE",
+        "sub_086F"
+      ],
+      "fanout": 0,
+      "fanin": 14,
+      "description": "Funcion hoja (no llama a otras, 19 instr): probable helper aritmetico/conversion.",
+      "confidence": "low",
+      "semantic_tags": [
+        "leaf"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0677 -- offset 0x0677 -- 19 instr\n; Funcion hoja (no llama a otras, 19 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_01D1, sub_02C0, sub_02E7, sub_032D, sub_044D, sub_06A3 (+8 mas)\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "COMM",
+      "segment_file": "seg1.asm",
+      "name": "sub_06A3",
+      "kind": "NEAR",
+      "offset": 1699,
+      "size_bytes": null,
+      "start_line": 1040,
+      "end_line": 1065,
+      "num_instructions": 24,
+      "prologue": "saves_regs",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_0677"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 2,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 3,
+      "mnemonic_histogram": {
+        "push": 5,
+        "pop": 5,
+        "mov": 3,
+        "rep": 2,
+        "call": 1,
+        "jb": 1,
+        "js": 1,
+        "lea": 1,
+        "xor": 1,
+        "cld": 1,
+        "cli": 1,
+        "sti": 1,
+        "ret": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "push si",
+        "push di",
+        "call L_0677",
+        "jb L_06C5",
+        "js L_06C5",
+        "push ds"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop di",
+        "pop si",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0677"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "SETQUE"
+      ],
+      "fanout": 1,
+      "fanin": 1,
+      "description": "Funcion sin clasificar definitiva (24 instr).",
+      "confidence": "unknown",
+      "semantic_tags": [
+        "small"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_06A3 -- offset 0x06A3 -- 24 instr\n; Funcion sin clasificar definitiva (24 instr).\n; tags: small\n; callers: SETQUE\n; calls (intra): sub_0677\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "COMM",
+      "segment_file": "seg1.asm",
+      "name": "sub_06C8",
+      "kind": "NEAR",
+      "offset": 1736,
+      "size_bytes": null,
+      "start_line": 1066,
+      "end_line": 1078,
+      "num_instructions": 11,
+      "prologue": "saves_regs",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_0677"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 2,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 2,
+      "mnemonic_histogram": {
+        "mov": 3,
+        "push": 1,
+        "xor": 1,
+        "call": 1,
+        "jb": 1,
+        "js": 1,
+        "lea": 1,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "wrapper",
+      "first_instructions": [
+        "push si",
+        "xor dx, dx",
+        "call L_0677",
+        "mov ax, dx",
+        "jb L_06DC",
+        "js L_06DC"
+      ],
+      "last_instructions": [
+        "lea ax, [si + 0x22]",
+        "mov dx, ds",
+        "pop si",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0677"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "CEVT"
+      ],
+      "fanout": 1,
+      "fanin": 1,
+      "description": "Wrapper que delega en sub_0677.",
+      "confidence": "medium",
+      "semantic_tags": [
+        "wrapper"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_06C8 -- offset 0x06C8 -- 11 instr\n; Wrapper que delega en sub_0677.\n; tags: wrapper\n; callers: CEVT\n; calls (intra): sub_0677\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "COMM",
+      "segment_file": "seg1.asm",
+      "name": "sub_06DE",
+      "kind": "NEAR",
+      "offset": 1758,
+      "size_bytes": null,
+      "start_line": 1079,
+      "end_line": 1093,
+      "num_instructions": 13,
+      "prologue": "saves_regs",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_0677"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 2,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 2,
+      "mnemonic_histogram": {
+        "mov": 3,
+        "push": 1,
+        "call": 1,
+        "jb": 1,
+        "js": 1,
+        "cli": 1,
+        "not": 1,
+        "and": 1,
+        "sti": 1,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "wrapper",
+      "first_instructions": [
+        "push si",
+        "call L_0677",
+        "mov ah, 0",
+        "jb L_06F4",
+        "js L_06F4",
+        "cli"
+      ],
+      "last_instructions": [
+        "mov word ptr [si + 0x22], bx",
+        "sti",
+        "pop si",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0677"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "CEVTGET"
+      ],
+      "fanout": 1,
+      "fanin": 1,
+      "description": "Wrapper que delega en sub_0677.",
+      "confidence": "medium",
+      "semantic_tags": [
+        "wrapper"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_06DE -- offset 0x06DE -- 13 instr\n; Wrapper que delega en sub_0677.\n; tags: wrapper\n; callers: CEVTGET\n; calls (intra): sub_0677\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "COMM",
+      "segment_file": "seg1.asm",
+      "name": "sub_06F6",
+      "kind": "NEAR",
+      "offset": 1782,
+      "size_bytes": null,
+      "start_line": 1094,
+      "end_line": 1128,
+      "num_instructions": 31,
+      "prologue": "saves_regs",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_0677"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 3,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 11,
+      "mnemonic_histogram": {
+        "mov": 11,
+        "or": 4,
+        "xor": 4,
+        "and": 3,
+        "push": 1,
+        "call": 1,
+        "jb": 1,
+        "je": 1,
+        "js": 1,
+        "shr": 1,
+        "xchg": 1,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "push si",
+        "call L_0677",
+        "jb L_073F",
+        "mov cx, es",
+        "or cx, bx",
+        "je L_073A"
+      ],
+      "last_instructions": [
+        "xor ax, ax",
+        "xchg word ptr [si + 0x1a], ax",
+        "pop si",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0677"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "STACOM"
+      ],
+      "fanout": 1,
+      "fanin": 1,
+      "description": "Funcion mediana (31 instr, 1 calls).",
+      "confidence": "low",
+      "semantic_tags": [
+        "medium"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_06F6 -- offset 0x06F6 -- 31 instr\n; Funcion mediana (31 instr, 1 calls).\n; tags: medium\n; callers: STACOM\n; calls (intra): sub_0677\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "COMM",
+      "segment_file": "seg1.asm",
+      "name": "sub_0741",
+      "kind": "NEAR",
+      "offset": 1857,
+      "size_bytes": null,
+      "start_line": 1129,
+      "end_line": 1131,
+      "num_instructions": 2,
+      "prologue": "none",
+      "epilogue": "jmp_tail",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 0,
+      "mnemonic_histogram": {
+        "mov": 1,
+        "jmp": 1
+      },
+      "classification": "trivial_stub",
+      "first_instructions": [
+        "mov cx, 0xff40",
+        "jmp L_0749"
+      ],
+      "last_instructions": [
+        "mov cx, 0xff40",
+        "jmp L_0749"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "CSETBRK"
+      ],
+      "fanout": 0,
+      "fanin": 1,
+      "description": "Stub trivial (2 instrucciones, sin logica significativa).",
+      "confidence": "low",
+      "semantic_tags": [
+        "trivial_stub"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0741 -- offset 0x0741 -- 2 instr\n; Stub trivial (2 instrucciones, sin logica significativa).\n; tags: trivial_stub\n; callers: CSETBRK\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "COMM",
+      "segment_file": "seg1.asm",
+      "name": "sub_0746",
+      "kind": "NEAR",
+      "offset": 1862,
+      "size_bytes": null,
+      "start_line": 1132,
+      "end_line": 1155,
+      "num_instructions": 19,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_0677"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 2,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 4,
+      "mnemonic_histogram": {
+        "mov": 3,
+        "and": 2,
+        "or": 2,
+        "push": 1,
+        "call": 1,
+        "jb": 1,
+        "js": 1,
+        "cli": 1,
+        "add": 1,
+        "in": 1,
+        "jmp": 1,
+        "out": 1,
+        "sti": 1,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "mov cx, 0xbf00",
+        "push si",
+        "call L_0677",
+        "jb L_076A",
+        "js L_0767",
+        "cli"
+      ],
+      "last_instructions": [
+        "sti",
+        "mov ax, word ptr [si + 0x1a]",
+        "pop si",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0677"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "CCLRBRK"
+      ],
+      "fanout": 1,
+      "fanin": 1,
+      "description": "Funcion sin clasificar definitiva (19 instr).",
+      "confidence": "unknown",
+      "semantic_tags": [
+        "small"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0746 -- offset 0x0746 -- 19 instr\n; Funcion sin clasificar definitiva (19 instr).\n; tags: small\n; callers: CCLRBRK\n; calls (intra): sub_0677\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "COMM",
+      "segment_file": "seg1.asm",
+      "name": "sub_076C",
+      "kind": "NEAR",
+      "offset": 1900,
+      "size_bytes": null,
+      "start_line": 1156,
+      "end_line": 1225,
+      "num_instructions": 61,
+      "prologue": "saves_regs",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_05E6",
+        "L_0677"
+      ],
+      "calls_far": [
+        "word ptr cs:[bx + 0x793]"
+      ],
+      "num_jumps_cond": 4,
+      "num_jumps_uncond": 6,
+      "ints": [
+        "7"
+      ],
+      "has_loop": false,
+      "has_string_op": true,
+      "num_mem_refs": 7,
+      "mnemonic_histogram": {
+        "ret": 7,
+        "jmp": 6,
+        "pop": 6,
+        "mov": 5,
+        "add": 5,
+        "in": 4,
+        "out": 4,
+        "call": 3,
+        "or": 3,
+        "and": 3,
+        "cmp": 2,
+        "sti": 2,
+        "push": 1,
+        "jb": 1,
+        "jns": 1
+      },
+      "classification": "complex_iterator",
+      "first_instructions": [
+        "push si",
+        "call L_0677",
+        "jb L_0791",
+        "jns L_077B",
+        "cmp bl, 7",
+        "jne L_078E"
+      ],
+      "last_instructions": [
+        "sti",
+        "mov ch, 1",
+        "call L_05E6",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_05E6",
+        "sub_0677"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "CEXTFCN"
+      ],
+      "fanout": 2,
+      "fanin": 1,
+      "description": "Iterador con instrucciones de string (movsb/scasb/...) (61 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "complex_iterator",
+        "int_7",
+        "string_op"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_076C -- offset 0x076C -- 61 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (61 instr).\n; tags: complex_iterator, int_7, string_op\n; callers: CEXTFCN\n; calls (intra): sub_05E6, sub_0677\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "COMM",
+      "segment_file": "seg1.asm",
+      "name": "sub_07DE",
+      "kind": "NEAR",
+      "offset": 2014,
+      "size_bytes": null,
+      "start_line": 1226,
+      "end_line": 1236,
+      "num_instructions": 9,
+      "prologue": "saves_regs",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_0677"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 1,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 0,
+      "mnemonic_histogram": {
+        "mov": 3,
+        "push": 1,
+        "xor": 1,
+        "call": 1,
+        "jb": 1,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "wrapper",
+      "first_instructions": [
+        "push si",
+        "xor dx, dx",
+        "call L_0677",
+        "mov ax, dx",
+        "jb L_07EC",
+        "mov ax, si"
+      ],
+      "last_instructions": [
+        "mov ax, si",
+        "mov dx, ds",
+        "pop si",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0677"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "GETDCB"
+      ],
+      "fanout": 1,
+      "fanin": 1,
+      "description": "Wrapper que delega en sub_0677.",
+      "confidence": "medium",
+      "semantic_tags": [
+        "wrapper"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_07DE -- offset 0x07DE -- 9 instr\n; Wrapper que delega en sub_0677.\n; tags: wrapper\n; callers: GETDCB\n; calls (intra): sub_0677\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "COMM",
+      "segment_file": "seg1.asm",
+      "name": "sub_07EE",
+      "kind": "NEAR",
+      "offset": 2030,
+      "size_bytes": null,
+      "start_line": 1237,
+      "end_line": 1303,
+      "num_instructions": 57,
+      "prologue": "saves_regs",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_065D",
+        "L_0677"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 11,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 18,
+      "mnemonic_histogram": {
+        "mov": 9,
+        "or": 6,
+        "test": 4,
+        "je": 4,
+        "xor": 4,
+        "pop": 4,
+        "jne": 3,
+        "push": 2,
+        "call": 2,
+        "jb": 2,
+        "cmp": 2,
+        "and": 2,
+        "ret": 2,
+        "js": 1,
+        "ja": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "push si",
+        "push di",
+        "call L_0677",
+        "jb L_086A",
+        "js L_0868",
+        "test byte ptr [si + 0x42], 0x12"
+      ],
+      "last_instructions": [
+        "xor cx, cx",
+        "pop di",
+        "pop si",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_065D",
+        "sub_0677"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "RECCOM",
+        "sub_032D",
+        "sub_086F"
+      ],
+      "fanout": 2,
+      "fanin": 3,
+      "description": "Funcion mediana (57 instr, 2 calls).",
+      "confidence": "low",
+      "semantic_tags": [
+        "medium"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_07EE -- offset 0x07EE -- 57 instr\n; Funcion mediana (57 instr, 2 calls).\n; tags: medium\n; callers: RECCOM, sub_032D, sub_086F\n; calls (intra): sub_065D, sub_0677\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "COMM",
+      "segment_file": "seg1.asm",
+      "name": "sub_086F",
+      "kind": "NEAR",
+      "offset": 2159,
+      "size_bytes": null,
+      "start_line": 1304,
+      "end_line": 1551,
+      "num_instructions": 217,
+      "prologue": "saves_regs",
+      "epilogue": "jmp_tail",
+      "calls_near": [
+        "L_065D",
+        "L_0677",
+        "L_07EE"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 35,
+      "num_jumps_uncond": 16,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 64,
+      "mnemonic_histogram": {
+        "mov": 35,
+        "or": 21,
+        "test": 17,
+        "jmp": 16,
+        "jne": 14,
+        "push": 13,
+        "je": 13,
+        "pop": 12,
+        "and": 12,
+        "cmp": 9,
+        "add": 6,
+        "in": 6,
+        "call": 5,
+        "shr": 5,
+        "jb": 4
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push si",
+        "push di",
+        "call L_0677",
+        "jb L_0897",
+        "js L_0894",
+        "mov cx, 6"
+      ],
+      "last_instructions": [
+        "jmp L_0A6B",
+        "and byte ptr [si + 0x42], 0xdf",
+        "call L_065D",
+        "jmp L_08B8"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_065D",
+        "sub_0677",
+        "sub_07EE"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "CFLUSH"
+      ],
+      "fanout": 3,
+      "fanin": 1,
+      "description": "Dispatcher: tabla de decisiones cmp+jcc (217 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "dispatcher"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_086F -- offset 0x086F -- 217 instr\n; Dispatcher: tabla de decisiones cmp+jcc (217 instr).\n; tags: dispatcher\n; callers: CFLUSH\n; calls (intra): sub_065D, sub_0677, sub_07EE\n;----------------------------------------------------------------------"
+    }
+  ]
+}

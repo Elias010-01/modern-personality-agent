@@ -1,0 +1,89 @@
+# Fuentes de la knowledge base.
+#
+# Cada fuente se ingiere a kb/data/<id>/. Tipos de fetcher:
+#   git    → clone de un repo
+#   http   → descarga directa de un fichero (PDF/txt/zip)
+#   manual → tú colocas los ficheros en kb/data/<id>/ a mano
+#
+# El comando `just kb-fetch` resuelve los fetchers automáticos.
+# Los manuales fallan ruidosamente con instrucciones.
+
+[[source]]
+id      = "rbil"
+title   = "Ralf Brown's Interrupt List"
+fetcher = "http"
+url     = "http://www.cs.cmu.edu/~ralf/files.html"
+notes   = """
+Descarga inter61c.zip (o la última versión disponible) y descomprímelo en
+kb/data/rbil/. Contiene INTERRUP.A..INTERRUP.M con la lista completa de
+interrupciones BIOS/DOS/etc. Esencial para Win 1.x donde casi todo va por
+INT 21h, INT 10h, INT 33h.
+"""
+
+[[source]]
+id      = "research"
+title   = "modern-personality-research (autor original)"
+fetcher = "git"
+url     = "https://github.com/starfrost013/modern-personality-research"
+notes   = """
+Documentación viva del autor. Contiene el análisis de slack-space symbols,
+notas por módulo, y plan general. Lo clonamos en vendor/ y montamos un
+symlink desde kb/data/research/ para indexarlo.
+"""
+
+[[source]]
+id      = "win1sdk"
+title   = "Windows 1.x SDK Documentation"
+fetcher = "manual"
+notes   = """
+Consigue copias de:
+  - 'Windows Programmer's Reference' (Microsoft, 1985-1986)
+  - 'Windows Software Development Kit' (Vols. 1-3)
+  - 'Windows Device Driver Kit' (DDK) for Windows 1.x
+WinWorld y archive.org tienen versiones digitalizadas. Extrae el texto a
+markdown o txt y colócalo en kb/data/win1sdk/. PDFs también valen pero
+ripgrep no los indexa; pasa por pdftotext primero.
+"""
+
+[[source]]
+id      = "os2museum"
+title   = "OS/2 Museum (Windows 1.x related posts)"
+fetcher = "manual"
+notes   = """
+Algunas posts clave para Win 1.x reverse engineering:
+  - 'The NE executable format'
+  - 'Windows 1.0 hits the streets, finally'
+  - serie sobre INT 2Fh y el loader de Windows
+Guarda los HTML/txt en kb/data/os2museum/.
+"""
+
+[[source]]
+id      = "intel_ref"
+title   = "Intel 8086/80286/80386 Programmer's Reference"
+fetcher = "manual"
+notes   = """
+Para resolver dudas sobre el ISA 16-bit. PDFs públicamente disponibles.
+Coloca los .txt extraídos en kb/data/intel_ref/.
+"""
+
+[[source]]
+id      = "ddk_samples"
+title   = "Windows 1.x DDK sample drivers"
+fetcher = "manual"
+notes   = """
+Clave para los display drivers. Algunas ediciones del Windows 1.0 DDK
+incluyeron código fuente de drivers de muestra (CGA, Hercules). Si lo
+encuentras, colócalo en kb/data/ddk_samples/. Es el mejor anclaje para los
+drivers de display sin símbolos de debug.
+"""
+
+[[source]]
+id      = "msc4_docs"
+title   = "Microsoft C 4.0 / MASM 4.0 reference"
+fetcher = "manual"
+notes   = """
+Para entender qué codegen produce MSC 4.0 (necesario para escribir C que
+matchee). El manual original ('Microsoft C Compiler User Guide', 1986) y el
+'MASM Programmer's Guide' tienen las tablas de prólogos/epílogos por
+modelo de memoria y convención. Coloca aquí los .txt.
+"""

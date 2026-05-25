@@ -1,0 +1,38 @@
+MIT License
+
+Copyright (c) 2026 Elias (modern-personality-agent contributors)
+
+This license applies to the original code in this repository (scripts under
+`bootstrap/`, generated documentation under `docs/`, mod definitions under
+`mods/`, project metadata files at the repository root).
+
+This license does NOT apply to:
+  - The `original/` directory, which is excluded from version control and
+    contains binaries copyrighted by Microsoft Corporation.
+  - The `built/` directory, which is excluded from version control and
+    contains rebuilt binaries derived from Microsoft binaries.
+  - The byte sequences cited as comments in the `.asm` files under `src/`,
+    which are derived from Microsoft binaries and are included for
+    research / educational reference only (see LEGAL.md).
+  - The `runtime/` directory and any other third-party tools used by the
+    pipeline. Each of those is governed by its own license.
+
+----------------------------------------------------------------------
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

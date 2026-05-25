@@ -1,0 +1,27 @@
+{
+  "module": "SPOOLER",
+  "original_name": "SPOOLER.EXE",
+  "original_size": 13264,
+  "ne_off": 1024,
+  "sector": 16,
+  "segments": [
+    {
+      "index": 1,
+      "file_off": 1344,
+      "data_len": 9093,
+      "flags": 61808,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 87
+    },
+    {
+      "index": 2,
+      "file_off": 11136,
+      "data_len": 198,
+      "flags": 17,
+      "is_data": true,
+      "has_reloc": false,
+      "reloc_count": 0
+    }
+  ]
+}

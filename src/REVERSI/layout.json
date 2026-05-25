@@ -1,0 +1,27 @@
+{
+  "module": "REVERSI",
+  "original_name": "REVERSI.EXE",
+  "original_size": 14864,
+  "ne_off": 1024,
+  "sector": 512,
+  "segments": [
+    {
+      "index": 1,
+      "file_off": 1536,
+      "data_len": 9029,
+      "flags": 272,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 77
+    },
+    {
+      "index": 2,
+      "file_off": 11264,
+      "data_len": 1606,
+      "flags": 17,
+      "is_data": true,
+      "has_reloc": false,
+      "reloc_count": 0
+    }
+  ]
+}

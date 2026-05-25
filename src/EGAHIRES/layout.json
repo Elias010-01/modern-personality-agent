@@ -1,0 +1,27 @@
+{
+  "module": "EGAHIRES",
+  "original_name": "EGAHIRES.DRV",
+  "original_size": 17536,
+  "ne_off": 1024,
+  "sector": 512,
+  "segments": [
+    {
+      "index": 1,
+      "file_off": 2048,
+      "data_len": 10288,
+      "flags": 64,
+      "is_data": false,
+      "has_reloc": false,
+      "reloc_count": 0
+    },
+    {
+      "index": 2,
+      "file_off": 12800,
+      "data_len": 379,
+      "flags": 65,
+      "is_data": true,
+      "has_reloc": false,
+      "reloc_count": 0
+    }
+  ]
+}

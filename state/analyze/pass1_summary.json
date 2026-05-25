@@ -1,0 +1,356 @@
+{
+  "phase": "pass1_patterns",
+  "stats": {
+    "modules": 69,
+    "functions": 553,
+    "instructions": 33797,
+    "lines": 464583
+  },
+  "per_module": [
+    {
+      "module": "ATTDC",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "ATTDEB",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "ATTKBD",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "ATTMOUSE",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "CALC",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "CALENDAR",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "CARDFILE",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "CGA",
+      "num_functions": 15,
+      "num_instructions": 1239
+    },
+    {
+      "module": "CITOH",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "CLIPBRD",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "CLOCK",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "COMM",
+      "num_functions": 15,
+      "num_instructions": 259
+    },
+    {
+      "module": "CONTROL",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "DENMARK",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "EGAHIBW",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "EGAHIRES",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "EGALORES",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "EGAMONO",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "EPSON",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "EPSONMX",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "FRANCE",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "FTG",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "GDI",
+      "num_functions": 162,
+      "num_instructions": 9335
+    },
+    {
+      "module": "GENIUS",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "GERMANY",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "HERCULES",
+      "num_functions": 15,
+      "num_instructions": 1242
+    },
+    {
+      "module": "HP7470A",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "HP7475A",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "HP7550A",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "HPLASER",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "HPLASERP",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "IBMGRX",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "ITALY",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "JOYMOUSE",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "KERNEL",
+      "num_functions": 96,
+      "num_instructions": 3592
+    },
+    {
+      "module": "LMOUSE",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "LPC",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "LQ1500",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "MOUSE",
+      "num_functions": 4,
+      "num_instructions": 113
+    },
+    {
+      "module": "MSDOS",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "MSDOSD",
+      "num_functions": 2,
+      "num_instructions": 804
+    },
+    {
+      "module": "MSMOUSE1",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "MSMOUSE2",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "NEC3550",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "NECP2",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "NOMOUSE",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "NORWAY",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "NOTEPAD",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "OKI92",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "PAINT",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "PSCRIPT",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "REVERSI",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "SETUP",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "SG10",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "SOUND",
+      "num_functions": 15,
+      "num_instructions": 694
+    },
+    {
+      "module": "SPAIN",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "SPOOLER",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "SWEDEN",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "SYSTEM",
+      "num_functions": 5,
+      "num_instructions": 99
+    },
+    {
+      "module": "TERMINAL",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "THINKJET",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "TI850",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "TOSH",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "TTY",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "UK",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "USA",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "USER",
+      "num_functions": 224,
+      "num_instructions": 16420
+    },
+    {
+      "module": "WRITE",
+      "num_functions": 0,
+      "num_instructions": 0
+    },
+    {
+      "module": "XER4020",
+      "num_functions": 0,
+      "num_instructions": 0
+    }
+  ]
+}

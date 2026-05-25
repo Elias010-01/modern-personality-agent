@@ -1,0 +1,21 @@
+; MOUSE.DEF - module definition para Windows 1.x
+; AUTO-GENERATED desde JOYMOUSE.DRV (NE entry/relocation tables)
+
+LIBRARY     MOUSE
+DESCRIPTION 'Kraft Joystick Mouse'
+EXETYPE     WINDOWS
+STUB        'WINSTUB.EXE'
+
+CODE        PRELOAD FIXED
+DATA        PRELOAD FIXED SINGLE
+
+IMPORTS
+    SYSTEM.CREATESYSTEMTIMER
+    SYSTEM.DISABLESYSTEMTIMERS
+    SYSTEM.ENABLESYSTEMTIMERS
+    SYSTEM.KILLSYSTEMTIMER
+
+EXPORTS
+    INQUIRE                @1
+    ENABLE                 @2
+    DISABLE                @3

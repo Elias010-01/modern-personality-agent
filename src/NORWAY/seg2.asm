@@ -1,0 +1,630 @@
+; AUTO-GENERATED from original NORWAY segment 2
+; segment_size=1101 bytes, flags=0x0040
+; mode: humano legible - instrucciones x86 + bytes raw en comentario (autoritativo)
+; 
+; El comentario al final de cada linea contiene los bytes RAW del binario
+; original; build_from_source.py los lee como autoridad para byte-exact.
+; Las instrucciones (push, mov, ...) son las desensambladas para que
+; un humano pueda leer/editar; no son re-ensambladas (encoders modernos
+; eligen variantes distintas a las del MASM 4.0 de 1985 que produjo
+; el binario original).
+
+NORWAY_TEXT SEGMENT BYTE PUBLIC 'CODE'
+
+        mov     ax, ds                          ; 8C D8
+        nop                                     ; 90
+        inc     bp                              ; 45
+        push    bp                              ; 55
+        mov     bp, sp                          ; 8B EC
+        push    ds                              ; 1E
+        mov     ds, ax                          ; 8E D8
+        push    si                              ; 56
+        push    di                              ; 57
+        les     di, ptr [bp + 6]                ; C4 7E 06
+        mov     si, 0                           ; BE 00 00
+        cmp     byte ptr [0x20], 0              ; 80 3E 20 00 00
+        je      L_001E                          ; 74 05
+        mov     word ptr [si + 6], 0xc          ; C7 44 06 0C 00
+L_001E:
+        mov     ax, 0xc                         ; B8 0C 00
+        mov     cx, ax                          ; 8B C8
+        rep movsb byte ptr es:[di], byte ptr [si] ; F3 A4
+        sub     ax, cx                          ; 2B C1
+        pop     di                              ; 5F
+        pop     si                              ; 5E
+        sub     bp, 2                           ; 83 ED 02
+        mov     sp, bp                          ; 8B E5
+        pop     ds                              ; 1F
+        pop     bp                              ; 5D
+        dec     bp                              ; 4D
+        retf    4                               ; CA 04 00
+        mov     ax, ds                          ; 8C D8
+        nop                                     ; 90
+        inc     bp                              ; 45
+        push    bp                              ; 55
+        mov     bp, sp                          ; 8B EC
+        push    ds                              ; 1E
+        mov     ds, ax                          ; 8E D8
+        push    si                              ; 56
+        push    di                              ; 57
+        cmp     word ptr [0x21], 0              ; 83 3E 21 00 00
+        je      L_0078                          ; 74 31
+        cmp     byte ptr [0x20], 0              ; 80 3E 20 00 00
+        je      L_005A                          ; 74 0C
+        push    ds                              ; 1E
+        mov     ax, 0x40                        ; B8 40 00
+        mov     ds, ax                          ; 8E D8
+        or      byte ptr [0x96], 0x10           ; 80 0E 96 00 10
+        pop     ds                              ; 1F
+L_005A:
+        mov     ah, 0x25                        ; B4 25
+        mov     al, 9                           ; B0 09
+        push    ds                              ; 1E
+        lds     dx, ptr [0xc]                   ; C5 16 0C 00
+        int     0x21                            ; CD 21
+        pop     ds                              ; 1F
+        mov     ah, 0x25                        ; B4 25
+        mov     al, 0x1b                        ; B0 1B
+        push    ds                              ; 1E
+        lds     dx, ptr [0x10]                  ; C5 16 10 00
+        int     0x21                            ; CD 21
+        pop     ds                              ; 1F
+        mov     word ptr [0x21], 0              ; C7 06 21 00 00 00
+L_0078:
+        pop     di                              ; 5F
+        pop     si                              ; 5E
+        sub     bp, 2                           ; 83 ED 02
+        mov     sp, bp                          ; 8B E5
+        pop     ds                              ; 1F
+        pop     bp                              ; 5D
+        dec     bp                              ; 4D
+        retf                                    ; CB
+        mov     ax, ds                          ; 8C D8
+        nop                                     ; 90
+        inc     bp                              ; 45
+        push    bp                              ; 55
+        mov     bp, sp                          ; 8B EC
+        push    ds                              ; 1E
+        mov     ds, ax                          ; 8E D8
+        push    si                              ; 56
+        push    di                              ; 57
+        les     bx, ptr [bp + 0xa]              ; C4 5E 0A
+        mov     ax, es                          ; 8C C0
+        mov     word ptr [0x18], bx             ; 89 1E 18 00
+        mov     word ptr [0x1a], es             ; 8C 06 1A 00
+        cmp     word ptr [0x21], 0              ; 83 3E 21 00 00
+        jne     L_00FD                          ; 75 5A
+        cmp     byte ptr [0x20], 0              ; 80 3E 20 00 00
+        je      L_00B6                          ; 74 0C
+        push    ds                              ; 1E
+        mov     ax, 0x40                        ; B8 40 00
+        mov     ds, ax                          ; 8E D8
+        xor     byte ptr [0x96], 0x10           ; 80 36 96 00 10
+        pop     ds                              ; 1F
+L_00B6:
+        mov     ah, 0x35                        ; B4 35
+        mov     al, 9                           ; B0 09
+        int     0x21                            ; CD 21
+        mov     word ptr [0xc], bx              ; 89 1E 0C 00
+        mov     word ptr [0xe], es              ; 8C 06 0E 00
+        mov     ax, 0x3516                      ; B8 16 35
+        int     0x21                            ; CD 21
+        mov     word ptr [0x14], bx             ; 89 1E 14 00
+        mov     word ptr [0x16], es             ; 8C 06 16 00
+        mov     ah, 0x25                        ; B4 25
+        mov     al, 9                           ; B0 09
+        mov     dx, 0x27                        ; BA 27 00
+        int     0x21                            ; CD 21
+        les     di, ptr [bp + 6]                ; C4 7E 06
+        call    L_010A                          ; E8 2A 00
+        mov     ah, 0x35                        ; B4 35
+        mov     al, 0x1b                        ; B0 1B
+        int     0x21                            ; CD 21
+        mov     word ptr [0x10], bx             ; 89 1E 10 00
+        mov     word ptr [0x12], es             ; 8C 06 12 00
+        mov     ah, 0x25                        ; B4 25
+        mov     al, 0x1b                        ; B0 1B
+        mov     dx, 0x1ee                       ; BA EE 01
+        int     0x21                            ; CD 21
+        mov     word ptr [0x21], 1              ; C7 06 21 00 01 00
+L_00FD:
+        pop     di                              ; 5F
+        pop     si                              ; 5E
+        sub     bp, 2                           ; 83 ED 02
+        mov     sp, bp                          ; 8B E5
+        pop     ds                              ; 1F
+        pop     bp                              ; 5D
+        dec     bp                              ; 4D
+        retf    8                               ; CA 08 00
+; @ANALYSIS_v1
+;----------------------------------------------------------------------
+; sub_010A -- offset 0x010A -- 21 instr
+; Funcion sin clasificar definitiva (21 instr).
+; tags: bios_caller, int_16
+; calls (intra): sub_013A
+;----------------------------------------------------------------------
+L_010A:
+        mov     ah, 2                           ; B4 02
+        int     0x16                            ; CD 16
+        mov     dl, 0x80                        ; B2 80
+        mov     ah, 3                           ; B4 03
+        mov     bx, 0x10                        ; BB 10 00
+        call    L_013A                          ; E8 22 00
+        mov     ah, 4                           ; B4 04
+        mov     bl, 0x11                        ; B3 11
+        call    L_013A                          ; E8 1B 00
+        mov     ah, 8                           ; B4 08
+        mov     bl, 0x12                        ; B3 12
+        call    L_013A                          ; E8 14 00
+        mov     dl, 1                           ; B2 01
+        mov     ah, 0x10                        ; B4 10
+        mov     bl, 0x91                        ; B3 91
+        call    L_013A                          ; E8 0B 00
+        mov     ah, 0x20                        ; B4 20
+        mov     bl, 0x90                        ; B3 90
+        call    L_013A                          ; E8 04 00
+        mov     ah, 0x40                        ; B4 40
+        mov     bl, 0x14                        ; B3 14
+; @ANALYSIS_v1
+;----------------------------------------------------------------------
+; sub_013A -- offset 0x013A -- 138 instr
+; Iterador con instrucciones de string (movsb/scasb/...) (138 instr).
+; tags: complex_iterator, loop, string_op
+; callers: sub_010A
+;----------------------------------------------------------------------
+L_013A:
+        test    ah, al                          ; 84 C4
+        je      L_0141                          ; 74 03
+        mov     byte ptr es:[bx + di], dl       ; 26 88 11
+L_0141:
+        ret                                     ; C3
+        and     byte ptr [di - 0x639d], ch      ; 20 AD 63 9C
+        scasw   ax, word ptr es:[di]            ; AF
+        jns     L_01C5                          ; 79 7C
+        adc     ax, 0x6322                      ; 15 22 63
+        popaw                                   ; 61
+        cmp     al, 0xaa                        ; 3C AA
+        sub     ax, 0x5f72                      ; 2D 72 5F
+        clc                                     ; F8
+        int1                                    ; F1
+        std                                     ; FD
+        scasb   al, byte ptr es:[di]            ; AE
+        daa                                     ; 27
+        out     0x14, al                        ; E6 14
+        cli                                     ; FA
+        sub     al, 0x31                        ; 2C 31
+        outsw   dx, word ptr [si]               ; 6F
+        pop     di                              ; 3E 5F
+        pop     di                              ; 5F
+        pop     di                              ; 5F
+        test    al, 0x41                        ; A8 41
+        inc     cx                              ; 41
+        inc     cx                              ; 41
+        stosb   byte ptr es:[di], al            ; AA
+        mov     cs, word ptr [bx - 0x7f6e]      ; 8E 8F 92 80
+        inc     bp                              ; 45
+        nop                                     ; 90
+        inc     bp                              ; 45
+        inc     bp                              ; 45
+        dec     cx                              ; 49
+        dec     cx                              ; 49
+        dec     cx                              ; 49
+        dec     cx                              ; 49
+        inc     sp                              ; 44
+        movsw   word ptr es:[di], word ptr [si] ; A5
+        dec     di                              ; 4F
+        dec     di                              ; 4F
+        dec     di                              ; 4F
+        cmpsw   word ptr [si], word ptr es:[di] ; A7
+        cdq                                     ; 99
+        mov     al, 0x9d                        ; B0 9D
+        push    bp                              ; 55
+        push    bp                              ; 55
+        push    bp                              ; 55
+        lcall   0x85e1, 0x5f59                  ; 9A 59 5F E1 85
+        mov     al, byte ptr [0xa983]           ; A0 83 A9
+        test    byte ptr [bp - 0x786f], al      ; 84 86 91 87
+        mov     al, byte ptr [bp + si - 0x7678] ; 8A 82 88 89
+L_018E:
+        lea     sp, [bx + di - 0x7474]          ; 8D A1 8C 8B
+        movsb   byte ptr es:[di], byte ptr fs:[si] ; 64 A4
+        xchg    bp, ax                          ; 95
+L_0195:
+        mov     byte ptr [0xa693], al           ; A2 93 A6
+        xchg    sp, ax                          ; 94
+        mov     dl, 0x9b                        ; B2 9B
+        xchg    di, ax                          ; 97
+        mov     word ptr [0x8196], ax           ; A3 96 81
+        jns     L_0200                          ; 79 5F
+        cwde                                    ; 98
+        db      0c7h                            ; C7
+        cld                                     ; FC
+        jmp     0xffffe689                      ; E9 E2 E4
+        loopne  L_018E                          ; E0 E5
+        out     0xea, ax                        ; E7 EA
+        jmp     L_0195                          ; EB E8
+        out     dx, ax                          ; EF
+        out     dx, al                          ; EE
+        in      al, dx                          ; EC
+        db      0c4h                            ; C4
+L_01B1:
+        db      0c5h                            ; C5
+        leave                                   ; C9
+        out     0xc6, al                        ; E6 C6
+        hlt                                     ; F4
+        div     dl                              ; F6 F2
+        sti                                     ; FB
+        stc                                     ; F9
+        call    si                              ; FF D6
+        fdiv    st(0), st(0)                    ; DC F8
+        mov     word ptr [0x4cd8], ax           ; A3 D8 4C
+        insb    byte ptr es:[di], dx            ; 6C
+        loope   L_01B1                          ; E1 ED
+        cli                                     ; F3 FA
+        int1                                    ; F1
+        sal     bp, 1                           ; D1 F5
+        aad     0xbf                            ; D5 BF
+        jcxz    L_0190                          ; E3 C3
+        insb    byte ptr es:[di], dx            ; 6C
+        outsb   dx, byte ptr [si]               ; 6E
+        mov     ax, word ptr [0xa4b3]           ; A1 B3 A4
+        and     byte ptr [bx + si], ah          ; 20 20
+        and     byte ptr [si + 0x2b], bh        ; 20 7C 2B
+        sub     bp, word ptr [bp + di]          ; 2B 2B
+        sub     bp, word ptr [bp + di]          ; 2B 2B
+        sub     di, word ptr [si + 0x2b]        ; 2B 7C 2B
+        sub     bp, word ptr [bp + di]          ; 2B 2B
+        sub     bp, word ptr [bp + di]          ; 2B 2B
+        sub     bp, word ptr [bp + di]          ; 2B 2B
+        sub     bp, word ptr [bp + di]          ; 2B 2B
+        sub     ax, 0x2b2b                      ; 2D 2B 2B
+        sub     bp, word ptr [bp + di]          ; 2B 2B
+        sub     bp, word ptr [bp + di]          ; 2B 2B
+        sub     bp, word ptr [bp + di]          ; 2B 2B
+        cmp     ax, 0x2b2b                      ; 3D 2B 2B
+        sub     bp, word ptr [bp + di]          ; 2B 2B
+        sub     bp, word ptr [bp + di]          ; 2B 2B
+        sub     bp, word ptr [bp + di]          ; 2B 2B
+        sub     bp, word ptr [bp + di]          ; 2B 2B
+        sub     bp, word ptr [bp + di]          ; 2B 2B
+        sub     sp, word ptr [bx + si]          ; 2B 20
+        and     byte ptr [bx + si], ah          ; 20 20
+L_0200:
+        and     byte ptr [bx + si], ah          ; 20 20
+        pop     di                              ; 5F
+        fistp   word ptr [bx - 0x4a]            ; DF 5F B6
+        pop     di                              ; 5F
+        pop     di                              ; 5F
+        mov     ch, 0x5f                        ; B5 5F
+        pop     di                              ; 5F
+        pop     di                              ; 5F
+        pop     di                              ; 5F
+        pop     di                              ; 5F
+        pop     di                              ; 5F
+        pop     di                              ; 5F
+        pop     di                              ; 5F
+        pop     di                              ; 5F
+        pop     di                              ; 5F
+        mov     cl, 0x5f                        ; B1 5F
+        pop     di                              ; 5F
+        pop     di                              ; 5F
+        pop     di                              ; 5F
+        pop     di                              ; 5F
+        pop     di                              ; 5F
+        mov     al, 0xb7                        ; B0 B7
+        mov     bh, 0x5f                        ; B7 5F
+        outsb   dx, byte ptr [si]               ; 6E
+        mov     dl, 0x5f                        ; B2 5F
+        pop     di                              ; 5F
+; @ANALYSIS_v1
+;----------------------------------------------------------------------
+; sub_0222 -- offset 0x0222 -- 27 instr
+; Iterador con instrucciones de string (movsb/scasb/...) (27 instr).
+; tags: far, iterator, string_op
+; callers: sub_0254
+;----------------------------------------------------------------------
+L_0222:
+        pop     dx                              ; 5A
+        mov     bx, sp                          ; 8B DC
+        push    ds                              ; 1E
+        push    si                              ; 56
+        push    di                              ; 57
+        lds     si, ptr ss:[bx + 8]             ; 36 C5 77 08
+        les     di, ptr ss:[bx + 4]             ; 36 C4 7F 04
+        cld                                     ; FC
+        mov     ah, 0xff                        ; B4 FF
+        jmp     dx                              ; FF E2
+L_0235:
+        cdq                                     ; 99
+        mov     ax, dx                          ; 8B C2
+        pop     di                              ; 5F
+        pop     si                              ; 5E
+        pop     ds                              ; 1F
+        retf    8                               ; CA 08 00
+        call    L_0222                          ; E8 E1 FF
+        mov     bx, 0xa2                        ; BB A2 00
+L_0244:
+        lodsb   al, byte ptr [si]               ; AC
+        cmp     al, 0xa0                        ; 3C A0
+        jb      L_024D                          ; 72 04
+        xlatb                                   ; 2E D7
+        and     ah, al                          ; 22 E0
+L_024D:
+        stosb   byte ptr es:[di], al            ; AA
+        or      al, al                          ; 0A C0
+        jne     L_0244                          ; 75 F2
+        jmp     L_0235                          ; EB E1
+; @ANALYSIS_v1
+;----------------------------------------------------------------------
+; sub_0254 -- offset 0x0254 -- 191 instr
+; Iterador con instrucciones de string (movsb/scasb/...) (191 instr).
+; tags: complex_iterator, far, string_op
+; calls (intra): sub_0222, sub_0412
+;----------------------------------------------------------------------
+L_0254:
+        call    L_0222                          ; E8 CB FF
+        mov     bx, 0x122                       ; BB 22 01
+L_025A:
+        lodsb   al, byte ptr [si]               ; AC
+        cmp     al, 0x80                        ; 3C 80
+        jb      L_0263                          ; 72 04
+        xlatb                                   ; 2E D7
+        and     ah, al                          ; 22 E0
+L_0263:
+        stosb   byte ptr es:[di], al            ; AA
+        or      al, al                          ; 0A C0
+        jne     L_025A                          ; 75 F2
+        jmp     L_0235                          ; EB CB
+        mov     ax, ds                          ; 8C D8
+        nop                                     ; 90
+        inc     bp                              ; 45
+        push    bp                              ; 55
+        mov     bp, sp                          ; 8B EC
+        push    ds                              ; 1E
+        mov     ds, ax                          ; 8E D8
+        push    si                              ; 56
+        push    di                              ; 57
+        mov     ax, word ptr [bp + 0x12]        ; 8B 46 12
+        mov     dx, ax                          ; 8B D0
+        mov     bx, word ptr [bp + 0x10]        ; 8B 5E 10
+        or      bx, bx                          ; 0B DB
+        jge     L_02A9                          ; 7D 27
+        cmp     al, 0x12                        ; 3C 12
+        jne     L_02A4                          ; 75 1E
+        les     di, ptr [bp + 8]                ; C4 7E 08
+        xor     ax, ax                          ; 33 C0
+        xchg    byte ptr [0x42a], al            ; 86 06 2A 04
+        cmp     byte ptr es:[di], ah            ; 26 38 25
+        je      L_02A4                          ; 74 10
+        or      al, al                          ; 0A C0
+        jne     L_02A1                          ; 75 09
+        push    es                              ; 06
+        push    di                              ; 57
+        push    es                              ; 06
+        push    di                              ; 57
+        nop                                     ; 90
+        push    cs                              ; 0E
+        call    L_0254                          ; E8 B3 FF
+L_02A1:
+        jmp     L_0402                          ; E9 5E 01
+L_02A4:
+        xor     ax, ax                          ; 33 C0
+        jmp     L_0405                          ; E9 5C 01
+L_02A9:
+        les     si, ptr [bp + 0xc]              ; C4 76 0C
+        mov     ch, 0x80                        ; B5 80
+        test    byte ptr es:[si + 0x12], ch     ; 26 84 6C 12
+        je      L_0310                          ; 74 5C
+        test    byte ptr es:[si + 0x11], ch     ; 26 84 6C 11
+        jne     L_02F6                          ; 75 3C
+        test    byte ptr es:[si + 0x10], ch     ; 26 84 6C 10
+        jne     L_0310                          ; 75 50
+        test    word ptr [bp + 6], 1            ; F7 46 06 01 00
+        jne     L_0310                          ; 75 49
+        cmp     bl, 0x53                        ; 80 FB 53
+        jae     L_0310                          ; 73 44
+        sub     bl, 0x47                        ; 80 EB 47
+        jb      L_0310                          ; 72 3F
+        xor     bh, bh                          ; 32 FF
+        mov     bh, byte ptr [bx + 0x41e]       ; 8A BF 1E 04
+        cmp     bh, 0xff                        ; 80 FF FF
+        je      L_0310                          ; 74 34
+        les     di, ptr [bp + 8]                ; C4 7E 08
+        mov     al, 0xa                         ; B0 0A
+        mov     bl, byte ptr es:[di]            ; 26 8A 1D
+        mul     bl                              ; F6 E3
+        add     al, bh                          ; 02 C7
+        mov     byte ptr es:[di], al            ; 26 88 05
+        cmp     al, bl                          ; 3A C3
+        jne     L_02A4                          ; 75 B5
+        mov     byte ptr [0x42a], 1             ; C6 06 2A 04 01
+        jmp     L_02A4                          ; EB AE
+L_02F6:
+        mov     byte ptr [0x3c7], al            ; A2 C7 03
+        mov     bx, 0x38e                       ; BB 8E 03
+L_02FC:
+        add     bx, 3                           ; 83 C3 03
+        cmp     byte ptr [bx], al               ; 38 07
+        jne     L_02FC                          ; 75 F9
+        mov     ax, word ptr [bx + 1]           ; 8B 47 01
+        test    byte ptr es:[si + 0x10], ch     ; 26 84 6C 10
+        je      L_0336                          ; 74 2A
+        xchg    ah, al                          ; 86 C4
+        jmp     L_0336                          ; EB 26
+L_0310:
+        mov     byte ptr [0x32c], al            ; A2 2C 03
+        mov     bx, 0x218                       ; BB 18 02
+L_0316:
+        add     bx, 4                           ; 83 C3 04
+        cmp     byte ptr [bx], al               ; 38 07
+        jne     L_0316                          ; 75 F9
+        test    byte ptr es:[si + 0x11], ch     ; 26 84 6C 11
+        je      L_033C                          ; 74 19
+        mov     al, byte ptr [bx + 3]           ; 8A 47 03
+        cmp     al, 0xff                        ; 3C FF
+        je      L_0339                          ; 74 0F
+        or      al, al                          ; 0A C0
+        jns     L_0336                          ; 79 08
+        and     al, 0x7f                        ; 24 7F
+        test    byte ptr es:[si + 0x10], ch     ; 26 84 6C 10
+        je      L_0339                          ; 74 03
+L_0336:
+        jmp     L_03D7                          ; E9 9E 00
+L_0339:
+        jmp     L_02A4                          ; E9 68 FF
+L_033C:
+        mov     ax, word ptr [bx + 1]           ; 8B 47 01
+        test    byte ptr es:[si + 0x10], ch     ; 26 84 6C 10
+        je      L_0347                          ; 74 02
+        xchg    ah, al                          ; 86 C4
+L_0347:
+        test    byte ptr es:[si + 0x14], 1      ; 26 F6 44 14 01
+        je      L_036B                          ; 74 1D
+        cmp     dl, 0x41                        ; 80 FA 41
+        jb      L_035C                          ; 72 09
+        cmp     dl, 0x5a                        ; 80 FA 5A
+        ja      L_035C                          ; 77 04
+        xchg    ah, al                          ; 86 C4
+        jmp     L_036B                          ; EB 0F
+L_035C:
+        mov     bx, 0x415                       ; BB 15 04
+L_035F:
+        inc     bx                              ; 43
+        cmp     byte ptr [bx], 0xff             ; 80 3F FF
+        je      L_036B                          ; 74 06
+        cmp     byte ptr [bx], dl               ; 38 17
+        jne     L_035F                          ; 75 F6
+        xchg    ah, al                          ; 86 C4
+L_036B:
+        mov     bx, 0x3c9                       ; BB C9 03
+L_036E:
+        inc     bx                              ; 43
+        mov     ah, byte ptr [bx]               ; 8A 27
+        cmp     ah, 0xff                        ; 80 FC FF
+        je      L_0387                          ; 74 11
+        cmp     al, ah                          ; 3A C4
+        jne     L_036E                          ; 75 F4
+        mov     byte ptr [0x3cf], al            ; A2 CF 03
+        les     di, ptr [bp + 8]                ; C4 7E 08
+        stosb   byte ptr es:[di], al            ; AA
+        mov     ax, 0xffff                      ; B8 FF FF
+        jmp     L_0405                          ; EB 7F
+        nop                                     ; 90
+L_0387:
+        mov     ah, byte ptr [0x3cf]            ; 8A 26 CF 03
+        or      ah, ah                          ; 0A E4
+        je      L_03D7                          ; 74 48
+        mov     byte ptr [0x411], al            ; A2 11 04
+        mov     bx, 0x3cb                       ; BB CB 03
+L_0395:
+        add     bx, 5                           ; 83 C3 05
+        cmp     byte ptr [bx], al               ; 38 07
+        jne     L_0395                          ; 75 F9
+        cmp     byte ptr [bx + 2], 0xff         ; 80 7F 02 FF
+        je      L_03E3                          ; 74 41
+        mov     byte ptr [0x3cf], 0             ; C6 06 CF 03 00
+        cmp     ah, 0x60                        ; 80 FC 60
+        jne     L_03B1                          ; 75 05
+        mov     al, byte ptr [bx + 1]           ; 8A 47 01
+        jmp     L_03CF                          ; EB 1E
+L_03B1:
+        cmp     ah, 0xb4                        ; 80 FC B4
+        jne     L_03BB                          ; 75 05
+        mov     al, byte ptr [bx + 2]           ; 8A 47 02
+        jmp     L_03CF                          ; EB 14
+L_03BB:
+        cmp     ah, 0x5e                        ; 80 FC 5E
+        mov     al, byte ptr [bx + 3]           ; 8A 47 03
+        je      L_03CF                          ; 74 0C
+        mov     al, byte ptr [bx + 4]           ; 8A 47 04
+        cmp     byte ptr [bx], 0x79             ; 80 3F 79
+        jne     L_03CF                          ; 75 04
+        mov     al, 0xff                        ; B0 FF
+        jmp     L_03FE                          ; EB 2F
+L_03CF:
+        cmp     al, 0xff                        ; 3C FF
+        jne     L_03FE                          ; 75 2B
+        mov     al, byte ptr [bx]               ; 8A 07
+        jmp     L_03E7                          ; EB 10
+L_03D7:
+        xor     ah, ah                          ; 32 E4
+        cmp     al, 0xff                        ; 3C FF
+        jne     L_03FE                          ; 75 21
+L_03DD:
+        call    L_0412                          ; E8 32 00
+        jmp     L_02A4                          ; E9 C1 FE
+L_03E3:
+        cmp     al, 0xff                        ; 3C FF
+        je      L_03DD                          ; 74 F6
+L_03E7:
+        mov     byte ptr [0x3cf], 0             ; C6 06 CF 03 00
+        les     di, ptr [bp + 8]                ; C4 7E 08
+        push    ax                              ; 50
+        mov     al, ah                          ; 8A C4
+        xor     ah, ah                          ; 32 E4
+        stosw   word ptr es:[di], ax            ; AB
+        pop     ax                              ; 58
+        xor     ah, ah                          ; 32 E4
+        stosw   word ptr es:[di], ax            ; AB
+        mov     ax, 2                           ; B8 02 00
+        jmp     L_0405                          ; EB 07
+L_03FE:
+        les     di, ptr [bp + 8]                ; C4 7E 08
+        stosb   byte ptr es:[di], al            ; AA
+L_0402:
+        mov     ax, 1                           ; B8 01 00
+L_0405:
+        pop     di                              ; 5F
+        pop     si                              ; 5E
+        sub     bp, 2                           ; 83 ED 02
+        mov     sp, bp                          ; 8B E5
+        pop     ds                              ; 1F
+        pop     bp                              ; 5D
+        dec     bp                              ; 4D
+        retf    0xe                             ; CA 0E 00
+; @ANALYSIS_v1
+;----------------------------------------------------------------------
+; sub_0412 -- offset 0x0412 -- 14 instr
+; Wrapper que delega en sub_0431.
+; tags: wrapper
+; callers: sub_0254
+; calls (intra): sub_0431
+;----------------------------------------------------------------------
+L_0412:
+        xor     bx, bx                          ; 33 DB
+        mov     al, 0x40                        ; B0 40
+        mov     bl, 0x14                        ; B3 14
+        call    L_0431                          ; E8 16 00
+        mov     al, 0x10                        ; B0 10
+        mov     bl, 0x91                        ; B3 91
+        call    L_0431                          ; E8 0F 00
+        mov     al, 0x20                        ; B0 20
+        mov     bl, 0x90                        ; B3 90
+        call    L_0431                          ; E8 08 00
+        mov     ah, 1                           ; B4 01
+        pushf                                   ; 9C
+        lcall   [0x14]                          ; FF 1E 14 00
+        ret                                     ; C3
+; @ANALYSIS_v1
+;----------------------------------------------------------------------
+; sub_0431 -- offset 0x0431 -- 10 instr
+; Funcion hoja (no llama a otras, 10 instr): probable helper aritmetico/conversion.
+; tags: leaf
+; callers: sub_0412
+;----------------------------------------------------------------------
+L_0431:
+        les     si, ptr [bp + 0xc]              ; C4 76 0C
+        test    byte ptr es:[bx + si], 1        ; 26 F6 00 01
+        mov     si, 0                           ; BE 00 00
+        mov     es, si                          ; 8E C6
+        je      L_0445                          ; 74 06
+        or      byte ptr es:[0x417], al         ; 26 08 06 17 04
+        ret                                     ; C3
+L_0445:
+        not     al                              ; F6 D0
+        and     byte ptr es:[0x417], al         ; 26 20 06 17 04
+        ret                                     ; C3
+
+NORWAY_TEXT ENDS
+
+        END

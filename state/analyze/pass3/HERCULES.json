@@ -1,0 +1,3838 @@
+{
+  "module": "HERCULES",
+  "num_functions": 57,
+  "confidence_count": {
+    "high": 0,
+    "medium": 27,
+    "low": 12,
+    "unknown": 18
+  },
+  "functions": [
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "sub_0192",
+      "kind": "NEAR",
+      "offset": 402,
+      "size_bytes": null,
+      "start_line": 208,
+      "end_line": 221,
+      "num_instructions": 13,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_01CA"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [
+        "0x10"
+      ],
+      "has_loop": false,
+      "has_string_op": true,
+      "num_mem_refs": 2,
+      "mnemonic_histogram": {
+        "mov": 7,
+        "int": 1,
+        "stosb": 1,
+        "out": 1,
+        "lea": 1,
+        "call": 1,
+        "ret": 1
+      },
+      "classification": "iterator",
+      "first_instructions": [
+        "mov ah, 0xf",
+        "int 0x10",
+        "stosb byte ptr es:[di], al",
+        "mov dx, 0x3bf",
+        "mov al, 3",
+        "out dx, al"
+      ],
+      "last_instructions": [
+        "mov cx, 0x4000",
+        "call L_01CA",
+        "mov al, 1",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_01CA"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "ENABLE"
+      ],
+      "fanout": 1,
+      "fanin": 1,
+      "description": "Llama a servicios BIOS via INT 10h (video, 13 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "int_10",
+        "iterator",
+        "string_op"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0192 -- offset 0x0192 -- 13 instr\n; Llama a servicios BIOS via INT 10h (video, 13 instr).\n; tags: int_10, iterator, string_op\n; callers: ENABLE\n; calls (intra): sub_01CA\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "sub_01AF",
+      "kind": "NEAR",
+      "offset": 431,
+      "size_bytes": null,
+      "start_line": 222,
+      "end_line": 234,
+      "num_instructions": 12,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_01CA"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [
+        "0x10"
+      ],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 2,
+      "mnemonic_histogram": {
+        "mov": 6,
+        "push": 1,
+        "lea": 1,
+        "call": 1,
+        "pop": 1,
+        "int": 1,
+        "ret": 1
+      },
+      "classification": "bios_caller",
+      "first_instructions": [
+        "mov al, byte ptr [si + 0x20]",
+        "push ax",
+        "mov al, 0x20",
+        "lea si, [0x186]",
+        "mov bx, 0x720",
+        "mov cx, 0x2000"
+      ],
+      "last_instructions": [
+        "mov ah, 0",
+        "int 0x10",
+        "mov al, 1",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_01CA"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "DISABLE"
+      ],
+      "fanout": 1,
+      "fanin": 1,
+      "description": "Llama a servicios BIOS via INT 10h (video, 12 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "bios_caller",
+        "int_10"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_01AF -- offset 0x01AF -- 12 instr\n; Llama a servicios BIOS via INT 10h (video, 12 instr).\n; tags: bios_caller, int_10\n; callers: DISABLE\n; calls (intra): sub_01CA\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "sub_01CA",
+      "kind": "FAR",
+      "offset": 458,
+      "size_bytes": null,
+      "start_line": 235,
+      "end_line": 1049,
+      "num_instructions": 735,
+      "prologue": "saves_regs",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_1A53",
+        "L_1ADF",
+        "L_1E2F"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 90,
+      "num_jumps_uncond": 15,
+      "ints": [],
+      "has_loop": true,
+      "has_string_op": true,
+      "num_mem_refs": 223,
+      "mnemonic_histogram": {
+        "mov": 232,
+        "je": 44,
+        "add": 37,
+        "stosw": 35,
+        "cmp": 34,
+        "and": 28,
+        "or": 23,
+        "shr": 23,
+        "stosb": 22,
+        "xor": 18,
+        "jne": 18,
+        "test": 17,
+        "jmp": 15,
+        "inc": 14,
+        "dec": 13
+      },
+      "classification": "complex_iterator",
+      "first_instructions": [
+        "push ax",
+        "push bx",
+        "push cx",
+        "mov dx, 0x3b8",
+        "out dx, al",
+        "mov dx, 0x3b4"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 0x20"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_1A53",
+        "sub_1ADF",
+        "sub_1E2F"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0192",
+        "sub_01AF"
+      ],
+      "fanout": 3,
+      "fanin": 2,
+      "description": "Iterador con instrucciones de string (movsb/scasb/...) (735 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "complex_iterator",
+        "far",
+        "loop",
+        "string_op"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_01CA -- offset 0x01CA -- 735 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (735 instr).\n; tags: complex_iterator, far, loop, string_op\n; callers: sub_0192, sub_01AF\n; calls (intra): sub_1A53, sub_1ADF, sub_1E2F\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "STRBLT",
+      "kind": "FAR",
+      "offset": null,
+      "size_bytes": null,
+      "start_line": 1054,
+      "end_line": 1646,
+      "num_instructions": 530,
+      "prologue": "none",
+      "epilogue": "jmp_tail",
+      "calls_near": [
+        "L_1A53",
+        "L_1ADF",
+        "L_1E2F"
+      ],
+      "calls_far": [
+        "word ptr [bp - 0x10]"
+      ],
+      "num_jumps_cond": 59,
+      "num_jumps_uncond": 23,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": true,
+      "num_mem_refs": 172,
+      "mnemonic_histogram": {
+        "mov": 163,
+        "sub": 33,
+        "xor": 32,
+        "add": 27,
+        "or": 27,
+        "je": 25,
+        "jmp": 23,
+        "shr": 21,
+        "cmp": 17,
+        "push": 16,
+        "dec": 15,
+        "shl": 11,
+        "lds": 11,
+        "and": 11,
+        "neg": 9
+      },
+      "classification": "complex_iterator",
+      "first_instructions": [
+        "mov ax, ds",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp",
+        "push ds"
+      ],
+      "last_instructions": [
+        "pop di",
+        "pop si",
+        "sub bp, 2",
+        "mov sp, bp"
+      ],
+      "discovered": false,
+      "callees_intra": [
+        "sub_1A53",
+        "sub_1ADF",
+        "sub_1E2F"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 3,
+      "fanin": 0,
+      "description": "Iterador con instrucciones de string (movsb/scasb/...) (530 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "complex_iterator",
+        "far",
+        "string_op"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; STRBLT -- 530 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (530 instr).\n; tags: complex_iterator, far, string_op\n; calls (intra): sub_1A53, sub_1ADF, sub_1E2F\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "sub_0DC8",
+      "kind": "NEAR",
+      "offset": 3528,
+      "size_bytes": null,
+      "start_line": 1738,
+      "end_line": 1762,
+      "num_instructions": 22,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_0E06"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 2,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 5,
+      "mnemonic_histogram": {
+        "mov": 12,
+        "call": 2,
+        "cmp": 2,
+        "je": 2,
+        "cld": 1,
+        "xor": 1,
+        "rep": 1,
+        "ret": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "cld",
+        "mov dx, word ptr es:[8]",
+        "mov di, 0x5e",
+        "mov al, 0xff",
+        "call L_0E06",
+        "mov di, 0xfe"
+      ],
+      "last_instructions": [
+        "mov ax, es",
+        "mov ds, ax",
+        "rep movsw word ptr es:[di], word ptr [si]",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0E06"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "SETCURSOR"
+      ],
+      "fanout": 1,
+      "fanin": 1,
+      "description": "Funcion sin clasificar definitiva (22 instr).",
+      "confidence": "unknown",
+      "semantic_tags": [
+        "small"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0DC8 -- offset 0x0DC8 -- 22 instr\n; Funcion sin clasificar definitiva (22 instr).\n; tags: small\n; callers: SETCURSOR\n; calls (intra): sub_0E06\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "sub_0E06",
+      "kind": "NEAR",
+      "offset": 3590,
+      "size_bytes": null,
+      "start_line": 1763,
+      "end_line": 1782,
+      "num_instructions": 17,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 1,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": true,
+      "has_string_op": true,
+      "num_mem_refs": 10,
+      "mnemonic_histogram": {
+        "movsw": 6,
+        "stosb": 4,
+        "loop": 2,
+        "ret": 2,
+        "mov": 1,
+        "cmp": 1,
+        "je": 1
+      },
+      "classification": "iterator",
+      "first_instructions": [
+        "mov cx, 0x10",
+        "cmp dl, 4",
+        "je L_0E15",
+        "movsw word ptr es:[di], word ptr [si]",
+        "stosb byte ptr es:[di], al",
+        "movsw word ptr es:[di], word ptr [si]"
+      ],
+      "last_instructions": [
+        "movsw word ptr es:[di], word ptr [si]",
+        "stosb byte ptr es:[di], al",
+        "loop L_0E15",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0DC8"
+      ],
+      "fanout": 0,
+      "fanin": 1,
+      "description": "Iterador con instrucciones de string (movsb/scasb/...) (17 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "iterator",
+        "loop",
+        "string_op"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0E06 -- offset 0x0E06 -- 17 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (17 instr).\n; tags: iterator, loop, string_op\n; callers: sub_0DC8\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "sub_0E1E",
+      "kind": "NEAR",
+      "offset": 3614,
+      "size_bytes": null,
+      "start_line": 1783,
+      "end_line": 1794,
+      "num_instructions": 11,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_0E73",
+        "L_0EC4",
+        "L_0F8D",
+        "L_1022",
+        "L_10BE"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 0,
+      "mnemonic_histogram": {
+        "call": 5,
+        "mov": 2,
+        "push": 1,
+        "cld": 1,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "mov ax, ds",
+        "mov es, ax",
+        "push bp",
+        "cld",
+        "call L_10BE",
+        "call L_0F8D"
+      ],
+      "last_instructions": [
+        "call L_0E73",
+        "call L_1022",
+        "pop bp",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0E73",
+        "sub_0EC4",
+        "sub_0F8D",
+        "sub_1022",
+        "sub_10BE"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_1CD2",
+        "sub_1D4C"
+      ],
+      "fanout": 5,
+      "fanin": 2,
+      "description": "Funcion sin clasificar definitiva (11 instr).",
+      "confidence": "unknown",
+      "semantic_tags": [
+        "small"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0E1E -- offset 0x0E1E -- 11 instr\n; Funcion sin clasificar definitiva (11 instr).\n; tags: small\n; callers: sub_1CD2, sub_1D4C\n; calls (intra): sub_0E73, sub_0EC4, sub_0F8D, sub_1022, sub_10BE\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "sub_0E35",
+      "kind": "NEAR",
+      "offset": 3637,
+      "size_bytes": null,
+      "start_line": 1795,
+      "end_line": 1806,
+      "num_instructions": 10,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_0E4C"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 1,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 2,
+      "mnemonic_histogram": {
+        "mov": 3,
+        "cmp": 1,
+        "jne": 1,
+        "cld": 1,
+        "push": 1,
+        "call": 1,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "wrapper",
+      "first_instructions": [
+        "cmp byte ptr [0x11], 1",
+        "jne L_0E4B",
+        "mov byte ptr [0x11], 0",
+        "mov ax, ds",
+        "mov es, ax",
+        "cld"
+      ],
+      "last_instructions": [
+        "push bp",
+        "call L_0E4C",
+        "pop bp",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0E4C"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "SETCURSOR",
+        "sub_1A53",
+        "sub_1CAF",
+        "sub_1D96"
+      ],
+      "fanout": 1,
+      "fanin": 4,
+      "description": "Wrapper que delega en sub_0E4C.",
+      "confidence": "medium",
+      "semantic_tags": [
+        "wrapper"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0E35 -- offset 0x0E35 -- 10 instr\n; Wrapper que delega en sub_0E4C.\n; tags: wrapper\n; callers: SETCURSOR, sub_1A53, sub_1CAF, sub_1D96\n; calls (intra): sub_0E4C\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "sub_0E4C",
+      "kind": "NEAR",
+      "offset": 3660,
+      "size_bytes": null,
+      "start_line": 1807,
+      "end_line": 1822,
+      "num_instructions": 15,
+      "prologue": "none",
+      "epilogue": "jmp_tail",
+      "calls_near": [
+        "L_11CC",
+        "L_1200"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 4,
+      "mnemonic_histogram": {
+        "mov": 6,
+        "push": 2,
+        "call": 2,
+        "add": 2,
+        "xchg": 1,
+        "inc": 1,
+        "jmp": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "mov di, 0x19e",
+        "mov ax, word ptr [0x12]",
+        "mov si, word ptr [0x14]",
+        "push si",
+        "push ax",
+        "call L_11CC"
+      ],
+      "last_instructions": [
+        "add bx, cx",
+        "inc cx",
+        "mov bp, 0x20",
+        "jmp L_103F"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_11CC",
+        "sub_1200"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0E35",
+        "sub_10BE"
+      ],
+      "fanout": 2,
+      "fanin": 2,
+      "description": "Funcion sin clasificar definitiva (15 instr).",
+      "confidence": "unknown",
+      "semantic_tags": [
+        "small"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0E4C -- offset 0x0E4C -- 15 instr\n; Funcion sin clasificar definitiva (15 instr).\n; tags: small\n; callers: sub_0E35, sub_10BE\n; calls (intra): sub_11CC, sub_1200\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "sub_0E73",
+      "kind": "NEAR",
+      "offset": 3699,
+      "size_bytes": null,
+      "start_line": 1823,
+      "end_line": 1865,
+      "num_instructions": 39,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_0FF9"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": true,
+      "has_string_op": true,
+      "num_mem_refs": 23,
+      "mnemonic_histogram": {
+        "mov": 11,
+        "and": 5,
+        "xor": 5,
+        "add": 4,
+        "lodsw": 3,
+        "stosw": 3,
+        "lodsb": 2,
+        "loop": 2,
+        "ret": 2,
+        "call": 1,
+        "jmp": 1
+      },
+      "classification": "iterator",
+      "first_instructions": [
+        "mov ax, word ptr [0x16]",
+        "mov si, word ptr [0x18]",
+        "call L_0FF9",
+        "mov di, si",
+        "mov si, 0x5e",
+        "mov bx, 0xfe"
+      ],
+      "last_instructions": [
+        "add di, dx",
+        "add bx, dx",
+        "loop L_0EA8",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0FF9"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0E1E"
+      ],
+      "fanout": 1,
+      "fanin": 1,
+      "description": "Iterador con instrucciones de string (movsb/scasb/...) (39 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "iterator",
+        "loop",
+        "string_op"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0E73 -- offset 0x0E73 -- 39 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (39 instr).\n; tags: iterator, loop, string_op\n; callers: sub_0E1E\n; calls (intra): sub_0FF9\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "sub_0EC4",
+      "kind": "NEAR",
+      "offset": 3780,
+      "size_bytes": null,
+      "start_line": 1866,
+      "end_line": 1881,
+      "num_instructions": 15,
+      "prologue": "none",
+      "epilogue": "unknown",
+      "calls_near": [
+        "L_0EE9"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 2,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 3,
+      "mnemonic_histogram": {
+        "mov": 9,
+        "and": 2,
+        "sub": 1,
+        "je": 1,
+        "jl": 1,
+        "call": 1
+      },
+      "classification": "wrapper",
+      "first_instructions": [
+        "mov ax, ds",
+        "mov es, ax",
+        "mov bl, 7",
+        "mov al, byte ptr [0x16]",
+        "and al, bl",
+        "and bl, byte ptr [0x10]"
+      ],
+      "last_instructions": [
+        "mov si, 0x5e",
+        "call L_0EE9",
+        "mov al, bh",
+        "mov si, 0xfe"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0EE9"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0E1E"
+      ],
+      "fanout": 1,
+      "fanin": 1,
+      "description": "Wrapper que delega en sub_0EE9.",
+      "confidence": "medium",
+      "semantic_tags": [
+        "wrapper"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0EC4 -- offset 0x0EC4 -- 15 instr\n; Wrapper que delega en sub_0EE9.\n; tags: wrapper\n; callers: sub_0E1E\n; calls (intra): sub_0EE9\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "sub_0EE9",
+      "kind": "NEAR",
+      "offset": 3817,
+      "size_bytes": null,
+      "start_line": 1882,
+      "end_line": 1927,
+      "num_instructions": 40,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_0F3B"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 3,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": true,
+      "has_string_op": true,
+      "num_mem_refs": 9,
+      "mnemonic_histogram": {
+        "mov": 16,
+        "shr": 2,
+        "xchg": 2,
+        "dec": 2,
+        "jne": 2,
+        "ret": 2,
+        "xor": 2,
+        "or": 2,
+        "cmp": 1,
+        "jae": 1,
+        "rcr": 1,
+        "stosw": 1,
+        "loop": 1,
+        "rcl": 1,
+        "ror": 1
+      },
+      "classification": "iterator",
+      "first_instructions": [
+        "cmp al, 3",
+        "jae L_0F0F",
+        "mov bl, al",
+        "mov di, si",
+        "mov cx, word ptr [0x34]",
+        "shr cx, 1"
+      ],
+      "last_instructions": [
+        "mov si, 0x5e",
+        "call L_0F3B",
+        "mov al, bh",
+        "mov si, 0xfe"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0F3B"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0EC4"
+      ],
+      "fanout": 1,
+      "fanin": 1,
+      "description": "Iterador con instrucciones de string (movsb/scasb/...) (40 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "iterator",
+        "loop",
+        "string_op"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0EE9 -- offset 0x0EE9 -- 40 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (40 instr).\n; tags: iterator, loop, string_op\n; callers: sub_0EC4\n; calls (intra): sub_0F3B\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "sub_0F3B",
+      "kind": "NEAR",
+      "offset": 3899,
+      "size_bytes": null,
+      "start_line": 1928,
+      "end_line": 1974,
+      "num_instructions": 42,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 3,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": true,
+      "has_string_op": true,
+      "num_mem_refs": 9,
+      "mnemonic_histogram": {
+        "mov": 13,
+        "dec": 3,
+        "add": 2,
+        "xchg": 2,
+        "jne": 2,
+        "cld": 2,
+        "ret": 2,
+        "xor": 2,
+        "or": 2,
+        "std": 1,
+        "cmp": 1,
+        "jae": 1,
+        "sub": 1,
+        "shr": 1,
+        "rcl": 1
+      },
+      "classification": "iterator",
+      "first_instructions": [
+        "std",
+        "cmp al, 3",
+        "jae L_0F6E",
+        "mov bl, al",
+        "mov di, si",
+        "mov cx, word ptr [0x34]"
+      ],
+      "last_instructions": [
+        "jne L_0F7B",
+        "or byte ptr [si], bl",
+        "cld",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0EE9"
+      ],
+      "fanout": 0,
+      "fanin": 1,
+      "description": "Iterador con instrucciones de string (movsb/scasb/...) (42 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "iterator",
+        "loop",
+        "string_op"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0F3B -- offset 0x0F3B -- 42 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (42 instr).\n; tags: iterator, loop, string_op\n; callers: sub_0EE9\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "sub_0F8D",
+      "kind": "NEAR",
+      "offset": 3981,
+      "size_bytes": null,
+      "start_line": 1975,
+      "end_line": 2005,
+      "num_instructions": 28,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_0FF9"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": true,
+      "has_string_op": true,
+      "num_mem_refs": 17,
+      "mnemonic_histogram": {
+        "mov": 7,
+        "movsw": 6,
+        "movsb": 4,
+        "add": 4,
+        "loop": 2,
+        "ret": 2,
+        "call": 1,
+        "shr": 1,
+        "jmp": 1
+      },
+      "classification": "iterator",
+      "first_instructions": [
+        "mov di, 0x19e",
+        "mov ax, word ptr [0x16]",
+        "mov si, word ptr [0x18]",
+        "mov word ptr [0x12], ax",
+        "mov word ptr [0x14], si",
+        "mov byte ptr [0x11], 1"
+      ],
+      "last_instructions": [
+        "movsw word ptr es:[di], word ptr [si]",
+        "add si, dx",
+        "loop L_0FBB",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0FF9"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0E1E"
+      ],
+      "fanout": 1,
+      "fanin": 1,
+      "description": "Iterador con instrucciones de string (movsb/scasb/...) (28 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "iterator",
+        "loop",
+        "string_op"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0F8D -- offset 0x0F8D -- 28 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (28 instr).\n; tags: iterator, loop, string_op\n; callers: sub_0E1E\n; calls (intra): sub_0FF9\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "sub_0FC8",
+      "kind": "NEAR",
+      "offset": 4040,
+      "size_bytes": null,
+      "start_line": 2006,
+      "end_line": 2034,
+      "num_instructions": 26,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_0FF9"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": true,
+      "has_string_op": true,
+      "num_mem_refs": 14,
+      "mnemonic_histogram": {
+        "movsw": 6,
+        "mov": 4,
+        "movsb": 4,
+        "add": 4,
+        "loop": 2,
+        "ret": 2,
+        "call": 1,
+        "shr": 1,
+        "xchg": 1,
+        "jmp": 1
+      },
+      "classification": "iterator",
+      "first_instructions": [
+        "mov di, 0x19e",
+        "mov ax, word ptr [0x12]",
+        "mov si, word ptr [0x14]",
+        "call L_0FF9",
+        "shr cx, 1",
+        "mov dx, word ptr [0x26]"
+      ],
+      "last_instructions": [
+        "movsw word ptr es:[di], word ptr [si]",
+        "add di, dx",
+        "loop L_0FEC",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0FF9"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_10BE"
+      ],
+      "fanout": 1,
+      "fanin": 1,
+      "description": "Iterador con instrucciones de string (movsb/scasb/...) (26 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "iterator",
+        "loop",
+        "string_op"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0FC8 -- offset 0x0FC8 -- 26 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (26 instr).\n; tags: iterator, loop, string_op\n; callers: sub_10BE\n; calls (intra): sub_0FF9\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "sub_0FF9",
+      "kind": "NEAR",
+      "offset": 4089,
+      "size_bytes": null,
+      "start_line": 2035,
+      "end_line": 2052,
+      "num_instructions": 16,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 1,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 3,
+      "mnemonic_histogram": {
+        "sar": 3,
+        "shl": 3,
+        "add": 3,
+        "sub": 2,
+        "mov": 2,
+        "cmp": 1,
+        "je": 1,
+        "ret": 1
+      },
+      "classification": "leaf",
+      "first_instructions": [
+        "sub ax, word ptr [0x1a]",
+        "sar ax, 1",
+        "sar ax, 1",
+        "sar ax, 1",
+        "sub si, word ptr [0x1c]",
+        "mov cx, si"
+      ],
+      "last_instructions": [
+        "add si, ax",
+        "add si, 0x23e",
+        "mov cx, 0x20",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0E73",
+        "sub_0F8D",
+        "sub_0FC8"
+      ],
+      "fanout": 0,
+      "fanin": 3,
+      "description": "Funcion hoja (no llama a otras, 16 instr): probable helper aritmetico/conversion.",
+      "confidence": "low",
+      "semantic_tags": [
+        "leaf"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0FF9 -- offset 0x0FF9 -- 16 instr\n; Funcion hoja (no llama a otras, 16 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_0E73, sub_0F8D, sub_0FC8\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "sub_1022",
+      "kind": "NEAR",
+      "offset": 4130,
+      "size_bytes": null,
+      "start_line": 2053,
+      "end_line": 2130,
+      "num_instructions": 65,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_11FC"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 8,
+      "num_jumps_uncond": 3,
+      "ints": [],
+      "has_loop": true,
+      "has_string_op": false,
+      "num_mem_refs": 14,
+      "mnemonic_histogram": {
+        "mov": 15,
+        "add": 10,
+        "pop": 4,
+        "sub": 4,
+        "push": 3,
+        "sar": 3,
+        "jmp": 3,
+        "jle": 3,
+        "xor": 2,
+        "or": 2,
+        "jge": 2,
+        "neg": 2,
+        "ret": 2,
+        "call": 1,
+        "shl": 1
+      },
+      "classification": "complex_iterator",
+      "first_instructions": [
+        "call L_11FC",
+        "mov si, 0x23e",
+        "mov di, word ptr [0x24]",
+        "mov cx, word ptr [0x26]",
+        "shl cx, 1",
+        "inc cx"
+      ],
+      "last_instructions": [
+        "ret",
+        "pop cx",
+        "mov byte ptr [0x11], 0",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_11FC"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0E1E"
+      ],
+      "fanout": 1,
+      "fanin": 1,
+      "description": "Iterador con bucle (65 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "complex_iterator",
+        "loop"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1022 -- offset 0x1022 -- 65 instr\n; Iterador con bucle (65 instr).\n; tags: complex_iterator, loop\n; callers: sub_0E1E\n; calls (intra): sub_11FC\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "sub_10BE",
+      "kind": "NEAR",
+      "offset": 4286,
+      "size_bytes": null,
+      "start_line": 2131,
+      "end_line": 2147,
+      "num_instructions": 14,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_0E4C",
+        "L_0FC8",
+        "L_10DE",
+        "L_116B"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 2,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 2,
+      "mnemonic_histogram": {
+        "call": 5,
+        "mov": 2,
+        "je": 2,
+        "ret": 2,
+        "xor": 1,
+        "cmp": 1,
+        "or": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "call L_116B",
+        "xor ax, ax",
+        "mov bx, 0x11",
+        "cmp byte ptr [bx], al",
+        "je L_10D3",
+        "mov byte ptr [bx], al"
+      ],
+      "last_instructions": [
+        "ret",
+        "call L_10DE",
+        "call L_0FC8",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0E4C",
+        "sub_0FC8",
+        "sub_10DE",
+        "sub_116B"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0E1E"
+      ],
+      "fanout": 4,
+      "fanin": 1,
+      "description": "Funcion sin clasificar definitiva (14 instr).",
+      "confidence": "unknown",
+      "semantic_tags": [
+        "small"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_10BE -- offset 0x10BE -- 14 instr\n; Funcion sin clasificar definitiva (14 instr).\n; tags: small\n; callers: sub_0E1E\n; calls (intra): sub_0E4C, sub_0FC8, sub_10DE, sub_116B\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "sub_10DE",
+      "kind": "NEAR",
+      "offset": 4318,
+      "size_bytes": null,
+      "start_line": 2148,
+      "end_line": 2228,
+      "num_instructions": 70,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_11FC"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 10,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": true,
+      "has_string_op": true,
+      "num_mem_refs": 19,
+      "mnemonic_histogram": {
+        "movsb": 14,
+        "mov": 13,
+        "add": 10,
+        "jns": 6,
+        "sar": 6,
+        "pop": 2,
+        "or": 2,
+        "jle": 2,
+        "inc": 2,
+        "jne": 2,
+        "xor": 2,
+        "sub": 2,
+        "loop": 2,
+        "ret": 2,
+        "call": 1
+      },
+      "classification": "complex_iterator",
+      "first_instructions": [
+        "call L_11FC",
+        "push cx",
+        "mov cx, word ptr [0x1e]",
+        "mov si, word ptr [0x24]",
+        "mov di, 0xb800",
+        "mov ds, di"
+      ],
+      "last_instructions": [
+        "loop L_114F",
+        "mov cx, es",
+        "mov ds, cx",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_11FC"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_10BE"
+      ],
+      "fanout": 1,
+      "fanin": 1,
+      "description": "Iterador con instrucciones de string (movsb/scasb/...) (70 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "complex_iterator",
+        "loop",
+        "string_op"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_10DE -- offset 0x10DE -- 70 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (70 instr).\n; tags: complex_iterator, loop, string_op\n; callers: sub_10BE\n; calls (intra): sub_11FC\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "sub_116B",
+      "kind": "NEAR",
+      "offset": 4459,
+      "size_bytes": null,
+      "start_line": 2229,
+      "end_line": 2269,
+      "num_instructions": 36,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_11CC"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 5,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 14,
+      "mnemonic_histogram": {
+        "mov": 15,
+        "cmp": 4,
+        "jge": 3,
+        "xor": 2,
+        "and": 2,
+        "sub": 2,
+        "je": 1,
+        "xchg": 1,
+        "neg": 1,
+        "jle": 1,
+        "not": 1,
+        "add": 1,
+        "call": 1,
+        "ret": 1
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "xor bp, bp",
+        "cmp byte ptr [0x11], 0",
+        "je L_11A5",
+        "mov ax, word ptr [0x16]",
+        "mov bx, word ptr [0x12]",
+        "cmp ax, bx"
+      ],
+      "last_instructions": [
+        "mov si, bx",
+        "call L_11CC",
+        "mov word ptr [0x24], si",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_11CC"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_10BE"
+      ],
+      "fanout": 1,
+      "fanin": 1,
+      "description": "Dispatcher: tabla de decisiones cmp+jcc (36 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "dispatcher"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_116B -- offset 0x116B -- 36 instr\n; Dispatcher: tabla de decisiones cmp+jcc (36 instr).\n; tags: dispatcher\n; callers: sub_10BE\n; calls (intra): sub_11CC\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "sub_11CC",
+      "kind": "NEAR",
+      "offset": 4556,
+      "size_bytes": null,
+      "start_line": 2270,
+      "end_line": 2296,
+      "num_instructions": 23,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 3,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 0,
+      "mnemonic_histogram": {
+        "add": 12,
+        "sar": 5,
+        "jae": 2,
+        "mov": 1,
+        "xchg": 1,
+        "js": 1,
+        "ret": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "mov cx, si",
+        "xchg si, ax",
+        "sar si, 1",
+        "sar si, 1",
+        "sar si, 1",
+        "sar ax, 1"
+      ],
+      "last_instructions": [
+        "add ax, ax",
+        "add ax, ax",
+        "add si, ax",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0E4C",
+        "sub_116B"
+      ],
+      "fanout": 0,
+      "fanin": 2,
+      "description": "Funcion sin clasificar definitiva (23 instr).",
+      "confidence": "unknown",
+      "semantic_tags": [
+        "small"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_11CC -- offset 0x11CC -- 23 instr\n; Funcion sin clasificar definitiva (23 instr).\n; tags: small\n; callers: sub_0E4C, sub_116B\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "sub_11FC",
+      "kind": "NEAR",
+      "offset": 4604,
+      "size_bytes": null,
+      "start_line": 2297,
+      "end_line": 2298,
+      "num_instructions": 1,
+      "prologue": "none",
+      "epilogue": "unknown",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 1,
+      "mnemonic_histogram": {
+        "mov": 1
+      },
+      "classification": "trivial_stub",
+      "first_instructions": [
+        "mov cx, word ptr [0x1c]"
+      ],
+      "last_instructions": [
+        "mov cx, word ptr [0x1c]"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_1022",
+        "sub_10DE"
+      ],
+      "fanout": 0,
+      "fanin": 2,
+      "description": "Stub trivial (1 instrucciones, sin logica significativa).",
+      "confidence": "low",
+      "semantic_tags": [
+        "trivial_stub"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_11FC -- offset 0x11FC -- 1 instr\n; Stub trivial (1 instrucciones, sin logica significativa).\n; tags: trivial_stub\n; callers: sub_1022, sub_10DE\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "sub_1200",
+      "kind": "NEAR",
+      "offset": 4608,
+      "size_bytes": null,
+      "start_line": 2299,
+      "end_line": 2301,
+      "num_instructions": 2,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 1,
+      "mnemonic_histogram": {
+        "mov": 1,
+        "ret": 1
+      },
+      "classification": "trivial_stub",
+      "first_instructions": [
+        "mov ax, word ptr [0x30]",
+        "ret"
+      ],
+      "last_instructions": [
+        "mov ax, word ptr [0x30]",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0E4C"
+      ],
+      "fanout": 0,
+      "fanin": 1,
+      "description": "Stub trivial (2 instrucciones, sin logica significativa).",
+      "confidence": "low",
+      "semantic_tags": [
+        "trivial_stub"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1200 -- offset 0x1200 -- 2 instr\n; Stub trivial (2 instrucciones, sin logica significativa).\n; tags: trivial_stub\n; callers: sub_0E4C\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "SCANLR",
+      "kind": "FAR",
+      "offset": null,
+      "size_bytes": null,
+      "start_line": 2306,
+      "end_line": 2432,
+      "num_instructions": 114,
+      "prologue": "none",
+      "epilogue": "jmp_tail",
+      "calls_near": [
+        "L_1A53",
+        "L_1ADF"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 12,
+      "num_jumps_uncond": 2,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": true,
+      "num_mem_refs": 20,
+      "mnemonic_histogram": {
+        "mov": 25,
+        "shl": 9,
+        "dec": 7,
+        "inc": 6,
+        "shr": 6,
+        "add": 5,
+        "push": 4,
+        "pop": 4,
+        "lds": 3,
+        "je": 3,
+        "xor": 3,
+        "and": 3,
+        "jae": 3,
+        "not": 3,
+        "sub": 3
+      },
+      "classification": "complex_iterator",
+      "first_instructions": [
+        "mov ax, ds",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp",
+        "push ds"
+      ],
+      "last_instructions": [
+        "dec bp",
+        "retf 0xe",
+        "mov ax, 0xffff",
+        "jmp L_12D9"
+      ],
+      "discovered": false,
+      "callees_intra": [
+        "sub_1A53",
+        "sub_1ADF"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 2,
+      "fanin": 0,
+      "description": "Iterador con instrucciones de string (movsb/scasb/...) (114 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "complex_iterator",
+        "far",
+        "string_op"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; SCANLR -- 114 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (114 instr).\n; tags: complex_iterator, far, string_op\n; calls (intra): sub_1A53, sub_1ADF\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "PIXEL",
+      "kind": "FAR",
+      "offset": null,
+      "size_bytes": null,
+      "start_line": 2438,
+      "end_line": 2521,
+      "num_instructions": 75,
+      "prologue": "none",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_1A53",
+        "L_1ADF",
+        "L_1E2F"
+      ],
+      "calls_far": [
+        "word ptr cs:[si + 0x1bd7]"
+      ],
+      "num_jumps_cond": 5,
+      "num_jumps_uncond": 2,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": true,
+      "num_mem_refs": 20,
+      "mnemonic_histogram": {
+        "mov": 26,
+        "xor": 5,
+        "add": 5,
+        "push": 4,
+        "call": 4,
+        "and": 4,
+        "shr": 4,
+        "pop": 4,
+        "jmp": 2,
+        "lds": 2,
+        "or": 2,
+        "je": 2,
+        "nop": 1,
+        "inc": 1,
+        "jae": 1
+      },
+      "classification": "complex_iterator",
+      "first_instructions": [
+        "mov ax, ds",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp",
+        "push ds"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 0x10"
+      ],
+      "discovered": false,
+      "callees_intra": [
+        "sub_1A53",
+        "sub_1ADF",
+        "sub_1E2F"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 3,
+      "fanin": 0,
+      "description": "Iterador con instrucciones de string (movsb/scasb/...) (75 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "complex_iterator",
+        "far",
+        "string_op"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; PIXEL -- 75 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (75 instr).\n; tags: complex_iterator, far, string_op\n; calls (intra): sub_1A53, sub_1ADF, sub_1E2F\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "OUTPUT",
+      "kind": "FAR",
+      "offset": null,
+      "size_bytes": null,
+      "start_line": 2575,
+      "end_line": 2802,
+      "num_instructions": 206,
+      "prologue": "none",
+      "epilogue": "jmp_tail",
+      "calls_near": [
+        "L_15FB",
+        "L_1680",
+        "L_1A53",
+        "L_1ADF",
+        "L_1E2F"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 24,
+      "num_jumps_uncond": 5,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": true,
+      "num_mem_refs": 75,
+      "mnemonic_histogram": {
+        "mov": 83,
+        "cmp": 10,
+        "je": 9,
+        "push": 8,
+        "add": 8,
+        "jne": 7,
+        "xor": 7,
+        "lds": 6,
+        "or": 6,
+        "call": 5,
+        "jmp": 5,
+        "pop": 5,
+        "dec": 5,
+        "stosw": 5,
+        "shr": 4
+      },
+      "classification": "complex_iterator",
+      "first_instructions": [
+        "mov ax, ds",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp",
+        "push ds"
+      ],
+      "last_instructions": [
+        "mov si, dx",
+        "mov dx, word ptr [bp - 0x10]",
+        "mov bh, byte ptr [bp - 0x1a]",
+        "mov bl, byte ptr [bp - 0x1c]"
+      ],
+      "discovered": false,
+      "callees_intra": [
+        "sub_15FB",
+        "sub_1680",
+        "sub_1A53",
+        "sub_1ADF",
+        "sub_1E2F"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 5,
+      "fanin": 0,
+      "description": "Iterador con instrucciones de string (movsb/scasb/...) (206 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "complex_iterator",
+        "far",
+        "string_op"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; OUTPUT -- 206 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (206 instr).\n; tags: complex_iterator, far, string_op\n; calls (intra): sub_15FB, sub_1680, sub_1A53, sub_1ADF, sub_1E2F\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "sub_15FB",
+      "kind": "NEAR",
+      "offset": 5627,
+      "size_bytes": null,
+      "start_line": 2819,
+      "end_line": 2873,
+      "num_instructions": 50,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 7,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 18,
+      "mnemonic_histogram": {
+        "mov": 22,
+        "cmp": 5,
+        "je": 5,
+        "rep": 4,
+        "and": 3,
+        "or": 3,
+        "lds": 1,
+        "dec": 1,
+        "jcxz": 1,
+        "jmp": 1,
+        "lea": 1,
+        "jne": 1,
+        "add": 1,
+        "ret": 1
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "lds si, ptr [bp + 0xa]",
+        "mov ax, word ptr [si + 2]",
+        "mov dh, byte ptr [si + 4]",
+        "mov bx, word ptr [si]",
+        "dec bx",
+        "and bx, 0xf"
+      ],
+      "last_instructions": [
+        "mov cl, 7",
+        "rep movsw word ptr es:[di], word ptr [si]",
+        "mov word ptr [bp - 4], di",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "OUTPUT",
+        "sub_1680"
+      ],
+      "fanout": 0,
+      "fanin": 2,
+      "description": "Dispatcher: tabla de decisiones cmp+jcc (50 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "dispatcher"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_15FB -- offset 0x15FB -- 50 instr\n; Dispatcher: tabla de decisiones cmp+jcc (50 instr).\n; tags: dispatcher\n; callers: OUTPUT, sub_1680\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "sub_1680",
+      "kind": "NEAR",
+      "offset": 5760,
+      "size_bytes": null,
+      "start_line": 2874,
+      "end_line": 2986,
+      "num_instructions": 102,
+      "prologue": "none",
+      "epilogue": "jmp_tail",
+      "calls_near": [
+        "L_15FB",
+        "L_1680",
+        "L_1A53"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 9,
+      "num_jumps_uncond": 4,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": true,
+      "num_mem_refs": 39,
+      "mnemonic_histogram": {
+        "mov": 40,
+        "add": 5,
+        "lds": 5,
+        "je": 4,
+        "jmp": 4,
+        "push": 4,
+        "pop": 4,
+        "sub": 3,
+        "rep": 3,
+        "call": 3,
+        "cmp": 3,
+        "shr": 3,
+        "test": 2,
+        "dec": 2,
+        "shl": 2
+      },
+      "classification": "complex_iterator",
+      "first_instructions": [
+        "lea ax, [bp - 0x8f]",
+        "sub ax, di",
+        "mov si, 0x13c9",
+        "mov cx, 0x15",
+        "rep movsb byte ptr es:[di], byte ptr [si]",
+        "add byte ptr es:[di - 0xf], al"
+      ],
+      "last_instructions": [
+        "pop si",
+        "pop ds",
+        "pop ax",
+        "jmp L_174E"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_15FB",
+        "sub_1A53"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_1680"
+      ],
+      "callers": [
+        "OUTPUT"
+      ],
+      "fanout": 2,
+      "fanin": 1,
+      "description": "Iterador con instrucciones de string (movsb/scasb/...) (102 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "complex_iterator",
+        "string_op"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1680 -- offset 0x1680 -- 102 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (102 instr).\n; tags: complex_iterator, string_op\n; callers: OUTPUT\n; calls (intra): sub_15FB, sub_1A53\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "ENUMDFONTS",
+      "kind": "FAR",
+      "offset": null,
+      "size_bytes": null,
+      "start_line": 2991,
+      "end_line": 3006,
+      "num_instructions": 14,
+      "prologue": "none",
+      "epilogue": "retf_n",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 0,
+      "mnemonic_histogram": {
+        "mov": 5,
+        "push": 2,
+        "pop": 2,
+        "nop": 1,
+        "inc": 1,
+        "sub": 1,
+        "dec": 1,
+        "retf": 1
+      },
+      "classification": "leaf",
+      "first_instructions": [
+        "mov ax, ds",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp",
+        "push ds"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 0x10"
+      ],
+      "discovered": false,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 0,
+      "fanin": 0,
+      "description": "Enumerador: itera sobre dfonts.",
+      "confidence": "medium",
+      "semantic_tags": [
+        "far",
+        "leaf"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; ENUMDFONTS -- 14 instr\n; Enumerador: itera sobre dfonts.\n; tags: far, leaf\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "ENUMOBJ",
+      "kind": "FAR",
+      "offset": null,
+      "size_bytes": null,
+      "start_line": 3012,
+      "end_line": 3086,
+      "num_instructions": 64,
+      "prologue": "none",
+      "epilogue": "jmp_tail",
+      "calls_near": [
+        "L_1835"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 7,
+      "num_jumps_uncond": 2,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 16,
+      "mnemonic_histogram": {
+        "mov": 23,
+        "xor": 9,
+        "push": 4,
+        "pop": 4,
+        "sub": 3,
+        "cmp": 3,
+        "call": 3,
+        "jne": 3,
+        "inc": 2,
+        "je": 2,
+        "dec": 2,
+        "jmp": 2,
+        "nop": 1,
+        "retf": 1,
+        "jb": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "mov ax, ds",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp",
+        "push ds"
+      ],
+      "last_instructions": [
+        "jne L_181D",
+        "dec si",
+        "jns L_1818",
+        "jmp L_17EE"
+      ],
+      "discovered": false,
+      "callees_intra": [
+        "sub_1835"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 1,
+      "fanin": 0,
+      "description": "Enumerador: itera sobre obj.",
+      "confidence": "medium",
+      "semantic_tags": [
+        "far",
+        "medium"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; ENUMOBJ -- 64 instr\n; Enumerador: itera sobre obj.\n; tags: far, medium\n; calls (intra): sub_1835\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "sub_1835",
+      "kind": "NEAR",
+      "offset": 6197,
+      "size_bytes": null,
+      "start_line": 3088,
+      "end_line": 3098,
+      "num_instructions": 10,
+      "prologue": "none",
+      "epilogue": "jmp_tail",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 1,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 4,
+      "mnemonic_histogram": {
+        "push": 4,
+        "lea": 1,
+        "lcall": 1,
+        "pop": 1,
+        "or": 1,
+        "je": 1,
+        "jmp": 1
+      },
+      "classification": "leaf",
+      "first_instructions": [
+        "lea ax, [bp - 0xe]",
+        "push ss",
+        "push ax",
+        "push word ptr [bp + 8]",
+        "push word ptr [bp + 6]",
+        "lcall [bp + 0xa]"
+      ],
+      "last_instructions": [
+        "pop bx",
+        "or ax, ax",
+        "je L_17EE",
+        "jmp bx"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "ENUMOBJ"
+      ],
+      "fanout": 0,
+      "fanin": 1,
+      "description": "Funcion hoja (no llama a otras, 10 instr): probable helper aritmetico/conversion.",
+      "confidence": "low",
+      "semantic_tags": [
+        "leaf"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1835 -- offset 0x1835 -- 10 instr\n; Funcion hoja (no llama a otras, 10 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: ENUMOBJ\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "REALIZEOBJECT",
+      "kind": "FAR",
+      "offset": null,
+      "size_bytes": null,
+      "start_line": 3103,
+      "end_line": 3143,
+      "num_instructions": 34,
+      "prologue": "none",
+      "epilogue": "jmp_tail",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 5,
+      "num_jumps_uncond": 4,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 8,
+      "mnemonic_histogram": {
+        "mov": 8,
+        "push": 4,
+        "jmp": 4,
+        "cmp": 4,
+        "or": 2,
+        "je": 2,
+        "nop": 1,
+        "inc": 1,
+        "sub": 1,
+        "cld": 1,
+        "jns": 1,
+        "lds": 1,
+        "dec": 1,
+        "jg": 1,
+        "shl": 1
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "mov ax, ds",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp",
+        "push ds"
+      ],
+      "last_instructions": [
+        "cmp word ptr [si + 2], 2",
+        "jb L_1897",
+        "mov cx, 0",
+        "cmp cx, 5"
+      ],
+      "discovered": false,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 0,
+      "fanin": 0,
+      "description": "Dispatcher: tabla de decisiones cmp+jcc (34 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "dispatcher",
+        "far"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; REALIZEOBJECT -- 34 instr\n; Dispatcher: tabla de decisiones cmp+jcc (34 instr).\n; tags: dispatcher, far\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "sub_1985",
+      "kind": "NEAR",
+      "offset": 6533,
+      "size_bytes": null,
+      "start_line": 3262,
+      "end_line": 3264,
+      "num_instructions": 2,
+      "prologue": "none",
+      "epilogue": "unknown",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 2,
+      "mnemonic_histogram": {
+        "mov": 2
+      },
+      "classification": "trivial_stub",
+      "first_instructions": [
+        "mov ax, word ptr [si]",
+        "mov dl, byte ptr [si + 2]"
+      ],
+      "last_instructions": [
+        "mov ax, word ptr [si]",
+        "mov dl, byte ptr [si + 2]"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 0,
+      "fanin": 0,
+      "description": "Stub trivial (2 instrucciones, sin logica significativa).",
+      "confidence": "low",
+      "semantic_tags": [
+        "trivial_stub"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1985 -- offset 0x1985 -- 2 instr\n; Stub trivial (2 instrucciones, sin logica significativa).\n; tags: trivial_stub\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "sub_198A",
+      "kind": "FAR",
+      "offset": 6538,
+      "size_bytes": null,
+      "start_line": 3265,
+      "end_line": 3337,
+      "num_instructions": 70,
+      "prologue": "none",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_198A"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 2,
+      "num_jumps_uncond": 0,
+      "ints": [
+        "0x18"
+      ],
+      "has_loop": false,
+      "has_string_op": true,
+      "num_mem_refs": 19,
+      "mnemonic_histogram": {
+        "mov": 9,
+        "db": 7,
+        "add": 5,
+        "xor": 4,
+        "pop": 4,
+        "sbb": 4,
+        "push": 4,
+        "div": 4,
+        "idiv": 3,
+        "les": 2,
+        "inc": 2,
+        "std": 2,
+        "xchg": 1,
+        "cmp": 1,
+        "jge": 1
+      },
+      "classification": "complex_iterator",
+      "first_instructions": [
+        "xor dh, dh",
+        "xor bx, bx",
+        "xchg bl, ah",
+        "add bx, ax",
+        "add bx, dx",
+        "mov ax, 0xffff"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 0xc"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_198A"
+      ],
+      "callers": [],
+      "fanout": 0,
+      "fanin": 0,
+      "description": "Iterador con instrucciones de string (movsb/scasb/...) (70 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "complex_iterator",
+        "far",
+        "int_18",
+        "string_op"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_198A -- offset 0x198A -- 70 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (70 instr).\n; tags: complex_iterator, far, int_18, string_op\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "CONTROL",
+      "kind": "FAR",
+      "offset": null,
+      "size_bytes": null,
+      "start_line": 3342,
+      "end_line": 3376,
+      "num_instructions": 31,
+      "prologue": "none",
+      "epilogue": "retf_n",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 3,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": true,
+      "num_mem_refs": 7,
+      "mnemonic_histogram": {
+        "mov": 6,
+        "push": 3,
+        "cmp": 3,
+        "pop": 3,
+        "xor": 2,
+        "sub": 2,
+        "stosw": 2,
+        "nop": 1,
+        "inc": 1,
+        "je": 1,
+        "jne": 1,
+        "lds": 1,
+        "ja": 1,
+        "les": 1,
+        "cld": 1
+      },
+      "classification": "iterator",
+      "first_instructions": [
+        "mov ax, ds",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp",
+        "push ds"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 0xe"
+      ],
+      "discovered": false,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 0,
+      "fanin": 0,
+      "description": "Iterador con instrucciones de string (movsb/scasb/...) (31 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "far",
+        "iterator",
+        "string_op"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; CONTROL -- 31 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (31 instr).\n; tags: far, iterator, string_op\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "sub_1A53",
+      "kind": "NEAR",
+      "offset": 6739,
+      "size_bytes": null,
+      "start_line": 3378,
+      "end_line": 3405,
+      "num_instructions": 26,
+      "prologue": "none",
+      "epilogue": "jmp_tail",
+      "calls_near": [
+        "L_0E35",
+        "L_1AA7"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 2,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 12,
+      "mnemonic_histogram": {
+        "mov": 12,
+        "call": 2,
+        "and": 1,
+        "or": 1,
+        "pushf": 1,
+        "cli": 1,
+        "jae": 1,
+        "je": 1,
+        "xor": 1,
+        "xchg": 1,
+        "push": 1,
+        "sti": 1,
+        "pop": 1,
+        "jmp": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "mov ds, word ptr cs:[0x1c22]",
+        "and cl, 0xf8",
+        "or si, 7",
+        "mov word ptr [0x480], cx",
+        "mov word ptr [0x482], dx",
+        "mov word ptr [0x484], si"
+      ],
+      "last_instructions": [
+        "mov ds, word ptr cs:[0x1c22]",
+        "pop ax",
+        "mov byte ptr [0x490], al",
+        "jmp L_1AA2"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0E35",
+        "sub_1AA7"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "OUTPUT",
+        "PIXEL",
+        "SCANLR",
+        "STRBLT",
+        "sub_01CA",
+        "sub_1680"
+      ],
+      "fanout": 2,
+      "fanin": 6,
+      "description": "Funcion sin clasificar definitiva (26 instr).",
+      "confidence": "unknown",
+      "semantic_tags": [
+        "small"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1A53 -- offset 0x1A53 -- 26 instr\n; Funcion sin clasificar definitiva (26 instr).\n; tags: small\n; callers: OUTPUT, PIXEL, SCANLR, STRBLT, sub_01CA, sub_1680\n; calls (intra): sub_0E35, sub_1AA7\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "sub_1AA1",
+      "kind": "NEAR",
+      "offset": 6817,
+      "size_bytes": null,
+      "start_line": 3406,
+      "end_line": 3411,
+      "num_instructions": 4,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_1AA1"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 0,
+      "mnemonic_histogram": {
+        "iret": 1,
+        "push": 1,
+        "call": 1,
+        "ret": 1
+      },
+      "classification": "wrapper",
+      "first_instructions": [
+        "iret",
+        "push cs",
+        "call L_1AA1",
+        "ret"
+      ],
+      "last_instructions": [
+        "iret",
+        "push cs",
+        "call L_1AA1",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_1AA1"
+      ],
+      "callers": [],
+      "fanout": 0,
+      "fanin": 0,
+      "description": "Funcion sin clasificar definitiva (4 instr).",
+      "confidence": "unknown",
+      "semantic_tags": [
+        "wrapper"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1AA1 -- offset 0x1AA1 -- 4 instr\n; Funcion sin clasificar definitiva (4 instr).\n; tags: wrapper\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "sub_1AA7",
+      "kind": "NEAR",
+      "offset": 6823,
+      "size_bytes": null,
+      "start_line": 3412,
+      "end_line": 3434,
+      "num_instructions": 20,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 6,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 8,
+      "mnemonic_histogram": {
+        "cmp": 5,
+        "jg": 2,
+        "add": 2,
+        "jl": 2,
+        "mov": 1,
+        "test": 1,
+        "jne": 1,
+        "xor": 1,
+        "je": 1,
+        "inc": 1,
+        "or": 1,
+        "stc": 1,
+        "ret": 1
+      },
+      "classification": "leaf",
+      "first_instructions": [
+        "mov ds, word ptr cs:[0x1c22]",
+        "test byte ptr [0x47e], cl",
+        "jne L_1ADE",
+        "xor cx, cx",
+        "cmp byte ptr [0x47f], cl",
+        "je L_1ADB"
+      ],
+      "last_instructions": [
+        "inc cx",
+        "or cx, cx",
+        "stc",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_1A53",
+        "sub_1CAF",
+        "sub_1D4C"
+      ],
+      "fanout": 0,
+      "fanin": 3,
+      "description": "Funcion hoja (no llama a otras, 20 instr): probable helper aritmetico/conversion.",
+      "confidence": "low",
+      "semantic_tags": [
+        "leaf"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1AA7 -- offset 0x1AA7 -- 20 instr\n; Funcion hoja (no llama a otras, 20 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_1A53, sub_1CAF, sub_1D4C\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "sub_1ADF",
+      "kind": "NEAR",
+      "offset": 6879,
+      "size_bytes": null,
+      "start_line": 3435,
+      "end_line": 3438,
+      "num_instructions": 3,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 2,
+      "mnemonic_histogram": {
+        "mov": 2,
+        "ret": 1
+      },
+      "classification": "trivial_stub",
+      "first_instructions": [
+        "mov ds, word ptr cs:[0x1c22]",
+        "mov byte ptr [0x47f], 0",
+        "ret"
+      ],
+      "last_instructions": [
+        "mov ds, word ptr cs:[0x1c22]",
+        "mov byte ptr [0x47f], 0",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "OUTPUT",
+        "PIXEL",
+        "SCANLR",
+        "STRBLT",
+        "sub_01CA"
+      ],
+      "fanout": 0,
+      "fanin": 5,
+      "description": "Stub trivial (3 instrucciones, sin logica significativa).",
+      "confidence": "low",
+      "semantic_tags": [
+        "trivial_stub"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1ADF -- offset 0x1ADF -- 3 instr\n; Stub trivial (3 instrucciones, sin logica significativa).\n; tags: trivial_stub\n; callers: OUTPUT, PIXEL, SCANLR, STRBLT, sub_01CA\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "INQUIRE",
+      "kind": "FAR",
+      "offset": null,
+      "size_bytes": null,
+      "start_line": 3443,
+      "end_line": 3467,
+      "num_instructions": 23,
+      "prologue": "none",
+      "epilogue": "retf_n",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 2,
+      "mnemonic_histogram": {
+        "mov": 7,
+        "push": 4,
+        "pop": 4,
+        "nop": 1,
+        "inc": 1,
+        "les": 1,
+        "cld": 1,
+        "rep": 1,
+        "sub": 1,
+        "dec": 1,
+        "retf": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "mov ax, ds",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp",
+        "push ds"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 4"
+      ],
+      "discovered": false,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 0,
+      "fanin": 0,
+      "description": "Funcion sin clasificar definitiva (23 instr).",
+      "confidence": "unknown",
+      "semantic_tags": [
+        "far",
+        "small"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; INQUIRE -- 23 instr\n; Funcion sin clasificar definitiva (23 instr).\n; tags: far, small\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "SETCURSOR",
+      "kind": "FAR",
+      "offset": null,
+      "size_bytes": null,
+      "start_line": 3473,
+      "end_line": 3518,
+      "num_instructions": 43,
+      "prologue": "none",
+      "epilogue": "jmp_tail",
+      "calls_near": [
+        "L_0DC8",
+        "L_0E35"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 2,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 17,
+      "mnemonic_histogram": {
+        "mov": 14,
+        "push": 4,
+        "xor": 3,
+        "xchg": 3,
+        "cli": 2,
+        "add": 2,
+        "call": 2,
+        "sub": 2,
+        "nop": 1,
+        "inc": 1,
+        "jcxz": 1,
+        "pushf": 1,
+        "sti": 1,
+        "cld": 1,
+        "lds": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "mov ax, ds",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp",
+        "push ds"
+      ],
+      "last_instructions": [
+        "mov word ptr [0x48e], ax",
+        "sub word ptr [0x48a], ax",
+        "mov byte ptr [0x47e], 0x40",
+        "jmp L_1B80"
+      ],
+      "discovered": false,
+      "callees_intra": [
+        "sub_0DC8",
+        "sub_0E35"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 2,
+      "fanin": 0,
+      "description": "Setter: cambia cursor.",
+      "confidence": "medium",
+      "semantic_tags": [
+        "far",
+        "medium"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; SETCURSOR -- 43 instr\n; Setter: cambia cursor.\n; tags: far, medium\n; calls (intra): sub_0DC8, sub_0E35\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "sub_1B7F",
+      "kind": "NEAR",
+      "offset": 7039,
+      "size_bytes": null,
+      "start_line": 3520,
+      "end_line": 3594,
+      "num_instructions": 72,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_1B7F"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 9,
+      "mnemonic_histogram": {
+        "ret": 16,
+        "not": 11,
+        "sbb": 11,
+        "add": 6,
+        "mov": 5,
+        "pop": 4,
+        "and": 4,
+        "or": 4,
+        "xor": 3,
+        "push": 2,
+        "iret": 1,
+        "call": 1,
+        "sub": 1,
+        "dec": 1,
+        "retf": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "iret",
+        "push cs",
+        "call L_1B7F",
+        "mov byte ptr es:[0x490], 1",
+        "pop di",
+        "pop si"
+      ],
+      "last_instructions": [
+        "add al, 2",
+        "add al, 0",
+        "push es",
+        "add al, byte ptr [bp + si]"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_1B7F"
+      ],
+      "callers": [],
+      "fanout": 0,
+      "fanin": 0,
+      "description": "Funcion mediana (72 instr, 0 calls).",
+      "confidence": "low",
+      "semantic_tags": [
+        "medium"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1B7F -- offset 0x1B7F -- 72 instr\n; Funcion mediana (72 instr, 0 calls).\n; tags: medium\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "DEVICEMODE",
+      "kind": "FAR",
+      "offset": null,
+      "size_bytes": null,
+      "start_line": 3599,
+      "end_line": 3614,
+      "num_instructions": 14,
+      "prologue": "none",
+      "epilogue": "retf_n",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 0,
+      "mnemonic_histogram": {
+        "mov": 5,
+        "push": 2,
+        "pop": 2,
+        "nop": 1,
+        "inc": 1,
+        "sub": 1,
+        "dec": 1,
+        "retf": 1
+      },
+      "classification": "leaf",
+      "first_instructions": [
+        "mov ax, ds",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp",
+        "push ds"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 0xc"
+      ],
+      "discovered": false,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 0,
+      "fanin": 0,
+      "description": "Funcion hoja (no llama a otras, 14 instr): probable helper aritmetico/conversion.",
+      "confidence": "low",
+      "semantic_tags": [
+        "far",
+        "leaf"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; DEVICEMODE -- 14 instr\n; Funcion hoja (no llama a otras, 14 instr): probable helper aritmetico/conversion.\n; tags: far, leaf\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "ENABLE",
+      "kind": "FAR",
+      "offset": null,
+      "size_bytes": null,
+      "start_line": 3620,
+      "end_line": 3655,
+      "num_instructions": 32,
+      "prologue": "none",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_0192"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 1,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 6,
+      "mnemonic_histogram": {
+        "mov": 9,
+        "push": 4,
+        "pop": 4,
+        "lea": 2,
+        "rep": 2,
+        "nop": 1,
+        "inc": 1,
+        "cld": 1,
+        "les": 1,
+        "and": 1,
+        "jne": 1,
+        "call": 1,
+        "jmp": 1,
+        "sub": 1,
+        "dec": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "mov ax, ds",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp",
+        "push ds"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 0x12"
+      ],
+      "discovered": false,
+      "callees_intra": [
+        "sub_0192"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 1,
+      "fanin": 0,
+      "description": "Funcion mediana (32 instr, 1 calls).",
+      "confidence": "low",
+      "semantic_tags": [
+        "far",
+        "medium"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; ENABLE -- 32 instr\n; Funcion mediana (32 instr, 1 calls).\n; tags: far, medium\n; calls (intra): sub_0192\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "DISABLE",
+      "kind": "FAR",
+      "offset": null,
+      "size_bytes": null,
+      "start_line": 3661,
+      "end_line": 3682,
+      "num_instructions": 20,
+      "prologue": "none",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_01AF"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 1,
+      "mnemonic_histogram": {
+        "mov": 5,
+        "push": 4,
+        "pop": 4,
+        "nop": 1,
+        "inc": 1,
+        "lds": 1,
+        "call": 1,
+        "sub": 1,
+        "dec": 1,
+        "retf": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "mov ax, ds",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp",
+        "push ds"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 4"
+      ],
+      "discovered": false,
+      "callees_intra": [
+        "sub_01AF"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 1,
+      "fanin": 0,
+      "description": "Funcion sin clasificar definitiva (20 instr).",
+      "confidence": "unknown",
+      "semantic_tags": [
+        "far",
+        "small"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; DISABLE -- 20 instr\n; Funcion sin clasificar definitiva (20 instr).\n; tags: far, small\n; calls (intra): sub_01AF\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "MOVECURSOR",
+      "kind": "FAR",
+      "offset": null,
+      "size_bytes": null,
+      "start_line": 3688,
+      "end_line": 3710,
+      "num_instructions": 20,
+      "prologue": "none",
+      "epilogue": "jmp_tail",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 7,
+      "mnemonic_histogram": {
+        "mov": 7,
+        "push": 4,
+        "sub": 2,
+        "nop": 1,
+        "inc": 1,
+        "pushf": 1,
+        "cli": 1,
+        "xor": 1,
+        "xchg": 1,
+        "jmp": 1
+      },
+      "classification": "leaf",
+      "first_instructions": [
+        "mov ax, ds",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp",
+        "push ds"
+      ],
+      "last_instructions": [
+        "mov word ptr [0x48a], bx",
+        "xor cx, cx",
+        "xchg byte ptr [0x490], cl",
+        "jmp L_1CB0"
+      ],
+      "discovered": false,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 0,
+      "fanin": 0,
+      "description": "Funcion hoja (no llama a otras, 20 instr): probable helper aritmetico/conversion.",
+      "confidence": "low",
+      "semantic_tags": [
+        "far",
+        "leaf"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; MOVECURSOR -- 20 instr\n; Funcion hoja (no llama a otras, 20 instr): probable helper aritmetico/conversion.\n; tags: far, leaf\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "sub_1CAF",
+      "kind": "NEAR",
+      "offset": 7343,
+      "size_bytes": null,
+      "start_line": 3712,
+      "end_line": 3728,
+      "num_instructions": 15,
+      "prologue": "none",
+      "epilogue": "jmp_tail",
+      "calls_near": [
+        "L_0E35",
+        "L_1AA7",
+        "L_1CAF"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 3,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 3,
+      "mnemonic_histogram": {
+        "call": 3,
+        "mov": 3,
+        "iret": 1,
+        "push": 1,
+        "jcxz": 1,
+        "jae": 1,
+        "je": 1,
+        "or": 1,
+        "pushf": 1,
+        "sti": 1,
+        "jmp": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "iret",
+        "push cs",
+        "call L_1CAF",
+        "jcxz L_1D16",
+        "mov word ptr [0x16], ax",
+        "mov word ptr [0x18], bx"
+      ],
+      "last_instructions": [
+        "pushf",
+        "sti",
+        "call L_0E35",
+        "jmp L_1CD3"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0E35",
+        "sub_1AA7"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_1CAF"
+      ],
+      "callers": [],
+      "fanout": 2,
+      "fanin": 0,
+      "description": "Funcion sin clasificar definitiva (15 instr).",
+      "confidence": "unknown",
+      "semantic_tags": [
+        "small"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1CAF -- offset 0x1CAF -- 15 instr\n; Funcion sin clasificar definitiva (15 instr).\n; tags: small\n; calls (intra): sub_0E35, sub_1AA7\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "sub_1CD2",
+      "kind": "NEAR",
+      "offset": 7378,
+      "size_bytes": null,
+      "start_line": 3729,
+      "end_line": 3742,
+      "num_instructions": 10,
+      "prologue": "none",
+      "epilogue": "jmp_tail",
+      "calls_near": [
+        "L_0E1E",
+        "L_1CD2"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 2,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 2,
+      "mnemonic_histogram": {
+        "call": 2,
+        "mov": 2,
+        "jmp": 2,
+        "iret": 1,
+        "push": 1,
+        "pushf": 1,
+        "sti": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "iret",
+        "push cs",
+        "call L_1CD2",
+        "mov ds, word ptr cs:[0x1c22]",
+        "mov byte ptr [0x490], 1",
+        "jmp L_1D16"
+      ],
+      "last_instructions": [
+        "pushf",
+        "sti",
+        "call L_0E1E",
+        "jmp L_1CEB"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0E1E"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_1CD2"
+      ],
+      "callers": [],
+      "fanout": 1,
+      "fanin": 0,
+      "description": "Funcion sin clasificar definitiva (10 instr).",
+      "confidence": "unknown",
+      "semantic_tags": [
+        "small"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1CD2 -- offset 0x1CD2 -- 10 instr\n; Funcion sin clasificar definitiva (10 instr).\n; tags: small\n; calls (intra): sub_0E1E\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "sub_1CEA",
+      "kind": "NEAR",
+      "offset": 7402,
+      "size_bytes": null,
+      "start_line": 3743,
+      "end_line": 3759,
+      "num_instructions": 15,
+      "prologue": "none",
+      "epilogue": "jmp_tail",
+      "calls_near": [
+        "L_1CEA"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 2,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 6,
+      "mnemonic_histogram": {
+        "mov": 5,
+        "cmp": 2,
+        "jne": 2,
+        "iret": 1,
+        "push": 1,
+        "call": 1,
+        "pushf": 1,
+        "cli": 1,
+        "jmp": 1
+      },
+      "classification": "wrapper",
+      "first_instructions": [
+        "iret",
+        "push cs",
+        "call L_1CEA",
+        "mov ds, word ptr cs:[0x1c22]",
+        "pushf",
+        "cli"
+      ],
+      "last_instructions": [
+        "cmp bx, word ptr [0x18]",
+        "jne L_1CAD",
+        "mov byte ptr [0x490], cl",
+        "jmp L_1D12"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_1CEA"
+      ],
+      "callers": [],
+      "fanout": 0,
+      "fanin": 0,
+      "description": "Funcion sin clasificar definitiva (15 instr).",
+      "confidence": "unknown",
+      "semantic_tags": [
+        "wrapper"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1CEA -- offset 0x1CEA -- 15 instr\n; Funcion sin clasificar definitiva (15 instr).\n; tags: wrapper\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "sub_1D11",
+      "kind": "FAR",
+      "offset": 7441,
+      "size_bytes": null,
+      "start_line": 3760,
+      "end_line": 3773,
+      "num_instructions": 11,
+      "prologue": "none",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_1D11"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 0,
+      "mnemonic_histogram": {
+        "pop": 4,
+        "iret": 1,
+        "push": 1,
+        "call": 1,
+        "sub": 1,
+        "mov": 1,
+        "dec": 1,
+        "retf": 1
+      },
+      "classification": "wrapper",
+      "first_instructions": [
+        "iret",
+        "push cs",
+        "call L_1D11",
+        "pop di",
+        "pop si",
+        "sub bp, 2"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 4"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_1D11"
+      ],
+      "callers": [],
+      "fanout": 0,
+      "fanin": 0,
+      "description": "Funcion sin clasificar definitiva (11 instr).",
+      "confidence": "unknown",
+      "semantic_tags": [
+        "far",
+        "wrapper"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1D11 -- offset 0x1D11 -- 11 instr\n; Funcion sin clasificar definitiva (11 instr).\n; tags: far, wrapper\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "CHECKCURSOR",
+      "kind": "FAR",
+      "offset": null,
+      "size_bytes": null,
+      "start_line": 3778,
+      "end_line": 3802,
+      "num_instructions": 22,
+      "prologue": "none",
+      "epilogue": "jmp_tail",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 3,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 4,
+      "mnemonic_histogram": {
+        "mov": 6,
+        "push": 5,
+        "nop": 1,
+        "inc": 1,
+        "xor": 1,
+        "xchg": 1,
+        "jcxz": 1,
+        "add": 1,
+        "jb": 1,
+        "jns": 1,
+        "pushf": 1,
+        "cli": 1,
+        "jmp": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "mov ax, ds",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp",
+        "push ds"
+      ],
+      "last_instructions": [
+        "cli",
+        "mov ax, word ptr [0x488]",
+        "mov bx, word ptr [0x48a]",
+        "jmp L_1D4D"
+      ],
+      "discovered": false,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 0,
+      "fanin": 0,
+      "description": "Funcion sin clasificar definitiva (22 instr).",
+      "confidence": "unknown",
+      "semantic_tags": [
+        "far",
+        "small"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; CHECKCURSOR -- 22 instr\n; Funcion sin clasificar definitiva (22 instr).\n; tags: far, small\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "sub_1D4C",
+      "kind": "NEAR",
+      "offset": 7500,
+      "size_bytes": null,
+      "start_line": 3804,
+      "end_line": 3819,
+      "num_instructions": 14,
+      "prologue": "none",
+      "epilogue": "jmp_tail",
+      "calls_near": [
+        "L_0E1E",
+        "L_1AA7",
+        "L_1D4C"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 1,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 2,
+      "mnemonic_histogram": {
+        "mov": 4,
+        "call": 3,
+        "iret": 1,
+        "push": 1,
+        "xor": 1,
+        "jne": 1,
+        "pushf": 1,
+        "sti": 1,
+        "jmp": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "iret",
+        "push cs",
+        "call L_1D4C",
+        "mov si, ax",
+        "mov di, bx",
+        "xor cx, cx"
+      ],
+      "last_instructions": [
+        "pushf",
+        "sti",
+        "call L_0E1E",
+        "jmp L_1D6C"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0E1E",
+        "sub_1AA7"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_1D4C"
+      ],
+      "callers": [],
+      "fanout": 2,
+      "fanin": 0,
+      "description": "Funcion sin clasificar definitiva (14 instr).",
+      "confidence": "unknown",
+      "semantic_tags": [
+        "small"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1D4C -- offset 0x1D4C -- 14 instr\n; Funcion sin clasificar definitiva (14 instr).\n; tags: small\n; calls (intra): sub_0E1E, sub_1AA7\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "sub_1D6B",
+      "kind": "NEAR",
+      "offset": 7531,
+      "size_bytes": null,
+      "start_line": 3820,
+      "end_line": 3836,
+      "num_instructions": 15,
+      "prologue": "none",
+      "epilogue": "jmp_tail",
+      "calls_near": [
+        "L_1D6B"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 2,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 7,
+      "mnemonic_histogram": {
+        "mov": 5,
+        "cmp": 2,
+        "jne": 2,
+        "iret": 1,
+        "push": 1,
+        "call": 1,
+        "pushf": 1,
+        "cli": 1,
+        "jmp": 1
+      },
+      "classification": "wrapper",
+      "first_instructions": [
+        "iret",
+        "push cs",
+        "call L_1D6B",
+        "mov ds, word ptr cs:[0x1c22]",
+        "mov byte ptr [0x47e], 0",
+        "pushf"
+      ],
+      "last_instructions": [
+        "cmp bx, word ptr [0x18]",
+        "jne L_1D4A",
+        "mov byte ptr [0x490], 1",
+        "jmp L_1D97"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_1D6B"
+      ],
+      "callers": [],
+      "fanout": 0,
+      "fanin": 0,
+      "description": "Funcion sin clasificar definitiva (15 instr).",
+      "confidence": "unknown",
+      "semantic_tags": [
+        "wrapper"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1D6B -- offset 0x1D6B -- 15 instr\n; Funcion sin clasificar definitiva (15 instr).\n; tags: wrapper\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "sub_1D96",
+      "kind": "NEAR",
+      "offset": 7574,
+      "size_bytes": null,
+      "start_line": 3837,
+      "end_line": 3850,
+      "num_instructions": 10,
+      "prologue": "none",
+      "epilogue": "jmp_tail",
+      "calls_near": [
+        "L_0E35",
+        "L_1D96"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 1,
+      "num_jumps_uncond": 2,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 1,
+      "mnemonic_histogram": {
+        "call": 2,
+        "jmp": 2,
+        "iret": 1,
+        "push": 1,
+        "test": 1,
+        "jne": 1,
+        "pushf": 1,
+        "sti": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "iret",
+        "push cs",
+        "call L_1D96",
+        "jmp L_1DBF",
+        "test byte ptr [0x47e], 0x40",
+        "jne L_1DBA"
+      ],
+      "last_instructions": [
+        "pushf",
+        "sti",
+        "call L_0E35",
+        "jmp L_1DAC"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0E35"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_1D96"
+      ],
+      "callers": [],
+      "fanout": 1,
+      "fanin": 0,
+      "description": "Funcion sin clasificar definitiva (10 instr).",
+      "confidence": "unknown",
+      "semantic_tags": [
+        "small"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1D96 -- offset 0x1D96 -- 10 instr\n; Funcion sin clasificar definitiva (10 instr).\n; tags: small\n; calls (intra): sub_0E35\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "sub_1DAB",
+      "kind": "FAR",
+      "offset": 7595,
+      "size_bytes": null,
+      "start_line": 3851,
+      "end_line": 3873,
+      "num_instructions": 19,
+      "prologue": "none",
+      "epilogue": "retf",
+      "calls_near": [
+        "L_1DAB"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 7,
+      "mnemonic_histogram": {
+        "pop": 5,
+        "mov": 4,
+        "add": 4,
+        "iret": 1,
+        "push": 1,
+        "call": 1,
+        "sub": 1,
+        "dec": 1,
+        "retf": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "iret",
+        "push cs",
+        "call L_1DAB",
+        "mov ds, word ptr cs:[0x1c22]",
+        "mov byte ptr [0x47e], 0x40",
+        "mov byte ptr [0x490], 1"
+      ],
+      "last_instructions": [
+        "add byte ptr [bx + di], al",
+        "add word ptr [bx + si], ax",
+        "add byte ptr [bx + di], al",
+        "add byte ptr [bx + di], al"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_1DAB"
+      ],
+      "callers": [],
+      "fanout": 0,
+      "fanin": 0,
+      "description": "Funcion sin clasificar definitiva (19 instr).",
+      "confidence": "unknown",
+      "semantic_tags": [
+        "far",
+        "small"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1DAB -- offset 0x1DAB -- 19 instr\n; Funcion sin clasificar definitiva (19 instr).\n; tags: far, small\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "sub_1DD3",
+      "kind": "NEAR",
+      "offset": 7635,
+      "size_bytes": null,
+      "start_line": 3874,
+      "end_line": 3922,
+      "num_instructions": 44,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 3,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": true,
+      "has_string_op": true,
+      "num_mem_refs": 7,
+      "mnemonic_histogram": {
+        "mov": 11,
+        "shr": 5,
+        "xor": 4,
+        "stosw": 4,
+        "shl": 3,
+        "add": 3,
+        "cmp": 2,
+        "je": 2,
+        "or": 2,
+        "sub": 1,
+        "adc": 1,
+        "dec": 1,
+        "jl": 1,
+        "and": 1,
+        "loop": 1
+      },
+      "classification": "iterator",
+      "first_instructions": [
+        "mov ax, cs",
+        "mov ds, ax",
+        "xor ax, ax",
+        "stosw word ptr es:[di], ax",
+        "stosw word ptr es:[di], ax",
+        "stosw word ptr es:[di], ax"
+      ],
+      "last_instructions": [
+        "or byte ptr es:[bx + di], al",
+        "jmp L_1E00",
+        "add di, 8",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 0,
+      "fanin": 0,
+      "description": "Iterador con instrucciones de string (movsb/scasb/...) (44 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "iterator",
+        "loop",
+        "string_op"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1DD3 -- offset 0x1DD3 -- 44 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (44 instr).\n; tags: iterator, loop, string_op\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "HERCULES",
+      "segment_file": "seg1.asm",
+      "name": "sub_1E2F",
+      "kind": "NEAR",
+      "offset": 7727,
+      "size_bytes": null,
+      "start_line": 3923,
+      "end_line": 3943,
+      "num_instructions": 18,
+      "prologue": "none",
+      "epilogue": "jmp_tail",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 3,
+      "num_jumps_uncond": 2,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 5,
+      "mnemonic_histogram": {
+        "mov": 5,
+        "cmp": 2,
+        "jmp": 2,
+        "pop": 1,
+        "sub": 1,
+        "jae": 1,
+        "neg": 1,
+        "ja": 1,
+        "jbe": 1,
+        "clc": 1,
+        "xor": 1,
+        "stc": 1
+      },
+      "classification": "leaf",
+      "first_instructions": [
+        "pop bx",
+        "sub ax, sp",
+        "jae L_1E4D",
+        "neg ax",
+        "cmp word ptr ss:[0xa], ax",
+        "ja L_1E4D"
+      ],
+      "last_instructions": [
+        "xor ax, ax",
+        "mov dx, 0x8000",
+        "stc",
+        "jmp bx"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "OUTPUT",
+        "PIXEL",
+        "STRBLT",
+        "sub_01CA"
+      ],
+      "fanout": 0,
+      "fanin": 4,
+      "description": "Funcion hoja (no llama a otras, 18 instr): probable helper aritmetico/conversion.",
+      "confidence": "low",
+      "semantic_tags": [
+        "leaf"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1E2F -- offset 0x1E2F -- 18 instr\n; Funcion hoja (no llama a otras, 18 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: OUTPUT, PIXEL, STRBLT, sub_01CA\n;----------------------------------------------------------------------"
+    }
+  ]
+}

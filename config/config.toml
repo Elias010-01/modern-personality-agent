@@ -1,0 +1,92 @@
+# modern-personality-agent: configuración global
+#
+# Las rutas relativas se resuelven respecto a la raíz del repo.
+# Las rutas con ~ se expanden al $HOME del usuario en WSL.
+
+[paths]
+original     = "original"
+vendor       = "vendor"
+workspaces   = "workspaces"
+state_db     = "state/mpa.db"
+ghidra_proj  = ".ghidra-projects"
+logs         = "logs"
+
+[paths.upstream]
+# Subdirectorios dentro de vendor/ tras clonar
+windows  = "vendor/modern-personality-windows"
+research = "vendor/modern-personality-research"
+runtime  = "vendor/modern-personality-runtime"
+
+[ghidra]
+# Versión pinneada. install-ghidra.sh respeta esto.
+version          = "11.1.2"
+install_dir      = "~/opt/ghidra"
+analyze_headless = "~/opt/ghidra/support/analyzeHeadless"
+# Tiempo máximo por módulo en el análisis inicial (segundos)
+analyze_timeout  = 1800
+# Procesador para módulos NE de 16-bit
+processor        = "x86:LE:16:Real Mode"
+
+[dosbox]
+# DOSBox-X del paquete Ubuntu (dosbox-x 2024.03+). Suficiente para CL/MASM en
+# batch; cuando se necesite hook de framebuffer para pixel-diff, ya
+# compilaremos una versión parcheada propia.
+binary           = "/usr/bin/dosbox-x"
+# Carpeta del host que se monta como C: en DOSBox-X via MOUNT C.
+# Debe contener MSC/BIN/CL.EXE y MASM/MASM.EXE en sus respectivos paths.
+# Construida por bootstrap/finalize-toolchain.sh
+toolchain_dir    = "~/opt/legacy-toolchain/c"
+# Tiempo máximo por invocación de compilador (segundos)
+cc_timeout       = 60
+
+[legacy_toolchain]
+msc_version   = "4.00"
+masm_version  = "4.00"
+linker        = "LINK.EXE"
+# Memory model por defecto para Windows 1.x: medium (code far, data near)
+memory_model  = "M"
+# Convención de llamada por defecto para entry points exportados
+call_conv     = "pascal"
+
+[verification]
+# Modo de verificación primario. Opciones:
+#   "binary" → byte-diff del .OBJ contra sección extraída del binario original
+#   "pixels" → diff de framebuffer en DOSBox-X (sólo display drivers)
+default_mode  = "binary"
+# Tolerancia para pixel diff (porcentaje de píxeles que pueden diferir)
+pixel_tol_pct = 0.0
+
+[runner]
+# Máximo de reintentos antes de marcar needs_human
+max_attempts          = 5
+# Tamaño del bundle que el runner emite por iteración (funciones)
+bundle_size           = 1
+# Estrategia de priorización:
+#   "leaves_first"   → funciones sin callees no resueltos primero
+#   "small_first"    → funciones pequeñas primero
+#   "symbols_first"  → funciones con símbolos de debug primero
+#   "callgraph_up"   → de hojas hacia arriba en el call graph
+priority_strategy     = "callgraph_up"
+
+[kb]
+index_dir = "kb/index"
+data_dir  = "kb/data"
+# Backend de búsqueda. "ripgrep" no requiere setup. "tantivy" requiere indexar.
+backend   = "ripgrep"
+
+[modules]
+# Orden de ataque recomendado. El runner respeta esto al elegir trabajo.
+priority_order = [
+    "KERNEL",
+    "SYSTEM",
+    "KEYBOARD",
+    "MOUSE",
+    "SOUND",
+    "COMM",
+    "GDI",
+    "USER",
+    "CGA",
+    "EGA",
+    "HERCULES",
+    "MSDOSD",
+]

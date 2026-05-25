@@ -1,0 +1,351 @@
+{
+  "module": "SWEDEN",
+  "num_functions": 5,
+  "confidence_count": {
+    "high": 0,
+    "medium": 3,
+    "low": 1,
+    "unknown": 1
+  },
+  "functions": [
+    {
+      "module": "SWEDEN",
+      "segment_file": "seg2.asm",
+      "name": "sub_010A",
+      "kind": "NEAR",
+      "offset": 266,
+      "size_bytes": null,
+      "start_line": 139,
+      "end_line": 160,
+      "num_instructions": 21,
+      "prologue": "none",
+      "epilogue": "unknown",
+      "calls_near": [
+        "L_013A"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [
+        "0x16"
+      ],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 0,
+      "mnemonic_histogram": {
+        "mov": 15,
+        "call": 5,
+        "int": 1
+      },
+      "classification": "bios_caller",
+      "first_instructions": [
+        "mov ah, 2",
+        "int 0x16",
+        "mov dl, 0x80",
+        "mov ah, 3",
+        "mov bx, 0x10",
+        "call L_013A"
+      ],
+      "last_instructions": [
+        "mov bl, 0x90",
+        "call L_013A",
+        "mov ah, 0x40",
+        "mov bl, 0x14"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_013A"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 1,
+      "fanin": 0,
+      "description": "Funcion sin clasificar definitiva (21 instr).",
+      "confidence": "unknown",
+      "semantic_tags": [
+        "bios_caller",
+        "int_16"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_010A -- offset 0x010A -- 21 instr\n; Funcion sin clasificar definitiva (21 instr).\n; tags: bios_caller, int_16\n; calls (intra): sub_013A\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "SWEDEN",
+      "segment_file": "seg2.asm",
+      "name": "sub_013A",
+      "kind": "FAR",
+      "offset": 314,
+      "size_bytes": null,
+      "start_line": 161,
+      "end_line": 330,
+      "num_instructions": 160,
+      "prologue": "none",
+      "epilogue": "jmp_tail",
+      "calls_near": [
+        "L_0222"
+      ],
+      "calls_far": [
+        "si"
+      ],
+      "num_jumps_cond": 5,
+      "num_jumps_uncond": 4,
+      "ints": [],
+      "has_loop": true,
+      "has_string_op": true,
+      "num_mem_refs": 52,
+      "mnemonic_histogram": {
+        "pop": 24,
+        "sub": 19,
+        "mov": 16,
+        "dec": 9,
+        "and": 7,
+        "inc": 7,
+        "out": 5,
+        "jmp": 4,
+        "test": 3,
+        "lodsb": 3,
+        "push": 3,
+        "xchg": 3,
+        "db": 3,
+        "stosb": 2,
+        "int1": 2
+      },
+      "classification": "complex_iterator",
+      "first_instructions": [
+        "test ah, al",
+        "je L_0141",
+        "mov byte ptr es:[bx + di], dl",
+        "ret",
+        "and byte ptr [di - 0x6365], ch",
+        "setge byte ptr [si + 0x15]"
+      ],
+      "last_instructions": [
+        "stosb byte ptr es:[di], al",
+        "or al, al",
+        "jne L_0244",
+        "jmp L_0235"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_0222"
+      ],
+      "callers": [
+        "sub_010A"
+      ],
+      "fanout": 0,
+      "fanin": 1,
+      "description": "Iterador con instrucciones de string (movsb/scasb/...) (160 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "complex_iterator",
+        "far",
+        "loop",
+        "string_op"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_013A -- offset 0x013A -- 160 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (160 instr).\n; tags: complex_iterator, far, loop, string_op\n; callers: sub_010A\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "SWEDEN",
+      "segment_file": "seg2.asm",
+      "name": "sub_0254",
+      "kind": "FAR",
+      "offset": 596,
+      "size_bytes": null,
+      "start_line": 331,
+      "end_line": 551,
+      "num_instructions": 191,
+      "prologue": "none",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_0222",
+        "L_0254",
+        "L_0412"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 39,
+      "num_jumps_uncond": 15,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": true,
+      "num_mem_refs": 52,
+      "mnemonic_histogram": {
+        "mov": 40,
+        "cmp": 24,
+        "jne": 17,
+        "jmp": 15,
+        "je": 15,
+        "push": 10,
+        "test": 9,
+        "les": 6,
+        "xor": 6,
+        "or": 5,
+        "xchg": 5,
+        "pop": 5,
+        "add": 4,
+        "call": 3,
+        "jb": 3
+      },
+      "classification": "complex_iterator",
+      "first_instructions": [
+        "call L_0222",
+        "mov bx, 0x122",
+        "lodsb al, byte ptr [si]",
+        "cmp al, 0x80",
+        "jb L_0263",
+        "xlatb"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 0xe"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0412"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_0222",
+        "L_0254"
+      ],
+      "callers": [],
+      "fanout": 1,
+      "fanin": 0,
+      "description": "Iterador con instrucciones de string (movsb/scasb/...) (191 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "complex_iterator",
+        "far",
+        "string_op"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0254 -- offset 0x0254 -- 191 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (191 instr).\n; tags: complex_iterator, far, string_op\n; calls (intra): sub_0412\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "SWEDEN",
+      "segment_file": "seg2.asm",
+      "name": "sub_0412",
+      "kind": "NEAR",
+      "offset": 1042,
+      "size_bytes": null,
+      "start_line": 552,
+      "end_line": 566,
+      "num_instructions": 14,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_0431"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 1,
+      "mnemonic_histogram": {
+        "mov": 7,
+        "call": 3,
+        "xor": 1,
+        "pushf": 1,
+        "lcall": 1,
+        "ret": 1
+      },
+      "classification": "wrapper",
+      "first_instructions": [
+        "xor bx, bx",
+        "mov al, 0x40",
+        "mov bl, 0x14",
+        "call L_0431",
+        "mov al, 0x10",
+        "mov bl, 0x91"
+      ],
+      "last_instructions": [
+        "mov ah, 1",
+        "pushf",
+        "lcall [0x14]",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0431"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0254"
+      ],
+      "fanout": 1,
+      "fanin": 1,
+      "description": "Wrapper que delega en sub_0431.",
+      "confidence": "medium",
+      "semantic_tags": [
+        "wrapper"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0412 -- offset 0x0412 -- 14 instr\n; Wrapper que delega en sub_0431.\n; tags: wrapper\n; callers: sub_0254\n; calls (intra): sub_0431\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "SWEDEN",
+      "segment_file": "seg2.asm",
+      "name": "sub_0431",
+      "kind": "NEAR",
+      "offset": 1073,
+      "size_bytes": null,
+      "start_line": 567,
+      "end_line": 578,
+      "num_instructions": 10,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 1,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 4,
+      "mnemonic_histogram": {
+        "mov": 2,
+        "ret": 2,
+        "les": 1,
+        "test": 1,
+        "je": 1,
+        "or": 1,
+        "not": 1,
+        "and": 1
+      },
+      "classification": "leaf",
+      "first_instructions": [
+        "les si, ptr [bp + 0xc]",
+        "test byte ptr es:[bx + si], 1",
+        "mov si, 0",
+        "mov es, si",
+        "je L_0445",
+        "or byte ptr es:[0x417], al"
+      ],
+      "last_instructions": [
+        "ret",
+        "not al",
+        "and byte ptr es:[0x417], al",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0412"
+      ],
+      "fanout": 0,
+      "fanin": 1,
+      "description": "Funcion hoja (no llama a otras, 10 instr): probable helper aritmetico/conversion.",
+      "confidence": "low",
+      "semantic_tags": [
+        "leaf"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0431 -- offset 0x0431 -- 10 instr\n; Funcion hoja (no llama a otras, 10 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_0412\n;----------------------------------------------------------------------"
+    }
+  ]
+}

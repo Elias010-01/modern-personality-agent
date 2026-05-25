@@ -1,0 +1,36 @@
+{
+  "module": "CITOH",
+  "original_name": "CITOH.DRV",
+  "original_size": 12016,
+  "ne_off": 64,
+  "sector": 16,
+  "segments": [
+    {
+      "index": 1,
+      "file_off": 544,
+      "data_len": 4890,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 33
+    },
+    {
+      "index": 2,
+      "file_off": 5712,
+      "data_len": 4596,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 34
+    },
+    {
+      "index": 3,
+      "file_off": 10592,
+      "data_len": 984,
+      "flags": 81,
+      "is_data": true,
+      "has_reloc": false,
+      "reloc_count": 0
+    }
+  ]
+}

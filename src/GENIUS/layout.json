@@ -1,0 +1,27 @@
+{
+  "module": "GENIUS",
+  "original_name": "GENIUS.DRV",
+  "original_size": 15216,
+  "ne_off": 1024,
+  "sector": 512,
+  "segments": [
+    {
+      "index": 1,
+      "file_off": 2048,
+      "data_len": 7226,
+      "flags": 320,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 1
+    },
+    {
+      "index": 2,
+      "file_off": 9728,
+      "data_len": 1125,
+      "flags": 65,
+      "is_data": true,
+      "has_reloc": false,
+      "reloc_count": 0
+    }
+  ]
+}

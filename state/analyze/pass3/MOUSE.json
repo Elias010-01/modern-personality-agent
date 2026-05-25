@@ -1,0 +1,774 @@
+{
+  "module": "MOUSE",
+  "num_functions": 11,
+  "confidence_count": {
+    "high": 0,
+    "medium": 6,
+    "low": 1,
+    "unknown": 4
+  },
+  "functions": [
+    {
+      "module": "MOUSE",
+      "segment_file": "seg1.asm",
+      "name": "entry",
+      "kind": "FAR",
+      "offset": null,
+      "size_bytes": null,
+      "start_line": 18,
+      "end_line": 57,
+      "num_instructions": 34,
+      "prologue": "none",
+      "epilogue": "jmp_tail",
+      "calls_near": [
+        "L_010B",
+        "L_024D"
+      ],
+      "calls_far": [
+        "far _SEG2_010C"
+      ],
+      "num_jumps_cond": 5,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 2,
+      "mnemonic_histogram": {
+        "mov": 10,
+        "push": 5,
+        "call": 3,
+        "pop": 3,
+        "jae": 2,
+        "or": 2,
+        "nop": 1,
+        "inc": 1,
+        "jcxz": 1,
+        "jmp": 1,
+        "jne": 1,
+        "je": 1,
+        "cmp": 1,
+        "rep": 1,
+        "sub": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "mov ax, ds",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp",
+        "push ds"
+      ],
+      "last_instructions": [
+        "mov byte ptr [0], 0xff",
+        "pop di",
+        "pop si",
+        "sub bp, 2"
+      ],
+      "discovered": false,
+      "callees_intra": [
+        "sub_010B",
+        "sub_024D"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 2,
+      "fanin": 0,
+      "description": "Funcion mediana (34 instr, 2 calls).",
+      "confidence": "low",
+      "semantic_tags": [
+        "far",
+        "medium"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; entry -- 34 instr\n; Funcion mediana (34 instr, 2 calls).\n; tags: far, medium\n; calls (intra): sub_010B, sub_024D\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "MOUSE",
+      "segment_file": "seg1.asm",
+      "name": "sub_010B",
+      "kind": "NEAR",
+      "offset": 267,
+      "size_bytes": null,
+      "start_line": 159,
+      "end_line": 304,
+      "num_instructions": 127,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 13,
+      "num_jumps_uncond": 8,
+      "ints": [],
+      "has_loop": true,
+      "has_string_op": false,
+      "num_mem_refs": 29,
+      "mnemonic_histogram": {
+        "mov": 38,
+        "or": 12,
+        "jmp": 8,
+        "and": 7,
+        "je": 5,
+        "xor": 5,
+        "add": 4,
+        "in": 4,
+        "cmp": 4,
+        "test": 4,
+        "jne": 4,
+        "out": 3,
+        "ja": 3,
+        "push": 2,
+        "sub": 2
+      },
+      "classification": "complex_iterator",
+      "first_instructions": [
+        "mov dx, 0x23c",
+        "mov cx, 1",
+        "push dx",
+        "mov al, 0x91",
+        "add dx, 3",
+        "out dx, al"
+      ],
+      "last_instructions": [
+        "out 0x20, al",
+        "pop ax",
+        "sti",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "entry"
+      ],
+      "fanout": 0,
+      "fanin": 1,
+      "description": "Iterador con bucle (127 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "complex_iterator",
+        "loop"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_010B -- offset 0x010B -- 127 instr\n; Iterador con bucle (127 instr).\n; tags: complex_iterator, loop\n; callers: entry\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "MOUSE",
+      "segment_file": "seg1.asm",
+      "name": "sub_024D",
+      "kind": "NEAR",
+      "offset": 589,
+      "size_bytes": null,
+      "start_line": 305,
+      "end_line": 434,
+      "num_instructions": 118,
+      "prologue": "none",
+      "epilogue": "iret",
+      "calls_near": [
+        "L_02B2",
+        "L_034C"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 12,
+      "num_jumps_uncond": 2,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 23,
+      "mnemonic_histogram": {
+        "mov": 27,
+        "add": 10,
+        "out": 9,
+        "in": 7,
+        "cmp": 7,
+        "or": 5,
+        "je": 4,
+        "jb": 4,
+        "xor": 4,
+        "push": 4,
+        "pop": 4,
+        "sub": 3,
+        "jne": 3,
+        "inc": 3,
+        "call": 3
+      },
+      "classification": "isr",
+      "first_instructions": [
+        "mov dx, 0x23e",
+        "mov ah, 0xde",
+        "in al, dx",
+        "cmp al, ah",
+        "je L_0267",
+        "in al, dx"
+      ],
+      "last_instructions": [
+        "mov al, 0x20",
+        "out 0x20, al",
+        "pop ax",
+        "iret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_034C"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_02B2"
+      ],
+      "callers": [
+        "entry"
+      ],
+      "fanout": 1,
+      "fanin": 1,
+      "description": "Interrupt Service Routine (118 instrucciones, posible manejador de INT).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "isr"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_024D -- offset 0x024D -- 118 instr\n; Interrupt Service Routine (118 instrucciones, posible manejador de INT).\n; tags: isr\n; callers: entry\n; calls (intra): sub_034C\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "MOUSE",
+      "segment_file": "seg1.asm",
+      "name": "sub_034C",
+      "kind": "NEAR",
+      "offset": 844,
+      "size_bytes": null,
+      "start_line": 435,
+      "end_line": 499,
+      "num_instructions": 61,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 5,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": true,
+      "has_string_op": false,
+      "num_mem_refs": 3,
+      "mnemonic_histogram": {
+        "mov": 14,
+        "out": 8,
+        "dec": 5,
+        "inc": 5,
+        "xor": 4,
+        "test": 4,
+        "jne": 3,
+        "in": 3,
+        "cwde": 3,
+        "xchg": 3,
+        "ret": 2,
+        "shl": 2,
+        "je": 2,
+        "or": 2,
+        "loop": 1
+      },
+      "classification": "complex_iterator",
+      "first_instructions": [
+        "mov word ptr cs:[0x335], es",
+        "mov al, 3",
+        "xor cx, cx",
+        "loop L_0355",
+        "dec al",
+        "jne L_0355"
+      ],
+      "last_instructions": [
+        "out 0x20, al",
+        "xchg ah, al",
+        "cwde",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_024D"
+      ],
+      "fanout": 0,
+      "fanin": 1,
+      "description": "Iterador con bucle (61 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "complex_iterator",
+        "loop"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_034C -- offset 0x034C -- 61 instr\n; Iterador con bucle (61 instr).\n; tags: complex_iterator, loop\n; callers: sub_024D\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "MOUSE",
+      "segment_file": "seg2.asm",
+      "name": "INQUIRE",
+      "kind": "FAR",
+      "offset": null,
+      "size_bytes": null,
+      "start_line": 18,
+      "end_line": 42,
+      "num_instructions": 23,
+      "prologue": "none",
+      "epilogue": "retf_n",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 2,
+      "mnemonic_histogram": {
+        "mov": 7,
+        "push": 4,
+        "pop": 4,
+        "sub": 2,
+        "nop": 1,
+        "inc": 1,
+        "les": 1,
+        "rep": 1,
+        "dec": 1,
+        "retf": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "mov ax, ds",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp",
+        "push ds"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 4"
+      ],
+      "discovered": false,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 0,
+      "fanin": 0,
+      "description": "Funcion sin clasificar definitiva (23 instr).",
+      "confidence": "unknown",
+      "semantic_tags": [
+        "far",
+        "small"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; INQUIRE -- 23 instr\n; Funcion sin clasificar definitiva (23 instr).\n; tags: far, small\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "MOUSE",
+      "segment_file": "seg2.asm",
+      "name": "ENABLE",
+      "kind": "FAR",
+      "offset": null,
+      "size_bytes": null,
+      "start_line": 48,
+      "end_line": 71,
+      "num_instructions": 22,
+      "prologue": "none",
+      "epilogue": "jmp_tail",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 1,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 5,
+      "mnemonic_histogram": {
+        "mov": 6,
+        "push": 4,
+        "nop": 1,
+        "inc": 1,
+        "les": 1,
+        "cmp": 1,
+        "jne": 1,
+        "not": 1,
+        "pushf": 1,
+        "cli": 1,
+        "in": 1,
+        "or": 1,
+        "out": 1,
+        "jmp": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "mov ax, ds",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp",
+        "push ds"
+      ],
+      "last_instructions": [
+        "in al, 0x21",
+        "or al, ah",
+        "out 0x21, al",
+        "jmp L_0057"
+      ],
+      "discovered": false,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 0,
+      "fanin": 0,
+      "description": "Funcion sin clasificar definitiva (22 instr).",
+      "confidence": "unknown",
+      "semantic_tags": [
+        "far",
+        "small"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; ENABLE -- 22 instr\n; Funcion sin clasificar definitiva (22 instr).\n; tags: far, small\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "MOUSE",
+      "segment_file": "seg2.asm",
+      "name": "sub_0056",
+      "kind": "NEAR",
+      "offset": 86,
+      "size_bytes": null,
+      "start_line": 73,
+      "end_line": 104,
+      "num_instructions": 29,
+      "prologue": "none",
+      "epilogue": "jmp_tail",
+      "calls_near": [
+        "L_0056",
+        "L_010C"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 1,
+      "num_jumps_uncond": 1,
+      "ints": [
+        "0x21",
+        "0x21"
+      ],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 10,
+      "mnemonic_histogram": {
+        "mov": 11,
+        "push": 2,
+        "call": 2,
+        "int": 2,
+        "iret": 1,
+        "cmp": 1,
+        "je": 1,
+        "nop": 1,
+        "xor": 1,
+        "xchg": 1,
+        "pushf": 1,
+        "cli": 1,
+        "in": 1,
+        "and": 1,
+        "out": 1
+      },
+      "classification": "dos_caller",
+      "first_instructions": [
+        "iret",
+        "push cs",
+        "call L_0056",
+        "cmp word ptr [0x1c], 0",
+        "je L_0075",
+        "nop"
+      ],
+      "last_instructions": [
+        "and al, byte ptr [0x11]",
+        "out 0x21, al",
+        "mov word ptr [0x12], 0xffff",
+        "jmp L_00A1"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_010C"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_0056"
+      ],
+      "callers": [],
+      "fanout": 1,
+      "fanin": 0,
+      "description": "Llama a servicios DOS via INT 21h (29 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "dos_caller",
+        "int_21"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0056 -- offset 0x0056 -- 29 instr\n; Llama a servicios DOS via INT 21h (29 instr).\n; tags: dos_caller, int_21\n; calls (intra): sub_010C\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "MOUSE",
+      "segment_file": "seg2.asm",
+      "name": "sub_00A0",
+      "kind": "FAR",
+      "offset": 160,
+      "size_bytes": null,
+      "start_line": 105,
+      "end_line": 118,
+      "num_instructions": 11,
+      "prologue": "none",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_00A0"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 0,
+      "mnemonic_histogram": {
+        "pop": 4,
+        "iret": 1,
+        "push": 1,
+        "call": 1,
+        "sub": 1,
+        "mov": 1,
+        "dec": 1,
+        "retf": 1
+      },
+      "classification": "wrapper",
+      "first_instructions": [
+        "iret",
+        "push cs",
+        "call L_00A0",
+        "pop di",
+        "pop si",
+        "sub bp, 2"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 4"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_00A0"
+      ],
+      "callers": [],
+      "fanout": 0,
+      "fanin": 0,
+      "description": "Funcion sin clasificar definitiva (11 instr).",
+      "confidence": "unknown",
+      "semantic_tags": [
+        "far",
+        "wrapper"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_00A0 -- offset 0x00A0 -- 11 instr\n; Funcion sin clasificar definitiva (11 instr).\n; tags: far, wrapper\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "MOUSE",
+      "segment_file": "seg2.asm",
+      "name": "DISABLE",
+      "kind": "FAR",
+      "offset": null,
+      "size_bytes": null,
+      "start_line": 123,
+      "end_line": 161,
+      "num_instructions": 34,
+      "prologue": "none",
+      "epilogue": "jmp_tail",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 2,
+      "num_jumps_uncond": 2,
+      "ints": [
+        "0x21"
+      ],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 8,
+      "mnemonic_histogram": {
+        "mov": 11,
+        "push": 5,
+        "je": 2,
+        "or": 2,
+        "jmp": 2,
+        "nop": 1,
+        "inc": 1,
+        "pushf": 1,
+        "cli": 1,
+        "cmp": 1,
+        "in": 1,
+        "not": 1,
+        "out": 1,
+        "xor": 1,
+        "lds": 1
+      },
+      "classification": "dos_caller",
+      "first_instructions": [
+        "mov ax, ds",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp",
+        "push ds"
+      ],
+      "last_instructions": [
+        "int 0x21",
+        "pop ds",
+        "mov word ptr [0x12], 0",
+        "jmp L_00FD"
+      ],
+      "discovered": false,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 0,
+      "fanin": 0,
+      "description": "Llama a servicios DOS via INT 21h (34 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "dos_caller",
+        "far",
+        "int_21"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; DISABLE -- 34 instr\n; Llama a servicios DOS via INT 21h (34 instr).\n; tags: dos_caller, far, int_21\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "MOUSE",
+      "segment_file": "seg2.asm",
+      "name": "sub_00FC",
+      "kind": "FAR",
+      "offset": 252,
+      "size_bytes": null,
+      "start_line": 163,
+      "end_line": 175,
+      "num_instructions": 11,
+      "prologue": "none",
+      "epilogue": "retf",
+      "calls_near": [
+        "L_00FC"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 0,
+      "mnemonic_histogram": {
+        "pop": 4,
+        "iret": 1,
+        "push": 1,
+        "call": 1,
+        "sub": 1,
+        "mov": 1,
+        "dec": 1,
+        "retf": 1
+      },
+      "classification": "wrapper",
+      "first_instructions": [
+        "iret",
+        "push cs",
+        "call L_00FC",
+        "pop di",
+        "pop si",
+        "sub bp, 2"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_00FC"
+      ],
+      "callers": [],
+      "fanout": 0,
+      "fanin": 0,
+      "description": "Funcion sin clasificar definitiva (11 instr).",
+      "confidence": "unknown",
+      "semantic_tags": [
+        "far",
+        "wrapper"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_00FC -- offset 0x00FC -- 11 instr\n; Funcion sin clasificar definitiva (11 instr).\n; tags: far, wrapper\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "MOUSE",
+      "segment_file": "seg2.asm",
+      "name": "sub_010C",
+      "kind": "FAR",
+      "offset": 268,
+      "size_bytes": null,
+      "start_line": 176,
+      "end_line": 284,
+      "num_instructions": 94,
+      "prologue": "none",
+      "epilogue": "retf",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 8,
+      "num_jumps_uncond": 6,
+      "ints": [],
+      "has_loop": true,
+      "has_string_op": true,
+      "num_mem_refs": 19,
+      "mnemonic_histogram": {
+        "mov": 29,
+        "out": 8,
+        "xor": 6,
+        "jmp": 6,
+        "add": 6,
+        "cmp": 5,
+        "jne": 5,
+        "sub": 4,
+        "push": 3,
+        "dec": 3,
+        "pop": 3,
+        "in": 3,
+        "inc": 2,
+        "lodsb": 2,
+        "loop": 2
+      },
+      "classification": "complex_iterator",
+      "first_instructions": [
+        "mov ax, ds",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp",
+        "push ds"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0056"
+      ],
+      "fanout": 0,
+      "fanin": 1,
+      "description": "Iterador con instrucciones de string (movsb/scasb/...) (94 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "complex_iterator",
+        "far",
+        "loop",
+        "string_op"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_010C -- offset 0x010C -- 94 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (94 instr).\n; tags: complex_iterator, far, loop, string_op\n; callers: sub_0056\n;----------------------------------------------------------------------"
+    }
+  ]
+}

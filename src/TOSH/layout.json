@@ -1,0 +1,36 @@
+{
+  "module": "TOSH",
+  "original_name": "TOSH.DRV",
+  "original_size": 12432,
+  "ne_off": 64,
+  "sector": 16,
+  "segments": [
+    {
+      "index": 1,
+      "file_off": 640,
+      "data_len": 4874,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 33
+    },
+    {
+      "index": 2,
+      "file_off": 5792,
+      "data_len": 4671,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 35
+    },
+    {
+      "index": 3,
+      "file_off": 10752,
+      "data_len": 1024,
+      "flags": 81,
+      "is_data": true,
+      "has_reloc": false,
+      "reloc_count": 0
+    }
+  ]
+}

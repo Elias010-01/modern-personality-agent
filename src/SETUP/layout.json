@@ -1,0 +1,19 @@
+{
+  "module": "SETUP",
+  "original_name": "SETUP.EXE",
+  "original_size": 36676,
+  "ne_off": null,
+  "sector": null,
+  "kind": "mz_raw",
+  "segments": [
+    {
+      "index": 1,
+      "file_off": 0,
+      "data_len": 36676,
+      "flags": 0,
+      "is_data": false,
+      "has_reloc": false,
+      "reloc_count": 0
+    }
+  ]
+}

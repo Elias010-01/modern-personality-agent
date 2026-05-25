@@ -1,0 +1,38 @@
+; SOUND.DEF - module definition para Windows 1.x
+; AUTO-GENERATED desde SOUND.DRV (NE entry/relocation tables)
+
+LIBRARY     SOUND
+DESCRIPTION 'Windows Sound Driver'
+EXETYPE     WINDOWS
+STUB        'WINSTUB.EXE'
+
+CODE        LOADONCALL FIXED
+DATA        LOADONCALL FIXED SINGLE
+
+IMPORTS
+    KERNEL.GETCODEHANDLE
+    KERNEL.GETCURRENTTASK
+    KERNEL.GETMODULEHANDLE
+    KERNEL.GLOBALALLOC
+    KERNEL.GLOBALFREE
+    KERNEL.YIELD
+
+EXPORTS
+    OPENSOUND              @1
+    CLOSESOUND             @2
+    SETVOICEQUEUESIZE      @3
+    SETVOICENOTE           @4
+    SETVOICEACCENT         @5
+    SETVOICEENVELOPE       @6
+    SETSOUNDNOISE          @7
+    SETVOICESOUND          @8
+    STARTSOUND             @9
+    STOPSOUND              @10
+    WAITSOUNDSTATE         @11
+    SYNCALLVOICES          @12
+    COUNTVOICENOTES        @13
+    GETTHRESHOLDEVENT      @14
+    GETTHRESHOLDSTATUS     @15
+    SETVOICETHRESHOLD      @16
+    DOBEEP                 @17
+    MYOPENSOUND            @18

@@ -1,0 +1,36 @@
+{
+  "module": "OKI92",
+  "original_name": "OKI92.DRV",
+  "original_size": 12416,
+  "ne_off": 64,
+  "sector": 16,
+  "segments": [
+    {
+      "index": 1,
+      "file_off": 688,
+      "data_len": 4682,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 33
+    },
+    {
+      "index": 2,
+      "file_off": 5648,
+      "data_len": 4705,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 34
+    },
+    {
+      "index": 3,
+      "file_off": 10640,
+      "data_len": 998,
+      "flags": 81,
+      "is_data": true,
+      "has_reloc": false,
+      "reloc_count": 0
+    }
+  ]
+}

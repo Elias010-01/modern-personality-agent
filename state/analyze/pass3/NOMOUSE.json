@@ -1,0 +1,11 @@
+{
+  "module": "NOMOUSE",
+  "num_functions": 0,
+  "confidence_count": {
+    "high": 0,
+    "medium": 0,
+    "low": 0,
+    "unknown": 0
+  },
+  "functions": []
+}

@@ -1,0 +1,15 @@
+; MOUSE.DEF - module definition para Windows 1.x
+; AUTO-GENERATED desde MOUSE.DRV (NE entry/relocation tables)
+
+LIBRARY     MOUSE
+DESCRIPTION 'Microsoft Mouse (Bus/Serial)'
+EXETYPE     WINDOWS
+STUB        'WINSTUB.EXE'
+
+CODE        PRELOAD MOVABLE DISCARDABLE PURE
+DATA        PRELOAD FIXED SINGLE
+
+EXPORTS
+    INQUIRE                @1
+    ENABLE                 @2
+    DISABLE                @3

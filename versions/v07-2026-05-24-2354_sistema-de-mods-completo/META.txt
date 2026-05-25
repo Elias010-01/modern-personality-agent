@@ -1,0 +1,14 @@
+version:    v07
+slug:       sistema-de-mods-completo
+timestamp:  2026-05-24T23:54:38Z
+message:    Sistema completo end-to-end: src/ con 69 modulos byte-exact recompilables + smart_build (Keystone opt-in via [ASM]) + mod_system.py (apply/revert/list/create/status) + mod ejemplo 'win104' (Windows 1.03 -> 1.04 con cambio 1 byte) + README maestro actualizado con guia de usuario completa para ver/editar/recompilar/arrancar/moddear. src/ sagrado: nunca se toca, los mods viven en mods/<name>/ aparte.
+git_branch: (no git)
+git_commit: (no git)
+host:       DESKTOP-GPDC4N2
+user:       elias
+
+stats:
+  src_modules:   70
+  built_files:   69
+  db_functions:  1216
+  db_matched:    1216

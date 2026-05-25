@@ -1,0 +1,360 @@
+{
+  "module": "FRANCE",
+  "num_functions": 5,
+  "confidence_count": {
+    "high": 0,
+    "medium": 2,
+    "low": 1,
+    "unknown": 2
+  },
+  "functions": [
+    {
+      "module": "FRANCE",
+      "segment_file": "seg2.asm",
+      "name": "sub_010A",
+      "kind": "NEAR",
+      "offset": 266,
+      "size_bytes": null,
+      "start_line": 139,
+      "end_line": 168,
+      "num_instructions": 29,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_0150"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 2,
+      "num_jumps_uncond": 0,
+      "ints": [
+        "0x16"
+      ],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 2,
+      "mnemonic_histogram": {
+        "mov": 18,
+        "call": 6,
+        "je": 2,
+        "int": 1,
+        "cmp": 1,
+        "ret": 1
+      },
+      "classification": "bios_caller",
+      "first_instructions": [
+        "mov ah, 2",
+        "int 0x16",
+        "mov dl, 0x80",
+        "mov ah, 3",
+        "mov bx, 0x10",
+        "call L_0150"
+      ],
+      "last_instructions": [
+        "call L_0150",
+        "je L_0157",
+        "mov byte ptr [0x21], 1",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0150"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 1,
+      "fanin": 0,
+      "description": "Funcion sin clasificar definitiva (29 instr).",
+      "confidence": "unknown",
+      "semantic_tags": [
+        "bios_caller",
+        "int_16"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_010A -- offset 0x010A -- 29 instr\n; Funcion sin clasificar definitiva (29 instr).\n; tags: bios_caller, int_16\n; calls (intra): sub_0150\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "FRANCE",
+      "segment_file": "seg2.asm",
+      "name": "sub_0150",
+      "kind": "FAR",
+      "offset": 336,
+      "size_bytes": null,
+      "start_line": 169,
+      "end_line": 338,
+      "num_instructions": 160,
+      "prologue": "none",
+      "epilogue": "jmp_tail",
+      "calls_near": [
+        "L_0238"
+      ],
+      "calls_far": [
+        "si"
+      ],
+      "num_jumps_cond": 5,
+      "num_jumps_uncond": 4,
+      "ints": [],
+      "has_loop": true,
+      "has_string_op": true,
+      "num_mem_refs": 52,
+      "mnemonic_histogram": {
+        "pop": 24,
+        "sub": 19,
+        "mov": 16,
+        "dec": 9,
+        "and": 7,
+        "inc": 7,
+        "out": 5,
+        "jmp": 4,
+        "test": 3,
+        "lodsb": 3,
+        "push": 3,
+        "xchg": 3,
+        "db": 3,
+        "stosb": 2,
+        "int1": 2
+      },
+      "classification": "complex_iterator",
+      "first_instructions": [
+        "test ah, al",
+        "je L_0157",
+        "mov byte ptr es:[bx + di], dl",
+        "ret",
+        "and byte ptr [di - 0x6365], ch",
+        "setge byte ptr [si + 0x15]"
+      ],
+      "last_instructions": [
+        "stosb byte ptr es:[di], al",
+        "or al, al",
+        "jne L_025A",
+        "jmp L_024B"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_0238"
+      ],
+      "callers": [
+        "sub_010A"
+      ],
+      "fanout": 0,
+      "fanin": 1,
+      "description": "Iterador con instrucciones de string (movsb/scasb/...) (160 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "complex_iterator",
+        "far",
+        "loop",
+        "string_op"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0150 -- offset 0x0150 -- 160 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (160 instr).\n; tags: complex_iterator, far, loop, string_op\n; callers: sub_010A\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "FRANCE",
+      "segment_file": "seg2.asm",
+      "name": "sub_026A",
+      "kind": "FAR",
+      "offset": 618,
+      "size_bytes": null,
+      "start_line": 339,
+      "end_line": 559,
+      "num_instructions": 191,
+      "prologue": "none",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_0238",
+        "L_026A",
+        "L_0428"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 39,
+      "num_jumps_uncond": 15,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": true,
+      "num_mem_refs": 52,
+      "mnemonic_histogram": {
+        "mov": 40,
+        "cmp": 24,
+        "jne": 17,
+        "jmp": 15,
+        "je": 15,
+        "push": 10,
+        "test": 9,
+        "les": 6,
+        "xor": 6,
+        "or": 5,
+        "xchg": 5,
+        "pop": 5,
+        "add": 4,
+        "call": 3,
+        "jb": 3
+      },
+      "classification": "complex_iterator",
+      "first_instructions": [
+        "call L_0238",
+        "mov bx, 0x138",
+        "lodsb al, byte ptr [si]",
+        "cmp al, 0x80",
+        "jb L_0279",
+        "xlatb"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 0xe"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0428"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_0238",
+        "L_026A"
+      ],
+      "callers": [],
+      "fanout": 1,
+      "fanin": 0,
+      "description": "Iterador con instrucciones de string (movsb/scasb/...) (191 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "complex_iterator",
+        "far",
+        "string_op"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_026A -- offset 0x026A -- 191 instr\n; Iterador con instrucciones de string (movsb/scasb/...) (191 instr).\n; tags: complex_iterator, far, string_op\n; calls (intra): sub_0428\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "FRANCE",
+      "segment_file": "seg2.asm",
+      "name": "sub_0428",
+      "kind": "NEAR",
+      "offset": 1064,
+      "size_bytes": null,
+      "start_line": 560,
+      "end_line": 587,
+      "num_instructions": 24,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_0467"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 2,
+      "num_jumps_uncond": 2,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 5,
+      "mnemonic_histogram": {
+        "mov": 8,
+        "call": 3,
+        "cmp": 2,
+        "je": 2,
+        "jmp": 2,
+        "xor": 1,
+        "or": 1,
+        "not": 1,
+        "and": 1,
+        "pushf": 1,
+        "lcall": 1,
+        "ret": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "xor bx, bx",
+        "mov al, 0x40",
+        "cmp byte ptr [0x20], 0",
+        "je L_044C",
+        "mov es, bx",
+        "cmp byte ptr [0x21], 0"
+      ],
+      "last_instructions": [
+        "mov ah, 1",
+        "pushf",
+        "lcall [0x14]",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0467"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_026A"
+      ],
+      "fanout": 1,
+      "fanin": 1,
+      "description": "Funcion sin clasificar definitiva (24 instr).",
+      "confidence": "unknown",
+      "semantic_tags": [
+        "small"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0428 -- offset 0x0428 -- 24 instr\n; Funcion sin clasificar definitiva (24 instr).\n; tags: small\n; callers: sub_026A\n; calls (intra): sub_0467\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "FRANCE",
+      "segment_file": "seg2.asm",
+      "name": "sub_0467",
+      "kind": "NEAR",
+      "offset": 1127,
+      "size_bytes": null,
+      "start_line": 588,
+      "end_line": 599,
+      "num_instructions": 10,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 1,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 4,
+      "mnemonic_histogram": {
+        "mov": 2,
+        "ret": 2,
+        "les": 1,
+        "test": 1,
+        "je": 1,
+        "or": 1,
+        "not": 1,
+        "and": 1
+      },
+      "classification": "leaf",
+      "first_instructions": [
+        "les si, ptr [bp + 0xc]",
+        "test byte ptr es:[bx + si], 1",
+        "mov si, 0",
+        "mov es, si",
+        "je L_047B",
+        "or byte ptr es:[0x417], al"
+      ],
+      "last_instructions": [
+        "ret",
+        "not al",
+        "and byte ptr es:[0x417], al",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0428"
+      ],
+      "fanout": 0,
+      "fanin": 1,
+      "description": "Funcion hoja (no llama a otras, 10 instr): probable helper aritmetico/conversion.",
+      "confidence": "low",
+      "semantic_tags": [
+        "leaf"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0467 -- offset 0x0467 -- 10 instr\n; Funcion hoja (no llama a otras, 10 instr): probable helper aritmetico/conversion.\n; tags: leaf\n; callers: sub_0428\n;----------------------------------------------------------------------"
+    }
+  ]
+}

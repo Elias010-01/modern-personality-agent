@@ -1,0 +1,720 @@
+{
+  "module": "WRITE",
+  "original_name": "WRITE.EXE",
+  "original_size": 192176,
+  "ne_off": 1024,
+  "sector": 16,
+  "segments": [
+    {
+      "index": 1,
+      "file_off": 5232,
+      "data_len": 1567,
+      "flags": 61808,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 14
+    },
+    {
+      "index": 2,
+      "file_off": 6928,
+      "data_len": 2653,
+      "flags": 61808,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 90
+    },
+    {
+      "index": 3,
+      "file_off": 10304,
+      "data_len": 2112,
+      "flags": 61808,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 10
+    },
+    {
+      "index": 4,
+      "file_off": 12512,
+      "data_len": 1170,
+      "flags": 61808,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 9
+    },
+    {
+      "index": 5,
+      "file_off": 13760,
+      "data_len": 2280,
+      "flags": 61808,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 33
+    },
+    {
+      "index": 6,
+      "file_off": 16320,
+      "data_len": 2843,
+      "flags": 61808,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 32
+    },
+    {
+      "index": 7,
+      "file_off": 19424,
+      "data_len": 590,
+      "flags": 61808,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 7
+    },
+    {
+      "index": 8,
+      "file_off": 20080,
+      "data_len": 2167,
+      "flags": 61808,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 16
+    },
+    {
+      "index": 9,
+      "file_off": 22384,
+      "data_len": 863,
+      "flags": 61808,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 6
+    },
+    {
+      "index": 10,
+      "file_off": 23312,
+      "data_len": 3409,
+      "flags": 61808,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 34
+    },
+    {
+      "index": 11,
+      "file_off": 27008,
+      "data_len": 421,
+      "flags": 61808,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 22
+    },
+    {
+      "index": 12,
+      "file_off": 27616,
+      "data_len": 742,
+      "flags": 61808,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 17
+    },
+    {
+      "index": 13,
+      "file_off": 28496,
+      "data_len": 996,
+      "flags": 61808,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 25
+    },
+    {
+      "index": 14,
+      "file_off": 29696,
+      "data_len": 259,
+      "flags": 61808,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 6
+    },
+    {
+      "index": 15,
+      "file_off": 30016,
+      "data_len": 4545,
+      "flags": 61808,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 18
+    },
+    {
+      "index": 16,
+      "file_off": 34720,
+      "data_len": 1146,
+      "flags": 61808,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 6
+    },
+    {
+      "index": 17,
+      "file_off": 35920,
+      "data_len": 879,
+      "flags": 61808,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 6
+    },
+    {
+      "index": 18,
+      "file_off": 36864,
+      "data_len": 1487,
+      "flags": 61808,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 46
+    },
+    {
+      "index": 19,
+      "file_off": 38736,
+      "data_len": 2144,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 21
+    },
+    {
+      "index": 20,
+      "file_off": 41056,
+      "data_len": 2034,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 29
+    },
+    {
+      "index": 21,
+      "file_off": 43328,
+      "data_len": 1533,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 24
+    },
+    {
+      "index": 22,
+      "file_off": 45056,
+      "data_len": 801,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 16
+    },
+    {
+      "index": 23,
+      "file_off": 46000,
+      "data_len": 2480,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 28
+    },
+    {
+      "index": 24,
+      "file_off": 48720,
+      "data_len": 1453,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 24
+    },
+    {
+      "index": 25,
+      "file_off": 50368,
+      "data_len": 1675,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 28
+    },
+    {
+      "index": 26,
+      "file_off": 52272,
+      "data_len": 1532,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 14
+    },
+    {
+      "index": 27,
+      "file_off": 53920,
+      "data_len": 1582,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 29
+    },
+    {
+      "index": 28,
+      "file_off": 55744,
+      "data_len": 133,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 4
+    },
+    {
+      "index": 29,
+      "file_off": 55920,
+      "data_len": 621,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 14
+    },
+    {
+      "index": 30,
+      "file_off": 56656,
+      "data_len": 2849,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 37
+    },
+    {
+      "index": 31,
+      "file_off": 59808,
+      "data_len": 355,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 12
+    },
+    {
+      "index": 32,
+      "file_off": 60272,
+      "data_len": 2680,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 38
+    },
+    {
+      "index": 33,
+      "file_off": 63264,
+      "data_len": 1247,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 27
+    },
+    {
+      "index": 34,
+      "file_off": 64736,
+      "data_len": 8542,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 64
+    },
+    {
+      "index": 35,
+      "file_off": 73792,
+      "data_len": 5469,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 82
+    },
+    {
+      "index": 36,
+      "file_off": 79920,
+      "data_len": 2713,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 8
+    },
+    {
+      "index": 37,
+      "file_off": 82704,
+      "data_len": 2405,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 49
+    },
+    {
+      "index": 38,
+      "file_off": 85504,
+      "data_len": 2577,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 21
+    },
+    {
+      "index": 39,
+      "file_off": 88256,
+      "data_len": 5486,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 33
+    },
+    {
+      "index": 40,
+      "file_off": 94016,
+      "data_len": 393,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 6
+    },
+    {
+      "index": 41,
+      "file_off": 94464,
+      "data_len": 1723,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 4
+    },
+    {
+      "index": 42,
+      "file_off": 96224,
+      "data_len": 5415,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 24
+    },
+    {
+      "index": 43,
+      "file_off": 101840,
+      "data_len": 1597,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 6
+    },
+    {
+      "index": 44,
+      "file_off": 103488,
+      "data_len": 3930,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 18
+    },
+    {
+      "index": 45,
+      "file_off": 107568,
+      "data_len": 4682,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 42
+    },
+    {
+      "index": 46,
+      "file_off": 112592,
+      "data_len": 1343,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 13
+    },
+    {
+      "index": 47,
+      "file_off": 114048,
+      "data_len": 1645,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 33
+    },
+    {
+      "index": 48,
+      "file_off": 115968,
+      "data_len": 4196,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 55
+    },
+    {
+      "index": 49,
+      "file_off": 120608,
+      "data_len": 1039,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 16
+    },
+    {
+      "index": 50,
+      "file_off": 121792,
+      "data_len": 2267,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 21
+    },
+    {
+      "index": 51,
+      "file_off": 124240,
+      "data_len": 930,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 7
+    },
+    {
+      "index": 52,
+      "file_off": 125232,
+      "data_len": 472,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 13
+    },
+    {
+      "index": 53,
+      "file_off": 125824,
+      "data_len": 923,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 21
+    },
+    {
+      "index": 54,
+      "file_off": 126928,
+      "data_len": 5538,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 60
+    },
+    {
+      "index": 55,
+      "file_off": 132960,
+      "data_len": 2489,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 12
+    },
+    {
+      "index": 56,
+      "file_off": 135552,
+      "data_len": 3491,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 14
+    },
+    {
+      "index": 57,
+      "file_off": 139168,
+      "data_len": 1223,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 6
+    },
+    {
+      "index": 58,
+      "file_off": 140448,
+      "data_len": 649,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 4
+    },
+    {
+      "index": 59,
+      "file_off": 141136,
+      "data_len": 6850,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 73
+    },
+    {
+      "index": 60,
+      "file_off": 148576,
+      "data_len": 726,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 7
+    },
+    {
+      "index": 61,
+      "file_off": 149360,
+      "data_len": 2373,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 20
+    },
+    {
+      "index": 62,
+      "file_off": 151904,
+      "data_len": 2212,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 25
+    },
+    {
+      "index": 63,
+      "file_off": 154320,
+      "data_len": 2952,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 41
+    },
+    {
+      "index": 64,
+      "file_off": 157616,
+      "data_len": 1146,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 25
+    },
+    {
+      "index": 65,
+      "file_off": 158976,
+      "data_len": 700,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 14
+    },
+    {
+      "index": 66,
+      "file_off": 159792,
+      "data_len": 205,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 2
+    },
+    {
+      "index": 67,
+      "file_off": 160016,
+      "data_len": 797,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 4
+    },
+    {
+      "index": 68,
+      "file_off": 160848,
+      "data_len": 693,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 7
+    },
+    {
+      "index": 69,
+      "file_off": 161600,
+      "data_len": 1117,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 19
+    },
+    {
+      "index": 70,
+      "file_off": 162880,
+      "data_len": 534,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 4
+    },
+    {
+      "index": 71,
+      "file_off": 163456,
+      "data_len": 4180,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 57
+    },
+    {
+      "index": 72,
+      "file_off": 168096,
+      "data_len": 2874,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 43
+    },
+    {
+      "index": 73,
+      "file_off": 171328,
+      "data_len": 1997,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 6
+    },
+    {
+      "index": 74,
+      "file_off": 173376,
+      "data_len": 1001,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 25
+    },
+    {
+      "index": 75,
+      "file_off": 174592,
+      "data_len": 70,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 2
+    },
+    {
+      "index": 76,
+      "file_off": 174688,
+      "data_len": 1571,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 16
+    },
+    {
+      "index": 77,
+      "file_off": 176400,
+      "data_len": 777,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 10
+    },
+    {
+      "index": 78,
+      "file_off": 177264,
+      "data_len": 35,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 2
+    },
+    {
+      "index": 79,
+      "file_off": 177328,
+      "data_len": 2192,
+      "flags": 337,
+      "is_data": true,
+      "has_reloc": true,
+      "reloc_count": 4
+    }
+  ]
+}

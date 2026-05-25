@@ -1,0 +1,53 @@
+; TTY.DEF - module definition para Windows 1.x
+; AUTO-GENERATED desde TTY.DRV (NE entry/relocation tables)
+
+LIBRARY     TTY
+DESCRIPTION 'DDRV Generic / Text Only:167,10,6'
+EXETYPE     WINDOWS
+STUB        'WINSTUB.EXE'
+
+CODE        PRELOAD MOVABLE DISCARDABLE PURE
+DATA        PRELOAD MOVABLE SINGLE
+
+IMPORTS
+    GDI.ADDFONTRESOURCE
+    GDI.CLOSEJOB
+    GDI.DELETEJOB
+    GDI.ENDSPOOLPAGE
+    GDI.GETENVIRONMENT
+    GDI.MULDIV
+    GDI.OPENJOB
+    GDI.REMOVEFONTRESOURCE
+    GDI.SETENVIRONMENT
+    GDI.STARTSPOOLPAGE
+    GDI.WRITESPOOL
+    KERNEL.FATALEXIT
+    KERNEL.GETMODULEHANDLE
+    KERNEL.GETPROFILESTRING
+    KERNEL.LSTRCMP
+    KERNEL.LSTRCPY
+    USER.CHECKDLGBUTTON
+    USER.CHECKRADIOBUTTON
+    USER.DIALOGBOX
+    USER.ENDDIALOG
+    USER.GETDLGITEM
+    USER.SENDMESSAGE
+    USER.SETFOCUS
+    USER.SETRECT
+    USER.SETRECTEMPTY
+
+EXPORTS
+    BITBLT                 @1
+    COLORINFO              @2
+    CONTROL                @3
+    DISABLE                @4
+    ENABLE                 @5
+    ENUMDFONTS             @6
+    ENUMOBJ                @7
+    OUTPUT                 @8
+    PIXEL                  @9
+    REALIZEOBJECT          @10
+    STRBLT                 @11
+    SCANLR                 @12
+    DEVICEMODE             @13
+    DIALOGFN               @100

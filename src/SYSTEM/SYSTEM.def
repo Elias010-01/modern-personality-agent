@@ -1,0 +1,20 @@
+; SYSTEM.DEF - module definition para Windows 1.x
+; AUTO-GENERATED desde SYSTEM.DRV (NE entry/relocation tables)
+
+LIBRARY     SYSTEM
+DESCRIPTION 'Microsoft Windows System configuration module for IBM/PC/XT/AT'
+EXETYPE     WINDOWS
+STUB        'WINSTUB.EXE'
+
+CODE        PRELOAD FIXED
+
+IMPORTS
+    KERNEL.NOHOOKDOSCALL
+
+EXPORTS
+    INQUIRESYSTEM          @1
+    CREATESYSTEMTIMER      @2
+    KILLSYSTEMTIMER        @3
+    ENABLESYSTEMTIMERS     @4
+    DISABLESYSTEMTIMERS    @5
+    INQUIRELONGINTS        @13

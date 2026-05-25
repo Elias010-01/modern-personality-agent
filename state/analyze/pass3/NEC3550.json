@@ -1,0 +1,212 @@
+{
+  "module": "NEC3550",
+  "num_functions": 2,
+  "confidence_count": {
+    "high": 0,
+    "medium": 1,
+    "low": 1,
+    "unknown": 0
+  },
+  "functions": [
+    {
+      "module": "NEC3550",
+      "segment_file": "seg1.asm",
+      "name": "sub_0183",
+      "kind": "NEAR",
+      "offset": 387,
+      "size_bytes": null,
+      "start_line": 176,
+      "end_line": 194,
+      "num_instructions": 17,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 2,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 4,
+      "mnemonic_histogram": {
+        "mov": 5,
+        "push": 2,
+        "sub": 2,
+        "pop": 2,
+        "or": 1,
+        "je": 1,
+        "les": 1,
+        "cmp": 1,
+        "jne": 1,
+        "ret": 1
+      },
+      "classification": "leaf",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 2",
+        "push si",
+        "sub si, si",
+        "mov ax, word ptr [bp + 4]"
+      ],
+      "last_instructions": [
+        "pop si",
+        "mov sp, bp",
+        "pop bp",
+        "ret 4"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 0,
+      "fanin": 0,
+      "description": "Funcion hoja (no llama a otras, 17 instr): probable helper aritmetico/conversion.",
+      "confidence": "low",
+      "semantic_tags": [
+        "leaf"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0183 -- offset 0x0183 -- 17 instr\n; Funcion hoja (no llama a otras, 17 instr): probable helper aritmetico/conversion.\n; tags: leaf\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "NEC3550",
+      "segment_file": "seg1.asm",
+      "name": "sub_01AA",
+      "kind": "NEAR",
+      "offset": 426,
+      "size_bytes": null,
+      "start_line": 195,
+      "end_line": 421,
+      "num_instructions": 208,
+      "prologue": "standard_bp",
+      "epilogue": "jmp_tail",
+      "calls_near": [
+        "L_054B",
+        "L_0B7C",
+        "L_0D8E"
+      ],
+      "calls_far": [
+        "far GDI.DELETEJOB",
+        "far GDI.EXTRACTPQ",
+        "far GDI.INSERTPQ",
+        "far GDI.STARTSPOOLPAGE",
+        "far GDI.WRITEDIALOG",
+        "far GDI.WRITESPOOL",
+        "far KERNEL.GETMODULEHANDLE",
+        "far KERNEL.GLOBALLOCK",
+        "far KERNEL.GLOBALUNLOCK",
+        "far USER.LOADSTRING",
+        "far USER.SETRECT",
+        "far USER.SETRECTEMPTY"
+      ],
+      "num_jumps_cond": 14,
+      "num_jumps_uncond": 11,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 104,
+      "mnemonic_histogram": {
+        "push": 59,
+        "mov": 47,
+        "les": 24,
+        "call": 19,
+        "jmp": 11,
+        "cmp": 9,
+        "je": 7,
+        "sub": 5,
+        "jne": 5,
+        "inc": 4,
+        "add": 4,
+        "or": 2,
+        "pop": 2,
+        "lea": 2,
+        "shl": 2
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "mov ax, word ptr [bp + 4]",
+        "or ax, word ptr [bp + 6]",
+        "je L_01C3",
+        "les bx, ptr [bp + 4]"
+      ],
+      "last_instructions": [
+        "mov word ptr es:[bx + 0x1a], ax",
+        "jmp L_0200",
+        "les bx, ptr [bp + 0x10]",
+        "push word ptr es:[bx + 6]"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [
+        {
+          "module": "GDI",
+          "func": "DELETEJOB"
+        },
+        {
+          "module": "GDI",
+          "func": "EXTRACTPQ"
+        },
+        {
+          "module": "GDI",
+          "func": "INSERTPQ"
+        },
+        {
+          "module": "GDI",
+          "func": "STARTSPOOLPAGE"
+        },
+        {
+          "module": "GDI",
+          "func": "WRITEDIALOG"
+        },
+        {
+          "module": "GDI",
+          "func": "WRITESPOOL"
+        },
+        {
+          "module": "KERNEL",
+          "func": "GETMODULEHANDLE"
+        },
+        {
+          "module": "KERNEL",
+          "func": "GLOBALLOCK"
+        },
+        {
+          "module": "KERNEL",
+          "func": "GLOBALUNLOCK"
+        },
+        {
+          "module": "USER",
+          "func": "LOADSTRING"
+        },
+        {
+          "module": "USER",
+          "func": "SETRECT"
+        },
+        {
+          "module": "USER",
+          "func": "SETRECTEMPTY"
+        }
+      ],
+      "callees_unresolved": [
+        "L_054B",
+        "L_0B7C",
+        "L_0D8E"
+      ],
+      "callers": [],
+      "fanout": 12,
+      "fanin": 0,
+      "description": "Dispatcher: tabla de decisiones cmp+jcc (208 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "calls_gdi",
+        "calls_kernel",
+        "calls_user",
+        "dispatcher"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_01AA -- offset 0x01AA -- 208 instr\n; Dispatcher: tabla de decisiones cmp+jcc (208 instr).\n; tags: calls_gdi, calls_kernel, calls_user, dispatcher\n; calls (inter): GDI.DELETEJOB, GDI.EXTRACTPQ, GDI.INSERTPQ, GDI.STARTSPOOLPAGE, GDI.WRITEDIALOG, GDI.WRITESPOOL (+6 mas)\n;----------------------------------------------------------------------"
+    }
+  ]
+}

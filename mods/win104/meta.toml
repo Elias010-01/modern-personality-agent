@@ -1,0 +1,10 @@
+name = "win104"
+title = "Windows 1.04 (cambia version reportada por GetVersion)"
+author = "modern-personality-agent"
+description = """
+Modifica KERNEL.GETVERSION para que reporte version 1.04 (AX=0x0401)
+en lugar de 1.03 (AX=0x0301). Apps que llaman GetVersion veran "1.04".
+
+Es un cambio de UN SOLO BYTE (B8 01 03 -> B8 01 04).
+Demostracion del sistema de mods sin tocar src/.
+"""

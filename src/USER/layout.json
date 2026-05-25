@@ -1,0 +1,261 @@
+{
+  "module": "USER",
+  "original_name": "USER.EXE",
+  "original_size": 122432,
+  "ne_off": 1024,
+  "sector": 16,
+  "segments": [
+    {
+      "index": 1,
+      "file_off": 7248,
+      "data_len": 35052,
+      "flags": 320,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 129
+    },
+    {
+      "index": 2,
+      "file_off": 43344,
+      "data_len": 6073,
+      "flags": 61808,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 52
+    },
+    {
+      "index": 3,
+      "file_off": 49840,
+      "data_len": 3303,
+      "flags": 61808,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 25
+    },
+    {
+      "index": 4,
+      "file_off": 53360,
+      "data_len": 4514,
+      "flags": 61808,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 117
+    },
+    {
+      "index": 5,
+      "file_off": 58816,
+      "data_len": 1933,
+      "flags": 61808,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 25
+    },
+    {
+      "index": 6,
+      "file_off": 60960,
+      "data_len": 307,
+      "flags": 61808,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 4
+    },
+    {
+      "index": 7,
+      "file_off": 61312,
+      "data_len": 814,
+      "flags": 61808,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 24
+    },
+    {
+      "index": 8,
+      "file_off": 62320,
+      "data_len": 5245,
+      "flags": 61808,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 48
+    },
+    {
+      "index": 9,
+      "file_off": 67952,
+      "data_len": 3131,
+      "flags": 61808,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 52
+    },
+    {
+      "index": 10,
+      "file_off": 71504,
+      "data_len": 516,
+      "flags": 61808,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 21
+    },
+    {
+      "index": 11,
+      "file_off": 72192,
+      "data_len": 267,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 5
+    },
+    {
+      "index": 12,
+      "file_off": 72512,
+      "data_len": 8632,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 63
+    },
+    {
+      "index": 13,
+      "file_off": 81664,
+      "data_len": 3269,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 29
+    },
+    {
+      "index": 14,
+      "file_off": 85168,
+      "data_len": 1609,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 27
+    },
+    {
+      "index": 15,
+      "file_off": 87008,
+      "data_len": 2795,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 56
+    },
+    {
+      "index": 16,
+      "file_off": 90256,
+      "data_len": 1506,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 32
+    },
+    {
+      "index": 17,
+      "file_off": 92032,
+      "data_len": 7994,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 47
+    },
+    {
+      "index": 18,
+      "file_off": 100416,
+      "data_len": 769,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 22
+    },
+    {
+      "index": 19,
+      "file_off": 101376,
+      "data_len": 1383,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 23
+    },
+    {
+      "index": 20,
+      "file_off": 102960,
+      "data_len": 2321,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 35
+    },
+    {
+      "index": 21,
+      "file_off": 105568,
+      "data_len": 898,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 24
+    },
+    {
+      "index": 22,
+      "file_off": 106672,
+      "data_len": 6201,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 52
+    },
+    {
+      "index": 23,
+      "file_off": 113296,
+      "data_len": 1509,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 19
+    },
+    {
+      "index": 24,
+      "file_off": 114960,
+      "data_len": 2331,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 18
+    },
+    {
+      "index": 25,
+      "file_off": 117440,
+      "data_len": 591,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 22
+    },
+    {
+      "index": 26,
+      "file_off": 118224,
+      "data_len": 1938,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 20
+    },
+    {
+      "index": 27,
+      "file_off": 120336,
+      "data_len": 279,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 6
+    },
+    {
+      "index": 28,
+      "file_off": 120672,
+      "data_len": 834,
+      "flags": 337,
+      "is_data": true,
+      "has_reloc": true,
+      "reloc_count": 20
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+; DISPLAY.DEF - module definition para Windows 1.x
+; AUTO-GENERATED desde CGA.DRV (NE entry/relocation tables)
+
+LIBRARY     DISPLAY
+DESCRIPTION 'DISPLAY : 200, 96, 48 : IBM (or compatible) Color/Graphics Adapter or COMPAQ Personal Computer'
+EXETYPE     WINDOWS
+STUB        'WINSTUB.EXE'
+
+CODE        PRELOAD FIXED
+DATA        PRELOAD FIXED SINGLE
+
+EXPORTS
+    BITBLT                 @1
+    COLORINFO              @2
+    CONTROL                @3
+    DISABLE                @4
+    ENABLE                 @5
+    ENUMDFONTS             @6
+    ENUMOBJ                @7
+    OUTPUT                 @8
+    PIXEL                  @9
+    REALIZEOBJECT          @10
+    STRBLT                 @11
+    SCANLR                 @12
+    DEVICEMODE             @13
+    INQUIRE                @101
+    SETCURSOR              @102
+    MOVECURSOR             @103
+    CHECKCURSOR            @104

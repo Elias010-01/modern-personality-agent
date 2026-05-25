@@ -1,0 +1,45 @@
+{
+  "module": "PSCRIPT",
+  "original_name": "PSCRIPT.DRV",
+  "original_size": 56224,
+  "ne_off": 64,
+  "sector": 512,
+  "segments": [
+    {
+      "index": 1,
+      "file_off": 1536,
+      "data_len": 17452,
+      "flags": 7536,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 66
+    },
+    {
+      "index": 2,
+      "file_off": 19968,
+      "data_len": 35,
+      "flags": 7536,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 1
+    },
+    {
+      "index": 3,
+      "file_off": 20480,
+      "data_len": 323,
+      "flags": 7536,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 1
+    },
+    {
+      "index": 4,
+      "file_off": 20992,
+      "data_len": 1152,
+      "flags": 3185,
+      "is_data": true,
+      "has_reloc": false,
+      "reloc_count": 0
+    }
+  ]
+}

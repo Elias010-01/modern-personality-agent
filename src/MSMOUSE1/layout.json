@@ -1,0 +1,27 @@
+{
+  "module": "MSMOUSE1",
+  "original_name": "MSMOUSE1.DRV",
+  "original_size": 1966,
+  "ne_off": 1024,
+  "sector": 16,
+  "segments": [
+    {
+      "index": 1,
+      "file_off": 1216,
+      "data_len": 449,
+      "flags": 320,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 1
+    },
+    {
+      "index": 2,
+      "file_off": 1680,
+      "data_len": 286,
+      "flags": 65,
+      "is_data": true,
+      "has_reloc": false,
+      "reloc_count": 0
+    }
+  ]
+}

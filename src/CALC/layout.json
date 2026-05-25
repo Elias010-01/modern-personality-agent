@@ -1,0 +1,27 @@
+{
+  "module": "CALC",
+  "original_name": "CALC.EXE",
+  "original_size": 25008,
+  "ne_off": 1024,
+  "sector": 16,
+  "segments": [
+    {
+      "index": 1,
+      "file_off": 1376,
+      "data_len": 19583,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 87
+    },
+    {
+      "index": 2,
+      "file_off": 21664,
+      "data_len": 1474,
+      "flags": 273,
+      "is_data": true,
+      "has_reloc": true,
+      "reloc_count": 1
+    }
+  ]
+}

@@ -1,0 +1,257 @@
+{
+  "module": "LPC",
+  "num_functions": 3,
+  "confidence_count": {
+    "high": 0,
+    "medium": 2,
+    "low": 1,
+    "unknown": 0
+  },
+  "functions": [
+    {
+      "module": "LPC",
+      "segment_file": "seg1.asm",
+      "name": "sub_002F",
+      "kind": "FAR",
+      "offset": 47,
+      "size_bytes": null,
+      "start_line": 43,
+      "end_line": 208,
+      "num_instructions": 154,
+      "prologue": "none",
+      "epilogue": "retf",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 12,
+      "num_jumps_uncond": 6,
+      "ints": [
+        "0x10",
+        "0x21",
+        "0x21",
+        "0x21",
+        "0x21",
+        "0x10"
+      ],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 74,
+      "mnemonic_histogram": {
+        "mov": 88,
+        "cmp": 11,
+        "jne": 10,
+        "inc": 7,
+        "nop": 6,
+        "int": 6,
+        "jmp": 6,
+        "push": 5,
+        "pop": 5,
+        "je": 2,
+        "shl": 2,
+        "cli": 1,
+        "sti": 1,
+        "xor": 1,
+        "sub": 1
+      },
+      "classification": "dos_caller",
+      "first_instructions": [
+        "mov ax, ds",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp",
+        "push ds"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0269"
+      ],
+      "fanout": 0,
+      "fanin": 1,
+      "description": "Llama a servicios DOS via INT 21h (154 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "dos_caller",
+        "far",
+        "int_10",
+        "int_21"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_002F -- offset 0x002F -- 154 instr\n; Llama a servicios DOS via INT 21h (154 instr).\n; tags: dos_caller, far, int_10, int_21\n; callers: sub_0269\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "LPC",
+      "segment_file": "seg1.asm",
+      "name": "sub_0227",
+      "kind": "NEAR",
+      "offset": 551,
+      "size_bytes": null,
+      "start_line": 209,
+      "end_line": 250,
+      "num_instructions": 38,
+      "prologue": "none",
+      "epilogue": "ret",
+      "calls_near": [
+        "L_0269"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 1,
+      "num_jumps_uncond": 2,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 3,
+      "mnemonic_histogram": {
+        "mov": 8,
+        "push": 4,
+        "in": 4,
+        "pop": 4,
+        "out": 3,
+        "inc": 3,
+        "add": 2,
+        "jmp": 2,
+        "sti": 1,
+        "xchg": 1,
+        "cli": 1,
+        "dec": 1,
+        "jns": 1,
+        "xor": 1,
+        "call": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "sti",
+        "push dx",
+        "mov dx, word ptr cs:[0x3d1]",
+        "add dx, 6",
+        "in al, dx",
+        "xchg cx, ax"
+      ],
+      "last_instructions": [
+        "pop ax",
+        "pop dx",
+        "call L_0269",
+        "ret"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0269"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 1,
+      "fanin": 0,
+      "description": "Funcion mediana (38 instr, 1 calls).",
+      "confidence": "low",
+      "semantic_tags": [
+        "medium"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0227 -- offset 0x0227 -- 38 instr\n; Funcion mediana (38 instr, 1 calls).\n; tags: medium\n; calls (intra): sub_0269\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "LPC",
+      "segment_file": "seg1.asm",
+      "name": "sub_0269",
+      "kind": "FAR",
+      "offset": 617,
+      "size_bytes": null,
+      "start_line": 251,
+      "end_line": 469,
+      "num_instructions": 201,
+      "prologue": "saves_regs",
+      "epilogue": "retf",
+      "calls_near": [
+        "L_002F"
+      ],
+      "calls_far": [
+        "far SYSTEM.CREATESYSTEMTIMER",
+        "far SYSTEM.DISABLESYSTEMTIMERS",
+        "far SYSTEM.ENABLESYSTEMTIMERS",
+        "far SYSTEM.KILLSYSTEMTIMER"
+      ],
+      "num_jumps_cond": 15,
+      "num_jumps_uncond": 11,
+      "ints": [],
+      "has_loop": true,
+      "has_string_op": false,
+      "num_mem_refs": 44,
+      "mnemonic_histogram": {
+        "mov": 56,
+        "push": 20,
+        "xor": 16,
+        "pop": 15,
+        "cmp": 14,
+        "jmp": 11,
+        "je": 8,
+        "inc": 7,
+        "jne": 6,
+        "nop": 6,
+        "sub": 5,
+        "call": 5,
+        "dec": 4,
+        "add": 4,
+        "div": 3
+      },
+      "classification": "complex_iterator",
+      "first_instructions": [
+        "push ax",
+        "mov byte ptr [0x68], 1",
+        "mov dl, byte ptr [0x66]",
+        "xor ch, ch",
+        "xor ax, ax",
+        "and cl, 4"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_002F"
+      ],
+      "callees_inter": [
+        {
+          "module": "SYSTEM",
+          "func": "CREATESYSTEMTIMER"
+        },
+        {
+          "module": "SYSTEM",
+          "func": "DISABLESYSTEMTIMERS"
+        },
+        {
+          "module": "SYSTEM",
+          "func": "ENABLESYSTEMTIMERS"
+        },
+        {
+          "module": "SYSTEM",
+          "func": "KILLSYSTEMTIMER"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0227"
+      ],
+      "fanout": 5,
+      "fanin": 1,
+      "description": "Iterador con bucle (201 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "calls_system",
+        "complex_iterator",
+        "far",
+        "loop"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0269 -- offset 0x0269 -- 201 instr\n; Iterador con bucle (201 instr).\n; tags: calls_system, complex_iterator, far, loop\n; callers: sub_0227\n; calls (intra): sub_002F\n; calls (inter): SYSTEM.CREATESYSTEMTIMER, SYSTEM.DISABLESYSTEMTIMERS, SYSTEM.ENABLESYSTEMTIMERS, SYSTEM.KILLSYSTEMTIMER\n;----------------------------------------------------------------------"
+    }
+  ]
+}

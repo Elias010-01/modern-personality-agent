@@ -1,0 +1,18 @@
+{
+  "module": "KERNEL",
+  "original_name": "KERNEL.EXE",
+  "original_size": 34063,
+  "ne_off": 1024,
+  "sector": 16,
+  "segments": [
+    {
+      "index": 1,
+      "file_off": 2960,
+      "data_len": 31103,
+      "flags": 64,
+      "is_data": false,
+      "has_reloc": false,
+      "reloc_count": 0
+    }
+  ]
+}

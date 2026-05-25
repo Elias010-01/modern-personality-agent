@@ -1,0 +1,27 @@
+{
+  "module": "FTG",
+  "original_name": "FTG.DRV",
+  "original_size": 1961,
+  "ne_off": 1024,
+  "sector": 16,
+  "segments": [
+    {
+      "index": 1,
+      "file_off": 1216,
+      "data_len": 385,
+      "flags": 64,
+      "is_data": false,
+      "has_reloc": false,
+      "reloc_count": 0
+    },
+    {
+      "index": 2,
+      "file_off": 1616,
+      "data_len": 345,
+      "flags": 65,
+      "is_data": true,
+      "has_reloc": false,
+      "reloc_count": 0
+    }
+  ]
+}

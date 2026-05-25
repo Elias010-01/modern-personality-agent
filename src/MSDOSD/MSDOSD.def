@@ -1,0 +1,20 @@
+; MSDOSD.DEF - module definition para Windows 1.x
+; AUTO-GENERATED desde MSDOSD.EXE (NE entry/relocation tables)
+
+LIBRARY     MSDOSD
+DESCRIPTION 'Windows MSDOS Machine Dependent'
+EXETYPE     WINDOWS
+STUB        'WINSTUB.EXE'
+
+CODE        LOADONCALL MOVABLE DISCARDABLE PURE
+DATA        LOADONCALL MOVABLE SINGLE
+
+IMPORTS
+    KERNEL.GLOBALALLOC
+    KERNEL.GLOBALFREE
+    KERNEL.GLOBALLOCK
+    KERNEL.GLOBALUNLOCK
+
+EXPORTS
+    FORMAT                 @1
+    SYS                    @2

@@ -1,0 +1,27 @@
+{
+  "module": "JOYMOUSE",
+  "original_name": "JOYMOUSE.DRV",
+  "original_size": 2114,
+  "ne_off": 1024,
+  "sector": 16,
+  "segments": [
+    {
+      "index": 1,
+      "file_off": 1200,
+      "data_len": 815,
+      "flags": 320,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 4
+    },
+    {
+      "index": 2,
+      "file_off": 2064,
+      "data_len": 50,
+      "flags": 65,
+      "is_data": true,
+      "has_reloc": false,
+      "reloc_count": 0
+    }
+  ]
+}

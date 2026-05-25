@@ -1,0 +1,14 @@
+version:    v02
+slug:       cleanroom-system-drv-spec-impl
+timestamp:  2026-05-24T23:01:55Z
+message:    Pista B (clean-room) iniciada: especificacion SYSTEM.DRV (SPEC.md) basada en fuentes publicas + implementacion MASM 432 lineas (system.asm) + module.def + build.sh. MASM compila sin errores (SYSTEM.OBJ 976B). LINK4 a NE driver pendiente de ajustes.
+git_branch: (no git)
+git_commit: (no git)
+host:       DESKTOP-GPDC4N2
+user:       elias
+
+stats:
+  src_modules:   70
+  built_files:   69
+  db_functions:  1216
+  db_matched:    1216

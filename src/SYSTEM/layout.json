@@ -1,0 +1,18 @@
+{
+  "module": "SYSTEM",
+  "original_name": "SYSTEM.DRV",
+  "original_size": 2663,
+  "ne_off": 1024,
+  "sector": 512,
+  "segments": [
+    {
+      "index": 1,
+      "file_off": 1536,
+      "data_len": 1109,
+      "flags": 320,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 2
+    }
+  ]
+}

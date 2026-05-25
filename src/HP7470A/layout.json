@@ -1,0 +1,27 @@
+{
+  "module": "HP7470A",
+  "original_name": "HP7470A.DRV",
+  "original_size": 16336,
+  "ne_off": 1024,
+  "sector": 512,
+  "segments": [
+    {
+      "index": 1,
+      "file_off": 1536,
+      "data_len": 12762,
+      "flags": 61808,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 31
+    },
+    {
+      "index": 2,
+      "file_off": 14848,
+      "data_len": 669,
+      "flags": 81,
+      "is_data": true,
+      "has_reloc": false,
+      "reloc_count": 0
+    }
+  ]
+}

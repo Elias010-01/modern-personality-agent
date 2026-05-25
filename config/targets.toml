@@ -1,0 +1,94 @@
+# Módulos en scope, con metadatos sobre qué tipo de información tenemos para
+# cada uno. El runner usa esto para decidir estrategia y priorización.
+#
+# has_debug_symbols = true  → preferir matching binario directo, hay nombres
+# has_debug_symbols = false → ingeniería ciega, considerar pixel-diff y DDK refs
+
+[[modules]]
+name              = "KERNEL"
+binary            = "KERNEL.EXE"
+kind              = "executable"
+has_debug_symbols = true
+notes             = "Documentado en research repo. Símbolos en slack space de builds de producción."
+
+[[modules]]
+name              = "SYSTEM"
+binary            = "SYSTEM.DRV"
+kind              = "driver"
+has_debug_symbols = true
+
+[[modules]]
+name              = "KEYBOARD"
+# Win 1.03 retail no tiene un "KEYBOARD.DRV" genérico; cada layout es su
+# propio .DRV. Usamos USA como default; el resto (UK, GERMANY, FRANCE,
+# ITALY, SPAIN, SWEDEN, NORWAY, DENMARK) se atacan después, deberían ser
+# variaciones triviales de las tablas.
+binary            = "USA.DRV"
+kind              = "driver"
+has_debug_symbols = true
+notes             = "Layout US. Resto de layouts comparten código, sólo cambian tablas."
+
+[[modules]]
+name              = "MOUSE"
+binary            = "MOUSE.DRV"
+kind              = "driver"
+has_debug_symbols = true
+
+[[modules]]
+name              = "SOUND"
+binary            = "SOUND.DRV"
+kind              = "driver"
+has_debug_symbols = true
+
+[[modules]]
+name              = "COMM"
+binary            = "COMM.DRV"
+kind              = "driver"
+has_debug_symbols = true
+
+[[modules]]
+name              = "GDI"
+binary            = "GDI.EXE"
+kind              = "executable"
+has_debug_symbols = false
+notes             = "Sin símbolos. DDI ordinals fijos por contrato. Atacar tras KERNEL."
+
+[[modules]]
+name              = "USER"
+binary            = "USER.EXE"
+kind              = "executable"
+has_debug_symbols = false
+notes             = "Sin símbolos. Depende de GDI."
+
+[[modules]]
+name              = "CGA"
+binary            = "CGA.DRV"
+kind              = "display_driver"
+has_debug_symbols = false
+verify_mode       = "pixels"
+notes             = "Display driver. Diff framebuffer + DDK samples + cross-ref con HERCULES/EGA."
+
+[[modules]]
+name              = "EGA"
+# 4 variantes EGA en retail: HIRES (640x350 color), LORES (320x200 16c),
+# HIBW (640x350 b/w), MONO. Atacamos HIRES primero, las demás comparten
+# la mayor parte del código.
+binary            = "EGAHIRES.DRV"
+kind              = "display_driver"
+has_debug_symbols = false
+verify_mode       = "pixels"
+notes             = "EGA 640x350 16-color. Variantes LORES/HIBW/MONO atacar tras matchear HIRES."
+
+[[modules]]
+name              = "HERCULES"
+binary            = "HERCULES.DRV"
+kind              = "display_driver"
+has_debug_symbols = false
+verify_mode       = "pixels"
+
+[[modules]]
+name              = "MSDOSD"
+binary            = "MSDOSD.EXE"
+kind              = "executable"
+has_debug_symbols = false
+notes             = "MS-DOS Executive (shell de Win 1.x). Atacar al final."

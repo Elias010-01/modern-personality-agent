@@ -1,0 +1,54 @@
+{
+  "module": "MSDOS",
+  "original_name": "MSDOS.EXE",
+  "original_size": 43104,
+  "ne_off": 1024,
+  "sector": 16,
+  "segments": [
+    {
+      "index": 1,
+      "file_off": 1984,
+      "data_len": 519,
+      "flags": 320,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 19
+    },
+    {
+      "index": 2,
+      "file_off": 2672,
+      "data_len": 3029,
+      "flags": 61808,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 58
+    },
+    {
+      "index": 3,
+      "file_off": 6176,
+      "data_len": 14452,
+      "flags": 61808,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 92
+    },
+    {
+      "index": 4,
+      "file_off": 21376,
+      "data_len": 15241,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 93
+    },
+    {
+      "index": 5,
+      "file_off": 37376,
+      "data_len": 368,
+      "flags": 81,
+      "is_data": true,
+      "has_reloc": false,
+      "reloc_count": 0
+    }
+  ]
+}

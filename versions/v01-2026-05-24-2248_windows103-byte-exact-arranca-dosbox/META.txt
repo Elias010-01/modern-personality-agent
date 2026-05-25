@@ -1,0 +1,14 @@
+version:    v01
+slug:       windows103-byte-exact-arranca-dosbox
+timestamp:  2026-05-24T22:48:42Z
+message:    Pista A completa: 69 binarios NE+MZ recompilables byte-exact desde src/ASM. Windows 1.03 arrancando en DOSBox-X for Windows con nuestras apps reconstruidas (CALC/NOTEPAD/PAINT/WRITE/etc verificadas visualmente). Inicia separacion Pista A (byte-exact) vs Pista B (clean-room total).
+git_branch: (no git)
+git_commit: (no git)
+host:       DESKTOP-GPDC4N2
+user:       elias
+
+stats:
+  src_modules:   70
+  built_files:   69
+  db_functions:  1216
+  db_matched:    1216

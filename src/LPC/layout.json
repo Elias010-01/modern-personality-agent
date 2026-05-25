@@ -1,0 +1,27 @@
+{
+  "module": "LPC",
+  "original_name": "LPC.DRV",
+  "original_size": 2438,
+  "ne_off": 1024,
+  "sector": 16,
+  "segments": [
+    {
+      "index": 1,
+      "file_off": 1200,
+      "data_len": 1083,
+      "flags": 320,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 4
+    },
+    {
+      "index": 2,
+      "file_off": 2320,
+      "data_len": 118,
+      "flags": 65,
+      "is_data": true,
+      "has_reloc": false,
+      "reloc_count": 0
+    }
+  ]
+}

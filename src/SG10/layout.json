@@ -1,0 +1,36 @@
+{
+  "module": "SG10",
+  "original_name": "SG10.DRV",
+  "original_size": 14848,
+  "ne_off": 64,
+  "sector": 16,
+  "segments": [
+    {
+      "index": 1,
+      "file_off": 704,
+      "data_len": 4522,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 33
+    },
+    {
+      "index": 2,
+      "file_off": 5504,
+      "data_len": 5204,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 34
+    },
+    {
+      "index": 3,
+      "file_off": 10992,
+      "data_len": 1316,
+      "flags": 81,
+      "is_data": true,
+      "has_reloc": false,
+      "reloc_count": 0
+    }
+  ]
+}

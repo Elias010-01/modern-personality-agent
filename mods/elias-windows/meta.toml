@@ -1,0 +1,39 @@
+name = "elias-windows"
+title = "Elias's Windows (Windows 1.03 personalizado con boot splash y menus moddeados)"
+author = "Elias (16 anos) + ChatGPT/Claude/Cascade (asistencia IA)"
+date = "2026-05-25"
+license = "MIT (los cambios; los binarios resultantes siguen siendo derivados de Microsoft Windows 1.03)"
+
+description = """
+Mod showcase del proyecto modern-personality-agent.
+
+Cambios visibles al arrancar Windows 1.03 con este mod aplicado:
+
+  - Splash screen (WIN.COM):
+      "Microsoft Windows" -> "Elias's Windows!!"
+      Copyright reemplazado por mensaje personalizado.
+
+  - About dialog (WIN100.OVL):
+      "Microsoft Windows" -> "Elias's Windows!!"  (en las 6 ocurrencias).
+
+  - Titulo shell (MSDOS.EXE):
+      "MS-DOS Executive"  -> "Elias's Windows!"
+
+  - Menus de la shell (MSDOS.EXE):
+      "File"    -> "MOD!"
+      "View"    -> "MIO!"
+      "Special" -> "ZONA!!!"
+
+Tecnica:
+  - Reemplazos byte-for-byte (mismo tamano) en la zona de resources del
+    ne_meta.bin de MSDOS.EXE.
+  - Para WIN.COM/WIN100.OVL se modifican directamente las strings dentro
+    del fichero (no son NE, son binarios planos).
+  - El sistema de mods (bootstrap/mod_system.py) gestiona apply/revert.
+
+Aplicar:
+  python3 bootstrap/mod_system.py apply elias-windows
+
+Revertir:
+  python3 bootstrap/mod_system.py revert
+"""

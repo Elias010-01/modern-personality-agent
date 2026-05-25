@@ -1,0 +1,117 @@
+# ================================================================
+# Windows 1.03 reverse engineering project - .gitignore
+# ================================================================
+# IMPORTANTE: Este proyecto trata con binarios propietarios de
+# Microsoft Corporation. NUNCA se suben los .EXE/.DRV originales
+# ni los reconstruidos. Ver LEGAL.md.
+# ================================================================
+
+# ---- Binarios .EXE/.DRV propiedad de Microsoft ----
+# Quien clone el repo aporta su propia copia legal de Windows 1.03
+# y regenera estos binarios con `python bootstrap/build_from_source.py`.
+original/
+built/
+runtime/
+
+# ---- Binarios derivados dentro de mods (ne_meta.bin patcheados) ----
+# Se regeneran ejecutando el script generador del mod.
+mods/*/img/
+mods/*/built/
+mods/*/patches/*/ne_meta.bin
+mods/*/patches/*/*.reloc.bin
+
+# ---- ne_meta.bin (skeleton binario del NE) ----
+# Contiene cabeceras y tablas de Microsoft. NO se incluye.
+# Se regenera desde original/ con bootstrap/extract_segments.py.
+src/*/ne_meta.bin
+src/*/*.reloc.bin
+
+# ---- Codigo fuente reconstruido (.asm humano legible) ----
+# SI se incluye: contiene el resultado de nuestro trabajo de analisis
+# semantico, con instrucciones desensambladas + descripcion por funcion.
+# Los bytes raw aparecen como comentarios (citados para fines documentales
+# / educativos / de research, no como redistribucion del binario).
+# Ver disclaimer en README.md y LEGAL.md.
+!src/*/seg*.asm
+!src/*/*.def
+!src/*/layout.json
+
+# ---- Vendor (herramientas externas) ----
+vendor/
+!vendor/.gitkeep
+!vendor/README.md
+
+# ---- Workspaces y proyectos Ghidra ----
+workspaces/
+.ghidra-projects/
+*.gpr
+*.rep/
+
+# ---- Estado interno (DB, JSONs intermedios) ----
+state/*.db
+state/*.db-journal
+state/*.db-wal
+state/*.db-shm
+state/analyze/pass1/
+state/analyze/pass1b/
+state/analyze/pass2/
+state/analyze/pass4/
+# state/analyze/pass3 SI subimos (es la metadata semantica clave)
+
+# ---- Backups y snapshots historicos (pesados) ----
+backups/
+versions/*/*.tar.gz
+versions/*/*.tgz
+versions/*/*.zip
+versions/*/state-mpa.db
+
+# ---- KB ingerida (los fuentes se documentan en kb/sources.toml) ----
+kb/data/
+kb/index/
+
+# ---- Python ----
+__pycache__/
+*.pyc
+.venv/
+.uv/
+*.egg-info/
+dist/
+build/
+
+# ---- Editores ----
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# ---- Logs y scratch ----
+logs/
+*.log
+out.txt
+out/
+tmp/
+parked/
+
+# ---- Archivos sueltos de sesiones de trabajo ----
+notes.txt
+batch-test.txt
+bisect.txt
+build.txt
+bulk-*.txt
+candidates.txt
+compare.txt
+debug.txt
+import*.txt
+link*.txt
+match*.txt
+rebuild.txt
+step*.txt
+submatch.txt
+analyze.log
+check.log
+
+# ---- Outputs de testing del pipeline ----
+bootstrap/analyze/_test_*.py
+bootstrap/analyze/_inspect_*.py
+bootstrap/analyze/_check_results.py

@@ -1,0 +1,99 @@
+{
+  "module": "CONTROL",
+  "original_name": "CONTROL.EXE",
+  "original_size": 52704,
+  "ne_off": 1024,
+  "sector": 16,
+  "segments": [
+    {
+      "index": 1,
+      "file_off": 2192,
+      "data_len": 6037,
+      "flags": 61808,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 84
+    },
+    {
+      "index": 2,
+      "file_off": 8912,
+      "data_len": 2078,
+      "flags": 61808,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 70
+    },
+    {
+      "index": 3,
+      "file_off": 11552,
+      "data_len": 2005,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 23
+    },
+    {
+      "index": 4,
+      "file_off": 13744,
+      "data_len": 9131,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 64
+    },
+    {
+      "index": 5,
+      "file_off": 23392,
+      "data_len": 1677,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 15
+    },
+    {
+      "index": 6,
+      "file_off": 25200,
+      "data_len": 5848,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 38
+    },
+    {
+      "index": 7,
+      "file_off": 31360,
+      "data_len": 5842,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 48
+    },
+    {
+      "index": 8,
+      "file_off": 37600,
+      "data_len": 4185,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 32
+    },
+    {
+      "index": 9,
+      "file_off": 42048,
+      "data_len": 990,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 11
+    },
+    {
+      "index": 10,
+      "file_off": 43136,
+      "data_len": 1590,
+      "flags": 17,
+      "is_data": true,
+      "has_reloc": false,
+      "reloc_count": 0
+    }
+  ]
+}

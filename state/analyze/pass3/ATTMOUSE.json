@@ -1,0 +1,157 @@
+{
+  "module": "ATTMOUSE",
+  "num_functions": 2,
+  "confidence_count": {
+    "high": 0,
+    "medium": 2,
+    "low": 0,
+    "unknown": 0
+  },
+  "functions": [
+    {
+      "module": "ATTMOUSE",
+      "segment_file": "seg1.asm",
+      "name": "sub_0114",
+      "kind": "NEAR",
+      "offset": 276,
+      "size_bytes": null,
+      "start_line": 143,
+      "end_line": 159,
+      "num_instructions": 14,
+      "prologue": "none",
+      "epilogue": "jmp_tail",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 1,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": true,
+      "has_string_op": false,
+      "num_mem_refs": 1,
+      "mnemonic_histogram": {
+        "mov": 2,
+        "loop": 2,
+        "pushf": 1,
+        "cli": 1,
+        "in": 1,
+        "test": 1,
+        "jne": 1,
+        "push": 1,
+        "pop": 1,
+        "out": 1,
+        "inc": 1,
+        "jmp": 1
+      },
+      "classification": "iterator",
+      "first_instructions": [
+        "pushf",
+        "cli",
+        "in al, 0x64",
+        "test al, 2",
+        "jne L_0116",
+        "push cx"
+      ],
+      "last_instructions": [
+        "out 0x60, al",
+        "inc bx",
+        "loop L_0116",
+        "jmp L_012D"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_012C"
+      ],
+      "fanout": 0,
+      "fanin": 1,
+      "description": "Iterador con bucle (14 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "iterator",
+        "loop"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0114 -- offset 0x0114 -- 14 instr\n; Iterador con bucle (14 instr).\n; tags: iterator, loop\n; callers: sub_012C\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "ATTMOUSE",
+      "segment_file": "seg1.asm",
+      "name": "sub_012C",
+      "kind": "FAR",
+      "offset": 300,
+      "size_bytes": null,
+      "start_line": 160,
+      "end_line": 204,
+      "num_instructions": 40,
+      "prologue": "none",
+      "epilogue": "retf",
+      "calls_near": [
+        "L_0114",
+        "L_012C"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 3,
+      "num_jumps_uncond": 1,
+      "ints": [
+        "0x33",
+        "0x21"
+      ],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 7,
+      "mnemonic_histogram": {
+        "mov": 9,
+        "push": 6,
+        "pop": 5,
+        "cmp": 3,
+        "je": 3,
+        "call": 2,
+        "int": 2,
+        "iret": 1,
+        "ret": 1,
+        "nop": 1,
+        "inc": 1,
+        "jmp": 1,
+        "lea": 1,
+        "lds": 1,
+        "sub": 1
+      },
+      "classification": "dos_caller",
+      "first_instructions": [
+        "iret",
+        "push cs",
+        "call L_012C",
+        "ret",
+        "mov ax, ds",
+        "nop"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0114"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [
+        "L_012C"
+      ],
+      "callers": [],
+      "fanout": 1,
+      "fanin": 0,
+      "description": "Llama a servicios DOS via INT 21h (40 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "dos_caller",
+        "far",
+        "int_21",
+        "int_33"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_012C -- offset 0x012C -- 40 instr\n; Llama a servicios DOS via INT 21h (40 instr).\n; tags: dos_caller, far, int_21, int_33\n; calls (intra): sub_0114\n;----------------------------------------------------------------------"
+    }
+  ]
+}

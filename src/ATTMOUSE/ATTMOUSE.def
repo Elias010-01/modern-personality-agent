@@ -1,0 +1,19 @@
+; MOUSE.DEF - module definition para Windows 1.x
+; AUTO-GENERATED desde ATTMOUSE.DRV (NE entry/relocation tables)
+
+LIBRARY     MOUSE
+DESCRIPTION 'AT&T Mouse 6300 (plugs into keyboard)'
+EXETYPE     WINDOWS
+STUB        'WINSTUB.EXE'
+
+CODE        PRELOAD FIXED
+DATA        PRELOAD FIXED SINGLE
+
+IMPORTS
+    KERNEL.GETPROFILEINT
+    KERNEL.LOCALINIT
+
+EXPORTS
+    INQUIRE                @1
+    ENABLE                 @2
+    DISABLE                @3

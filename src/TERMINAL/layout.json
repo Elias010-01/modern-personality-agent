@@ -1,0 +1,90 @@
+{
+  "module": "TERMINAL",
+  "original_name": "TERMINAL.EXE",
+  "original_size": 47344,
+  "ne_off": 1024,
+  "sector": 4,
+  "segments": [
+    {
+      "index": 1,
+      "file_off": 2036,
+      "data_len": 1312,
+      "flags": 336,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 21
+    },
+    {
+      "index": 2,
+      "file_off": 3520,
+      "data_len": 25500,
+      "flags": 61808,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 126
+    },
+    {
+      "index": 3,
+      "file_off": 30032,
+      "data_len": 3029,
+      "flags": 61808,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 17
+    },
+    {
+      "index": 4,
+      "file_off": 33200,
+      "data_len": 744,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 21
+    },
+    {
+      "index": 5,
+      "file_off": 34116,
+      "data_len": 3766,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 53
+    },
+    {
+      "index": 6,
+      "file_off": 38308,
+      "data_len": 666,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 12
+    },
+    {
+      "index": 7,
+      "file_off": 39072,
+      "data_len": 1311,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 22
+    },
+    {
+      "index": 8,
+      "file_off": 40564,
+      "data_len": 362,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 8
+    },
+    {
+      "index": 9,
+      "file_off": 40992,
+      "data_len": 1494,
+      "flags": 17,
+      "is_data": true,
+      "has_reloc": false,
+      "reloc_count": 0
+    }
+  ]
+}

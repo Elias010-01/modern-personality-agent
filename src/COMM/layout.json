@@ -1,0 +1,27 @@
+{
+  "module": "COMM",
+  "original_name": "COMM.DRV",
+  "original_size": 4860,
+  "ne_off": 1024,
+  "sector": 512,
+  "segments": [
+    {
+      "index": 1,
+      "file_off": 1536,
+      "data_len": 2670,
+      "flags": 320,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 2
+    },
+    {
+      "index": 2,
+      "file_off": 4608,
+      "data_len": 252,
+      "flags": 65,
+      "is_data": true,
+      "has_reloc": false,
+      "reloc_count": 0
+    }
+  ]
+}

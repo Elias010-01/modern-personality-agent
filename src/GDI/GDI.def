@@ -1,0 +1,247 @@
+; GDI.DEF - module definition para Windows 1.x
+; AUTO-GENERATED desde GDI.EXE (NE entry/relocation tables)
+
+LIBRARY     GDI
+DESCRIPTION 'Microsoft Windows Graphics Device Interface'
+EXETYPE     WINDOWS
+STUB        'WINSTUB.EXE'
+
+CODE        PRELOAD FIXED
+DATA        PRELOAD MOVABLE SINGLE
+
+HEAPSIZE    10000
+
+IMPORTS
+    KERNEL.ACCESSRESOURCE
+    KERNEL.ADDATOM
+    KERNEL.ALLOCRESOURCE
+    KERNEL.ANSIPREV
+    KERNEL.DELETEATOM
+    KERNEL.DELETEPATHNAME
+    KERNEL.FATALEXIT
+    KERNEL.FINDATOM
+    KERNEL.FINDRESOURCE
+    KERNEL.FREELIBRARY
+    KERNEL.FREEMODULE
+    KERNEL.FREERESOURCE
+    KERNEL.GETATOMNAME
+    KERNEL.GETMODULEHANDLE
+    KERNEL.GETPROCADDRESS
+    KERNEL.GETPROFILESTRING
+    KERNEL.GETTEMPDRIVE
+    KERNEL.GETTEMPFILENAME
+    KERNEL.GLOBALALLOC
+    KERNEL.GLOBALFREE
+    KERNEL.GLOBALHANDLE
+    KERNEL.GLOBALLOCK
+    KERNEL.GLOBALREALLOC
+    KERNEL.GLOBALSIZE
+    KERNEL.GLOBALUNLOCK
+    KERNEL.LOADLIBRARY
+    KERNEL.LOADMODULE
+    KERNEL.LOADRESOURCE
+    KERNEL.LOCALALLOC
+    KERNEL.LOCALFREE
+    KERNEL.LOCALINIT
+    KERNEL.LOCALLOCK
+    KERNEL.LOCALREALLOC
+    KERNEL.LOCALUNLOCK
+    KERNEL.LOCKRESOURCE
+    KERNEL.LOCKSEGMENT
+    KERNEL.LSTRCAT
+    KERNEL.LSTRCMP
+    KERNEL.LSTRCPY
+    KERNEL.OPENFILE
+    KERNEL.SETRESOURCEHANDLER
+    KERNEL.SIZEOFRESOURCE
+    KERNEL.UNLOCKSEGMENT
+    KERNEL.YIELD
+    KERNEL._LCLOSE
+    KERNEL._LLSEEK
+    KERNEL._LREAD
+    KERNEL._LWRITE
+
+EXPORTS
+    SETBKCOLOR             @1
+    SETBKMODE              @2
+    SETMAPMODE             @3
+    SETROP2                @4
+    SETRELABS              @5
+    SETPOLYFILLMODE        @6
+    SETSTRETCHBLTMODE      @7
+    SETTEXTCHARACTEREXTRA  @8
+    SETTEXTCOLOR           @9
+    SETTEXTJUSTIFICATION   @10
+    SETWINDOWORG           @11
+    SETWINDOWEXT           @12
+    SETVIEWPORTORG         @13
+    SETVIEWPORTEXT         @14
+    OFFSETWINDOWORG        @15
+    SCALEWINDOWEXT         @16
+    OFFSETVIEWPORTORG      @17
+    SCALEVIEWPORTEXT       @18
+    LINETO                 @19
+    MOVETO                 @20
+    EXCLUDECLIPRECT        @21
+    INTERSECTCLIPRECT      @22
+    ARC                    @23
+    ELLIPSE                @24
+    FLOODFILL              @25
+    PIE                    @26
+    RECTANGLE              @27
+    ROUNDRECT              @28
+    PATBLT                 @29
+    SAVEDC                 @30
+    SETPIXEL               @31
+    OFFSETCLIPRGN          @32
+    TEXTOUT                @33
+    BITBLT                 @34
+    STRETCHBLT             @35
+    POLYGON                @36
+    POLYLINE               @37
+    ESCAPE                 @38
+    RESTOREDC              @39
+    FILLRGN                @40
+    FRAMERGN               @41
+    INVERTRGN              @42
+    PAINTRGN               @43
+    SELECTCLIPRGN          @44
+    SELECTOBJECT           @45
+    BITMAPBITS             @46
+    COMBINERGN             @47
+    CREATEBITMAP           @48
+    CREATEBITMAPINDIRECT   @49
+    CREATEBRUSHINDIRECT    @50
+    CREATECOMPATIBLEBITMAP @51
+    CREATECOMPATIBLEDC     @52
+    CREATEDC               @53
+    CREATEELLIPTICRGN      @54
+    CREATEELLIPTICRGNINDIRECT @55
+    CREATEFONT             @56
+    CREATEFONTINDIRECT     @57
+    CREATEHATCHBRUSH       @58
+    CREATEPATTERNBRUSH     @60
+    CREATEPEN              @61
+    CREATEPENINDIRECT      @62
+    CREATEPOLYGONRGN       @63
+    CREATERECTRGN          @64
+    CREATERECTRGNINDIRECT  @65
+    CREATESOLIDBRUSH       @66
+    DPTOLP                 @67
+    DELETEDC               @68
+    DELETEOBJECT           @69
+    ENUMFONTS              @70
+    ENUMOBJECTS            @71
+    EQUALRGN               @72
+    EXCLUDEVISRECT         @73
+    GETBITMAPBITS          @74
+    GETBKCOLOR             @75
+    GETBKMODE              @76
+    GETCLIPBOX             @77
+    GETCURRENTPOSITION     @78
+    GETDCORG               @79
+    GETDEVICECAPS          @80
+    GETMAPMODE             @81
+    GETOBJECT              @82
+    GETPIXEL               @83
+    GETPOLYFILLMODE        @84
+    GETROP2                @85
+    GETRELABS              @86
+    GETSTOCKOBJECT         @87
+    GETSTRETCHBLTMODE      @88
+    GETTEXTCHARACTEREXTRA  @89
+    GETTEXTCOLOR           @90
+    GETTEXTEXTENT          @91
+    GETTEXTFACE            @92
+    GETTEXTMETRICS         @93
+    GETVIEWPORTEXT         @94
+    GETVIEWPORTORG         @95
+    GETWINDOWEXT           @96
+    GETWINDOWORG           @97
+    INTERSECTVISRECT       @98
+    LPTODP                 @99
+    LINEDDA                @100
+    OFFSETRGN              @101
+    OFFSETVISRGN           @102
+    PTVISIBLE              @103
+    RECTVISIBLE            @104
+    SELECTVISRGN           @105
+    SETBITMAPBITS          @106
+    SETDCORG               @117
+    INTERNALCREATEDC       @118
+    ADDFONTRESOURCE        @119
+    GETCONTINUINGTEXTEXTENT @120
+    DEATH                  @121
+    RESURRECTION           @122
+    PLAYMETAFILE           @123
+    GETMETAFILE            @124
+    CREATEMETAFILE         @125
+    CLOSEMETAFILE          @126
+    DELETEMETAFILE         @127
+    MULDIV                 @128
+    SAVEVISRGN             @129
+    RESTOREVISRGN          @130
+    INQUIREVISRGN          @131
+    SETENVIRONMENT         @132
+    GETENVIRONMENT         @133
+    GETRGNBOX              @134
+    SCANLR                 @135
+    REMOVEFONTRESOURCE     @136
+    GSV                    @137
+    DPXLATE                @138
+    SETWINVIEWEXT          @139
+    SCALEEXT               @140
+    WORDSET                @141
+    RECTSTUFF              @142
+    OFFSETORG              @143
+    LOCKDC                 @144
+    UNLOCKDC               @145
+    LOCKUNLOCK             @146
+    GDI_FARFRAME           @147
+    SETBRUSHORG            @148
+    GETBRUSHORG            @149
+    UNREALIZEOBJECT        @150
+    COPYMETAFILE           @151
+    GDIINITAPP             @152
+    CREATEIC               @153
+    GETNEARESTCOLOR        @154
+    QUERYABORT             @155
+    CREATEDISCARDABLEBITMAP @156
+    COMPATIBLEBITMAP       @157
+    ENUMCALLBACK           @158
+    GETMETAFILEBITS        @159
+    SETMETAFILEBITS        @160
+    PTINREGION             @161
+    GETBITMAPDIMENSION     @162
+    SETBITMAPDIMENSION     @163
+    PIXTOLINE              @164
+    RCOS                   @177
+    RSIN                   @178
+    DMBITBLT               @201
+    DMCOLORINFO            @202
+    DMENUMDFONTS           @206
+    DMENUMOBJ              @207
+    DMOUTPUT               @208
+    DMPIXEL                @209
+    DMREALIZEOBJECT        @210
+    DMSTRBLT               @211
+    DMSCANLR               @212
+    BRUTE                  @213
+    DMTRANSPOSE            @220
+    CREATEPQ               @230
+    MINPQ                  @231
+    EXTRACTPQ              @232
+    INSERTPQ               @233
+    SIZEPQ                 @234
+    DELETEPQ               @235
+    OPENJOB                @240
+    WRITESPOOL             @241
+    WRITEDIALOG            @242
+    CLOSEJOB               @243
+    DELETEJOB              @244
+    GETSPOOLJOB            @245
+    STARTSPOOLPAGE         @246
+    ENDSPOOLPAGE           @247
+    QUERYJOB               @248
+    COPY                   @250
+    SETMAPPERFLAGS         @349

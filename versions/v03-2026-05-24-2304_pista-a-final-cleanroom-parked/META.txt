@@ -1,0 +1,14 @@
+version:    v03
+slug:       pista-a-final-cleanroom-parked
+timestamp:  2026-05-24T23:04:42Z
+message:    Estado limpio: Pista A funcionando (69 binarios NE+MZ byte-exact, Windows 1.03 arranca en DOSBox-X). Pista B (clean-room) aparcada en parked/cleanroom-01/ con SYSTEM.DRV PoC (SPEC + MASM source compilable, pendiente LINK4). Listo para retomar manana.
+git_branch: (no git)
+git_commit: (no git)
+host:       DESKTOP-GPDC4N2
+user:       elias
+
+stats:
+  src_modules:   70
+  built_files:   69
+  db_functions:  1216
+  db_matched:    1216

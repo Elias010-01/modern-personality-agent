@@ -1,0 +1,36 @@
+{
+  "module": "NECP2",
+  "original_name": "NECP2.DRV",
+  "original_size": 12304,
+  "ne_off": 64,
+  "sector": 16,
+  "segments": [
+    {
+      "index": 1,
+      "file_off": 656,
+      "data_len": 4474,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 33
+    },
+    {
+      "index": 2,
+      "file_off": 5408,
+      "data_len": 4687,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 34
+    },
+    {
+      "index": 3,
+      "file_off": 10384,
+      "data_len": 1071,
+      "flags": 81,
+      "is_data": true,
+      "has_reloc": false,
+      "reloc_count": 0
+    }
+  ]
+}

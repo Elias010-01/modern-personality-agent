@@ -1,0 +1,36 @@
+{
+  "module": "TI850",
+  "original_name": "TI850.DRV",
+  "original_size": 11584,
+  "ne_off": 64,
+  "sector": 16,
+  "segments": [
+    {
+      "index": 1,
+      "file_off": 624,
+      "data_len": 5002,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 46
+    },
+    {
+      "index": 2,
+      "file_off": 6000,
+      "data_len": 4094,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 20
+    },
+    {
+      "index": 3,
+      "file_off": 10256,
+      "data_len": 880,
+      "flags": 81,
+      "is_data": true,
+      "has_reloc": false,
+      "reloc_count": 0
+    }
+  ]
+}

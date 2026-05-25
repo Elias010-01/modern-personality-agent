@@ -1,0 +1,1301 @@
+{
+  "module": "OKI92",
+  "num_functions": 16,
+  "confidence_count": {
+    "high": 0,
+    "medium": 8,
+    "low": 6,
+    "unknown": 2
+  },
+  "functions": [
+    {
+      "module": "OKI92",
+      "segment_file": "seg1.asm",
+      "name": "sub_0000",
+      "kind": "FAR",
+      "offset": 0,
+      "size_bytes": null,
+      "start_line": 14,
+      "end_line": 312,
+      "num_instructions": 276,
+      "prologue": "standard_bp",
+      "epilogue": "jmp_tail",
+      "calls_near": [
+        "L_046F",
+        "L_0825",
+        "L_0A09",
+        "L_0B51"
+      ],
+      "calls_far": [
+        "far GDI.STARTSPOOLPAGE",
+        "far USER.SETRECT",
+        "far USER.SETRECTEMPTY"
+      ],
+      "num_jumps_cond": 18,
+      "num_jumps_uncond": 11,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 102,
+      "mnemonic_histogram": {
+        "push": 78,
+        "mov": 66,
+        "les": 18,
+        "sub": 17,
+        "call": 15,
+        "jmp": 11,
+        "nop": 9,
+        "cmp": 9,
+        "pop": 8,
+        "je": 7,
+        "jne": 6,
+        "inc": 5,
+        "add": 4,
+        "or": 3,
+        "test": 3
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "push ds",
+        "lds bx, ptr [bp + 8]",
+        "mov cx, word ptr [bp + 6]",
+        "mov dx, word ptr [bp + 4]"
+      ],
+      "last_instructions": [
+        "les bx, ptr [bp + 0x10]",
+        "cmp word ptr es:[bx + 0x32], 1",
+        "jne L_02AE",
+        "push word ptr es:[bx + 0x2e]"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [
+        {
+          "module": "GDI",
+          "func": "STARTSPOOLPAGE"
+        },
+        {
+          "module": "USER",
+          "func": "SETRECT"
+        },
+        {
+          "module": "USER",
+          "func": "SETRECTEMPTY"
+        }
+      ],
+      "callees_unresolved": [
+        "L_046F",
+        "L_0825",
+        "L_0A09",
+        "L_0B51"
+      ],
+      "callers": [],
+      "fanout": 3,
+      "fanin": 0,
+      "description": "Dispatcher: tabla de decisiones cmp+jcc (276 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "calls_gdi",
+        "calls_user",
+        "dispatcher",
+        "far"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0000 -- offset 0x0000 -- 276 instr\n; Dispatcher: tabla de decisiones cmp+jcc (276 instr).\n; tags: calls_gdi, calls_user, dispatcher, far\n; calls (inter): GDI.STARTSPOOLPAGE, USER.SETRECT, USER.SETRECTEMPTY\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "OKI92",
+      "segment_file": "seg2.asm",
+      "name": "sub_01A5",
+      "kind": "NEAR",
+      "offset": 421,
+      "size_bytes": null,
+      "start_line": 193,
+      "end_line": 201,
+      "num_instructions": 8,
+      "prologue": "standard_bp",
+      "epilogue": "jmp_tail",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 3,
+      "mnemonic_histogram": {
+        "mov": 4,
+        "push": 3,
+        "jmp": 1
+      },
+      "classification": "leaf",
+      "first_instructions": [
+        "push word ptr [bp + 0xe]",
+        "mov ax, 0xa",
+        "push ax",
+        "mov ax, 0xb",
+        "push ax",
+        "mov ax, word ptr [bp + 0xa]"
+      ],
+      "last_instructions": [
+        "push ax",
+        "mov ax, word ptr [bp + 0xa]",
+        "mov word ptr [0x410], ax",
+        "jmp L_01C9"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 0,
+      "fanin": 0,
+      "description": "Funcion hoja (no llama a otras, 8 instr): probable helper aritmetico/conversion.",
+      "confidence": "low",
+      "semantic_tags": [
+        "leaf"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_01A5 -- offset 0x01A5 -- 8 instr\n; Funcion hoja (no llama a otras, 8 instr): probable helper aritmetico/conversion.\n; tags: leaf\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "OKI92",
+      "segment_file": "seg2.asm",
+      "name": "sub_01B8",
+      "kind": "FAR",
+      "offset": 440,
+      "size_bytes": null,
+      "start_line": 202,
+      "end_line": 229,
+      "num_instructions": 23,
+      "prologue": "standard_bp",
+      "epilogue": "retf_n",
+      "calls_near": [],
+      "calls_far": [
+        "far USER.CHECKRADIOBUTTON",
+        "far USER.ENDDIALOG"
+      ],
+      "num_jumps_cond": 0,
+      "num_jumps_uncond": 2,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 5,
+      "mnemonic_histogram": {
+        "push": 6,
+        "mov": 6,
+        "pop": 3,
+        "call": 2,
+        "jmp": 2,
+        "sub": 2,
+        "dec": 1,
+        "retf": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "push word ptr [bp + 0xe]",
+        "mov ax, 0x14",
+        "push ax",
+        "mov ax, 0x16",
+        "push ax",
+        "mov ax, word ptr [bp + 0xa]"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 0xa"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [
+        {
+          "module": "USER",
+          "func": "CHECKRADIOBUTTON"
+        },
+        {
+          "module": "USER",
+          "func": "ENDDIALOG"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [],
+      "fanout": 2,
+      "fanin": 0,
+      "description": "Funcion sin clasificar definitiva (23 instr).",
+      "confidence": "unknown",
+      "semantic_tags": [
+        "calls_user",
+        "far",
+        "small"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_01B8 -- offset 0x01B8 -- 23 instr\n; Funcion sin clasificar definitiva (23 instr).\n; tags: calls_user, far, small\n; calls (inter): USER.CHECKRADIOBUTTON, USER.ENDDIALOG\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "OKI92",
+      "segment_file": "seg2.asm",
+      "name": "sub_01EF",
+      "kind": "FAR",
+      "offset": 495,
+      "size_bytes": null,
+      "start_line": 230,
+      "end_line": 261,
+      "num_instructions": 29,
+      "prologue": "saves_regs",
+      "epilogue": "retf_n",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 1,
+      "num_jumps_uncond": 1,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 6,
+      "mnemonic_histogram": {
+        "mov": 8,
+        "push": 4,
+        "pop": 4,
+        "sub": 4,
+        "nop": 1,
+        "inc": 1,
+        "cmp": 1,
+        "jb": 1,
+        "shl": 1,
+        "and": 1,
+        "jmp": 1,
+        "dec": 1,
+        "retf": 1
+      },
+      "classification": "small",
+      "first_instructions": [
+        "push ds",
+        "pop ax",
+        "nop",
+        "inc bp",
+        "push bp",
+        "mov bp, sp"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 4"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0816",
+        "sub_0B3D"
+      ],
+      "fanout": 0,
+      "fanin": 2,
+      "description": "Funcion sin clasificar definitiva (29 instr).",
+      "confidence": "unknown",
+      "semantic_tags": [
+        "far",
+        "small"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_01EF -- offset 0x01EF -- 29 instr\n; Funcion sin clasificar definitiva (29 instr).\n; tags: far, small\n; callers: sub_0816, sub_0B3D\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "OKI92",
+      "segment_file": "seg2.asm",
+      "name": "sub_022A",
+      "kind": "NEAR",
+      "offset": 554,
+      "size_bytes": null,
+      "start_line": 262,
+      "end_line": 309,
+      "num_instructions": 44,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [],
+      "calls_far": [
+        "far _entry_107"
+      ],
+      "num_jumps_cond": 4,
+      "num_jumps_uncond": 0,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 20,
+      "mnemonic_histogram": {
+        "push": 16,
+        "mov": 8,
+        "les": 4,
+        "cmp": 3,
+        "sub": 3,
+        "call": 3,
+        "je": 3,
+        "jl": 1,
+        "test": 1,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "les bx, ptr [bp + 4]",
+        "cmp word ptr es:[bx + 8], 0x258",
+        "jl L_024E",
+        "push word ptr [bp + 0xa]"
+      ],
+      "last_instructions": [
+        "call far _entry_107",
+        "mov sp, bp",
+        "pop bp",
+        "ret 8"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0D0A",
+        "sub_0F0B"
+      ],
+      "fanout": 0,
+      "fanin": 2,
+      "description": "Funcion mediana (44 instr, 0 calls).",
+      "confidence": "low",
+      "semantic_tags": [
+        "medium"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_022A -- offset 0x022A -- 44 instr\n; Funcion mediana (44 instr, 0 calls).\n; tags: medium\n; callers: sub_0D0A, sub_0F0B\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "OKI92",
+      "segment_file": "seg2.asm",
+      "name": "sub_029E",
+      "kind": "FAR",
+      "offset": 670,
+      "size_bytes": null,
+      "start_line": 310,
+      "end_line": 647,
+      "num_instructions": 308,
+      "prologue": "standard_bp",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_05B2",
+        "L_075A",
+        "L_0816"
+      ],
+      "calls_far": [
+        "far KERNEL.FINDRESOURCE",
+        "far KERNEL.FREERESOURCE",
+        "far KERNEL.GETMODULEHANDLE",
+        "far KERNEL.GLOBALUNLOCK",
+        "far KERNEL.LOADRESOURCE",
+        "far KERNEL.LOCKRESOURCE",
+        "far KERNEL.SIZEOFRESOURCE",
+        "far _entry_106",
+        "far _entry_107"
+      ],
+      "num_jumps_cond": 27,
+      "num_jumps_uncond": 8,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 129,
+      "mnemonic_histogram": {
+        "mov": 82,
+        "push": 68,
+        "je": 17,
+        "call": 16,
+        "les": 14,
+        "cmp": 14,
+        "or": 13,
+        "sub": 11,
+        "add": 10,
+        "pop": 8,
+        "jmp": 8,
+        "inc": 6,
+        "cwde": 6,
+        "shl": 6,
+        "lea": 5
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "les bx, ptr [bp + 4]",
+        "cmp word ptr es:[bx + 8], 0x258",
+        "jle L_02C2",
+        "push word ptr [bp + 0xa]"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 0x10"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_05B2",
+        "sub_075A",
+        "sub_0816"
+      ],
+      "callees_inter": [
+        {
+          "module": "KERNEL",
+          "func": "FINDRESOURCE"
+        },
+        {
+          "module": "KERNEL",
+          "func": "FREERESOURCE"
+        },
+        {
+          "module": "KERNEL",
+          "func": "GETMODULEHANDLE"
+        },
+        {
+          "module": "KERNEL",
+          "func": "GLOBALUNLOCK"
+        },
+        {
+          "module": "KERNEL",
+          "func": "LOADRESOURCE"
+        },
+        {
+          "module": "KERNEL",
+          "func": "LOCKRESOURCE"
+        },
+        {
+          "module": "KERNEL",
+          "func": "SIZEOFRESOURCE"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0D0A",
+        "sub_0F0B"
+      ],
+      "fanout": 10,
+      "fanin": 2,
+      "description": "Dispatcher: tabla de decisiones cmp+jcc (308 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "calls_kernel",
+        "dispatcher",
+        "far"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_029E -- offset 0x029E -- 308 instr\n; Dispatcher: tabla de decisiones cmp+jcc (308 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_0D0A, sub_0F0B\n; calls (intra): sub_05B2, sub_075A, sub_0816\n; calls (inter): KERNEL.FINDRESOURCE, KERNEL.FREERESOURCE, KERNEL.GETMODULEHANDLE, KERNEL.GLOBALUNLOCK, KERNEL.LOADRESOURCE, KERNEL.LOCKRESOURCE (+1 mas)\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "OKI92",
+      "segment_file": "seg2.asm",
+      "name": "sub_05B2",
+      "kind": "NEAR",
+      "offset": 1458,
+      "size_bytes": null,
+      "start_line": 648,
+      "end_line": 786,
+      "num_instructions": 132,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [],
+      "calls_far": [
+        "far KERNEL.LSTRCPY"
+      ],
+      "num_jumps_cond": 3,
+      "num_jumps_uncond": 5,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 83,
+      "mnemonic_histogram": {
+        "mov": 89,
+        "cwde": 9,
+        "push": 7,
+        "jmp": 5,
+        "cmp": 3,
+        "les": 3,
+        "pop": 3,
+        "shl": 2,
+        "or": 2,
+        "jne": 2,
+        "sub": 1,
+        "lea": 1,
+        "imul": 1,
+        "je": 1,
+        "add": 1
+      },
+      "classification": "complex",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 6",
+        "push di",
+        "push si",
+        "mov bx, word ptr [bp + 0xa]"
+      ],
+      "last_instructions": [
+        "pop di",
+        "mov sp, bp",
+        "pop bp",
+        "ret 8"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [
+        {
+          "module": "KERNEL",
+          "func": "LSTRCPY"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_029E"
+      ],
+      "fanout": 1,
+      "fanin": 1,
+      "description": "Funcion compleja: 132 instrucciones, 1 llamadas, 3 branches.",
+      "confidence": "low",
+      "semantic_tags": [
+        "calls_kernel",
+        "complex"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_05B2 -- offset 0x05B2 -- 132 instr\n; Funcion compleja: 132 instrucciones, 1 llamadas, 3 branches.\n; tags: calls_kernel, complex\n; callers: sub_029E\n; calls (inter): KERNEL.LSTRCPY\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "OKI92",
+      "segment_file": "seg2.asm",
+      "name": "sub_075A",
+      "kind": "NEAR",
+      "offset": 1882,
+      "size_bytes": null,
+      "start_line": 787,
+      "end_line": 863,
+      "num_instructions": 69,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [
+        "L_0816"
+      ],
+      "calls_far": [],
+      "num_jumps_cond": 5,
+      "num_jumps_uncond": 2,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 34,
+      "mnemonic_histogram": {
+        "mov": 25,
+        "les": 15,
+        "push": 4,
+        "jne": 4,
+        "or": 3,
+        "and": 2,
+        "jmp": 2,
+        "sub": 2,
+        "pop": 2,
+        "cmp": 1,
+        "shr": 1,
+        "jle": 1,
+        "neg": 1,
+        "cdq": 1,
+        "idiv": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "push si",
+        "les bx, ptr [bp + 8]",
+        "mov al, byte ptr es:[bx + 0x11]",
+        "and al, 0xf"
+      ],
+      "last_instructions": [
+        "pop si",
+        "mov sp, bp",
+        "pop bp",
+        "ret 0xa"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0816"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_029E"
+      ],
+      "fanout": 1,
+      "fanin": 1,
+      "description": "Funcion mediana (69 instr, 1 calls).",
+      "confidence": "low",
+      "semantic_tags": [
+        "medium"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_075A -- offset 0x075A -- 69 instr\n; Funcion mediana (69 instr, 1 calls).\n; tags: medium\n; callers: sub_029E\n; calls (intra): sub_0816\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "OKI92",
+      "segment_file": "seg2.asm",
+      "name": "sub_0816",
+      "kind": "FAR",
+      "offset": 2070,
+      "size_bytes": null,
+      "start_line": 864,
+      "end_line": 1112,
+      "num_instructions": 225,
+      "prologue": "standard_bp",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_01EF",
+        "L_0A67",
+        "L_0B3D",
+        "L_0D0A"
+      ],
+      "calls_far": [
+        "far KERNEL.GLOBALFREE",
+        "far KERNEL.LSTRCMP"
+      ],
+      "num_jumps_cond": 17,
+      "num_jumps_uncond": 10,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 122,
+      "mnemonic_histogram": {
+        "push": 73,
+        "mov": 52,
+        "cmp": 15,
+        "les": 11,
+        "call": 10,
+        "jmp": 10,
+        "sub": 7,
+        "jne": 7,
+        "pop": 6,
+        "inc": 5,
+        "or": 3,
+        "jle": 3,
+        "add": 3,
+        "jl": 2,
+        "nop": 2
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 2",
+        "mov word ptr [bp - 2], 0",
+        "push word ptr [bp + 6]",
+        "push word ptr [bp + 4]"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 0x1e"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_01EF",
+        "sub_0A67",
+        "sub_0B3D",
+        "sub_0D0A"
+      ],
+      "callees_inter": [
+        {
+          "module": "KERNEL",
+          "func": "GLOBALFREE"
+        },
+        {
+          "module": "KERNEL",
+          "func": "LSTRCMP"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_029E",
+        "sub_075A"
+      ],
+      "fanout": 6,
+      "fanin": 2,
+      "description": "Dispatcher: tabla de decisiones cmp+jcc (225 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "calls_kernel",
+        "dispatcher",
+        "far"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0816 -- offset 0x0816 -- 225 instr\n; Dispatcher: tabla de decisiones cmp+jcc (225 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_029E, sub_075A\n; calls (intra): sub_01EF, sub_0A67, sub_0B3D, sub_0D0A\n; calls (inter): KERNEL.GLOBALFREE, KERNEL.LSTRCMP\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "OKI92",
+      "segment_file": "seg2.asm",
+      "name": "sub_0A67",
+      "kind": "NEAR",
+      "offset": 2663,
+      "size_bytes": null,
+      "start_line": 1113,
+      "end_line": 1192,
+      "num_instructions": 74,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [
+        "L_0C69"
+      ],
+      "calls_far": [
+        "far GDI.INSERTPQ",
+        "far GDI.SIZEPQ",
+        "far KERNEL.GLOBALLOCK",
+        "far KERNEL.GLOBALUNLOCK",
+        "far _entry_106"
+      ],
+      "num_jumps_cond": 3,
+      "num_jumps_uncond": 2,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 39,
+      "mnemonic_histogram": {
+        "mov": 22,
+        "push": 20,
+        "les": 9,
+        "call": 8,
+        "inc": 3,
+        "jne": 3,
+        "add": 3,
+        "sub": 2,
+        "jmp": 2,
+        "pop": 1,
+        "ret": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 8",
+        "les bx, ptr [bp + 0xa]",
+        "mov ax, word ptr es:[bx + 0x30]",
+        "mov word ptr [bp - 6], ax"
+      ],
+      "last_instructions": [
+        "mov ax, word ptr [bp + 4]",
+        "mov sp, bp",
+        "pop bp",
+        "ret 0xa"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_0C69"
+      ],
+      "callees_inter": [
+        {
+          "module": "GDI",
+          "func": "INSERTPQ"
+        },
+        {
+          "module": "GDI",
+          "func": "SIZEPQ"
+        },
+        {
+          "module": "KERNEL",
+          "func": "GLOBALLOCK"
+        },
+        {
+          "module": "KERNEL",
+          "func": "GLOBALUNLOCK"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0816"
+      ],
+      "fanout": 5,
+      "fanin": 1,
+      "description": "Funcion mediana (74 instr, 5 calls).",
+      "confidence": "low",
+      "semantic_tags": [
+        "calls_gdi",
+        "calls_kernel",
+        "medium"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0A67 -- offset 0x0A67 -- 74 instr\n; Funcion mediana (74 instr, 5 calls).\n; tags: calls_gdi, calls_kernel, medium\n; callers: sub_0816\n; calls (intra): sub_0C69\n; calls (inter): GDI.INSERTPQ, GDI.SIZEPQ, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "OKI92",
+      "segment_file": "seg2.asm",
+      "name": "sub_0B3D",
+      "kind": "NEAR",
+      "offset": 2877,
+      "size_bytes": null,
+      "start_line": 1193,
+      "end_line": 1316,
+      "num_instructions": 110,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [
+        "L_01EF"
+      ],
+      "calls_far": [
+        "far KERNEL.GLOBALALLOC",
+        "far KERNEL.GLOBALLOCK",
+        "far KERNEL.GLOBALUNLOCK"
+      ],
+      "num_jumps_cond": 11,
+      "num_jumps_uncond": 5,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 64,
+      "mnemonic_histogram": {
+        "mov": 44,
+        "push": 10,
+        "les": 10,
+        "cmp": 9,
+        "sub": 5,
+        "jmp": 5,
+        "jb": 4,
+        "inc": 4,
+        "call": 4,
+        "jne": 3,
+        "or": 2,
+        "pop": 2,
+        "add": 1,
+        "jge": 1,
+        "ja": 1
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 0x12",
+        "push si",
+        "les bx, ptr [bp + 4]",
+        "mov ax, word ptr es:[bx + 0x23]"
+      ],
+      "last_instructions": [
+        "pop si",
+        "mov sp, bp",
+        "pop bp",
+        "ret 0xa"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_01EF"
+      ],
+      "callees_inter": [
+        {
+          "module": "KERNEL",
+          "func": "GLOBALALLOC"
+        },
+        {
+          "module": "KERNEL",
+          "func": "GLOBALLOCK"
+        },
+        {
+          "module": "KERNEL",
+          "func": "GLOBALUNLOCK"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0816",
+        "sub_0F0B"
+      ],
+      "fanout": 4,
+      "fanin": 2,
+      "description": "Dispatcher: tabla de decisiones cmp+jcc (110 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "calls_kernel",
+        "dispatcher"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0B3D -- offset 0x0B3D -- 110 instr\n; Dispatcher: tabla de decisiones cmp+jcc (110 instr).\n; tags: calls_kernel, dispatcher\n; callers: sub_0816, sub_0F0B\n; calls (intra): sub_01EF\n; calls (inter): KERNEL.GLOBALALLOC, KERNEL.GLOBALLOCK, KERNEL.GLOBALUNLOCK\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "OKI92",
+      "segment_file": "seg2.asm",
+      "name": "sub_0C69",
+      "kind": "FAR",
+      "offset": 3177,
+      "size_bytes": null,
+      "start_line": 1317,
+      "end_line": 1387,
+      "num_instructions": 66,
+      "prologue": "standard_bp",
+      "epilogue": "retf_n",
+      "calls_near": [],
+      "calls_far": [
+        "far KERNEL.GLOBALALLOC",
+        "far KERNEL.GLOBALREALLOC"
+      ],
+      "num_jumps_cond": 3,
+      "num_jumps_uncond": 2,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 17,
+      "mnemonic_histogram": {
+        "mov": 19,
+        "push": 13,
+        "pop": 6,
+        "sub": 4,
+        "les": 4,
+        "add": 3,
+        "cdq": 2,
+        "call": 2,
+        "or": 2,
+        "jne": 2,
+        "jmp": 2,
+        "cmp": 1,
+        "jl": 1,
+        "ret": 1,
+        "nop": 1
+      },
+      "classification": "medium",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 2",
+        "push di",
+        "push si",
+        "les bx, ptr [bp + 6]"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 4"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [
+        {
+          "module": "KERNEL",
+          "func": "GLOBALALLOC"
+        },
+        {
+          "module": "KERNEL",
+          "func": "GLOBALREALLOC"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0A67"
+      ],
+      "fanout": 2,
+      "fanin": 1,
+      "description": "Funcion mediana (66 instr, 2 calls).",
+      "confidence": "low",
+      "semantic_tags": [
+        "calls_kernel",
+        "far",
+        "medium"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0C69 -- offset 0x0C69 -- 66 instr\n; Funcion mediana (66 instr, 2 calls).\n; tags: calls_kernel, far, medium\n; callers: sub_0A67\n; calls (inter): KERNEL.GLOBALALLOC, KERNEL.GLOBALREALLOC\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "OKI92",
+      "segment_file": "seg2.asm",
+      "name": "sub_0D0A",
+      "kind": "NEAR",
+      "offset": 3338,
+      "size_bytes": null,
+      "start_line": 1388,
+      "end_line": 1586,
+      "num_instructions": 181,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [
+        "L_022A",
+        "L_029E",
+        "L_0F0B"
+      ],
+      "calls_far": [
+        "far _entry_107"
+      ],
+      "num_jumps_cond": 15,
+      "num_jumps_uncond": 7,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 114,
+      "mnemonic_histogram": {
+        "mov": 57,
+        "push": 34,
+        "les": 15,
+        "cmp": 12,
+        "sub": 8,
+        "add": 8,
+        "jmp": 7,
+        "je": 7,
+        "call": 6,
+        "jne": 5,
+        "cwde": 3,
+        "shl": 3,
+        "inc": 3,
+        "or": 2,
+        "pop": 2
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 0x1a",
+        "push si",
+        "cmp word ptr [bp + 0x10], 0",
+        "jle L_0D1C"
+      ],
+      "last_instructions": [
+        "pop si",
+        "mov sp, bp",
+        "pop bp",
+        "ret 0x16"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_022A",
+        "sub_029E",
+        "sub_0F0B"
+      ],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0816"
+      ],
+      "fanout": 3,
+      "fanin": 1,
+      "description": "Dispatcher: tabla de decisiones cmp+jcc (181 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "dispatcher"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0D0A -- offset 0x0D0A -- 181 instr\n; Dispatcher: tabla de decisiones cmp+jcc (181 instr).\n; tags: dispatcher\n; callers: sub_0816\n; calls (intra): sub_022A, sub_029E, sub_0F0B\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "OKI92",
+      "segment_file": "seg2.asm",
+      "name": "sub_0F0B",
+      "kind": "FAR",
+      "offset": 3851,
+      "size_bytes": null,
+      "start_line": 1587,
+      "end_line": 1840,
+      "num_instructions": 232,
+      "prologue": "standard_bp",
+      "epilogue": "retf_n",
+      "calls_near": [
+        "L_022A",
+        "L_029E",
+        "L_0B3D",
+        "L_1183",
+        "L_11BD"
+      ],
+      "calls_far": [
+        "far KERNEL.GLOBALFREE",
+        "far _entry_107",
+        "far _entry_108",
+        "far _entry_109",
+        "far _entry_11"
+      ],
+      "num_jumps_cond": 16,
+      "num_jumps_uncond": 9,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 117,
+      "mnemonic_histogram": {
+        "push": 90,
+        "mov": 43,
+        "call": 18,
+        "cmp": 12,
+        "sub": 9,
+        "jmp": 9,
+        "les": 9,
+        "jne": 6,
+        "je": 5,
+        "add": 4,
+        "pop": 4,
+        "dec": 3,
+        "or": 3,
+        "jge": 2,
+        "shl": 2
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 2",
+        "push word ptr [bp + 0x14]",
+        "push word ptr [bp + 0x12]",
+        "lea ax, [bp + 0x10]"
+      ],
+      "last_instructions": [
+        "pop ds",
+        "pop bp",
+        "dec bp",
+        "retf 0x1e"
+      ],
+      "discovered": true,
+      "callees_intra": [
+        "sub_022A",
+        "sub_029E",
+        "sub_0B3D",
+        "sub_1183",
+        "sub_11BD"
+      ],
+      "callees_inter": [
+        {
+          "module": "KERNEL",
+          "func": "GLOBALFREE"
+        }
+      ],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0D0A"
+      ],
+      "fanout": 6,
+      "fanin": 1,
+      "description": "Dispatcher: tabla de decisiones cmp+jcc (232 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "calls_kernel",
+        "dispatcher",
+        "far"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_0F0B -- offset 0x0F0B -- 232 instr\n; Dispatcher: tabla de decisiones cmp+jcc (232 instr).\n; tags: calls_kernel, dispatcher, far\n; callers: sub_0D0A\n; calls (intra): sub_022A, sub_029E, sub_0B3D, sub_1183, sub_11BD\n; calls (inter): KERNEL.GLOBALFREE\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "OKI92",
+      "segment_file": "seg2.asm",
+      "name": "sub_1183",
+      "kind": "NEAR",
+      "offset": 4483,
+      "size_bytes": null,
+      "start_line": 1841,
+      "end_line": 1872,
+      "num_instructions": 26,
+      "prologue": "standard_bp",
+      "epilogue": "ret_n",
+      "calls_near": [],
+      "calls_far": [],
+      "num_jumps_cond": 4,
+      "num_jumps_uncond": 2,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 8,
+      "mnemonic_histogram": {
+        "cmp": 4,
+        "inc": 4,
+        "mov": 3,
+        "push": 2,
+        "sub": 2,
+        "jmp": 2,
+        "les": 2,
+        "jg": 2,
+        "pop": 2,
+        "je": 1,
+        "jne": 1,
+        "ret": 1
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 2",
+        "push si",
+        "sub si, si",
+        "jmp L_119B"
+      ],
+      "last_instructions": [
+        "pop si",
+        "mov sp, bp",
+        "pop bp",
+        "ret 6"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0F0B"
+      ],
+      "fanout": 0,
+      "fanin": 1,
+      "description": "Dispatcher: tabla de decisiones cmp+jcc (26 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "dispatcher"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_1183 -- offset 0x1183 -- 26 instr\n; Dispatcher: tabla de decisiones cmp+jcc (26 instr).\n; tags: dispatcher\n; callers: sub_0F0B\n;----------------------------------------------------------------------"
+    },
+    {
+      "module": "OKI92",
+      "segment_file": "seg2.asm",
+      "name": "sub_11BD",
+      "kind": "NEAR",
+      "offset": 4541,
+      "size_bytes": null,
+      "start_line": 1873,
+      "end_line": 1942,
+      "num_instructions": 65,
+      "prologue": "standard_bp",
+      "epilogue": "jmp_tail",
+      "calls_near": [],
+      "calls_far": [
+        "far _entry_107"
+      ],
+      "num_jumps_cond": 6,
+      "num_jumps_uncond": 2,
+      "ints": [],
+      "has_loop": false,
+      "has_string_op": false,
+      "num_mem_refs": 26,
+      "mnemonic_histogram": {
+        "push": 16,
+        "mov": 15,
+        "les": 7,
+        "cmp": 5,
+        "sub": 4,
+        "je": 3,
+        "call": 3,
+        "dec": 2,
+        "jge": 2,
+        "jmp": 2,
+        "db": 2,
+        "or": 1,
+        "jne": 1,
+        "shl": 1,
+        "pop": 1
+      },
+      "classification": "dispatcher",
+      "first_instructions": [
+        "push bp",
+        "mov bp, sp",
+        "sub sp, 2",
+        "les bx, ptr [bp + 4]",
+        "mov ax, word ptr es:[bx + 0x14]",
+        "mov word ptr [bp - 2], ax"
+      ],
+      "last_instructions": [
+        "mov sp, bp",
+        "pop bp",
+        "db 0c2h",
+        "db 008h"
+      ],
+      "discovered": true,
+      "callees_intra": [],
+      "callees_inter": [],
+      "callees_unresolved": [],
+      "callers": [
+        "sub_0F0B"
+      ],
+      "fanout": 0,
+      "fanin": 1,
+      "description": "Dispatcher: tabla de decisiones cmp+jcc (65 instr).",
+      "confidence": "medium",
+      "semantic_tags": [
+        "dispatcher"
+      ],
+      "comment_block": ";----------------------------------------------------------------------\n; sub_11BD -- offset 0x11BD -- 65 instr\n; Dispatcher: tabla de decisiones cmp+jcc (65 instr).\n; tags: dispatcher\n; callers: sub_0F0B\n;----------------------------------------------------------------------"
+    }
+  ]
+}

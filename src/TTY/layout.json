@@ -1,0 +1,27 @@
+{
+  "module": "TTY",
+  "original_name": "TTY.DRV",
+  "original_size": 4800,
+  "ne_off": 64,
+  "sector": 512,
+  "segments": [
+    {
+      "index": 1,
+      "file_off": 1024,
+      "data_len": 2730,
+      "flags": 61808,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 27
+    },
+    {
+      "index": 2,
+      "file_off": 4096,
+      "data_len": 210,
+      "flags": 81,
+      "is_data": true,
+      "has_reloc": false,
+      "reloc_count": 0
+    }
+  ]
+}

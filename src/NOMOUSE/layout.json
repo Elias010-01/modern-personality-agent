@@ -1,0 +1,18 @@
+{
+  "module": "NOMOUSE",
+  "original_name": "NOMOUSE.DRV",
+  "original_size": 1592,
+  "ne_off": 1024,
+  "sector": 512,
+  "segments": [
+    {
+      "index": 1,
+      "file_off": 1536,
+      "data_len": 56,
+      "flags": 64,
+      "is_data": false,
+      "has_reloc": false,
+      "reloc_count": 0
+    }
+  ]
+}

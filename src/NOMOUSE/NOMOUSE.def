@@ -1,0 +1,14 @@
+; MOUSE.DEF - module definition para Windows 1.x
+; AUTO-GENERATED desde NOMOUSE.DRV (NE entry/relocation tables)
+
+LIBRARY     MOUSE
+DESCRIPTION 'No pointing device'
+EXETYPE     WINDOWS
+STUB        'WINSTUB.EXE'
+
+CODE        PRELOAD FIXED
+
+EXPORTS
+    INQUIRE                @1
+    ENABLE                 @2
+    DISABLE                @3

@@ -1,0 +1,99 @@
+{
+  "module": "CALENDAR",
+  "original_name": "CALENDAR.EXE",
+  "original_size": 37552,
+  "ne_off": 1024,
+  "sector": 16,
+  "segments": [
+    {
+      "index": 1,
+      "file_off": 1984,
+      "data_len": 1733,
+      "flags": 61808,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 36
+    },
+    {
+      "index": 2,
+      "file_off": 4016,
+      "data_len": 1311,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 22
+    },
+    {
+      "index": 3,
+      "file_off": 5520,
+      "data_len": 22642,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 132
+    },
+    {
+      "index": 4,
+      "file_off": 29232,
+      "data_len": 362,
+      "flags": 272,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 8
+    },
+    {
+      "index": 5,
+      "file_off": 29664,
+      "data_len": 396,
+      "flags": 272,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 3
+    },
+    {
+      "index": 6,
+      "file_off": 30096,
+      "data_len": 527,
+      "flags": 16,
+      "is_data": false,
+      "has_reloc": false,
+      "reloc_count": 0
+    },
+    {
+      "index": 7,
+      "file_off": 30624,
+      "data_len": 779,
+      "flags": 272,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 2
+    },
+    {
+      "index": 8,
+      "file_off": 31424,
+      "data_len": 310,
+      "flags": 272,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 3
+    },
+    {
+      "index": 9,
+      "file_off": 31760,
+      "data_len": 542,
+      "flags": 272,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 7
+    },
+    {
+      "index": 10,
+      "file_off": 32368,
+      "data_len": 518,
+      "flags": 273,
+      "is_data": true,
+      "has_reloc": true,
+      "reloc_count": 9
+    }
+  ]
+}

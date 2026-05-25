@@ -1,0 +1,36 @@
+{
+  "module": "EPSON",
+  "original_name": "EPSON.DRV",
+  "original_size": 14352,
+  "ne_off": 64,
+  "sector": 16,
+  "segments": [
+    {
+      "index": 1,
+      "file_off": 704,
+      "data_len": 4490,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 33
+    },
+    {
+      "index": 2,
+      "file_off": 5472,
+      "data_len": 5204,
+      "flags": 61744,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 34
+    },
+    {
+      "index": 3,
+      "file_off": 10960,
+      "data_len": 1208,
+      "flags": 81,
+      "is_data": true,
+      "has_reloc": false,
+      "reloc_count": 0
+    }
+  ]
+}

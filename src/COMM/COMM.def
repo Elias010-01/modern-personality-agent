@@ -1,0 +1,31 @@
+; COMM.DEF - module definition para Windows 1.x
+; AUTO-GENERATED desde COMM.DRV (NE entry/relocation tables)
+
+LIBRARY     COMM
+DESCRIPTION 'Windows Communications Driver'
+EXETYPE     WINDOWS
+STUB        'WINSTUB.EXE'
+
+CODE        PRELOAD FIXED
+DATA        PRELOAD FIXED SINGLE
+
+IMPORTS
+    SYSTEM.CREATESYSTEMTIMER
+    SYSTEM.KILLSYSTEMTIMER
+
+EXPORTS
+    INICOM                 @1
+    SETCOM                 @2
+    SETQUE                 @3
+    RECCOM                 @4
+    SNDCOM                 @5
+    CTX                    @6
+    TRMCOM                 @7
+    STACOM                 @8
+    CEXTFCN                @9
+    CFLUSH                 @10
+    CEVT                   @11
+    CEVTGET                @12
+    CSETBRK                @13
+    CCLRBRK                @14
+    GETDCB                 @15

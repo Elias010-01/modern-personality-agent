@@ -1,0 +1,14 @@
+version:    v08
+slug:       mods-visibles-al-arrancar
+timestamp:  2026-05-25T01:01:03Z
+message:    Sistema de mods completo y visible al arrancar: smart_build con opt-in [ASM], mod_system.py (create/apply/revert/list/status) + deploy automatico al IMG, mod 'menubar' con 16 cambios visibles (Elias's Windows!! + Version MOD! en splash WIN.COM, Elias's Windows!! en About x6 en WIN100.OVL, MS-DOS Executive -> Elias's Windows! en titulo de shell, File/View/Special -> MOD!/MIO!/ZONA!!! en menus, Microsoft Windows -> Elias Windows!!!! en MSDOS.EXE resources). Bitmap del 'Microsoft' GRANDE del splash localizado en WIN.COM @ 0x08C0 (2624B) pero parece estar mezclado con codigo de init grafico, no editable directamente sin pixel-perfect rasterizado, asi que dejado para posible fase futura.
+git_branch: (no git)
+git_commit: (no git)
+host:       DESKTOP-GPDC4N2
+user:       elias
+
+stats:
+  src_modules:   70
+  built_files:   69
+  db_functions:  1216
+  db_matched:    1216

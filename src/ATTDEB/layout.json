@@ -1,0 +1,27 @@
+{
+  "module": "ATTDEB",
+  "original_name": "ATTDEB.DRV",
+  "original_size": 17824,
+  "ne_off": 1024,
+  "sector": 512,
+  "segments": [
+    {
+      "index": 1,
+      "file_off": 2048,
+      "data_len": 9728,
+      "flags": 320,
+      "is_data": false,
+      "has_reloc": true,
+      "reloc_count": 1
+    },
+    {
+      "index": 2,
+      "file_off": 12288,
+      "data_len": 1169,
+      "flags": 65,
+      "is_data": true,
+      "has_reloc": false,
+      "reloc_count": 0
+    }
+  ]
+}
