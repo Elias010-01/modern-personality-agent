@@ -25,3 +25,4 @@ TIMELINE
             v9  always db on seg-prefix; cmov*; ptr->dword ptr
             v10 0F-escape opcodes -> db; imul imm8-fit -> db
           Next: PHASE 2 - link OBJ to .EXE/.DRV/.COM and hash vs originals.
+[T+1:30] Pass24 v10 + pass27 internals running (OBJ=1041/8099, ~67 min projected)

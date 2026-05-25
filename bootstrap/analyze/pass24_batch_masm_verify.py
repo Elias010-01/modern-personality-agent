@@ -36,6 +36,7 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parents[2]
 PASS23 = REPO / 'state' / 'analyze' / 'pass23'
 PASS25 = REPO / 'state' / 'analyze' / 'pass25'
+PASS27 = REPO / 'state' / 'analyze' / 'pass27'
 PASS24 = REPO / 'state' / 'analyze' / 'pass24'
 WORK = REPO / 'tools' / 'dos' / 'work' / 'batch'
 CACHE = REPO / 'tools' / 'dos' / 'work' / 'cache'
@@ -1004,11 +1005,19 @@ def main():
                 src_counts[source_name] += 1
                 all_candidates.append(c)
 
+    # pass27 is a strict superset of pass25 (it merges in pass27 internals
+    # AND keeps every pass25 export); load it first if available so we don't
+    # double-process candidates.
+    src_counts['pass27'] = 0
+    if PASS27.exists() and any(PASS27.glob('*.json')):
+        _load_dir(PASS27, 'pass27')
+    else:
+        _load_dir(PASS25, 'pass25')
     _load_dir(PASS23, 'pass23')
-    _load_dir(PASS25, 'pass25')
 
     print(f'Loaded {len(all_candidates)} candidates '
           f'(pass23={src_counts["pass23"]}, pass25={src_counts["pass25"]}, '
+          f'pass27={src_counts["pass27"]}, '
           f'{redisasm_count} re-disassembled, {skipped} skipped).\n')
 
     # Stage MASM toolchain
