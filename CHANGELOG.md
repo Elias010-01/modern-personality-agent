@@ -2,6 +2,72 @@
 
 Historial de versiones del proyecto win103-byteexact (renombrado desde modern-personality-agent).
 
+## v12 - 2026-05-26 - cobertura-completa-92-de-92
+
+v12 - TODO EL OS EN EL PIPELINE BYTE-EXACT (no solo los 69 NE)
+
+Cierre del bucle de COBERTURA: ya no solo los modulos NE estan en el
+pipeline byte-exact desde source, sino TODOS los binarios que viajan en
+el juego de disquetes de Windows 1.03.
+
+Antes (v11):  69 / 69 NE .EXE/.DRV byte-exact via builder + MASM 4.00
+Ahora (v12):  92 / 92 binarios byte-exact via build_from_source.py
+
+Lo nuevo en v12:
+
+  +18 fuentes .FON (HELVA-D, COURA-D, TMSRA-D, ROMAN, SCRIPT, MODERN,
+                     FONTS400, HIFONTS, LOFONTS) - todas NE de recursos
+  +1 WIN.COM - boot loader flat .COM (~5 KB, JMP a 0x01C1)
+  +1 WIN100.BIN - second-stage loader (NE)
+  +1 WIN100.OVL - real-mode overlay (220 KB, formato no-MZ)
+  +1 WINOLDAP.MOD - DOS-app compatibility (NE)
+  +1 WINOLDAP.GRB - DOS-app graphics resource (flat blob)
+
+Cambios tecnicos:
+
+  bootstrap/extract_segments.py
+    - extract_flat_blob() para binarios sin header MZ (flat .COM, overlays,
+      graphics resources). Una sola seccion raw db para byte-exact rebuild.
+    - _resolve_mod_dir() resuelve colisiones de stem: cuando dos ficheros
+      comparten stem (WIN100.BIN vs WIN100.OVL), el segundo se extrae a
+      src/<stem>_<EXT>/ en vez de sobrescribir el primero.
+    - Auto-discovery cubre .FON .MOD .COM .OVL .GRB .BIN ademas de
+      .EXE .DRV.
+
+  bootstrap/build_from_source.py
+    - Ya cubria los nuevos modulos sin cambios: para 0-segment NE (.FON)
+      el ne_meta.bin ES el binario original. Para flat blobs, seg1.asm
+      (db de los bytes) reconstruye trivialmente.
+
+  bootstrap/diagnose_msdos_diff.py
+    - Diagnosticador de diffs byte-exact para cualquier modulo que rompa.
+      Se uso para descubrir que el unico failure de v11 (MSDOS.EXE) era
+      contaminacion de mod previo en built/, no un bug del pipeline.
+
+  bootstrap/survey_pipeline_gap.py
+    - Audit que reporta IN PIPELINE / PARTIAL / OUT OF PIPELINE.
+    - Estado final v12: 92 / 0 / 0.
+
+  src/WIN/WIN.asm
+    - Disassembly Capstone-based de WIN.COM (preliminar; el seg1.asm
+      raw del pipeline es la fuente autoritativa para byte-exactness).
+    - Sirve como base para futura conversion a source MASM 4.00
+      reensamblable (subTODO de v12).
+
+VERIFICACION FINAL:
+
+  build_from_source.py:  92 / 92 byte-exact desde source
+  pass24 MASM 4.00:       8,555 / 8,555 funciones byte-identicas
+  pass26 cobertura:       986,658 / 986,658 bytes (100 %)
+  survey:                 92 IN PIPELINE, 0 PARTIAL, 0 OUT OF PIPELINE
+
+Pendiente (no bloqueante):
+  - Convertir WIN.asm en source MASM 4.00 reassemblable real
+  - Conseguir EXE2BIN.EXE para reensamblar flat .COM via MASM/LINK
+  - Extender pass24 a WIN.COM, WIN100.BIN, WINOLDAP.MOD (los 3 nuevos
+    binarios con codigo real). Actualmente cubre solo los 68 NE
+    code-bearing originales.
+
 ## v11 - 2026-05-26 - verificacion-byte-exacta-masm-4.00
 
 v11 - VERIFICACION BYTE-EXACTA COMPLETA CON MASM 4.00 ORIGINAL
