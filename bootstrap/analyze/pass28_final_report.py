@@ -34,6 +34,7 @@ ORIGINAL = REPO / 'original'
 P24      = REPO / 'state' / 'analyze' / 'pass24' / 'results.json'
 P25      = REPO / 'state' / 'analyze' / 'pass25'
 P27      = REPO / 'state' / 'analyze' / 'pass27'
+P30      = REPO / 'state' / 'analyze' / 'pass30'
 OUT      = REPO / 'state' / 'analyze' / 'pass28'
 OUT.mkdir(parents=True, exist_ok=True)
 
@@ -90,14 +91,17 @@ def main():
         if data is None or not segs:
             continue
 
-        # Pick the most-comprehensive candidate file (pass27 if available,
-        # else pass25).
-        c_path = P27 / f'{module}.json'
-        if not c_path.exists():
-            c_path = P25 / f'{module}.json'
-        if not c_path.exists():
+        # Pull candidates from EVERY producer (pass30 full-segment,
+        # pass27 internal funcs, pass25 universal extract). The
+        # coverage bitmap deduplicates overlapping bytes naturally.
+        candidates = []
+        for src in (P30, P27, P25):
+            jp = src / f'{module}.json'
+            if jp.exists():
+                candidates.extend(
+                    json.loads(jp.read_text()).get('candidates', []))
+        if not candidates:
             continue
-        candidates = json.loads(c_path.read_text()).get('candidates', [])
 
         # Build coverage bitmap per code segment.
         cov = {s['index']: bytearray(s['data_size'])
