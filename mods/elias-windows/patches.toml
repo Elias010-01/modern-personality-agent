@@ -1,0 +1,86 @@
+# Declarative patches for the 'elias-windows' showcase mod.
+#
+# Two TOML files describe this mod:
+#   meta.toml      - human-readable metadata (name, author, description)
+#   patches.toml   - THIS FILE: declarative list of targets and patches
+#
+# Engine:  bootstrap/mod_engine.py
+# Apply:   python bootstrap/launch_elias_win103.py
+#     or:  python bootstrap/mod_system.py apply elias-windows
+#
+# All offsets and sizes are validated against bootstrap/win103_layout.py at
+# build time.
+
+rebuilds = ["MSDOS"]
+
+# -----------------------------------------------------------
+#  MSDOS.EXE - rebuilt from src/ with patched ne_meta.bin strings
+# -----------------------------------------------------------
+[[targets]]
+output = "MSDOS.EXE"
+source = "rebuild:MSDOS"
+
+  [[targets.patches]]
+  type = "string"
+  scope = "src/MSDOS/ne_meta.bin"
+  replacements = [
+    ["File",              "MOD!"],
+    ["View",              "MIO!"],
+    ["Special",           "ZONA!!!"],
+    ["MS-DOS Executive",  "Elias's Windows!"],
+    ["Microsoft Windows", "Elias Windows!!!!"],
+  ]
+
+
+# -----------------------------------------------------------
+#  WIN.COM - original + string patches + Blibbet bitmap (optional)
+# -----------------------------------------------------------
+[[targets]]
+output = "WIN.COM"
+source = "original/WIN.COM"
+
+  [[targets.patches]]
+  type = "string"
+  replacements = [
+    ["Microsoft Windows", "Elias's Windows!!"],
+    ["Version 1.03",      "Version MOD!"],
+    # Copyright line 1 (70 B) - padded with spaces to length-preserve
+    ["Copyright (c) Microsoft Corporation, 1985, 1986.  All Rights Reserved.",
+     "This mod is unofficial. Original (c) Microsoft Corp 1985, 1986.       "],
+    # Copyright line 2 (54 B) - blanked
+    ["Microsoft is a registered trademark of Microsoft Corp.",
+     "                                                      "],
+  ]
+
+  # Logo bitmap from the user's edited BMP. Optional: if the BMP is
+  # missing the original Microsoft logo is kept.
+  [[targets.patches]]
+  type     = "bitmap"
+  offset   = "WINCOM_LOGO_OFFSET"
+  size     = "WINCOM_LOGO_SIZE"
+  width    = 536
+  height   = 36
+  format   = "cga-mode6-bank-interleaved-1bpp"
+  source   = "mod/blibbet/blibbet_logo.bmp"
+  optional = true
+
+
+# -----------------------------------------------------------
+#  WIN100.OVL - original + string patches
+# -----------------------------------------------------------
+[[targets]]
+output = "WIN100.OVL"
+source = "original/WIN100.OVL"
+
+  [[targets.patches]]
+  type = "string"
+  replacements = [
+    ["Microsoft Windows", "Elias's Windows!!"],
+  ]
+
+
+# -----------------------------------------------------------
+#  Deployment: inject all built targets into the FAT12 floppy IMG
+# -----------------------------------------------------------
+[deploy]
+img = "runtime/win103-built.img"

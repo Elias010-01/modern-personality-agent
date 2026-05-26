@@ -168,7 +168,22 @@ def cmd_apply(args) -> int:
         print(f"ERROR: mods/{name} no existe. Mods disponibles:", file=sys.stderr)
         return cmd_list(args)
 
-    print(f"Aplicando mod '{name}'...")
+    # If mod has a declarative patches.toml, use the new engine.
+    if (mod_dir / "patches.toml").exists():
+        print(f"Aplicando mod '{name}' via mod_engine (declarative)...")
+        sys.path.insert(0, str(ROOT / "bootstrap"))
+        import mod_engine
+        try:
+            mod_engine.run_mod(mod_dir, deploy=True)
+        except Exception as e:
+            print(f"ERROR: {e}", file=sys.stderr)
+            return 1
+        set_applied_mod(name)
+        print(f"\nMod '{name}' aplicado correctamente via mod_engine.")
+        return 0
+
+    # Legacy v07 flow (patches/<MOD>/<file> + files/) follows.
+    print(f"Aplicando mod '{name}' (legacy v07 flow)...")
 
     # 1. Restaurar src/ a base limpio
     print("  Paso 1/3: restaurando src/ desde backup")

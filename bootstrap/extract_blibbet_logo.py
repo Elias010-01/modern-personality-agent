@@ -16,10 +16,13 @@ Layout discovered:
 from __future__ import annotations
 
 import struct
+import sys
 import zlib
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT / "bootstrap"))
+
 WIN_COM = ROOT / "original" / "WIN.COM"
 OUT_DIR = ROOT / "screenshots" / "blibbet_hunt" / "extracted"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -51,11 +54,13 @@ def main() -> int:
     data = WIN_COM.read_bytes()
     print(f"WIN.COM: {len(data)} bytes (0x{len(data):04X})")
 
-    LOGO_OFF = 0x099D
-    BPR = 67
-    H = 36
-    BANK_SIZE = (H // 2) * BPR  # 1206
-    SIZE = BANK_SIZE * 2  # 2412
+    from win103_layout import (
+        WINCOM_LOGO_OFFSET as LOGO_OFF,
+        WINCOM_LOGO_BPR as BPR,
+        WINCOM_LOGO_HEIGHT as H,
+        WINCOM_LOGO_BANK_BYTES as BANK_SIZE,
+        WINCOM_LOGO_SIZE as SIZE,
+    )
     end = LOGO_OFF + SIZE
     print(f"Logo span: 0x{LOGO_OFF:04X} .. 0x{end-1:04X} (incl)")
     print(f"Total: {SIZE} bytes ({SIZE} = 2 banks of {BANK_SIZE} bytes each)")

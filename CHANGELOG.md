@@ -2,6 +2,169 @@
 
 Historial de versiones del proyecto win103-byteexact (renombrado desde modern-personality-agent).
 
+## v13.2 - 2026-05-26 - SDK hardening: declarative mod engine + tests + CI
+
+Refactor profundo del Mod SDK introducido en v13.1.  Sin romper nada
+existente, ahora todo el sistema vive sobre un motor declarativo unico
+y tiene tests automatizados.
+
+### Centralizacion de constantes -> `bootstrap/win103_layout.py`
+
+  Single source of truth para todos los offsets / tamanos:
+
+    SIZE_BY_FILE        WIN.COM / WIN100.OVL / WIN100.BIN / MSDOS.EXE / WINOLDAP.MOD
+    WINCOM_LOGO_*       offset, width, height, bpr, banks, size
+    WINCOM_STRINGS      offsets de strings parcheables en WIN.COM
+    NE_META_STRINGS     offsets en src/MSDOS/ne_meta.bin
+    WIN100_OVL_STRINGS  ocurrencias en WIN100.OVL
+    WINCOM_ANCHORS      ubicaciones del disasm (tag_logo, set_cga_mode6, ...)
+
+  Helper `validate_against_originals(orig_dir)` lanza ValueError si algun
+  fichero en `original/` no tiene el tamano esperado (detecta corrupcion
+  o version equivocada del juego de disquetes).
+
+  `blibbet_mod.py`, `extract_blibbet_logo.py`, `decode_logo_final.py` y
+  `mod_engine.py` ahora importan de aqui en lugar de hard-codear bytes.
+
+### Motor de mods declarativo -> `bootstrap/mod_engine.py`
+
+  Un mod ahora se describe con dos TOML en `mods/<name>/`:
+
+    meta.toml         metadatos human-readable (name, title, author, ...)
+
+    patches.toml      DECLARATIVO: targets + patches.
+                      Soporta:
+                        - `type = "string"` con replacements [old, new]
+                          (length-preserving, word-boundary-safe)
+                        - `type = "bitmap"` con offset/size/format/source
+                          (formato 'cga-mode6-bank-interleaved-1bpp' para
+                          el logo Blibbet)
+                        - `source = "rebuild:<MODULE>"` para targets que
+                          se recompilan via smart_build
+                        - `scope = "src/.../...bin"` para parchear un
+                          fichero ANTES del rebuild (e.g. ne_meta.bin)
+                        - `optional = true` para patches que se saltan
+                          si la fuente no existe
+                        - `[deploy] img = "..."` para inyectar todos los
+                          targets en una IMG FAT12
+
+  Funciones publicas:
+    load_mod(mod_dir)                     -> ModSpec
+    apply_string_patch(data, repls, ...)  -> count
+    apply_bitmap_patch(data, patch, ...)  -> count
+    build_target(target, spec, ...)       -> bytes
+    deploy_to_img(img, artifacts, ...)
+    run_mod(mod_dir, deploy=True)         -> RunResult
+
+  Migracion: `mods/elias-windows/` ahora tiene `patches.toml` con los 14
+  parches (5 strings ne_meta.bin + 4 strings WIN.COM + 1 bitmap WIN.COM +
+  1 string WIN100.OVL).  Los parches imperativos en Python desaparecieron.
+
+### `mod_system.py` unificado con backward compat
+
+  `cmd_apply()` ahora detecta `patches.toml`:
+
+    Si existe  -> usa mod_engine.run_mod() (flow declarativo nuevo)
+    Si no      -> usa el flow legacy v07 (copia files de patches/<MOD>/
+                  sobre src/, smart_build, mcopy)
+
+  Mods existentes en formato v07 (como `mods/win104/`) siguen funcionando
+  sin tocar nada.
+
+### `launch_elias_win103.py` refactor: CLI + cross-platform
+
+  Antes:  hardcoded path absoluto a `C:\Users\Elias\Desktop\...` (rompia
+          el SDK para cualquiera que no fuera el autor).
+  Ahora:  thin wrapper sobre `mod_engine.run_mod()` con flags:
+
+    --mod NAME       (default 'elias-windows')
+    --bmp PATH       Path explicito al BMP editado.  Si se omite, prueba
+                     ~/Desktop/blibbet-logo-editor/, ~/Documents/...
+                     y finalmente mod/blibbet/.
+    --no-launch      Construye e inyecta pero no abre DOSBox-X
+    --no-deploy      Solo construye los artefactos (sin tocar IMG)
+
+  `kill_running_dosbox()` y `find_dosbox_x()` cross-platform
+  (sys.platform check -> taskkill on Windows, pkill on POSIX; busca
+  el ejecutable en rutas estandar de Windows + PATH).
+
+### `smart_build.py` UX fixes
+
+  Antes: `WARN: keystone-engine no instalado` (asustante en cada build),
+         `[DIFF]` con exit-code 1 en mod-builds (cuando el DIFF es ESPERADO).
+
+  Ahora:
+    --mod-build           Modo "mod-build" -> `[MOD ]` en vez de `[DIFF]`,
+                          exit-code 0 (la diferencia es intencional).
+    --quiet-keystone      Silencia el aviso de keystone.
+    Por defecto:          El aviso de keystone se demueve a `INFO:` con
+                          explicacion: "(Data-only mods do not need keystone.)".
+
+### Limpieza de `bootstrap/`
+
+  Los 11 scripts de research/discovery del logo Blibbet (que eran codigo
+  exploratorio one-time, mezclado con el SDK de produccion) se han movido
+  a `bootstrap/research/blibbet/`:
+
+    analyze_splash_screenshot.py     find_logo_v2.py
+    find_logo_in_files.py            find_blibbet_logo.py
+    hunt_blibbet_in_bin.py           hunt_blibbet_ega.py
+    render_win_tail.py               render_blibbet_font.py
+    decode_logo_interleaved.py       decode_logo_final.py
+    check_bmp_header.py
+
+  `bootstrap/research/README.md` documenta cada script + a que fase del
+  descubrimiento corresponde.
+
+### Tests automatizados -> `tests/` (37 tests, todos passing)
+
+    tests/test_win103_layout.py    7 tests  (constantes, geometria,
+                                              validacion de tamanos)
+    tests/test_blibbet_mod.py      7 tests  (CGA<->linear roundtrip,
+                                              BMP write/read, real
+                                              WIN.COM roundtrip)
+    tests/test_fat12_replace.py    5 tests  (replace in-place sintetico
+                                              sin mtools, fail modes,
+                                              preservacion de chain y
+                                              zero-pad)
+    tests/test_mod_engine.py      18 tests  (string patch w/ word
+                                              boundary, length checks,
+                                              offset resolver (int / hex
+                                              / symbolic), load_mod
+                                              parsing, build_target
+                                              integration)
+
+  Todos pasan en 0.60s.  Cobertura: bootstrap/blibbet_mod.py,
+  bootstrap/fat12_replace.py, bootstrap/mod_engine.py,
+  bootstrap/win103_layout.py.  La imagen sintetica FAT12 360 KB se
+  construye en memoria, por lo que los tests no requieren
+  binarios Microsoft.
+
+### CI GitHub Actions -> `.github/workflows/test.yml`
+
+  Tres jobs en cada push / PR:
+
+    pytest    Ubuntu + Windows (matrix), Python 3.11 + 3.12.
+              - py_compile sobre todos los `bootstrap/*.py`
+              - pytest sobre `tests/`
+
+    lint-toml  Valida sintacticamente todos los `mods/*/patches.toml` y
+               `mods/*/meta.toml`.
+
+### Verificacion end-to-end
+
+  Tras toda esta refactorizacion el comando original sigue funcionando:
+
+    python bootstrap/launch_elias_win103.py
+
+  El IMG resultante tiene:
+    - 1684 bytes de diff vs ORIG-WIN.COM (1549 del logo del usuario +
+      135 de strings parcheados)
+    - Strings 'Elias's Windows!!', 'Version MOD!', 'This mod is
+      unofficial' presentes; 'Microsoft Windows', 'Version 1.03' ausentes
+    - MSDOS.EXE rebuilt con menus 'MOD! / MIO! / ZONA!!!'
+
+
 ## v13.1 - 2026-05-26 - Blibbet-logo-cracked + first end-user mod SDK
 
 Ingenieria inversa del unico asset binario que faltaba reverse-engineerar

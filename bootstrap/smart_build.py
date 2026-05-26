@@ -303,11 +303,23 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--module", action="append", default=None)
     ap.add_argument("--verbose", "-v", action="store_true")
+    ap.add_argument("--mod-build", action="store_true",
+                    help="Mod-build mode: a DIFF vs original is EXPECTED "
+                         "(the mod intentionally changes the binary). "
+                         "Reports [MOD] instead of [DIFF], exit code 0.")
+    ap.add_argument("--quiet-keystone", action="store_true",
+                    help="Suppress the 'keystone not installed' notice "
+                         "(implied by --mod-build).")
     args = ap.parse_args()
 
-    if not HAVE_KEYSTONE:
-        print("WARN: keystone-engine no instalado. Sin smart-rebuild de instrucciones.",
-              file=sys.stderr)
+    # The keystone notice only matters when the user is actually modifying
+    # ASSEMBLY instructions (not data). In --mod-build mode the patches are
+    # usually pure data (ne_meta.bin string substitutions) so the notice
+    # is misleading.
+    if not HAVE_KEYSTONE and not args.quiet_keystone and not args.mod_build:
+        print("INFO: keystone-engine not installed. Instruction-level edits "
+              "to .asm files will fall back to the byte comments. "
+              "(Data-only mods do not need keystone.)", file=sys.stderr)
 
     mods = []
     for d in sorted(SRC.iterdir()):
@@ -319,6 +331,7 @@ def main() -> int:
 
     ok = 0
     fail = 0
+    diff_expected = 0
     all_warnings: list[str] = []
     for mod_dir in mods:
         try:
@@ -327,10 +340,14 @@ def main() -> int:
             print(f"[ERR ] {mod_dir.name}: {e}")
             fail += 1
             continue
-        flag = "OK  " if r["match"] else "DIFF"
         if r["match"]:
+            flag = "OK  "
             ok += 1
+        elif args.mod_build:
+            flag = "MOD "
+            diff_expected += 1
         else:
+            flag = "DIFF"
             fail += 1
         print(f"[{flag}] {r['original_name']:14s} "
               f"{r['size']:7d}B sha={r['sha_original']} vs {r['sha_built']} "
@@ -341,7 +358,12 @@ def main() -> int:
         all_warnings.extend(r["warnings"])
 
     print()
-    print(f"=== {ok}/{ok+fail} modulos byte-exact ({len(all_warnings)} warnings totales) ===")
+    if args.mod_build:
+        print(f"=== {ok} byte-exact + {diff_expected} modded "
+              f"({len(all_warnings)} warnings) ===")
+    else:
+        print(f"=== {ok}/{ok+fail} modulos byte-exact "
+              f"({len(all_warnings)} warnings totales) ===")
 
     if all_warnings and not args.verbose:
         print("\nUsa --verbose para ver detalles de warnings.")

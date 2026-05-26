@@ -54,7 +54,7 @@ tell us the format.
 
 ### Phase 1 — extract the logo from a real screenshot
 
-`bootstrap/analyze_splash_screenshot.py` reads `screenshots/01-elias-windows-splash.png`
+`bootstrap/research/blibbet/analyze_splash_screenshot.py` reads `screenshots/01-elias-windows-splash.png`
 (a 640×480 capture from a previous mod run), thresholds it to 1bpp, finds
 the bounding box of the topmost cluster of white pixels, and maps that
 back to native CGA mode 6 coordinates (640×200).
@@ -63,7 +63,7 @@ Result: logo bbox = `x ∈ [54..587]`, `y ∈ [36..70]` → **534×35 px**.
 
 ### Phase 2 — search every binary for the bitmap bytes
 
-`bootstrap/find_logo_in_files.py` and `bootstrap/find_logo_v2.py` build
+`bootstrap/research/blibbet/find_logo_in_files.py` and `bootstrap/research/blibbet/find_logo_v2.py` build
 the most distinctive row of the logo as packed 1bpp bytes and search for
 that row in every candidate binary (`WIN.COM`, `WIN100.BIN`,
 `WIN100.OVL`, `KERNEL.EXE`, `USER.EXE`, `GDI.EXE`, `CGA.DRV`,
@@ -77,7 +77,7 @@ were still unknown.
 
 ### Phase 3 — auto-detect the row stride
 
-`bootstrap/render_win_tail.py` brute-forces every plausible width
+`bootstrap/research/blibbet/render_win_tail.py` brute-forces every plausible width
 (8 ≤ bpr ≤ 89) at multiple start offsets and scores each by **vertical
 similarity** between adjacent rows: a real bitmap of letters has tall
 vertical strokes, so adjacent rows should be very similar; random data
@@ -88,7 +88,7 @@ Result: clear winner at **bpr = 67 (= 536 px wide)** with score ~0.83
 
 ### Phase 4 — discover the bank-interleaved layout
 
-`bootstrap/decode_logo_interleaved.py` tested two layout hypotheses:
+`bootstrap/research/blibbet/decode_logo_interleaved.py` tested two layout hypotheses:
 
 - **Linear**: row 0, row 1, row 2, …, row 35
 - **De-interleaved**: even rows (0,2,…,34) first, then odd rows (1,3,…,35)
@@ -231,23 +231,23 @@ splash bitmaps in other early Windows / DOS programs):
 #    in screenshots/01-elias-windows-splash.png
 
 # 2. Extract the 1bpp logo from the screenshot
-python bootstrap/analyze_splash_screenshot.py
+python bootstrap/research/blibbet/analyze_splash_screenshot.py
 # -> bbox + 1bpp packed pattern
 
 # 3. Search every binary for that pattern with all bit-shifts
-python bootstrap/find_logo_in_files.py        # weak hits
-python bootstrap/find_logo_v2.py              # stronger: WIN.COM @0x11FE row 29
+python bootstrap/research/blibbet/find_logo_in_files.py        # weak hits
+python bootstrap/research/blibbet/find_logo_v2.py              # stronger: WIN.COM @0x11FE row 29
 
 # 4. Auto-detect row stride
-python bootstrap/render_win_tail.py
+python bootstrap/research/blibbet/render_win_tail.py
 # Pick the highest score = 0.83 at bpr=67
 
 # 5. Test linear vs deinterleaved layout
-python bootstrap/decode_logo_interleaved.py
+python bootstrap/research/blibbet/decode_logo_interleaved.py
 # Deinterleaved wins: 0.869 vs 0.819
 
 # 6. Confirm the exact start offset and render
-python bootstrap/decode_logo_final.py         # tries 0x0980..0x09C8
+python bootstrap/research/blibbet/decode_logo_final.py         # tries 0x0980..0x09C8
 python bootstrap/extract_blibbet_logo.py      # canonical 0x099D
 ```
 

@@ -28,6 +28,18 @@ import zlib
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT / "bootstrap"))
+
+from win103_layout import (  # noqa: E402
+    WINCOM_LOGO_OFFSET as LOGO_OFFSET,
+    WINCOM_LOGO_WIDTH as LOGO_WIDTH,
+    WINCOM_LOGO_HEIGHT as LOGO_HEIGHT,
+    WINCOM_LOGO_BPR as BPR,
+    WINCOM_LOGO_BANK_ROWS as BANK_ROWS,
+    WINCOM_LOGO_BANK_BYTES as BANK_BYTES,
+    WINCOM_LOGO_SIZE as LOGO_SIZE,
+)
+
 ORIG_WIN_COM = ROOT / "original" / "WIN.COM"
 WORK_DIR = ROOT / "mod" / "blibbet"
 WORK_DIR.mkdir(parents=True, exist_ok=True)
@@ -35,15 +47,6 @@ WORK_DIR.mkdir(parents=True, exist_ok=True)
 DEFAULT_BMP = WORK_DIR / "blibbet_logo.bmp"
 DEFAULT_PNG_PREVIEW = WORK_DIR / "blibbet_logo_4x_preview.png"
 DEFAULT_PATCHED_COM = WORK_DIR / "WIN.COM"
-
-# ----- Logo geometry (reverse-engineered) -----
-LOGO_OFFSET = 0x099D
-LOGO_WIDTH = 536
-LOGO_HEIGHT = 36
-BPR = 67                    # bytes per row at 1bpp = ceil(536/8)
-BANK_ROWS = LOGO_HEIGHT // 2  # 18 rows per bank
-BANK_BYTES = BANK_ROWS * BPR  # 1206 bytes per bank
-LOGO_SIZE = BANK_BYTES * 2    # 2412 bytes total
 
 
 # ============================================================
