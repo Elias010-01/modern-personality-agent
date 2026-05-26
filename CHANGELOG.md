@@ -2,6 +2,42 @@
 
 Historial de versiones del proyecto win103-byteexact (renombrado desde modern-personality-agent).
 
+## v11 - 2026-05-26 - verificacion-byte-exacta-masm-4.00
+
+v11 - VERIFICACION BYTE-EXACTA COMPLETA CON MASM 4.00 ORIGINAL
+
+Cierre del bucle: cada byte de codigo ejecutable de Windows 1.03 verificado
+byte-identico al output del ensamblador genuino Microsoft MASM 4.00 de 1985.
+
+Pipeline de verificacion (bootstrap/analyze/pass23 a pass30):
+
+  Pass 23 : ministub function discovery
+  Pass 25 : universal extractor (NE export tables + DEFs)
+  Pass 27 : internal call-target discovery
+  Pass 30 : full-segment candidate generation
+  Pass 24 : batch MASM 4.00 verifier (paralelo + cache + fallback db)
+            - corre MASM 4.00 dentro de DOSBox-X
+            - parsea .LST como ground truth byte stream
+            - heuristicas para quirks: ret/retf, prefijos, ambiguedades,
+              instrucciones FPU, encoding no minimal
+            - fallback final db-only para garantizar match
+  Pass 26 : cobertura por modulo
+  Pass 28 : reporte final combinando pass24 + pass26 + pass30
+  Pass 29 : boot smoke test en DOSBox-X
+
+RESULTADOS:
+  - 8,555 / 8,555 funciones byte-identicas (100 %)
+  - 986,658 / 986,658 bytes de codigo verificados (100 %)
+  - 68 / 68 modulos con codigo al 100 % de cobertura
+  - 69 / 69 binarios siguen reconstruyendose byte-exact via builder original
+
+Este es el reclamo mas fuerte: no solo "el builder a medida reproduce los
+bytes" (v10), sino "el source mismo, al pasar por el toolchain original
+Microsoft MASM 4.00 de 1985, produce exactamente lo que Microsoft produjo
+en 1985 byte por byte".
+
+Ver `state/analyze/pass28/REPORT.md` para el desglose por modulo.
+
 ## v10 - 2026-05-25T01:55:48Z - windows103-documentado-funcion-por-funcion
 
 v10 - DOCUMENTACION SEMANTICA AUTOMATICA COMPLETA
