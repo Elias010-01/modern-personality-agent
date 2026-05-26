@@ -2,6 +2,122 @@
 
 Historial de versiones del proyecto win103-byteexact (renombrado desde modern-personality-agent).
 
+## v13.1 - 2026-05-26 - Blibbet-logo-cracked + first end-user mod SDK
+
+Ingenieria inversa del unico asset binario que faltaba reverse-engineerar
+en toda la distribucion: el bitmap del **logo "MICROSOFT" Blibbet** que
+aparece en la splash screen de Windows 1.03 al arrancar.  Ademas, primer
+**SDK end-to-end editable** (BMP en Paint -> WIN.COM patcheado -> IMG
+inyectada -> DOSBox-X) que cierra el ciclo completo "user content -> live
+running OS".
+
+### Logo Blibbet localizado y decodificado
+
+  Ubicacion exacta:
+    File:       original/WIN.COM
+    Offset:     0x099D ... 0x1308 (los ULTIMOS 2412 bytes del fichero)
+    Size:       2412 bytes (0x96C)
+    Format:     CGA mode 6 (640x200, 1bpp), 536x36 px
+    Stride:     67 bytes/row (= ceil(536/8))
+    Layout:     CGA-BANK INTERLEAVED -- 18 even rows (0,2,..,34) seguidas
+                de 18 odd rows (1,3,..,35).  Coincide byte-a-byte con la
+                organizacion de la VRAM de CGA en B800:0000 (rows pares)
+                y B800:2000 (rows impares).  La rutina de blit es un
+                doble `rep movsw` directo source -> VRAM.
+
+  Discovery method (5 fases, todas en bootstrap/):
+    1. analyze_splash_screenshot.py: extraer 1bpp del PNG de la splash
+       y mapear a coordenadas CGA nativas (640x200).
+    2. find_logo_in_files.py + find_logo_v2.py: busqueda de bytes de
+       fila distintiva con todos los 8 bit-shifts posibles + variante
+       inversa, sobre 12 binarios candidatos.  Hit en WIN.COM @0x11FE.
+    3. render_win_tail.py: render del tail de WIN.COM con todos los
+       widths posibles (8..89 bytes) y autocorrelacion vertical.
+       Pico de "vertical similarity" en 67 bytes/row (score 0.83).
+    4. decode_logo_interleaved.py: hipotesis de layout interleaved
+       (testeada contra layout linear).  Score 0.869 vs 0.819 -- el
+       interleaved gana decisivamente.
+    5. extract_blibbet_logo.py + decode_logo_final.py: extraccion
+       canonica con offset preciso 0x099D, deinterleaved, render PNG,
+       verificacion visual contra screenshot.
+
+  Disassembly anchors en src/WIN/seg1_real.asm:
+    line 587   tag_logo:           db 'LOGO'              @ 0x0790
+    line 615   B8 06 00 CD 10      mov ax,6 ; int 10h     @ 0x0989  (set CGA mode 6)
+    line 617   CD 10 C3            int 10h ; ret          @ 0x099A..0x099C
+    line 621   3F FF C0 ...        BITMAP DATA STARTS     @ 0x099D
+    line N     <last byte>                                @ 0x1308 (end of file)
+
+### Logo SDK (mod/blibbet/ + bootstrap/blibbet_mod.py)
+
+  Round-trip BMP <-> CGA <-> WIN.COM byte-exact verificado.  Pipeline:
+
+    bootstrap/blibbet_mod.py:
+      - export    : WIN.COM -> 1bpp BMP 536x36 (editable en MS Paint)
+                    + 4x scaled-up PNG preview con fondo azul CGA
+      - import    : BMP editado -> WIN.COM patcheado in-place
+      - roundtrip : verificacion automatica de byte-exactness
+                    (exporta + reimporta sin tocar -> mismo MD5
+                    que original/WIN.COM)
+
+    bootstrap/extract_blibbet_logo.py:
+      - extrae el logo a PNG 1:1 + render en framebuffer 640x200
+        completo (con la posicion exacta x=54, y=36 que aparece en
+        pantalla en CGA mode 6).
+      - dump del raw 2412B (interleaved) y del linear row-major 2412B.
+
+    bootstrap/fat12_replace.py (libreria reutilizable):
+      - reemplazo IN-PLACE de un fichero existente en una imagen
+        floppy FAT12 sin necesitar mtools (no esta disponible en
+        Windows).  Reusa la cadena de clusters existente, solo
+        sobrescribe los bytes data.  Tamano del fichero nuevo
+        DEBE coincidir.
+
+    bootstrap/launch_elias_win103.py (orchestrator end-to-end):
+      - kill DOSBox-X si esta corriendo (libera lock del IMG)
+      - rebuild MSDOS.EXE via smart_build con ne_meta.bin patcheado
+      - genera WIN.COM con logo del usuario (BMP escritorio o proyecto)
+        + parches de strings ("Microsoft Windows" -> "Elias's Windows!!"
+        y demas)
+      - genera WIN100.OVL con parches de strings
+      - inyecta los 3 binarios en runtime/win103-built.img via
+        fat12_replace.py
+      - verifica round-trip byte-exact por re-extraccion
+      - lanza dosbox-x.exe con runtime/dosbox-win103.conf
+
+    bootstrap/diagnose_img_logo.py:
+      - tool de diagnostico que extrae el WIN.COM de la IMG, lo
+        compara con el original y con el BMP del usuario, renderiza
+        cada uno como PNG y reporta diferencias byte-a-byte.
+        Util para depurar problemas de sincronizacion entre el BMP
+        editado y el contenido real de la IMG.
+
+### Showcase end-to-end
+
+  El usuario edita el logo en MS Paint sobre un BMP de 536x36 1bpp,
+  guarda, y un solo comando reconstruye Windows 1.03 con el logo
+  modificado y lo lanza en DOSBox-X:
+
+    python bootstrap/launch_elias_win103.py
+
+  Resultado: arranque de Windows 1.03 con splash custom + textos
+  personalizados + MSDOS.EXE recompilado byte-exact con strings
+  modificadas.
+
+### Documentacion nueva
+
+  docs/BLIBBET_LOGO.md
+    - Writeup tecnico completo del descubrimiento (offsets, formato,
+      anchors en el disassembly, comandos de extraccion/reinyeccion)
+    - Diagrama del layout interleaved CGA bank-interleaved
+    - Comandos copy-paste para reproducir el descubrimiento desde 0
+
+  mod/blibbet/README.md
+    - Workflow del SDK (export -> editar en Paint -> import -> launch)
+    - Reglas para editar BMPs 1bpp sin romper byte-exactness
+    - Recovery (volver al logo original Microsoft)
+
+
 ## v13.0 - 2026-05-26 - WIN.COM-semantic-labels + disasm-to-masm-refactor
 
 Refactor de bootstrap/disasm_to_masm.py para soportar multiples modulos

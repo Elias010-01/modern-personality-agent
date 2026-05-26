@@ -1,0 +1,13 @@
+import struct
+raw = open('mod/blibbet/blibbet_logo.bmp', 'rb').read()
+print(f'BMP file size: {len(raw)} B')
+print(f'Magic: {raw[:2]}')
+print(f'File size declared: {struct.unpack("<I", raw[2:6])[0]} B')
+print(f'Pixel data offset: 0x{struct.unpack("<I", raw[10:14])[0]:X}')
+print(f'DIB header size: {struct.unpack("<I", raw[14:18])[0]}')
+print(f'Width: {struct.unpack("<i", raw[18:22])[0]}')
+print(f'Height: {struct.unpack("<i", raw[22:26])[0]}')
+print(f'Bits/pixel: {struct.unpack("<H", raw[28:30])[0]}')
+print(f'Compression: {struct.unpack("<I", raw[30:34])[0]}')
+print(f'Palette c0 (BGRA): {raw[54:58].hex()}')
+print(f'Palette c1 (BGRA): {raw[58:62].hex()}')

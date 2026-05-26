@@ -27,6 +27,8 @@
 | Code-bearing NE modules at 100% function-level coverage | **68 / 68** |
 | Additional code binaries verified via MASM 4.00 (flat-COM / single-segment NE) | **3 / 3** (`WIN.COM`, `WIN100.BIN`, `WINOLDAP.MOD`) |
 | Toolchain | Original Microsoft **MASM 4.00** + **LINK 3.51** under DOSBox-X |
+| **Splash logo bitmap reverse-engineered** (v13.1) | `WIN.COM @ 0x099D-0x1308` — 536×36 px CGA mode 6, bank-interleaved — **fully editable** via `bootstrap/blibbet_mod.py` |
+| **End-to-end mod SDK** (v13.1) | Edit `.bmp` in MS Paint → patched IMG → DOSBox-X with **one** Python command (`bootstrap/launch_elias_win103.py`) |
 
 Every executable code byte that shipped on the original Windows 1.03 floppy disks has been verified byte-identical to the output of the genuine 1985 Microsoft MASM 4.00 assembler. Two complementary verifiers run the original toolchain under DOSBox-X and compare assembled output to the shipping binaries:
 
@@ -191,6 +193,35 @@ Copy the resulting binaries into a Windows 1.03 floppy image and run it:
 bash bootstrap/deploy-to-img.sh   # copies built/ into the floppy image
 # then launch DOSBox-X with the resulting .img mounted as A:
 ```
+
+### 10. (Optional, **NEW in v13.1**) Edit the splash screen logo
+
+The big "MICROSOFT" Blibbet logo on the splash screen is a CGA-mode-6
+1bpp bitmap stored in `WIN.COM` at offset `0x099D` (the last 2412 bytes
+of the file), in CGA-bank-interleaved layout (18 even rows + 18 odd rows,
+matching `B800:0000` / `B800:2000` VRAM).
+
+The full **Logo Mod SDK** lets you edit it in MS Paint and ship the
+result running in DOSBox-X with one command:
+
+```bash
+# 1. Export an editable 1bpp BMP (536x36) from your legal WIN.COM
+python bootstrap/blibbet_mod.py export
+# -> mod/blibbet/blibbet_logo.bmp  (open in MS Paint, edit, Ctrl+S)
+
+# 2. Round-trip sanity check (export+reimport == byte-exact original)
+python bootstrap/blibbet_mod.py roundtrip
+
+# 3. End-to-end build & launch:
+#    rebuild MSDOS.EXE with smart_build, patch WIN.COM (your logo +
+#    text mods), patch WIN100.OVL, inject all 3 into the FAT12 image
+#    via pure Python (no mtools required), launch DOSBox-X
+python bootstrap/launch_elias_win103.py
+```
+
+Full technical writeup of the discovery + format: [`docs/BLIBBET_LOGO.md`](docs/BLIBBET_LOGO.md).
+
+SDK workflow + Paint editing reference: [`mod/blibbet/README.md`](mod/blibbet/README.md).
 
 ---
 

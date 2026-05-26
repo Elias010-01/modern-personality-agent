@@ -139,3 +139,25 @@ check.log
 bootstrap/analyze/_test_*.py
 bootstrap/analyze/_inspect_*.py
 bootstrap/analyze/_check_results.py
+
+# ---- mod/blibbet/ (Logo SDK working dir) ----
+# Los BMPs y WIN.COM aqui son DERIVADOS del logo de Microsoft o del
+# binario WIN.COM.  Cada usuario los regenera localmente con:
+#   python bootstrap/blibbet_mod.py export        (BMP plantilla)
+#   python bootstrap/launch_elias_win103.py       (WIN.COM patcheado)
+mod/blibbet/blibbet_logo*.bmp
+mod/blibbet/blibbet_logo*.png
+mod/blibbet/WIN.COM
+mod/blibbet/WIN.verify.png
+mod/blibbet/MSDOS.EXE
+mod/blibbet/WIN100.OVL
+
+# ---- screenshots/blibbet_hunt/ (research artifacts) ----
+# Multiples renderings PNG del logo durante la fase de descubrimiento.
+# Todos son derivados del bitmap original de Microsoft (mismo principio
+# que original/) o regenerables desde el WIN.COM legal del usuario.
+# Se mantienen los .py que generan estos artifacts (en bootstrap/).
+screenshots/blibbet_hunt/
+
+# ---- Backups locales de fuentes patcheadas en runtime ----
+src/*/ne_meta.bin.bak
