@@ -7,29 +7,51 @@ confirmation**.
 
 ## Origin
 
-| File | Source |
-|---|---|
-| `kernelsyms.txt` | https://github.com/starfrost013/modern-personality-research/blob/main/win1.03/reversing/kerneldebug/kernelsyms.txt |
-| `usersyms.txt`   | https://github.com/starfrost013/modern-personality-research/blob/main/win1.03/reversing/userdebug/usersyms.txt |
-| `gdisyms.txt`    | https://github.com/starfrost013/modern-personality-research/blob/main/win1.03/reversing/gdidebug/gdisyms.txt |
+Mirrored locally for offline reproducibility (the 3 large debug-build
+dumps that drive most of the cross-confirmation):
+
+| File | Source | Build |
+|---|---|---|
+| `kernelsyms.txt` | https://github.com/starfrost013/modern-personality-research/blob/main/win1.03/reversing/kerneldebug/kernelsyms.txt | debug |
+| `usersyms.txt`   | https://github.com/starfrost013/modern-personality-research/blob/main/win1.03/reversing/userdebug/usersyms.txt    | debug |
+| `gdisyms.txt`    | https://github.com/starfrost013/modern-personality-research/blob/main/win1.03/reversing/gdidebug/gdisyms.txt      | debug |
+
+Read directly from `vendor/modern-personality-research/` (NOT mirrored
+into this repo to avoid re-redistribution); pass 21 falls back to the
+vendor copy automatically when a file is not present here:
+
+| File | Vendor path | Module | Build |
+|---|---|---|---|
+| `msdossyms.txt`       | `msdos/msdossyms.txt`                       | `MSDOS`  | retail |
+| `writesyms.txt`       | `write/writesyms.txt`                       | `WRITE`  | retail |
+| `commsyms.txt`        | `driver/comm/commsyms.txt`                  | `COMM`   | retail |
+| `soundsyms.txt`       | `driver/sound/soundsyms.txt`                | `SOUND`  | retail |
+| `systemsyms.txt`      | `driver/system/systemsyms.txt`              | `SYSTEM` | retail |
+| `epsonsyms.txt`       | `driver/printerepsom/epsonsyms.txt`         | `EPSON`  | retail |
+| `mousemssyms.txt`     | `driver/mousems/mousemssyms.txt`            | `MOUSE`  | retail |
+| `keyboardusasyms.txt` | `driver/keyboard/usa/keyboardusasyms.txt`   | `USA`    | retail |
 
 The upstream repository is maintained by **Connor Hyde
 ([@starfrost013](https://github.com/starfrost013))**.
 
 Each file is a textual dump produced by his
 [`symread`](https://github.com/starfrost013/symread) tool from
-Microsoft's original `.SYM` files of the **debug** build of
-Windows 1.03 (KERNEL/USER/GDI).
+Microsoft's original `.SYM` files. The K/U/G dumps come from the
+**debug** Windows 1.03 build; everything else from the **retail** build
+that ships alongside our `original/` binaries.
 
 ## Why are they here?
 
 - `bootstrap/analyze/pass21_starfrost_symbols.py` parses these files to
   emit per-module reference tables under
-  `docs/analysis/<MODULE>_starfrost_symbols.md`, listing 2017 internal
-  function names from the debug build alongside the 520 names that
-  also appear in our retail `.DEF` exports.
-- Mirroring the files locally avoids each clone hitting GitHub's raw
-  endpoint and keeps the pipeline reproducible offline.
+  `docs/analysis/<MODULE>_starfrost_symbols.md`, covering 11 modules
+  total (3 debug + 8 retail).
+- Mirroring the 3 large debug dumps locally avoids each clone hitting
+  GitHub's raw endpoint and keeps the pipeline reproducible offline.
+- The 8 retail dumps are read directly from the vendored clone of
+  starfrost's repo (which a clone obtains separately and is not tracked
+  here), so we never re-distribute his text dumps as part of this
+  repository.
 
 ## Permission and reuse
 

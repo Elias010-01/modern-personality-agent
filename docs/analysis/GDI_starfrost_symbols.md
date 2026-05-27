@@ -2,7 +2,7 @@
 
 Source: [`starfrost013/modern-personality-research`](https://github.com/starfrost013/modern-personality-research) - `*syms.txt` parsed from the original Microsoft `.SYM` files of the **debug** Windows 1.03 build.
 
-> **Caveat**: these offsets come from the **debug** build (extra strings, asserts, helpers). They are NOT byte-aligned with our retail build, so we do not auto-rename `sub_XXXX` by offset. Use this list as a *vocabulary* of known internal names. When a name happens to also be exported in our retail `.DEF`, we mark it as **confirmed** below.
+> **Caveat (debug build)**: these offsets come from the **debug** build (extra strings, asserts, helpers). They are NOT byte-aligned with our retail build, so we do not auto-rename `sub_XXXX` by offset. Use this list as a *vocabulary* of known internal names. When a name happens to also be exported in our retail `.DEF`, we mark it as **confirmed** below.
 
 - Binary name (per .SYM header): `GDI`
 - Functions in debug build: **595**

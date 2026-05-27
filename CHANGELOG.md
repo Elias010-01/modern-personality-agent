@@ -2,6 +2,59 @@
 
 Historial de versiones del proyecto win103-byteexact (renombrado desde modern-personality-agent).
 
+## v13.4 - 2026-05-27 - Pass 21 cubre 11 modulos (3781 simbolos) + docs README
+
+Acciona los puntos abiertos del email de @starfrost013 (2026-05-25) que aun
+no estaban cerrados, despues de auditar los anteriores.
+
+### Pass 21: 3 modulos -> 11 modulos, 2017 -> 3781 simbolos
+
+  Antes solo parseabamos `kernelsyms.txt`, `usersyms.txt`, `gdisyms.txt`
+  (los 3 dumps de la build DEBUG mirroreados en `kb/symbols/`).  Ahora
+  cubrimos los 11 .SYM disponibles en el repo de starfrost:
+
+    Debug build  : KERNEL  (388 simbolos, 103 confirmados via .DEF)
+                   USER    (1112,         235)
+                   GDI     ( 517,         182)
+    Retail build : MSDOS   ( 290,           9)
+                   WRITE   (1063,          30)
+                   COMM    ( 199,          15)
+                   SOUND   (  85,          18)
+                   SYSTEM  (  18,           6)
+                   EPSON   (  72,          14)
+                   MOUSE   (  21,           3)
+                   USA     (  16,           6)
+
+  Total: 3781 simbolos (+1764), 621 confirmados (+101).
+
+### Resolucion dual: kb/symbols/ -> vendor/
+
+  `pass21_starfrost_symbols.py` busca cada `*syms.txt` primero en
+  `kb/symbols/` (mirroreado, tracked) y, si no esta, en
+  `vendor/modern-personality-research/win1.03/reversing/<dir>/`.  Esto
+  evita re-redistribuir los 8 dumps adicionales mientras mantenemos los
+  3 mirroreados originales para reproducibilidad offline.
+
+### Caveat per-build en docs
+
+  Los `<MODULE>_starfrost_symbols.md` ahora distinguen "debug build"
+  (caveat: offsets NO alineados con retail) vs "retail build" (offsets
+  esperados a coincidir).  Tabla y stats etiquetados consistentemente.
+
+### `docs/analysis/README.md` (nuevo)
+
+  Documenta que `docs/analysis/` es regenerable, lista los pases que
+  generan cada tipo de archivo, y aclara que `KERNEL.md` acaba en offset
+  ~0x797F NO por bug sino porque la build retail de KERNEL.EXE es de
+  31103 bytes en su unica code segment.  El email apuntaba a un cutoff
+  en 0x7FFF; era confusion debug-vs-retail.
+
+### Verificacion
+
+  - 92/92 modulos byte-exact (sha-iguales)
+  - 37/37 tests pytest pasan
+  - pass21 corre limpio en 11 modulos sin warnings
+
 ## v13.3 - 2026-05-26 - Real MASM 4.00 toolchain end-to-end + NE reloc parser
 
 Reemplazo del path "Python regex parsea db de los .asm" por un path
