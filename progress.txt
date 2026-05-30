@@ -97,6 +97,10 @@ PROGRESS LIVE (all DONE 2026-05-30):
   [x] C6   Blibbet user-edited mod
   [x] verify + commit + push
 
-  Result: v14.0 committed at cc54ebd and pushed to origin/main.
+  Result: v14.0 committed at ccd1973 and pushed to origin/main.
+  Tag v14.0 created and pushed to origin.
   All 50/50 tests pass. 92/92 byte-exact rebuild verified.
-  CHANGELOG.md updated with v14.0 entry.
+  CHANGELOG.md + progress.txt updated.
+
+  PENDING (not blocking): pass24_batch_masm_verify.py full run post-C1
+  to confirm 8555/8555 still pass with pure-db retry. Estimated: hours.
