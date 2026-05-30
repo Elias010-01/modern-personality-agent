@@ -115,12 +115,14 @@ PROGRESS LIVE (all DONE 2026-05-30):
       human readability of src/ and byte-exactness of build.
     - EQU offset map: 667 labels across 61 .asm files generated and
       loaded at build time via `pass_c2_equ_map.json`.
-    - Build --mode=masm: 91/92 modules byte-exact via real MASM 4.00.
-      Breakdown: 237 masm-puredb (with EQU), 71 masm direct,
-      60 masm-fallback-db (incl. incomplete _real.asm files).
-    - Only diff: WIN100.OVL (flat_raw 220KB, no .asm) — pre-existing
-      special case, not blocking.
+    - Build --mode=masm: **92/92 modules byte-exact** from assembled source.
+      Breakdown: 237 masm-puredb (with EQU), 70 masm direct,
+      60 masm-fallback-db (incl. incomplete _real.asm files),
+      1 nasm (WIN100.OVL 220KB via NASM -f bin).
+    - WIN100.OVL: Generated seg1.asm (13,774 lines pure-db) and assembled
+      with NASM to produce byte-exact 220KB binary.
     - Build --mode=db: 92/92 byte-exact (unchanged).
     - Tests: 50/50 pytest pass.
     - Files modified: bootstrap/puredb_convert.py, bootstrap/build_from_source.py
-    - New: state/analyze/pass_c2_equ_map.json, bootstrap/legacy/_c2_*.py
+    - New: state/analyze/pass_c2_equ_map.json, bootstrap/legacy/_c2_*.py,
+      src/WIN100_OVL/seg1.asm

@@ -1,7 +1,6 @@
-; AUTO-GENERATED from original WIN100.OVL (flat_raw)
-; size=220336 bytes (raw copy; preserved for byte-exact rebuild)
+; WIN100.OVL - pure db source for NASM
+BITS 16
 
-WIN100_SEG1 SEGMENT BYTE PUBLIC 'CODE'
     db 043h, 03ah, 05ch, 031h, 030h, 033h, 05ch, 057h, 049h, 04eh, 031h, 030h, 030h, 02eh, 04fh, 056h
     db 04ch, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h
     db 032h, 04dh, 069h, 063h, 072h, 06fh, 073h, 06fh, 066h, 074h, 020h, 057h, 069h, 06eh, 064h, 06fh
@@ -13773,7 +13772,3 @@ WIN100_SEG1 SEGMENT BYTE PUBLIC 'CODE'
     db 075h, 067h, 068h, 020h, 064h, 069h, 073h, 06bh, 020h, 073h, 070h, 061h, 063h, 065h, 020h, 074h
     db 06fh, 020h, 070h, 072h, 069h, 06eh, 074h, 02eh, 002h, 025h, 025h, 000h, 000h, 000h, 000h, 000h
     db 000h, 000h, 000h, 06dh, 074h, 073h, 077h, 073h, 06ch, 06eh, 06bh, 06dh, 063h, 06ah, 06bh, 06ch
-
-WIN100_SEG1 ENDS
-
-END

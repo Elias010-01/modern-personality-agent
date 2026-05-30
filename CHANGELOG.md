@@ -76,11 +76,12 @@ la auditoria v13.4.  Todos los puntos del plan de cleanup resueltos.
     correctos del pure-db output que MASM 4.00 procesa.
   - Mapa de 667 EQU offsets generado para 61 archivos .asm.
   - Build `build_from_source.py --mode=masm`:
-      * 91/92 módulos byte-exact via MASM 4.00 real
-      * 237 segmentos masm-puredb (con EQU), 71 masm directo,
-        60 masm-fallback-db (incl. `_real.asm` incompletos)
-      * WIN100.OVL (único diff): flat_raw 220KB sin .asm — caso especial
-        pre-existente no bloqueante.
+      * **92/92 módulos byte-exact** desde fuente ensamblada
+      * 237 segmentos masm-puredb (con EQU), 70 masm directo,
+        60 masm-fallback-db (incl. `_real.asm` incompletos),
+        1 segmento NASM (WIN100.OVL 220KB)
+      * WIN100.OVL: ensamblado con NASM (`-f bin`) a partir de
+        `seg1.asm` puro-db de 13774 líneas; byte-exact verificado.
   - Build db: 92/92 byte-exact (sin cambios).
   - Tests: 50/50 pytest pass.
 
