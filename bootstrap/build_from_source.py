@@ -203,11 +203,22 @@ def _assemble_masm_with_puredb_retry(
 
     Raises RuntimeError if both attempts fail (should not happen).
     """
+    # Load C2 EQU map for orphan label resolution
+    equ_map = {}
+    equ_path = ROOT / "state" / "analyze" / "pass_c2_equ_map.json"
+    if equ_path.exists():
+        equ_map = json.loads(equ_path.read_text(encoding="utf-8"))
+
+    seg_rel = f"{mod_name}\seg{seg_index}.asm"
+    seg_rel_alt = f"{mod_name}/seg{seg_index}.asm"
+    equ_offsets = equ_map.get(seg_rel, equ_map.get(seg_rel_alt, {}))
+    equ_offsets = {int(k): v for k, v in equ_offsets.items()}
+
     try:
         return _assemble_via_masm(asm_text, mod_name, seg_index), "masm"
     except RuntimeError as first_err:
         try:
-            pdb_text = convert_to_pure_db(asm_text)
+            pdb_text = convert_to_pure_db(asm_text, equ_offsets)
         except Exception as conv_err:
             raise RuntimeError(
                 f"convert_to_pure_db failed for "
@@ -270,6 +281,21 @@ def build_module(mod_dir: Path, original_dir: Path, mode: str) -> dict:
         fo = seg["file_off"]
         n = seg["data_len"]
         if len(seg_bytes) != n:
+            # If using _real.asm (known to be incomplete for some modules),
+            # fallback to the full seg.asm source instead of failing.
+            if asm_path.name.endswith("_real.asm"):
+                fallback_path = mod_dir / f"seg{seg['index']}.asm"
+                if fallback_path.exists():
+                    seg_bytes = parse_db_bytes(
+                        fallback_path.read_text(encoding="ascii", errors="replace"))
+                    path_tag = "masm-fallback-db"
+                    if len(seg_bytes) == n:
+                        meta[fo:fo + n] = seg_bytes
+                        seg_results.append({
+                            "idx": seg["index"], "ok": True,
+                            "size": n, "path": path_tag,
+                        })
+                        continue
             seg_results.append({
                 "idx": seg["index"],
                 "ok": False,

@@ -54,7 +54,64 @@ def _emit_db_row(byts: list[int]) -> list[str]:
     return rows
 
 
-def convert_to_pure_db(asm_text: str) -> str:
+def insert_equ_in_puredb(puredb_text: str, equ_offsets: dict[int, str]) -> str:
+    """Post-process pure-db output to insert L_XXXX = $ at correct offsets.
+
+    This makes MASM 4.00 able to resolve orphan label references without
+    modifying the original .asm files.  The EQU is inserted between db
+    rows so that the symbol receives the exact byte offset of the target.
+    """
+    if not equ_offsets:
+        return puredb_text
+
+    lines = puredb_text.splitlines()
+    offset = 0
+    out: list[str] = []
+
+    for line in lines:
+        stripped = line.strip()
+
+        m = _RE_DB.match(stripped)
+        if m:
+            arg = m.group(1).strip()
+            byts = [int(hm.group(1), 16) for hm in _RE_HEX.finditer(arg)]
+
+            targets_in_line = [
+                (off, equ_offsets[off]) for off in equ_offsets
+                if offset <= off < offset + len(byts)
+            ]
+
+            if targets_in_line:
+                targets_in_line.sort()
+                indent = len(line) - len(line.lstrip())
+                indent_str = line[:indent]
+
+                last_emit = 0
+                for target_off, label in targets_in_line:
+                    rel_pos = target_off - offset
+                    if rel_pos > last_emit:
+                        before = byts[last_emit:rel_pos]
+                        hexs = ", ".join(f"0{b:02x}h" for b in before)
+                        out.append(f"{indent_str}db {hexs}")
+                    out.append(f"{indent_str}{label} = $")
+                    last_emit = rel_pos
+
+                if last_emit < len(byts):
+                    after = byts[last_emit:]
+                    hexs = ", ".join(f"0{b:02x}h" for b in after)
+                    out.append(f"{indent_str}db {hexs}")
+
+                offset += len(byts)
+                continue
+            else:
+                offset += len(byts)
+
+        out.append(line)
+
+    return "\n".join(out) + ("\n" if puredb_text.endswith("\n") else "")
+
+
+def convert_to_pure_db(asm_text: str, equ_offsets: dict[int, str] | None = None) -> str:
     """Rewrite a mixed (`instr ; AB CD`) MASM source into a pure-db
     source that MASM 4.00 will assemble byte-for-byte identically.
 
@@ -155,4 +212,7 @@ def convert_to_pure_db(asm_text: str) -> str:
         out.append(line)
 
     flush_pending()
-    return "\n".join(out) + ("\n" if asm_text.endswith("\n") else "")
+    puredb = "\n".join(out) + ("\n" if asm_text.endswith("\n") else "")
+    if equ_offsets:
+        puredb = insert_equ_in_puredb(puredb, equ_offsets)
+    return puredb

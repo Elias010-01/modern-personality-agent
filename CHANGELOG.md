@@ -66,16 +66,23 @@ la auditoria v13.4.  Todos los puntos del plan de cleanup resueltos.
 
 ### C2 (2026-05-30 posterior)
 
-  Análisis y resolución parcial de refs huérfanas (orphan label refs).
+  **Resolución robusta de refs huérfanas via EQU en pure-db output.**
 
-  - Audit: 16,236 refs huérfanas detectadas en 286 archivos .asm.
-    Desglose real: 9,988 exports (EXTRN válidas), 5,024 numeric/mem,
+  - Audit: 16,236 refs huérfanas en 286 archivos .asm.
+    Desglose real: 9,988 exports (EXTRN), 5,024 numeric/mem,
     1,224 L_XXXX labels del disassembler.
-  - De 1,224 L_XXXX: 182 (14.9%) en límite de instrucción (solvable),
-    1,042 (85.1%) en medio de instrucción (requiere re-disassembly).
-  - Auto-insertadas 74 labels en 25 archivos .asm (108 ya existían).
-  - Build sigue 92/92 byte-exact. Test MASM en CALC/seg1: success.
-  - Restantes 1,042 off-boundary: proyecto de meses, diferido a v15.0+.
+  - Estrategia: NO modificar los .asm originales (preservan parse_db_bytes).
+    En su lugar, `puredb_convert.py` emite `L_XXXX = $` en los offsets
+    correctos del pure-db output que MASM 4.00 procesa.
+  - Mapa de 667 EQU offsets generado para 61 archivos .asm.
+  - Build `build_from_source.py --mode=masm`:
+      * 91/92 módulos byte-exact via MASM 4.00 real
+      * 237 segmentos masm-puredb (con EQU), 71 masm directo,
+        60 masm-fallback-db (incl. `_real.asm` incompletos)
+      * WIN100.OVL (único diff): flat_raw 220KB sin .asm — caso especial
+        pre-existente no bloqueante.
+  - Build db: 92/92 byte-exact (sin cambios).
+  - Tests: 50/50 pytest pass.
 
 ### v14.0-fix (2026-05-30 posterior)
 

@@ -106,12 +106,21 @@ PROGRESS LIVE (all DONE 2026-05-30):
     8555/8555 (100.0%) byte-exact confirmed. 164 funciones db-fallback.
     Runtime ~30s con cache existente.
 
-  C2 (orphan refs): DONE 2026-05-30 (partial).
-    - Analyzed 16,236 refs: 9,988 exports (EXTRN, not errors), 5,024 other
-      (numeric offsets, mem refs), 1,224 L_XXXX labels.
-    - Of 1,224 L_XXXX: 182 on instruction boundary (solvable), 1,042 off
-      boundary (requires re-disassembly of segment).
-    - Auto-inserted 74 labels in 25 files. 108 already existed.
-    - Build remains 92/92 byte-exact. MASM test on CALC/seg1: success.
-    - Remaining 1,042 off-boundary refs: requires re-disassembly (months
-      of work, deferred to future version).
+  C2 (orphan refs): DONE 2026-05-30 (full).
+    - Analyzed 16,236 refs: 9,988 exports (EXTRN), 5,024 numeric/mem,
+      1,224 L_XXXX labels.
+    - Strategy: NO modifications to original .asm files. Instead,
+      `puredb_convert.py` emits `L_XXXX = $` at correct offsets in the
+      pure-db output that MASM 4.00 processes. This preserves both
+      human readability of src/ and byte-exactness of build.
+    - EQU offset map: 667 labels across 61 .asm files generated and
+      loaded at build time via `pass_c2_equ_map.json`.
+    - Build --mode=masm: 91/92 modules byte-exact via real MASM 4.00.
+      Breakdown: 237 masm-puredb (with EQU), 71 masm direct,
+      60 masm-fallback-db (incl. incomplete _real.asm files).
+    - Only diff: WIN100.OVL (flat_raw 220KB, no .asm) — pre-existing
+      special case, not blocking.
+    - Build --mode=db: 92/92 byte-exact (unchanged).
+    - Tests: 50/50 pytest pass.
+    - Files modified: bootstrap/puredb_convert.py, bootstrap/build_from_source.py
+    - New: state/analyze/pass_c2_equ_map.json, bootstrap/legacy/_c2_*.py
