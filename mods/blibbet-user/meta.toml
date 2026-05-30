@@ -1,0 +1,29 @@
+name = "blibbet-user"
+title = "User-edited Blibbet logo (WIN.COM splash screen bitmap only)"
+author = "win103-byteexact"
+date = "2026-05-30"
+license = "MIT (los cambios; los binarios resultantes siguen siendo derivados de Microsoft Windows 1.03)"
+
+description = """
+Minimalist mod example: only replaces the Blibbet splash-screen logo
+in Windows 1.03 with a user-edited bitmap.
+
+Does NOT change any text, menu, or version strings.  This is the
+simplest possible mod to demonstrate the bitmap editing pipeline:
+
+  1. Export the original logo to an editable BMP:
+     python bootstrap/blibbet_mod.py export
+
+  2. Open mod/blibbet/blibbet_logo.bmp in MS Paint (or GIMP), edit,
+     and save (must stay 536x36 px, 1 bpp).
+
+  3. Apply the mod:
+     python bootstrap/mod_system.py apply blibbet-user
+
+  4. Revert when done:
+     python bootstrap/mod_system.py revert
+
+The bitmap patch is marked optional=true so the mod still works even
+if the user has not created a custom BMP yet (in that case the original
+Microsoft logo is kept).
+"""

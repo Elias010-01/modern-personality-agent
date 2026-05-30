@@ -1,10 +1,27 @@
 name = "win104"
-title = "Windows 1.04 (cambia version reportada por GetVersion)"
+title = "Windows 1.04 (bump visible version strings 1.03 -> 1.04)"
 author = "win103-byteexact"
-description = """
-Modifica KERNEL.GETVERSION para que reporte version 1.04 (AX=0x0401)
-en lugar de 1.03 (AX=0x0301). Apps que llaman GetVersion veran "1.04".
+date = "2026-05-30"
+license = "MIT (los cambios; los binarios resultantes siguen siendo derivados de Microsoft Windows 1.03)"
 
-Es un cambio de UN SOLO BYTE (B8 01 03 -> B8 01 04).
-Demostracion del sistema de mods sin tocar src/.
+description = """
+Cambia todas las referencias visibles a "Version 1.03" por "Version 1.04"
+en los binarios de arranque:
+
+  - WIN.COM   (splash screen boot loader)
+  - WIN100.OVL (real-mode overlay)
+
+Los reemplazos son byte-for-byte (mismo tamano: 12 B) usando el motor
+declarativo de mods (patches.toml + mod_engine.py).
+
+Nota: esto solo cambia los STRINGS visibles en pantalla.  El valor
+real devuelto por KERNEL.GetVersion (AX=0x0301) NO se modifica;
+para eso haria falta un patch binario en el code segment de KERNEL
+(B8 01 03 -> B8 01 04), que puede anadirse como patch ASM mas adelante.
+
+Aplicar:
+  python bootstrap/mod_system.py apply win104
+
+Revertir:
+  python bootstrap/mod_system.py revert
 """

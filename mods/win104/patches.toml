@@ -1,0 +1,45 @@
+# Declarative patches for the 'win104' version-bump mod.
+#
+# Changes every user-visible "1.03" reference to "1.04" in the
+# boot-time binaries.  This is a LENGTH-PRESERVING string patch:
+# "Version 1.03" (12 bytes) -> "Version 1.04" (12 bytes).
+#
+# The KERNEL.GETVERSION byte patch (B8 01 03 -> B8 01 04) is
+# NOT included here because it requires a binary (non-string)
+# patch in the code segment; that can be added later via a
+# patches/<MODULE>/seg*.asm override or an engine extension.
+#
+# Engine:  bootstrap/mod_engine.py
+# Apply:   python bootstrap/mod_system.py apply win104
+
+# -----------------------------------------------------------
+#  WIN.COM - boot loader strings
+# -----------------------------------------------------------
+[[targets]]
+output = "WIN.COM"
+source = "original/WIN.COM"
+
+  [[targets.patches]]
+  type = "string"
+  replacements = [
+    ["Version 1.03", "Version 1.04"],
+  ]
+
+# -----------------------------------------------------------
+#  WIN100.OVL - overlay strings (multiple occurrences)
+# -----------------------------------------------------------
+[[targets]]
+output = "WIN100.OVL"
+source = "original/WIN100.OVL"
+
+  [[targets.patches]]
+  type = "string"
+  replacements = [
+    ["Version 1.03", "Version 1.04"],
+  ]
+
+# -----------------------------------------------------------
+#  Deployment: inject patched files into the floppy image
+# -----------------------------------------------------------
+[deploy]
+img = "runtime/win103-built.img"

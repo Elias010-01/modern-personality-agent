@@ -1,0 +1,26 @@
+# Declarative patches for the 'blibbet-user' mod.
+# Only replaces the splash-screen logo bitmap in WIN.COM.
+# Engine: bootstrap/mod_engine.py
+
+# -----------------------------------------------------------
+#  WIN.COM - original + Blibbet bitmap (optional)
+# -----------------------------------------------------------
+[[targets]]
+output = "WIN.COM"
+source = "original/WIN.COM"
+
+  [[targets.patches]]
+  type     = "bitmap"
+  offset   = "WINCOM_LOGO_OFFSET"
+  size     = "WINCOM_LOGO_SIZE"
+  width    = 536
+  height   = 36
+  format   = "cga-mode6-bank-interleaved-1bpp"
+  source   = "mod/blibbet/blibbet_logo.bmp"
+  optional = true
+
+# -----------------------------------------------------------
+#  Deployment: inject patched WIN.COM into the floppy image
+# -----------------------------------------------------------
+[deploy]
+img = "runtime/win103-built.img"
