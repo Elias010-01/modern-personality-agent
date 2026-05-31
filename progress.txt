@@ -141,3 +141,6 @@ PROGRESS LIVE (all DONE 2026-05-30):
       Breakdown: 237 masm-puredb, 67 nasm, 60 masm-fallback-db, 4 masm.
     - Tests: 50/50 pytest pass.
     - Files modified: 71 seg*.asm files across 59 modules.
+    - Final coverage: 79.5% pure mnemonics (442,718 lines), 20.5% db with
+      semantic comments (114,431 lines) across all 368 segments.
+    - 0 pure-db files remain; all former pure-db segments are now semantic.

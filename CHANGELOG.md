@@ -98,6 +98,9 @@ la auditoria v13.4.  Todos los puntos del plan de cleanup resueltos.
   - Build --mode=masm: **92/92 byte-exact**.
     Breakdown: 237 masm-puredb, 67 nasm, 60 masm-fallback-db, 4 masm.
   - Tests: 50/50 pytest pass.
+  - Final stats: **79.5% pure mnemonics, 20.5% db with semantic comments**
+    across all 368 segments (442,718 mnemonic lines, 114,431 db lines).
+    All 71 former pure-db segments are now semantic.
 
 ### v14.0-fix (2026-05-30 posterior)
 
