@@ -2,6 +2,42 @@
 
 Historial de versiones del proyecto win103-byteexact (renombrado desde modern-personality-agent).
 
+## v16.0 - 2026-05-31 - Structural Fixes + Safe DB Conversion + 21K mnemonics
+
+Corrección de bugs estructurales y conversión segura de 21,635 db lines a mnemónicos.
+Build byte-exact se mantiene (92/92), tests 50/50 pass.
+
+### Fixes estructurales
+
+  - `WIN/WIN.asm`: Añadidos comentarios de bytes a 215 db lines sin comentarios
+  - `.DEF files`: Generados para 6 módulos sin .DEF (SETUP, WIN, WIN100, WIN100_OVL,
+    WINOLDAP, WINOLDAP_GRB)
+  - `pass1b`: Generados metadatos de funciones para 5 core modules
+    (WIN, WIN100, WIN100_OVL, WINOLDAP, WINOLDAP_GRB)
+  - `READMEs`: Generados 91 README.md por módulo (antes solo WIN/ tenía)
+  - `README.md` principal: Actualizado con sección C-Port Preparation Status
+  - `db UNKNOWN`: Reclasificadas 527 líneas usando mejores heurísticas
+
+### Conversión db → mnemónicos (segura)
+
+  - `db_convert_safe.py`: Nuevo pipeline que usa disassemblado de secuencia
+    completa con Capstone para verificar instrucciones de 1 byte en contexto.
+    Evita el pitfall de convertir bytes que son parte de instrucciones
+    de múltiples bytes.
+  - **21,635 db lines convertidas** a mnemónicos puros en 66 archivos
+  - Cobertura de mnemonics subió de 79.5% a 83.3%
+  - Top archivos convertidos:
+    - WIN100_OVL/seg1.asm: +20,244 lines
+    - WINOLDAP/seg1.asm: +1,174 lines
+    - WRITE/seg79.asm: +125 lines
+
+### Estado del proyecto
+
+  - 369 archivos .asm en `src/` (92 módulos)
+  - **83.3% mnemonics** (antes 79.5%)
+  - **93,008 db lines** restantes (antes 114,431)
+  - 92/92 módulos byte-exact, 50/50 tests pass
+
 ## v15.0 - 2026-05-31 - C-Port Preparation: 7 Analysis Phases
 
 Fases 2-7 de preparación para port a C, ejecutadas autónomamente.

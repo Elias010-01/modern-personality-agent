@@ -590,3 +590,34 @@ Function descriptions are generated heuristically and may be incorrect.
 This is not authoritative documentation.
 
 See [LEGAL.md](LEGAL.md) for the full legal notice.
+
+
+## C-Port Preparation Status (v15.0)
+
+All 7 analysis phases completed:
+
+| Phase | Status | Details |
+|-------|--------|---------|
+| Function boundaries | Done | 3,954 functions in 69 modules |
+| DB classification | Done | 114,431 db lines classified |
+| API/INT documentation | Done | 21,198 calls documented |
+| Control flow analysis | Done | 7,624 loops, 9,320 if/else |
+| Structure mapping | Done | 104,001 BP-relative accesses |
+| Module documentation | Done | 92 module reports generated |
+| Build verification | Done | 92/92 byte-exact, 50/50 tests |
+
+### DB Line Breakdown
+
+| Category | Count | Percentage |
+|----------|-------|------------|
+| CODE (NASM-unreplicable) | 100,373 | 87.7% |
+| PADDING | 5,949 | 5.2% |
+| DATA (strings, tables) | 1,498 | 1.3% |
+| UNKNOWN | 6,611 | 5.8% |
+
+### Analysis Outputs
+
+- `docs/analysis/modules/*.md` - 92 per-module reports
+- `docs/analysis/MASTER_REPORT.md` - Global summary
+- `state/analyze/pass31/` to `pass34/` - Raw analysis data
+

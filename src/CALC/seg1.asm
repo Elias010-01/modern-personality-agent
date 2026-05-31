@@ -10423,7 +10423,7 @@ L_3F4A:
         pop     ax                              ; 58
         pop     ss                              ; 17
         mov     bh, 0xd1                        ; B7 D1
-        db      0f3h                            ; F3
+    repz                                     ; F3
         db      0ffh                            ; FF
         std                                     ; FD
         into                                    ; CE

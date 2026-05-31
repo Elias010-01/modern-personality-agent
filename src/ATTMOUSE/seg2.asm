@@ -1,5 +1,5 @@
 ; ATTMOUSE/seg2.asm
-; Semantic data - verified byte-exact
+; Semantic reconstruction - verified byte-exact
 BITS 16
 
     add byte [bx + si], al                   ; 00 00
@@ -59,14 +59,14 @@ BITS 16
     test al, 0x80                            ; A8 80
     db 074h, 002h                     ; je 0x73
     inc al                                   ; FE C0
-    db 098h                           ; cwde
+    cbw                                      ; 98
     mov word [0x2c], ax                      ; A3 2C 00
     db 0EBh, 0D9h                     ; jmp 0x52
     mov byte [0x2b], 2                       ; C6 06 2B 00 02
     test al, 0x80                            ; A8 80
     db 074h, 002h                     ; je 0x84
     inc al                                   ; FE C0
-    db 098h                           ; cwde
+    cbw                                      ; 98
     neg ax                                   ; F7 D8
     push bx                                  ; 53
     push cx                                  ; 51

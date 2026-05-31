@@ -1,5 +1,5 @@
 ; WRITE/seg79.asm
-; Semantic data - verified byte-exact
+; Semantic reconstruction - verified byte-exact
 BITS 16
 
     db 000h, 000h                     ; add byte [bx + si], al
@@ -78,16 +78,16 @@ BITS 16
     db 000h, 000h                     ; add byte [bx + si], al
     db 000h, 000h                     ; add byte [bx + si], al
     db 02Eh, 057h                     ; push di
-    db 052h                           ; push dx
-    db 049h                           ; dec cx
+    push dx                                  ; 52
+    dec cx                                   ; 49
     db 000h, 000h                     ; add byte [bx + si], al
     db 02Eh, 044h                     ; inc sp
-    db 04Fh                           ; dec di
-    db 043h                           ; inc bx
+    dec di                                   ; 4F
+    inc bx                                   ; 43
     db 000h, 000h                     ; add byte [bx + si], al
     db 02Eh, 047h                     ; inc di
-    db 04Ch                           ; dec sp
-    db 053h                           ; push bx
+    dec sp                                   ; 4C
+    push bx                                  ; 53
     db 000h, 000h                     ; add byte [bx + si], al
     db 02Eh, 064h, 072h, 076h         ; jb 0x12c
     db 000h, 000h                     ; add byte [bx + si], al
@@ -95,17 +95,17 @@ BITS 16
     db 000h, 09Eh, 000h, 09Eh         ; add byte [bp - 0x6200], bl
     db 000h, 09Eh, 000h, 09Eh         ; add byte [bp - 0x6200], bl
     db 000h, 0A6h, 000h, 02Eh         ; add byte [bp + 0x2e00], ah
-    db 042h                           ; inc dx
-    db 04Bh                           ; dec bx
-    db 050h                           ; push ax
+    inc dx                                   ; 42
+    dec bx                                   ; 4B
+    push ax                                  ; 50
     db 000h, 000h                     ; add byte [bx + si], al
     db 02Eh, 042h                     ; inc dx
-    db 041h                           ; inc cx
-    db 04Bh                           ; dec bx
+    inc cx                                   ; 41
+    dec bx                                   ; 4B
     db 000h, 000h                     ; add byte [bx + si], al
-    db 04Dh                           ; dec bp
-    db 053h                           ; push bx
-    db 057h                           ; push di
+    dec bp                                   ; 4D
+    push bx                                  ; 53
+    push di                                  ; 57
     db 072h, 069h                     ; jb 0x140
     db 074h, 065h                     ; je 0x13e
     db 000h, 046h, 06Fh               ; add byte [bp + 0x6f], al
@@ -127,11 +127,11 @@ BITS 16
     db 061h                           ; popaw
     db 076h, 065h                     ; jbe 0x16d
     db 000h, 000h                     ; add byte [bx + si], al
-    db 057h                           ; push di
+    push di                                  ; 57
     db 072h, 069h                     ; jb 0x176
     db 074h, 065h                     ; je 0x174
     db 000h, 028h                     ; add byte [bx + si], ch
-    db 055h                           ; push bp
+    push bp                                  ; 55
     db 06Eh                           ; outsb dx, byte [si]
     db 074h, 069h                     ; je 0x17e
     db 074h, 06Ch                     ; je 0x183
@@ -152,61 +152,61 @@ BITS 16
     db 063h, 06Bh, 075h               ; arpl word [bp + di + 0x75], bp
     db 070h, 000h                     ; jo 0x13f
     db 000h, 04Dh, 053h               ; add byte [di + 0x53], cl
-    db 057h                           ; push di
-    db 052h                           ; push dx
-    db 049h                           ; dec cx
-    db 054h                           ; push sp
-    db 045h                           ; inc bp
-    db 05Fh                           ; pop di
-    db 04Dh                           ; dec bp
-    db 045h                           ; inc bp
-    db 04Eh                           ; dec si
-    db 055h                           ; push bp
+    push di                                  ; 57
+    push dx                                  ; 52
+    dec cx                                   ; 49
+    push sp                                  ; 54
+    inc bp                                   ; 45
+    pop di                                   ; 5F
+    dec bp                                   ; 4D
+    inc bp                                   ; 45
+    dec si                                   ; 4E
+    push bp                                  ; 55
     db 000h, 000h                     ; add byte [bx + si], al
-    db 04Dh                           ; dec bp
-    db 053h                           ; push bx
-    db 057h                           ; push di
-    db 052h                           ; push dx
-    db 049h                           ; dec cx
-    db 054h                           ; push sp
-    db 045h                           ; inc bp
-    db 05Fh                           ; pop di
-    db 044h                           ; inc sp
-    db 04Fh                           ; dec di
-    db 043h                           ; inc bx
+    dec bp                                   ; 4D
+    push bx                                  ; 53
+    push di                                  ; 57
+    push dx                                  ; 52
+    dec cx                                   ; 49
+    push sp                                  ; 54
+    inc bp                                   ; 45
+    pop di                                   ; 5F
+    inc sp                                   ; 44
+    dec di                                   ; 4F
+    inc bx                                   ; 43
     db 000h, 04Dh, 053h               ; add byte [di + 0x53], cl
-    db 057h                           ; push di
-    db 052h                           ; push dx
-    db 049h                           ; dec cx
-    db 054h                           ; push sp
-    db 045h                           ; inc bp
-    db 05Fh                           ; pop di
-    db 052h                           ; push dx
-    db 055h                           ; push bp
-    db 04Ch                           ; dec sp
-    db 045h                           ; inc bp
-    db 052h                           ; push dx
+    push di                                  ; 57
+    push dx                                  ; 52
+    dec cx                                   ; 49
+    push sp                                  ; 54
+    inc bp                                   ; 45
+    pop di                                   ; 5F
+    push dx                                  ; 52
+    push bp                                  ; 55
+    dec sp                                   ; 4C
+    inc bp                                   ; 45
+    push dx                                  ; 52
     db 000h, 04Dh, 053h               ; add byte [di + 0x53], cl
-    db 057h                           ; push di
-    db 052h                           ; push dx
-    db 049h                           ; dec cx
-    db 054h                           ; push sp
-    db 045h                           ; inc bp
-    db 05Fh                           ; pop di
-    db 050h                           ; push ax
-    db 041h                           ; inc cx
-    db 047h                           ; inc di
-    db 045h                           ; inc bp
-    db 049h                           ; dec cx
-    db 04Eh                           ; dec si
-    db 046h                           ; inc si
-    db 04Fh                           ; dec di
+    push di                                  ; 57
+    push dx                                  ; 52
+    dec cx                                   ; 49
+    push sp                                  ; 54
+    inc bp                                   ; 45
+    pop di                                   ; 5F
+    push ax                                  ; 50
+    inc cx                                   ; 41
+    inc di                                   ; 47
+    inc bp                                   ; 45
+    dec cx                                   ; 49
+    dec si                                   ; 4E
+    inc si                                   ; 46
+    dec di                                   ; 4F
     db 000h, 000h                     ; add byte [bx + si], al
-    db 057h                           ; push di
-    db 052h                           ; push dx
-    db 049h                           ; dec cx
-    db 054h                           ; push sp
-    db 045h                           ; inc bp
+    push di                                  ; 57
+    push dx                                  ; 52
+    dec cx                                   ; 49
+    push sp                                  ; 54
+    inc bp                                   ; 45
     db 020h, 046h, 06Fh               ; and byte [bp + 0x6f], al
     db 072h, 06Dh                     ; jb 0x1f1
     db 061h                           ; popaw
@@ -218,25 +218,25 @@ BITS 16
     db 072h, 064h                     ; jb 0x1f9
     db 073h, 000h                     ; jae 0x197
     db 000h, 044h, 045h               ; add byte [si + 0x45], al
-    db 056h                           ; push si
-    db 049h                           ; dec cx
-    db 043h                           ; inc bx
-    db 045h                           ; inc bp
-    db 04Dh                           ; dec bp
-    db 04Fh                           ; dec di
-    db 044h                           ; inc sp
-    db 045h                           ; inc bp
+    push si                                  ; 56
+    dec cx                                   ; 49
+    inc bx                                   ; 43
+    inc bp                                   ; 45
+    dec bp                                   ; 4D
+    dec di                                   ; 4F
+    inc sp                                   ; 44
+    inc bp                                   ; 45
     db 000h, 000h                     ; add byte [bx + si], al
     db 07Eh, 057h                     ; jle 0x1fd
-    db 052h                           ; push dx
-    db 049h                           ; dec cx
+    push dx                                  ; 52
+    dec cx                                   ; 49
     db 030h, 030h                     ; xor byte [bx + si], dh
     db 030h, 030h                     ; xor byte [bx + si], dh
     db 02Eh, 054h                     ; push sp
-    db 04Dh                           ; dec bp
-    db 050h                           ; push ax
+    dec bp                                   ; 4D
+    push ax                                  ; 50
     db 000h, 000h                     ; add byte [bx + si], al
-    db 053h                           ; push bx
+    push bx                                  ; 53
     db 079h, 073h                     ; jns 0x228
     db 074h, 065h                     ; je 0x21c
     db 06Dh                           ; insw word es:[di], dx
@@ -249,11 +249,11 @@ BITS 16
     db 000h, 04Eh, 075h               ; add byte [bp + 0x75], cl
     db 06Ch                           ; insb byte es:[di], dx
     db 06Ch                           ; insb byte es:[di], dx
-    db 050h                           ; push ax
+    push ax                                  ; 50
     db 06Fh                           ; outsw dx, word [si]
     db 072h, 074h                     ; jb 0x240
     db 000h, 000h                     ; add byte [bx + si], al
-    db 04Eh                           ; dec si
+    dec si                                   ; 4E
     db 06Fh                           ; outsw dx, word [si]
     db 06Eh                           ; outsb dx, byte [si]
     db 065h, 000h, 000h               ; add byte gs:[bx + si], al
@@ -273,11 +273,11 @@ BITS 16
     db 06Dh                           ; insw word es:[di], dx
     db 065h, 06Eh                     ; outsb dx, byte gs:[si]
     db 075h, 000h                     ; jne 0x1f4
-    db 053h                           ; push bx
+    push bx                                  ; 53
     db 063h, 072h, 06Fh               ; arpl word [bp + si + 0x6f], si
     db 06Ch                           ; insb byte es:[di], dx
     db 06Ch                           ; insb byte es:[di], dx
-    db 042h                           ; inc dx
+    inc dx                                   ; 42
     db 061h                           ; popaw
     db 072h, 000h                     ; jb 0x1fe
     db 020h, 020h                     ; and byte [bx + si], ah
@@ -296,23 +296,23 @@ BITS 16
     db 061h                           ; popaw
     db 072h, 06Bh                     ; jb 0x288
     db 000h, 048h, 045h               ; add byte [bx + si + 0x45], cl
-    db 041h                           ; inc cx
-    db 044h                           ; inc sp
-    db 045h                           ; inc bp
-    db 052h                           ; push dx
+    inc cx                                   ; 41
+    inc sp                                   ; 44
+    inc bp                                   ; 45
+    push dx                                  ; 52
     db 000h, 000h                     ; add byte [bx + si], al
-    db 046h                           ; inc si
-    db 04Fh                           ; dec di
-    db 04Fh                           ; dec di
-    db 054h                           ; push sp
-    db 045h                           ; inc bp
-    db 052h                           ; push dx
+    inc si                                   ; 46
+    dec di                                   ; 4F
+    dec di                                   ; 4F
+    push sp                                  ; 54
+    inc bp                                   ; 45
+    push dx                                  ; 52
     db 000h, 000h                     ; add byte [bx + si], al
-    db 04Dh                           ; dec bp
+    dec bp                                   ; 4D
     db 06Fh                           ; outsw dx, word [si]
     db 064h, 065h, 072h, 06Eh         ; jb 0x2a2
     db 000h, 000h                     ; add byte [bx + si], al
-    db 052h                           ; push dx
+    push dx                                  ; 52
     db 06Fh                           ; outsw dx, word [si]
     db 06Dh                           ; insw word es:[di], dx
     db 061h                           ; popaw
@@ -322,17 +322,17 @@ BITS 16
     db 063h, 072h, 069h               ; arpl word [bp + si + 0x69], si
     db 070h, 074h                     ; jo 0x2bc
     db 000h, 000h                     ; add byte [bx + si], al
-    db 044h                           ; inc sp
+    inc sp                                   ; 44
     db 065h, 063h, 06Fh, 072h         ; arpl word gs:[bx + 0x72], bp
     db 061h                           ; popaw
     db 074h, 069h                     ; je 0x2bb
     db 076h, 065h                     ; jbe 0x2b9
     db 000h, 000h                     ; add byte [bx + si], al
-    db 05Ch                           ; pop sp
+    pop sp                                   ; 5C
     db 02Ah, 02Eh, 057h, 052h         ; sub ch, byte [0x5257]
-    db 049h                           ; dec cx
+    dec cx                                   ; 49
     db 000h, 000h                     ; add byte [bx + si], al
-    db 04Ch                           ; dec sp
+    dec sp                                   ; 4C
     db 06Fh                           ; outsw dx, word [si]
     db 061h                           ; popaw
     db 064h, 069h, 06Eh, 067h, 020h, 046h ; imul bp, word fs:[bp + 0x67], 0x4620
@@ -447,24 +447,24 @@ BITS 16
     db 000h, 000h                     ; add byte [bx + si], al
     db 000h, 0FEh                     ; add dh, bh
     db 0FFh, 01Eh, 058h, 090h         ; lcall [0x9058]
-    db 045h                           ; inc bp
-    db 055h                           ; push bp
+    inc bp                                   ; 45
+    push bp                                  ; 55
     db 08Bh, 0ECh                     ; mov bp, sp
     db 01Eh                           ; push ds
     db 08Eh, 0D8h                     ; mov ds, ax
     db 083h, 0ECh, 01Ch               ; sub sp, 0x1c
-    db 057h                           ; push di
-    db 056h                           ; push si
+    push di                                  ; 57
+    push si                                  ; 56
     db 08Bh, 076h, 006h               ; mov si, word [bp + 6]
     db 0EBh, 004h                     ; jmp 0x376
     db 080h, 034h, 013h               ; xor byte [si], 0x13
-    db 046h                           ; inc si
+    inc si                                   ; 46
     db 080h, 03Ch, 000h               ; cmp byte [si], 0
     db 075h, 0F7h                     ; jne 0x372
     db 0FFh, 076h, 00Ch               ; push word [bp + 0xc]
     db 08Dh, 046h, 0F6h               ; lea ax, [bp - 0xa]
     db 016h                           ; push ss
-    db 050h                           ; push ax
+    push ax                                  ; 50
     db 08Bh, 05Eh, 008h               ; mov bx, word [bp + 8]
     db 0FFh, 01Fh                     ; lcall [bx]
     db 080h, 066h, 0FAh, 080h         ; and byte [bp - 6], 0x80
@@ -491,14 +491,14 @@ BITS 16
     db 0FFh, 076h, 00Ah               ; push word [bp + 0xa]
     db 08Bh, 046h, 006h               ; mov ax, word [bp + 6]
     db 01Eh                           ; push ds
-    db 050h                           ; push ax
+    push ax                                  ; 50
     db 0B8h, 0FFh, 0FFh               ; mov ax, 0xffff
-    db 050h                           ; push ax
+    push ax                                  ; 50
     db 08Dh, 046h, 0EEh               ; lea ax, [bp - 0x12]
     db 016h                           ; push ss
-    db 050h                           ; push ax
+    push ax                                  ; 50
     db 0B8h, 011h, 000h               ; mov ax, 0x11
-    db 050h                           ; push ax
+    push ax                                  ; 50
     db 08Bh, 05Eh, 008h               ; mov bx, word [bp + 8]
     db 0FFh, 05Fh, 004h               ; lcall [bx + 4]
     db 08Bh, 046h, 0FAh               ; mov ax, word [bp - 6]
@@ -513,31 +513,31 @@ BITS 16
     db 0FFh, 076h, 00Ah               ; push word [bp + 0xa]
     db 08Bh, 046h, 0ECh               ; mov ax, word [bp - 0x14]
     db 02Bh, 0C6h                     ; sub ax, si
-    db 050h                           ; push ax
-    db 057h                           ; push di
+    push ax                                  ; 50
+    push di                                  ; 57
     db 08Bh, 05Eh, 008h               ; mov bx, word [bp + 8]
     db 0FFh, 05Fh, 008h               ; lcall [bx + 8]
     db 0FFh, 076h, 00Ah               ; push word [bp + 0xa]
-    db 056h                           ; push si
+    push si                                  ; 56
     db 08Bh, 046h, 0EAh               ; mov ax, word [bp - 0x16]
     db 003h, 0C7h                     ; add ax, di
-    db 050h                           ; push ax
+    push ax                                  ; 50
     db 08Bh, 05Eh, 008h               ; mov bx, word [bp + 8]
     db 0FFh, 05Fh, 00Ch               ; lcall [bx + 0xc]
     db 0FFh, 076h, 00Ah               ; push word [bp + 0xa]
     db 08Bh, 046h, 0ECh               ; mov ax, word [bp - 0x14]
     db 003h, 0C6h                     ; add ax, si
-    db 050h                           ; push ax
-    db 057h                           ; push di
+    push ax                                  ; 50
+    push di                                  ; 57
     db 08Bh, 05Eh, 008h               ; mov bx, word [bp + 8]
     db 0FFh, 05Fh, 008h               ; lcall [bx + 8]
     db 0FFh, 076h, 00Ah               ; push word [bp + 0xa]
     db 08Bh, 046h, 0FAh               ; mov ax, word [bp - 6]
     db 02Bh, 0C6h                     ; sub ax, si
-    db 050h                           ; push ax
+    push ax                                  ; 50
     db 08Bh, 046h, 0EAh               ; mov ax, word [bp - 0x16]
     db 003h, 0C7h                     ; add ax, di
-    db 050h                           ; push ax
+    push ax                                  ; 50
     db 08Bh, 05Eh, 008h               ; mov bx, word [bp + 8]
     db 0FFh, 05Fh, 00Ch               ; lcall [bx + 0xc]
     db 08Bh, 046h, 0FAh               ; mov ax, word [bp - 6]
@@ -549,13 +549,13 @@ BITS 16
     db 003h, 0F8h                     ; add di, ax
     db 039h, 076h, 0ECh               ; cmp word [bp - 0x14], si
     db 07Dh, 0A6h                     ; jge 0x3ed
-    db 05Eh                           ; pop si
-    db 05Fh                           ; pop di
+    pop si                                   ; 5E
+    pop di                                   ; 5F
     db 083h, 0EDh, 002h               ; sub bp, 2
     db 08Bh, 0E5h                     ; mov sp, bp
     db 01Fh                           ; pop ds
-    db 05Dh                           ; pop bp
-    db 04Dh                           ; dec bp
+    pop bp                                   ; 5D
+    dec bp                                   ; 4D
     db 0CAh, 008h, 000h               ; retf 8
     db 000h, 000h                     ; add byte [bx + si], al
     db 000h, 000h                     ; add byte [bx + si], al
@@ -713,13 +713,13 @@ BITS 16
     db 07Dh, 03Fh                     ; jge 0x5d1
     db 033h, 050h, 07Bh               ; xor dx, word [bx + si + 0x7b]
     db 07Ah, 03Eh                     ; jp 0x5d5
-    db 050h                           ; push ax
+    push ax                                  ; 50
     db 07Bh, 066h                     ; jnp 0x600
     db 076h, 07Dh                     ; jbe 0x619
-    db 03Fh                           ; aas
+    aas                                      ; 3F
     db 033h, 072h, 07Dh               ; xor si, word [bp + si + 0x7d]
     db 077h, 033h                     ; ja 0x5d5
-    db 043h                           ; inc bx
+    inc bx                                   ; 43
     db 072h, 067h                     ; jb 0x60c
     db 000h, 000h                     ; add byte [bx + si], al
     db 000h, 000h                     ; add byte [bx + si], al
