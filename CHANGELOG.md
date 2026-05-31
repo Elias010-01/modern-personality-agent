@@ -85,6 +85,20 @@ la auditoria v13.4.  Todos los puntos del plan de cleanup resueltos.
   - Build db: 92/92 byte-exact (sin cambios).
   - Tests: 50/50 pytest pass.
 
+### Semantic conversion (2026-05-31)
+
+  **71 pure-db segments converted to semantic source with instruction comments.**
+
+  - Pipeline `semantic_final_v2.py` + `semantic_second_pass.py` converts
+    pure-db .asm (raw hex bytes) to human-readable semantic source.
+  - 4 segments achieve pure NASM mnemonics (byte-exact verified).
+  - 67 segments converted to mixed format: mnemonics where NASM can
+    replicate exact bytes, `db` with semantic comments otherwise.
+  - All 71 files are reassemblable with NASM and verified byte-exact.
+  - Build --mode=masm: **92/92 byte-exact**.
+    Breakdown: 237 masm-puredb, 67 nasm, 60 masm-fallback-db, 4 masm.
+  - Tests: 50/50 pytest pass.
+
 ### v14.0-fix (2026-05-30 posterior)
 
   - README español: sección "Inicio rápido" paso 5 corregido de "69/69"

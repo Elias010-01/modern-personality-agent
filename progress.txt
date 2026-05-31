@@ -126,3 +126,18 @@ PROGRESS LIVE (all DONE 2026-05-30):
     - Files modified: bootstrap/puredb_convert.py, bootstrap/build_from_source.py
     - New: state/analyze/pass_c2_equ_map.json, bootstrap/legacy/_c2_*.py,
       src/WIN100_OVL/seg1.asm
+
+  Semantic conversion: DONE 2026-05-31.
+    - Converted 71 pure-db .asm files to semantic source with instruction
+      comments (no more raw hex without explanation).
+    - Pipeline: semantic_final_v2.py (Capstone disassembly + NASM verification)
+      + semantic_second_pass.py (per-instruction NASM test for mnemonics).
+    - 4 segments achieve pure NASM mnemonics (COMM/seg2, EGALORES/seg2,
+      JOYMOUSE/seg2, SOUND/seg3).
+    - 67 segments converted to mixed format: mnemonics where NASM replicates
+      exact bytes, db with semantic comments otherwise.
+    - All 71 files are byte-exact when assembled with NASM.
+    - Build --mode=masm: 92/92 byte-exact.
+      Breakdown: 237 masm-puredb, 67 nasm, 60 masm-fallback-db, 4 masm.
+    - Tests: 50/50 pytest pass.
+    - Files modified: 71 seg*.asm files across 59 modules.

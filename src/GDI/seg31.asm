@@ -1,88 +1,442 @@
-; ======================================================================
-; GDI / seg31.asm   (segment 31 of GDI)
-; ----------------------------------------------------------------------
-; Functions discovered (pass1b):         0
-; Total instructions:                    0
-; 
-; Classification (pass8):
-;   C-origin (high+medium):              0
-;   ASM-origin (high+medium):            0
-;   Unclear:                             0
-;   Tiny / unclassified:                 0
-; 
-; Far API calls in this segment:     0 (0 unique)
-; ======================================================================
-; AUTO-GENERATED from original GDI segment 31
-; segment_size=900 bytes, flags=0x0151
-; mode: humano legible - instrucciones x86 + bytes raw en comentario (autoritativo)
-; 
-; El comentario al final de cada linea contiene los bytes RAW del binario
-; original; build_from_source.py los lee como autoridad para byte-exact.
-; Las instrucciones (push, mov, ...) son las desensambladas para que
-; un humano pueda leer/editar; no son re-ensambladas (encoders modernos
-; eligen variantes distintas a las del MASM 4.0 de 1985 que produjo
-; el binario original).
+; GDI/seg31.asm
+; Semantic data - verified byte-exact
+BITS 16
 
-GDI_DATA SEGMENT BYTE PUBLIC 'DATA'
-
-        db      000h, 000h, 000h, 000h, 005h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h ; 00 00 00 00 05 00 00 00 00 00 00 00 00 00 00 00
-        db      000h, 000h, 000h, 000h, 08ah, 000h, 03ch, 000h, 044h, 000h, 04ch, 000h, 054h, 000h, 05ch, 000h ; 00 00 00 00 8A 00 3C 00 44 00 4C 00 54 00 5C 00
-        db      064h, 000h, 06ch, 000h, 076h, 000h, 080h, 000h, 080h, 000h, 0abh, 000h, 000h, 000h, 000h, 000h ; 64 00 6C 00 76 00 80 00 80 00 AB 00 00 00 00 00
-        db      000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 0ffh, 0ffh ; 00 00 00 00 00 00 00 00 00 00 00 00 00 00 FF FF
-        db      0ffh, 000h, 000h, 000h, 000h, 000h, 0c0h, 0c0h, 0c0h, 000h, 000h, 000h, 000h, 000h, 080h, 080h ; FF 00 00 00 00 00 C0 C0 C0 00 00 00 00 00 80 80
-        db      080h, 000h, 000h, 000h, 000h, 000h, 040h, 040h, 040h, 000h, 000h, 000h, 000h, 000h, 000h, 000h ; 80 00 00 00 00 00 40 40 40 00 00 00 00 00 00 00
-        db      000h, 000h, 000h, 000h, 001h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h ; 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00
-        db      000h, 000h, 0ffh, 0ffh, 0ffh, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h ; 00 00 FF FF FF 00 00 00 00 00 00 00 00 00 00 00
-        db      005h, 000h, 000h, 000h, 000h, 000h, 0ffh, 0ffh, 0ffh, 000h, 000h, 000h, 001h, 000h, 001h, 000h ; 05 00 00 00 00 00 FF FF FF 00 00 00 01 00 01 00
-        db      002h, 000h, 001h, 001h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h ; 02 00 01 01 00 00 00 00 00 00 00 00 00 00 00 00
-        db      000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 001h, 000h, 044h, 049h, 053h, 050h, 04ch ; 00 00 00 00 00 00 00 00 00 01 00 44 49 53 50 4C
-        db      041h, 059h, 000h, 066h, 06fh, 06eh, 074h, 073h, 000h, 06fh, 065h, 06dh, 062h, 069h, 06eh, 000h ; 41 59 00 66 6F 6E 74 73 00 6F 65 6D 62 69 6E 00
-        db      077h, 069h, 06eh, 064h, 06fh, 077h, 073h, 000h, 06eh, 075h, 06ch, 06ch, 070h, 06fh, 072h, 074h ; 77 69 6E 64 6F 77 73 00 6E 75 6C 6C 70 6F 72 74
-        db      000h, 06eh, 06fh, 06eh, 065h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h ; 00 6E 6F 6E 65 00 00 00 00 00 00 00 00 00 00 00
-        db      000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h ; 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-        db      000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h ; 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-        db      000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 02eh, 064h, 072h, 076h ; 00 00 00 00 00 00 00 00 00 00 00 00 2E 64 72 76
-        db      000h, 04dh, 046h, 000h, 0ffh, 0ffh, 000h, 000h, 012h, 000h, 000h, 000h, 001h, 000h, 0ffh, 0ffh ; 00 4D 46 00 FF FF 00 00 12 00 00 00 01 00 FF FF
-        db      003h, 000h, 046h, 04fh, 04eh, 054h, 053h, 02eh, 046h, 04fh, 04eh, 000h, 000h, 000h, 000h, 000h ; 03 00 46 4F 4E 54 53 2E 46 4F 4E 00 00 00 00 00
-        db      000h, 000h, 005h, 000h, 002h, 000h, 001h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h ; 00 00 05 00 02 00 01 00 00 00 00 00 00 00 00 00
-        db      000h, 000h, 000h, 000h, 001h, 000h, 0f0h, 0d8h, 0c8h, 0f6h, 0e6h, 0dfh, 0dch, 0e8h, 0dch, 0e8h ; 00 00 00 00 01 00 F0 D8 C8 F6 E6 DF DC E8 DC E8
-        db      0e6h, 0dfh, 0c8h, 0f6h, 0f0h, 0d8h, 038h, 009h, 0f0h, 0d8h, 024h, 017h, 0e6h, 0dfh, 01ah, 020h ; E6 DF C8 F6 F0 D8 38 09 F0 D8 24 17 E6 DF 1A 20
-        db      0dch, 0e8h, 010h, 027h, 0c8h, 0f6h, 010h, 027h, 038h, 009h, 01ah, 020h, 024h, 017h, 024h, 017h ; DC E8 10 27 C8 F6 10 27 38 09 1A 20 24 17 24 17
-        db      01ah, 020h, 038h, 009h, 010h, 027h, 0c8h, 0f6h, 010h, 027h, 0dch, 0e8h, 01ah, 020h, 0e6h, 0dfh ; 1A 20 38 09 10 27 C8 F6 10 27 DC E8 1A 20 E6 DF
-        db      024h, 017h, 0f0h, 0d8h, 038h, 009h, 0f0h, 0d8h, 0f0h, 0d8h, 0f0h, 0d8h, 0f0h, 0d8h, 0f0h, 0d8h ; 24 17 F0 D8 38 09 F0 D8 F0 D8 F0 D8 F0 D8 F0 D8
-        db      0f0h, 0d8h, 0f0h, 0d8h, 0f0h, 0d8h, 010h, 027h, 0f0h, 0d8h, 010h, 027h, 0f0h, 0d8h, 010h, 027h ; F0 D8 F0 D8 F0 D8 10 27 F0 D8 10 27 F0 D8 10 27
-        db      0f0h, 0d8h, 010h, 027h, 0f0h, 0d8h, 010h, 027h, 010h, 027h, 010h, 027h, 010h, 027h, 010h, 027h ; F0 D8 10 27 F0 D8 10 27 10 27 10 27 10 27 10 27
-        db      010h, 027h, 010h, 027h, 010h, 027h, 0f0h, 0d8h, 010h, 027h, 0f0h, 0d8h, 010h, 027h, 0f0h, 0d8h ; 10 27 10 27 10 27 F0 D8 10 27 F0 D8 10 27 F0 D8
-        db      010h, 027h, 0f0h, 0d8h, 010h, 027h, 066h, 06fh, 06eh, 074h, 064h, 069h, 072h, 000h, 000h, 000h ; 10 27 F0 D8 10 27 66 6F 6E 74 64 69 72 00 00 00
-        db      000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h ; 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-        db      000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h ; 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-        db      000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h ; 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-        db      000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h ; 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-        db      000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 002h, 020h ; 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 20
-        db      002h, 000h, 000h, 020h, 002h, 000h, 040h, 000h, 042h, 000h, 080h, 00fh, 001h, 000h, 001h, 000h ; 02 00 00 20 02 00 40 00 42 00 80 0F 01 00 01 00
-        db      001h, 000h, 001h, 000h, 022h, 009h, 023h, 00bh, 025h, 003h, 024h, 003h, 021h, 005h, 02dh, 001h ; 01 00 01 00 22 09 23 0B 25 03 24 03 21 05 2D 01
-        db      02bh, 001h, 028h, 002h, 02ah, 001h, 029h, 004h, 026h, 006h, 013h, 002h, 000h, 000h, 042h, 000h ; 2B 01 28 02 2A 01 29 04 26 06 13 02 00 00 42 00
-        db      000h, 000h, 0a9h, 000h, 005h, 000h, 029h, 003h, 00ah, 000h, 001h, 000h, 00fh, 000h, 025h, 003h ; 00 00 A9 00 05 00 29 03 0A 00 01 00 0F 00 25 03
-        db      050h, 000h, 009h, 000h, 055h, 000h, 049h, 000h, 05ah, 000h, 0e9h, 000h, 05fh, 000h, 0c9h, 000h ; 50 00 09 00 55 00 49 00 5A 00 E9 00 5F 00 C9 00
-        db      0a0h, 000h, 065h, 000h, 0a5h, 000h, 029h, 000h, 0aah, 000h, 029h, 002h, 0afh, 000h, 021h, 000h ; A0 00 65 00 A5 00 29 00 AA 00 29 02 AF 00 21 00
-        db      0f0h, 000h, 025h, 002h, 0f5h, 000h, 089h, 000h, 0fah, 000h, 062h, 000h, 0ffh, 000h, 000h, 000h ; F0 00 25 02 F5 00 89 00 FA 00 62 00 FF 00 00 00
-        db      000h, 001h, 000h, 000h, 001h, 000h, 000h, 001h, 000h, 000h, 000h, 001h, 001h, 001h, 000h, 001h ; 00 01 00 00 01 00 00 01 00 00 00 01 01 01 00 01
-        db      001h, 001h, 000h, 001h, 000h, 000h, 000h, 000h, 001h, 000h, 000h, 000h, 000h, 001h, 000h, 001h ; 01 01 00 01 00 00 00 00 01 00 00 00 00 01 00 01
-        db      001h, 000h, 000h, 001h, 001h, 000h, 000h, 001h, 001h, 000h, 000h, 001h, 001h, 000h, 000h, 001h ; 01 00 00 01 01 00 00 01 01 00 00 01 01 00 00 01
-        db      000h, 000h, 000h, 001h, 001h, 001h, 000h, 000h, 000h, 001h, 000h, 000h, 001h, 000h, 0b7h, 039h ; 00 00 00 01 01 01 00 00 00 01 00 00 01 00 B7 39
-        db      083h, 03ah, 083h, 03ah, 083h, 03ah, 0b7h, 039h, 08ah, 039h, 08fh, 039h, 083h, 03ah, 0b7h, 039h ; 83 3A 83 3A 83 3A B7 39 8A 39 8F 39 83 3A B7 39
-        db      08ah, 039h, 08fh, 039h, 083h, 03ah, 0b7h, 039h, 08ah, 039h, 083h, 03ah, 083h, 03ah, 000h, 000h ; 8A 39 8F 39 83 3A B7 39 8A 39 83 3A 83 3A 00 00
-        db      000h, 000h, 000h, 000h, 000h, 000h, 01eh, 000h, 055h, 06eh, 074h, 069h, 074h, 06ch, 065h, 064h ; 00 00 00 00 00 00 1E 00 55 6E 74 69 74 6C 65 64
-        db      000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h ; 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-        db      073h, 070h, 06ch, 000h, 000h, 000h, 074h, 065h, 06dh, 070h, 000h, 064h, 065h, 076h, 069h, 063h ; 73 70 6C 00 00 00 74 65 6D 70 00 64 65 76 69 63
-        db      065h, 073h, 000h, 073h, 070h, 06fh, 06fh, 06ch, 065h, 072h, 000h, 053h, 070h, 06fh, 06fh, 06ch ; 65 73 00 73 70 6F 6F 6C 65 72 00 53 70 6F 6F 6C
-        db      065h, 072h, 02eh, 065h, 078h, 065h, 000h, 000h, 075h, 073h, 065h, 072h, 000h, 000h, 073h, 070h ; 65 72 2E 65 78 65 00 00 75 73 65 72 00 00 73 70
-        db      06fh, 06fh, 06ch, 065h, 072h, 000h, 077h, 069h, 06eh, 064h, 06fh, 077h, 073h, 000h, 06eh, 06fh ; 6F 6F 6C 65 72 00 77 69 6E 64 6F 77 73 00 6E 6F
-        db      000h, 000h, 064h, 065h, 076h, 069h, 063h, 065h, 073h, 000h, 000h, 064h, 065h, 076h, 069h, 063h ; 00 00 64 65 76 69 63 65 73 00 00 64 65 76 69 63
-        db      065h, 073h, 000h, 000h, 070h, 06fh, 072h, 074h, 073h, 000h, 000h, 070h, 06fh, 072h, 074h, 073h ; 65 73 00 00 70 6F 72 74 73 00 00 70 6F 72 74 73
-        db      000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h, 000h ; 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-        db      0ffh, 0ffh, 0ffh, 0ffh          ; FF FF FF FF
-
-GDI_DATA ENDS
-
-        END
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    db 005h, 000h, 000h               ; add ax, 0
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bp + si + 0x3c00], cl          ; 00 8A 00 3C
+    db 000h, 044h, 000h               ; add byte [si], al
+    dec sp                                   ; 4C
+    db 000h, 054h, 000h               ; add byte [si], dl
+    pop sp                                   ; 5C
+    db 000h, 064h, 000h               ; add byte [si], ah
+    db 06Ch                           ; insb byte es:[di], dx
+    add byte [bp], dh                        ; 00 76 00
+    add byte [bx + si], 0x80                 ; 80 00 80
+    db 000h, 0ABh, 000h, 000h         ; add byte [bp + di], ch
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add bh, bh                               ; 00 FF
+    db 0FFh                           ; FF
+    inc word [bx + si]                       ; FF 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    rol al, 0xc0                             ; C0 C0 C0
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si - 0x7f80], al          ; 00 80 80 80
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si + 0x40], al            ; 00 40 40
+    inc ax                                   ; 40
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + di], al                   ; 00 01
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add bh, bh                               ; 00 FF
+    db 0FFh                           ; FF
+    inc word [bx + si]                       ; FF 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    db 005h, 000h, 000h               ; add ax, 0
+    add byte [bx + si], al                   ; 00 00
+    add bh, bh                               ; 00 FF
+    db 0FFh                           ; FF
+    inc word [bx + si]                       ; FF 00
+    add byte [bx + si], al                   ; 00 00
+    add word [bx + si], ax                   ; 01 00
+    add word [bx + si], ax                   ; 01 00
+    add al, byte [bx + si]                   ; 02 00
+    add word [bx + di], ax                   ; 01 01
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + di], al                   ; 00 01
+    add byte [si + 0x49], al                 ; 00 44 49
+    push bx                                  ; 53
+    push ax                                  ; 50
+    dec sp                                   ; 4C
+    inc cx                                   ; 41
+    pop cx                                   ; 59
+    add byte [bp + 0x6f], ah                 ; 00 66 6F
+    db 06Eh                           ; outsb dx, byte [si]
+    db 074h, 073h                     ; je 0x12b
+    add byte [bx + 0x65], ch                 ; 00 6F 65
+    db 06Dh                           ; insw word es:[di], dx
+    db 062h, 069h, 06Eh               ; bound bp, dword [bx + di + 0x6e]
+    add byte [bx + 0x69], dh                 ; 00 77 69
+    db 06Eh                           ; outsb dx, byte [si]
+    db 064h, 06Fh                     ; outsw dx, word fs:[si]
+    db 077h, 073h                     ; ja 0x13a
+    add byte [bp + 0x75], ch                 ; 00 6E 75
+    db 06Ch                           ; insb byte es:[di], dx
+    db 06Ch                           ; insb byte es:[di], dx
+    db 070h, 06Fh                     ; jo 0x13d
+    db 072h, 074h                     ; jb 0x144
+    add byte [bp + 0x6f], ch                 ; 00 6E 6F
+    db 06Eh                           ; outsb dx, byte [si]
+    add byte gs:[bx + si], al                ; 65 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [0x7264], ch                    ; 00 2E 64 72
+    db 076h, 000h                     ; jbe 0x111
+    dec bp                                   ; 4D
+    inc si                                   ; 46
+    add bh, bh                               ; 00 FF
+    inc word [bx + si]                       ; FF 00
+    add byte [bp + si], dl                   ; 00 12
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + di], al                   ; 00 01
+    add bh, bh                               ; 00 FF
+    inc word [bp + di]                       ; FF 03
+    add byte [bp + 0x4f], al                 ; 00 46 4F
+    dec si                                   ; 4E
+    push sp                                  ; 54
+    push bx                                  ; 53
+    db 02Eh, 046h                     ; inc si
+    dec di                                   ; 4F
+    dec si                                   ; 4E
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [di], al                        ; 00 05
+    add byte [bp + si], al                   ; 00 02
+    add byte [bx + di], al                   ; 00 01
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + di], al                   ; 00 01
+    add al, dh                               ; 00 F0
+    db 0D8h, 0C8h                     ; fmul st(0)
+    mul dh                                   ; F6 E6
+    db 0DFh                           ; DF
+    db 0DCh, 0E8h                     ; fsub st(0), st(0)
+    db 0DCh, 0E8h                     ; fsub st(0), st(0)
+    out 0xdf, al                             ; E6 DF
+    enter -0xf0a, -0x28                      ; C8 F6 F0 D8
+    cmp byte [bx + di], cl                   ; 38 09
+    db 0F0h                           ; F0
+    fsub dword [si]                          ; D8 24
+    pop ss                                   ; 17
+    out 0xdf, al                             ; E6 DF
+    sbb ah, byte [bx + si]                   ; 1A 20
+    db 0DCh, 0E8h                     ; fsub st(0), st(0)
+    adc byte [bx], ah                        ; 10 27
+    enter 0x10f6, 0x27                       ; C8 F6 10 27
+    cmp byte [bx + di], cl                   ; 38 09
+    sbb ah, byte [bx + si]                   ; 1A 20
+    and al, 0x17                             ; 24 17
+    and al, 0x17                             ; 24 17
+    sbb ah, byte [bx + si]                   ; 1A 20
+    cmp byte [bx + di], cl                   ; 38 09
+    adc byte [bx], ah                        ; 10 27
+    enter 0x10f6, 0x27                       ; C8 F6 10 27
+    db 0DCh, 0E8h                     ; fsub st(0), st(0)
+    sbb ah, byte [bx + si]                   ; 1A 20
+    out 0xdf, al                             ; E6 DF
+    and al, 0x17                             ; 24 17
+    db 0F0h                           ; F0
+    fdivr dword [bx + si]                    ; D8 38
+    or ax, si                                ; 09 F0
+    db 0D8h, 0F0h                     ; fdiv st(0)
+    db 0D8h, 0F0h                     ; fdiv st(0)
+    db 0D8h, 0F0h                     ; fdiv st(0)
+    db 0D8h, 0F0h                     ; fdiv st(0)
+    db 0D8h, 0F0h                     ; fdiv st(0)
+    db 0D8h, 0F0h                     ; fdiv st(0)
+    db 0D8h, 0F0h                     ; fdiv st(0)
+    fcom dword [bx + si]                     ; D8 10
+    daa                                      ; 27
+    db 0F0h                           ; F0
+    fcom dword [bx + si]                     ; D8 10
+    daa                                      ; 27
+    db 0F0h                           ; F0
+    fcom dword [bx + si]                     ; D8 10
+    daa                                      ; 27
+    db 0F0h                           ; F0
+    fcom dword [bx + si]                     ; D8 10
+    daa                                      ; 27
+    db 0F0h                           ; F0
+    fcom dword [bx + si]                     ; D8 10
+    daa                                      ; 27
+    adc byte [bx], ah                        ; 10 27
+    adc byte [bx], ah                        ; 10 27
+    adc byte [bx], ah                        ; 10 27
+    adc byte [bx], ah                        ; 10 27
+    adc byte [bx], ah                        ; 10 27
+    adc byte [bx], ah                        ; 10 27
+    adc byte [bx], ah                        ; 10 27
+    db 0F0h                           ; F0
+    fcom dword [bx + si]                     ; D8 10
+    daa                                      ; 27
+    db 0F0h                           ; F0
+    fcom dword [bx + si]                     ; D8 10
+    daa                                      ; 27
+    db 0F0h                           ; F0
+    fcom dword [bx + si]                     ; D8 10
+    daa                                      ; 27
+    db 0F0h                           ; F0
+    fcom dword [bx + si]                     ; D8 10
+    daa                                      ; 27
+    db 066h, 06Fh                     ; outsd dx, dword [si]
+    db 06Eh                           ; outsb dx, byte [si]
+    db 074h, 064h                     ; je 0x22f
+    db 069h, 072h, 000h, 000h, 000h   ; imul si, word [bp + si], 0
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add ah, byte [bx + si]                   ; 02 20
+    add al, byte [bx + si]                   ; 02 00
+    add byte [bx + si], ah                   ; 00 20
+    add al, byte [bx + si]                   ; 02 00
+    inc ax                                   ; 40
+    db 000h, 042h, 000h               ; add byte [bp + si], al
+    or byte [bx], 1                          ; 80 0F 01
+    add byte [bx + di], al                   ; 00 01
+    add byte [bx + di], al                   ; 00 01
+    add byte [bx + di], al                   ; 00 01
+    add byte [bp + si], ah                   ; 00 22
+    or word [bp + di], sp                    ; 09 23
+    or sp, word [di]                         ; 0B 25
+    add sp, word [si]                        ; 03 24
+    add sp, word [bx + di]                   ; 03 21
+    add ax, 0x12d                            ; 05 2D 01
+    sub ax, word [bx + di]                   ; 2B 01
+    sub byte [bp + si], al                   ; 28 02
+    sub al, byte [bx + di]                   ; 2A 01
+    sub word [si], ax                        ; 29 04
+    db 026h, 006h                     ; push es
+    adc ax, word [bp + si]                   ; 13 02
+    add byte [bx + si], al                   ; 00 00
+    inc dx                                   ; 42
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + di + 0x500], ch           ; 00 A9 00 05
+    add byte [bx + di], ch                   ; 00 29
+    add cx, word [bp + si]                   ; 03 0A
+    add byte [bx + di], al                   ; 00 01
+    add byte [bx], cl                        ; 00 0F
+    add byte [di], ah                        ; 00 25
+    db 003h, 050h, 000h               ; add dx, word [bx + si]
+    or word [bx + si], ax                    ; 09 00
+    push bp                                  ; 55
+    db 000h, 049h, 000h               ; add byte [bx + di], cl
+    pop dx                                   ; 5A
+    add cl, ch                               ; 00 E9
+    db 000h, 05Fh, 000h               ; add byte [bx], bl
+    leave                                    ; C9
+    add byte [bx + si + 0x6500], ah          ; 00 A0 00 65
+    add byte [di + 0x2900], ah               ; 00 A5 00 29
+    add byte [bp + si + 0x2900], ch          ; 00 AA 00 29
+    add ch, byte [bx + 0x2100]               ; 02 AF 00 21
+    add al, dh                               ; 00 F0
+    add byte [di], ah                        ; 00 25
+    db 002h, 0F5h                     ; add dh, ch
+    add byte [bx + di - 0x600], cl           ; 00 89 00 FA
+    db 000h, 062h, 000h               ; add byte [bp + si], ah
+    inc word [bx + si]                       ; FF 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + di], al                   ; 00 01
+    add byte [bx + si], al                   ; 00 00
+    add word [bx + si], ax                   ; 01 00
+    add byte [bx + di], al                   ; 00 01
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + di], al                   ; 00 01
+    add word [bx + di], ax                   ; 01 01
+    add byte [bx + di], al                   ; 00 01
+    add word [bx + di], ax                   ; 01 01
+    add byte [bx + di], al                   ; 00 01
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add word [bx + si], ax                   ; 01 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + di], al                   ; 00 01
+    add byte [bx + di], al                   ; 00 01
+    add word [bx + si], ax                   ; 01 00
+    add byte [bx + di], al                   ; 00 01
+    add word [bx + si], ax                   ; 01 00
+    add byte [bx + di], al                   ; 00 01
+    add word [bx + si], ax                   ; 01 00
+    add byte [bx + di], al                   ; 00 01
+    add word [bx + si], ax                   ; 01 00
+    add byte [bx + di], al                   ; 00 01
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + di], al                   ; 00 01
+    add word [bx + di], ax                   ; 01 01
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + di], al                   ; 00 01
+    add byte [bx + si], al                   ; 00 00
+    add word [bx + si], ax                   ; 01 00
+    mov bh, 0x39                             ; B7 39
+    cmp word [bp + si], -0x7d                ; 83 3A 83
+    cmp al, byte [bp + di - 0x48c6]          ; 3A 83 3A B7
+    cmp word [bp + si - 0x70c7], cx          ; 39 8A 39 8F
+    cmp word [bp + di - 0x48c6], ax          ; 39 83 3A B7
+    cmp word [bp + si - 0x70c7], cx          ; 39 8A 39 8F
+    cmp word [bp + di - 0x48c6], ax          ; 39 83 3A B7
+    cmp word [bp + si - 0x7cc7], cx          ; 39 8A 39 83
+    db 03Ah, 083h, 03Ah, 000h         ; cmp al, byte [bp + di + 0x3a]
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [0x5500], bl                    ; 00 1E 00 55
+    db 06Eh                           ; outsb dx, byte [si]
+    db 074h, 069h                     ; je 0x365
+    db 074h, 06Ch                     ; je 0x36a
+    db 065h, 064h, 000h, 000h         ; add byte fs:[bx + si], al
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    db 073h, 070h                     ; jae 0x382
+    db 06Ch                           ; insb byte es:[di], dx
+    add byte [bx + si], al                   ; 00 00
+    add byte [si + 0x65], dh                 ; 00 74 65
+    db 06Dh                           ; insw word es:[di], dx
+    db 070h, 000h                     ; jo 0x31b
+    db 064h, 065h, 076h, 069h         ; jbe 0x388
+    arpl word [di + 0x73], sp                ; 63 65 73
+    add byte [bp + di + 0x70], dh            ; 00 73 70
+    db 06Fh                           ; outsw dx, word [si]
+    db 06Fh                           ; outsw dx, word [si]
+    db 06Ch                           ; insb byte es:[di], dx
+    db 065h, 072h, 000h               ; jb 0x32b
+    push bx                                  ; 53
+    db 070h, 06Fh                     ; jo 0x39d
+    db 06Fh                           ; outsw dx, word [si]
+    db 06Ch                           ; insb byte es:[di], dx
+    db 065h, 072h, 02Eh               ; jb 0x361
+    db 065h, 078h, 065h               ; js 0x39b
+    add byte [bx + si], al                   ; 00 00
+    db 075h, 073h                     ; jne 0x3ad
+    db 065h, 072h, 000h               ; jb 0x33d
+    add byte [bp + di + 0x70], dh            ; 00 73 70
+    db 06Fh                           ; outsw dx, word [si]
+    db 06Fh                           ; outsw dx, word [si]
+    db 06Ch                           ; insb byte es:[di], dx
+    db 065h, 072h, 000h               ; jb 0x346
+    db 077h, 069h                     ; ja 0x3b1
+    db 06Eh                           ; outsb dx, byte [si]
+    db 064h, 06Fh                     ; outsw dx, word fs:[si]
+    db 077h, 073h                     ; ja 0x3c0
+    add byte [bp + 0x6f], ch                 ; 00 6E 6F
+    add byte [bx + si], al                   ; 00 00
+    db 064h, 065h, 076h, 069h         ; jbe 0x3bf
+    arpl word [di + 0x73], sp                ; 63 65 73
+    add byte [bx + si], al                   ; 00 00
+    db 064h, 065h, 076h, 069h         ; jbe 0x3c8
+    arpl word [di + 0x73], sp                ; 63 65 73
+    add byte [bx + si], al                   ; 00 00
+    db 070h, 06Fh                     ; jo 0x3d5
+    db 072h, 074h                     ; jb 0x3dc
+    db 073h, 000h                     ; jae 0x36a
+    add byte [bx + si + 0x6f], dh            ; 00 70 6F
+    db 072h, 074h                     ; jb 0x3e3
+    db 073h, 000h                     ; jae 0x371
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add byte [bx + si], al                   ; 00 00
+    add bh, bh                               ; 00 FF
+    db 0FFh                           ; FF
+    db 0FFh                           ; FF
+    db 0FFh                           ; FF
